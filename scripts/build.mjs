@@ -1,0 +1,16 @@
+import { cp, mkdir, rm, readFile, writeFile } from 'node:fs/promises';
+await rm('dist', {recursive:true, force:true});
+await mkdir('dist', {recursive:true});
+await cp('src', 'dist/src', {recursive:true});
+await cp('public', 'dist', {recursive:true});
+await writeFile('dist/index.html', (await readFile('index.html','utf8')).replace('<head>','<head><meta name="production" content="true">'));
+await cp('docs','dist/docs',{recursive:true});
+const { createHash } = await import('node:crypto');
+const { readdir } = await import('node:fs/promises');
+const files = ['index.html', ...(await readdir('src')).map(f=>'src/'+f), ...(await readdir('public')).filter(f=>f!=='sw.js')];
+const hash = createHash('sha256');
+for (const f of files) hash.update(await readFile(f.startsWith('src/')||f==='index.html'?f:'public/'+f));
+let sw = await readFile('public/sw.js','utf8');
+sw = sw.replace('__VERSION__',hash.digest('hex').slice(0,12)).replace('__ASSETS__',JSON.stringify(files.map(f=>'./'+f)));
+await writeFile('dist/sw.js', sw);
+console.log('Built static PWA in dist/ (relative asset paths).');

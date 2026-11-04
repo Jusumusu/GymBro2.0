@@ -1,0 +1,29 @@
+export const SCHEMA_VERSION=1;
+export const uid=()=>crypto.randomUUID();
+export const today=()=>{const d=new Date();return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`;};
+export const initialState=()=>({version:1,profile:null,customExercises:[],plans:[],sessions:[],draft:null,weights:[],measurements:[],photos:[],unlocks:[]});
+export const toKg=(value,unit)=>unit==='lb'?value/2.2046226218487757:value;
+export const fromKg=(value,unit)=>unit==='lb'?value*2.2046226218487757:value;
+export const displayLoad=(kg,unit)=>kg===null||kg===undefined?'':Number(fromKg(kg,unit).toFixed(2));
+export function number(value,min,max,nullable=false){if(nullable&&value===null)return; if(typeof value!=='number'||!Number.isFinite(value)||value<min||value>max)throw Error(`Number must be between ${min} and ${max}.`);}
+const text=(v,max=300)=>{if(typeof v!=='string'||v.length>max)throw Error('Invalid or overlong text.');};
+const array=(v,max=20000)=>{if(!Array.isArray(v)||v.length>max)throw Error('Invalid or oversized list.');};
+export const validDate=v=>typeof v==='string'&&/^\d{4}-\d{2}-\d{2}$/.test(v)&&!isNaN(Date.parse(v))&&new Date(v+'T12:00:00Z').toISOString().slice(0,10)===v;
+const date=v=>{if(!validDate(v))throw Error('Invalid calendar date.');};
+const unique=(items)=>{const ids=new Set();for(const x of items){text(x.id,100);if(!x.id||ids.has(x.id))throw Error('Duplicate or missing record ID.');ids.add(x.id);}};
+export function validateState(s){
+ if(!s||s.version!==SCHEMA_VERSION)throw Error('Unsupported backup version. No data was changed.');
+ for(const key of ['customExercises','plans','sessions','weights','measurements','photos','unlocks'])array(s[key]);
+ if(s.profile!==null){const p=s.profile;text(p.name,60);if(!['hypertrophy','strength','balanced','recomposition','fatloss','endurance','fitness'].includes(p.goal))throw Error('Unknown training goal.');if(!['kg','lb'].includes(p.unit))throw Error('Unknown unit.');number(p.days,1,7);if(!Number.isInteger(p.days))throw Error('Training days must be a whole number.');number(p.minutes,15,150);number(p.incrementKg,.1,50);if(!['beginner','intermediate','experienced'].includes(p.experience)||!['full','upperlower','ppl','custom'].includes(p.split))throw Error('Invalid training preferences.');array(p.equipment,20);if(!p.equipment.length||p.equipment.some(x=>!['barbell','dumbbell','machine','cable','bodyweight'].includes(x)))throw Error('Invalid equipment.');for(const k of ['excluded','priorities','secondaryGoals','trainingDays']){array(p[k],100);p[k].forEach(v=>text(v,100));}text(p.restrictions,1000);if(typeof p.auto!=='boolean'||typeof p.timer!=='boolean')throw Error('Invalid settings.');number(p.restSeconds,15,600);if(p.targetWeight!==null)number(p.targetWeight,20,500);}
+ for(const x of s.customExercises){text(x.name,80);text(x.id,100);for(const k of ['muscle','pattern','equipment','loadKind','cues'])text(x[k],1000);array(x.secondary,20);x.secondary.forEach(v=>text(v,80));if(typeof x.compound!=='boolean')throw Error('Invalid exercise.');}unique(s.customExercises);if(s.customExercises.some(e=>BUILTIN_IDS.includes(e.id)))throw Error('Custom exercise IDs cannot replace built-in exercises.');
+ const exerciseIds=new Set([...BUILTIN_IDS,...s.customExercises.map(x=>x.id)]);
+ const prescription=x=>{if(!exerciseIds.has(x.exerciseId))throw Error('Unknown exercise reference.');number(x.sets,1,12);number(x.min,1,100);number(x.max,x.min,100);if(!Number.isInteger(x.sets)||!Number.isInteger(x.min)||!Number.isInteger(x.max))throw Error('Sets and reps must be whole numbers.');};
+ for(const p of s.plans){text(p.name,80);array(p.exercises,40);p.exercises.forEach(prescription);}unique(s.plans);
+ const session=(w,draft=false)=>{text(w.id,100);text(w.name,80);date(w.date);text(w.notes,3000);number(w.startedAt,0,1e15);if(!draft)number(w.finishedAt,w.startedAt,1e15);if(w.readiness!==null)number(w.readiness,1,5);array(w.exercises,40);unique(w.exercises);for(const e of w.exercises){prescription(e);text(e.notes,1000);array(e.entries,30);unique(e.entries);for(const a of e.entries){number(a.kg,0,1000,true);number(a.reps,0,200,true);if(a.reps!==null&&!Number.isInteger(a.reps))throw Error('Repetitions must be whole numbers.');number(a.rir,0,10,true);if(typeof a.done!=='boolean'||!['working','warmup','drop','failure'].includes(a.type))throw Error('Invalid set.');if(a.done&&(a.kg===null||a.reps===null||a.reps<1))throw Error('Completed sets need a load and reps.');}}};
+ s.sessions.forEach(w=>session(w));unique(s.sessions);if(s.draft!==null)session(s.draft,true);
+ for(const w of s.weights){date(w.date);number(w.kg,20,500);}if(new Set(s.weights.map(x=>x.date)).size!==s.weights.length)throw Error('Only one weight per date is allowed.');
+ for(const m of s.measurements){date(m.date);text(m.name,60);number(m.cm,1,500);}if(new Set(s.measurements.map(x=>x.date+'|'+x.name)).size!==s.measurements.length)throw Error('Duplicate measurement.');
+ for(const p of s.photos){text(p.id,100);date(p.date);if(!['front','side','back'].includes(p.view))throw Error('Unknown photo category.');}unique(s.photos);s.unlocks.forEach(x=>text(x,100));return s;
+}
+// Stable IDs are versioned with the built-in catalog. Custom exercises use UUIDs.
+const BUILTIN_IDS=['squat','goblet','body-squat','leg-press','bench','db-bench','pushup','chest-press','rdl','db-rdl','bridge','curl-leg','row','db-row','cable-row','floor-pull','ohp','db-ohp','pike','pulldown','pullup','lateral','curl','pushdown','calf','crunch'];

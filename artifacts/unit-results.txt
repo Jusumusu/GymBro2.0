@@ -1,0 +1,46 @@
+
+> gym-bro@0.1.0 test
+> node tests/engine.test.mjs
+
+✔ A: no fabricated baseline (1.619294ms)
+✔ B: sub-ceiling performance builds reps (5.291512ms)
+✔ C: all sets at ceiling with RIR increases one real increment (0.362571ms)
+✔ D: zero RIR prevents increase (0.21169ms)
+✔ E: missed minimum prevents increase (0.153398ms)
+✔ F: one decline is not a plateau (6.522046ms)
+✔ G: three declines suggest reviewing stress (0.383061ms)
+✔ H: return after break is conservative and immutable (0.209043ms)
+✔ I: unit round trips preserve canonical units (0.284927ms)
+✔ J: machine substitution cannot inherit bench baseline (0.22114ms)
+✔ K: missing RIR requires confirmation exposure (0.229133ms)
+✔ L: goal changes new prescriptions without rewriting history (0.83553ms)
+✔ partial session cannot increase (0.132308ms)
+✔ uncompleted values never establish baseline (0.080623ms)
+✔ warmups never establish baseline (0.120201ms)
+✔ failure set prevents load increase (0.087631ms)
+✔ unusual increment is available and bounded (0.214027ms)
+✔ low readiness blocks progression (0.073104ms)
+✔ automation can be disabled (0.058286ms)
+✔ bodyweight is not assigned a fabricated external load (0.050936ms)
+✔ duplicate sessions do not count as repeated evidence (0.089917ms)
+✔ invalid increment and nonfinite performance are rejected (0.419653ms)
+✔ e1RM excludes high-rep and bodyweight estimates (0.073856ms)
+✔ plans respect equipment and exclusions (0.899485ms)
+✔ strength and endurance materially change generated reps (0.350746ms)
+✔ summary excludes warmups and unchecked sets (0.181905ms)
+✔ rolling average counts real entries and excludes future dates (0.191562ms)
+✔ direct and fractional sets are kept distinct (0.457346ms)
+✔ 93 achievements, unique IDs, 14 categories (0.656405ms)
+✔ schema rejects duplicate records and invalid completed sets (0.714918ms)
+✔ invalid dates, unknown exercises, bad ranges and unsupported versions fail validation (0.338557ms)
+✔ backup preview rejects corrupted, duplicate and incomplete data (0.644733ms)
+✔ CSV escapes formulas and uses kg explicitly (0.290153ms)
+✔ repeated exercise blocks in one workout count as one exposure (0.191695ms)
+ℹ tests 34
+ℹ suites 0
+ℹ pass 34
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 34.586493
