@@ -6,17 +6,17 @@
     "jsonBytes": 2468728
   },
   "validation": {
-    "medianMs": 6.55,
-    "maxMs": 13.79
+    "medianMs": 7.28,
+    "maxMs": 12.72
   },
   "clone": {
-    "medianMs": 30.9,
-    "maxMs": 38.13
+    "medianMs": 32.86,
+    "maxMs": 34.21
   },
   "coachContext": {
-    "medianMs": 2.71,
-    "maxMs": 18.73
+    "medianMs": 2.23,
+    "maxMs": 13.38
   },
-  "contextBytes": 3786,
+  "contextBytes": 4425,
   "limits": "Cloud Node CPU measurements, not a mobile-device performance guarantee. Photo export, storage quotas and physical-device rendering need additional profiling."
 }

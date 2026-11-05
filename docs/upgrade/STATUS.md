@@ -16,13 +16,13 @@ The user removed feature-by-feature pauses and selected an OpenAI-compatible bac
 
 ## Validation
 
-87 calculation/schema/import/coaching tests; 8 real HTTP backend tests with a stub provider; 24 core browser checks; 20 upgrade browser checks; 10 stale-app recovery checks. Viewport assertions cover 280–1440 px and landscape. See [QA](../QA.md) and `artifacts/` for final outcomes; [feature checklist](REVIEW_PLAN.md) records coverage and limits.
+Current coach-fix validation: 95 calculation/schema/import/coaching tests, 9 real HTTP backend tests with a stub provider and 23 upgrade browser checks passed. The prior core browser (24) and stale-app recovery (10) results remain the 0.2 baseline; those two suites were not rerun for this focused patch. Viewport assertions cover 280–1440 px and landscape. See [QA](../QA.md) and `artifacts/` for final outcomes; [feature checklist](REVIEW_PLAN.md) records coverage and limits.
 
-## Publication blocked by GitHub environment protection
+## Preview publication
 
-[Preview run 42038654728](https://github.com/Jusumusu/GymBro2.0/actions/runs/42038654728) built and uploaded the combined 341KB Pages artifact successfully. GitHub rejected the deploy job: `Branch "improvements" is not allowed to deploy to github-pages due to environment protection rules.` No preview was published by this run; `/preview/` can still return 404. Main remains `3c5985f`.
+The owner resolved the Pages environment branch restriction. [Run 42038654728](https://github.com/Jusumusu/GymBro2.0/actions/runs/42038654728) was rerun successfully on November 5 at 13:58 UTC and published https://jusumusu.github.io/GymBro2.0/preview/ . Main remains `3c5985f`. The original rejected attempt is retained in [the release note](RELEASE.md) as historical context.
 
-The owner can open repository Settings → Environments → github-pages → Deployment branches and tags, keep the existing main allowance and add `improvements`, then re-run **all jobs** in that run. No protection setting was changed or bypassed here. The intended preview URL is https://jusumusu.github.io/GymBro2.0/preview/ . Once published, it starts with a separate empty journal; importing a stable backup is an explicit user action. See [release note](RELEASE.md).
+The 0.2.1 coach fix stays on `improvements`: explicit offline/AI connection state, evidence-based routine reviews, mode/context retention, bounded conversation for the compatible backend, and visible failure without silent offline fallback. Its deployment result is recorded with the delivery message. Preview continues to use a separate journal.
 
 ## External prerequisites / remaining limits
 

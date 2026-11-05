@@ -8,9 +8,9 @@ The upgrade is committed and pushed to `improvements`. The stable `main` branch 
 
 > Branch "improvements" is not allowed to deploy to github-pages due to environment protection rules.
 
-This run did **not** publish the preview. The existing stable deployment remains in place. No branch policy was changed or bypassed. The intended URL can still return 404 until the owner permits the preview branch.
+The **initial attempt** did not publish the preview. The owner subsequently resolved the branch restriction and reran this workflow successfully at 13:58 UTC on November 5; the preview is now published. No branch policy was changed or bypassed. The original permission steps below are retained for reference.
 
-## Owner action to publish the preview
+## Original publication steps (resolved)
 
 1. Open [repository environment settings](https://github.com/Jusumusu/GymBro2.0/settings/environments), choose **github-pages**.
 2. Under **Deployment branches and tags**, add the branch **improvements** while keeping the existing **main** allowance. Keep any other protection/reviewer rules you require.
@@ -24,3 +24,7 @@ The combined artifact keeps stable root files byte-identical and adds the separa
 149 passed checks: 87 domain/schema/import/coaching tests, 8 HTTP backend tests with a stub provider, 24 core browser, 20 upgrade browser and 10 update recovery checks. Synthetic 1,500-session benchmark and screenshots are in `artifacts/`. Chromium testing does not certify physical devices or all browsers.
 
 The OpenAI-compatible backend is prepared, with provider credentials held server-side, authentication, exact origin allowlist, limits and consent. Live AI still needs a backend host/provider credentials and real-model evaluation. Local coaching works offline now. No paid service was provisioned. See [limits](../LIMITATIONS.md).
+
+## 0.2.1 coach fix
+
+Routine-change questions now receive a program-specific review with observed evidence and a focused follow-up. Cloud/local selection survives replies; connection status and setup are explicit, cloud conversation is bounded and errors do not silently fall back. Validation: 95 domain, 9 backend-stub and 23 upgrade browser checks passed. A real conversational AI provider still needs secure hosting/credentials; [setup instructions](../AI_SETUP.md).

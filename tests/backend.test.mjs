@@ -13,3 +13,8 @@ test('invalid data produces no upstream request',()=>fixture(async({url,calls})=
 test('oversized requests are rejected',()=>fixture(async({url,calls})=>{const r=await request(url,{message:'x'.repeat(30000)});assert.equal(r.status,413);assert.equal(calls.length,0);}));
 test('rate limit bounds provider usage',()=>fixture(async({url,calls})=>{for(let i=0;i<10;i++)assert.equal((await request(url)).status,200);assert.equal((await request(url)).status,429);assert.equal(calls.length,10);}));
 test('CORS preflight allows only required methods and headers',()=>fixture(async({url})=>{const r=await fetch(url,{method:'OPTIONS',headers:{Origin:origin}});assert.equal(r.status,204);assert.equal(r.headers.get('access-control-allow-origin'),origin);assert.ok(!r.headers.has('access-control-allow-credentials'));}));
+
+test('provider receives bounded conversation and instructions to answer routine questions directly',()=>fixture(async({url,calls})=>{
+ const b=body();b.message='Should I change my routine?';b.context.conversation=[{role:'user',content:'My goal is strength.'},{role:'assistant',content:'What concerns you about your current plan?'}];
+ assert.equal((await request(url,b)).status,200);const sent=JSON.parse(calls[0].body);assert.equal(sent.messages[1].role,'user');assert.equal(sent.messages[1].content,'My goal is strength.');assert.equal(sent.messages[2].role,'assistant');assert.match(sent.messages[0].content,/Do not dump a generic weekly summary/);assert.match(sent.messages.at(-1).content,/Should I change my routine/);
+}));

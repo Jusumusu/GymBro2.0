@@ -1,5 +1,5 @@
 {
-  "passed": 20,
+  "passed": 23,
   "checks": [
     "Dark-first onboarding preserves generated plans and exposes freestyle start",
     "Unit switching preserves the exact canonical equipment increment",
@@ -12,10 +12,13 @@
     "Optional workout sharing exports a real PNG on device",
     "Completion summary and history editing preserve recorded finish time",
     "Local coach uses actual exercise performance and optional readiness without pretending to be an LLM",
+    "Routine-change question gets a saved-program assessment and offline connection status is explicit",
     "Generated plan proposals are editable and save only after approval",
     "Rejecting a coach action preserves data; approved memory deletion leaves workouts intact",
     "Explicit rejection records the decision and applies no proposed program changes",
     "Cloud consent is explicit and backend access tokens are excluded from stored data and backups",
+    "Cloud mode, typed question and exercise survive renders, with bounded follow-up conversation (stub transport)",
+    "Cloud failure keeps the question and selected mode without silently falling back to offline replies",
     "Interactive front/back muscle map uses actual weekly records",
     "Preview path uses a distinct database and cannot see or overwrite the production journal",
     "All upgraded routes fit 280, 320, 360, 375, 390, 414, 430, 768 and 1440 px",

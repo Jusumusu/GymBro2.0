@@ -3,7 +3,7 @@
 Private, offline-first strength training with an optional OpenAI-compatible coach backend. Native ES modules, Node 22+ and no npm dependencies. The upgrade is on `improvements`; `main` remains the stable app.
 
 - Stable: https://jusumusu.github.io/GymBro2.0/
-- Intended upgrade preview: https://jusumusu.github.io/GymBro2.0/preview/ — **publication is blocked by the Pages environment branch rule**, see [release note](docs/upgrade/RELEASE.md).
+- Upgrade preview: https://jusumusu.github.io/GymBro2.0/preview/
 - [Upgrade status and scope](docs/upgrade/STATUS.md)
 
 The preview has a **separate journal**, database, writer lock and service-worker scope. It starts empty. To try your own records, export JSON in the stable app, then explicitly import that backup in preview Settings. Your stable journal stays separate; changes do not synchronize between them. Keep your original backup.
@@ -28,9 +28,9 @@ Browser tests require installed Chromium (`CHROMIUM_PATH` can override its locat
 
 Dark-first appearance with light/system controls; clearer navigation; previous-performance logging; correct completion summaries and local PNG exports; searchable editable history; 40 exercises plus custom movements; ranked temporary swaps; per-exercise progression rules; conservative optional lighter-load candidates; rep-aware plateau checks; richer analytics; calendar and approved rescheduling; optional readiness; explicit goals and milestones; an interactive front/back muscle map; plate calculations; optional haptics; plan duplication, ordering, warm-ups, supersets, drop sets, per-set targets and rest guidance.
 
-The **local coach** works offline with deterministic facts and templates. It can review your week, explain an exercise trend, propose a program, and preview supported journal actions. Editable program proposals and every coach action require explicit in-app approval. Its label always identifies local analysis.
+The **local coach** works offline with deterministic facts and templates, and clearly states that no live AI is running in that mode. Routine-change questions review the saved program, recorded progress, equipment conflicts and missing evidence rather than defaulting to a weekly summary. It can review your week, explain an exercise trend, propose a program, and preview supported journal actions. Editable program proposals and every coach action require explicit in-app approval. Its label always identifies local analysis.
 
-The **cloud coach** uses a server-held provider key. It is prepared and tested with a stub provider, but no paid provider or backend hosting is provisioned. Follow [backend setup](server/README.md). Select cloud mode only after configuring your backend, entering its private access token for the current session and consenting to outbound context. No provider key belongs in the browser, repository or chat.
+The **cloud coach** uses a server-held provider key. It is prepared and tested with a stub provider, but no paid provider or backend hosting is provisioned. Start with [Connect conversational AI](docs/AI_SETUP.md), then follow [backend setup](server/README.md). Select cloud mode only after configuring your backend, entering its private access token for the current session and consenting to outbound context. No provider key belongs in the browser, repository or chat.
 
 ## Deploy without replacing the stable app
 
