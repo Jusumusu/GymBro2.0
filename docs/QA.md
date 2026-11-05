@@ -1,12 +1,12 @@
 # Quality assurance report — 0.1 release candidate
 
-Test date: November 4, 2026. Environment: Linux, Node 24.22.1, Chromium 155.0.8059.79. No physical-device certification or live GitHub deployment was performed.
+Latest test date: November 5, 2026. Original baseline: November 4, 2026. Environment: Linux, Node 24.22.1, Chromium 155.0.8059.79. No physical-device certification or live GitHub deployment was performed.
 
 ## Executed evidence
 
-- `npm test`: **34 named tests passed**, 0 failed, 0 skipped. Actual individual test names and runner totals are in `artifacts/unit-results.txt`.
+- `npm test`: **48 named tests passed**, 0 failed, 0 skipped. Actual individual test names and runner totals are in `artifacts/unit-results.txt`.
 - `npm run build`: completed; relative production assets and worker precache emitted to `dist/`.
-- `npm run test:e2e`: **21 browser checks passed** using a temporary Chromium profile and a real local server. Results are recorded in `artifacts/browser-results.json`. No uncaught browser exceptions in the main tested flow.
+- `npm run test:e2e`: **24 browser checks passed** using a temporary Chromium profile and a real local server. Results are recorded in `artifacts/browser-results.json`. No uncaught browser exceptions in the main tested flow.
 - Root-path and GitHub Pages-style `/pages-test/` production deployment paths both loaded, activated a scoped worker, and reloaded offline.
 
 The direct DevTools test driver was written because Playwright could not be installed through the unavailable environment proxy. It performs DOM interactions, validation, IndexedDB readback assertions, screenshots, viewport changes, and browser-level network disabling. These are actual Chromium executions, not mock browser results. Some interactions use DOM `click()` and `requestSubmit()` rather than physical pointer input, so touch ergonomics and full keyboard/screen-reader behavior still need device testing.
@@ -58,3 +58,11 @@ Some advanced logger controls (reordering, every special-set transition, every e
 - Scoped service-worker cache cleanup to each registration, preventing cross-path cache deletion.
 - Invalidated undo snapshots after later writes to avoid restoring stale journals over new data.
 - Added single-writer locking, invalid-numeric completion guards, real image decode checks, and one-exposure-per-session aggregation.
+
+## November 5, 2026 — direct legacy import update
+
+- 48 named unit/domain tests passed (34 existing plus 14 legacy-import cases).
+- Browser regression now includes original-file merge, duplicate reimport, explicit kg confirmation, and preservation of current workouts, profile, draft and photo blobs.
+- Eight additional local browser checks with the supplied original export passed: preview, all sessions/sets, exact values and identities, body tracking, history display, gains chart, repeat import and reload persistence. No personal export or screenshots from that test are committed.
+- Native full-backup restoration remains covered by the existing regression. Unsupported legacy formats fail before any persisted state changes.
+- Test navigation polling now tolerates Chromium context replacement while reloading; an early driver-only navigation failure was corrected and rerun.

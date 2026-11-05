@@ -11,6 +11,7 @@ Gym Bro 0.1 is a dependency-free ECMAScript-module PWA. The environment proxy pr
 - `analytics.js`: actual working-set totals, strength estimates, weekly direct/indirect sets, weight trends, and 93 milestones in 14 categories.
 - `storage.js`: IndexedDB state/media stores and atomic restore.
 - `backup.js`: versioned validated JSON backups and spreadsheet-safe CSV.
+- `legacy-import.js`: validated original Gym Bro v3 migration, deterministic exercise/session identities, non-destructive history merge, duplicate/conflict reporting.
 - `ui.js`: escaped HTML, icons, accessible chart summaries.
 - `app.js`: hash routes, views, forms, queued mutations, actions.
 - `style.css`: original design system, 280px+ responsive layout, focus styles, reduced motion.
@@ -35,4 +36,4 @@ New service workers wait until tabs close: no `skipWaiting` and no IndexedDB del
 
 ## Honest boundaries
 
-No cloud sync, wearables, health-platform integration, OS notifications, universal strength-standard dataset, clinical recovery score, or legacy migration is claimed. Current import supports schema v1 only. Future migrations need explicit pure functions and real fixtures. No legacy source or backups were available.
+No cloud sync, wearables, health-platform integration, OS notifications, universal strength-standard dataset, or clinical recovery score is claimed. Native backups use schema v1. A verified original Gym Bro v3 session format can now be merged after preview; synthetic fixtures cover regressions. Unsupported legacy media, measurements, extra saved-plan formats and lift targets fail explicitly. Personal exports are kept outside the repository.

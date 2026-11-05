@@ -15,7 +15,7 @@ npm run dev
 Open the port printed by the server in your browser. Do not open `index.html` directly with a file URL: ES modules, IndexedDB, and service workers need an HTTP origin. This task already has an isolated checkout; use it directly, without creating another worktree.
 
 ```sh
-npm test             # 34 named calculation/engine/schema/backup tests
+npm test             # 48 named calculation/engine/schema/backup/import tests
 npm run build        # production PWA in dist/
 npm run preview      # serve production build
 npm run test:e2e     # actual Chromium browser suite; installed Chromium required
@@ -41,7 +41,7 @@ The workflow builds `dist/` and deploys relative assets, so `/GymBro2.0/` paths 
 - Exercise-isolated, deterministic double progression, missing-RIR rules, break/fatigue/plateau prompts, editable loads and reasons.
 - Actual-record strength charts, direct/heuristic secondary set counts, weekly review, milestones.
 - Same-day weight editing, seven-day averages, measurements, private raster photos, side-by-side photo grid with paged loading.
-- Validated JSON export/import preview with atomic restore and duplicate handling, CSV export, offline shell and manifest.
+- Validated JSON export/import preview with atomic restore, duplicate handling, and direct original Gym Bro v3 history merge, CSV export, offline shell and manifest.
 
 ## Important release boundaries
 
@@ -58,3 +58,7 @@ No strength-standard thresholds are fabricated. No unverified cloud/health integ
 - [Limitations and roadmap](docs/LIMITATIONS.md)
 
 Browser data is private to the device and origin. Export backups regularly; browser storage can be cleared. Backups are not encrypted. Use your own judgment on loads and technique: recommendations are editable coaching heuristics, not medical or clinically validated advice.
+
+## Import workouts from the original Gym Bro
+
+In Settings, choose **Import a backup**, select the original app’s v3 complete JSON export, and choose **Validate & preview**. Review counts, confirm that the source uses kilograms, and choose **Merge into history**. Existing workouts, draft, profile, measurements and photo blobs stay in place; matching workouts are skipped. Existing same-date body weights win conflicts, which the preview reports. This supports the verified v3 session format and its known exercises; files with legacy photos, measurements, extra saved plans or lift targets require a separate conversion and are rejected without changing your data. Gym Bro 2.0 backups continue to use explicit full replacement.
