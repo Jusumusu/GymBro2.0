@@ -16,3 +16,10 @@ let sw = await readFile('public/sw.js','utf8');
 sw = sw.replace('__VERSION__',hash.digest('hex').slice(0,12)).replace('__ASSETS__',JSON.stringify(files.map(f=>'./'+f)));
 await writeFile('dist/sw.js', sw);
 console.log('Built static PWA in dist/ (relative asset paths).');
+
+if(process.argv.includes('--preview')){
+ const html=(await readFile('dist/index.html','utf8')).replace('<head>','<head><meta name="gymbro-environment" content="preview">');
+ await writeFile('dist/index.html',html);
+ const manifest=JSON.parse(await readFile('dist/manifest.webmanifest','utf8'));manifest.name='Gym Bro Preview';manifest.short_name='GB Preview';await writeFile('dist/manifest.webmanifest',JSON.stringify(manifest));
+ console.log('Preview build: isolated browser database and lock, deploy under /preview/.');
+}
