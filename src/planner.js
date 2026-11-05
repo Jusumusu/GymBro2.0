@@ -12,4 +12,4 @@ export function generatePlans(state){
  const priority=all.find(e=>p.priorities.includes(e.muscle)&&!chosen.includes(e));if(priority)chosen.push(priority);
  return {id:uid(),name:names[i],exercises:chosen.slice(0,Math.max(3,Math.floor(p.minutes/9))).map(e=>({exerciseId:e.id,sets,min:e.compound?min:Math.max(8,min),max:e.compound?max:Math.max(12,max)}))};});
 }
-export function makeDraft(plan,date){return {id:uid(),name:plan?.name||'Freestyle workout',date,startedAt:Date.now(),notes:'',readiness:null,exercises:(plan?.exercises||[]).map(p=>({...p,id:uid(),notes:'',entries:Array.from({length:p.sets},()=>({id:uid(),kg:null,reps:null,rir:null,done:false,type:'working'}))}))};}
+export function makeDraft(plan,date){return {id:uid(),planId:plan?.id??null,name:plan?.name||'Freestyle workout',date,startedAt:Date.now(),notes:'',readiness:null,exercises:(plan?.exercises||[]).map(p=>({...p,id:uid(),notes:'',entries:[...Array.from({length:p.warmups||0},()=>({id:uid(),kg:null,reps:null,rir:null,done:false,type:'warmup'})),...Array.from({length:p.sets},(_,i)=>({id:uid(),kg:null,reps:p.repTargets?.[i]??null,rir:null,done:false,type:'working'}))]}))};}

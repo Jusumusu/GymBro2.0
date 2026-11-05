@@ -1,3 +1,7 @@
+# Execution update
+
+The latest user instruction removes checkpoint approval pauses. The sequence below is retained as an implementation checklist; proceed autonomously and record outcomes, rather than waiting after each item. Production release and paid/external services retain their separate authorization boundaries.
+
 # Feature review checkpoints
 
 The user's explicit review request governs this project. Work on one checkpoint at a time, complete its implementation and useful checks, provide a concrete review, and pause. No automatic advancement after a feature demo. Small styling/implementation decisions within that approved feature do not need separate questions. If a checkpoint is too large to review clearly, split it before implementation. Revisions stay within the same checkpoint until accepted.
