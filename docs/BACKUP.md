@@ -37,3 +37,11 @@ The old session-level warm-up checkbox is preserved as a note. No individual war
 Unsupported legacy photos, measurements, additional saved-plan schemas, lift targets, units and unrecognized movements stop the import without changing your journal. Native Gym Bro 2.0 backups still perform explicit full replacement; the preview makes the distinction clear.
 
 If the update button is missing or the app stays on old code, open `update.html` beside the app (for this deployment: https://jusumusu.github.io/GymBro2.0/update.html). Close other Gym Bro tabs and app windows and choose **Update and open Gym Bro**. The helper checks that fresh app files are reachable, unregisters only this app’s worker, and refreshes only its offline app cache. IndexedDB records, photos, unfinished workouts, localStorage and other app scopes remain intact. It stops if another Gym Bro writer window is open or the network is unavailable. You can also reach it through **Settings → Update app**. On the welcome screen, **Import existing workouts** opens the same import flow without profile setup.
+
+## Upgrade preview and additive fields
+
+Preview uses `gymbro-preview-v1` for both state and media, a separate writer lock and service-worker cache scope. It never opens `gymbro-local`. Export your stable JSON before testing, then explicitly import a copy in preview if desired. Preview changes do not sync back. The relative preview update page refreshes preview code only.
+
+The upgrade keeps native root schema v1 and adds a validated extension v1 for appearance, goals, calendar, optional readiness, progression rules and coach preferences/messages/decisions. Old backups get defaults without losing core fields. Unknown extension versions stop safely. Backend client tokens and provider keys are never in this backup. Conversation/preferences may be sensitive; backups remain unencrypted.
+
+Retain the original stable backup: expanded built-in exercise IDs are unknown to stable 0.1.2, so it cannot read every preview-created backup. Older plan editors can also drop advanced fields. Returning to stable is safe because its own journal is untouched, not because all new data has a lossless downgrade. Export preview data separately before removing it.

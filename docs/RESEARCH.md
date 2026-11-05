@@ -39,3 +39,11 @@ The app does not use unvalidated machine learning, infer hypertrophy from tonnag
 ## Required research follow-up
 
 Verify the supplied 2025/2026 DOIs, review full texts and current consensus, obtain an independent exercise-science review, investigate load- versus repetition-progression trials, validate RIR reliability assumptions, and prospectively evaluate the rules. This document is an honest source-and-uncertainty record, not a completed systematic review.
+
+## 0.2 preview rule changes
+
+Double progression remains the default. Per-exercise increment/rest overrides and reps-only/load/manual modes are optional. Conservative load mode can offer one small increment after two exposures and all minimum reps with reported RIR ≥3; the 7.5% jump guardrail and effort/missed-target checks remain. Reps-only mode does not increase load. After two minimum-target misses, an optional equipment-rounded lighter candidate is offered only within 15% of prior load; it is never applied automatically. These thresholds are coaching guardrails, not proven individualized optima.
+
+Four identical exposures can prompt plateau review; increasing actual reps above ten is still progress even though e1RM is deliberately limited to 1–10 reps. Performance records distinguish observed working load, reps at matched load and estimated strength; the first observation establishes a baseline, and repeated exercise blocks yield at most one record event per exposure. Recent repeated misses prevent an immediate rebound load increase.
+
+Readiness fields are subjective and individually optional. Missing fields remain null, not an assumed middle or low score. Low reported energy/high fatigue can suppress a progression increase, without calculating a recovery percentage. Muscle distribution uses performed challenging working sets, with 0.5 secondary-set estimates explicitly labeled as heuristics. Local and cloud coach language must preserve these distinctions; live LLM quality has not been evaluated.

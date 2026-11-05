@@ -1,0 +1,10 @@
+import {performance} from 'node:perf_hooks';
+import {initialState,validateState} from '../src/model.js';
+import {migrateState} from '../src/extensions.js';
+import {buildCoachContext} from '../src/coach.js';
+import {writeFile,mkdir} from 'node:fs/promises';
+const s=migrateState(initialState());s.profile={name:'Synthetic benchmark',goal:'hypertrophy',experience:'intermediate',days:3,minutes:60,unit:'kg',incrementKg:2.5,split:'full',equipment:['barbell','dumbbell','machine','cable','bodyweight'],excluded:[],priorities:[],secondaryGoals:[],trainingDays:[],restrictions:'',auto:true,timer:false,restSeconds:120,targetWeight:null};
+for(let i=0;i<1500;i++){const date=new Date(Date.UTC(2015,0,1+i*2)).toISOString().slice(0,10);s.sessions.push({id:'session-'+i,name:'Synthetic history',date,startedAt:Date.parse(date),finishedAt:Date.parse(date)+3600000,notes:'',readiness:null,exercises:['bench','squat','row','rdl','ohp'].map((id,j)=>({id:'exercise-'+j,exerciseId:id,sets:3,min:6,max:10,notes:'',entries:Array.from({length:3},(_,k)=>({id:'set-'+k,kg:40+i%10,reps:6+i%5,rir:2,done:true,type:'working'}))}))});}
+const measure=fn=>{const times=[];for(let i=0;i<5;i++){const start=performance.now();fn();times.push(performance.now()-start);}return {medianMs:Number(times.sort((a,b)=>a-b)[2].toFixed(2)),maxMs:Number(Math.max(...times).toFixed(2))};};
+const result={runtime:process.version,records:{sessions:s.sessions.length,sets:s.sessions.length*15,jsonBytes:Buffer.byteLength(JSON.stringify(s))},validation:measure(()=>validateState(s)),clone:measure(()=>structuredClone(s)),coachContext:measure(()=>buildCoachContext(s,{exerciseId:'bench',date:'2026-11-05'})),contextBytes:Buffer.byteLength(JSON.stringify(buildCoachContext(s,{exerciseId:'bench',date:'2026-11-05'}))),limits:'Cloud Node CPU measurements, not a mobile-device performance guarantee. Photo export, storage quotas and physical-device rendering need additional profiling.'};
+await mkdir('artifacts',{recursive:true});await writeFile('artifacts/performance-results.json',JSON.stringify(result,null,2));console.log(JSON.stringify(result,null,2));
