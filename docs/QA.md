@@ -66,3 +66,7 @@ Some advanced logger controls (reordering, every special-set transition, every e
 - Eight additional local browser checks with the supplied original export passed: preview, all sessions/sets, exact values and identities, body tracking, history display, gains chart, repeat import and reload persistence. No personal export or screenshots from that test are committed.
 - Native full-backup restoration remains covered by the existing regression. Unsupported legacy formats fail before any persisted state changes.
 - Test navigation polling now tolerates Chromium context replacement while reloading; an early driver-only navigation failure was corrected and rerun.
+
+## November 5, 2026 — stale app recovery
+
+`npm run test:update` reproduces an old cache-first shell, deploys newer app files, opens the uncached recovery page, verifies writer-lock and offline guards, and checks that history, active draft, body data, exact photo bytes, localStorage, and unrelated/nested cache scopes survive the update. The welcome screen exposes backup import before onboarding. Production helper assets are excluded from precache to keep the recovery route reachable from older shells.

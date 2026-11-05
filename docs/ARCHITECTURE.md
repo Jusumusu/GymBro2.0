@@ -37,3 +37,7 @@ New service workers wait until tabs close: no `skipWaiting` and no IndexedDB del
 ## Honest boundaries
 
 No cloud sync, wearables, health-platform integration, OS notifications, universal strength-standard dataset, or clinical recovery score is claimed. Native backups use schema v1. A verified original Gym Bro v3 session format can now be merged after preview; synthetic fixtures cover regressions. Unsupported legacy media, measurements, extra saved-plan formats and lift targets fail explicitly. Personal exports are kept outside the repository.
+
+## Update recovery
+
+`public/update.html`, `update.js`, and `update.css` are copied to the production build but deliberately excluded from the precache. The helper can therefore load through an old cache-first worker. It verifies network access to a real production shell, takes the single-writer lock, unregisters only the matching app scope, removes its app-file caches, and navigates to a fresh shell. It never deletes IndexedDB/localStorage or media. Nested/other application cache scopes are excluded from cleanup. Build version tokens keep helper assets independently refreshable. Ordinary worker installation still avoids `skipWaiting`; update recovery is an explicit user action after other app windows close.

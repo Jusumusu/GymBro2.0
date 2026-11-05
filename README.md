@@ -62,3 +62,7 @@ Browser data is private to the device and origin. Export backups regularly; brow
 ## Import workouts from the original Gym Bro
 
 In Settings, choose **Import a backup**, select the original app’s v3 complete JSON export, and choose **Validate & preview**. Review counts, confirm that the source uses kilograms, and choose **Merge into history**. Existing workouts, draft, profile, measurements and photo blobs stay in place; matching workouts are skipped. Existing same-date body weights win conflicts, which the preview reports. This supports the verified v3 session format and its known exercises; files with legacy photos, measurements, extra saved plans or lift targets require a separate conversion and are rejected without changing your data. Gym Bro 2.0 backups continue to use explicit full replacement.
+
+## App stays on an old version
+
+Open [the direct update page](https://jusumusu.github.io/GymBro2.0/update.html), close other Gym Bro app windows/tabs, and select **Update and open Gym Bro**. This refreshes app files while preserving local records and photos. The page stays outside the offline cache so old app shells can access it. On a fresh welcome screen, **Import existing workouts** lets you select the original JSON without first creating a profile.
