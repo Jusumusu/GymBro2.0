@@ -3,7 +3,7 @@
 Private, offline-first strength training with an optional OpenAI-compatible coach backend. Native ES modules, Node 22+ and no npm dependencies. The upgrade is on `improvements`; `main` remains the stable app.
 
 - Stable: https://jusumusu.github.io/GymBro2.0/
-- Upgrade preview: https://jusumusu.github.io/GymBro2.0/preview/
+- Intended upgrade preview: https://jusumusu.github.io/GymBro2.0/preview/ — **publication is blocked by the Pages environment branch rule**, see [release note](docs/upgrade/RELEASE.md).
 - [Upgrade status and scope](docs/upgrade/STATUS.md)
 
 The preview has a **separate journal**, database, writer lock and service-worker scope. It starts empty. To try your own records, export JSON in the stable app, then explicitly import that backup in preview Settings. Your stable journal stays separate; changes do not synchronize between them. Keep your original backup.
