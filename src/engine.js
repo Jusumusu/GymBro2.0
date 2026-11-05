@@ -21,7 +21,12 @@ export function recommend({exerciseId,sessions,goal='hypertrophy',prescription,i
  const recent=history.slice(-3);
  if(recent.length===3&&score(recent[2])<score(recent[1])*.98&&score(recent[1])<score(recent[0])*.98)return result('review',kg,'Performance declined across three comparable exposures. Review recovery and workload; consider a lighter session. This is not a diagnosis.',confidence);
  if(last.sets.length<target.sets)return result('maintain',kg,'Fewer working sets were completed than prescribed. Keep the load and review the session before progressing.',confidence);
- if(last.sets.some(s=>s.reps<target.min))return result('maintain',kg,'At least one set missed the minimum repetition target. Keep or manually reduce the load; do not increase it.',confidence);
+ if(last.sets.some(s=>s.reps<target.min)){
+  const repeated=history.length>=2&&history.at(-2).sets.some(s=>s.reps<target.min);
+  const lighter=Number((Math.floor((kg*.95+1e-8)/increment)*increment).toFixed(6));
+  const optionalKg=repeated&&lighter>0&&lighter<kg&&lighter>=kg*.85?lighter:null;
+  return {...result('maintain',kg,repeated?'Two exposures missed the minimum repetition target. Keep the load or review the optional lighter candidate; changing it is your choice.':'At least one set missed the minimum repetition target. Keep or manually reduce the load; do not increase it.',confidence),optionalKg};
+ }
  const priorTwo=history.slice(-3,-1);if(priorTwo.length===2&&priorTwo.every(x=>x.sets.length<target.sets||x.sets.some(s=>s.reps<target.min)))return result('maintain',kg,'Two recent exposures missed the prescribed targets. Repeat a successful exposure before considering a load increase.',confidence);
  if(last.sets.some(s=>s.rir!==null&&s.rir<1||s.type==='failure'))return result('maintain',kg,'At least one set was at or near technical failure. Repeat this load with controlled repetitions before increasing it.',confidence);
  const uniform=last.sets.every(s=>Math.abs(s.kg-kg)<.001);
