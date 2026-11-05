@@ -47,7 +47,8 @@ export async function prepareLegacyImport(source,current=initialState()){
  const builtinNames=new Map(EXERCISES.map(e=>[normalize(e.name),e.id]));
  async function resolveExercise(spec){
   const name=normalize(string(spec.name,'exercise name'));
-  const match=aliases.get(name)||builtinNames.get(name);if(match)return match;
+  // Preserve verified legacy variants even when the catalog later adds the same name.
+  const match=aliases.get(name)||(!variants.has(name)&&builtinNames.get(name));if(match)return match;
   const variant=variants.get(name);if(!variant)fail(`Cannot safely map legacy exercise “${spec.name}”. No data was changed.`);
   const exerciseId=await id('exercise:'+variant.key);
   const definition={id:exerciseId,name:spec.name,muscle:variant.muscle,pattern:variant.pattern,equipment:variant.equipment,secondary:[],compound:false,loadKind:'total load',cues:typeof spec.tip==='string'?spec.tip.slice(0,1000):'',difficulty:'user-defined',unilateral:false};

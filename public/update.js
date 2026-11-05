@@ -2,6 +2,7 @@
 const button=document.querySelector('#update');
 const status=document.querySelector('#status');
 const base=new URL('./',location.href);
+const writerLock=base.pathname.split('/').includes('preview')?'gymbro-preview-writer':'gymbro-writer';
 button.disabled=false;
 status.textContent='Your saved data stays in this browser. Close any other Gym Bro windows before updating.';
 
@@ -29,7 +30,7 @@ button.addEventListener('click',async()=>{
  button.disabled=true;
  try{
   if(navigator.locks){
-   await navigator.locks.request('gymbro-writer',{ifAvailable:true},async lock=>{
+   await navigator.locks.request(writerLock,{ifAvailable:true},async lock=>{
     if(!lock)throw Error('Another Gym Bro window is still open. Close it, then click Update again here.');
     await refreshApp();
    });

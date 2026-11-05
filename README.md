@@ -1,68 +1,51 @@
-# Gym Bro
+# Gym Bro 2.0
 
-**Your training. A little stronger.**
+Private, offline-first strength training with an optional OpenAI-compatible coach backend. Native ES modules, Node 22+ and no npm dependencies. The upgrade is on `improvements`; `main` remains the stable app.
 
-An original, private, local-first fitness PWA with workout logging, editable programs, explainable progression, body tracking, real-data analytics, and 93 progressive milestones. No account, API key, subscriptions, or package downloads required.
+- Stable: https://jusumusu.github.io/GymBro2.0/
+- Upgrade preview: https://jusumusu.github.io/GymBro2.0/preview/
+- [Upgrade status and scope](docs/upgrade/STATUS.md)
 
-## Run locally
+The preview has a **separate journal**, database, writer lock and service-worker scope. It starts empty. To try your own records, export JSON in the stable app, then explicitly import that backup in preview Settings. Your stable journal stays separate; changes do not synchronize between them. Keep your original backup.
 
-Use Node.js 22+ (tested with 24):
-
-```sh
-npm run dev
-```
-
-Open the port printed by the server in your browser. Do not open `index.html` directly with a file URL: ES modules, IndexedDB, and service workers need an HTTP origin. This task already has an isolated checkout; use it directly, without creating another worktree.
+## Run and verify
 
 ```sh
-npm test             # 48 named calculation/engine/schema/backup/import tests
-npm run build        # production PWA in dist/
-npm run preview      # serve production build
-npm run test:e2e     # actual Chromium browser suite; installed Chromium required
+npm run dev              # serve source; open the printed HTTP URL
+npm test                 # deterministic, schema, migration and coaching tests
+npm run test:backend     # localhost HTTP tests with a stub AI provider
+npm run build            # static PWA in dist/
+npm run preview          # serve dist/
+npm run test:e2e          # core Chromium regression
+npm run test:upgrade      # upgraded UI, responsive layouts and storage isolation
+npm run test:update       # stale-cache recovery without journal deletion
+npm run benchmark         # synthetic 1,500-session CPU benchmark
 ```
 
-Browser tests start an isolated local server and temporary Chromium profile, capture screenshots in `artifacts/`, and exercise offline mode. Set `CHROMIUM_PATH`, `E2E_PORT`, or `CDP_PORT` if your installation differs. The driver uses native DevTools Protocol, not Playwright. No npm install is needed because there are no external dependencies.
+Browser tests require installed Chromium (`CHROMIUM_PATH` can override its location), use temporary profiles and synthetic records, and write results/screenshots to `artifacts/`. No installation is needed for ordinary app development. Use HTTP/HTTPS, not a file URL.
 
-## Upload to GitHub
+## Included in the upgrade
 
-1. Extract the **source** ZIP and upload its contents to the root of your new `GymBro2.0` repository. Include the hidden `.github/workflows/pages.yml` directory. The ZIP contains an app folder: upload the files *inside* it, not another nested repository folder.
-2. In GitHub **Settings → Pages → Build and deployment**, choose **GitHub Actions**.
-3. Push/upload to `main`, or run the “Deploy Gym Bro to GitHub Pages” workflow manually.
-4. Open the Pages URL GitHub reports. Load once online; subsequent essential use works offline. Install through the browser menu on supported devices.
+Dark-first appearance with light/system controls; clearer navigation; previous-performance logging; correct completion summaries and local PNG exports; searchable editable history; 40 exercises plus custom movements; ranked temporary swaps; per-exercise progression rules; conservative optional lighter-load candidates; rep-aware plateau checks; richer analytics; calendar and approved rescheduling; optional readiness; explicit goals and milestones; an interactive front/back muscle map; plate calculations; optional haptics; plan duplication, ordering, warm-ups, supersets, drop sets, per-set targets and rest guidance.
 
-The workflow builds `dist/` and deploys relative assets, so `/GymBro2.0/` paths work. It does not publish an existing Gym Bro app. The provided **static** ZIP already contains the generated site: upload its contents to any static HTTPS host; a GitHub repository alone is not a web host until Pages is enabled. On GitHub, the source + Actions route is recommended.
+The **local coach** works offline with deterministic facts and templates, and clearly states that no live AI is running in that mode. Routine-change questions review the saved program, recorded progress, equipment conflicts and missing evidence rather than defaulting to a weekly summary. It can review your week, explain an exercise trend, propose a program, and preview supported journal actions. Editable program proposals and every coach action require explicit in-app approval. Its label always identifies local analysis.
 
-## Included functionality
+The **cloud coach** uses a server-held provider key. It is prepared and tested with a stub provider, but no paid provider or backend hosting is provisioned. Start with [Connect conversational AI](docs/AI_SETUP.md), then follow [backend setup](server/README.md). Select cloud mode only after configuring your backend, entering its private access token for the current session and consenting to outbound context. No provider key belongs in the browser, repository or chat.
 
-- Onboarding/profile: seven primary goals, experience, units, equipment, exclusions, priorities, optional secondary goal and day preferences, notes, automatic-suggestion and timer toggles.
-- Editable generated full-body / upper-lower / push-pull-legs programs; custom/manual plans, exercise library, custom exercises.
-- Resume/autosave, numeric set logging, RIR, working/warm-up/drop/failure types, check/uncheck, first-set bulk copy, reorder/substitute/remove, editable targets/notes, optional rest timer.
-- Save and edit history; confirm destructive actions; one-step deletion/discard undo.
-- Exercise-isolated, deterministic double progression, missing-RIR rules, break/fatigue/plateau prompts, editable loads and reasons.
-- Actual-record strength charts, direct/heuristic secondary set counts, weekly review, milestones.
-- Same-day weight editing, seven-day averages, measurements, private raster photos, side-by-side photo grid with paged loading.
-- Validated JSON export/import preview with atomic restore, duplicate handling, and direct original Gym Bro v3 history merge, CSV export, offline shell and manifest.
+## Deploy without replacing the stable app
 
-## Important release boundaries
+GitHub Settings → Pages must use **GitHub Actions**. Pushing `improvements` runs the preview workflow: build the current stable `main`, build this candidate, verify stable files remain byte-identical, and add the candidate under `/preview/`. The `github-pages` environment must permit the `improvements` branch. The production workflow is guarded to `main`. Do not merge or push this upgrade to `main` until a production release is requested.
 
-This is a functional **0.1 release candidate**, not the entire multi-phase vision certified as finished. The network proxy prevented live research and preferred framework installation. It uses maintainable native JavaScript modules and Node tests rather than React/TypeScript/Vite/Vitest. See [known limitations and roadmap](docs/LIMITATIONS.md) and the [QA report](docs/QA.md) for exact scope and evidence.
+A later stable deployment may remove the preview folder; pushing a candidate change rebuilds it. Return to the stable URL to stop testing. Branch rollback instructions and data boundaries are in [the release checklist](docs/upgrade/REVIEW_PLAN.md).
 
-No strength-standard thresholds are fabricated. No unverified cloud/health integrations are advertised. Data starts empty: screenshots use only records entered by browser tests, never seed a new user's journal.
+## Backups and old app recovery
+
+In Settings, export complete JSON regularly. Native backups restore after validation and explicit full replacement. Original Gym Bro v3 exports merge through a separate preview with kg confirmation and duplicate detection; unsupported legacy shapes fail without changing records. [Backup details](docs/BACKUP.md).
+
+If an old installed shell hides the update button, open `update.html` beside the relevant app URL, close other windows of that app and select **Update and open Gym Bro**. For preview use `/GymBro2.0/preview/update.html`; for stable use `/GymBro2.0/update.html`. The helper refreshes app files, not workouts or photos.
 
 ## Documentation
 
-- [Architecture](docs/ARCHITECTURE.md)
-- [Research and engine rules](docs/RESEARCH.md)
-- [Backup and recovery](docs/BACKUP.md)
-- [QA evidence](docs/QA.md)
-- [Limitations and roadmap](docs/LIMITATIONS.md)
+[Architecture](docs/ARCHITECTURE.md) · [Training rules](docs/RESEARCH.md) · [QA evidence](docs/QA.md) · [Known limits](docs/LIMITATIONS.md) · [Coach contracts and evaluation](docs/upgrade/COACH.md) · [Optional sync design](docs/upgrade/SYNC.md)
 
-Browser data is private to the device and origin. Export backups regularly; browser storage can be cleared. Backups are not encrypted. Use your own judgment on loads and technique: recommendations are editable coaching heuristics, not medical or clinically validated advice.
-
-## Import workouts from the original Gym Bro
-
-In Settings, choose **Import a backup**, select the original app’s v3 complete JSON export, and choose **Validate & preview**. Review counts, confirm that the source uses kilograms, and choose **Merge into history**. Existing workouts, draft, profile, measurements and photo blobs stay in place; matching workouts are skipped. Existing same-date body weights win conflicts, which the preview reports. This supports the verified v3 session format and its known exercises; files with legacy photos, measurements, extra saved plans or lift targets require a separate conversion and are rejected without changing your data. Gym Bro 2.0 backups continue to use explicit full replacement.
-
-## App stays on an old version
-
-Open [the direct update page](https://jusumusu.github.io/GymBro2.0/update.html), close other Gym Bro app windows/tabs, and select **Update and open Gym Bro**. This refreshes app files while preserving local records and photos. The page stays outside the offline cache so old app shells can access it. On a fresh welcome screen, **Import existing workouts** lets you select the original JSON without first creating a profile.
+Browser data is device-local and can be cleared. Backups are not encrypted. Estimates and coaching suggestions remain editable; no medical assessment, recovery score, verified population strength standard or automatic cloud sync is claimed.

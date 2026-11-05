@@ -1,72 +1,54 @@
-# Quality assurance report — 0.1 release candidate
+# Quality assurance — 0.2 preview
 
-Latest test date: November 5, 2026. Original baseline: November 4, 2026. Environment: Linux, Node 24.22.1, Chromium 155.0.8059.79. No physical-device certification or live GitHub deployment was performed.
+Test date: November 5, 2026. Linux, Node 24.22.1, Chromium 155.0.8059.79. All test journals/photos are synthetic and use temporary profiles. The stable `main` baseline is `3c5985f`; the original audit remains in [upgrade/AUDIT.md](upgrade/AUDIT.md).
 
-## Executed evidence
+## Executed checks
 
-- `npm test`: **48 named tests passed**, 0 failed, 0 skipped. Actual individual test names and runner totals are in `artifacts/unit-results.txt`.
-- `npm run build`: completed; relative production assets and worker precache emitted to `dist/`.
-- `npm run test:e2e`: **24 browser checks passed** using a temporary Chromium profile and a real local server. Results are recorded in `artifacts/browser-results.json`. No uncaught browser exceptions in the main tested flow.
-- Root-path and GitHub Pages-style `/pages-test/` production deployment paths both loaded, activated a scoped worker, and reloaded offline.
+| Command / check | Result | Evidence |
+|---|---|---|
+| `npm test` | 87 passed, 0 failed/skipped | `artifacts/unit-results.txt` |
+| `npm run test:backend` | 8 passed | Real localhost HTTP and in-process stub provider; no real LLM |
+| `npm run test:e2e` | 24 browser checks passed | `artifacts/browser-results.json` |
+| `npm run test:upgrade` | 20 browser checks passed | `artifacts/upgrade-results.json` |
+| `npm run test:update` | 10 recovery checks passed | Old cached build, online/offline/locking/data/media/cache scope assertions |
+| `npm run build` and `build:preview` | Static relative PWA builds | HTML/manifest environment and worker assets checked |
+| Stable + preview composition | Byte-identical stable files | `compose-preview.mjs` hashes every root asset; rejects unsafe candidate inputs |
+| Synthetic long history | 1,500 sessions / 22,500 sets / 2.47MB JSON | `artifacts/performance-results.json` |
 
-The direct DevTools test driver was written because Playwright could not be installed through the unavailable environment proxy. It performs DOM interactions, validation, IndexedDB readback assertions, screenshots, viewport changes, and browser-level network disabling. These are actual Chromium executions, not mock browser results. Some interactions use DOM `click()` and `requestSubmit()` rather than physical pointer input, so touch ergonomics and full keyboard/screen-reader behavior still need device testing.
+Browser automation uses native Chromium DevTools because this app has no package dependencies. Interactions use DOM clicks/requestSubmit and actual IndexedDB readback, image download, offline browser networking and screenshots. This is real browser execution, but is not equivalent to physical touch or a complete assistive-technology audit.
 
-## Calculation/domain tests
+## Coverage
 
-Required engine cases A–L: no baseline fabrication; rep progression; top-range load progression; excessive effort; missed targets; one temporary decline; sustained decline; return after a break; kg/lb round trip; exercise-substitution isolation; missing RIR; goal changes with immutable history.
+Original core checks cover onboarding, generated/manual plans, set/RIR/type/completion/copy, draft reload, partial finish/history edits, deletion undo, custom movement, same-day weight replacement, measurement/photo persistence, canonical unit conversion, native full backup/atomic media restore, verified legacy import/reimport/kg confirmation, analytics/milestones, offline set writes and repository subdirectory workers.
 
-Additional cases cover incomplete sessions, unchecked values, warm-ups, failure types, unusual increments and jump limits, low readiness, disabled adaptations, bodyweight handling, duplicate session evidence, invalid/nonfinite values, e1RM limits, equipment/exclusion-aware plans, goal ranges, true working-set totals, sparse weight averages, separate direct/fractional sets, 93 unique milestones in 14 categories, schema bounds, duplicate records, invalid dates/references, malformed imports, CSV formula escaping, and repeated exercise blocks counted as one exposure.
+Upgrade checks cover dark/light appearance, exact canonical increment after unit changes, goals, approved missed-session rescheduling, sparse readiness/plates, filters/duplication/advanced plan fields, cleared completion controls and counters, real local PNG output, summary/finish timestamp retention, actual-history local coaching, editable program approval, rejected-action preservation, explicit memory deletion, cloud consent/token non-persistence, SVG map and independent same-origin preview database. All upgraded routes fit 280, 320, 360, 375, 390, 414, 430, 768 and 1440 px; Coach/calendar/map also fit landscape. No uncaught exceptions occurred in successful final flows.
 
-## Browser checks
+Unit tests include original engine A–L and schema/import cases plus missing data, high-rep progress, matched-load PRs, future records, bounded reductions, conservative load mode, unusual exact plate combinations, advanced prescriptions/superset guidance, catalog completeness, stable legacy identities, true downward body-goal progress, optional-data consent, adversarial notes, memory provenance, stale/unsupported/unsafe proposals, schedule clone isolation, response fact IDs and bounded long conversation.
 
-1. Onboarding at 280, 320, and 390 px.
-2. Profile creation and generated programs.
-3. Weight/reps/RIR inputs, set completion, first-set bulk copy.
-4. Draft recovery after reload.
-5. Partial workout save with checked/unchecked sets preserved appropriately.
-6. History edit without duplicate session creation.
-7. Manual program creation, deletion, and immediate one-step undo.
-8. Custom exercise creation.
-9. Same-date weight entry replacement.
-10. Measurement storage and chart rendering.
-11. Photo upload to IndexedDB and image rendering.
-12. Unit switching without modifying canonical historical weights.
-13. Complete JSON backup, preview, duplicate detection, and atomic photo+state restore.
-14. Analytics, milestones, weekly review, explicit lack of strength-standard dataset.
-15. All six routes at 280, 320, 360, 375, 390, 414, 430, 768, and 1440 px, with horizontal-overflow assertions.
-16. Landscape at 844 × 390.
-17. Reduced-motion CSS behavior.
-18. Active-workout inputs at 280 px.
-19. Offline production reload and persisted set logging while browser networking is disabled.
-20. No uncaught exceptions in that flow.
-21. Subdirectory asset loading, scoped worker activation, and offline refresh.
+The updater reproduces a stale cached shell, opens the uncached helper, refuses offline or concurrent-writer replacement, then verifies unchanged history, draft, body/profile/photo metadata, **exact photo bytes**, localStorage and unrelated/nested caches. The updated version appears and the offline worker registers again.
 
-## Visual artifacts
+## Performance and visual review
 
-Actual screenshots: `01-onboarding.png`, `02-workout-home.png`, `03-active-workout.png`, `04-body-journal.png`, `05-gains-dashboard.png`, `06-mobile-home.png`, `07-landscape.png`, `08-smallest-workout.png` in `artifacts/`. They show only synthetic records entered explicitly by browser tests; real new-user state is empty. Desktop, mobile, and 280px workout screenshots were visually inspected. Secondary text was darkened after review. No claim of a complete contrast audit is made.
+The committed Node benchmark measured validation median 6.55ms (max 13.79), clone median 30.90ms (max 38.13), and structured context median 2.71ms (max 18.73) on 1,500 synthetic sessions. Context was 3,786 bytes in that baseline. The 0.2.1 follow-up measured validation 7.28ms median, clone 32.86ms median and context 2.23ms median (4,425 bytes); updated raw values are in the artifact. CPU results vary by machine and do not measure mobile rendering, IndexedDB latency, startup or huge media backups. State is still cloned/validated/written as a whole on each mutation; additional analytics render lazily.
 
-## Not certified
+Screenshots in `artifacts/` show the core flows plus `upgrade-coach`, `upgrade-mobile-coach`, `upgrade-completion`, `upgrade-calendar` and `upgrade-muscle-map`. Desktop/mobile/logger/map/coach screenshots were visually inspected. Charts expose text summaries and recent actual values; SVG regions and controls have labels, keyboard handling and visible focus. Reduced-motion support remains in place. No complete WCAG or screen-reader certification is claimed.
 
-Safari/iOS, Firefox, Android installation prompts, physical touchscreen use, actual OS-level PWA installation, service-worker update lifecycle across browser restarts, full screen-reader and keyboard traversal, 200% large-text audits, automated WCAG contrast auditing, quota exhaustion/eviction, corrupted live database repair, huge media collections, GitHub Actions execution, and live publisher research.
+## Failures found and corrected
 
-Some advanced logger controls (reordering, every special-set transition, every error path, every timer scenario) have not received exhaustive browser coverage. Runtime validation and domain checks cover their shared model, but that is not equivalent to full interaction certification. No wearable integrations or external strength datasets exist to test. See LIMITATIONS.md before calling this a complete production release.
+- Empty workout access when programs already existed; rounded canonical unit increments; stale checked appearance after clearing reps; false high-rep plateaus; rewritten historical finish times.
+- Null unit selector in an exercise-rule dialog; SVG interaction assumptions in the browser driver; very narrow numeric input/sidebar containment.
+- Catalog expansion initially exposed missing validator identities and a legacy-name precedence risk. Validator IDs now derive from the catalog; verified legacy variants resolve before newly added names. Final unit and full import browser suites were rerun successfully.
 
-## Fixed during testing
+Early failed runs are not counted as passes. Only final passing results are committed as evidence.
 
-- Corrected the unit-runner invocation so output reports each named case rather than only a file-level result.
-- Fixed the browser driver's async evaluation and navigation waits; early failed runs are not reported as passes.
-- Scoped service-worker cache cleanup to each registration, preventing cross-path cache deletion.
-- Invalidated undo snapshots after later writes to avoid restoring stale journals over new data.
-- Added single-writer locking, invalid-numeric completion guards, real image decode checks, and one-exposure-per-session aggregation.
+## Not tested / external prerequisites
 
-## November 5, 2026 — direct legacy import update
+No live AI provider or hosted backend was configured; no numerical/language quality certification for a live model. No Safari/iOS/Firefox or physical-device install/vibration/keyboard/screen-reader/200%-text audit, quota exhaustion/eviction, mobile performance profile, huge-photo backup or independent exercise-science validation. Haptic fallback is progressive enhancement. Finite plate quantities, actual sync, encrypted backup and a licensed population strength dataset are not implemented. See [limits](LIMITATIONS.md) and [coach evaluation](upgrade/COACH.md).
 
-- 48 named unit/domain tests passed (34 existing plus 14 legacy-import cases).
-- Browser regression now includes original-file merge, duplicate reimport, explicit kg confirmation, and preservation of current workouts, profile, draft and photo blobs.
-- Eight additional local browser checks with the supplied original export passed: preview, all sessions/sets, exact values and identities, body tracking, history display, gains chart, repeat import and reload persistence. No personal export or screenshots from that test are committed.
-- Native full-backup restoration remains covered by the existing regression. Unsupported legacy formats fail before any persisted state changes.
-- Test navigation polling now tolerates Chromium context replacement while reloading; an early driver-only navigation failure was corrected and rerun.
+GitHub Actions [run 42038654728](https://github.com/Jusumusu/GymBro2.0/actions/runs/42038654728) passed the build/tests/composition and uploaded the 341KB Pages artifact. Its initial deployment attempt was rejected by the environment branch rule. The owner then permitted the branch and successfully reran it at 13:58 UTC, publishing the preview; the stable main ref remains unchanged. The live site host is also outside this executor’s allowed HTTP destinations, so direct HTTP verification was not performed. [Publication steps](upgrade/RELEASE.md).
 
-## November 5, 2026 — stale app recovery
+## 0.2.1 coach quality follow-up
 
-`npm run test:update` reproduces an old cache-first shell, deploys newer app files, opens the uncached recovery page, verifies writer-lock and offline guards, and checks that history, active draft, body data, exact photo bytes, localStorage, and unrelated/nested cache scopes survive the update. The welcome screen exposes backup import before onboarding. Production helper assets are excluded from precache to keep the recovery route reachable from older shells.
+Focused checks after the reported generic routine answer: **95 unit/domain tests, 9 HTTP backend tests and 23 upgrade browser checks passed**. New coverage includes routine review versus replacement, named-program selection, missing evidence, load/rep progress, repeated misses, equipment conflicts, rep/rest/weekly intent, exercise-context resolution, bounded conversation sanitization, retained cloud mode/question/exercise and explicit cloud failure without fallback. Browser and backend cloud paths use stubs; no live provider was configured.
+
+The original blocked deployment was successfully rerun by the owner at 13:58 UTC, publishing the 0.2 preview. The patch stays on improvements and preserves stable main. Core 24-check and updater 10-check suites above were not rerun for this focused coaching patch. Updated screenshots show connection disclosure and offline labels.

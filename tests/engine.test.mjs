@@ -1,3 +1,4 @@
+import {library} from '../src/exercises.js';
 import {test} from 'node:test';
 import assert from 'node:assert/strict';
 import {recommend,e1rm,goalRange,exposures} from '../src/engine.js';
@@ -34,7 +35,7 @@ test('duplicate sessions do not count as repeated evidence',()=>{const w=session
 test('invalid increment and nonfinite performance are rejected',()=>{assert.throws(()=>rec([],{increment:NaN}));assert.throws(()=>rec([session(10,Infinity)]));assert.throws(()=>rec([],{increment:-2}));});
 test('e1RM excludes high-rep and bodyweight estimates',()=>{assert.equal(e1rm(40,10),40*(1+10/30));assert.equal(e1rm(40,15),null);assert.equal(e1rm(0,10),null);});
 function state(){const s=initialState();s.profile=structuredClone(profile);return s;}
-test('plans respect equipment and exclusions',()=>{const s=state();s.profile.equipment=['dumbbell'];s.profile.excluded=['db-bench'];s.plans=generatePlans(s);validateState(s);assert.ok(s.plans.every(p=>p.exercises.every(e=>e.exerciseId.startsWith('db-')||['goblet','lateral','curl'].includes(e.exerciseId))));assert.ok(s.plans.every(p=>p.exercises.every(e=>e.exerciseId!=='db-bench')));});
+test('plans respect equipment and exclusions',()=>{const s=state();s.profile.equipment=['dumbbell'];s.profile.excluded=['db-bench'];s.plans=generatePlans(s);validateState(s);assert.ok(s.plans.every(p=>p.exercises.every(e=>library(s).find(x=>x.id===e.exerciseId)?.equipment==='dumbbell')));assert.ok(s.plans.every(p=>p.exercises.every(e=>e.exerciseId!=='db-bench')));});
 test('strength and endurance materially change generated reps',()=>{const s=state();s.profile.goal='strength';assert.equal(generatePlans(s)[0].exercises[0].min,3);s.profile.goal='endurance';assert.equal(generatePlans(s)[0].exercises[0].min,12);});
 test('summary excludes warmups and unchecked sets',()=>{const w=session();w.exercises[0].entries[0].type='warmup';w.exercises[0].entries[1].done=false;assert.deepEqual(summary([w]),{workouts:1,sets:1,reps:10,volume:400});});
 test('rolling average counts real entries and excludes future dates',()=>{assert.deepEqual(weightTrend([{date:'2026-11-01',kg:80},{date:'2026-11-03',kg:82},{date:'2026-11-05',kg:90}],'2026-11-04'),{count:2,average:81});assert.equal(weightTrend([],'2026-11-04').average,null);});

@@ -1,31 +1,16 @@
-# Release 0.1 limitations and roadmap
+# Limits — 0.2 preview
 
-## Implemented versus remaining
+The upgrade is implemented on `improvements`, with a separate preview journal. Stable `main` is preserved. [Implemented scope](upgrade/REVIEW_PLAN.md) and [executed QA](QA.md) distinguish local functionality from external services and unrun checks.
 
-The core app is functional and browser-tested, but the full product brief goes beyond this release. These are deliberate scope disclosures, not nonfunctional advertised buttons:
-
-- Live research and the two user-supplied 2025/2026 DOIs could not be verified because the environment proxy was unreachable. Independent science review is still required.
-- React, TypeScript, Zod, Vite, Vitest, and Playwright could not be installed. Native modules, runtime validation, Node's runner, and direct Chromium automation are the working fallback. A future migration should preserve existing pure domain functions and schema.
-- No licensed/versioned strength-standard dataset: population tiers are explicitly unavailable rather than invented. Own-lift progress works.
-- Weekly direct/indirect counts and conservative fatigue/plateau reviews work; automatic dynamic volume changes, statistical personalization, technique scoring, and richer sleep/soreness feedback are not implemented.
-- Secondary goals and preferred weekdays are stored as preferences; primary goal drives prescriptions. Favorite/disliked ranking beyond exclusions, location presets, imported strength baselines, custom equipment types, supersets, and individual plate inventory/calculation are not implemented. Equipment increments are global, editable per profile, not per-exercise.
-- Program templates rotate by manual choice; there is no enforced calendar scheduler. Expected duration is a user preference and exercise-count heuristic. Automatic routine selection does not yet rotate to the next plan.
-- Strength e1RM charts, totals and time ranges work; per-lift target tracking, population comparisons, richer PR history, monthly summaries, and detailed session-duration analytics remain future work.
-- Body weight and measurement history work, with actual-sample averages. Photo history supports paged loading and side-by-side grid display, not alignment overlays or a dedicated compare tool. Backups over 100 MB need smaller collections or a future streaming archive design.
-- Milestones are persistent deterministic IDs. Achievement progress values are current data counts, so deleting source records can reduce current progress while unlocked badges remain earned. No OS push/notification system; only unobtrusive app messages and an opt-in rest timer.
-- Original Gym Bro v3 complete exports with the verified session/snapshot format now merge directly, including body weights and the original routine. Additional legacy photos, measurements, saved-plan formats, lift targets, unknown exercises and pounds-based legacy exports require separate conversion and are rejected. Native backups still use schema v1. Legacy per-session warm-up flags remain notes; set rows use completed working-set semantics when reps are positive. Dates are exact; missing times and durations remain unknown.
-- No health platforms, wearable integration, cloud synchronization, encrypted backup, nutrition module, or external media. No licensed exercise videos were bundled.
-- Single-writer protection requires Web Locks (modern Chromium tested). Browsers without Web Locks can open multiple tabs; avoid concurrent editing there. No multi-device sync or conflict resolution.
-- Numeric autosaves rerender on actions, not every key, to preserve input focus. If a storage write fails, the toast reports it; reload displays last committed data. Unsaved invalid numeric inputs must be corrected before set completion/finish.
-- One-step undo is session-local and invalidates on subsequent writes. It is not an edit history. Full backups are the recovery mechanism.
-- Full keyboard/screen-reader, iOS/Safari, Firefox, large-text, physical-device install, update lifecycle, and quota/eviction audits are not certified. See QA for tested checks.
-
-## Next milestones
-
-1. Restore package/research access; independently review evidence and exact recommendation thresholds.
-2. Expand the tested legacy importer to additional formats and legacy media when fixtures are available; streamed ZIP media backup for large journals.
-3. Split UI controller/view modules; introduce TypeScript tooling and cross-browser Playwright plus automated accessibility audits.
-4. Add per-exercise equipment increments, favorites, schedule rotation, lift goals, date filters for photos, and richer data-derived weekly reviews.
-5. Obtain a permitted versioned reference strength dataset, documenting sampling limitations; expose only supported comparisons.
-6. Validate adaptive volume suggestions prospectively, with user approval and transparent evidence.
-7. Add optional health integrations only after platform support, consent, and device testing.
+- **Cloud AI:** secure compatible backend/client are prepared and stub-tested; no host/provider credentials or live model evaluation exists. Local analysis/templates work offline and are labeled. A validated fact ID does not guarantee every LLM statement is accurate. Only whitelisted, bounded proposals can reach approval; prose cannot write arbitrary data.
+- **Training interpretation:** progression, subjective readiness, plateau/balance and program duration are coaching heuristics, not physiological measurements, diagnoses or validated outcome forecasts. Estimated 1RM uses loaded 1–10-rep sets. No verified licensed population strength dataset is bundled. Independent science review remains useful.
+- **Library/preferences:** 40 original-text movements and custom exercises; no licensed demonstration videos. Substitution ranking uses equipment, exclusions, pattern/muscle, goal/priorities, beginner support and observed recent use. Dedicated favorite/dislike controls, location profiles and custom equipment types are not included. Difficulty labels are coarse.
+- **Programs/scheduling:** editable advanced plans, suggested weekdays and explicit calendar entries work; no forced plan rotation or automatic volume changes. Time estimates are approximate. Superset guidance uses recorded group/round counts; touch drag behavior needs physical-device verification and move buttons remain available.
+- **Plates:** available sizes/bar/units, exact combinations and closest achievable load are supported. It assumes sufficient matching pairs; it does not track finite plate quantities or specialty-bar constraints.
+- **Data/rollback:** native v1 backups plus additive extension v1; verified legacy v3 merge only. Unsupported old media/measurement/saved-plan/lift-target shapes and pounds legacy exports are rejected. Historical identities/unknown times remain preserved. New built-in IDs can make preview-created backups unreadable by stable 0.1.2; keep the untouched stable journal and its original backup. No downgrade conversion is offered.
+- **Backups/photos:** JSON is unencrypted and includes original photo metadata; 100MB backup / 8MB image limits remain. Photo grid/history works without alignment overlays. Large collections need future streaming archives and device quota testing. Export regularly; browser eviction/device loss/private-mode clearing can remove local records.
+- **Concurrency/undo:** Web Locks protect supported browsers; avoid concurrent edits without them. Undo covers one recent deletion/discard in the same session and invalidates after later writes. It is not a durable revision history.
+- **Scale:** synthetic 1,500-session CPU measurements are recorded, but structured state still clones/validates/writes as a whole. Mobile startup/input latency, real IndexedDB writes and huge-media performance need profiling; no multi-year mobile guarantee is implied.
+- **Platforms/accessibility:** actual Chromium responsive/offline/update/import tests passed. Safari/iOS/Firefox, physical touch/install/vibration, complete keyboard/screen-reader traversal, 200% text and WCAG contrast audit remain unverified. Unsupported haptics safely do nothing.
+- **External systems:** no account, paid service, health/wearable integration, automatic cloud sync, public profile, push notifications, nutrition module or encrypted backup. [Sync architecture](upgrade/SYNC.md) is design-only. Cloud coaching has separate explicit consent and provider retention terms.
+- **Maintenance:** native JavaScript/runtime validators/Node tests/CDP automation rather than a React/TypeScript/Zod/Playwright migration. The original controller remains large; newly added coach, tools and upgrade UI have separate modules. Future framework migration must retain data and tested domain behavior.

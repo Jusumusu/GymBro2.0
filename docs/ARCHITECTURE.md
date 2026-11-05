@@ -1,43 +1,46 @@
-# Architecture
+# Architecture — 0.2 preview
 
-Gym Bro 0.1 is a dependency-free ECMAScript-module PWA. The environment proxy prevented installing the preferred React/TypeScript/Vite stack. Choosing native modules allowed a working, testable, fully local build. Node ≥22 provides the server/build/test tools; installed Chromium supplies real browser automation through DevTools. No CDN, remote API, external font, or paid service is required.
+A dependency-free ECMAScript-module PWA with Node 22+ build/test tools and an optional server-side LLM adapter. No account or network is required for core training. The upgrade remains on `improvements`; the stable app is built from `main` for the deployment root.
 
-## Separation
+## Modules and contracts
 
-- `model.js`: schema v1, bounded runtime validation, IDs, dates, canonical-unit conversion.
-- `exercises.js`: 26 exercise entries with original technique text, muscle/pattern/equipment metadata; user-defined exercises.
-- `planner.js`: goal-, equipment-, exclusion-, experience-, priority-, and time-aware templates and manual plans.
-- `engine.js`: pure deterministic progression with exercise-isolated history, reasons, and completeness labels.
-- `analytics.js`: actual working-set totals, strength estimates, weekly direct/indirect sets, weight trends, and 93 milestones in 14 categories.
-- `storage.js`: IndexedDB state/media stores and atomic restore.
-- `backup.js`: versioned validated JSON backups and spreadsheet-safe CSV.
-- `legacy-import.js`: validated original Gym Bro v3 migration, deterministic exercise/session identities, non-destructive history merge, duplicate/conflict reporting.
-- `ui.js`: escaped HTML, icons, accessible chart summaries.
-- `app.js`: hash routes, views, forms, queued mutations, actions.
-- `style.css`: original design system, 280px+ responsive layout, focus styles, reduced motion.
+| Layer | Modules | Responsibility |
+|---|---|---|
+| Data | `model.js`, `extensions.js` | Canonical kg/cm, bounded schema v1, additive upgrade defaults, advanced prescriptions and preferences |
+| Catalog / programs | `exercises.js`, `planner.js` | 40 original-text movements + custom entries, ranked swaps, templates, empty unchecked drafts |
+| Deterministic tools | `engine.js`, `analytics.js`, `training-tools.js` | Progression/reduction candidates, observed records, weekly facts, goals, distribution and scheduling |
+| Coach | `coach.js`, `coach-contract.js` | Relevant bounded context, local analysis, cloud client, validated preview-only actions |
+| Optional backend | `server/coach-server.mjs` | Exact origins, authentication/limits, server-held key, compatible provider adapter and response checks |
+| Persistence | `storage.js`, `backup.js`, `legacy-import.js` | IndexedDB state/media, atomic restore, native JSON/CSV and verified legacy merge |
+| Presentation | `app.js`, `upgrade-ui.js`, `upgrade-controller.js`, `ui.js` | Hash routes, queued writes, dialogs/forms, escaped text, explicit approval, charts and exports |
+| Delivery | `environment.js`, `style.css`, `upgrade.css`, `public/`, `scripts/` | Isolated preview, themes, responsive layout, worker/update and static composition |
 
-UI view/controller splitting and a TypeScript toolchain are future maintenance improvements. Domain functions are independent of the UI and ready for migration.
+The existing controller remains large; new functionality has separate view/controller/domain modules. Runtime validation is used rather than TypeScript/Zod. There are no CDN scripts, fonts or third-party packages. Future tooling changes should retain the pure tested domain functions and stable identities.
 
-## Integrity and privacy
+## Data and transactions
 
-Weights are kg and lengths cm internally. Unit settings affect display/input only. Load semantics distinguish total load, per-dumbbell load, and added bodyweight resistance. Saved sessions snapshot their prescriptions and actual sets. Profile changes cannot silently rewrite past sessions.
+Weights are canonical kg and measurements cm; display units do not mutate history. Total, per-dumbbell and added-load conventions remain exercise-specific. Completed sessions retain actual values, prescriptions, notes and timestamps. Imported unknown times remain explicit sentinels, never fabricated durations. Warm-ups and unchecked rows are excluded from working metrics.
 
-Mutations clone the latest state, validate it, and finish an IndexedDB write transaction before replacing in-memory state. Inputs are serialized. Completed sets need explicit load, reps ≥1, and explicit completion. Unchecked entries stay in the journal but do not influence progression. Persistence errors are surfaced; failed writes leave previous records intact.
+Every mutation clones the latest state, validates and completes a database write before replacing in-memory state. Writes are queued. A failed write leaves the previous committed state intact and shows an error. One-step deletion/discard undo is session-local and invalidates on subsequent changes. Pending writes warn on ordinary exit; valid drafts persist across reloads. Web Locks enforce one writer on supported browsers; avoid concurrent editing where unavailable.
 
-Web Locks permit one writable tab where supported. Other tabs show a close/reload message. The browser warns on ordinary exit with pending writes. One-step deletion/discard undo is invalidated by subsequent writes, avoiding stale snapshot overwrites. It is session-scoped, not crash recovery. Drafts persist across visits.
+Root schema stays v1 and the optional `upgrade.version=1` extension supplies defaults at load/import. Unknown extension versions fail without clearing data. Advanced optional prescription fields are validated. Older native backups remain readable. Expanded catalog IDs mean an older app cannot read every newly created preview backup; database isolation and retained original backups are the rollback mechanism.
 
-Photo blobs are separate from frequently updated structured state. Restore writes state and media in one atomic transaction. Upload cleans up a blob if metadata saving fails. Photos are never uploaded. JSON backups include original image metadata and are not encrypted. CSP, escaped user strings, bounded file imports, valid raster formats, no ads, and no trackers reduce avoidable exposure.
+Structured state and photo blobs have separate IndexedDB stores. Restore writes both in one transaction. Photos are local; native backups contain original bytes/metadata and are not encrypted. No personal export is committed. Catalog expansion cannot change verified legacy variant identities or reimport signatures.
 
-## PWA/deployment
+## Preview / production isolation
 
-`npm run build` emits `dist/`, injects a content-versioned precache, and marks production HTML. Development mode does not register the service worker. Relative assets, hash routing, manifest scope/start/ID, and scoped worker caches support repository subpaths. First production load must succeed before offline use.
+`environment.js` chooses separate database (`gymbro-preview-v1`) and writer lock from the `/preview/` path or preview meta. Path detection prevents accidentally missing HTML meta from opening the stable database. Both state and media are inside the selected database. Production uses the original names. The preview is a usability/data-isolation boundary within the same origin, not an adversarial security sandbox.
 
-New service workers wait until tabs close: no `skipWaiting` and no IndexedDB deletion during updates. Essential logging, program editing, analytics, and recommendations need no network. HTTPS or localhost is required. The GitHub Pages workflow builds and uploads `dist/`; no deployment has been performed here.
+`build --preview` marks HTML and manifest. Scoped relative assets, manifest and worker caches let `/GymBro2.0/preview/` coexist with stable `/GymBro2.0/`. Composition rejects a candidate lacking the separate database/lock contract, copies the stable build unchanged, appends preview and hashes every stable file. GitHub Pages deploys this combined artifact through the shared `pages` concurrency group. The production workflow deploys only main. No experimental migration opens stable IndexedDB.
 
-## Honest boundaries
+## Offline and update behavior
 
-No cloud sync, wearables, health-platform integration, OS notifications, universal strength-standard dataset, or clinical recovery score is claimed. Native backups use schema v1. A verified original Gym Bro v3 session format can now be merged after preview; synthetic fixtures cover regressions. Unsupported legacy media, measurements, extra saved-plan formats and lift targets fail explicitly. Personal exports are kept outside the repository.
+The build emits content-versioned worker assets; source dev mode does not register a worker. Essential workout/planning/history/analytics/goals/catalog/local-coach use works offline after the initial production load. Cloud calls are not cached and fail visibly when unavailable. New workers wait for old app windows to close; there is no automatic `skipWaiting`.
 
-## Update recovery
+The uncached `update.html` helper verifies fresh network files, takes the matching writer lock, unregisters only its own scope and removes only that scope's app caches. It does not delete IndexedDB, localStorage, photos or other/nested application scopes. Preview uses its own lock and relative update URL. The recovery test checks old cache-first code, writer blocking, offline refusal and exact preservation of journal/media.
 
-`public/update.html`, `update.js`, and `update.css` are copied to the production build but deliberately excluded from the precache. The helper can therefore load through an old cache-first worker. It verifies network access to a real production shell, takes the single-writer lock, unregisters only the matching app scope, removes its app-file caches, and navigates to a fresh shell. It never deletes IndexedDB/localStorage or media. Nested/other application cache scopes are excluded from cleanup. Build version tokens keep helper assets independently refreshable. Ordinary worker installation still avoids `skipWaiting`; update recovery is an explicit user action after other app windows close.
+## Optional AI and sync
+
+The cloud provider has no journal storage handle. It receives selected facts after consent and can return only explanation plus whitelisted proposals. The browser checks action constraints twice and requires approval against an unchanged journal before save. Provider fact references are validated; free-form factual correctness still needs live evaluation. Backend credentials/hosting are external prerequisites. [Coach architecture/evaluation](upgrade/COACH.md) and [backend setup](../server/README.md).
+
+Sync is design-only and separately scoped: [optional sync architecture](upgrade/SYNC.md). No cloud journal, medical recovery score, wearable connection or verified universal strength standard is claimed.

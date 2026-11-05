@@ -1,0 +1,62 @@
+name: Deploy isolated improvements preview
+on:
+  push:
+    branches: [improvements]
+    paths:
+      - 'src/**'
+      - 'public/**'
+      - 'server/**'
+      - 'scripts/**'
+      - 'tests/**'
+      - 'index.html'
+      - 'package.json'
+      - '.github/workflows/preview.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+concurrency:
+  group: pages
+  cancel-in-progress: false
+jobs:
+  build:
+    if: github.ref == 'refs/heads/improvements'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          path: stable
+      - uses: actions/checkout@v4
+        with:
+          path: candidate
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Build unchanged stable app
+        working-directory: stable
+        run: npm run build
+      - name: Validate upgrade and backend boundaries
+        working-directory: candidate
+        run: |
+          npm test
+          npm run test:backend
+          npm run build:preview
+      - name: Compose site and verify stable files did not change
+        run: node candidate/scripts/compose-preview.mjs stable/dist candidate/dist site
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+  deploy:
+    if: github.ref == 'refs/heads/improvements'
+    needs: build
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}preview/
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v5

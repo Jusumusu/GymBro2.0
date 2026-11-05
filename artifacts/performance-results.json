@@ -1,0 +1,22 @@
+{
+  "runtime": "v24.22.1",
+  "records": {
+    "sessions": 1500,
+    "sets": 22500,
+    "jsonBytes": 2468728
+  },
+  "validation": {
+    "medianMs": 7.28,
+    "maxMs": 12.72
+  },
+  "clone": {
+    "medianMs": 32.86,
+    "maxMs": 34.21
+  },
+  "coachContext": {
+    "medianMs": 2.23,
+    "maxMs": 13.38
+  },
+  "contextBytes": 4425,
+  "limits": "Cloud Node CPU measurements, not a mobile-device performance guarantee. Photo export, storage quotas and physical-device rendering need additional profiling."
+}

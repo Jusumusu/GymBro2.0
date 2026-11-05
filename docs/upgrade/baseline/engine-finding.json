@@ -1,0 +1,19 @@
+{
+  "id": "F4",
+  "totalReps": [
+    36,
+    39,
+    42,
+    45
+  ],
+  "recommendation": {
+    "action": "review",
+    "kg": 20,
+    "sets": 3,
+    "min": 12,
+    "max": 20,
+    "reason": "Four exposures show little change. This may be a plateau; review adherence, smaller increments, and recovery before changing the program.",
+    "confidence": "moderate",
+    "evidence": 4
+  }
+}
