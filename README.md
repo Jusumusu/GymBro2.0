@@ -66,3 +66,7 @@ In Settings, choose **Import a backup**, select the original app’s v3 complete
 ## App stays on an old version
 
 Open [the direct update page](https://jusumusu.github.io/GymBro2.0/update.html), close other Gym Bro app windows/tabs, and select **Update and open Gym Bro**. This refreshes app files while preserving local records and photos. The page stays outside the offline cache so old app shells can access it. On a fresh welcome screen, **Import existing workouts** lets you select the original JSON without first creating a profile.
+
+## Planned product upgrade
+
+New upgrade work uses the `improvements` branch and user review after each checkpoint. See the [current review status](docs/upgrade/STATUS.md), [existing-feature audit](docs/upgrade/AUDIT.md), and [feature review plan](docs/upgrade/REVIEW_PLAN.md). The live `main` app is a separate release decision.

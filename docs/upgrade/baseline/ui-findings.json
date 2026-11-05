@@ -1,0 +1,23 @@
+{
+  "observations": [
+    {
+      "id": "F1",
+      "finding": "Freestyle start has no visible entry when saved plans exist",
+      "savedPlans": 2,
+      "visibleFreestyleButtons": 0
+    },
+    {
+      "id": "F2",
+      "finding": "Saving display-unit change rounds the canonical equipment increment",
+      "beforeKg": 2.5,
+      "afterKg": 2.4992939587
+    },
+    {
+      "id": "F3",
+      "finding": "Clearing completed reps updates persisted completion but leaves button and counter visually stale",
+      "persistedDone": false,
+      "displayedAriaPressed": "true"
+    }
+  ],
+  "errors": []
+}

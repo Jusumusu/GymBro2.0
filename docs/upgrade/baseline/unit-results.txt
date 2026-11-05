@@ -1,0 +1,60 @@
+
+> gym-bro@0.1.2 test
+> node tests/run.mjs
+
+✔ A: no fabricated baseline (3.789789ms)
+✔ B: sub-ceiling performance builds reps (5.207544ms)
+✔ C: all sets at ceiling with RIR increases one real increment (0.760868ms)
+✔ D: zero RIR prevents increase (0.21247ms)
+✔ E: missed minimum prevents increase (0.154711ms)
+✔ F: one decline is not a plateau (9.124669ms)
+✔ G: three declines suggest reviewing stress (0.374743ms)
+✔ H: return after break is conservative and immutable (0.258933ms)
+✔ I: unit round trips preserve canonical units (0.552452ms)
+✔ J: machine substitution cannot inherit bench baseline (0.408189ms)
+✔ K: missing RIR requires confirmation exposure (0.353932ms)
+✔ L: goal changes new prescriptions without rewriting history (1.248662ms)
+✔ partial session cannot increase (0.180261ms)
+✔ uncompleted values never establish baseline (0.168589ms)
+✔ warmups never establish baseline (0.138414ms)
+✔ failure set prevents load increase (0.100397ms)
+✔ unusual increment is available and bounded (0.129077ms)
+✔ low readiness blocks progression (0.076378ms)
+✔ automation can be disabled (0.066404ms)
+✔ bodyweight is not assigned a fabricated external load (0.061026ms)
+✔ duplicate sessions do not count as repeated evidence (0.376288ms)
+✔ invalid increment and nonfinite performance are rejected (0.350706ms)
+✔ e1RM excludes high-rep and bodyweight estimates (0.146555ms)
+✔ plans respect equipment and exclusions (1.437873ms)
+✔ strength and endurance materially change generated reps (0.670385ms)
+✔ summary excludes warmups and unchecked sets (0.415515ms)
+✔ rolling average counts real entries and excludes future dates (0.441037ms)
+✔ direct and fractional sets are kept distinct (0.936256ms)
+✔ 93 achievements, unique IDs, 14 categories (1.137093ms)
+✔ schema rejects duplicate records and invalid completed sets (0.885401ms)
+✔ invalid dates, unknown exercises, bad ranges and unsupported versions fail validation (0.339132ms)
+✔ backup preview rejects corrupted, duplicate and incomplete data (0.742724ms)
+✔ CSV escapes formulas and uses kg explicitly (0.494058ms)
+✔ repeated exercise blocks in one workout count as one exposure (0.42977ms)
+✔ legacy import preserves real dates, loads, reps and original prescriptions (10.482401ms)
+✔ legacy exercise IDs do not mix leg/dumbbell curls or cable/barbell rows (2.830367ms)
+✔ legacy warmup flags never mark all working sets as warmups; missing time and RIR stay unknown (3.033094ms)
+✔ legacy merge preserves current history, profile, active draft, photos and measurements (6.194416ms)
+✔ reimport and repeated source rows never duplicate workouts, programs, exercises, weights, receipts or unlocks (6.747356ms)
+✔ exercise and item reordering does not duplicate the same workout (4.610988ms)
+✔ two same-date workouts with different performance are retained (3.391337ms)
+✔ same-date weigh-in conflicts keep current data and are disclosed (4.584023ms)
+✔ body target imports only when the current target is unset (5.363581ms)
+✔ zero-rep source placeholders remain incomplete and do not become performance (3.260365ms)
+✔ unsupported formats and unit declarations are rejected (0.405715ms)
+✔ unsupported media and saved-plan formats fail without a partial import (0.511708ms)
+✔ unmapped movements, invalid sets and invalid dates are rejected (2.63819ms)
+✔ exercise collisions and contradictory source weigh-ins are rejected (5.912599ms)
+ℹ tests 48
+ℹ suites 0
+ℹ pass 48
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 104.824161
