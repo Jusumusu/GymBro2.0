@@ -3,20 +3,20 @@
   "records": {
     "sessions": 1500,
     "sets": 22500,
-    "jsonBytes": 2468728
+    "jsonBytes": 2468745
   },
   "validation": {
-    "medianMs": 7.28,
-    "maxMs": 12.72
+    "medianMs": 11.03,
+    "maxMs": 14.4
   },
   "clone": {
-    "medianMs": 32.86,
-    "maxMs": 34.21
+    "medianMs": 28.03,
+    "maxMs": 30.01
   },
   "coachContext": {
-    "medianMs": 2.23,
-    "maxMs": 13.38
+    "medianMs": 49.93,
+    "maxMs": 80.67
   },
-  "contextBytes": 4425,
+  "contextBytes": 4859,
   "limits": "Cloud Node CPU measurements, not a mobile-device performance guarantee. Photo export, storage quotas and physical-device rendering need additional profiling."
 }

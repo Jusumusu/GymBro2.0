@@ -26,7 +26,7 @@ async function shot(name){const {data}=await cdp('Page.captureScreenshot',{forma
 
 
 const routes=['workout','programs','progress','body','history','calendar','goals','muscles','coach','settings','review','summary'];
-const savedShots=new Set(['workout','progress','body','calendar','coach','settings','review']);
+const savedShots=new Set(routes);
 const core=s=>Object.fromEntries(Object.entries(s).filter(([k])=>k!=='upgrade'));
 let fixture;
 async function reload(){await js('globalThis.__refinementOldDocument=true');await cdp('Page.reload');await until(`!globalThis.__refinementOldDocument&&Boolean(document.querySelector('.sidebar'))`);}
@@ -47,16 +47,21 @@ try{
  for(const value of ['light','dark']){
   await theme(value);
   const contrast=await js(`(()=>{const button=document.querySelector('#appearance-form .primary'),style=getComputedStyle(button),luma=color=>{const rgb=color.match(/[\\d.]+/g).slice(0,3).map(Number).map(v=>{v/=255;return v<=.04045?v/12.92:((v+.055)/1.055)**2.4;});return rgb[0]*.2126+rgb[1]*.7152+rgb[2]*.0722;},a=luma(style.color),b=luma(style.backgroundColor);return (Math.max(a,b)+.05)/(Math.min(a,b)+.05);})()`);assert.ok(contrast>=4.5,'Primary action contrast: '+contrast);
+  const borders=await js(`(()=>{const s=getComputedStyle(document.querySelector('#appearance-form select')),luma=color=>{const c=color.match(/[\\d.]+/g).slice(0,3).map(Number).map(v=>{v/=255;return v<=.04045?v/12.92:((v+.055)/1.055)**2.4;});return c[0]*.2126+c[1]*.7152+c[2]*.0722;},a=luma(s.borderTopColor),b=luma(s.backgroundColor);return (Math.max(a,b)+.05)/(Math.min(a,b)+.05);})()`);assert.ok(borders>=3,'Form-control boundary contrast: '+borders);
+
   for(const width of [320,375,390,430,768,1024,1440]){
    await cdp('Emulation.setDeviceMetricsOverride',{width,height:width<768?844:1100,deviceScaleFactor:1,mobile:width<768});
    for(const name of routes){await route(name);await fit();if((width===390||width===1440)&&savedShots.has(name))await shot(value+'-'+width+'-'+name);}
   }
   await route('goals');await click('[data-action=goal-dialog]');const rect=await js(`(()=>{const r=document.querySelector('dialog').getBoundingClientRect();return {left:r.left,right:r.right,center:r.left+r.width/2,width:innerWidth};})()`);assert.ok(rect.left>=8&&rect.right<=rect.width-8);assert.ok(Math.abs(rect.center-rect.width/2)<1);await shot(value+'-goal-dialog');await click('[data-action=close]');
+  for(const [name,action]of [['plan','edit-plan'],['exercise','custom-exercise']]){await route('programs');await click('[data-action='+action+']');await fit();await shot(value+'-'+name+'-dialog');await click('[data-action=close]');}
+  for(const action of ['weight-dialog','measure-dialog','photo-dialog']){await route('body');await click('[data-action='+action+']');await fit();await shot(value+'-'+action);await click('[data-action=close]');}
+
  }
  check('Every route fits seven phone/tablet/desktop widths in both themes; dialogs remain centered and contained');
  // Render the actual logger with previous records, a warm-up and a checked working set.
  const active=await data();active.draft=makeDraft({...active.plans[0],exercises:active.plans[0].exercises.map(e=>({...e,warmups:1}))},browserToday);active.draft.exercises[0].entries[1]={...active.draft.exercises[0].entries[1],kg:20,reps:8,done:true};await saveFixture(active);
- for(const value of ['light','dark']){await theme(value);await cdp('Emulation.setDeviceMetricsOverride',{width:390,height:844,deviceScaleFactor:1,mobile:true});await route('workout');await fit();await shot(value+'-390-logger');await click('[data-action=exercise-options]');await fit();await shot(value+'-exercise-dialog');await click('[data-action=close]');}
+ for(const value of ['light','dark']){await theme(value);await cdp('Emulation.setDeviceMetricsOverride',{width:390,height:844,deviceScaleFactor:1,mobile:true});await route('workout');await fit();await shot(value+'-390-logger');await js(`document.querySelector('.set-table').scrollIntoView({block:'center'})`);await shot(value+'-390-logger-sets');const centers=await js(`(()=>{const head=document.querySelector('.set-header'),row=document.querySelector('.set-row');return [2,3,4].map(i=>{const a=head.children[i].getBoundingClientRect(),b=row.children[i].getBoundingClientRect();return Math.abs(a.left+a.width/2-b.left-b.width/2);});})()`);assert.ok(centers.every(d=>d<2));await click('[data-action=exercise-options]');await fit();await shot(value+'-exercise-dialog');await click('[data-action=close]');}
  check('Active numeric logging, previous performance, warm-ups and dialogs are readable and contained in both themes');
  await route('settings');await fill('#calendar-preferences-form [name=weekStartsOn]','1');await submit('#calendar-preferences-form');await route('calendar');assert.equal(await js(`document.querySelector('.calendar-weekdays span').textContent`),'Mon');await route('review');assert.equal(await js(`document.querySelector('[data-week-start]').dataset.weekStart`),weekStart(browserToday,1));check('Changing back to Monday updates every weekly view while retaining the active workout');
  const empty=structuredClone(fixture);Object.assign(empty,{sessions:[],plans:[],photos:[],weights:[],measurements:[]});empty.upgrade.goals=[];empty.upgrade.schedule=[];empty.profile.targetWeight=null;await saveFixture(empty);

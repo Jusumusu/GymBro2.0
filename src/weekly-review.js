@@ -45,6 +45,7 @@ export function buildWeeklyReview(state,{date=today(),asOf=today(),includeBody=t
   if(match){matched.add(match.id);scheduledDone++;}else if(item.date<through||end<asOf)missed++;else upcoming++;
  }
  const target=scheduled.length||state.profile.days,completed=scheduled.length?scheduledDone:totals.workouts;
+ const frequency={target:state.profile.days,completed:totals.workouts,met:totals.workouts>=state.profile.days,percent:Math.min(100,totals.workouts/state.profile.days*100)};
  const consistency={target,completed,scheduled:scheduled.length,missed,upcoming,met:completed>=target,percent:Math.min(100,completed/target*100)};
  const trends=[],records=[];
  for(const exercise of library(state)){
@@ -78,7 +79,7 @@ export function buildWeeklyReview(state,{date=today(),asOf=today(),includeBody=t
  for(const g of goals){
   if(g.type==='body'&&weights?.smoothed&&weights.delta!==null&&g.baseline!==null&&g.baseline!==undefined){
    const direction=Math.sign(g.target-g.baseline),oldDistance=Math.max(0,direction*(g.target-weights.previousKg)),newDistance=Math.max(0,direction*(g.target-weights.currentKg)),closer=oldDistance-newDistance;
-   if(closer>.001)wins.push({key:'body-'+g.id,priority:bodyPrimary?110:75,type:'body',title:'Closer to '+g.name,detail:`Your recorded weekly average moved ${displayLoad(closer,state.profile.unit)} ${state.profile.unit} closer to the target. Based on ${weights.previousCount} previous-week and ${weights.currentCount} current-week measurements; short-term changes can include water and normal fluctuations.`,closerKg:closer});
+   if(closer>=.1)wins.push({key:'body-'+g.id,priority:bodyPrimary?110:75,type:'body',title:'Closer to '+g.name,detail:`Your recorded weekly average moved ${displayLoad(closer,state.profile.unit)} ${state.profile.unit} closer to the target. Based on ${weights.previousCount} previous-week and ${weights.currentCount} current-week measurements; short-term changes can include water and normal fluctuations.`,closerKg:closer});
   }
   if(g.newlyReached&&g.current.available)wins.push({key:'goal-'+g.id,priority:95,type:'goal',title:g.name+' target recorded',detail:g.type==='body'?'Your latest recorded weight meets this target. Watch the trend; this is not a body-composition measurement.':`Your recorded ${g.type==='e1rm'?'estimated strength':g.type==='workouts'?'workout count':'working load'} meets your target. No maximum-effort test is required.`});
  }
@@ -88,7 +89,7 @@ export function buildWeeklyReview(state,{date=today(),asOf=today(),includeBody=t
  if(!bounded.sessions.length)headline='Your first review starts here.';
  else if(distinct[0]?.type==='body')headline='Progress toward your weight target.';
  else if(progressing.length)headline=state.profile.goal==='strength'?'Your lifting records show progress.':'Your training is moving forward.';
- else if(consistency.met&&totals.workouts)headline='A strong week of consistency.';
+ else if(consistency.met&&frequency.met&&totals.workouts)headline='A strong week of consistency.';
  const firstName=state.profile.name.trim().split(/\s+/)[0];
  let message;
  if(!totals.workouts)message=bounded.sessions.length?'No completed workouts are recorded in this week. That is a gap in the journal, not a judgment about your effort. Choose a manageable next session when it fits.':'As you save workouts, this review will connect your actual sets, performance and goals. There is no training baseline to evaluate yet.';
@@ -98,8 +99,9 @@ export function buildWeeklyReview(state,{date=today(),asOf=today(),includeBody=t
  if(bodyWin&&(bodyPrimary||!progressing.length))message=`${firstName?firstName+', ':''}your recorded weight average moved from ${displayLoad(weights.previousKg,state.profile.unit)} to ${displayLoad(weights.currentKg,state.profile.unit)} ${state.profile.unit}, closer to your stated target. Short-term changes can include water and normal fluctuations; this does not measure fat or muscle gained or lost.${totals.workouts?' You also recorded '+totals.workouts+' workouts toward your training goal.':''}`;
  if(scheduled.length&&missed)message+=` ${missed} scheduled ${missed===1?'session has':'sessions have'} no matching workout; completed work still counts.`;
  if(weights?.delta!==null&&weights?.delta!==undefined&&!weights.smoothed)message+=' There are too few weight entries for a weekly-average comparison; isolated measurements can fluctuate.';
+ if(scheduled.length&&target!==state.profile.days)message+=` Your profile target is ${state.profile.days} weekly sessions; ${totals.workouts} are recorded, separate from the ${scheduled.length} scheduled entries.`;
  const focus=[];
- if(!consistency.met)focus.push(scheduled.length&&upcoming?`${upcoming} scheduled ${upcoming===1?'session remains':'sessions remain'} in this review week. Keep the plan manageable; avoid stacking missed sessions.`:`Plan ${state.profile.days} manageable sessions for the next week, or adjust the target to your available time.`);
+ if(!frequency.met||!consistency.met)focus.push(scheduled.length&&upcoming?`${upcoming} scheduled ${upcoming===1?'session remains':'sessions remain'} in this review week. Keep the plan manageable; avoid stacking missed sessions.`:`Plan ${state.profile.days} manageable sessions for the next week, or adjust the target to your available time.`);
  const bodyGoal=goals.find(g=>g.type==='body');
  if(bodyGoal&&focus.length<2)focus.push('Record weight under similar conditions and compare weekly averages. Do not try to repeat a particular weekly change.');
  const safeTrend=progressing.find(t=>t.effortComfortable&&!state.profile.excluded.includes(t.exerciseId)&&state.profile.equipment.includes(findExercise(state,t.exerciseId)?.equipment));
@@ -111,6 +113,6 @@ export function buildWeeklyReview(state,{date=today(),asOf=today(),includeBody=t
  }
  if(focus.length<2&&totals.workouts)focus.push('Repeat your current targets and log effort when useful before making a larger program change.');
  const secondary=state.profile.secondaryGoals.filter(g=>g!==state.profile.goal).map(g=>GOALS[g]||g);
- return {version:1,start,end,through,previousStart,previousEnd,historical:end<asOf,partial:through<end,weekStartsOn:weekStartsOn(state),totals,priorTotals,consistency,goals,weights,trends,records,milestones,wins:distinct,headline,message,focus:focus.slice(0,2),primaryGoal:GOALS[state.profile.goal]||state.profile.goal,secondaryGoals:secondary};
+ return {version:1,start,end,through,previousStart,previousEnd,historical:end<asOf,partial:through<end,weekStartsOn:weekStartsOn(state),totals,priorTotals,consistency,frequency,goals,weights,trends,records,milestones,wins:distinct,headline,message,focus:focus.slice(0,2),primaryGoal:GOALS[state.profile.goal]||state.profile.goal,secondaryGoals:secondary};
 }
 export function weeklyReviewText(review){return [review.headline,`${review.start}–${review.end}${review.partial?'; so far through '+review.through:''}: ${review.totals.workouts} workouts, ${review.totals.sets} working sets; ${review.consistency.completed}/${review.consistency.target} ${review.consistency.scheduled?'scheduled':'weekly'} sessions.`,review.message,...review.wins.map(w=>w.title+': '+w.detail),'Focus: '+review.focus.join(' ')].join('\n\n');}

@@ -60,3 +60,7 @@ Fresh release checks passed: **95 domain tests, 9 backend tests, 24 core browser
 `npm run build:site` builds production plus an isolated `/preview/` copy and verifies the production root is byte-identical to its standalone build. The root has no preview meta; the preview retains distinct database/lock/worker scope and manifest name. Existing production records remain in `gymbro-local`; existing preview records remain in `gymbro-preview-v1`. No automatic data transfer occurs. Production footer no longer labels the main app as preview.
 
 The user authorized main promotion, commit and deployment. The old code remains tagged `pre-upgrade-0.1.2`. Provider tests remain stubbed; no live AI service or credentials were provisioned by this release.
+
+## 0.2.2 branch-only refinement candidate
+
+Appearance, calendar and goal-aware weekly-review work is isolated on `feature/appearance-calendar-weekly-review`, with no merge or deployment. [Complete review and QA evidence](refinement/REVIEW.md). Baseline suites were executed before implementation. Candidate checks: 124 domain, 9 backend, 24 core browser, 23 upgrade browser, 11 real 0.2.1 update/recovery and 12 refinement browser checks passed. The dedicated visual audit covers light/dark routes at seven viewport widths, additional logger/dialog views, prepaint preference, live system changes, privacy and offline use. Physical-device and full assistive-technology certification remain unrun.
