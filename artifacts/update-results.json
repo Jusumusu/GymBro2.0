@@ -1,5 +1,5 @@
 {
-  "passed": 10,
+  "passed": 11,
   "checks": [
     "Welcome screen offers direct import without profile setup",
     "Reproduced stale cached code even after a newer app was deployed",
@@ -10,7 +10,8 @@
     "History, unfinished workout, body entries, profile and photo metadata are unchanged",
     "Private photo bytes remain intact",
     "Other applications’ and nested scopes’ cache entries are preserved",
-    "Updated version is visible and offline shell re-registers"
+    "Updated version is visible and offline shell re-registers",
+    "Actual 0.1.2 journal upgrades to 0.2.1 and saves additive preferences without changing any original state field"
   ],
   "errors": []
 }

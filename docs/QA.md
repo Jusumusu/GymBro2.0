@@ -52,3 +52,11 @@ GitHub Actions [run 42038654728](https://github.com/Jusumusu/GymBro2.0/actions/r
 Focused checks after the reported generic routine answer: **95 unit/domain tests, 9 HTTP backend tests and 23 upgrade browser checks passed**. New coverage includes routine review versus replacement, named-program selection, missing evidence, load/rep progress, repeated misses, equipment conflicts, rep/rest/weekly intent, exercise-context resolution, bounded conversation sanitization, retained cloud mode/question/exercise and explicit cloud failure without fallback. Browser and backend cloud paths use stubs; no live provider was configured.
 
 The original blocked deployment was successfully rerun by the owner at 13:58 UTC, publishing the 0.2 preview. The patch stays on improvements and preserves stable main. Core 24-check and updater 10-check suites above were not rerun for this focused coaching patch. Updated screenshots show connection disclosure and offline labels.
+
+## November 7, 2026 — production release
+
+Fresh release checks passed: **95 domain tests, 9 backend tests, 24 core browser checks, 23 upgrade browser checks, and 11 update/recovery checks** (162 total). The updater was run with `UPDATE_BASELINE_DIST` pointing to a separately built archive of actual production commit `3c5985f` (0.1.2), rather than only changing a version string. It verified journal/media preservation and saved a new 0.2.1 appearance preference while every original state field stayed identical. The committed JSON artifacts contain the final successful results.
+
+`npm run build:site` builds production plus an isolated `/preview/` copy and verifies the production root is byte-identical to its standalone build. The root has no preview meta; the preview retains distinct database/lock/worker scope and manifest name. Existing production records remain in `gymbro-local`; existing preview records remain in `gymbro-preview-v1`. No automatic data transfer occurs. Production footer no longer labels the main app as preview.
+
+The user authorized main promotion, commit and deployment. The old code remains tagged `pre-upgrade-0.1.2`. Provider tests remain stubbed; no live AI service or credentials were provisioned by this release.

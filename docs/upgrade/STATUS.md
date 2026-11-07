@@ -1,6 +1,6 @@
-# Upgrade status — November 5, 2026
+# Upgrade status — November 7, 2026
 
-The user removed feature-by-feature pauses and selected an OpenAI-compatible backend. Implementation continued autonomously on `improvements`. The stable baseline on `main` is `3c5985f66bf0c8be93b322926d88385c5cf0eb2e`; no production merge is authorized or performed.
+The user removed feature-by-feature pauses and selected an OpenAI-compatible backend. Implementation continued autonomously on `improvements`. The user then explicitly requested “set this as main and commit”, authorizing the 0.2.1 production promotion. The former baseline `3c5985f66bf0c8be93b322926d88385c5cf0eb2e` is retained as `pre-upgrade-0.1.2`.
 
 ## Implemented
 
@@ -16,13 +16,13 @@ The user removed feature-by-feature pauses and selected an OpenAI-compatible bac
 
 ## Validation
 
-Current coach-fix validation: 95 calculation/schema/import/coaching tests, 9 real HTTP backend tests with a stub provider and 23 upgrade browser checks passed. The prior core browser (24) and stale-app recovery (10) results remain the 0.2 baseline; those two suites were not rerun for this focused patch. Viewport assertions cover 280–1440 px and landscape. See [QA](../QA.md) and `artifacts/` for final outcomes; [feature checklist](REVIEW_PLAN.md) records coverage and limits.
+Production release checks passed: **95 domain/schema/import/coaching tests, 9 HTTP backend tests with a stub provider, 24 core browser checks, 23 upgrade browser checks and 11 update/recovery checks**. The recovery suite used the actual archived 0.1.2 app and verified all original journal fields and photo bytes survived the upgrade and first additive preference save. See [QA](../QA.md), `artifacts/`, and the [release note](RELEASE.md).
 
 ## Preview publication
 
-The owner resolved the Pages environment branch restriction. [Run 42038654728](https://github.com/Jusumusu/GymBro2.0/actions/runs/42038654728) was rerun successfully on November 5 at 13:58 UTC and published https://jusumusu.github.io/GymBro2.0/preview/ . Main remains `3c5985f`. The original rejected attempt is retained in [the release note](RELEASE.md) as historical context.
+The owner resolved the Pages environment branch restriction. [Run 42038654728](https://github.com/Jusumusu/GymBro2.0/actions/runs/42038654728) was rerun successfully on November 5 at 13:58 UTC and published https://jusumusu.github.io/GymBro2.0/preview/ . This preceded the subsequently authorized production promotion. The original rejected attempt is retained in [the release note](RELEASE.md) as historical context.
 
-The 0.2.1 coach fix stays on `improvements`: explicit offline/AI connection state, evidence-based routine reviews, mode/context retention, bounded conversation for the compatible backend, and visible failure without silent offline fallback. Its deployment result is recorded with the delivery message. Preview continues to use a separate journal.
+The 0.2.1 coach fix is included in the authorized main release: explicit offline/AI connection state, evidence-based routine reviews, mode/context retention, bounded conversation for the compatible backend, and visible failure without silent offline fallback. The production workflow retains the preview URL and its separate journal. Production keeps the existing `gymbro-local` database and adds defaults without replacing historical records. Deployment results are recorded in the delivery message.
 
 ## External prerequisites / remaining limits
 

@@ -1,4 +1,16 @@
-# Upgrade delivery — November 5, 2026
+# Production promotion — 0.2.1
+
+The user explicitly authorized “set this as main and commit”. The tested upgrade from `improvements` is merged into `main` with history retained. The former production commit `3c5985f66bf0c8be93b322926d88385c5cf0eb2e` is preserved as `pre-upgrade-0.1.2`.
+
+Main publishes https://jusumusu.github.io/GymBro2.0/ and keeps https://jusumusu.github.io/GymBro2.0/preview/ available for its separate journal. Production opens the original `gymbro-local` database and adds defaults; preview stays in `gymbro-preview-v1`. There is no automatic history transfer between them.
+
+A release check upgrades an actual archived 0.1.2 app and synthetic browser journal through the uncached updater, then saves a new preference and verifies every original state field and photo byte. Keep external JSON backups; older code cannot read every new built-in movement ID, so code rollback alone is not a data downgrade.
+
+The AI backend remains optional and requires hosting/provider credentials for live model responses. This promotion does not provision a service or change cloud consent.
+
+---
+
+# Earlier preview delivery — November 5, 2026
 
 The upgrade is committed and pushed to `improvements`. The stable `main` branch remains at `3c5985f66bf0c8be93b322926d88385c5cf0eb2e`. Core training, coach tools, responsive interface and secure optional backend are implemented; [full feature status](REVIEW_PLAN.md), [QA](../QA.md), [backend setup](../../server/README.md).
 

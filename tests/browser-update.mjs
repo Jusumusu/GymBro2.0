@@ -6,13 +6,15 @@ const sleep=ms=>new Promise(r=>setTimeout(r,ms));
 const root=tmpdir()+'/gymbro-update-'+crypto.randomUUID();
 const site=root+'/site',profile=root+'/browser';
 const port=Number(process.env.UPDATE_PORT||5181),debugPort=Number(process.env.UPDATE_CDP_PORT||9240);
-await mkdir(root,{recursive:true});await cp('dist',site,{recursive:true});
+await mkdir(root,{recursive:true});await cp(process.env.UPDATE_BASELINE_DIST||'dist',site,{recursive:true});
 const appVersion=JSON.parse(await readFile('package.json','utf8')).version;
 const appCode=await readFile('dist/src/app.js','utf8'),workerCode=await readFile('dist/sw.js','utf8');
 assert.ok(!workerCode.includes('./update.html'));assert.ok(!workerCode.includes('./update.js'));assert.ok(!workerCode.includes('./update.css'));
 for(const f of ['update.html','update.js','update.css'])await rm(site+'/'+f);
-await writeFile(site+'/src/app.js',appCode.replaceAll('Gym Bro '+appVersion,'Gym Bro 0.1.1')+"\nglobalThis.__UPDATE_TEST_BUILD__='old';\n");
-await writeFile(site+'/sw.js',workerCode.replace(/const CACHE=PREFIX\+'[^']+';/,"const CACHE=PREFIX+'old-test';"));
+const baselineCode=process.env.UPDATE_BASELINE_DIST?await readFile(site+'/src/app.js','utf8'):appCode;
+const baselineWorker=process.env.UPDATE_BASELINE_DIST?await readFile(site+'/sw.js','utf8'):workerCode;
+await writeFile(site+'/src/app.js',baselineCode.replaceAll('Gym Bro '+appVersion,'Gym Bro 0.1.1')+"\nglobalThis.__UPDATE_TEST_BUILD__='old';\n");
+await writeFile(site+'/sw.js',baselineWorker.replace(/const CACHE=PREFIX\+'[^']+';/,"const CACHE=PREFIX+'old-test';"));
 const server=spawn(process.execPath,['scripts/serve.mjs',site],{env:{...process.env,PORT:String(port)},stdio:'ignore'});
 const chrome=spawn(process.env.CHROMIUM_PATH||'/usr/bin/chromium',['--headless','--no-sandbox','--disable-dev-shm-usage','--no-first-run','--disable-background-networking',`--user-data-dir=${profile}`,`--remote-debugging-port=${debugPort}`,'about:blank'],{stdio:'ignore'});
 let socket,sequence=0;const pending=new Map(),errors=[],checks=[];
@@ -51,6 +53,12 @@ try{
  const photoBytes=await js(`(async()=>Array.from(new Uint8Array(await (await (await import('./src/storage.js')).getPhoto(${JSON.stringify(saved.photos[0].id)})).arrayBuffer())))()`);assert.deepEqual(photoBytes,Array.from(await readFile('public/icon-192.png')));pass('Private photo bytes remain intact');
  assert.equal(await js(`(async()=>await (await (await caches.open('unrelated-app-cache')).match('./unrelated-marker')).text())()`),'keep');assert.equal(await js(`(async()=>await (await (await caches.open('gymbro-'+location.origin+'/nested/another-app')).match('./nested-marker')).text())()`),'keep nested');pass('Other applications’ and nested scopes’ cache entries are preserved');
  await until(`Boolean(navigator.serviceWorker.controller)`);assert.ok(await js(`document.body.textContent.includes('Gym Bro '+${JSON.stringify(appVersion)})`));pass('Updated version is visible and offline shell re-registers');
+ if(process.env.UPDATE_BASELINE_DIST){
+  assert.ok(await js(`Boolean(document.querySelector('#appearance-form'))`));
+  await fill('#appearance-form [name=theme]','light');await js(`document.querySelector('#appearance-form').requestSubmit()`);await until(`document.documentElement.dataset.theme==='light'`);
+  const migrated=await data();assert.equal(migrated.upgrade.version,1);assert.equal(migrated.upgrade.theme,'light');for(const key of Object.keys(saved))assert.deepEqual(migrated[key],saved[key],key+' survived the production upgrade');
+  pass('Actual 0.1.2 journal upgrades to 0.2.1 and saves additive preferences without changing any original state field');
+ }
  assert.deepEqual(errors,[]);await mkdir('artifacts',{recursive:true});await writeFile('artifacts/update-results.json',JSON.stringify({passed:checks.length,checks,errors},null,2));console.log(`${checks.length} browser update checks passed.`);
 }catch(error){console.error(error);process.exitCode=1;}
 finally{socket?.close();chrome.kill();server.kill();await sleep(300);await rm(root,{recursive:true,force:true,maxRetries:3,retryDelay:100}).catch(()=>{});}

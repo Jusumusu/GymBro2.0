@@ -15,7 +15,8 @@
     "build:preview": "node scripts/build.mjs --preview",
     "coach:server": "node server/coach-server.mjs",
     "test:upgrade": "node tests/browser-upgrade.mjs",
-    "benchmark": "node scripts/benchmark.mjs"
+    "benchmark": "node scripts/benchmark.mjs",
+    "build:site": "node scripts/build-site.mjs"
   },
   "engines": {
     "node": ">=22"

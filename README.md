@@ -1,6 +1,6 @@
 # Gym Bro 2.0
 
-Private, offline-first strength training with an optional OpenAI-compatible coach backend. Native ES modules, Node 22+ and no npm dependencies. The upgrade is on `improvements`; `main` remains the stable app.
+Private, offline-first strength training with an optional OpenAI-compatible coach backend. Native ES modules, Node 22+ and no npm dependencies. The 0.2.1 upgrade is promoted to `main` with user authorization. `improvements` remains available for separate experiments.
 
 - Stable: https://jusumusu.github.io/GymBro2.0/
 - Upgrade preview: https://jusumusu.github.io/GymBro2.0/preview/
@@ -14,7 +14,8 @@ The preview has a **separate journal**, database, writer lock and service-worker
 npm run dev              # serve source; open the printed HTTP URL
 npm test                 # deterministic, schema, migration and coaching tests
 npm run test:backend     # localhost HTTP tests with a stub AI provider
-npm run build            # static PWA in dist/
+npm run build            # standalone production PWA in dist/
+npm run build:site       # production + preserved isolated /preview/ in dist/
 npm run preview          # serve dist/
 npm run test:e2e          # core Chromium regression
 npm run test:upgrade      # upgraded UI, responsive layouts and storage isolation
@@ -32,11 +33,13 @@ The **local coach** works offline with deterministic facts and templates, and cl
 
 The **cloud coach** uses a server-held provider key. It is prepared and tested with a stub provider, but no paid provider or backend hosting is provisioned. Start with [Connect conversational AI](docs/AI_SETUP.md), then follow [backend setup](server/README.md). Select cloud mode only after configuring your backend, entering its private access token for the current session and consenting to outbound context. No provider key belongs in the browser, repository or chat.
 
-## Deploy without replacing the stable app
+## Production and preview deployment
 
-GitHub Settings → Pages must use **GitHub Actions**. Pushing `improvements` runs the preview workflow: build the current stable `main`, build this candidate, verify stable files remain byte-identical, and add the candidate under `/preview/`. The `github-pages` environment must permit the `improvements` branch. The production workflow is guarded to `main`. Do not merge or push this upgrade to `main` until a production release is requested.
+GitHub Settings → Pages uses **GitHub Actions**. Pushing `main` tests and builds the release at the normal app URL, retaining an isolated copy under `/preview/`. The production journal keeps its original database and writer lock; it gains additive upgrade defaults. Preview workouts remain in their separate journal and are not automatically merged into production.
 
-A later stable deployment may remove the preview folder; pushing a candidate change rebuilds it. Return to the stable URL to stop testing. Branch rollback instructions and data boundaries are in [the release checklist](docs/upgrade/REVIEW_PLAN.md).
+Pushing code changes to `improvements` builds current main unchanged at the root and adds that candidate under `/preview/`. Composition verifies every root file byte-for-byte. Both workflows share deployment concurrency and the permitted `github-pages` environment.
+
+The pre-upgrade code is tagged `pre-upgrade-0.1.2`; the upgrade and merge history are retained. Export before any future rollback: new built-in exercise IDs are unknown to 0.1.2, so a code rollback alone is not a lossless downgrade of newly recorded data. [Release/data notes](docs/upgrade/RELEASE.md).
 
 ## Backups and old app recovery
 

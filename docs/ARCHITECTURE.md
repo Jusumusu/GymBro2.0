@@ -1,6 +1,6 @@
 # Architecture — 0.2 preview
 
-A dependency-free ECMAScript-module PWA with Node 22+ build/test tools and an optional server-side LLM adapter. No account or network is required for core training. The upgrade remains on `improvements`; the stable app is built from `main` for the deployment root.
+A dependency-free ECMAScript-module PWA with Node 22+ build/test tools and an optional server-side LLM adapter. No account or network is required for core training. The user-authorized 0.2.1 release is on `main` for the deployment root; `improvements` remains available for experiments. Main builds also retain the isolated preview path.
 
 ## Modules and contracts
 

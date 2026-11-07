@@ -1,6 +1,6 @@
 # Limits — 0.2 preview
 
-The upgrade is implemented on `improvements`, with a separate preview journal. Stable `main` is preserved. [Implemented scope](upgrade/REVIEW_PLAN.md) and [executed QA](QA.md) distinguish local functionality from external services and unrun checks.
+The 0.2.1 upgrade is promoted to `main` with user authorization. The prior code remains available as `pre-upgrade-0.1.2`, and the preview journal stays separate. [Implemented scope](upgrade/REVIEW_PLAN.md) and [executed QA](QA.md) distinguish local functionality from external services and unrun checks.
 
 - **Cloud AI:** secure compatible backend/client are prepared and stub-tested; no host/provider credentials or live model evaluation exists. Local analysis/templates work offline and are labeled. A validated fact ID does not guarantee every LLM statement is accurate. Only whitelisted, bounded proposals can reach approval; prose cannot write arbitrary data.
 - **Training interpretation:** progression, subjective readiness, plateau/balance and program duration are coaching heuristics, not physiological measurements, diagnoses or validated outcome forecasts. Estimated 1RM uses loaded 1–10-rep sets. No verified licensed population strength dataset is bundled. Independent science review remains useful.

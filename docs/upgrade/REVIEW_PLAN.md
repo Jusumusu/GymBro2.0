@@ -1,6 +1,6 @@
 # Implementation and release checklist
 
-The user superseded the original per-feature review pauses with “dont pause any more just go ahead with the whole thing.” This is a completed implementation checklist, not a queue awaiting feature approvals. Production `main` remains a separate release decision.
+The user superseded the original per-feature review pauses with “dont pause any more just go ahead with the whole thing.” This is a completed implementation checklist, not a queue awaiting feature approvals. The user subsequently authorized the production promotion with “set this as main and commit”.
 
 | Original items | Result | Evidence / material limit |
 |---|---|---|
@@ -30,16 +30,16 @@ The user superseded the original per-feature review pauses with “dont pause an
 | 37 sync | Architecture complete | [Sync design](SYNC.md); not provisioned or implemented |
 | 38 performance | Measured | Synthetic 1,500 sessions / 22,500 sets; cloud CPU results in `artifacts/performance-results.json`; no mobile timing certification |
 | 39–40 accessibility/PWA/regressions | Tested with limits | Chromium layout/focus/labels/reduced-motion/offline/update/import checks; physical devices and complete WCAG audit pending |
-| 41 release candidate | Prepared on improvements | QA, privacy, rollback and backend docs; no merge to main |
+| 41 production promotion | Authorized and merged to main | Full upgrade history retained, production data preserved, separate preview URL retained; pre-upgrade code tagged |
 
 ## Review the preview
 
 Open https://jusumusu.github.io/GymBro2.0/preview/ . Confirm the PREVIEW banner. It cannot open the production database. Export a stable backup first; import a copy into preview if desired. Workouts entered in preview stay there. Turn off optional cloud mode to keep every coaching request local.
 
-## Reverting code safely
+## Production release and recovery
 
-Returning to the stable URL immediately returns to the stable journal. The stable `main` branch remains untouched. Prefer `git revert <specific upgrade commit>` on `improvements` and push; do not force-reset shared history. Deployable preview revisions must retain the isolation layer; composition fails if it is missing. To remove the preview, redeploy the stable workflow from `main` through the normal release path.
+The normal app URL now receives the approved 0.2.1 release, using the original production database and additive defaults. Preview remains available with a separate database/lock/media/cache scope. Records made in preview are not automatically merged into the production journal. Export each journal independently; native import uses explicit full replacement.
 
-Keep a JSON backup before changing versions. The new build reads old native v1 backups and verified original v3 exports. New extension fields are additive, but stable 0.1.2 does not understand new built-in movement IDs and cannot import every preview-created backup. Advanced fields can also be dropped by an older plan editor. Do not use the stable app as a downgrade converter; use the untouched original stable journal/backup. Export preview data separately before removing a preview you trained in.
+The former production code `3c5985f` is tagged `pre-upgrade-0.1.2`; original main, upgrade commits and the merge are all retained. Prefer revert commits over rewriting shared history. Export current records before any rollback: an older app cannot read every new built-in movement ID and may drop advanced editor fields. Code rollback alone does not provide a lossless data downgrade. Retain backups and use a verified conversion if downgrading records is necessary.
 
-The preview workflow republishes the unchanged stable build at the root plus `/preview/`; byte checks protect root content. It shares the GitHub Pages environment and deployment concurrency. Branch protections may require the owner to allow `improvements` in that environment; they must not be bypassed.
+Production and experimental deployments continue to share Pages concurrency. Main publishes production plus a separate preview copy; an improvements deployment builds current main byte-identically and adds the candidate preview. Environment protection rules remain in force.
