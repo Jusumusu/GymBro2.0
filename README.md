@@ -1,6 +1,6 @@
 # Gym Bro 2.0
 
-Private, offline-first strength training with an optional OpenAI-compatible coach backend. Native ES modules, Node 22+ and no npm dependencies. The 0.2.1 upgrade is promoted to `main` with user authorization. `improvements` remains available for separate experiments.
+Private, offline-first strength training with an optional OpenAI-compatible coach backend. Native ES modules, Node 22+ and no npm dependencies. The reviewed 0.2.2 refinement is merged into `main` with user authorization. Main holds the approved app; new experiments use one temporary feature branch, removed after approval and release.
 
 - Stable: https://jusumusu.github.io/GymBro2.0/
 - Upgrade preview: https://jusumusu.github.io/GymBro2.0/preview/
@@ -8,9 +8,9 @@ Private, offline-first strength training with an optional OpenAI-compatible coac
 
 The preview has a **separate journal**, database, writer lock and service-worker scope. It starts empty. To try your own records, export JSON in the stable app, then explicitly import that backup in preview Settings. Your stable journal stays separate; changes do not synchronize between them. Keep your original backup.
 
-## 0.2.2 refinement candidate
+## 0.2.2 refinement release
 
-The appearance, configurable week-start and goal-aware weekly check-in update is on `feature/appearance-calendar-weekly-review` for review. It is **not merged or deployed**. See [the review guide, screenshots, calculations and tests](docs/refinement/REVIEW.md). A subsequently requested website preview built successfully, but GitHub's environment branch rules blocked publication; [owner steps and actual deployment status](docs/refinement/PREVIEW.md). The live links above still point to released main.
+The approved update adds refined light/dark/system appearance, Sunday/Monday week preferences and goal-aware weekly check-ins with historical navigation. See [the review guide, screenshots, calculations and tests](docs/refinement/REVIEW.md) and [release/data notes](docs/refinement/RELEASE.md). The normal main workflow tests and publishes this version at the stable URL and the isolated preview URL. The earlier blocked feature-preview attempt is retained as [historical deployment context](docs/refinement/PREVIEW.md).
 
 ## Run and verify
 
@@ -41,9 +41,9 @@ The **cloud coach** uses a server-held provider key. It is prepared and tested w
 
 GitHub Settings → Pages uses **GitHub Actions**. Pushing `main` tests and builds the release at the normal app URL, retaining an isolated copy under `/preview/`. The production journal keeps its original database and writer lock; it gains additive upgrade defaults. Preview workouts remain in their separate journal and are not automatically merged into production.
 
-Pushing code changes to `improvements` builds current main unchanged at the root and adds that candidate under `/preview/`. Composition verifies every root file byte-for-byte. Both workflows share deployment concurrency and the permitted `github-pages` environment.
+Experimental preview deployments must explicitly target the current feature branch and satisfy the `github-pages` environment rules. They build current main unchanged at the root and add only the candidate under `/preview/`; composition verifies every root file byte-for-byte. Both workflows share deployment concurrency. Main is the only long-lived branch; completed feature branches are removed after release.
 
-The pre-upgrade code is tagged `pre-upgrade-0.1.2`; the upgrade and merge history are retained. Export before any future rollback: new built-in exercise IDs are unknown to 0.1.2, so a code rollback alone is not a lossless downgrade of newly recorded data. [Release/data notes](docs/upgrade/RELEASE.md).
+The preceding releases are tagged `pre-upgrade-0.1.2` and `pre-refinement-0.2.1`; the upgrade and merge history are retained. Export before any future rollback: new built-in exercise IDs are unknown to 0.1.2, so a code rollback alone is not a lossless downgrade of newly recorded data. [Earlier release/data notes](docs/upgrade/RELEASE.md).
 
 ## Backups and old app recovery
 

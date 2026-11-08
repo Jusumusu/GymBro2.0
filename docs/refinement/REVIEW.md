@@ -1,8 +1,8 @@
-# 0.2.2 review candidate
+# 0.2.2 refinement review
 
-Branch: `feature/appearance-calendar-weekly-review`, based on main `c35c629`. This work is committed separately for review. **It has not been merged or deployed.** The existing live app and public preview still run the released main version.
+Originally reviewed on `feature/appearance-calendar-weekly-review`, based on main `c35c629`. The user approved promotion on November 8, 2026: “great work, commit this branch to main”. Merge commit `42c0170` retains the reviewed branch history. [Release and data-preservation notes](RELEASE.md). The normal main workflow publishes production and its isolated preview; completed feature branches are removed after successful deployment.
 
-The user subsequently requested a working website preview. Its build passed, but GitHub rejected deployment because this branch is not allowed by the `github-pages` environment. [Deployment result and owner steps](PREVIEW.md). Main remains unchanged.
+Before approval, the requested feature-preview build passed but its deployment was blocked by GitHub environment branch rules. This is [historical context](PREVIEW.md), superseded by the approved main release; no protection rule was bypassed.
 
 ## 1. Changes and entry points
 
@@ -94,16 +94,16 @@ Chromium desktop/emulation was executed; Safari, Firefox, physical installation/
 
 Historical goals are current targets applied to historical records, not a record of what the user intended at that time. Readiness, indirect sets and coaching are heuristics. Live cloud AI still requires its separate host/provider credentials and real-model evaluation. No clinical claim, encrypted backup or sync service is added.
 
-## 8. Review and publish later
+## 8. Review history and future changes
 
 For a local review without deploying:
 
 ```sh
-git switch feature/appearance-calendar-weekly-review
+git switch main
 npm run build:site
 npm run preview
 ```
 
 Open the printed local URL under **`/preview/`** for the isolated journal. No provider key is needed for the weekly review. A native backup can be imported explicitly into that preview; it does not sync back to production.
 
-Review the branch/compare and screenshots first. Only after explicit approval should a normal pull request merge this branch into `main`. The existing main workflow then tests and publishes production plus its separate preview. Keep a complete JSON backup and a code tag before any future production release; never force-push shared history as a rollback. No merge or deployment was performed by this task.
+For future changes, create one temporary feature branch from latest main, review it separately, and merge only after explicit approval. The existing main workflow tests and publishes production plus its separate preview. After successful release, delete the finished branch; its commits stay in main. Keep a complete JSON backup and a code tag before any future production release; never force-push shared history as a rollback. The 0.2.2 review is approved; its release notes identify the retained pre-release code and data contract.

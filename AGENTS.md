@@ -1,21 +1,12 @@
-# Gym Bro upgrade workflow
+# Gym Bro workflow
 
-- Use the existing checkout. The user explicitly authorized promoting the 0.2.1 upgrade to `main`: “set this as main and commit”. The former production baseline `3c5985f66bf0c8be93b322926d88385c5cf0eb2e` is retained by the `pre-upgrade-0.1.2` tag. Future feature experiments should use `improvements`.
-- Read `docs/upgrade/STATUS.md` and `docs/upgrade/REVIEW_PLAN.md` before starting a feature.
-- The user superseded the review pauses: “dont pause any more just go ahead with the whole thing.” Proceed through the upgrade autonomously with incremental commits, tests and progress reports. Ask only for actual missing credentials, cost authorization or irreversible infrastructure decisions.
-- The current 0.2.1 promotion, production push and deployment are authorized. Keep reviewable commits and retained history; no force push. Future unrelated production releases need their own authorization.
-- Preserve current records, media, imports, units, and exercise identities. A code branch does not isolate browser storage. Preview work must use a separate database, writer lock, worker/cache scope and clearly marked preview environment, or a genuinely separate origin. Never open an experimental data migration against the production database.
-- Use synthetic test fixtures. Keep personal exports, converted private backups and personal screenshots outside the repository.
-- Keep deterministic training facts separate from future LLM responses. No frontend API keys, arbitrary AI code/storage access, implicit cloud data sharing, or simulated responses presented as a live LLM.
-
-# Current refinement task
-
-- The new user brief requires `feature/appearance-calendar-weekly-review`. Work only on that branch for this task. Main baseline: `c35c629868d3545c0095c3360c5b5b992226bc12`.
-- The user reiterated that the work must be on a separate branch for review before committing to main. Do not merge into main or deploy automatically, including the preview. Source branch pushes for review do not authorize deployment.
-- Implement the targeted appearance, alignment, week-start and weekly review brief in `docs/refinement/BRIEF.md`; preserve the existing product and data. Retain Monday defaults for existing journals.
-- Baseline checks completed before implementation: 95 domain, 9 backend and 57 browser checks. Continue with meaningful incremental commits and final actual-render verification.
-
-## Requested website preview
-
-- The user subsequently asked for a link to see this branch's changes in the website. This authorizes publishing this candidate to the existing isolated `/preview/` path. Keep the production root byte-identical to current main; do not merge or push main.
-- The preview workflow may deploy this specific feature branch. Preserve the preview database/lock/worker isolation and existing GitHub environment protection rules. Record the actual deployment outcome before describing the new preview as available.
+- The user approved the 0.2.2 refinement with “great work, commit this branch to main”. Merging, committing, pushing main and the resulting normal production deployment are authorized for this release. This supersedes the earlier review-only restriction. Future unrelated releases need their own approval.
+- Keep `main` as the approved app. Use one temporary feature branch for the current experiment, starting from latest main. After approval, merge normally, verify deployment, then delete the completed branch. Do not retain a permanent `improvements` branch or accumulate finished branches. No force pushes.
+- The reviewed source tip was `c0f2eafba0ff7664b3fa83b7818d09fd5ba53dfb`; merge commit `42c01700b585166ff56fcda7cbbd2355a788ee2f` retains its full history. The preceding production version is tagged `pre-refinement-0.2.1`; the earlier 0.1.2 baseline is tagged `pre-upgrade-0.1.2`.
+- Read `docs/refinement/STATUS.md`, `docs/refinement/REVIEW.md` and the release note before starting another feature. The original user brief is preserved in `docs/refinement/BRIEF.md`.
+- Preserve current records, media, imports, units and exercise identities. A code branch does not isolate browser storage. Experimental previews must use separate databases, writer locks, worker/cache scopes and a visible preview environment, or a separate origin. Never open an experimental migration against production storage.
+- Production keeps `gymbro-local`; `/preview/` keeps `gymbro-preview-v1`. A main site build publishes both entry points without transferring journal records.
+- Use synthetic fixtures. Keep personal exports, converted backups and personal screenshots outside the repository.
+- Keep deterministic training facts separate from LLM responses. No frontend provider keys, arbitrary AI code/storage access, implicit cloud sharing, or simulated responses presented as a live model.
+- Work autonomously with incremental commits, appropriate tests and progress reports. The user removed feature-by-feature pauses. Ask only for actual missing credentials, cost authorization or irreversible infrastructure decisions.
+- The earlier feature-preview deployment was blocked by GitHub environment protection, not by the application build. Retain protection rules; the approved release uses the existing main workflow. Record actual deployment results before claiming publication.
