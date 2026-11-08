@@ -1,4 +1,5 @@
 import {spawn} from 'node:child_process';
+import {createHash} from 'node:crypto';
 import {cp,mkdir,readFile,writeFile,rm} from 'node:fs/promises';
 import {tmpdir} from 'node:os';
 import assert from 'node:assert/strict';
@@ -15,6 +16,14 @@ const baselineCode=process.env.UPDATE_BASELINE_DIST?await readFile(site+'/src/ap
 const baselineWorker=process.env.UPDATE_BASELINE_DIST?await readFile(site+'/sw.js','utf8'):workerCode;
 await writeFile(site+'/src/app.js',baselineCode.replaceAll('Gym Bro '+appVersion,'Gym Bro 0.1.1')+"\nglobalThis.__UPDATE_TEST_BUILD__='old';\n");
 await writeFile(site+'/sw.js',baselineWorker.replace(/const CACHE=PREFIX\+'[^']+';/,"const CACHE=PREFIX+'old-test';"));
+// Build a coherent synthetic previous release when no archived baseline is supplied.
+if(!process.env.UPDATE_BASELINE_DIST){
+ const old=JSON.parse(await readFile(site+'/version.json','utf8'));old.build=createHash('sha256').update('old-test').digest('hex').slice(0,12);
+ const html=(await readFile(site+'/index.html','utf8')).replace(/name="gymbro-build" content="[^"]+"/,`name="gymbro-build" content="${old.build}"`);await writeFile(site+'/index.html',html);
+ for(const path of Object.keys(old.assets))old.assets[path]=createHash('sha256').update(await readFile(site+'/'+path)).digest('hex');
+ await writeFile(site+'/version.json',JSON.stringify(old));await writeFile(site+'/sw.js',(await readFile(site+'/sw.js','utf8')).replace(/const RELEASE=.*;/,'const RELEASE='+JSON.stringify(old)+';'));
+}
+
 const server=spawn(process.execPath,['scripts/serve.mjs',site],{env:{...process.env,PORT:String(port)},stdio:'ignore'});
 const chrome=spawn(process.env.CHROMIUM_PATH||'/usr/bin/chromium',['--headless','--no-sandbox','--disable-dev-shm-usage','--no-first-run','--disable-background-networking',`--user-data-dir=${profile}`,`--remote-debugging-port=${debugPort}`,'about:blank'],{stdio:'ignore'});
 let socket,sequence=0;const pending=new Map(),errors=[],checks=[];
@@ -40,6 +49,7 @@ try{
  await js(`(async()=>{localStorage.setItem('update-data-marker','keep');const c=await caches.open('unrelated-app-cache');await c.put('./unrelated-marker',new Response('keep'));const nested=await caches.open('gymbro-'+location.origin+'/nested/another-app');await nested.put('./nested-marker',new Response('keep nested'));})()`);
  // Deploy a new build while the old worker continues to serve its cached app.
  await cp('dist',site,{recursive:true});await writeFile(site+'/src/app.js',appCode+"\nglobalThis.__UPDATE_TEST_BUILD__='new';\n");
+ const release=JSON.parse(await readFile(site+'/version.json','utf8'));release.assets['src/app.js']=createHash('sha256').update(await readFile(site+'/src/app.js')).digest('hex');await writeFile(site+'/version.json',JSON.stringify(release));await writeFile(site+'/sw.js',workerCode.replace(/const RELEASE=.*;/, 'const RELEASE='+JSON.stringify(release)+';'));
  await js('window.__oldDocument=true');await cdp('Page.reload');await until(`!window.__oldDocument && document.readyState==='complete'`);await until(`Boolean(document.querySelector('.sidebar'))`);assert.equal(await js('globalThis.__UPDATE_TEST_BUILD__'),'old');pass('Reproduced stale cached code even after a newer app was deployed');
  await cdp('Page.navigate',{url:`http://127.0.0.1:${port}/update.html?v=0.1.2`});await until(`Boolean(document.querySelector('#update:not(:disabled)'))`);pass('Uncached update page opens through the old service worker');
  const other=await cdp('Target.createTarget',{url:`http://127.0.0.1:${port}/#settings`});

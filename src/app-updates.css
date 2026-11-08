@@ -1,0 +1,5 @@
+/* Functional update prompt uses the app's existing palette and controls. */
+.app-update-notice{position:fixed;right:24px;bottom:24px;z-index:1001;width:min(420px,calc(100% - 48px));max-height:calc(100dvh - 48px);overflow:auto;margin:0;box-shadow:0 8px 32px #0003;border-color:var(--accent)}
+.app-update-notice>strong{display:block;font-size:16px}.app-update-notice>p{font-size:13px;color:var(--muted);margin:8px 0 16px}.app-update-notice .actions{gap:10px;flex-wrap:wrap}
+.app-update-notice [role=alert]{color:var(--danger);margin:14px 0 0}
+@media(max-width:650px){.app-update-notice{left:12px;right:12px;width:auto;bottom:calc(84px + env(safe-area-inset-bottom));max-height:calc(100dvh - 108px - env(safe-area-inset-bottom));padding:20px}}

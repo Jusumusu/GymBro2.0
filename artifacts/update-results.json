@@ -11,7 +11,7 @@
     "Private photo bytes remain intact",
     "Other applications’ and nested scopes’ cache entries are preserved",
     "Updated version is visible and offline shell re-registers",
-    "Actual 0.2.1 journal upgrades to 0.2.2, preserving original records and preferences except the deliberately changed theme"
+    "Actual 0.2.2 journal upgrades to 0.2.3, preserving original records and preferences except the deliberately changed theme"
   ],
   "errors": []
 }

@@ -1,6 +1,6 @@
 # Gym Bro 2.0
 
-Private, offline-first strength training with an optional OpenAI-compatible coach backend. Native ES modules, Node 22+ and no npm dependencies. The reviewed 0.2.2 refinement is merged into `main` with user authorization. Main holds the approved app; new experiments use one temporary feature branch, removed after approval and release.
+Private, offline-first strength training with an optional OpenAI-compatible coach backend. Native ES modules, Node 22+ and no npm dependencies. The 0.2.3 update adds reliable latest-version loading and automatic update notices, authorized for main without an existing-site redesign. Main holds the approved app; new experiments use one temporary feature branch, removed after approval and release.
 
 - Stable: https://jusumusu.github.io/GymBro2.0/
 - Upgrade preview: https://jusumusu.github.io/GymBro2.0/preview/
@@ -24,6 +24,7 @@ npm run preview          # serve dist/
 npm run test:e2e          # core Chromium regression
 npm run test:upgrade      # upgraded UI, responsive layouts and storage isolation
 npm run test:update       # stale-cache recovery without journal deletion
+npm run test:app-updates  # real notifications, one-click updates and failed-release recovery
 npm run benchmark         # synthetic 1,500-session CPU benchmark
 ```
 
@@ -50,6 +51,8 @@ The preceding releases are tagged `pre-upgrade-0.1.2` and `pre-refinement-0.2.1`
 In Settings, export complete JSON regularly. Native backups restore after validation and explicit full replacement. Original Gym Bro v3 exports merge through a separate preview with kg confirmation and duplicate detection; unsupported legacy shapes fail without changing records. [Backup details](docs/BACKUP.md).
 
 If an old installed shell hides the update button, open `update.html` beside the relevant app URL, close other windows of that app and select **Update and open Gym Bro**. For preview use `/GymBro2.0/preview/update.html`; for stable use `/GymBro2.0/update.html`. The helper refreshes app files, not workouts or photos.
+
+From 0.2.3, Settings → **Update app** always checks and loads the latest published release. The app also checks at startup, on return/reconnection and once a minute while visible, then offers **Load update** or **Later**. Updates never reload an active workout automatically; the full new offline shell must verify before activation. Older installations need one initial update to gain these notices. [Update behavior and validation](docs/APP_UPDATES.md).
 
 ## Documentation
 
