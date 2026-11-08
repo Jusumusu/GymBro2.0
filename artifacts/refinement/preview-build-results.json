@@ -1,0 +1,8 @@
+{
+  "date": "2026-11-08T07:33:25.656Z",
+  "main": "c35c629868d3545c0095c3360c5b5b992226bc12",
+  "applicationCommit": "8ff984e4a126297b999aa31148937f4062376f0c",
+  "productionRoot": "Byte-identical to current main standalone build; all asset hashes checked by compose-preview.mjs",
+  "preview": "Feature candidate built with --preview; separate database, lock and worker scope",
+  "published": false
+}

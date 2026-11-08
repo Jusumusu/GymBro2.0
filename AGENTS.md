@@ -14,3 +14,8 @@
 - The user reiterated that the work must be on a separate branch for review before committing to main. Do not merge into main or deploy automatically, including the preview. Source branch pushes for review do not authorize deployment.
 - Implement the targeted appearance, alignment, week-start and weekly review brief in `docs/refinement/BRIEF.md`; preserve the existing product and data. Retain Monday defaults for existing journals.
 - Baseline checks completed before implementation: 95 domain, 9 backend and 57 browser checks. Continue with meaningful incremental commits and final actual-render verification.
+
+## Requested website preview
+
+- The user subsequently asked for a link to see this branch's changes in the website. This authorizes publishing this candidate to the existing isolated `/preview/` path. Keep the production root byte-identical to current main; do not merge or push main.
+- The preview workflow may deploy this specific feature branch. Preserve the preview database/lock/worker isolation and existing GitHub environment protection rules. Record the actual deployment outcome before describing the new preview as available.

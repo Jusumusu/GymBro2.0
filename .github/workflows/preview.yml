@@ -1,7 +1,7 @@
-name: Deploy isolated improvements preview
+name: Deploy isolated review preview
 on:
   push:
-    branches: [improvements]
+    branches: [improvements, feature/appearance-calendar-weekly-review]
     paths:
       - 'src/**'
       - 'public/**'
@@ -21,7 +21,7 @@ concurrency:
   cancel-in-progress: false
 jobs:
   build:
-    if: github.ref == 'refs/heads/improvements'
+    if: github.ref == 'refs/heads/improvements' || github.ref == 'refs/heads/feature/appearance-calendar-weekly-review'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -50,7 +50,7 @@ jobs:
         with:
           path: site
   deploy:
-    if: github.ref == 'refs/heads/improvements'
+    if: github.ref == 'refs/heads/improvements' || github.ref == 'refs/heads/feature/appearance-calendar-weekly-review'
     needs: build
     runs-on: ubuntu-latest
     timeout-minutes: 15
