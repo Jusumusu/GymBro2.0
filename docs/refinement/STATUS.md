@@ -1,6 +1,6 @@
 # Appearance, calendar and weekly review
 
-Branch: `feature/appearance-calendar-weekly-review`. Based on main `c35c629`. No merge or deployment is authorized for this task.
+Branch: `feature/appearance-calendar-weekly-review`. Based on main `c35c629`. No main merge or production release is authorized. The user subsequently requested a website preview: its build passed, but GitHub's environment branch rule blocked deployment. [Actual result and owner steps](PREVIEW.md). Main and the previously published website remain unchanged.
 
 Baseline: 95 domain tests, 9 backend tests, 24 core browser checks, 23 upgrade browser checks and 10 updater checks passed before implementation. Results and synthetic screenshots are in `baseline/`.
 

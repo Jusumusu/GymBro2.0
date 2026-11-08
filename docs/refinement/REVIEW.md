@@ -2,6 +2,8 @@
 
 Branch: `feature/appearance-calendar-weekly-review`, based on main `c35c629`. This work is committed separately for review. **It has not been merged or deployed.** The existing live app and public preview still run the released main version.
 
+The user subsequently requested a working website preview. Its build passed, but GitHub rejected deployment because this branch is not allowed by the `github-pages` environment. [Deployment result and owner steps](PREVIEW.md). Main remains unchanged.
+
 ## 1. Changes and entry points
 
 - Settings → **Appearance**: immediate Light Mode, Dark Mode and System Default.
