@@ -1,0 +1,32 @@
+{
+  "browser": "Chromium",
+  "date": "2026-11-07T21:15:31.317Z",
+  "passed": 24,
+  "checks": [
+    "Onboarding layout fits 280, 320 and 390 px",
+    "Onboarding and personalized program generation",
+    "Set logging, optional RIR, completion, and bulk weight/repetition copy",
+    "Draft survives reload",
+    "Partial-session finish retains data, excludes unchecked sets, and saves history",
+    "History editing updates the original session without duplication",
+    "Manual program creation, deletion, and persisted undo",
+    "Custom exercise creation",
+    "Same-day body-weight updates never duplicate entries",
+    "Body measurement storage and chart rendering",
+    "Private IndexedDB photo storage and rendering",
+    "Unit switching preserves canonical workout and body records",
+    "Full JSON export, import preview, duplicate detection, atomic restore including photo",
+    "Original v3 file merges history and preserves current profile, photos, active draft and workouts",
+    "Original-file reimport skips duplicates and requires explicit kilogram confirmation",
+    "Existing private photo blobs remain readable after a legacy merge",
+    "Analytics, 93 milestones, weekly review, and strength-standard limitation disclosure",
+    "All six routes fit 280, 320, 360, 375, 390, 414, 430, 768 and 1440 px",
+    "Landscape layout containment",
+    "Reduced motion preference honored",
+    "Active workout numeric inputs fit smallest 280 px screen",
+    "Offline production reload and persisted set logging with network disabled",
+    "No uncaught browser exceptions",
+    "GitHub Pages-style subdirectory assets, scoped worker and offline refresh"
+  ],
+  "errors": []
+}

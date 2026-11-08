@@ -20,6 +20,6 @@ console.log('Built static PWA in dist/ (relative asset paths).');
 if(process.argv.includes('--preview')){
  const html=(await readFile('dist/index.html','utf8')).replace('<head>','<head><meta name="gymbro-environment" content="preview">');
  await writeFile('dist/index.html',html);
- const manifest=JSON.parse(await readFile('dist/manifest.webmanifest','utf8'));manifest.name='Gym Bro Preview';manifest.short_name='GB Preview';await writeFile('dist/manifest.webmanifest',JSON.stringify(manifest));
+ for(const name of ['manifest.webmanifest','manifest-light.webmanifest']){const manifest=JSON.parse(await readFile('dist/'+name,'utf8'));manifest.name='Gym Bro Preview';manifest.short_name='GB Preview';await writeFile('dist/'+name,JSON.stringify(manifest));}
  console.log('Preview build: isolated browser database and lock, deploy under /preview/.');
 }

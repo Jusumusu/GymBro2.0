@@ -8,6 +8,10 @@ Private, offline-first strength training with an optional OpenAI-compatible coac
 
 The preview has a **separate journal**, database, writer lock and service-worker scope. It starts empty. To try your own records, export JSON in the stable app, then explicitly import that backup in preview Settings. Your stable journal stays separate; changes do not synchronize between them. Keep your original backup.
 
+## 0.2.2 refinement candidate
+
+The appearance, configurable week-start and goal-aware weekly check-in update is on `feature/appearance-calendar-weekly-review` for review. It is **not merged or deployed**. See [the review guide, screenshots, calculations and tests](docs/refinement/REVIEW.md). A subsequently requested website preview built successfully, but GitHub's environment branch rules blocked publication; [owner steps and actual deployment status](docs/refinement/PREVIEW.md). The live links above still point to released main.
+
 ## Run and verify
 
 ```sh

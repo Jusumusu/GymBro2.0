@@ -7,3 +7,15 @@
 - Preserve current records, media, imports, units, and exercise identities. A code branch does not isolate browser storage. Preview work must use a separate database, writer lock, worker/cache scope and clearly marked preview environment, or a genuinely separate origin. Never open an experimental data migration against the production database.
 - Use synthetic test fixtures. Keep personal exports, converted private backups and personal screenshots outside the repository.
 - Keep deterministic training facts separate from future LLM responses. No frontend API keys, arbitrary AI code/storage access, implicit cloud data sharing, or simulated responses presented as a live LLM.
+
+# Current refinement task
+
+- The new user brief requires `feature/appearance-calendar-weekly-review`. Work only on that branch for this task. Main baseline: `c35c629868d3545c0095c3360c5b5b992226bc12`.
+- The user reiterated that the work must be on a separate branch for review before committing to main. Do not merge into main or deploy automatically, including the preview. Source branch pushes for review do not authorize deployment.
+- Implement the targeted appearance, alignment, week-start and weekly review brief in `docs/refinement/BRIEF.md`; preserve the existing product and data. Retain Monday defaults for existing journals.
+- Baseline checks completed before implementation: 95 domain, 9 backend and 57 browser checks. Continue with meaningful incremental commits and final actual-render verification.
+
+## Requested website preview
+
+- The user subsequently asked for a link to see this branch's changes in the website. This authorizes publishing this candidate to the existing isolated `/preview/` path. Keep the production root byte-identical to current main; do not merge or push main.
+- The preview workflow may deploy this specific feature branch. Preserve the preview database/lock/worker isolation and existing GitHub environment protection rules. Record the actual deployment outcome before describing the new preview as available.

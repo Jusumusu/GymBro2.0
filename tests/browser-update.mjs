@@ -56,8 +56,10 @@ try{
  if(process.env.UPDATE_BASELINE_DIST){
   assert.ok(await js(`Boolean(document.querySelector('#appearance-form'))`));
   await fill('#appearance-form [name=theme]','light');await js(`document.querySelector('#appearance-form').requestSubmit()`);await until(`document.documentElement.dataset.theme==='light'`);
-  const migrated=await data();assert.equal(migrated.upgrade.version,1);assert.equal(migrated.upgrade.theme,'light');for(const key of Object.keys(saved))assert.deepEqual(migrated[key],saved[key],key+' survived the production upgrade');
-  pass('Actual 0.1.2 journal upgrades to 0.2.1 and saves additive preferences without changing any original state field');
+  const migrated=await data();assert.equal(migrated.upgrade.version,1);assert.equal(migrated.upgrade.theme,'light');for(const key of Object.keys(saved).filter(k=>k!=='upgrade'))assert.deepEqual(migrated[key],saved[key],key+' survived the upgrade');
+  if(saved.upgrade)for(const key of Object.keys(saved.upgrade).filter(k=>k!=='theme'))assert.deepEqual(migrated.upgrade[key],saved.upgrade[key],key+' upgrade field preserved');
+  const baselineVersion=baselineCode.match(/Gym Bro (\d+\.\d+\.\d+)/)?.[1]||'previous';
+  pass(`Actual ${baselineVersion} journal upgrades to ${appVersion}, preserving original records and preferences except the deliberately changed theme`);
  }
  assert.deepEqual(errors,[]);await mkdir('artifacts',{recursive:true});await writeFile('artifacts/update-results.json',JSON.stringify({passed:checks.length,checks,errors},null,2));console.log(`${checks.length} browser update checks passed.`);
 }catch(error){console.error(error);process.exitCode=1;}
