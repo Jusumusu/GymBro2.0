@@ -7,7 +7,7 @@ import {initialState,validateState} from '../src/model.js';
 import {migrateState} from '../src/extensions.js';
 import {makeDraft} from '../src/planner.js';
 import {activeSet,reconcileActiveSet,selectActiveSet,exerciseStatus} from '../src/active-workout.js';
-import {exerciseIndex,browseExercises,recentExercises,recordSelection} from '../src/exercise-browser.js';
+import {exerciseIndex,browseExercises,recentExercises,recordSelection,customExerciseDefinition} from '../src/exercise-browser.js';
 const state=()=>migrateState(initialState());
 const entry=(id,type='working',done=true)=>({id,kg:40,reps:8,rir:5,type,done});
 const session=(id,date,exerciseId='squat')=>({id,date,startedAt:Date.parse(date+'T10:00:00Z'),finishedAt:Date.parse(date+'T11:00:00Z'),exercises:[{id:id+'-exercise',exerciseId,entries:[entry('a'),entry('b'),entry('c')]}]});
@@ -38,3 +38,5 @@ test('search preserves non-Latin custom names and ignores combining accents',()=
 test('new catalog entries cannot take over a previously valid custom identity',()=>{const s=state();s.customExercises=[{id:'deadlift',name:'My prior custom exercise',muscle:'Chest',secondary:[],pattern:'horizontal push',equipment:'cable',compound:false,loadKind:'total load',cues:''}];validateState(s);const definitions=library(s).filter(e=>e.id==='deadlift');assert.equal(definitions.length,1);assert.equal(definitions[0].name,'My prior custom exercise');assert.deepEqual(contributions(definitions[0]).map(r=>r.muscle),['Chest']);});
 
 test('common unhyphenated names and plurals find the intended canonical movements',()=>{const index=exerciseIndex(EXERCISES);for(const [query,id]of [['pullups','pullup'],['pushups','pushup'],['rows','row'],['abs','crunch'],['latpulldown','pulldown']])assert.ok(browseExercises(index,{query}).some(e=>e.id===id),query);assert.ok(browseExercises(index,{query:'OHP'}).some(e=>e.id==='db-ohp'));});
+
+test('name-only custom edits preserve imported conventions, labels and unknown metadata',()=>{const prior={id:'legacy-custom',name:'Prior',muscle:'Chest',secondary:['Triceps','Legacy target'],pattern:'horizontal push',equipment:'dumbbell',compound:true,loadKind:'total load',cues:'Keep notes',difficulty:'Declared level',unilateral:true,extra:{keep:42}};const data=new FormData();for(const [key,value]of Object.entries({name:'Renamed',muscle:'Chest',pattern:'horizontal push',equipment:'dumbbell',loadKind:'total load',cues:'Keep notes',compound:'on','contribution-Triceps':'secondary-moderate'}))data.set(key,value);const edited=customExerciseDefinition(data,prior,'unused');assert.deepEqual(edited,{...prior,name:'Renamed'});data.set('contribution-Glutes','secondary-high');const mapped=customExerciseDefinition(data,prior,'unused');assert.ok(mapped.secondary.includes('Legacy target'));assert.equal(mapped.loadKind,'total load');assert.equal(mapped.id,prior.id);assert.equal(mapped.contributions.find(c=>c.muscle==='Glutes').level,'high');assert.deepEqual(prior.extra,{keep:42});});

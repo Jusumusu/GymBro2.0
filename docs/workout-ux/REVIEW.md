@@ -18,7 +18,7 @@ Three completed back-squat sets produce 3 direct quadriceps sets, 2.25 estimated
 
 Heat uses the same maximum direct-plus-secondary total across the selected week, with ordinal low/moderate/high bands. Stabilizer-only work is capped at low intensity. Colors compare muscles within a week; numeric weekly chart values remain the comparison across weeks. Changes to exercise classification, edits, deletions or week conventions recalculate the view from raw records, without rewriting those records.
 
-The audit differentiates unsupported rows from braced barbell rows, low-incline press from flat press, hip hinges from knee-flexion isolation, and primary targets from incidental bracing. Legacy custom exercises use only their own saved primary/secondary labels until the user reviews the editable contribution controls. A compound checkbox never invents extra targets.
+The audit differentiates unsupported rows from braced barbell rows, low-incline press from flat press, hip hinges from knee-flexion isolation, and primary targets from incidental bracing. Legacy custom exercises use only their own saved primary/secondary labels until the user reviews the editable contribution controls. A compound checkbox never invents extra targets. A name-only custom edit preserves imported load conventions, unrecognized secondary labels and extra metadata. Load convention changes are explicit; they do not convert recorded numbers.
 
 ### Library and workout data behavior
 
@@ -36,7 +36,7 @@ Candidate validation:
 
 | Check | Executed result |
 |---|---|
-| Domain/schema/import/coaching and new refinement cases | 148 passed |
+| Domain/schema/import/coaching and new refinement cases | 149 passed |
 | Backend HTTP checks | 9 passed |
 | Existing core Chromium workflows | 24 passed |
 | Existing enhanced training/coach/preview workflows | 23 passed |
@@ -50,7 +50,7 @@ The new suite covers all five areas, category-independent aliases, persistence, 
 
 Actual synthetic screenshots and JSON are in [artifacts/workout-ux](../../artifacts/workout-ux). Representative views: [library](../../artifacts/workout-ux/light-390-library-home.png), [search](../../artifacts/workout-ux/dark-390-library-search.png), [map](../../artifacts/workout-ux/light-390-muscles.png), [compact options](../../artifacts/workout-ux/light-390-options.png), [current set](../../artifacts/workout-ux/dark-390-current-set.png), [calendar](../../artifacts/workout-ux/light-1440-calendar.png).
 
-Confirmed QA issues were corrected and rerun: the catalog fixture needed two programs to respect the existing 40-exercise-per-plan cap; the browser test needed an async dynamic-import wrapper; Escape required interception before a noncancelable browser CloseWatcher event to retain the plan form; the composed-site harness was corrected to observe native restore completion without assuming it navigates to History. Removing the last favorite now returns keyboard focus to the visible browser controls. No application failure was hidden by skipping a scenario. Physical Safari/Firefox, screen-reader traversal, native numeric keyboards and a complete WCAG audit remain unverified.
+Confirmed QA issues were corrected and rerun: the catalog fixture needed two programs to respect the existing 40-exercise-per-plan cap; the browser test needed an async dynamic-import wrapper; Escape required interception before a noncancelable browser CloseWatcher event to retain the plan form; the composed-site harness was corrected to observe native restore completion without assuming it navigates to History. Removing the last favorite now returns keyboard focus to the visible browser controls. The custom editor previously recomputed a dumbbell load convention and omitted unfamiliar secondary labels on rename; a dedicated regression now checks exact record preservation for name-only edits and retention during explicit mapping edits. No application failure was hidden by skipping a scenario. Physical Safari/Firefox, screen-reader traversal, native numeric keyboards and a complete WCAG audit remain unverified.
 
 ## Storage and history safety
 

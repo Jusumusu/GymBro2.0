@@ -8,7 +8,7 @@ Exercise action inventory: frequent replacement, target/note editing and progres
 
 Baseline: 125 domain and 9 backend checks passed. 24 core Chromium checks also passed before implementation.
 
-All five improvements implemented. Domain cases: 148 passed. Core browser: 24, enhanced workflows: 23, prior appearance/calendar review: 12, actual 0.2.3 update/recovery: 11, and dedicated workout/browser/visual checks: 19 passed. Actual screenshots cover both themes and all requested widths. See [review guide](REVIEW.md).
+All five improvements implemented. Domain cases: 149 passed. Core browser: 24, enhanced workflows: 23, prior appearance/calendar review: 12, actual 0.2.3 update/recovery: 11, and dedicated workout/browser/visual checks: 19 passed. Actual screenshots cover both themes and all requested widths. See [review guide](REVIEW.md).
 
 The branch was pushed; [run 43208077307](https://github.com/Jusumusu/GymBro2.0/actions/runs/43208077307) built successfully, but deployment was rejected: `Branch "fix/workout-ux-muscle-map" is not allowed to deploy to github-pages due to environment protection rules.` Production was not replaced. The owner was asked to add this exact branch to the existing github-pages environment branch rules and rerun the failed deployment. Public preview publication is not claimed while this restriction remains.
 
