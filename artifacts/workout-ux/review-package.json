@@ -1,0 +1,15 @@
+{
+  "createdAt": "2026-11-12T11:41:32.580340+00:00",
+  "applicationCommit": "e00a67eb692a8412786248b1abeecc3731b7c0d5",
+  "mainCommit": "f4f786dacf042dcb64c55360e72bdb5b764112b7",
+  "mainVersion": "0.2.3",
+  "previewVersion": "0.2.4",
+  "mainBuild": "1565f475a5c8",
+  "previewBuild": "9947251fde52",
+  "bytes": 1153432,
+  "sha256": "16058731d9c0850f2ad0c9acad099598e7965e927d00a47b9d4600a882e5a92a",
+  "start": "node serve.mjs site",
+  "path": "/preview/",
+  "scope": "Locally verified full static review bundle; no personal browser data or credentials",
+  "publicPreview": "Blocked by GitHub Pages branch protection until the owner allows this branch"
+}

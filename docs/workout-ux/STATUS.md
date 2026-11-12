@@ -17,3 +17,9 @@ The branch was pushed; [run 43208077307](https://github.com/Jusumusu/GymBro2.0/a
 The exact standalone main 0.2.3 + built preview 0.2.4 composition passed all five local browser isolation checks, including copying a native backup into preview, modifying it offline, and returning to byte-identical production code with unchanged production history/draft/settings. Automatic-update checks also passed (13). A runnable static local review package is provided as the best available fallback; see [review guide](REVIEW.md).
 
 Main remains at `f4f786d`; nothing has been merged or pushed to main.
+
+## Local review alternative
+
+[Download the verified static review bundle](https://github.com/Jusumusu/GymBro2.0/raw/refs/heads/fix/workout-ux-muscle-map/artifacts/workout-ux/review-preview.zip). Unzip it, run `node serve.mjs site` (Node 22+), and open the local `/preview/` address described in START-HERE.txt. It contains actual main 0.2.3 plus the complete 0.2.4 candidate, no credentials or personal journal files. Archive provenance and SHA-256 are in `artifacts/workout-ux/review-package.json`. This is a local fallback, not a published website URL.
+
+To enable the public preview: keep existing rules and add the exact branch `fix/workout-ux-muscle-map` under repository Settings → Environments → github-pages → Deployment branches and tags. Then run the preview workflow on this branch or rerun its latest failed deployment. This owner action is needed because GitHub rejected the deployment; it is not an application build failure.
