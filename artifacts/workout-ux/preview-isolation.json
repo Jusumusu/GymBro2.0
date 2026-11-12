@@ -11,6 +11,6 @@
   "main": "0.2.3",
   "preview": "0.2.4",
   "mainBuild": "1565f475a5c8",
-  "previewBuild": "9947251fde52",
+  "previewBuild": "f15c77b9143f",
   "scope": "Real standalone-main + built-preview composition, tested locally; public publication is separately permission-gated"
 }
