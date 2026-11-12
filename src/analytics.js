@@ -1,3 +1,5 @@
+import {contributions} from './muscle-contributions.js';
+import {library} from './exercises.js';
 import {weekStart,weekStartsOn,addDays} from './calendar.js';
 export {weekStart} from './calendar.js';
 import { e1rm, working, exposures } from './engine.js';
@@ -5,7 +7,15 @@ import { findExercise } from './exercises.js';
 export const sessionSets=w=>w.exercises.flatMap(e=>working(e));
 export const volume=w=>sessionSets(w).reduce((sum,s)=>sum+s.kg*s.reps,0);
 export function summary(sessions){const sets=sessions.flatMap(sessionSets);return {workouts:sessions.length,sets:sets.length,reps:sets.reduce((n,s)=>n+s.reps,0),volume:sets.reduce((n,s)=>n+s.kg*s.reps,0)};}
-export function muscleSets(state,date){const start=weekStart(date,weekStartsOn(state));const end=new Date(start+'T12:00:00Z');end.setUTCDate(end.getUTCDate()+7);const until=end.toISOString().slice(0,10);const counts={};for(const w of state.sessions.filter(w=>w.date>=start&&w.date<until&&w.date<=date)){for(const x of w.exercises){const e=findExercise(state,x.exerciseId);if(!e)continue;const hard=working(x).filter(s=>s.rir===null||s.rir<=4).length;counts[e.muscle]??={direct:0,indirect:0};counts[e.muscle].direct+=hard;for(const m of e.secondary){counts[m]??={direct:0,indirect:0};counts[m].indirect+=hard*.5;}}}return counts;}
+export function muscleSets(state,date){
+ const start=weekStart(date,weekStartsOn(state)),counts={},definitions=new Map(library(state).map(e=>[e.id,e]));
+ for(const w of state.sessions.filter(w=>w.date>=start&&w.date<=date))for(const x of w.exercises){
+  const definition=definitions.get(x.exerciseId),sets=working(x).filter(set=>!set.skipped).length;if(!definition||!sets)continue;
+  for(const c of contributions(definition)){const total=counts[c.muscle]??={direct:0,indirect:0,stabilizing:0};if(c.role==='primary')total.direct+=sets;else if(c.role==='secondary')total.indirect+=sets*c.weight;else total.stabilizing+=sets*c.weight;}
+ }
+ for(const c of Object.values(counts)){c.indirect=Number(c.indirect.toFixed(2));c.stabilizing=Number(c.stabilizing.toFixed(2));c.weighted=Number((c.direct+c.indirect+c.stabilizing).toFixed(2));}
+ return counts;
+}
 export function weightTrend(weights,date){const end=Date.parse(date+'T12:00:00Z');const entries=weights.filter(w=>{const age=(end-Date.parse(w.date+'T12:00:00Z'))/86400000;return age>=0&&age<7;});return {count:entries.length,average:entries.length?entries.reduce((s,w)=>s+w.kg,0)/entries.length:null};}
 export function strengthPoints(sessions,id){return exposures(sessions,id).map(x=>({date:x.date,value:Math.max(...x.sets.map(s=>e1rm(s.kg,s.reps)??0))})).filter(x=>x.value>0);}
 export function recordKinds(previous,current){if(!previous.length||!current.length)return [];const result=[];const oldLoad=Math.max(...previous.map(s=>s.kg)),newLoad=Math.max(...current.map(s=>s.kg));if(newLoad>oldLoad+.001)result.push('working load');if(current.some(s=>{const peers=previous.filter(p=>Math.abs(p.kg-s.kg)<.001);return peers.length&&s.reps>Math.max(...peers.map(p=>p.reps));}))result.push('reps at the same load');const oldEstimate=Math.max(0,...previous.map(s=>e1rm(s.kg,s.reps)??0)),newEstimate=Math.max(0,...current.map(s=>e1rm(s.kg,s.reps)??0));if(oldEstimate>0&&newEstimate>oldEstimate+.001)result.push('estimated strength');return result;}

@@ -6,6 +6,6 @@ Audit: native dependency-free ES modules; additive upgrade preferences, root sch
 
 Exercise action inventory: frequent replacement, target/note editing and progression/rest rules; bulk weight/reps copy and check/uncheck; exercise reorder; remove last set and remove exercise (both already confirmed). All 11 will remain accessible. Set-type editing, adding sets, recommendation application, rest tools and exercise cues also remain.
 
-Baseline: 125 domain and 9 backend checks passed. Core Chromium baseline is running before implementation.
+Baseline: 125 domain and 9 backend checks passed. 24 core Chromium checks also passed before implementation.
 
 Implementation and validation in progress.

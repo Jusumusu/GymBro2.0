@@ -1,3 +1,4 @@
+import {CONTRIBUTION_MUSCLES} from './muscle-contributions.js';
 const ex=(id,name,muscle,pattern,equipment,secondary,compound,cues)=>({id,name,muscle,pattern,equipment,secondary,compound,difficulty:compound?'moderate':'accessible',unilateral:false,loadKind:equipment==='dumbbell'?'per dumbbell':equipment==='bodyweight'?'added load':'total load',cues});
 export const EXERCISES=[
  ex('squat','Barbell squat','Quads','squat','barbell',['Glutes'],true,'Brace before each rep. Sit between your hips, keep your feet planted, and use a comfortable depth.'),
@@ -39,9 +40,12 @@ export const EXERCISES=[
  ex('overhead-cable-extension','Overhead cable triceps extension','Triceps','elbow extension','cable',[],false,'Use a stable stance with elbows in a comfortable position. Extend smoothly without arching your back.'),
  ex('seated-calf','Seated calf raise','Calves','plantar flexion','machine',[],false,'Place the pad securely above your knees. Raise and lower the heels with control and a comfortable stretch.'),
  ex('reverse-crunch','Reverse crunch','Core','trunk flexion','bodyweight',[],false,'Keep the movement small and controlled. Curl the pelvis gently rather than swinging your legs.'),
- ex('cable-crunch','Cable crunch','Core','trunk flexion','cable',[],false,'Keep the hips stable and curl your trunk gently. Avoid pulling only with your arms.')
+ ex('cable-crunch','Cable crunch','Core','trunk flexion','cable',[],false,'Keep the hips stable and curl your trunk gently. Avoid pulling only with your arms.'),
+ ex('front-squat','Barbell front squat','Quads','squat','barbell',['Glutes','Adductors'],true,'Use a stable front rack and braced trunk. Keep the feet planted and choose a comfortable depth.'),
+ ex('deadlift','Conventional deadlift','Glutes','hinge','barbell',['Hamstrings','Quads'],true,'Brace before lifting. Keep the bar close and use a stable setup; lower with control.'),
+ ex('lunge','Dumbbell reverse lunge','Quads','squat','dumbbell',['Glutes','Adductors'],true,'Step back under control. Keep a stable stance and record repetitions per side.')
 ];
-export const MUSCLES=['Chest','Back','Quads','Hamstrings','Glutes','Shoulders','Biceps','Triceps','Calves','Core'];
+export const MUSCLES=CONTRIBUTION_MUSCLES;
 export const GOALS={hypertrophy:'Build muscle',strength:'Get stronger',balanced:'Muscle & strength',recomposition:'Body recomposition',fatloss:'Preserve muscle in fat loss',endurance:'Muscular endurance',fitness:'General fitness'};
 export const library=state=>[...EXERCISES,...state.customExercises];
 export const findExercise=(state,id)=>library(state).find(e=>e.id===id);
