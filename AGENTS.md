@@ -10,3 +10,10 @@
 - Keep deterministic training facts separate from LLM responses. No frontend provider keys, arbitrary AI code/storage access, implicit cloud sharing, or simulated responses presented as a live model.
 - Work autonomously with incremental commits, appropriate tests and progress reports. The user removed feature-by-feature pauses. Ask only for actual missing credentials, cost authorization or irreversible infrastructure decisions.
 - The earlier feature-preview deployment was blocked by GitHub environment protection, not by the application build. Retain protection rules; the approved release uses the existing main workflow. Record actual deployment results before claiming publication.
+
+# Current workout UX refinement
+
+- The November 12 brief in `docs/workout-ux/BRIEF.md` supersedes the prior update-release authorization. Work exclusively on `fix/workout-ux-muscle-map` from main `f4f786dacf042dcb64c55360e72bdb5b764112b7`. Do not modify, merge or push main.
+- Implement all five areas with stable IDs, additive compatible fields, incremental commits, actual rendered QA and meaningful tests. No paid services or unrelated redesign.
+- The user explicitly requests pushing this branch, a PR if permissions allow, and a public isolated browser preview. Preview publication is authorized; keep production root byte-identical to current main, preserve preview storage/cache isolation and respect GitHub environment protection rules. Never claim an invented or unverified preview URL.
+- Read the brief and current audit/status under `docs/workout-ux/`. Prior feature-by-feature pauses remain removed.
