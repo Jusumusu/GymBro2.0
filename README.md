@@ -23,6 +23,7 @@ npm run dev              # serve source; open the printed HTTP URL
 npm test                 # deterministic, schema, migration and coaching tests
 npm run test:backend     # localhost HTTP tests with a stub AI provider
 npm run build            # standalone production PWA in dist/
+npm run build:review     # unchanged main + current branch under /preview/ in review-site/
 npm run build:site       # production + preserved isolated /preview/ in dist/
 npm run preview          # serve dist/
 npm run test:e2e          # core Chromium regression

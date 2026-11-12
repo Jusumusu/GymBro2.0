@@ -37,17 +37,20 @@ Candidate validation:
 | Check | Executed result |
 |---|---|
 | Domain/schema/import/coaching and new refinement cases | 147 passed |
+| Backend HTTP checks | 9 passed |
 | Existing core Chromium workflows | 24 passed |
 | Existing enhanced training/coach/preview workflows | 23 passed |
 | Existing appearance/calendar/review browser checks | 12 passed |
 | Actual archived 0.2.3 → 0.2.4 update/recovery | 11 passed, including private photo bytes and active draft |
 | New workout/browser/visual suite | 19 passed |
+| Preserved automatic-update browser suite | 13 passed, including real foreground polling |
+| Actual main + preview composition | 5 passed, including explicit import, offline edits and untouched production |
 
-The new suite covers all five areas, category-independent aliases, persistence, custom editing/selection, live plan-value preservation, keyboard dismissal/focus, warm-up/superset/skip/manual progression, confirmation/undo, symmetric calendar geometry, month/year boundaries, seven widths (320/375/390/430/768/1024/1440), both themes and offline use. It searched 1,244 exercises in about 63ms on the cloud browser, including the UI debounce; this is a recorded run, not a physical-phone performance guarantee.
+The new suite covers all five areas, category-independent aliases, persistence, custom editing/selection, live plan-value preservation, keyboard dismissal/focus, warm-up/superset/skip/manual progression, confirmation/undo, symmetric calendar geometry, month/year boundaries, seven widths (320/375/390/430/768/1024/1440), both themes and offline use. The recorded 1,244-exercise search timing (including UI debounce) is in the browser-results JSON; it is not a physical-phone performance guarantee.
 
 Actual synthetic screenshots and JSON are in [artifacts/workout-ux](../../artifacts/workout-ux). Representative views: [library](../../artifacts/workout-ux/light-390-library-home.png), [search](../../artifacts/workout-ux/dark-390-library-search.png), [map](../../artifacts/workout-ux/light-390-muscles.png), [compact options](../../artifacts/workout-ux/light-390-options.png), [current set](../../artifacts/workout-ux/dark-390-current-set.png), [calendar](../../artifacts/workout-ux/light-1440-calendar.png).
 
-Confirmed QA issues were corrected and rerun: the catalog fixture needed two programs to respect the existing 40-exercise-per-plan cap; the browser test needed an async dynamic-import wrapper; Escape required interception before a noncancelable browser CloseWatcher event to retain the plan form. No application failure was hidden by skipping a scenario. Physical Safari/Firefox, screen-reader traversal, native numeric keyboards and a complete WCAG audit remain unverified.
+Confirmed QA issues were corrected and rerun: the catalog fixture needed two programs to respect the existing 40-exercise-per-plan cap; the browser test needed an async dynamic-import wrapper; Escape required interception before a noncancelable browser CloseWatcher event to retain the plan form; the composed-site harness was corrected to observe native restore completion without assuming it navigates to History. Removing the last favorite now returns keyboard focus to the visible browser controls. No application failure was hidden by skipping a scenario. Physical Safari/Firefox, screen-reader traversal, native numeric keyboards and a complete WCAG audit remain unverified.
 
 ## Storage and history safety
 
@@ -59,6 +62,6 @@ All 40 previously reserved built-in IDs remain protected. If a new catalog ID co
 
 Use the existing preview workflow only from this branch. It builds current main separately, hashes every production asset before/after composition and adds the candidate only under its isolated preview path. GitHub environment protection is retained. Actual deployment status and any owner action are recorded in STATUS; a successful build alone is not described as a published preview.
 
-For an independent local review, check out the branch and run `npm run build:preview` then `npm run preview`; use a separate browser profile/origin from your production journal. To mirror deployment, compose a standalone main build and the candidate with `scripts/compose-preview.mjs`, then serve the composed site and open `/preview/`. Preview starts with its separate journal; explicit backup import is optional and changes never sync to production.
+For the exact verified local deployment layout, check out the branch, run `npm run build:review`, then `node scripts/serve.mjs review-site` and open `/preview/` at the printed local address. This archives and builds main without checking it out or changing its branch. `npm run test:review-site` executes the composed-build isolation test. Use a separate local origin/profile from other Gym Bro testing. A self-contained static review bundle is also provided under `artifacts/workout-ux/review-preview.zip` with a Node server and instructions; no Git checkout or npm packages are needed to run that bundle. Preview starts with its separate journal; explicit backup import is optional and changes never sync to production.
 
 The intended PR body is [PR.md](PR.md). Native Git push is available, while the GitHub CLI authentication check fails and its API returns Forbidden; a PR URL will be reported only if creation actually succeeds. Main promotion requires explicit user approval after review.

@@ -10,4 +10,10 @@ Baseline: 125 domain and 9 backend checks passed. 24 core Chromium checks also p
 
 All five improvements implemented. Domain cases: 147 passed. Core browser: 24, enhanced workflows: 23, prior appearance/calendar review: 12, actual 0.2.3 update/recovery: 11, and dedicated workout/browser/visual checks: 19 passed. Actual screenshots cover both themes and all requested widths. See [review guide](REVIEW.md).
 
-Preview publication and PR creation are pending the branch push and actual permission checks. The GitHub CLI reports failed authentication; API access returns Forbidden. Main remains unchanged. No published candidate URL or PR URL is claimed yet.
+The branch was pushed; [run 43208077307](https://github.com/Jusumusu/GymBro2.0/actions/runs/43208077307) built successfully, but deployment was rejected: `Branch "fix/workout-ux-muscle-map" is not allowed to deploy to github-pages due to environment protection rules.` Production was not replaced. The owner was asked to add this exact branch to the existing github-pages environment branch rules and rerun the failed deployment. Public preview publication is not claimed while this restriction remains.
+
+`gh pr create` failed with `Post "https://api.github.com/graphql": Forbidden`; no PR was created. [Open the GitHub comparison/PR form](https://github.com/Jusumusu/GymBro2.0/compare/main...fix/workout-ux-muscle-map?expand=1); the prepared description is in [PR.md](PR.md).
+
+The exact standalone main 0.2.3 + built preview 0.2.4 composition passed all five local browser isolation checks, including copying a native backup into preview, modifying it offline, and returning to byte-identical production code with unchanged production history/draft/settings. Automatic-update checks also passed (13). A runnable static local review package is provided as the best available fallback; see [review guide](REVIEW.md).
+
+Main remains at `f4f786d`; nothing has been merged or pushed to main.

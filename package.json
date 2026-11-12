@@ -18,8 +18,10 @@
     "test:upgrade": "node tests/browser-upgrade.mjs",
     "benchmark": "node scripts/benchmark.mjs",
     "build:site": "node scripts/build-site.mjs",
+    "build:review": "node scripts/build-review.mjs",
     "test:refinement": "node tests/browser-refinement.mjs",
-    "test:workout-ux": "node tests/browser-workout-ux.mjs"
+    "test:workout-ux": "node tests/browser-workout-ux.mjs",
+    "test:review-site": "node tests/browser-review-site.mjs"
   },
   "engines": {
     "node": ">=22"
