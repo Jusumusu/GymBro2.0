@@ -5,7 +5,7 @@ All work is on `fix/workout-ux-muscle-map`, based on main `f4f786d` (0.2.3). **N
 ## Five improvements and entry points
 
 1. **Tracking → Muscle map.** Audited all 40 existing exercise definitions. Added separate front-squat, conventional-deadlift and reverse-lunge movements without changing existing identities. Squats now highlight quadriceps and glutes, along with relevant adductors and bounded stabilizers. Front/back regions share one source of truth and the selected outline does not color an untrained muscle. The legend distinguishes no recorded work, low, moderate and high relative weekly contributions in both themes.
-2. **Programs → Find an exercise**, and the workout/plan pickers. Search is global, including aliases (RDL/OHP/DB/BB), relevant muscles, equipment and Unicode custom names. Search does not require or remain trapped in a category. Recently Used follows search, then Favorites and supported body-part categories. Optional equipment, muscle, movement and type/custom filters combine. Quick sections cap their rows and avoid duplicate favorite/recent entries; result pages render 30 entries at a time. Similar replacement alternatives retain the previous ranking logic.
+2. **Programs → Find an exercise**, and the workout/plan pickers. Search is global, including aliases (RDL/OHP/DB/BB, pullups/pushups/rows/abs), relevant muscles, equipment and Unicode custom names. Search does not require or remain trapped in a category. Recently Used follows search, then Favorites and supported body-part categories. Optional equipment, muscle, movement and type/custom filters combine. Quick sections cap their rows and avoid duplicate favorite/recent entries; result pages render 30 entries at a time. Similar replacement alternatives retain the previous ranking logic.
 3. **Dates.** Seven-column weekday/date geometry, equal date-button dimensions, centered weekly/history boxes and shared date-control sizing. Sunday/Monday conventions and all historical date values remain unchanged. Month/year transitions were exercised.
 4. **Exercise Options.** Three frequent actions, one More Actions section and concise optional technique cues replace the tall stack. All 11 previous actions remain: replacement, targets/notes, progression/rest, copy weight/reps, check/uncheck, reorder up/down, remove last set and remove exercise. Destructive actions keep confirmation. Keyboard/backdrop dismissal and focus restoration are supported; Escape from the plan browser returns to its unsaved form.
 5. **Active workout.** Exactly one eligible current set, with manual selection through set options or input focus. Warm-ups, supersets, out-of-order work, skipped/reopened sets, adds/removals/reordering and reload are supported. Completed rows are neutral and editable. Small complete/finished-with-skips indicators appear near exercise names. Skipping preserves entered values and never marks sets complete.
@@ -36,7 +36,7 @@ Candidate validation:
 
 | Check | Executed result |
 |---|---|
-| Domain/schema/import/coaching and new refinement cases | 147 passed |
+| Domain/schema/import/coaching and new refinement cases | 148 passed |
 | Backend HTTP checks | 9 passed |
 | Existing core Chromium workflows | 24 passed |
 | Existing enhanced training/coach/preview workflows | 23 passed |
