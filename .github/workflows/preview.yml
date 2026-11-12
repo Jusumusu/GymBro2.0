@@ -1,7 +1,7 @@
-name: Deploy isolated review preview
+name: Deploy isolated workout UX preview
 on:
   push:
-    branches: [improvements, feature/appearance-calendar-weekly-review]
+    branches: [fix/workout-ux-muscle-map]
     paths:
       - 'src/**'
       - 'public/**'
@@ -21,7 +21,7 @@ concurrency:
   cancel-in-progress: false
 jobs:
   build:
-    if: github.ref == 'refs/heads/improvements' || github.ref == 'refs/heads/feature/appearance-calendar-weekly-review'
+    if: github.ref == 'refs/heads/fix/workout-ux-muscle-map'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -50,7 +50,7 @@ jobs:
         with:
           path: site
   deploy:
-    if: github.ref == 'refs/heads/improvements' || github.ref == 'refs/heads/feature/appearance-calendar-weekly-review'
+    if: github.ref == 'refs/heads/fix/workout-ux-muscle-map'
     needs: build
     runs-on: ubuntu-latest
     timeout-minutes: 15

@@ -8,4 +8,6 @@ Exercise action inventory: frequent replacement, target/note editing and progres
 
 Baseline: 125 domain and 9 backend checks passed. 24 core Chromium checks also passed before implementation.
 
-Implementation and validation in progress.
+All five improvements implemented. Domain cases: 147 passed. Core browser: 24, enhanced workflows: 23, prior appearance/calendar review: 12, actual 0.2.3 update/recovery: 11, and dedicated workout/browser/visual checks: 19 passed. Actual screenshots cover both themes and all requested widths. See [review guide](REVIEW.md).
+
+Preview publication and PR creation are pending the branch push and actual permission checks. The GitHub CLI reports failed authentication; API access returns Forbidden. Main remains unchanged. No published candidate URL or PR URL is claimed yet.

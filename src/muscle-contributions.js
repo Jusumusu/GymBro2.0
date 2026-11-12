@@ -30,9 +30,10 @@ assign('cable-fly',primary('Chest'));
 assign('leg-extension',primary('Quads'));
 assign('rear-delt-fly face-pull',primary('Shoulders'),secondary('Back'));
 export const auditedExerciseIds=Object.freeze(Object.keys(catalog));
+export const catalogContributions=id=>catalog[id]?.map(r=>({...r}));
 export function contributions(exercise){
  if(!exercise)return [];
- const rows=exercise.contributions||catalog[exercise.id]||[primary(exercise.muscle),...(exercise.secondary||[]).map(m=>secondary(m))];
+ const rows=exercise.contributions?.length?exercise.contributions:[primary(exercise.muscle),...(exercise.secondary||[]).map(m=>secondary(m))];
  const seen=new Set();return rows.filter(r=>r.muscle&&!seen.has(r.muscle)&&seen.add(r.muscle)).map(r=>({...r,weight:r.role==='primary'?1:r.role==='stabilizer'?({high:.25,moderate:.15,low:.1}[r.level]):({high:.75,moderate:.5,low:.25}[r.level])}));
 }
 export const discoverableMuscles=exercise=>contributions(exercise).filter(r=>r.role==='primary'||r.role==='secondary'&&r.level!=='low').map(r=>r.muscle);

@@ -8,6 +8,10 @@ Private, offline-first strength training with an optional OpenAI-compatible coac
 
 The preview has a **separate journal**, database, writer lock and service-worker scope. It starts empty. To try your own records, export JSON in the stable app, then explicitly import that backup in preview Settings. Your stable journal stays separate; changes do not synchronize between them. Keep your original backup.
 
+## 0.2.4 review candidate
+
+The five-area muscle-map, exercise-browser, date and workout UX update is on `fix/workout-ux-muscle-map` for review. It is not merged into main. [Review guide and executed QA](docs/workout-ux/REVIEW.md) · [Current preview/PR status](docs/workout-ux/STATUS.md). The stable app remains 0.2.3.
+
 ## 0.2.2 refinement release
 
 The approved update adds refined light/dark/system appearance, Sunday/Monday week preferences and goal-aware weekly check-ins with historical navigation. See [the review guide, screenshots, calculations and tests](docs/refinement/REVIEW.md) and [release/data notes](docs/refinement/RELEASE.md). The normal main workflow tests and publishes this version at the stable URL and the isolated preview URL. The earlier blocked feature-preview attempt is retained as [historical deployment context](docs/refinement/PREVIEW.md).
@@ -24,6 +28,7 @@ npm run preview          # serve dist/
 npm run test:e2e          # core Chromium regression
 npm run test:upgrade      # upgraded UI, responsive layouts and storage isolation
 npm run test:update       # stale-cache recovery without journal deletion
+npm run test:workout-ux   # exercise discovery, muscle maps, active sets and visual QA
 npm run test:app-updates  # real notifications, one-click updates and failed-release recovery
 npm run benchmark         # synthetic 1,500-session CPU benchmark
 ```
