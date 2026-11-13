@@ -1,4 +1,5 @@
-const ex=(id,name,muscle,pattern,equipment,secondary,compound,cues)=>({id,name,muscle,pattern,equipment,secondary,compound,difficulty:compound?'moderate':'accessible',unilateral:false,loadKind:equipment==='dumbbell'?'per dumbbell':equipment==='bodyweight'?'added load':'total load',cues});
+import {CONTRIBUTION_MUSCLES,catalogContributions} from './muscle-contributions.js';
+const ex=(id,name,muscle,pattern,equipment,secondary,compound,cues)=>({id,name,muscle,pattern,equipment,secondary,compound,contributions:catalogContributions(id),difficulty:compound?'moderate':'accessible',unilateral:false,loadKind:equipment==='dumbbell'?'per dumbbell':equipment==='bodyweight'?'added load':'total load',cues});
 export const EXERCISES=[
  ex('squat','Barbell squat','Quads','squat','barbell',['Glutes'],true,'Brace before each rep. Sit between your hips, keep your feet planted, and use a comfortable depth.'),
  ex('goblet','Goblet squat','Quads','squat','dumbbell',['Glutes'],true,'Hold the weight close to your chest. Keep your feet planted and stand tall.'),
@@ -39,11 +40,16 @@ export const EXERCISES=[
  ex('overhead-cable-extension','Overhead cable triceps extension','Triceps','elbow extension','cable',[],false,'Use a stable stance with elbows in a comfortable position. Extend smoothly without arching your back.'),
  ex('seated-calf','Seated calf raise','Calves','plantar flexion','machine',[],false,'Place the pad securely above your knees. Raise and lower the heels with control and a comfortable stretch.'),
  ex('reverse-crunch','Reverse crunch','Core','trunk flexion','bodyweight',[],false,'Keep the movement small and controlled. Curl the pelvis gently rather than swinging your legs.'),
- ex('cable-crunch','Cable crunch','Core','trunk flexion','cable',[],false,'Keep the hips stable and curl your trunk gently. Avoid pulling only with your arms.')
+ ex('cable-crunch','Cable crunch','Core','trunk flexion','cable',[],false,'Keep the hips stable and curl your trunk gently. Avoid pulling only with your arms.'),
+ ex('front-squat','Barbell front squat','Quads','squat','barbell',['Glutes','Adductors'],true,'Use a stable front rack and braced trunk. Keep the feet planted and choose a comfortable depth.'),
+ ex('deadlift','Conventional deadlift','Glutes','hinge','barbell',['Hamstrings','Quads'],true,'Brace before lifting. Keep the bar close and use a stable setup; lower with control.'),
+ ex('lunge','Dumbbell reverse lunge','Quads','squat','dumbbell',['Glutes','Adductors'],true,'Step back under control. Keep a stable stance and record repetitions per side.')
 ];
-export const MUSCLES=['Chest','Back','Quads','Hamstrings','Glutes','Shoulders','Biceps','Triceps','Calves','Core'];
+export const MUSCLES=CONTRIBUTION_MUSCLES;
 export const GOALS={hypertrophy:'Build muscle',strength:'Get stronger',balanced:'Muscle & strength',recomposition:'Body recomposition',fatloss:'Preserve muscle in fat loss',endurance:'Muscular endurance',fitness:'General fitness'};
-export const library=state=>[...EXERCISES,...state.customExercises];
+// Preserve custom IDs valid before this release, even if a new catalog entry shares one.
+export const LEGACY_BUILTIN_IDS=Object.freeze(['squat', 'goblet', 'body-squat', 'leg-press', 'bench', 'db-bench', 'pushup', 'chest-press', 'rdl', 'db-rdl', 'bridge', 'curl-leg', 'row', 'db-row', 'cable-row', 'floor-pull', 'ohp', 'db-ohp', 'pike', 'pulldown', 'pullup', 'lateral', 'curl', 'pushdown', 'calf', 'crunch', 'incline-db', 'cable-fly', 'db-split-squat', 'hip-thrust', 'leg-extension', 'seated-leg-curl', 'chest-supported-row', 'rear-delt-fly', 'face-pull', 'hammer-curl', 'overhead-cable-extension', 'seated-calf', 'reverse-crunch', 'cable-crunch']);
+export const library=state=>{const ids=new Set(state.customExercises.map(e=>e.id));return [...EXERCISES.filter(e=>!ids.has(e.id)),...state.customExercises];};
 export const findExercise=(state,id)=>library(state).find(e=>e.id===id);
 export const substitutions=(state,id)=>{
  const e=findExercise(state,id);if(!e)return [];

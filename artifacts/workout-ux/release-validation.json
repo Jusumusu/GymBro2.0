@@ -1,0 +1,23 @@
+{
+  "validatedAt": "2026-11-13T16:30:56.065960+00:00",
+  "reviewedTip": "11bdb4e76adad037ea76383d5a101ab705b6d9d6",
+  "previousMain": "f4f786dacf042dcb64c55360e72bdb5b764112b7",
+  "approval": "User: merge it to main and delete the other branch",
+  "version": "0.2.4",
+  "productionBuild": "0f3f536c00e0",
+  "previewBuild": "f15c77b9143f",
+  "sourceMatchesReviewedTip": true,
+  "checks": {
+    "domain": 149,
+    "backend": 9,
+    "coreBrowser": 24,
+    "workoutBrowser": 19,
+    "actual023UpdateRecovery": 11,
+    "automaticUpdates": 13
+  },
+  "totalPassed": 225,
+  "failed": 0,
+  "build": "Production + isolated preview; every emitted release-asset SHA-256 verified",
+  "data": "Synthetic journal, active workout, preferences and photo bytes preserved during actual 0.2.3 recovery; preview update isolation verified",
+  "publication": "Main Pages workflow verifies publication after push; see GitHub run for actual status"
+}

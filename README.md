@@ -1,12 +1,16 @@
 # Gym Bro 2.0
 
-Private, offline-first strength training with an optional OpenAI-compatible coach backend. Native ES modules, Node 22+ and no npm dependencies. The 0.2.3 update adds reliable latest-version loading and automatic update notices, authorized for main without an existing-site redesign. Main holds the approved app; new experiments use one temporary feature branch, removed after approval and release.
+Private, offline-first strength training with an optional OpenAI-compatible coach backend. Native ES modules, Node 22+ and no npm dependencies. Version 0.2.4 adds audited muscle contributions, searchable exercise discovery and focused active-workout guidance, alongside reliable latest-version loading and automatic update notices. Main holds the approved app; new experiments use one temporary feature branch, removed after approval and release.
 
 - Stable: https://jusumusu.github.io/GymBro2.0/
 - Upgrade preview: https://jusumusu.github.io/GymBro2.0/preview/
 - [Upgrade status and scope](docs/upgrade/STATUS.md)
 
 The preview has a **separate journal**, database, writer lock and service-worker scope. It starts empty. To try your own records, export JSON in the stable app, then explicitly import that backup in preview Settings. Your stable journal stays separate; changes do not synchronize between them. Keep your original backup.
+
+## 0.2.4 release
+
+The user approved the five-area muscle-map, exercise-browser, date and workout UX update for main on November 13, 2026. The main workflow publishes 0.2.4 at both the stable and isolated preview URLs; each retains its own journal and update scope. [Release and data notes](docs/workout-ux/RELEASE.md) · [Review guide and executed QA](docs/workout-ux/REVIEW.md) · [Release status](docs/workout-ux/STATUS.md).
 
 ## 0.2.2 refinement release
 
@@ -19,11 +23,13 @@ npm run dev              # serve source; open the printed HTTP URL
 npm test                 # deterministic, schema, migration and coaching tests
 npm run test:backend     # localhost HTTP tests with a stub AI provider
 npm run build            # standalone production PWA in dist/
+npm run build:review     # unchanged main + current branch under /preview/ in review-site/
 npm run build:site       # production + preserved isolated /preview/ in dist/
 npm run preview          # serve dist/
 npm run test:e2e          # core Chromium regression
 npm run test:upgrade      # upgraded UI, responsive layouts and storage isolation
 npm run test:update       # stale-cache recovery without journal deletion
+npm run test:workout-ux   # exercise discovery, muscle maps, active sets and visual QA
 npm run test:app-updates  # real notifications, one-click updates and failed-release recovery
 npm run benchmark         # synthetic 1,500-session CPU benchmark
 ```

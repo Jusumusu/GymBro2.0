@@ -16,8 +16,8 @@ const baselineCode=process.env.UPDATE_BASELINE_DIST?await readFile(site+'/src/ap
 const baselineWorker=process.env.UPDATE_BASELINE_DIST?await readFile(site+'/sw.js','utf8'):workerCode;
 await writeFile(site+'/src/app.js',baselineCode.replaceAll('Gym Bro '+appVersion,'Gym Bro 0.1.1')+"\nglobalThis.__UPDATE_TEST_BUILD__='old';\n");
 await writeFile(site+'/sw.js',baselineWorker.replace(/const CACHE=PREFIX\+'[^']+';/,"const CACHE=PREFIX+'old-test';"));
-// Build a coherent synthetic previous release when no archived baseline is supplied.
-if(!process.env.UPDATE_BASELINE_DIST){
+// Keep synthetic markers consistent with integrity-verified workers, including archived 0.2.3+.
+if(baselineWorker.includes('const RELEASE=')){
  const old=JSON.parse(await readFile(site+'/version.json','utf8'));old.build=createHash('sha256').update('old-test').digest('hex').slice(0,12);
  const html=(await readFile(site+'/index.html','utf8')).replace(/name="gymbro-build" content="[^"]+"/,`name="gymbro-build" content="${old.build}"`);await writeFile(site+'/index.html',html);
  for(const path of Object.keys(old.assets))old.assets[path]=createHash('sha256').update(await readFile(site+'/'+path)).digest('hex');
