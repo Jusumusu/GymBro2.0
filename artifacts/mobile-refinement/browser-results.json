@@ -1,5 +1,5 @@
 {
-  "passed": 20,
+  "passed": 22,
   "checks": [
     "Fresh journal starts with a neutral anatomical figure and no phantom chest selection",
     "Recorded bench activity colors the chest without selecting it; historical records remain intact",
@@ -8,6 +8,7 @@
     "Back view exposes glutes, hamstrings, calves, erectors and distinct upper-back/lat/trapezius shapes using saved canonical contributions",
     "Reopening the map clears ephemeral selection while preserving historical muscle statistics",
     "Custom weekly scheduling generates multiple weekdays until an inclusive end date and preserves legacy one-time entries",
+    "An overlapping duplicate weekly schedule is rejected even when it starts on a later week",
     "Recurrence and skip/restore exceptions survive reload without deleting or duplicating the series",
     "Editing one occurrence reschedules only that stable occurrence identity",
     "Future scope splits the rule at the chosen occurrence without rewriting past rule segments",
@@ -18,6 +19,7 @@
     "Master notification preference persists and turning it off preserves default timing, individual reminders and recurring schedules",
     "Real browser permission states explain denial and permission is requested only through the intentional control",
     "A due active-app reminder is delivered in-app and through the real worker notification API exactly once",
+    "Reminder ledger saves preserve the user’s Undo action and undoing a schedule never erases delivery deduplication",
     "Turning reminders off closes controlled pending notifications; reenabling never floods or repeats delivered reminders",
     "Muscle map, recurrence calendar and Notifications fit all six required widths in both themes without horizontal clipping",
     "Repeated navigation remains stable; workout logging, recurrence, preferences and the new map survive offline reload"
@@ -25,8 +27,8 @@
   "errors": [],
   "metrics": {
     "browserNotifications": 1,
-    "heapAfterNavigationCycles": 1894544,
-    "heapBeforeNavigationCycles": 2547560
+    "heapAfterNavigationCycles": 1901360,
+    "heapBeforeNavigationCycles": 2893016
   },
   "widths": [
     320,

@@ -12,7 +12,7 @@ The repair changes the consent boundary, with no artificial dismissal timer:
 
 - A Settings visit opens a stable version page. Legacy `auto=1` is deliberately ignored, so an old cached client also receives the readable screen.
 - The page shows the actual published version, short scrollable release notes, an update action and Later. If the active worker matches, it explicitly says **You’re running the latest version** and offers an intentional refresh.
-- Automatic detection remains nonintrusive. The available-update notice contains notes and Later; only its explicit Update Now action carries an install intent to the helper. Downloading or detecting a worker never closes a reading screen.
+- Automatic detection remains nonintrusive. The available-update notice contains notes and Later; only its explicit Load update action carries an install intent to the helper. Downloading or detecting a worker never closes a reading screen.
 - Before navigation the app flushes pending writes and blocks on failed saves or invalid set input. The helper uses the existing per-scope writer lock, verifies every offline asset, rechecks the latest build and waits for matching worker activation before returning to Settings.
 - The initial status check cannot overwrite installation progress. Repeated button activation is guarded. Interrupted/partial downloads retain the prior complete offline shell and journal, with safe retry.
 - Browsers without offline-update support can still open version information and readable notes, with an accurate disabled-install explanation. Offline failures retain the working app and explain reconnection.
@@ -59,9 +59,25 @@ A controlled Node comparison used 1,500 synthetic workouts / 13,500 sets and 14 
 
 ## Executed QA and corrections
 
+| Executed suite | Passed |
+|---|---:|
+| Domain/schema/recurrence/DST | 169 |
+| Backend boundaries | 9 |
+| Core app browser workflows | 24 |
+| Upgraded app workflows | 23 |
+| Appearance/calendar regressions | 12 |
+| Library/active-workout regressions | 19 |
+| Multi-build update/notification compatibility | 14 |
+| Actual 0.2.4 recovery with photo bytes | 11 |
+| New anatomy/scheduling/reminder interactions | 22 |
+| Stable version screen and old-client lifecycle | 7 |
+| Composed production/preview isolation | 6 |
+
+**316 candidate checks passed; zero final failures.** Baseline checks are separate and not included in this total.
+
 Baseline: 149 domain and 9 backend tests passed, plus the actual released update-flow reproduction. Candidate results are recorded in the final status and JSON evidence. Suites include domain/schema/recurrence/DST checks; backend boundaries; core and upgraded workflows; prior appearance/calendar behavior; library/active-set regressions; actual 0.2.4 update recovery with private photo bytes; multiple-release automatic updates, failed saves and corrupt downloads; the dedicated stable version screen; actual touch/keyboard/notification APIs; six required widths in both themes; offline use; and production/preview composition with byte-identical root files.
 
-Confirmed corrections include numeric/string reminder option preservation; duplicate recurring-rule detection; preserving reminder timing/unknown fields in legacy rescheduling; retaining Undo during automatic ledger saves; and representing one-time cancellation through an additive flag while retaining legacy stored status values. Controlled tests cover these paths. Test-harness issues were corrected separately: new-document reload synchronization, SVG activation, async CDP serialization and waiting for scheduled focus restoration. Prior tests assuming two simultaneous figures were updated to exercise the new explicit Front/Back control. No scenario was skipped to conceal a failure.
+Confirmed corrections include numeric/string reminder option preservation; duplicate recurring-rule detection; preserving reminder timing/unknown fields in legacy rescheduling; retaining Undo during automatic ledger saves; and representing one-time cancellation through an additive flag while retaining legacy stored status values. Controlled tests cover these paths. Test-harness issues were corrected separately: new-document reload synchronization, SVG activation, async CDP serialization, native dropdown change events and waiting for scheduled focus restoration. Prior tests assuming two simultaneous figures were updated to exercise the new explicit Front/Back control. No scenario was skipped to conceal a failure.
 
 Actual synthetic screenshots and JSON: [artifacts/mobile-refinement](../../artifacts/mobile-refinement). Physical Android Chrome installation, iPhone Safari/Home Screen lifecycle, OS notification presentation/clicks, native keyboards, screen-reader traversal and a full accessibility audit remain unverified. Real Chromium service-worker transitions, viewport/touch emulation, permission states and native notification creation were executed. This is not physical-device certification.
 

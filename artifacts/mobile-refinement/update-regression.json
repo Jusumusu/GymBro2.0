@@ -1,33 +1,42 @@
 {
-  "passed": 6,
+  "passed": 7,
   "checks": [
     "An actual installed 0.2.4 worker detects the new release without reloading or interrupting an unfinished workout",
     "Old auto=1 entry remains on a readable release screen until intentional action; no artificial dismissal delay",
     "Release information and actions fit both themes at all six required widths",
     "An intentional Update Now activates the verified new worker and preserves entered workout data",
     "Settings always opens a stable screen and explicitly reports the latest version when already current",
-    "Later returns to the unchanged workout without repeating an installed-release prompt"
+    "Later returns to the unchanged workout without repeating an installed-release prompt",
+    "Unsupported offline-update browsers still open readable version information with accurate guidance and no destructive fallback"
   ],
   "errors": [],
   "navigations": [
     {
-      "at": 1794588129933,
+      "at": 1794590780208,
       "url": "http://127.0.0.1:5202/"
     },
     {
-      "at": 1794588133112,
-      "url": "http://127.0.0.1:5202/update.html?latest=1794588133083&auto=1"
+      "at": 1794590784106,
+      "url": "http://127.0.0.1:5202/update.html?latest=1794590784077&auto=1"
     },
     {
-      "at": 1794588137661,
-      "url": "http://127.0.0.1:5202/?updated=bef22bf5de3f"
+      "at": 1794590788588,
+      "url": "http://127.0.0.1:5202/?updated=7a48ed84ab77"
     },
     {
-      "at": 1794588137810,
-      "url": "http://127.0.0.1:5202/update.html?latest=1794588137791"
+      "at": 1794590788785,
+      "url": "http://127.0.0.1:5202/update.html?latest=1794590788766"
     },
     {
-      "at": 1794588139727,
+      "at": 1794590790723,
+      "url": "http://127.0.0.1:5202/"
+    },
+    {
+      "at": 1794590791052,
+      "url": "http://127.0.0.1:5202/update.html?latest=1794590791019"
+    },
+    {
+      "at": 1794590791158,
       "url": "http://127.0.0.1:5202/"
     }
   ],

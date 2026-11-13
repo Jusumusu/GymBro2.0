@@ -1,0 +1,27 @@
+{
+  "validatedAt": "2026-11-13T17:38:14.448269+00:00",
+  "mainCommit": "b2689eb0f2b1cec47747180d91ef381191a9d11a",
+  "applicationCommit": "9d598d88379fd891999703e5b6b34b80d15c31ae",
+  "productionVersion": "0.2.4",
+  "productionBuild": "0f3f536c00e0",
+  "previewVersion": "0.2.5",
+  "previewBuild": "04e4f979efcb",
+  "checks": {
+    "domain": 169,
+    "backend": 9,
+    "coreBrowser": 24,
+    "upgradeBrowser": 23,
+    "appearanceBrowser": 12,
+    "workoutBrowser": 19,
+    "automaticUpdates": 14,
+    "actual024Recovery": 11,
+    "newMobileFeatures": 22,
+    "stableVersionScreen": 7,
+    "composedPreview": 6
+  },
+  "totalPassed": 316,
+  "failed": 0,
+  "mainMerged": false,
+  "dataSchema": 1,
+  "scope": "Actual archived 0.2.4 and real Chromium service-worker/notification APIs, plus local composed-site isolation. Physical phones not certified."
+}
