@@ -2,7 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {initialState,validateState} from '../src/model.js';
 import {migrateState} from '../src/extensions.js';
-import {occurrences,getOccurrence,updateOccurrence,stopSeries,linkScheduledCompletion,scheduledInstant,dueReminders,validateScheduling,rulesOverlap} from '../src/recurrence.js';
+import {occurrences,getOccurrence,updateOccurrence,stopSeries,linkScheduledCompletion,scheduledInstant,dueReminders,validateScheduling,rulesOverlap,reminderInstant} from '../src/recurrence.js';
 import {muscleMapView} from '../src/muscle-map.js';
 import {muscleSets} from '../src/analytics.js';
 import {refinementFixture} from './fixtures/refinement.mjs';
@@ -27,3 +27,7 @@ test('new map starts with no selection, distinguishes training, and retains comp
 test('long valid rule IDs retain valid exception identities',()=>{const s=state();s.upgrade.recurring[0].id='x'.repeat(100);updateOccurrence(s,'x'.repeat(100)+'@2026-12-28',{status:'skipped'});validateScheduling(s.upgrade);});
 
 test('overlapping recurring rules are detected even with different starting dates',()=>{const a=state().upgrade.recurring[0];assert.equal(rulesOverlap(a,{...a,id:'other',startDate:'2027-01-04'}),true);assert.equal(rulesOverlap(a,{...a,time:'19:00'}),false);assert.equal(rulesOverlap({...a,endDate:'2027-01-01'},{...a,startDate:'2027-01-04'}),false);assert.equal(rulesOverlap(a,{...a,weekdays:[0]}),false);});
+
+test('one-day-before reminders retain local wall time across 23 and 25 hour DST days',()=>{const previous=process.env.TZ;process.env.TZ='America/New_York';try{for(const date of ['2027-03-14','2027-11-07']){const o={date,time:'18:00'},at=reminderInstant(o,1440);assert.equal(new Date(at).getHours(),18);assert.equal(new Date(at).getDate(),date==='2027-03-14'?13:6);assert.notEqual(scheduledInstant(o)-at,86400000);}}finally{if(previous===undefined)delete process.env.TZ;else process.env.TZ=previous;}});
+
+test('one-time cancellation keeps legacy status values and candidate backups normalize without mutation',()=>{const s=state();s.upgrade.schedule=[{id:'one',date:'2026-12-28',planId:'routine',status:'planned'}];updateOccurrence(s,'one:one',{status:'canceled'});assert.equal(s.upgrade.schedule[0].status,'skipped');assert.equal(s.upgrade.schedule[0].canceled,true);assert.equal(getOccurrence(s,'one:one').status,'canceled');assert.equal(occurrences(s,'2026-12-28','2026-12-28').find(o=>o.id==='one:one').status,'canceled');const old=structuredClone(s);old.upgrade.schedule[0].status='canceled';delete old.upgrade.schedule[0].canceled;const normalized=migrateState(old);assert.equal(old.upgrade.schedule[0].status,'canceled');assert.equal(normalized.upgrade.schedule[0].status,'skipped');assert.equal(normalized.upgrade.schedule[0].canceled,true);updateOccurrence(normalized,'one:one',{status:'planned'});assert.equal(getOccurrence(normalized,'one:one').status,'planned');});

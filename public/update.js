@@ -1,5 +1,6 @@
 // Uncached recovery entry point: stage the complete release before activation.
 const button=document.querySelector('#update'),status=document.querySelector('#status');
+let updating=false;
 const base=new URL('./',location.href),environment=base.pathname.split('/').includes('preview')?'preview':'production';
 const writerLock=environment==='preview'?'gymbro-preview-writer':'gymbro-writer';
 button.disabled=false;
@@ -49,11 +50,11 @@ async function refreshApp(){
  }catch(error){if(navigator.onLine===false||error.name==='TypeError')throw Error('Connect to the internet and try again. Your saved data and offline files are unchanged.');throw error;}
 }
 button.addEventListener('click',async()=>{
- button.disabled=true;
+ if(updating)return;updating=true;button.disabled=true;
  try{
   if(navigator.locks)await navigator.locks.request(writerLock,{ifAvailable:true},async lock=>{if(!lock)throw Error('Another Gym Bro window is still open. Close it, then click Update again here.');await refreshApp();});
   else await refreshApp();
- }catch(error){status.textContent=error.message;button.disabled=false;}
+ }catch(error){status.textContent=error.message;updating=false;button.disabled=false;}
 });
 // Old clients send auto=1 on a Settings visit. Deliberately ignore that flag:
 // viewing version information is not consent to install or navigate away.
@@ -64,13 +65,15 @@ function showRelease(release){
 }
 async function describeRelease(){
  try{
-  const release=await latestRelease();showRelease(release);
+  const release=await latestRelease();if(updating)return;showRelease(release);
+  if(!window.isSecureContext||!('serviceWorker'in navigator)){status.textContent='Offline app updates are unavailable in this browser. Open the HTTPS app in a supported browser; release information remains readable here.';button.textContent='Offline updates unavailable';button.disabled=true;return;}
   const registration=await navigator.serviceWorker.getRegistration(base.href);
   const info=registration?.scope===base.href&&registration.active?await message(registration.active,{type:'GET_BUILD_INFO'}).catch(()=>null):null;
+  if(updating)return;
   const current=info?.build===release.build&&info?.environment===environment;
   status.textContent=current?'You’re running the latest version. You can refresh its verified offline files below.':'A published version is available. Read the notes and choose when to update.';
   button.textContent=current?'Refresh current version':'Update Now';
- }catch(error){status.textContent=error.message;document.querySelector('#release-version').textContent='Version check unavailable';}
+ }catch(error){if(updating)return;status.textContent=navigator.onLine===false||error.name==='TypeError'?'You’re offline. Your saved app and workouts are kept. Reconnect to check the latest version.':error.message;document.querySelector('#release-version').textContent='Version check unavailable';}
 }
 // Only the new notice's explicit Update Now action carries this install intent.
 if(new URL(location.href).searchParams.get('intent')==='apply')button.click();

@@ -9,7 +9,7 @@ const string=v=>typeof v==='string'&&v.length>0&&v.length<=100;
 export function validateScheduling(u){
  const list=(x,n)=>{if(!Array.isArray(x)||x.length>n)throw Error('Invalid scheduling data.');};
  const fields=x=>{if(!timeOK(x.time)||!reminderOK(x.reminderMinutes))throw Error('Invalid scheduled time or reminder.');};
- for(const x of u.schedule||[])fields(x);
+ for(const x of u.schedule||[]){fields(x);if(x.canceled!==undefined&&typeof x.canceled!=='boolean')throw Error('Invalid cancellation flag.');}
  if(u.recurring!==undefined){list(u.recurring,2000);const ids=new Set();for(const r of u.recurring){if(!string(r.id)||ids.has(r.id)||!string(r.planId)||!dateOK(r.startDate)||r.endDate!==null&&r.endDate!==undefined&&(!dateOK(r.endDate)||r.endDate<r.startDate)||r.seriesKey!==undefined&&!string(r.seriesKey)||r.stoppedFrom!==undefined&&!dateOK(r.stoppedFrom))throw Error('Invalid recurring rule.');ids.add(r.id);if(!Array.isArray(r.weekdays)||!r.weekdays.length||r.weekdays.length>7||new Set(r.weekdays).size!==r.weekdays.length||r.weekdays.some(n=>!Number.isInteger(n)||n<0||n>6))throw Error('Choose at least one distinct weekday.');fields(r);}}
  if(u.scheduleExceptions!==undefined){list(u.scheduleExceptions,10000);const ids=new Set();for(const x of u.scheduleExceptions){if((typeof x.id!=='string'||!x.id||x.id.length>250)||ids.has(x.id)||!string(x.seriesId)||!dateOK(x.originalDate)||!dateOK(x.date)||!['planned','skipped','canceled'].includes(x.status)||x.id!==x.seriesId+'@'+x.originalDate||x.planId!==undefined&&!string(x.planId))throw Error('Invalid occurrence exception.');ids.add(x.id);fields(x);}}
  if(u.notifications!==undefined){const n=u.notifications;if(!n||typeof n.enabled!=='boolean'||!REMINDER_MINUTES.includes(n.defaultMinutes))throw Error('Invalid notification preferences.');list(n.delivered,500);const ids=new Set();for(const x of n.delivered){if(typeof x.id!=='string'||!x.id||x.id.length>250||ids.has(x.id)||!Number.isFinite(x.at)||x.at<0||x.at>1e15)throw Error('Invalid reminder delivery record.');ids.add(x.id);}}
@@ -25,7 +25,7 @@ export function rulesOverlap(a,b){
 function occurrenceFrom(r,date,exception){return {...r,id:key(r)+'@'+date,seriesId:key(r),originalDate:date,date,kind:'recurring',status:'planned',...exception};}
 export function getOccurrence(state,id){
  const u=state.upgrade;
- if(id.startsWith('one:')){const x=u.schedule.find(x=>x.id===id.slice(4));return x?{...x,id,sourceId:x.id,kind:'single',originalDate:x.date}:null;}
+ if(id.startsWith('one:')){const x=u.schedule.find(x=>x.id===id.slice(4));return x?{...x,id,sourceId:x.id,kind:'single',originalDate:x.date,status:x.canceled?'canceled':x.status}:null;}
  const at=id.lastIndexOf('@'),seriesId=id.slice(0,at),date=id.slice(at+1);if(at<1||!dateOK(date))return null;
  const r=(u.recurring||[]).find(r=>key(r)===seriesId&&inRule(r,date)),x=(u.scheduleExceptions||[]).find(x=>x.id===id);
  if(!r||!r.weekdays.includes(calendarDate(date).getUTCDay())&&!x)return null;return occurrenceFrom(r,date,x);
@@ -33,7 +33,7 @@ export function getOccurrence(state,id){
 export function occurrences(state,start,end){
  const span=Math.round((calendarDate(end)-calendarDate(start))/86400000);if(span<0||span>370)throw Error('Choose a calendar window of at most one year.');
  const u=state.upgrade,result=new Map();
- for(const x of u.schedule||[])if(x.date>=start&&x.date<=end)result.set('one:'+x.id,{...x,id:'one:'+x.id,sourceId:x.id,kind:'single',originalDate:x.date});
+ for(const x of u.schedule||[])if(x.date>=start&&x.date<=end)result.set('one:'+x.id,{...x,id:'one:'+x.id,sourceId:x.id,kind:'single',originalDate:x.date,status:x.canceled?'canceled':x.status});
  for(const r of u.recurring||[]){let date=start>r.startDate?start:r.startDate;const last=r.endDate&&r.endDate<end?r.endDate:end;for(;date<=last;date=addDays(date,1)){if(!inRule(r,date)||!r.weekdays.includes(calendarDate(date).getUTCDay()))continue;const id=key(r)+'@'+date,x=(u.scheduleExceptions||[]).find(x=>x.id===id),o=occurrenceFrom(r,date,x);if(o.date>=start&&o.date<=end)result.set(id,o);}}
  for(const x of u.scheduleExceptions||[])if(x.date>=start&&x.date<=end){const o=getOccurrence(state,x.id);if(o)result.set(o.id,o);}
  const list=[...result.values()].sort((a,b)=>a.date.localeCompare(b.date)||(a.time||'').localeCompare(b.time||'')||a.id.localeCompare(b.id));
@@ -50,10 +50,14 @@ export function scheduledInstant(o){
  // A nonexistent DST wall time stays on the calendar; it has no shifted reminder.
  return d.getFullYear()===year&&d.getMonth()===month-1&&d.getDate()===day&&d.getHours()===hour&&d.getMinutes()===minute?d.getTime():null;
 }
+export function reminderInstant(o,minutes){
+ if(minutes===1440)return scheduledInstant({...o,date:addDays(o.date,-1)});
+ const at=scheduledInstant(o);return at===null?null:at-minutes*60000;
+}
 export function updateOccurrence(state,id,patch,scope='this',newId){
  const o=getOccurrence(state,id);if(!o)throw Error('This scheduled occurrence is no longer available.');
  if(scope==='this'&&state.sessions.some(s=>s.scheduledOccurrenceId===id))throw Error('This workout is completed. Edit its record from History.');
- if(o.kind==='single'){Object.assign(state.upgrade.schedule.find(x=>x.id===o.sourceId),patch);return;}
+ if(o.kind==='single'){const item=state.upgrade.schedule.find(x=>x.id===o.sourceId),{status,...rest}=patch;Object.assign(item,rest);if(status!==undefined){item.status=status==='canceled'?'skipped':status;item.canceled=status==='canceled';}return;}
  if(scope==='this'){const list=state.upgrade.scheduleExceptions;const index=list.findIndex(x=>x.id===id);const x={...(index>=0?list[index]:{}),id,seriesId:o.seriesId,originalDate:o.originalDate,date:o.date,status:o.status,...patch};if(index>=0)list[index]=x;else list.push(x);return;}
  const rules=state.upgrade.recurring,r=rules.find(r=>key(r)===o.seriesId&&inRule(r,o.originalDate));
  const {date,status,...seriesPatch}=patch;
@@ -74,5 +78,5 @@ export function linkScheduledCompletion(state,session){
 export function dueReminders(state,since,now){
  const n=state.upgrade.notifications;if(!n?.enabled||now<=since)return [];
  const delivered=new Set(n.delivered.map(x=>x.id)),start=addDays(localDate(now),-1),end=addDays(localDate(now),2);
- return occurrences(state,start,end).filter(o=>{if(o.status!=='planned'||o.completedSessionId||delivered.has(o.id)||o.reminderMinutes===null)return false;const at=scheduledInstant(o),minutes=o.reminderMinutes??n.defaultMinutes;if(at===null||at<now-(minutes===0?60000:0))return false;const due=at-minutes*60000;return due>since&&due<=now&&now-due<=120000;}).map(o=>({...o,dueAt:scheduledInstant(o)-(o.reminderMinutes??n.defaultMinutes)*60000})).sort((a,b)=>a.dueAt-b.dueAt).slice(0,3);
+ return occurrences(state,start,end).filter(o=>{if(o.status!=='planned'||o.completedSessionId||delivered.has(o.id)||o.reminderMinutes===null)return false;const at=scheduledInstant(o),minutes=o.reminderMinutes??n.defaultMinutes;if(at===null||at<now-(minutes===0?60000:0))return false;const due=reminderInstant(o,minutes);return due!==null&&due>since&&due<=now&&now-due<=120000;}).map(o=>({...o,dueAt:reminderInstant(o,o.reminderMinutes??n.defaultMinutes)})).sort((a,b)=>a.dueAt-b.dueAt).slice(0,3);
 }

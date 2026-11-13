@@ -23,7 +23,8 @@
     "test:workout-ux": "node tests/browser-workout-ux.mjs",
     "test:review-site": "node tests/browser-review-site.mjs",
     "test:mobile-update": "node tests/browser-mobile-update.mjs",
-    "test:mobile-refinement": "node tests/browser-mobile-refinement.mjs"
+    "test:mobile-refinement": "node tests/browser-mobile-refinement.mjs",
+    "benchmark:mobile": "node scripts/benchmark-mobile.mjs"
   },
   "engines": {
     "node": ">=22"

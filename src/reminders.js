@@ -14,7 +14,7 @@ export function createReminders({getState,commit,go,onError}){
   if(busy||document.visibilityState==='hidden')return;sync();const since=last;last=now;if(!enabled)return;
   const due=dueReminders(getState(),since,now);if(!due.length)return;busy=true;
   try{
-   await commit(s=>{if(!s.upgrade.notifications.enabled)return;const n=s.upgrade.notifications;for(const o of due)if(!n.delivered.some(x=>x.id===o.id))n.delivered.push({id:o.id,at:now});n.delivered=n.delivered.filter(x=>now-x.at<35*86400000).slice(-500);},{draw:false,award:false});
+   await commit(s=>{if(!s.upgrade.notifications.enabled)return;const n=s.upgrade.notifications;for(const o of due)if(!n.delivered.some(x=>x.id===o.id))n.delivered.push({id:o.id,at:now});n.delivered=n.delivered.filter(x=>now-x.at<35*86400000).slice(-500);},{draw:false,award:false,preserveUndo:true});
    if(!getState().upgrade.notifications.enabled)return;
    document.querySelector('#workout-reminder')?.remove();const panel=document.createElement('aside');panel.id='workout-reminder';panel.className='panel reminder-notice';panel.setAttribute('role','status');
    const title=document.createElement('strong');title.textContent='Your workout is coming up';const text=document.createElement('p');text.textContent=due.map(o=>(o.planName||'Workout')+' · '+o.time).join(' · ');const controls=document.createElement('div');controls.className='actions';

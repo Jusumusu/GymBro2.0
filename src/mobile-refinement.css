@@ -4,3 +4,4 @@
 body:has(#app-update-notice) .reminder-notice{top:calc(16px + env(safe-area-inset-top));bottom:auto;max-height:30dvh;overflow:auto}
 
 .calendar-grid .calendar-entry{overflow:hidden;white-space:nowrap;text-overflow:ellipsis;line-height:1.4;min-height:26px;max-height:30px;padding:5px 3px}.calendar-grid .calendar-day{min-height:108px}.calendar-grid .calendar-more{display:block;min-height:28px;width:100%;font-size:11px;padding:3px}.calendar-day-details .agenda-row{flex-wrap:wrap}.anatomy-layout .muscle-map{touch-action:manipulation}
+.agenda-row p{min-width:0;overflow-wrap:anywhere}.agenda-row button{flex-shrink:0}

@@ -1,11 +1,12 @@
 import assert from 'node:assert/strict';
 import {mkdir,writeFile,mkdtemp,cp,rm} from 'node:fs/promises';
 import {tmpdir} from 'node:os';
+import {releasedBaseline} from './helpers/released-baseline.mjs';
 import {browser,sleep} from './helpers/mobile-browser.mjs';
 await mkdir('artifacts/mobile-refinement',{recursive:true});
-const baseline=process.argv.includes('--baseline');
-const scratch=baseline?null:await mkdtemp(tmpdir()+'/gymbro-mobile-updates-');if(scratch)await cp('/tmp/gymbro-024-mobile-baseline',scratch+'/site',{recursive:true});
-const b=await browser({root:baseline?'/tmp/gymbro-024-mobile-baseline':scratch+'/site'});
+const baseline=process.argv.includes('--baseline'),released=await releasedBaseline();
+const scratch=baseline?null:await mkdtemp(tmpdir()+'/gymbro-mobile-updates-');if(scratch)await cp(released.root,scratch+'/site',{recursive:true});
+const b=await browser({root:baseline?released.root:scratch+'/site'});
 try{
  await b.navigate();await b.until(`Boolean(document.querySelector('#onboard-form'))`);await b.submit('#onboard-form');await b.until(`Boolean(navigator.serviceWorker.controller)`);await b.route('settings');
  if(baseline){
@@ -23,6 +24,7 @@ try{
   await b.click('#update');await b.until(`location.search.includes('updated=')&&Boolean(document.querySelector('.sidebar'))`);const after=await b.data();assert.deepEqual(after.draft,before.draft);assert.deepEqual(after.sessions,before.sessions);assert.equal(await b.js(`document.querySelector('meta[name="gymbro-version"]').content`),'0.2.5');pass('An intentional Update Now activates the verified new worker and preserves entered workout data');
   await b.click('[data-action=update-app]');await b.until(`location.pathname.endsWith('/update.html')&&document.querySelector('#status').textContent.includes('latest version')`);await sleep(1800);assert.ok(await b.js(`location.pathname.endsWith('/update.html')`));pass('Settings always opens a stable screen and explicitly reports the latest version when already current');
   await b.click('.back');await b.until(`Boolean(document.querySelector('.sidebar'))`);assert.equal(await b.js(`Boolean(document.querySelector('#app-update-notice'))`),false);assert.deepEqual((await b.data()).draft,before.draft);pass('Later returns to the unchanged workout without repeating an installed-release prompt');
+  await b.cdp('Page.addScriptToEvaluateOnNewDocument',{source:'delete Navigator.prototype.serviceWorker;'});await b.navigate('/#settings');await b.until(`Boolean(document.querySelector('.sidebar'))`);await b.click('[data-action=update-app]');await b.until(`location.pathname.endsWith('/update.html')&&document.querySelector('#status').textContent.includes('unavailable in this browser')`);assert.equal(await b.js(`document.querySelector('#update').disabled`),true);assert.ok(await b.js(`document.querySelector('#release-notes').children.length>=4`));await b.click('.back');await b.until(`Boolean(document.querySelector('.sidebar'))`);assert.deepEqual((await b.data()).draft,before.draft);pass('Unsupported offline-update browsers still open readable version information with accurate guidance and no destructive fallback');
   assert.deepEqual(b.errors,[]);await writeFile('artifacts/mobile-refinement/update-regression.json',JSON.stringify({passed:checks.length,checks,errors:b.errors,navigations:b.navigations,physicalDevices:'Not inspected; real Chromium worker lifecycle with mobile viewport emulation'},null,2)+'\n');
  }
-}finally{await b.close();if(scratch)await rm(scratch,{recursive:true,force:true});}
+}finally{await b.close();if(scratch)await rm(scratch,{recursive:true,force:true});await released.close();}

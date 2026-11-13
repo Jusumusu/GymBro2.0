@@ -42,7 +42,8 @@ export function createAppUpdates({beforeUpdate,onError,pollMs=60000}){
  }
  async function loadLatest({install=false}={}){
   if(loading)return;
-  if(!supported){report('App updates are available at the published HTTPS app address.');return;}
+  if(!production){report('App updates are available at the published HTTPS app address.');return;}
+  if(install&&!supported){report('This browser can show version information but cannot install offline updates.');return;}
   if(navigator.onLine===false){report('Connect to the internet to load the latest version. Your offline app is kept.');return;}
   loading=true;const button=document.querySelector('#load-app-update');if(button)button.disabled=true;
   try{await beforeUpdate();const url=new URL('update.html',base);url.searchParams.set('latest',String(Date.now()));if(install)url.searchParams.set('intent','apply');location.assign(url.href);}
@@ -52,7 +53,7 @@ export function createAppUpdates({beforeUpdate,onError,pollMs=60000}){
  const offline=()=>{message='Offline. Update checks resume when you reconnect.';renderStatus();};
  async function start(){
   if(started)return;started=true;
-  if(!supported){message='Updates are checked in the published app.';renderStatus();return;}
+  if(!supported){message=production?'Open Update app to read version information; automatic offline updates are unavailable here.':'Updates are checked in the published app.';renderStatus();return;}
   // Registration failure must never prevent opening a saved offline journal.
   try{registration=await navigator.serviceWorker.register(new URL('sw.js',base),{scope:base.href,updateViaCache:'none'});registration.addEventListener('updatefound',()=>{const worker=registration.installing;worker?.addEventListener('statechange',()=>{if(worker.state==='installed')check();});});}catch{}
   check();timer=setInterval(visible,pollMs);window.addEventListener('focus',visible);window.addEventListener('online',visible);window.addEventListener('offline',offline);document.addEventListener('visibilitychange',visible);
