@@ -1,0 +1,21 @@
+{
+  "baseline": "Released main 0.2.4, no newer version deployed",
+  "reproduced": true,
+  "helperVisibleMs": 2074,
+  "navigations": [
+    {
+      "at": 1794587948050,
+      "url": "http://127.0.0.1:5202/"
+    },
+    {
+      "at": 1794587948864,
+      "url": "http://127.0.0.1:5202/update.html?latest=1794587948846&auto=1"
+    },
+    {
+      "at": 1794587950938,
+      "url": "http://127.0.0.1:5202/?updated=0f3f536c00e0"
+    }
+  ],
+  "cause": "The app adds auto=1; the standalone helper calls button.click() on module startup and location.replace() after verifying the already-current build. No second user action or reading opportunity is offered.",
+  "scope": "Actual Chromium service worker lifecycle with synthetic journal; physical phone was not inspected"
+}
