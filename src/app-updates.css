@@ -3,3 +3,4 @@
 .app-update-notice>strong{display:block;font-size:16px}.app-update-notice>p{font-size:13px;color:var(--muted);margin:8px 0 16px}.app-update-notice .actions{gap:10px;flex-wrap:wrap}
 .app-update-notice [role=alert]{color:var(--danger);margin:14px 0 0}
 @media(max-width:650px){.app-update-notice{left:12px;right:12px;width:auto;bottom:calc(84px + env(safe-area-inset-bottom));max-height:calc(100dvh - 108px - env(safe-area-inset-bottom));padding:20px}}
+.app-update-notice .release-notes{max-height:24dvh;overflow:auto;padding-left:20px;font-size:13px;line-height:1.7}.app-update-notice h3{font-size:13px;margin:12px 0 4px}

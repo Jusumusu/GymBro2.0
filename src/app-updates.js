@@ -7,19 +7,19 @@ export function createAppUpdates({beforeUpdate,onError,pollMs=60000}){
  const base=new URL('./',document.baseURI),production=!!document.querySelector('meta[name="production"]');
  const environment=document.querySelector('meta[name="gymbro-environment"]')?.content==='preview'?'preview':'production';
  const current=document.querySelector('meta[name="gymbro-build"]')?.content;
- let latest=null,dismissed=null,inflight=null,registration=null,timer=null,loading=false,message='Checks automatically when online.';
+ let started=false,latest=null,dismissed=null,inflight=null,registration=null,timer=null,loading=false,message='Checks automatically when online.';
  const supported=production&&'serviceWorker'in navigator&&window.isSecureContext;
  function renderStatus(){const el=document.querySelector('#app-update-status');if(el)el.textContent=message;}
  function report(message){const notice=document.querySelector('#app-update-notice');if(notice){let error=notice.querySelector('[role="alert"]');if(!error){error=document.createElement('p');error.setAttribute('role','alert');notice.append(error);}error.textContent=message;}onError(message);}
  function showUpdate(){
   if(!latest||latest.build===dismissed||document.querySelector('#app-update-notice'))return;
   const notice=document.createElement('aside');notice.id='app-update-notice';notice.className='app-update-notice panel';notice.setAttribute('role','status');notice.setAttribute('aria-live','polite');notice.setAttribute('aria-atomic','true');
-  const title=document.createElement('strong');title.textContent='Update available';
+  const title=document.createElement('strong');title.textContent='Gym Bro update available';
   const text=document.createElement('p');text.textContent=`Gym Bro ${latest.version} is available. Load it when you’re ready; your saved workout stays on this device.`;
   const actions=document.createElement('div');actions.className='actions';
-  const load=document.createElement('button');load.id='load-app-update';load.className='primary';load.textContent='Load update';load.onclick=()=>loadLatest();
+  const load=document.createElement('button');load.id='load-app-update';load.className='primary';load.textContent='Load update';load.onclick=()=>loadLatest({install:true});
   const later=document.createElement('button');later.className='secondary';later.textContent='Later';later.onclick=()=>{dismissed=latest.build;const hadFocus=notice.contains(document.activeElement);notice.remove();if(hadFocus)document.querySelector('#main')?.focus({preventScroll:true});};
-  actions.append(load,later);notice.append(title,text,actions);document.body.append(notice);
+  const heading=document.createElement('h3');heading.textContent="What’s new";const notes=document.createElement('ul');notes.className='release-notes';for(const item of (latest.notes||['App improvements and reliability fixes.']).slice(0,12)){const li=document.createElement('li');li.textContent=String(item).slice(0,300);notes.append(li);}actions.append(load,later);notice.append(title,text,heading,notes,actions);document.body.append(notice);
  }
  async function check(){
   if(!supported||!current||navigator.onLine===false)return;
@@ -40,22 +40,23 @@ export function createAppUpdates({beforeUpdate,onError,pollMs=60000}){
    finally{renderStatus();inflight=null;}
   })();return inflight;
  }
- async function loadLatest(){
+ async function loadLatest({install=false}={}){
   if(loading)return;
   if(!supported){report('App updates are available at the published HTTPS app address.');return;}
   if(navigator.onLine===false){report('Connect to the internet to load the latest version. Your offline app is kept.');return;}
   loading=true;const button=document.querySelector('#load-app-update');if(button)button.disabled=true;
-  try{await beforeUpdate();const url=new URL('update.html',base);url.searchParams.set('latest',String(Date.now()));url.searchParams.set('auto','1');location.assign(url.href);}
+  try{await beforeUpdate();const url=new URL('update.html',base);url.searchParams.set('latest',String(Date.now()));if(install)url.searchParams.set('intent','apply');location.assign(url.href);}
   catch(error){report(error.message);loading=false;if(button)button.disabled=false;}
  }
  const visible=()=>{if(document.visibilityState!=='hidden')check();};
  const offline=()=>{message='Offline. Update checks resume when you reconnect.';renderStatus();};
  async function start(){
+  if(started)return;started=true;
   if(!supported){message='Updates are checked in the published app.';renderStatus();return;}
   // Registration failure must never prevent opening a saved offline journal.
   try{registration=await navigator.serviceWorker.register(new URL('sw.js',base),{scope:base.href,updateViaCache:'none'});registration.addEventListener('updatefound',()=>{const worker=registration.installing;worker?.addEventListener('statechange',()=>{if(worker.state==='installed')check();});});}catch{}
   check();timer=setInterval(visible,pollMs);window.addEventListener('focus',visible);window.addEventListener('online',visible);window.addEventListener('offline',offline);document.addEventListener('visibilitychange',visible);
  }
- function stop(){clearInterval(timer);window.removeEventListener('focus',visible);window.removeEventListener('online',visible);window.removeEventListener('offline',offline);document.removeEventListener('visibilitychange',visible);}
+ function stop(){started=false;clearInterval(timer);window.removeEventListener('focus',visible);window.removeEventListener('online',visible);window.removeEventListener('offline',offline);document.removeEventListener('visibilitychange',visible);}
  return {start,stop,check,loadLatest,renderStatus};
 }

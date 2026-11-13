@@ -33,7 +33,7 @@ async function refreshApp(){
  try{
   for(let attempt=0;attempt<3;attempt++){
    status.textContent='Checking the latest published version…';const release=await latestRelease();
-   status.textContent=`Downloading and verifying Gym Bro ${release.version}… Your saved workouts and photos are kept.`;
+   showRelease(release);status.textContent=`Downloading and verifying Gym Bro ${release.version}… Your saved workouts and photos are kept.`;
    const registration=await navigator.serviceWorker.register(new URL('sw.js',base),{scope:base.href,updateViaCache:'none'});await registration.update();
    const worker=await readyWorker(registration,release.build);
    // A deployment may finish while downloading. Never knowingly activate an older release.
@@ -55,5 +55,23 @@ button.addEventListener('click',async()=>{
   else await refreshApp();
  }catch(error){status.textContent=error.message;button.disabled=false;}
 });
-// The in-app buttons are explicit consent; the standalone recovery link stays manual.
-if(new URL(location.href).searchParams.get('auto')==='1')button.click();
+// Old clients send auto=1 on a Settings visit. Deliberately ignore that flag:
+// viewing version information is not consent to install or navigate away.
+function showRelease(release){
+ document.querySelector('#release-version').textContent='Gym Bro '+release.version;
+ const list=document.querySelector('#release-notes');list.replaceChildren();
+ for(const text of (release.notes||['The latest published Gym Bro release.']).slice(0,12)){const li=document.createElement('li');li.textContent=String(text).slice(0,300);list.append(li);}
+}
+async function describeRelease(){
+ try{
+  const release=await latestRelease();showRelease(release);
+  const registration=await navigator.serviceWorker.getRegistration(base.href);
+  const info=registration?.scope===base.href&&registration.active?await message(registration.active,{type:'GET_BUILD_INFO'}).catch(()=>null):null;
+  const current=info?.build===release.build&&info?.environment===environment;
+  status.textContent=current?'You’re running the latest version. You can refresh its verified offline files below.':'A published version is available. Read the notes and choose when to update.';
+  button.textContent=current?'Refresh current version':'Update Now';
+ }catch(error){status.textContent=error.message;document.querySelector('#release-version').textContent='Version check unavailable';}
+}
+// Only the new notice's explicit Update Now action carries this install intent.
+if(new URL(location.href).searchParams.get('intent')==='apply')button.click();
+else describeRelease();
