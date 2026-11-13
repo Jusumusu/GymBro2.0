@@ -1,0 +1,44 @@
+{
+  "passed": 20,
+  "checks": [
+    "Fresh journal starts with a neutral anatomical figure and no phantom chest selection",
+    "Recorded bench activity colors the chest without selecting it; historical records remain intact",
+    "Actual touch selects paired chest paths; a second activation deselects without changing training color",
+    "Keyboard selection highlights only the intended group and restores focus to the same anatomical path",
+    "Back view exposes glutes, hamstrings, calves, erectors and distinct upper-back/lat/trapezius shapes using saved canonical contributions",
+    "Reopening the map clears ephemeral selection while preserving historical muscle statistics",
+    "Custom weekly scheduling generates multiple weekdays until an inclusive end date and preserves legacy one-time entries",
+    "Recurrence and skip/restore exceptions survive reload without deleting or duplicating the series",
+    "Editing one occurrence reschedules only that stable occurrence identity",
+    "Future scope splits the rule at the chosen occurrence without rewriting past rule segments",
+    "Entire-series edits change schedule fields while leaving every completed workout unchanged",
+    "Changing the calendar first day preserves actual recurring weekdays and times",
+    "Starting and completing a future scheduled workout associates exactly one occurrence while preserving actual completion date and future sessions",
+    "Stopping a recurring schedule removes future generated occurrences and retains completed history",
+    "Master notification preference persists and turning it off preserves default timing, individual reminders and recurring schedules",
+    "Real browser permission states explain denial and permission is requested only through the intentional control",
+    "A due active-app reminder is delivered in-app and through the real worker notification API exactly once",
+    "Turning reminders off closes controlled pending notifications; reenabling never floods or repeats delivered reminders",
+    "Muscle map, recurrence calendar and Notifications fit all six required widths in both themes without horizontal clipping",
+    "Repeated navigation remains stable; workout logging, recurrence, preferences and the new map survive offline reload"
+  ],
+  "errors": [],
+  "metrics": {
+    "browserNotifications": 1,
+    "heapAfterNavigationCycles": 1894544,
+    "heapBeforeNavigationCycles": 2547560
+  },
+  "widths": [
+    320,
+    375,
+    390,
+    430,
+    768,
+    1024
+  ],
+  "themes": [
+    "light",
+    "dark"
+  ],
+  "limitations": "Actual Chromium with mobile viewport/touch and native notification APIs. Physical Android/iPhone installation and closed-app delivery are not certified."
+}

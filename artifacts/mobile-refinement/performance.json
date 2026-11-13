@@ -1,0 +1,20 @@
+{
+  "runtime": "v24.22.1",
+  "sessions": 1500,
+  "sets": 13500,
+  "baselineRepeatedSelections": {
+    "medianMs": 132.02,
+    "maxMs": 209.68
+  },
+  "candidateFirstRenderIncludingClone": {
+    "medianMs": 49.13,
+    "maxMs": 65.25
+  },
+  "candidateRepeatedSelections": {
+    "medianMs": 17.98,
+    "maxMs": 22.72
+  },
+  "sourceBytes": 372078,
+  "optimization": "Cache derived weekly/recent map facts by immutable saved-state identity and local date; resolve exercise definitions once instead of repeated history lookups. WeakMap releases old state caches.",
+  "scope": "Cloud Node CPU/string-render measurements, not phone frame rates or physical-device startup guarantees. Same synthetic history and 14 canonical selections in each comparison."
+}

@@ -1,7 +1,7 @@
-name: Deploy isolated workout UX preview
+name: Deploy isolated muscle map and scheduling preview
 on:
   push:
-    branches: [fix/workout-ux-muscle-map]
+    branches: [feature/muscle-map-scheduling-refinement]
     paths:
       - 'src/**'
       - 'public/**'
@@ -21,7 +21,7 @@ concurrency:
   cancel-in-progress: false
 jobs:
   build:
-    if: github.ref == 'refs/heads/fix/workout-ux-muscle-map'
+    if: github.ref == 'refs/heads/feature/muscle-map-scheduling-refinement'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -50,7 +50,7 @@ jobs:
         with:
           path: site
   deploy:
-    if: github.ref == 'refs/heads/fix/workout-ux-muscle-map'
+    if: github.ref == 'refs/heads/feature/muscle-map-scheduling-refinement'
     needs: build
     runs-on: ubuntu-latest
     timeout-minutes: 15
