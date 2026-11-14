@@ -2,7 +2,7 @@
 
 ## 0.3.0 advanced-training candidate
 
-The six-feature update is implemented on `feature/advanced-training-experience` using the user-approved **A — Quiet focus** design. Main remains the approved 0.2.5 release. See the [feature review and local preview instructions](docs/advanced-training/REVIEW.md), [executed QA](docs/advanced-training/QA.md), and [data/architecture changes](docs/advanced-training/ARCHITECTURE.md). [PR #1](https://github.com/Jusumusu/GymBro2.0/pull/1) is not merged. The candidate live preview is blocked by GitHub environment protection; the existing preview URL below is not this candidate.
+The six-feature update is implemented on `feature/advanced-training-experience` using the user-approved **A — Quiet focus** design. Main remains the approved 0.2.5 release. See the [feature review and local preview instructions](docs/advanced-training/REVIEW.md), [executed QA](docs/advanced-training/QA.md), and [data/architecture changes](docs/advanced-training/ARCHITECTURE.md). [PR #1](https://github.com/Jusumusu/GymBro2.0/pull/1) is not merged. The [live candidate preview](https://jusumusu.github.io/GymBro2.0/preview/) is now published after the user adjusted deployment configuration. Main remains unchanged.
 
 Private, offline-first strength training with an optional OpenAI-compatible coach backend. Native ES modules, Node 22+ and no npm dependencies. Version 0.2.5 adds an interactive anatomical map, recurring weekly schedules, optional active-app reminders and a stable, readable version screen with explicit update consent. Main holds the approved app; new experiments use one temporary feature branch, removed after approval and release.
 

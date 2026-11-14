@@ -9,7 +9,7 @@ Gym Bro's local journal now has verifiable file backups and safe recovery, while
 
 Validation: **212 domain + 9 backend + 159 browser workflow checks**, plus **120 final UI layout checks** across both themes and all six requested widths. Independent calendar parsing/expansion passed. Actual archived 0.2.5 update/recovery, photo retention and composed preview isolation were exercised. Details and actual screenshots: [review guide](docs/advanced-training/REVIEW.md), [QA](docs/advanced-training/QA.md), [architecture](docs/advanced-training/ARCHITECTURE.md).
 
-**Preview limitation:** GitHub's build/tests/root-byte verification passed, but Pages deployment rejected this feature branch under the existing github-pages protection rules. Those protections were retained. No live candidate URL is claimed. A tested local preview bundle is included under artifacts/advanced-training/review-preview.zip.
+**Live preview:** https://jusumusu.github.io/GymBro2.0/preview/ . After the user adjusted deployment configuration, retrying workflow run 43610715966 succeeded. GitHub confirmed publication in native deployment logs; root production files remain byte-identical to approved main. Our execution network blocks direct fetching of the Pages host, so physical-device verification remains unverified. The local preview ZIP is retained as a fallback.
 
 Physical Apple/Google calendar import, mobile OS alerts/share sheets and Safari/Firefox are not certified. File-writer completion/failure uses explicit API stubs; real fallback download, file-input verification/restore and aborted IndexedDB transactions are exercised. No automatic cloud sync/backend, paid service or new runtime dependency is introduced.
 

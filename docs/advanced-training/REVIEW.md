@@ -15,11 +15,11 @@ All six features are implemented on `feature/advanced-training-experience` using
 
 The candidate composes approved `origin/main` unchanged at the root and the new build only under `/preview/`. Root files are checked byte-for-byte; preview has its own database, writer lock, worker/cache scope and visible banner. It starts empty and never opens the production journal. Importing your own backup is an explicit copy; neither journal synchronizes to the other.
 
-GitHub's [preview workflow run](https://github.com/Jusumusu/GymBro2.0/actions/runs/43608835653) passed build/tests/composition but rejected deployment:
+Initial attempts in GitHub's [preview workflow run](https://github.com/Jusumusu/GymBro2.0/actions/runs/43608835653) passed build/tests/composition but rejected deployment:
 
 > Branch "feature/advanced-training-experience" is not allowed to deploy to github-pages due to environment protection rules.
 
-The rules were retained, as required by AGENTS.md. The existing `/preview/` URL must not be represented as containing this candidate. A separate Sites deployment was investigated but its required publishing helper is unavailable in the selected environment; no Site was created. No new live preview URL is claimed.
+After the user adjusted deployment configuration, retrying the failed workflow succeeded. Native deployment logs verify the live candidate at **https://jusumusu.github.io/GymBro2.0/preview/**. The root remains the unchanged approved main build, with the candidate isolated at `/preview/`. Our execution network blocks direct fetching of the live Pages host; actual phone/Safari testing is not certified. A separate Sites option was investigated before this was resolved; no Site was created.
 
 `artifacts/advanced-training/review-preview.zip` contains the tested composed review site, a dependency-free local server and instructions. Unzip, enter its folder, run `node serve.mjs site`, and open `http://localhost:5173/preview/`. This is a local review address, not a phone-accessible hosted URL. Localhost supports PWA testing in compatible browsers; plain LAN HTTP on a phone does not provide the same secure-context APIs. Alternatively run `npm run build:review` and `node scripts/serve.mjs review-site` from the checkout.
 
@@ -29,4 +29,4 @@ See [QA.md](QA.md) for the executed suites, actual screenshots, independent cale
 
 No cloud sync/backend, paid service or account authentication was added. Password loss is unrecoverable. Large photo collections may exceed export or device quotas. Calendar imports on physical Apple/Google clients, OS alert delivery, physical phones and Safari/Firefox are not certified. File-writer completion/failure is tested with explicit browser API stubs; actual fallback downloads and file-input read-back/restore are exercised in Chromium. Superset duration estimates are conservative. Export before any code rollback: backward retention does not guarantee older code understands new training semantics.
 
-Main merge approval is still required separately. This update has not been merged or deployed to production.
+Main merge approval is still required separately. This update has not been merged. The production root remains the approved main build; the candidate is published only at `/preview/`.
