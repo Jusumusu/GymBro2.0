@@ -24,6 +24,7 @@ export function blockWeek(block,on){
  const week=Math.floor(Math.max(0,daysBetween(block.startDate,on)-paused)/7)+1;return week<=block.duration?week:null;
 }
 export function createBlock({id,name,goal,startDate,duration,planIds,progression='double',lighter=false},now=Date.now()){
+ if(!Number.isInteger(duration)||duration<1||duration>52)throw Error('Choose 1–52 training weeks.');
  const range=goal==='strength'?[3,6]:goal==='endurance'?[12,20]:[8,12];
  const b={id,name:name.trim(),goal,startDate,duration,planIds:[...new Set(planIds)],progression,status:'active',createdAt:now,pauses:[],weeks:Array.from({length:duration},(_,i)=>({lighter:lighter&&i===duration-1,setFactor:lighter&&i===duration-1?.65:1,loadFactor:lighter&&i===duration-1?.9:1,min:range[0],max:range[1],rir:lighter&&i===duration-1?4:2}))};
  validateAdvanced({...advancedDefaults(),blocks:[b]});return b;

@@ -14,7 +14,7 @@ export function timezoneLines(zone,startYear,endYear){const fmt=zoneFormatter(zo
  for(let ms=start+43200000;ms<=end;ms+=43200000){const next=offset(ms);if(next!==previous){let lo=cursor,hi=ms;while(hi-lo>60000){const mid=Math.floor((lo+hi)/120000)*60000;if(offset(mid)===previous)lo=mid;else hi=mid;}const transition=hi,type=next>previous?'DAYLIGHT':'STANDARD';lines.push('BEGIN:'+type,'DTSTART:'+utc(transition+previous).slice(0,-1),'TZOFFSETFROM:'+offsetText(previous),'TZOFFSETTO:'+offsetText(next),'END:'+type);previous=next;}cursor=ms;}
  lines.push('END:VTIMEZONE');return lines;
 }
-function alarm(minutes){if(minutes===null)return [];if(![0,15,30,60,1440].includes(minutes))throw Error('Choose a supported calendar reminder.');return ['BEGIN:VALARM','TRIGGER:-PT'+minutes+'M','ACTION:DISPLAY','DESCRIPTION:Workout reminder','END:VALARM'];}
+function alarm(minutes){if(minutes===null)return [];if(![0,15,30,60,1440].includes(minutes))throw Error('Choose a supported calendar reminder.');return ['BEGIN:VALARM',minutes===1440?'TRIGGER:-P1D':'TRIGGER:-PT'+minutes+'M','ACTION:DISPLAY','DESCRIPTION:Workout reminder','END:VALARM'];}
 const stamp=(date,time,zone,property='DTSTART')=>time?`${property};TZID=${zone}:${compact(date)}T${compact(time)}00`:`${property};VALUE=DATE:${compact(date)}`;
 const uid=id=>'gymbro-'+encodeURIComponent(id)+'@gymbro.local';
 // Bounded exports retain RRULEs. A horizon is explicit because static export is not a subscription.

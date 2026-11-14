@@ -5,6 +5,7 @@ import {releasedBaseline} from './helpers/released-baseline.mjs';
 import {browser,sleep} from './helpers/mobile-browser.mjs';
 const targetVersion=JSON.parse(await readFile('package.json','utf8')).version;
 await mkdir('artifacts/mobile-refinement',{recursive:true});
+const baselineVersion=process.env.MOBILE_UPDATE_BASELINE_VERSION||'0.2.4';
 const baseline=process.argv.includes('--baseline'),released=await releasedBaseline();
 const scratch=baseline?null:await mkdtemp(tmpdir()+'/gymbro-mobile-updates-');if(scratch)await cp(released.root,scratch+'/site',{recursive:true});
 const b=await browser({root:baseline?released.root:scratch+'/site'});
@@ -19,7 +20,7 @@ try{
  }else{
   const checks=[],pass=name=>{checks.push(name);console.log('PASS '+name);};
   await b.route('workout');await b.click('[data-action=start-plan]');await b.fill('[data-field=kg]','27.5');await b.fill('[data-field=reps]','9');const before=await b.data();
-  await cp('dist',scratch+'/site',{recursive:true});await b.route('settings');await b.js("window.dispatchEvent(new Event('focus'))");await b.until(`Boolean(document.querySelector('#app-update-notice'))`);await sleep(1500);assert.ok(await b.js(`Boolean(document.querySelector('#app-update-notice'))`));assert.ok((await b.data()).draft);pass('An actual installed 0.2.4 worker detects the new release without reloading or interrupting an unfinished workout');
+  await cp('dist',scratch+'/site',{recursive:true});await b.route('settings');await b.js("window.dispatchEvent(new Event('focus'))");await b.until(`Boolean(document.querySelector('#app-update-notice'))`);await sleep(1500);assert.ok(await b.js(`Boolean(document.querySelector('#app-update-notice'))`));assert.ok((await b.data()).draft);pass('An actual installed '+baselineVersion+' worker detects the new release without reloading or interrupting an unfinished workout');
   await b.click('[data-action=update-app]');await b.until(`location.pathname.endsWith('/update.html')&&document.querySelector('#release-version').textContent.includes('${targetVersion}')`);await sleep(3000);assert.ok(await b.js(`location.pathname.endsWith('/update.html')`));assert.ok(await b.js(`document.querySelector('#release-notes').children.length>=4`));pass('Old auto=1 entry remains on a readable release screen until intentional action; no artificial dismissal delay');
   for(const theme of ['light','dark']){await b.js(`document.documentElement.dataset.theme='${theme}'`);for(const width of [320,375,390,430,768,1024]){await b.cdp('Emulation.setDeviceMetricsOverride',{width,height:900,deviceScaleFactor:1,mobile:width<700});assert.ok(await b.js(`document.documentElement.scrollWidth<=innerWidth+1`));}await b.shot('artifacts/mobile-refinement/'+theme+'-update-screen.png');}pass('Release information and actions fit both themes at all six required widths');
   await b.click('#update');await b.until(`location.search.includes('updated=')&&Boolean(document.querySelector('.sidebar'))`);const after=await b.data();assert.deepEqual(after.draft,before.draft);assert.deepEqual(after.sessions,before.sessions);assert.equal(await b.js(`document.querySelector('meta[name="gymbro-version"]').content`),targetVersion);pass('An intentional Update Now activates the verified new worker and preserves entered workout data');
