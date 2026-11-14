@@ -1,4 +1,6 @@
-# App updates — 0.2.3
+# App updates — historical 0.2.3 contract
+
+**Current 0.2.5 behavior:** Settings opens a stable version/release-notes screen, including when already current. Legacy `auto=1` visits no longer install or return automatically. Explicit Update Now / Load update actions retain safe verified installation. See [0.2.5 release notes](mobile-refinement/RELEASE.md). The following records the earlier implementation.
 
 The user requested that Settings always load the latest published app and that available updates prompt immediately with an option to load them. They authorized main publication without a separate design review if the existing site appearance stays unchanged. Existing layout/theme styles are unchanged; only the requested functional notification and update-status text are added.
 

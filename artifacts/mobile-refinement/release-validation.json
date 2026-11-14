@@ -1,0 +1,25 @@
+{
+  "validatedAt": "2026-11-14T07:52:15.449161+00:00",
+  "approval": "November 14, 2026: merge it to main",
+  "previousMain": "b2689eb0f2b1cec47747180d91ef381191a9d11a",
+  "reviewedTip": "8633f334c1cae0fd866afd07d638339986bac4a9",
+  "reviewedBranch": "feature/muscle-map-scheduling-refinement",
+  "version": "0.2.5",
+  "productionBuild": "7a48ed84ab77",
+  "previewBuild": "04e4f979efcb",
+  "applicationSourceMatchesReviewedTip": true,
+  "checks": {
+    "domain": 169,
+    "backend": 9,
+    "coreBrowser": 24,
+    "mobileFeatures": 22,
+    "stableVersionScreen": 7,
+    "actual024Recovery": 11
+  },
+  "totalPassed": 242,
+  "failed": 0,
+  "assetDigests": "Every emitted production and preview release asset SHA-256 verified",
+  "data": "Actual 0.2.4 cached worker upgrade retains synthetic history, unfinished workout, profile, settings and photo bytes; root schema/database stay 1",
+  "publication": "Existing main Pages workflow records actual deployment after push; delete the merged branch after success",
+  "limitations": "Physical phone installation and OS presentation are not certified"
+}

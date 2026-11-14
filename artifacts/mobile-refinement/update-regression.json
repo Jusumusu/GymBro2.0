@@ -1,0 +1,44 @@
+{
+  "passed": 7,
+  "checks": [
+    "An actual installed 0.2.4 worker detects the new release without reloading or interrupting an unfinished workout",
+    "Old auto=1 entry remains on a readable release screen until intentional action; no artificial dismissal delay",
+    "Release information and actions fit both themes at all six required widths",
+    "An intentional Update Now activates the verified new worker and preserves entered workout data",
+    "Settings always opens a stable screen and explicitly reports the latest version when already current",
+    "Later returns to the unchanged workout without repeating an installed-release prompt",
+    "Unsupported offline-update browsers still open readable version information with accurate guidance and no destructive fallback"
+  ],
+  "errors": [],
+  "navigations": [
+    {
+      "at": 1794642562162,
+      "url": "http://127.0.0.1:5202/"
+    },
+    {
+      "at": 1794642567470,
+      "url": "http://127.0.0.1:5202/update.html?latest=1794642567437&auto=1"
+    },
+    {
+      "at": 1794642571950,
+      "url": "http://127.0.0.1:5202/?updated=7a48ed84ab77"
+    },
+    {
+      "at": 1794642572153,
+      "url": "http://127.0.0.1:5202/update.html?latest=1794642572132"
+    },
+    {
+      "at": 1794642574075,
+      "url": "http://127.0.0.1:5202/"
+    },
+    {
+      "at": 1794642574261,
+      "url": "http://127.0.0.1:5202/update.html?latest=1794642574241"
+    },
+    {
+      "at": 1794642574367,
+      "url": "http://127.0.0.1:5202/"
+    }
+  ],
+  "physicalDevices": "Not inspected; real Chromium worker lifecycle with mobile viewport emulation"
+}

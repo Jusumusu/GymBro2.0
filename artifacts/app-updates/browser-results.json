@@ -1,6 +1,7 @@
 {
-  "passed": 13,
+  "passed": 14,
   "checks": [
+    "Real recurring rules and enabled reminder preferences are populated for every subsequent update-preservation assertion",
     "A newly published build immediately prompts on focus without reloading or changing an active workout",
     "Functional update prompt fits phone and desktop sizes in the existing light/dark theme",
     "Later dismisses only this release; the update remains available in Settings",
@@ -8,7 +9,7 @@
     "Reconnection detects a newer build even when its version number is unchanged and the previous notice was dismissed",
     "A failed autosave blocks loading an update until the change is saved successfully",
     "One Load update click flushes pending set writes and opens the actual newest release, not the older prompt target",
-    "Settings Update app rechecks and reloads the latest release even when already up to date",
+    "Settings Update app stays open, reports already current, then refreshes only after confirmation",
     "A corrupt or partial release fails verification without deleting the working offline cache",
     "The previous complete app and unchanged workout remain usable after a failed update",
     "Preview updates use only their own release, writer lock, data and cache while production remains open",

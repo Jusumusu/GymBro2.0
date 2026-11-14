@@ -1,12 +1,16 @@
 # Gym Bro 2.0
 
-Private, offline-first strength training with an optional OpenAI-compatible coach backend. Native ES modules, Node 22+ and no npm dependencies. Version 0.2.4 adds audited muscle contributions, searchable exercise discovery and focused active-workout guidance, alongside reliable latest-version loading and automatic update notices. Main holds the approved app; new experiments use one temporary feature branch, removed after approval and release.
+Private, offline-first strength training with an optional OpenAI-compatible coach backend. Native ES modules, Node 22+ and no npm dependencies. Version 0.2.5 adds an interactive anatomical map, recurring weekly schedules, optional active-app reminders and a stable, readable version screen with explicit update consent. Main holds the approved app; new experiments use one temporary feature branch, removed after approval and release.
 
 - Stable: https://jusumusu.github.io/GymBro2.0/
 - Upgrade preview: https://jusumusu.github.io/GymBro2.0/preview/
 - [Upgrade status and scope](docs/upgrade/STATUS.md)
 
-The preview has a **separate journal**, database, writer lock and service-worker scope. It starts empty. To try your own records, export JSON in the stable app, then explicitly import that backup in preview Settings. Your stable journal stays separate; changes do not synchronize between them. Keep your original backup.
+The preview has a **separate journal**, database, writer lock and service-worker scope. A never-used preview starts empty; an existing preview journal is retained. To try your own records, export JSON in the stable app, then explicitly import that backup in preview Settings. Your stable journal stays separate; changes do not synchronize between them. Keep your original backup.
+
+## 0.2.5 release
+
+The user approved the reviewed update for main on November 14, 2026. The main workflow publishes 0.2.5 at the stable URL and retains the separate preview journal. Settings → Update app stays open for reading, including when already current; Update Now installs only after explicit action. [Release/data notes](docs/mobile-refinement/RELEASE.md) · [Review, tests and screenshots](docs/mobile-refinement/REVIEW.md) · [Release status](docs/mobile-refinement/STATUS.md).
 
 ## 0.2.4 release
 
@@ -31,6 +35,9 @@ npm run test:upgrade      # upgraded UI, responsive layouts and storage isolatio
 npm run test:update       # stale-cache recovery without journal deletion
 npm run test:workout-ux   # exercise discovery, muscle maps, active sets and visual QA
 npm run test:app-updates  # real notifications, one-click updates and failed-release recovery
+npm run test:mobile-update # real archived 0.2.4 → candidate; stable current-version screen
+npm run test:mobile-refinement # anatomy, recurrence, reminder APIs, responsive/offline QA
+npm run benchmark:mobile  # controlled historical-data map comparison (baseline path documented)
 npm run benchmark         # synthetic 1,500-session CPU benchmark
 ```
 

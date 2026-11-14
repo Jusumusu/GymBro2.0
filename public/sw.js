@@ -25,6 +25,10 @@ self.addEventListener('message',event=>{
  if(event.data?.type==='GET_BUILD_INFO')event.ports[0]?.postMessage({build:RELEASE.build,version:RELEASE.version,environment:RELEASE.environment});
  if(event.data?.type==='ACTIVATE_UPDATE'&&event.data.build===RELEASE.build)event.waitUntil(self.skipWaiting().then(()=>event.ports[0]?.postMessage({ok:true})));
 });
+self.addEventListener('notificationclick',event=>{
+ event.notification.close();
+ event.waitUntil((async()=>{const windows=await self.clients.matchAll({type:'window',includeUncontrolled:true});const target=windows.find(c=>{const u=new URL(c.url);return u.origin===scope.origin&&(u.pathname===scope.pathname||u.pathname===new URL('index.html',scope).pathname);});if(target){await target.focus();target.postMessage({type:'OPEN_CALENDAR'});}else await self.clients.openWindow(new URL('./#calendar',scope).href);})());
+});
 self.addEventListener('fetch',event=>{
  const url=new URL(event.request.url);if(event.request.method!=='GET'||url.origin!==scope.origin)return;
  // Recovery and release metadata always come from the network, never an old shell.
