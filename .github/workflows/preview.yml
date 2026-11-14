@@ -1,7 +1,7 @@
-name: Deploy isolated muscle map and scheduling preview
+name: Deploy isolated advanced training preview
 on:
   push:
-    branches: [feature/muscle-map-scheduling-refinement]
+    branches: [feature/advanced-training-experience]
     paths:
       - 'src/**'
       - 'public/**'
@@ -21,7 +21,7 @@ concurrency:
   cancel-in-progress: false
 jobs:
   build:
-    if: github.ref == 'refs/heads/feature/muscle-map-scheduling-refinement'
+    if: github.ref == 'refs/heads/feature/advanced-training-experience'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -50,7 +50,7 @@ jobs:
         with:
           path: site
   deploy:
-    if: github.ref == 'refs/heads/feature/muscle-map-scheduling-refinement'
+    if: github.ref == 'refs/heads/feature/advanced-training-experience'
     needs: build
     runs-on: ubuntu-latest
     timeout-minutes: 15

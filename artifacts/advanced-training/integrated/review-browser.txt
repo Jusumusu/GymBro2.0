@@ -1,0 +1,11 @@
+
+> gym-bro@0.3.0 test:review-site
+> node tests/browser-review-site.mjs
+
+PASS Composed root runs actual released main with saved history and an unfinished workout
+PASS Actual preview build starts with a separate journal and its own verified worker scope
+PASS The composed preview retains existing workout features and contains the new refinements and explicitly imports a copy without changing original record identities
+PASS The preview version screen stays visible when already current and returns to its isolated journal only by explicit action
+PASS The real built preview remains functional offline with restored current-set state
+PASS Production code, settings, history and the unfinished workout remain unchanged after preview import, edits and offline use
+6 composed preview browser checks passed.

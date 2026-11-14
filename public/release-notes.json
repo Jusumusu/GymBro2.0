@@ -1,10 +1,11 @@
 {
-  "version": "0.2.5",
+  "version": "0.3.0",
   "notes": [
-    "A new interactive front and back muscle map with clear selection.",
-    "Recurring weekly workouts with individual occurrence changes.",
-    "Optional workout reminders with a master Notifications switch.",
-    "A stable version screen, readable release notes and user-controlled updates.",
-    "Focused mobile responsiveness and reliability improvements."
+    "Backup & Data with optional encrypted files, verification and safe recovery.",
+    "Optional Focus Mode with previous performance, supersets and persistent rest timers.",
+    "Multiweek training blocks with future targets and optional lighter weeks.",
+    "Reversible time-adaptive workouts that preserve completed sets and saved plans.",
+    "Private exercise feedback and practical reminders for future workouts.",
+    "Calendar file exports for scheduled and recurring workouts with time zones and reminders."
   ]
 }

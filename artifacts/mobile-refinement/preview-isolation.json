@@ -9,9 +9,9 @@
     "Production code, settings, history and the unfinished workout remain unchanged after preview import, edits and offline use"
   ],
   "errors": [],
-  "main": "0.2.4",
-  "preview": "0.2.5",
-  "mainBuild": "0f3f536c00e0",
-  "previewBuild": "04e4f979efcb",
+  "main": "0.2.5",
+  "preview": "0.3.0",
+  "mainBuild": "7a48ed84ab77",
+  "previewBuild": "7abdda1beaf7",
   "scope": "Real standalone-main + built-preview composition, tested locally; public publication is separately permission-gated"
 }

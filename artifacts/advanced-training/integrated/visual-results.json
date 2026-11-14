@@ -1,0 +1,606 @@
+{
+  "passed": 120,
+  "checks": [
+    {
+      "name": "backup",
+      "width": 320,
+      "theme": "light"
+    },
+    {
+      "name": "export",
+      "width": 320,
+      "theme": "light"
+    },
+    {
+      "name": "focus",
+      "width": 320,
+      "theme": "light"
+    },
+    {
+      "name": "feedback",
+      "width": 320,
+      "theme": "light"
+    },
+    {
+      "name": "time-select",
+      "width": 320,
+      "theme": "light"
+    },
+    {
+      "name": "time-preview",
+      "width": 320,
+      "theme": "light"
+    },
+    {
+      "name": "block",
+      "width": 320,
+      "theme": "light"
+    },
+    {
+      "name": "block-targets",
+      "width": 320,
+      "theme": "light"
+    },
+    {
+      "name": "calendar",
+      "width": 320,
+      "theme": "light"
+    },
+    {
+      "name": "calendar-review",
+      "width": 320,
+      "theme": "light"
+    },
+    {
+      "name": "backup",
+      "width": 375,
+      "theme": "light"
+    },
+    {
+      "name": "export",
+      "width": 375,
+      "theme": "light"
+    },
+    {
+      "name": "focus",
+      "width": 375,
+      "theme": "light"
+    },
+    {
+      "name": "feedback",
+      "width": 375,
+      "theme": "light"
+    },
+    {
+      "name": "time-select",
+      "width": 375,
+      "theme": "light"
+    },
+    {
+      "name": "time-preview",
+      "width": 375,
+      "theme": "light"
+    },
+    {
+      "name": "block",
+      "width": 375,
+      "theme": "light"
+    },
+    {
+      "name": "block-targets",
+      "width": 375,
+      "theme": "light"
+    },
+    {
+      "name": "calendar",
+      "width": 375,
+      "theme": "light"
+    },
+    {
+      "name": "calendar-review",
+      "width": 375,
+      "theme": "light"
+    },
+    {
+      "name": "backup",
+      "width": 390,
+      "theme": "light"
+    },
+    {
+      "name": "export",
+      "width": 390,
+      "theme": "light"
+    },
+    {
+      "name": "focus",
+      "width": 390,
+      "theme": "light"
+    },
+    {
+      "name": "feedback",
+      "width": 390,
+      "theme": "light"
+    },
+    {
+      "name": "time-select",
+      "width": 390,
+      "theme": "light"
+    },
+    {
+      "name": "time-preview",
+      "width": 390,
+      "theme": "light"
+    },
+    {
+      "name": "block",
+      "width": 390,
+      "theme": "light"
+    },
+    {
+      "name": "block-targets",
+      "width": 390,
+      "theme": "light"
+    },
+    {
+      "name": "calendar",
+      "width": 390,
+      "theme": "light"
+    },
+    {
+      "name": "calendar-review",
+      "width": 390,
+      "theme": "light"
+    },
+    {
+      "name": "backup",
+      "width": 430,
+      "theme": "light"
+    },
+    {
+      "name": "export",
+      "width": 430,
+      "theme": "light"
+    },
+    {
+      "name": "focus",
+      "width": 430,
+      "theme": "light"
+    },
+    {
+      "name": "feedback",
+      "width": 430,
+      "theme": "light"
+    },
+    {
+      "name": "time-select",
+      "width": 430,
+      "theme": "light"
+    },
+    {
+      "name": "time-preview",
+      "width": 430,
+      "theme": "light"
+    },
+    {
+      "name": "block",
+      "width": 430,
+      "theme": "light"
+    },
+    {
+      "name": "block-targets",
+      "width": 430,
+      "theme": "light"
+    },
+    {
+      "name": "calendar",
+      "width": 430,
+      "theme": "light"
+    },
+    {
+      "name": "calendar-review",
+      "width": 430,
+      "theme": "light"
+    },
+    {
+      "name": "backup",
+      "width": 768,
+      "theme": "light"
+    },
+    {
+      "name": "export",
+      "width": 768,
+      "theme": "light"
+    },
+    {
+      "name": "focus",
+      "width": 768,
+      "theme": "light"
+    },
+    {
+      "name": "feedback",
+      "width": 768,
+      "theme": "light"
+    },
+    {
+      "name": "time-select",
+      "width": 768,
+      "theme": "light"
+    },
+    {
+      "name": "time-preview",
+      "width": 768,
+      "theme": "light"
+    },
+    {
+      "name": "block",
+      "width": 768,
+      "theme": "light"
+    },
+    {
+      "name": "block-targets",
+      "width": 768,
+      "theme": "light"
+    },
+    {
+      "name": "calendar",
+      "width": 768,
+      "theme": "light"
+    },
+    {
+      "name": "calendar-review",
+      "width": 768,
+      "theme": "light"
+    },
+    {
+      "name": "backup",
+      "width": 1024,
+      "theme": "light"
+    },
+    {
+      "name": "export",
+      "width": 1024,
+      "theme": "light"
+    },
+    {
+      "name": "focus",
+      "width": 1024,
+      "theme": "light"
+    },
+    {
+      "name": "feedback",
+      "width": 1024,
+      "theme": "light"
+    },
+    {
+      "name": "time-select",
+      "width": 1024,
+      "theme": "light"
+    },
+    {
+      "name": "time-preview",
+      "width": 1024,
+      "theme": "light"
+    },
+    {
+      "name": "block",
+      "width": 1024,
+      "theme": "light"
+    },
+    {
+      "name": "block-targets",
+      "width": 1024,
+      "theme": "light"
+    },
+    {
+      "name": "calendar",
+      "width": 1024,
+      "theme": "light"
+    },
+    {
+      "name": "calendar-review",
+      "width": 1024,
+      "theme": "light"
+    },
+    {
+      "name": "backup",
+      "width": 320,
+      "theme": "dark"
+    },
+    {
+      "name": "export",
+      "width": 320,
+      "theme": "dark"
+    },
+    {
+      "name": "focus",
+      "width": 320,
+      "theme": "dark"
+    },
+    {
+      "name": "feedback",
+      "width": 320,
+      "theme": "dark"
+    },
+    {
+      "name": "time-select",
+      "width": 320,
+      "theme": "dark"
+    },
+    {
+      "name": "time-preview",
+      "width": 320,
+      "theme": "dark"
+    },
+    {
+      "name": "block",
+      "width": 320,
+      "theme": "dark"
+    },
+    {
+      "name": "block-targets",
+      "width": 320,
+      "theme": "dark"
+    },
+    {
+      "name": "calendar",
+      "width": 320,
+      "theme": "dark"
+    },
+    {
+      "name": "calendar-review",
+      "width": 320,
+      "theme": "dark"
+    },
+    {
+      "name": "backup",
+      "width": 375,
+      "theme": "dark"
+    },
+    {
+      "name": "export",
+      "width": 375,
+      "theme": "dark"
+    },
+    {
+      "name": "focus",
+      "width": 375,
+      "theme": "dark"
+    },
+    {
+      "name": "feedback",
+      "width": 375,
+      "theme": "dark"
+    },
+    {
+      "name": "time-select",
+      "width": 375,
+      "theme": "dark"
+    },
+    {
+      "name": "time-preview",
+      "width": 375,
+      "theme": "dark"
+    },
+    {
+      "name": "block",
+      "width": 375,
+      "theme": "dark"
+    },
+    {
+      "name": "block-targets",
+      "width": 375,
+      "theme": "dark"
+    },
+    {
+      "name": "calendar",
+      "width": 375,
+      "theme": "dark"
+    },
+    {
+      "name": "calendar-review",
+      "width": 375,
+      "theme": "dark"
+    },
+    {
+      "name": "backup",
+      "width": 390,
+      "theme": "dark"
+    },
+    {
+      "name": "export",
+      "width": 390,
+      "theme": "dark"
+    },
+    {
+      "name": "focus",
+      "width": 390,
+      "theme": "dark"
+    },
+    {
+      "name": "feedback",
+      "width": 390,
+      "theme": "dark"
+    },
+    {
+      "name": "time-select",
+      "width": 390,
+      "theme": "dark"
+    },
+    {
+      "name": "time-preview",
+      "width": 390,
+      "theme": "dark"
+    },
+    {
+      "name": "block",
+      "width": 390,
+      "theme": "dark"
+    },
+    {
+      "name": "block-targets",
+      "width": 390,
+      "theme": "dark"
+    },
+    {
+      "name": "calendar",
+      "width": 390,
+      "theme": "dark"
+    },
+    {
+      "name": "calendar-review",
+      "width": 390,
+      "theme": "dark"
+    },
+    {
+      "name": "backup",
+      "width": 430,
+      "theme": "dark"
+    },
+    {
+      "name": "export",
+      "width": 430,
+      "theme": "dark"
+    },
+    {
+      "name": "focus",
+      "width": 430,
+      "theme": "dark"
+    },
+    {
+      "name": "feedback",
+      "width": 430,
+      "theme": "dark"
+    },
+    {
+      "name": "time-select",
+      "width": 430,
+      "theme": "dark"
+    },
+    {
+      "name": "time-preview",
+      "width": 430,
+      "theme": "dark"
+    },
+    {
+      "name": "block",
+      "width": 430,
+      "theme": "dark"
+    },
+    {
+      "name": "block-targets",
+      "width": 430,
+      "theme": "dark"
+    },
+    {
+      "name": "calendar",
+      "width": 430,
+      "theme": "dark"
+    },
+    {
+      "name": "calendar-review",
+      "width": 430,
+      "theme": "dark"
+    },
+    {
+      "name": "backup",
+      "width": 768,
+      "theme": "dark"
+    },
+    {
+      "name": "export",
+      "width": 768,
+      "theme": "dark"
+    },
+    {
+      "name": "focus",
+      "width": 768,
+      "theme": "dark"
+    },
+    {
+      "name": "feedback",
+      "width": 768,
+      "theme": "dark"
+    },
+    {
+      "name": "time-select",
+      "width": 768,
+      "theme": "dark"
+    },
+    {
+      "name": "time-preview",
+      "width": 768,
+      "theme": "dark"
+    },
+    {
+      "name": "block",
+      "width": 768,
+      "theme": "dark"
+    },
+    {
+      "name": "block-targets",
+      "width": 768,
+      "theme": "dark"
+    },
+    {
+      "name": "calendar",
+      "width": 768,
+      "theme": "dark"
+    },
+    {
+      "name": "calendar-review",
+      "width": 768,
+      "theme": "dark"
+    },
+    {
+      "name": "backup",
+      "width": 1024,
+      "theme": "dark"
+    },
+    {
+      "name": "export",
+      "width": 1024,
+      "theme": "dark"
+    },
+    {
+      "name": "focus",
+      "width": 1024,
+      "theme": "dark"
+    },
+    {
+      "name": "feedback",
+      "width": 1024,
+      "theme": "dark"
+    },
+    {
+      "name": "time-select",
+      "width": 1024,
+      "theme": "dark"
+    },
+    {
+      "name": "time-preview",
+      "width": 1024,
+      "theme": "dark"
+    },
+    {
+      "name": "block",
+      "width": 1024,
+      "theme": "dark"
+    },
+    {
+      "name": "block-targets",
+      "width": 1024,
+      "theme": "dark"
+    },
+    {
+      "name": "calendar",
+      "width": 1024,
+      "theme": "dark"
+    },
+    {
+      "name": "calendar-review",
+      "width": 1024,
+      "theme": "dark"
+    }
+  ],
+  "errors": []
+}

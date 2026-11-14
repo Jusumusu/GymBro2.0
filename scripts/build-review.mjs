@@ -7,7 +7,7 @@ const scratch=await mkdtemp(join(tmpdir(),'gymbro-review-')),root=process.cwd();
 function run(command,args,cwd=root){const r=spawnSync(command,args,{cwd,stdio:'inherit'});if(r.error)throw r.error;if(r.status!==0)throw Error('Review build failed: '+command);}
 try{
  await mkdir(join(scratch,'stable'));
- run('git',['archive','--format=tar','--output='+join(scratch,'main.tar'),'main']);
+ run('git',['archive','--format=tar','--output='+join(scratch,'main.tar'),process.env.GYMBRO_STABLE_REF||'origin/main']);
  run('tar',['-xf',join(scratch,'main.tar'),'-C',join(scratch,'stable')]);
  run(process.execPath,['scripts/build.mjs'],join(scratch,'stable'));
  run(process.execPath,['scripts/build.mjs','--preview']);

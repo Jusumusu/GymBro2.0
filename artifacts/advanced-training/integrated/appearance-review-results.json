@@ -1,0 +1,45 @@
+{
+  "passed": 12,
+  "checks": [
+    "Saved appearance applies before the app module loads or paints its UI",
+    "Theme changes apply and persist immediately without changing any workout, body or photo metadata",
+    "System Default follows live device appearance changes and updates the PWA theme color",
+    "Sunday preference persists and aligns calendar headers, weekly reviews and unchanged historical dates",
+    "Historical check-ins use the selected week, exclude later records and never award duplicate achievements",
+    "Weekly workload and frequency chart buckets follow Sunday-first boundaries",
+    "Every route fits seven phone/tablet/desktop widths in both themes; dialogs remain centered and contained",
+    "Active numeric logging, previous performance, warm-ups and dialogs are readable and contained in both themes",
+    "Changing back to Monday updates every weekly view while retaining the active workout",
+    "All empty routes remain usable in both themes and empty reviews invent no wins",
+    "Weekly review, appearance and week preference remain available offline after an app-shell load",
+    "Reduced motion is respected and no uncaught exceptions occur in the refinement flows"
+  ],
+  "errors": [],
+  "viewports": [
+    320,
+    375,
+    390,
+    430,
+    768,
+    1024,
+    1440
+  ],
+  "themes": [
+    "light",
+    "dark"
+  ],
+  "routes": [
+    "workout",
+    "programs",
+    "progress",
+    "body",
+    "history",
+    "calendar",
+    "goals",
+    "muscles",
+    "coach",
+    "settings",
+    "review",
+    "summary"
+  ]
+}

@@ -27,8 +27,8 @@
   "errors": [],
   "metrics": {
     "browserNotifications": 1,
-    "heapAfterNavigationCycles": 1900500,
-    "heapBeforeNavigationCycles": 2496712
+    "heapAfterNavigationCycles": 2023764,
+    "heapBeforeNavigationCycles": 3065532
   },
   "widths": [
     320,

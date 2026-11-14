@@ -1,0 +1,16 @@
+
+> gym-bro@0.3.0 test:update
+> node tests/browser-update.mjs
+
+PASS Welcome screen offers direct import without profile setup
+PASS Reproduced stale cached code even after a newer app was deployed
+PASS Uncached update page opens through the old service worker
+PASS Updater blocks while another Gym Bro window is writing
+PASS Offline update leaves the working cached app intact
+PASS Update bypasses old cached code and opens the current app
+PASS History, unfinished workout, body entries, profile and photo metadata are unchanged
+PASS Private photo bytes remain intact
+PASS Other applications’ and nested scopes’ cache entries are preserved
+PASS Updated version is visible and offline shell re-registers
+PASS Actual 0.2.5 journal upgrades to 0.3.0, preserving original records and preferences except the deliberately changed theme
+11 browser update checks passed.

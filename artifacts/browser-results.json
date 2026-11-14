@@ -1,6 +1,6 @@
 {
   "browser": "Chromium",
-  "date": "2026-11-14T07:49:44.337Z",
+  "date": "2026-11-14T15:13:38.979Z",
   "passed": 24,
   "checks": [
     "Onboarding layout fits 280, 320 and 390 px",

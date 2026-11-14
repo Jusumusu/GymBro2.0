@@ -1,6 +1,8 @@
 # Data backup and recovery
 
-Settings → Export complete JSON backup. Keep it outside browser storage in a location you control. It includes profile, custom exercises, plans, completed sessions, active draft, body weights, measurements, unlock IDs, and original photos. It is not encrypted; photos may include camera metadata.
+Settings → Backup & Data → Export backup. Keep the file outside browser storage in a trusted location. Version 2 includes the supported complete journal, programs, active draft, goals, schedules, training blocks, feedback and preferences. Progress photos require explicit selection; original images may include camera metadata. Optional password protection encrypts the entire payload. Losing the password makes that file unrecoverable. Native version 1 files remain supported.
+
+A requested browser download is not marked successful. Supported file-writer completion or reading back and verifying a saved file supplies evidence. Local browser persistence is never called a backup. Reminders are optional and respect the master Notifications switch.
 
 CSV is an analysis export, not full restoration. It uses canonical kg regardless of display units, includes completed sets with their types, and escapes spreadsheet formulas in user text.
 
@@ -11,11 +13,11 @@ CSV is an analysis export, not full restoration. It uses canonical kg regardless
 3. Review counts and duplicate IDs.
 4. Confirm full replacement.
 
-Restore is not a merge. Re-importing does not add duplicate sessions. IDs, references, calendar dates, and numeric bounds are validated. Incomplete photos, unsupported image payloads, oversized files (>100 MB backup or >8 MB/image), malformed JSON, and unknown schema versions are rejected. State and photo blobs restore in one IndexedDB transaction; quota failures abort it.
+Restore is not a merge. Re-importing does not add duplicate sessions. IDs, references, calendar dates, and numeric bounds are validated. Incomplete photos, unsupported image payloads, oversized files (>100 MB backup or >8 MB/image), malformed JSON, and unknown schema versions are rejected. State and photo blobs restore in one IndexedDB transaction; quota failures abort it. The preceding journal and its photo blobs are captured in the same transaction before replacement. Settings offers explicit preceding-journal recovery; a read-back check verifies the restored state. Restore shares the autosave write queue.
 
 ## Limits
 
-Browser eviction, private browsing, manual data clearing, device loss, changing site origins, or uninstall behavior can remove records. Persistent storage is user-requested and may be denied. There is no cloud backup or guaranteed encryption. Export before moving to a new host/origin.
+Browser eviction, private browsing, manual data clearing, device loss, changing site origins, or uninstall behavior can remove records. Persistent storage is user-requested and may be denied. There is no cloud backup or device sync. Plain exports are unencrypted; select a password to use authenticated encryption. Export before moving to a new host/origin.
 
 Draft inputs autosave after validation. An input pending during a crash may not have committed. A normal exit warns while writes are pending. A database-open failure never resets stored data. Retry after fixing storage permission/access. There is no repair UI for manually corrupted IndexedDB; recover from a valid external backup.
 
@@ -23,7 +25,7 @@ Original Gym Bro v3 exports support the merge flow below; other legacy versions 
 
 ## Import the original Gym Bro v3 export directly
 
-The file you already downloaded from the original app can be selected in **Settings → Import a backup**. No file conversion download is required.
+The file you already downloaded from the original app can be selected in **Settings → Backup & Data → Restore from backup**. No file conversion download is required.
 
 1. Choose the original complete JSON export and select **Validate & preview**.
 2. Review new workouts, matching workouts skipped, new weigh-ins and programs. If weigh-in dates conflict, existing Gym Bro 2.0 values are kept.
@@ -45,3 +47,5 @@ Preview uses `gymbro-preview-v1` for both state and media, a separate writer loc
 The upgrade keeps native root schema v1 and adds a validated extension v1 for appearance, goals, calendar, optional readiness, progression rules and coach preferences/messages/decisions. Old backups get defaults without losing core fields. Unknown extension versions stop safely. Backend client tokens and provider keys are never in this backup. Conversation/preferences may be sensitive; backups remain unencrypted.
 
 Retain your pre-upgrade backup: expanded built-in exercise IDs are unknown to the former 0.1.2 app, so that old version cannot read every new backup. Main and preview now both support 0.2.1 records but keep their journals separate. Older plan editors can also drop advanced fields. A code rollback to 0.1.2 alone does not provide a lossless data downgrade. Export preview data separately before removing it.
+
+See [advanced backup/encryption/recovery architecture](advanced-training/ARCHITECTURE.md) and [actual test coverage](advanced-training/QA.md). The 100 MB payload limit becomes approximately 134 MB for an encrypted envelope; individual photos retain the 8 MB limit.

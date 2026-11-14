@@ -1,0 +1,14 @@
+{
+  "sourceCommit": "ce4f36a0fbc5528f79f8e5c1fca8cf33b0b1d3e2",
+  "branch": "feature/advanced-training-experience",
+  "productionVersion": "0.2.5",
+  "productionBuild": "7a48ed84ab77",
+  "candidateVersion": "0.3.0",
+  "candidateBuild": "7abdda1beaf7",
+  "scope": "Candidate only at /preview/; root byte-identical to approved origin/main; no journal/media data",
+  "archive": "artifacts/advanced-training/review-preview.zip",
+  "bytes": 1409886,
+  "sha256": "7b4c8889139ba4e988896d82476c7a1126926e951bb7befc2c6961f40c09257e",
+  "fileHashesVerified": 210,
+  "zipIntegrity": "passed"
+}

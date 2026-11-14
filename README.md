@@ -1,5 +1,9 @@
 # Gym Bro 2.0
 
+## 0.3.0 advanced-training candidate
+
+The six-feature update is implemented on `feature/advanced-training-experience` using the user-approved **A — Quiet focus** design. Main remains the approved 0.2.5 release. See the [feature review and local preview instructions](docs/advanced-training/REVIEW.md), [executed QA](docs/advanced-training/QA.md), and [data/architecture changes](docs/advanced-training/ARCHITECTURE.md). [PR #1](https://github.com/Jusumusu/GymBro2.0/pull/1) is not merged. The candidate live preview is blocked by GitHub environment protection; the existing preview URL below is not this candidate.
+
 Private, offline-first strength training with an optional OpenAI-compatible coach backend. Native ES modules, Node 22+ and no npm dependencies. Version 0.2.5 adds an interactive anatomical map, recurring weekly schedules, optional active-app reminders and a stable, readable version screen with explicit update consent. Main holds the approved app; new experiments use one temporary feature branch, removed after approval and release.
 
 - Stable: https://jusumusu.github.io/GymBro2.0/
@@ -71,4 +75,4 @@ From 0.2.3, Settings → **Update app** always checks and loads the latest publi
 
 [Architecture](docs/ARCHITECTURE.md) · [Training rules](docs/RESEARCH.md) · [QA evidence](docs/QA.md) · [Known limits](docs/LIMITATIONS.md) · [Coach contracts and evaluation](docs/upgrade/COACH.md) · [Optional sync design](docs/upgrade/SYNC.md)
 
-Browser data is device-local and can be cleared. Backups are not encrypted. Estimates and coaching suggestions remain editable; no medical assessment, recovery score, verified population strength standard or automatic cloud sync is claimed.
+Browser data is device-local and can be cleared. Backup files can optionally be password protected; ordinary JSON files remain unencrypted. Estimates and coaching suggestions remain editable; no medical assessment, recovery score, verified population strength standard or automatic cloud sync is claimed.
