@@ -6,3 +6,5 @@ import './app-updates.test.mjs';
 import './workout-ux.test.mjs';
 
 import './mobile-refinement.test.mjs';
+
+import './advanced-training.test.mjs';
