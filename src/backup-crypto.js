@@ -1,5 +1,5 @@
 // Portable authenticated envelopes. The complete JSON backup (including metadata) is encrypted.
-// UI integration is gated by the advanced-training design review.
+// Integrated with explicit photo consent and optional password entry.
 const FORMAT='gymbro-encrypted-backup';
 const ITERATIONS=600000;
 const MAX_BYTES=100*1024*1024;
