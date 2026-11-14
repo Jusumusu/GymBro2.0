@@ -1,7 +1,7 @@
 {
   "passed": 7,
   "checks": [
-    "An actual installed 0.2.4 worker detects the new release without reloading or interrupting an unfinished workout",
+    "An actual installed 0.2.5 worker detects the new release without reloading or interrupting an unfinished workout",
     "Old auto=1 entry remains on a readable release screen until intentional action; no artificial dismissal delay",
     "Release information and actions fit both themes at all six required widths",
     "An intentional Update Now activates the verified new worker and preserves entered workout data",
@@ -12,31 +12,31 @@
   "errors": [],
   "navigations": [
     {
-      "at": 1794642562162,
+      "at": 1794669452328,
       "url": "http://127.0.0.1:5202/"
     },
     {
-      "at": 1794642567470,
-      "url": "http://127.0.0.1:5202/update.html?latest=1794642567437&auto=1"
+      "at": 1794669455285,
+      "url": "http://127.0.0.1:5202/update.html?latest=1794669455261"
     },
     {
-      "at": 1794642571950,
-      "url": "http://127.0.0.1:5202/?updated=7a48ed84ab77"
+      "at": 1794669459577,
+      "url": "http://127.0.0.1:5202/?updated=f14bebef7eee"
     },
     {
-      "at": 1794642572153,
-      "url": "http://127.0.0.1:5202/update.html?latest=1794642572132"
+      "at": 1794669459687,
+      "url": "http://127.0.0.1:5202/update.html?latest=1794669459675"
     },
     {
-      "at": 1794642574075,
+      "at": 1794669461593,
       "url": "http://127.0.0.1:5202/"
     },
     {
-      "at": 1794642574261,
-      "url": "http://127.0.0.1:5202/update.html?latest=1794642574241"
+      "at": 1794669461703,
+      "url": "http://127.0.0.1:5202/update.html?latest=1794669461690"
     },
     {
-      "at": 1794642574367,
+      "at": 1794669461808,
       "url": "http://127.0.0.1:5202/"
     }
   ],

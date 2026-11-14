@@ -1,0 +1,11 @@
+
+> gym-bro@0.3.0 test:mobile-update
+> node tests/browser-mobile-update.mjs
+
+PASS An actual installed 0.2.5 worker detects the new release without reloading or interrupting an unfinished workout
+PASS Old auto=1 entry remains on a readable release screen until intentional action; no artificial dismissal delay
+PASS Release information and actions fit both themes at all six required widths
+PASS An intentional Update Now activates the verified new worker and preserves entered workout data
+PASS Settings always opens a stable screen and explicitly reports the latest version when already current
+PASS Later returns to the unchanged workout without repeating an installed-release prompt
+PASS Unsupported offline-update browsers still open readable version information with accurate guidance and no destructive fallback

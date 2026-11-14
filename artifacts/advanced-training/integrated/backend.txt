@@ -1,0 +1,21 @@
+
+> gym-bro@0.3.0 test:backend
+> node tests/backend.test.mjs
+
+✔ backend rejects disallowed origins before calling provider (18.081957ms)
+✔ backend requires a server-issued client token (4.368494ms)
+✔ missing provider configuration returns an honest unavailable state (2.995397ms)
+✔ validated context reaches provider with server-held key and no raw extra records (3.004481ms)
+✔ invalid data produces no upstream request (3.547634ms)
+✔ oversized requests are rejected (2.251913ms)
+✔ rate limit bounds provider usage (10.136324ms)
+✔ CORS preflight allows only required methods and headers (1.768219ms)
+✔ provider receives bounded conversation and instructions to answer routine questions directly (1.85599ms)
+ℹ tests 9
+ℹ suites 0
+ℹ pass 9
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 51.463914

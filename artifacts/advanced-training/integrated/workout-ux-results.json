@@ -1,0 +1,43 @@
+{
+  "passed": 19,
+  "checks": [
+    "Three recorded squat sets highlight glutes and quads, separate secondary/stabilizing totals, and keep unrelated regions neutral",
+    "Global alias search bypasses category selection; meaningful multi-muscle categories and equipment filters work together",
+    "Favorites add/remove and persist without duplicate exercise records or changes to workout history",
+    "Custom exercise mapping is explicit and editable; renaming preserves its ID and historical associations",
+    "Plan exercise browsing and favorites preserve unsaved form values and save the intended stable exercise identity",
+    "Esc returns from plan browsing without losing edits; cancelling the editor leaves the saved plan unchanged",
+    "Custom exercises select into an active workout by stable ID without resetting prior set values",
+    "Exactly one manual current set persists across reload without completing intervening sets",
+    "Warm-ups and skipped sets advance into alternating superset rounds while keeping skipped sets incomplete",
+    "Compact exercise options retain all 11 capabilities, close with Escape and return keyboard focus",
+    "Completed exercise badges update immediately when a set is reopened; completed rows never retain active highlighting",
+    "Reordering and adding sets preserve a single active pointer; destructive actions require confirmation and can be cancelled",
+    "Confirmed exercise replacement retains entered/completed sets and all unrelated workout progress, using the replacement’s own load baseline",
+    "Workout replacement is fully undoable without editing saved history",
+    "Both week-start preferences update the calendar without changing recorded dates or active workout values",
+    "All five refinements fit seven viewport widths in light/dark themes; calendar weekday/date centers and widths align",
+    "Month and year transitions retain a complete symmetric calendar grid",
+    "Global search over 1244 exercises and paginated results stay usable without rendering the whole database",
+    "Library search, favorites and active-set guidance work offline while history remains unchanged"
+  ],
+  "errors": [],
+  "widths": [
+    320,
+    375,
+    390,
+    430,
+    768,
+    1024,
+    1440
+  ],
+  "themes": [
+    "light",
+    "dark"
+  ],
+  "search": {
+    "exercises": 1244,
+    "ms": 63
+  },
+  "screenshots": "Synthetic QA records only"
+}

@@ -1,0 +1,24 @@
+
+> gym-bro@0.3.0 test:workout-ux
+> node tests/browser-workout-ux.mjs
+
+PASS Three recorded squat sets highlight glutes and quads, separate secondary/stabilizing totals, and keep unrelated regions neutral
+PASS Global alias search bypasses category selection; meaningful multi-muscle categories and equipment filters work together
+PASS Favorites add/remove and persist without duplicate exercise records or changes to workout history
+PASS Custom exercise mapping is explicit and editable; renaming preserves its ID and historical associations
+PASS Plan exercise browsing and favorites preserve unsaved form values and save the intended stable exercise identity
+PASS Esc returns from plan browsing without losing edits; cancelling the editor leaves the saved plan unchanged
+PASS Custom exercises select into an active workout by stable ID without resetting prior set values
+PASS Exactly one manual current set persists across reload without completing intervening sets
+PASS Warm-ups and skipped sets advance into alternating superset rounds while keeping skipped sets incomplete
+PASS Compact exercise options retain all 11 capabilities, close with Escape and return keyboard focus
+PASS Completed exercise badges update immediately when a set is reopened; completed rows never retain active highlighting
+PASS Reordering and adding sets preserve a single active pointer; destructive actions require confirmation and can be cancelled
+PASS Confirmed exercise replacement retains entered/completed sets and all unrelated workout progress, using the replacement’s own load baseline
+PASS Workout replacement is fully undoable without editing saved history
+PASS Both week-start preferences update the calendar without changing recorded dates or active workout values
+PASS All five refinements fit seven viewport widths in light/dark themes; calendar weekday/date centers and widths align
+PASS Month and year transitions retain a complete symmetric calendar grid
+PASS Global search over 1244 exercises and paginated results stay usable without rendering the whole database
+PASS Library search, favorites and active-set guidance work offline while history remains unchanged
+19 workout refinement browser checks passed.
