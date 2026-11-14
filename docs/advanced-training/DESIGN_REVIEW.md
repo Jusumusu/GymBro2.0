@@ -1,6 +1,6 @@
 # Initial visual review — approval required
 
-No concept selected. No final application UI implemented. The user's BRIEF.md requires three visual options and explicit selection before implementation; it permits independent technical work to continue. Source fragment: design-review.html. All figures, dates, counts and weights in the prototypes are synthetic examples, never actual user history or computed recommendations. Buttons demonstrate interaction only; no export, logging, notification or timer functionality is represented as complete.
+Concept A selected; final application UI implemented on the feature branch. The original comparison below is retained for provenance. The user's BRIEF.md requires three visual options and explicit selection before implementation; it permits independent technical work to continue. Source fragment: design-review.html. All figures, dates, counts and weights in the prototypes are synthetic examples, never actual user history or computed recommendations. Buttons demonstrate interaction only; no export, logging, notification or timer functionality is represented as complete.
 
 ## A — Quiet focus (recommended)
 
@@ -29,3 +29,7 @@ Choose A, B or C, request adjustments or combine elements. Recommendation: A as 
 ## Evidence
 
 Chromium captures for 3 concepts × 2 themes × 6 features are in artifacts/advanced-training. Automated overflow checks cover 320, 375, 390, 430, 768 and 1024px; actual screenshots use a mobile viewport meta tag. The review has no IndexedDB/localStorage writes. Format or desktop browser checks do not establish physical-device behavior.
+
+## Approval record
+
+On November 14, 2026, after the three concrete alternatives were shown, the user replied **“A”**. Quiet focus is the approved direction across all six features. Implementation uses the established app typography/theme tokens, spacious focus controls, one main task per card, compact supporting details and a mobile feedback bottom sheet. Backup & Data appears near the top of Settings for visibility. The rest timer remains optional and accessible; detailed calendar window/time-zone choices support the required export semantics. No material departure from the selected direction is intended. Main merge approval has not been given.
