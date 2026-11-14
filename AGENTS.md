@@ -1,6 +1,7 @@
 # Gym Bro workflow
 
 - Advanced training update: all new work belongs on `feature/advanced-training-experience`, based on released main `df6000d`. Never merge or modify main without explicit approval for this update. The complete request is `docs/advanced-training/BRIEF.md`.
+- Approved design for this update: the user selected **A — Quiet focus**. Implement the six experiences faithfully using the existing app design system and the approved prototypes. This authorizes implementation, not a main merge.
 - Permanent design rule: before implementing any meaningful new UI or aesthetic redesign, present three actual visual alternatives and wait for the user's selection. Consolidate related features into a coherent review package. Continue independent technical work while awaiting design approval. Previous approvals for other releases do not authorize this design or merge.
 
 - Current task: release the reviewed 0.2.5 update. On November 14, 2026 the user explicitly approved: “merge it to main”. This supersedes the November 13 review-only boundary. Merge `feature/muscle-map-scheduling-refinement` normally into main, run release checks, push and verify main publication, then remove the completed review branch as required by the existing branch workflow. Preserve full merged history and all journal data. Future unrelated updates need their own approval.

@@ -52,3 +52,8 @@ export function validateAdvancedSession(w){
  if(w.blockContext!==undefined){const c=w.blockContext,t=c?.target;if(!c||c.version!==1||!text(c.blockId)||!text(c.blockName,80)||!Number.isInteger(c.week)||c.week<1||c.week>52||!t||typeof t.lighter!=='boolean'||!Number.isFinite(t.setFactor)||t.setFactor<.25||t.setFactor>1.5||!Number.isFinite(t.loadFactor)||t.loadFactor<.5||t.loadFactor>1.1||!Number.isInteger(t.min)||t.min<1||!Number.isInteger(t.max)||t.max<t.min||t.max>100||!Number.isInteger(t.rir)||t.rir<0||t.rir>10)bad();}
  for(const e of w.exercises||[])for(const set of e.entries||[])if(set.deferredForTime!==undefined&&typeof set.deferredForTime!=='boolean')bad();
 }
+export function blockTrends(state,block,on){
+ const sessions=state.sessions.filter(s=>s.blockContext?.blockId===block.id&&s.date<=on&&!s.timeAdaptation?.intentional&&!s.blockContext.target.lighter).sort((a,b)=>a.date.localeCompare(b.date)||a.startedAt-b.startedAt),byExercise=new Map();
+ for(const s of sessions)for(const e of s.exercises){const values=e.entries.filter(x=>x.done&&x.type!=='warmup'&&x.kg>0&&x.reps>=1&&x.reps<=10).map(x=>x.kg*(1+x.reps/30));if(values.length){const list=byExercise.get(e.exerciseId)||[];list.push(Math.max(...values));byExercise.set(e.exerciseId,list);}}
+ return [...byExercise].filter(([,values])=>values.length>=2).map(([exerciseId,values])=>({exerciseId,percent:(values.at(-1)/values[0]-1)*100})).slice(0,3);
+}
