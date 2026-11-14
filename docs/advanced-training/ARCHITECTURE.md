@@ -29,4 +29,4 @@ Three coherent directions cover all six screens: Quiet focus, Performance desk a
 
 ## Publication
 
-The existing preview workflow has historical GitHub environment restrictions. Do not weaken protections. Source pushes appear possible, but `gh auth status` reports an invalid GH_TOKEN, so no PR or deployment is claimed. A working local build and design review are independent of GitHub publication. The actual feature preview must preserve current main root byte-for-byte using compose-preview and remain visibly isolated.
+The existing preview workflow has historical GitHub environment restrictions. Do not weaken protections. Git source push succeeded and remote refs were verified. `gh auth status` reports an invalid GH_TOKEN; no PR or deployment is claimed. The current branch contains review material and foundations, not a complete feature release. A working local build and design review are independent of GitHub publication. The actual feature preview must preserve current main root byte-for-byte using compose-preview and remain visibly isolated.
