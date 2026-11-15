@@ -21,7 +21,7 @@ test('G: three declines suggest reviewing stress',()=>assert.equal(rec([session(
 test('H: return after break is conservative and immutable',()=>{const history=[session(10,40,2,'2026-09-01')],snapshot=JSON.stringify(history);assert.equal(rec(history).kg,30);assert.equal(rec(history).action,'return');assert.equal(JSON.stringify(history),snapshot);});
 test('I: unit round trips preserve canonical units',()=>{for(const kg of [0,1.25,40,42.5,150.75])assert.ok(Math.abs(toKg(fromKg(kg,'lb'),'lb')-kg)<1e-10);});
 test('J: machine substitution cannot inherit bench baseline',()=>assert.equal(rec([session()],{exerciseId:'chest-press'}).kg,null));
-test('K: missing RIR requires confirmation exposure',()=>{assert.equal(rec([session(10,40,null)]).action,'maintain');assert.equal(rec([session(10,40,null,'2026-11-01'),session(10,40,null)]).action,'increase');});
+test('K: optional missing RIR does not require another qualifying exposure',()=>{assert.equal(rec([session(10,40,null)]).action,'increase');assert.equal(rec([session(10,40,null,'2026-11-01'),session(10,40,null)]).action,'increase');});
 test('L: goal changes new prescriptions without rewriting history',()=>{const history=[session(6)];const snapshot=JSON.stringify(history);const strength=recommend({exerciseId:'bench',sessions:history,goal:'strength',increment:2.5,now});assert.equal(strength.max,6);assert.equal(strength.action,'increase');assert.equal(JSON.stringify(history),snapshot);assert.deepEqual(goalRange('endurance'),[12,20]);});
 test('partial session cannot increase',()=>{const w=session();w.exercises[0].entries.pop();assert.equal(rec([w]).action,'maintain');});
 test('uncompleted values never establish baseline',()=>{const w=session();w.exercises[0].entries.forEach(e=>e.done=false);assert.equal(rec([w]).kg,null);});
@@ -31,7 +31,7 @@ test('unusual increment is available and bounded',()=>{assert.equal(rec([session
 test('low readiness blocks progression',()=>assert.equal(rec([session()],{readiness:1}).action,'review'));
 test('automation can be disabled',()=>assert.equal(rec([session()],{auto:false}).action,'maintain'));
 test('bodyweight is not assigned a fabricated external load',()=>assert.equal(rec([session(10,0)]).kg,0));
-test('duplicate sessions do not count as repeated evidence',()=>{const w=session(10,40,null);assert.equal(rec([w,w]).action,'maintain');assert.equal(exposures([w,w],'bench').length,1);});
+test('duplicate sessions do not count as repeated evidence',()=>{const w=session(10,40,null);assert.equal(rec([w,w]).action,'increase');assert.equal(exposures([w,w],'bench').length,1);});
 test('invalid increment and nonfinite performance are rejected',()=>{assert.throws(()=>rec([],{increment:NaN}));assert.throws(()=>rec([session(10,Infinity)]));assert.throws(()=>rec([],{increment:-2}));});
 test('e1RM excludes high-rep and bodyweight estimates',()=>{assert.equal(e1rm(40,10),40*(1+10/30));assert.equal(e1rm(40,15),null);assert.equal(e1rm(0,10),null);});
 function state(){const s=initialState();s.profile=structuredClone(profile);return s;}
@@ -46,4 +46,4 @@ test('invalid dates, unknown exercises, bad ranges and unsupported versions fail
 test('backup preview rejects corrupted, duplicate and incomplete data',()=>{const s=state();const backup={format:'gymbro-backup',version:1,state:s,media:[]};assert.deepEqual(parseBackup(JSON.stringify(backup)).state,s);assert.throws(()=>parseBackup('{'));backup.state.sessions=[session(10,40,2,'2026-11-03','a'),session(10,40,2,'2026-11-03','a')];assert.throws(()=>parseBackup(JSON.stringify(backup)),/Duplicate/);});
 test('CSV escapes formulas and uses kg explicitly',()=>{const s=state();s.sessions=[session()];s.sessions[0].name='=HYPERLINK("evil")';const csv=exportCSV(s,()=>({name:'Bench'}));assert.ok(csv.includes("'="));assert.ok(csv.includes('weight (kg)'));});
 
-test('repeated exercise blocks in one workout count as one exposure',()=>{const w=session(10,40,null);w.exercises.push(structuredClone(w.exercises[0]));assert.equal(exposures([w],'bench').length,1);assert.equal(rec([w]).action,'maintain');});
+test('repeated exercise blocks in one workout count as one exposure',()=>{const w=session(10,40,null);w.exercises.push(structuredClone(w.exercises[0]));assert.equal(exposures([w],'bench').length,1);assert.equal(rec([w]).action,'increase');});

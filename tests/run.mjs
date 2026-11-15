@@ -10,3 +10,5 @@ import './mobile-refinement.test.mjs';
 import './advanced-training.test.mjs';
 
 import './advanced-integration.test.mjs';
+
+import './training-refinement.test.mjs';

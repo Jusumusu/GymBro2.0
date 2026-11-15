@@ -1,0 +1,10 @@
+/* Geometry correction within the existing approved design. No new brand applied. */
+.set-table{--logger-columns:36px minmax(24px,.6fr) minmax(48px,1.1fr) minmax(32px,.75fr) minmax(28px,.65fr) 44px;--logger-gap:8px;--logger-inset:8px}
+.set-table .set-header,.set-table .set-row:not(.focus-inputs){grid-template-columns:var(--logger-columns);gap:var(--logger-gap)}
+.set-table .set-header{padding-inline:calc(var(--logger-inset) + 1px)}
+.set-table .set-row:not(.focus-inputs){padding:8px var(--logger-inset);border:1px solid transparent;border-radius:10px;min-width:0}
+.set-table .set-row.active-set:not(.focus-inputs){outline:none;box-shadow:inset 0 0 0 2px var(--accent);background:var(--accent-soft)}
+.set-table .set-row:not(.focus-inputs) .complete-button{width:100%;min-width:0;min-height:44px;height:44px}
+.set-table .set-row:not(.focus-inputs) .set-type{min-width:0;width:100%}
+@media(max-width:650px){.set-table{--logger-columns:28px minmax(18px,.45fr) minmax(40px,1.1fr) minmax(28px,.75fr) minmax(24px,.65fr) 44px;--logger-gap:4px}}
+@media(max-width:340px){.set-table{--logger-inset:6px;--logger-gap:3px;--logger-columns:24px minmax(16px,.4fr) minmax(36px,1.1fr) minmax(26px,.75fr) minmax(22px,.65fr) 44px}}
