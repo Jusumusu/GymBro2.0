@@ -2,13 +2,13 @@ import { number } from './model.js';
 export const goalRange=goal=>goal==='strength'?[3,6]:goal==='endurance'?[12,20]:goal==='fitness'?[8,12]:[6,10];
 export const e1rm=(kg,reps)=>kg>0&&reps>=1&&reps<=10?kg*(1+reps/30):null;
 export const working=e=>e.entries.filter(s=>s.done&&s.type!=='warmup'&&s.kg!==null&&s.reps>0);
-export function exposures(sessions,exerciseId){const seen=new Set();return sessions.filter(w=>{if(seen.has(w.id))return false;seen.add(w.id);return true;}).slice().sort((a,b)=>a.date.localeCompare(b.date)||a.startedAt-b.startedAt).flatMap(w=>{const sets=w.exercises.filter(e=>e.exerciseId===exerciseId).flatMap(working);return sets.length?[{date:w.date,sets,readiness:w.readiness}]:[];});}
+export function exposures(sessions,exerciseId){const seen=new Set();return sessions.filter(w=>{if(seen.has(w.id))return false;seen.add(w.id);return true;}).slice().sort((a,b)=>a.date.localeCompare(b.date)||a.startedAt-b.startedAt).flatMap(w=>{const sets=w.exercises.filter(e=>e.exerciseId===exerciseId).flatMap(working);return sets.length?[{date:w.date,sets,readiness:w.readiness,intentional:!!w.timeAdaptation?.intentional||!!w.blockContext?.target?.lighter}]:[];});}
 const score=x=>Math.max(...x.sets.map(s=>s.kg===0?s.reps:s.kg*(1+Math.min(s.reps,10)/30)));
 export function recommend({exerciseId,sessions,goal='hypertrophy',prescription,increment=2.5,readiness=null,now=new Date(),auto=true,strategy='double'}){
  number(increment,.1,50);if(readiness!==null)number(readiness,1,5);
  const range=goalRange(goal);const target={sets:prescription?.sets??3,min:range[0],max:range[1]};
  if(prescription){target.min=prescription.min;target.max=prescription.max;}
- const cutoff=now.getFullYear()+'-'+String(now.getMonth()+1).padStart(2,'0')+'-'+String(now.getDate()).padStart(2,'0');const history=exposures(sessions.filter(w=>w.date<=cutoff),exerciseId);const last=history.at(-1);
+ const cutoff=now.getFullYear()+'-'+String(now.getMonth()+1).padStart(2,'0')+'-'+String(now.getDate()).padStart(2,'0');const history=exposures(sessions.filter(w=>w.date<=cutoff),exerciseId).filter(x=>!x.intentional);const last=history.at(-1);
  const result=(action,kg,reason,confidence='limited')=>({action,kg,...target,reason,confidence,evidence:history.length});
  if(!last)return result('baseline',null,'Choose a comfortable starting load. Log completed working sets to establish this exercise’s own baseline.');
  last.sets.forEach(s=>{number(s.kg,0,1000);number(s.reps,1,200);if(s.rir!==null)number(s.rir,0,10);});

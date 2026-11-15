@@ -1,0 +1,16 @@
+{
+  "candidateVersion": "0.3.0",
+  "approvedDesign": "A \u2014 Quiet focus",
+  "mainUnchanged": "df6000d8db32d3e5904a4f8e160dbd3ab15cc7f3",
+  "domainTests": 212,
+  "backendTests": 9,
+  "browserWorkflowChecks": 159,
+  "newFeatureBrowserChecks": 21,
+  "finalUILayoutChecks": 120,
+  "initialDesignLayoutChecks": 216,
+  "independentCalendarValidation": "passed",
+  "previewBuild": "production root byte-identical to origin/main; separate candidate database/lock/cache/worker",
+  "hostedPreview": "blocked by github-pages environment branch protection",
+  "mainMerged": false,
+  "physicalPlatforms": "not certified"
+}

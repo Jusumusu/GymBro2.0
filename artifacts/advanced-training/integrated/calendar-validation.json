@@ -1,0 +1,9 @@
+{
+  "parser": "icalendar 7.3.0 + recurring-ical-events",
+  "parsedErrors": [],
+  "expandedMarchOccurrences": 12,
+  "canceledAndMovedOccurrences": "passed",
+  "dstPreservesWallClock": "passed",
+  "reminders": "passed",
+  "scope": "Independent format/recurrence validation; actual Apple/Google imports not tested"
+}

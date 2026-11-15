@@ -1,0 +1,26 @@
+
+> gym-bro@0.3.0 test:mobile-refinement
+> node tests/browser-mobile-refinement.mjs
+
+PASS Fresh journal starts with a neutral anatomical figure and no phantom chest selection
+PASS Recorded bench activity colors the chest without selecting it; historical records remain intact
+PASS Actual touch selects paired chest paths; a second activation deselects without changing training color
+PASS Keyboard selection highlights only the intended group and restores focus to the same anatomical path
+PASS Back view exposes glutes, hamstrings, calves, erectors and distinct upper-back/lat/trapezius shapes using saved canonical contributions
+PASS Reopening the map clears ephemeral selection while preserving historical muscle statistics
+PASS Custom weekly scheduling generates multiple weekdays until an inclusive end date and preserves legacy one-time entries
+PASS An overlapping duplicate weekly schedule is rejected even when it starts on a later week
+PASS Recurrence and skip/restore exceptions survive reload without deleting or duplicating the series
+PASS Editing one occurrence reschedules only that stable occurrence identity
+PASS Future scope splits the rule at the chosen occurrence without rewriting past rule segments
+PASS Entire-series edits change schedule fields while leaving every completed workout unchanged
+PASS Changing the calendar first day preserves actual recurring weekdays and times
+PASS Starting and completing a future scheduled workout associates exactly one occurrence while preserving actual completion date and future sessions
+PASS Stopping a recurring schedule removes future generated occurrences and retains completed history
+PASS Master notification preference persists and turning it off preserves default timing, individual reminders and recurring schedules
+PASS Real browser permission states explain denial and permission is requested only through the intentional control
+PASS A due active-app reminder is delivered in-app and through the real worker notification API exactly once
+PASS Reminder ledger saves preserve the user’s Undo action and undoing a schedule never erases delivery deduplication
+PASS Turning reminders off closes controlled pending notifications; reenabling never floods or repeats delivered reminders
+PASS Muscle map, recurrence calendar and Notifications fit all six required widths in both themes without horizontal clipping
+PASS Repeated navigation remains stable; workout logging, recurrence, preferences and the new map survive offline reload

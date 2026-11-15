@@ -1,0 +1,107 @@
+{
+  "run_url": "https://github.com/Jusumusu/GymBro2.0/actions/runs/43610715966",
+  "jobs": [
+    {
+      "id": 132494947136,
+      "name": "build",
+      "status": "completed",
+      "conclusion": "success",
+      "run_id": 43610715966,
+      "logs_url": null,
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1
+        },
+        {
+          "name": "Run actions/checkout@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2
+        },
+        {
+          "name": "Run actions/checkout@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3
+        },
+        {
+          "name": "Run actions/setup-node@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4
+        },
+        {
+          "name": "Build unchanged stable app",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5
+        },
+        {
+          "name": "Validate upgrade and backend boundaries",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 6
+        },
+        {
+          "name": "Compose site and verify stable files did not change",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 7
+        },
+        {
+          "name": "Run actions/configure-pages@v5",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 8
+        },
+        {
+          "name": "Run actions/upload-pages-artifact@v3",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 9
+        },
+        {
+          "name": "Post Run actions/setup-node@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 16
+        },
+        {
+          "name": "Post Run actions/checkout@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 17
+        },
+        {
+          "name": "Post Run actions/checkout@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 18
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 19
+        }
+      ]
+    },
+    {
+      "id": 132495019611,
+      "name": "deploy",
+      "status": "completed",
+      "conclusion": "failure",
+      "run_id": 43610715966,
+      "logs_url": null,
+      "steps": null
+    }
+  ],
+  "deployment_blocker": "Branch \"feature/advanced-training-experience\" is not allowed to deploy to github-pages due to environment protection rules.",
+  "protectionsChanged": false,
+  "download_url": "https://github.com/Jusumusu/GymBro2.0/raw/refs/heads/feature/advanced-training-experience/artifacts/advanced-training/review-preview.zip",
+  "download_sha256": "7b4c8889139ba4e988896d82476c7a1126926e951bb7befc2c6961f40c09257e",
+  "download_matched_local_verified_archive": true
+}

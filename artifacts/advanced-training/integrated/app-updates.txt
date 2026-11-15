@@ -1,0 +1,19 @@
+
+> gym-bro@0.3.0 test:app-updates
+> node tests/browser-app-updates.mjs
+
+PASS Real recurring rules and enabled reminder preferences are populated for every subsequent update-preservation assertion
+PASS A newly published build immediately prompts on focus without reloading or changing an active workout
+PASS Functional update prompt fits phone and desktop sizes in the existing light/dark theme
+PASS Later dismisses only this release; the update remains available in Settings
+PASS Offline update requests keep the working app open and preserve its journal
+PASS Reconnection detects a newer build even when its version number is unchanged and the previous notice was dismissed
+PASS A failed autosave blocks loading an update until the change is saved successfully
+PASS One Load update click flushes pending set writes and opens the actual newest release, not the older prompt target
+PASS Settings Update app stays open, reports already current, then refreshes only after confirmation
+PASS A corrupt or partial release fails verification without deleting the working offline cache
+PASS The previous complete app and unchanged workout remain usable after a failed update
+PASS Preview updates use only their own release, writer lock, data and cache while production remains open
+PASS Production records survive preview updates and no uncaught app exceptions occur
+PASS A foreground session detects a release on its real polling timer without a focus event or automatic reload
+14 automatic-update browser checks passed.

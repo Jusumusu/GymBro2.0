@@ -1,0 +1,17 @@
+
+> gym-bro@0.3.0 test:refinement
+> node tests/browser-refinement.mjs
+
+PASS Saved appearance applies before the app module loads or paints its UI
+PASS Theme changes apply and persist immediately without changing any workout, body or photo metadata
+PASS System Default follows live device appearance changes and updates the PWA theme color
+PASS Sunday preference persists and aligns calendar headers, weekly reviews and unchanged historical dates
+PASS Historical check-ins use the selected week, exclude later records and never award duplicate achievements
+PASS Weekly workload and frequency chart buckets follow Sunday-first boundaries
+PASS Every route fits seven phone/tablet/desktop widths in both themes; dialogs remain centered and contained
+PASS Active numeric logging, previous performance, warm-ups and dialogs are readable and contained in both themes
+PASS Changing back to Monday updates every weekly view while retaining the active workout
+PASS All empty routes remain usable in both themes and empty reviews invent no wins
+PASS Weekly review, appearance and week preference remain available offline after an app-shell load
+PASS Reduced motion is respected and no uncaught exceptions occur in the refinement flows
+12 refinement browser checks passed.

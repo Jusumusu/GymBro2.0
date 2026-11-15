@@ -1,6 +1,10 @@
 # Gym Bro 2.0
 
-Private, offline-first strength training with an optional OpenAI-compatible coach backend. Native ES modules, Node 22+ and no npm dependencies. Version 0.2.5 adds an interactive anatomical map, recurring weekly schedules, optional active-app reminders and a stable, readable version screen with explicit update consent. Main holds the approved app; new experiments use one temporary feature branch, removed after approval and release.
+## 0.3.0 advanced training
+
+The user approved **A — Quiet focus**, reviewed the isolated preview, and explicitly authorized “Merge to main”. This release adds backup protection/recovery, Focus Mode, training blocks, reversible time-adaptive sessions, private exercise feedback and iCalendar export. See the [feature guide](docs/advanced-training/REVIEW.md), [executed QA](docs/advanced-training/QA.md), [architecture](docs/advanced-training/ARCHITECTURE.md) and [release/data notes](docs/advanced-training/RELEASE.md). [PR #1](https://github.com/Jusumusu/GymBro2.0/pull/1) preserves the full feature history. Main publication uses the existing Pages workflow; the separate preview journal is retained.
+
+Private, offline-first strength training with an optional OpenAI-compatible coach backend. Native ES modules, Node 22+ and no npm dependencies. Version 0.3.0 retains the anatomical map, recurring schedules, optional reminders and explicit verified update consent while adding the six advanced-training features. Main holds the approved app; new experiments use one temporary feature branch, removed after approval and release.
 
 - Stable: https://jusumusu.github.io/GymBro2.0/
 - Upgrade preview: https://jusumusu.github.io/GymBro2.0/preview/
@@ -71,4 +75,4 @@ From 0.2.3, Settings → **Update app** always checks and loads the latest publi
 
 [Architecture](docs/ARCHITECTURE.md) · [Training rules](docs/RESEARCH.md) · [QA evidence](docs/QA.md) · [Known limits](docs/LIMITATIONS.md) · [Coach contracts and evaluation](docs/upgrade/COACH.md) · [Optional sync design](docs/upgrade/SYNC.md)
 
-Browser data is device-local and can be cleared. Backups are not encrypted. Estimates and coaching suggestions remain editable; no medical assessment, recovery score, verified population strength standard or automatic cloud sync is claimed.
+Browser data is device-local and can be cleared. Backup files can optionally be password protected; ordinary JSON files remain unencrypted. Estimates and coaching suggestions remain editable; no medical assessment, recovery score, verified population strength standard or automatic cloud sync is claimed.

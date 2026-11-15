@@ -10,3 +10,17 @@ export const putPhoto=(id,blob)=>request('media','readwrite',s=>s.put(blob,id));
 export const deletePhoto=id=>request('media','readwrite',s=>s.delete(id));
 // Import state and its media atomically: a quota failure leaves both unchanged.
 export function restoreState(state,photos){return new Promise((resolve,reject)=>{validateState(state);const tx=db.transaction(['state','media'],'readwrite');for(const p of photos)tx.objectStore('media').put(p.blob,p.id);tx.objectStore('state').put(state,'current');tx.oncomplete=resolve;tx.onabort=()=>reject(tx.error||Error('Restore failed. Your previous records are intact.'));tx.onerror=()=>reject(tx.error);});}
+export const getRecovery=()=>request('state','readonly',s=>s.get('restore-recovery'));
+export function restoreWithRecovery(state,photos){
+ validateState(state);
+ return new Promise((resolve,reject)=>{
+  const tx=db.transaction(['state','media'],'readwrite'),states=tx.objectStore('state'),media=tx.objectStore('media');
+  const read=states.get('current');
+  read.onsuccess=()=>{const current=read.result??initialState(),originalPhotos=[];let pending=current.photos.length;
+   const apply=()=>{states.put({version:1,at:Date.now(),state:current,photos:originalPhotos},'restore-recovery');for(const p of photos)media.put(p.blob,p.id);states.put(state,'current');};
+   if(!pending){apply();return;}
+   for(const p of current.photos){const req=media.get(p.id);req.onsuccess=()=>{if(!req.result){tx.abort();return;}originalPhotos.push({id:p.id,blob:req.result});if(!--pending)apply();};}
+  };
+  tx.oncomplete=()=>resolve();tx.onabort=()=>reject(tx.error||Error('Restore stopped. Your previous journal and photos are intact.'));tx.onerror=()=>reject(tx.error);
+ });
+}

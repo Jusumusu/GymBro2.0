@@ -1,0 +1,9 @@
+
+> gym-bro@0.3.0 build:review
+> node scripts/build-review.mjs
+
+Built 0.2.5 (7a48ed84ab77) in dist/ with a verified offline shell.
+Built 0.3.0 (7abdda1beaf7) in dist/ with a verified offline shell.
+Preview build: isolated browser database and lock, deploy under /preview/.
+Verified: stable production files are byte-identical; upgrade is isolated at /preview/.
+Local review: node scripts/serve.mjs review-site, then open /preview/ at the printed local address. Main was not checked out or changed.

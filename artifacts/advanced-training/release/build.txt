@@ -1,0 +1,9 @@
+
+> gym-bro@0.3.0 build:site
+> node scripts/build-site.mjs
+
+Built 0.3.0 (6cc880441d25) in dist/ with a verified offline shell.
+Built 0.3.0 (7abdda1beaf7) in dist/ with a verified offline shell.
+Preview build: isolated browser database and lock, deploy under /preview/.
+Verified: stable production files are byte-identical; upgrade is isolated at /preview/.
+Release site: production at / and separate journal at /preview/.

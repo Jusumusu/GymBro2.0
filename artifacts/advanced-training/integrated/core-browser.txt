@@ -1,0 +1,29 @@
+
+> gym-bro@0.3.0 test:e2e
+> node tests/browser.mjs
+
+PASS Onboarding layout fits 280, 320 and 390 px
+PASS Onboarding and personalized program generation
+PASS Set logging, optional RIR, completion, and bulk weight/repetition copy
+PASS Draft survives reload
+PASS Partial-session finish retains data, excludes unchecked sets, and saves history
+PASS History editing updates the original session without duplication
+PASS Manual program creation, deletion, and persisted undo
+PASS Custom exercise creation
+PASS Same-day body-weight updates never duplicate entries
+PASS Body measurement storage and chart rendering
+PASS Private IndexedDB photo storage and rendering
+PASS Unit switching preserves canonical workout and body records
+PASS Full JSON export, import preview, duplicate detection, atomic restore including photo
+PASS Original v3 file merges history and preserves current profile, photos, active draft and workouts
+PASS Original-file reimport skips duplicates and requires explicit kilogram confirmation
+PASS Existing private photo blobs remain readable after a legacy merge
+PASS Analytics, 93 milestones, weekly review, and strength-standard limitation disclosure
+PASS All six routes fit 280, 320, 360, 375, 390, 414, 430, 768 and 1440 px
+PASS Landscape layout containment
+PASS Reduced motion preference honored
+PASS Active workout numeric inputs fit smallest 280 px screen
+PASS Offline production reload and persisted set logging with network disabled
+PASS No uncaught browser exceptions
+PASS GitHub Pages-style subdirectory assets, scoped worker and offline refresh
+24 browser checks passed.
