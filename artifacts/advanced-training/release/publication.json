@@ -1,0 +1,129 @@
+{
+  "version": "0.3.0",
+  "approval": "Merge to main",
+  "pull_request": "https://github.com/Jusumusu/GymBro2.0/pull/1",
+  "merge_sha": "e6c139813f6aa57ba62649724523dc381a2b8722",
+  "reviewed_source_head": "32a7f776c304488e2b559bc924cc772c9196d052",
+  "previous_main": "df6000d8db32d3e5904a4f8e160dbd3ab15cc7f3",
+  "workflow_url": "https://github.com/Jusumusu/GymBro2.0/actions/runs/43698445481",
+  "production_url": "https://jusumusu.github.io/GymBro2.0/",
+  "preview_url": "https://jusumusu.github.io/GymBro2.0/preview/",
+  "jobs": [
+    {
+      "id": 132764032664,
+      "name": "build",
+      "status": "completed",
+      "conclusion": "success",
+      "run_id": 43698445481,
+      "logs_url": null,
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1
+        },
+        {
+          "name": "Run actions/checkout@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2
+        },
+        {
+          "name": "Run actions/setup-node@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3
+        },
+        {
+          "name": "Run npm test",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4
+        },
+        {
+          "name": "Run npm run test:backend",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5
+        },
+        {
+          "name": "Run npm run build:site",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 6
+        },
+        {
+          "name": "Run actions/configure-pages@v5",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 7
+        },
+        {
+          "name": "Run actions/upload-pages-artifact@v3",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 8
+        },
+        {
+          "name": "Post Run actions/setup-node@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 15
+        },
+        {
+          "name": "Post Run actions/checkout@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 16
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 17
+        }
+      ]
+    },
+    {
+      "id": 132764110379,
+      "name": "deploy",
+      "status": "completed",
+      "conclusion": "success",
+      "run_id": 43698445481,
+      "logs_url": null,
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1
+        },
+        {
+          "name": "Deploy",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3
+        }
+      ]
+    }
+  ],
+  "deployment_log_evidence": [
+    "2026-11-15T09:16:53.9083928Z \t\"pages_build_version\": \"e6c139813f6aa57ba62649724523dc381a2b8722\",",
+    "2026-11-15T09:16:54.4102306Z Created deployment for e6c139813f6aa57ba62649724523dc381a2b8722, ID: e6c139813f6aa57ba62649724523dc381a2b8722",
+    "2026-11-15T09:17:00.5198313Z Reported success!",
+    "2026-11-15T09:17:00.5489267Z Evaluated environment url: https://jusumusu.github.io/GymBro2.0/"
+  ],
+  "local_release_checks": {
+    "domain": 212,
+    "backend": 9,
+    "core_browser": 24
+  },
+  "data": "Production and preview retain separate databases, locks and worker/cache scopes; no user journal accessed."
+}

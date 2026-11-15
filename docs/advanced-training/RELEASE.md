@@ -21,3 +21,7 @@ Root journal and IndexedDB versions remain 1. New data is additive and validated
 The approved main workflow publishes the release at https://jusumusu.github.io/GymBro2.0/ and retains the separate preview entry at https://jusumusu.github.io/GymBro2.0/preview/. Existing installations can open Settings → Update app, read the notes, then choose Update Now. No automatic reload interrupts an active workout. Export a backup before any later code rollback; older code may retain fields while not understanding the new training semantics.
 
 Main deployment is verified from the actual GitHub Actions result before publication is reported. The completed feature branch is removed after successful deployment, following AGENTS.md; source/history remain available through the merge and PR. The final deployment/merge record is retained in `artifacts/advanced-training/release/publication.json`.
+
+## Publication result
+
+PR #1 merged normally as `e6c139813f6aa57ba62649724523dc381a2b8722`. [Main workflow run 43698445481](https://github.com/Jusumusu/GymBro2.0/actions/runs/43698445481) passed build/tests and deployment; native deployment logs report success at https://jusumusu.github.io/GymBro2.0/ . The completed feature branch is removed after this verified publication. The journal database names and preview separation remain unchanged.
