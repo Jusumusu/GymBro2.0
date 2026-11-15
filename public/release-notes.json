@@ -1,9 +1,10 @@
 {
-  "version": "0.3.1",
+  "version": "0.4.0",
   "notes": [
-    "Progression can suggest a small increase after one complete ceiling session without optional RIR; uncertainty is explained.",
-    "Working-set comparisons respect block RIR targets, changed rep ranges, warm-ups and drop sets.",
-    "Next-session guidance explains remaining reps, mixed loads and optional readiness without adding work.",
-    "Active-set frames have balanced spacing and completion-button alignment on mobile and desktop."
+    "Contour + Prism design with warm light mode and charcoal, plum and lavender dark mode.",
+    "Selective glass navigation, exercise selection and rest controls, with a solid reduced-transparency fallback.",
+    "Soft-square set completion, retaining one-tap logging, undo and large touch targets.",
+    "Progression explains optional RIR, working-set targets, available increments and next-session advice without adding work.",
+    "Existing backup, Focus Mode, blocks, scheduling and offline journal features are preserved."
   ]
 }

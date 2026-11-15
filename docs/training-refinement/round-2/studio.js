@@ -8,7 +8,7 @@ export const directions={
   G:{name:'Prism',description:'Sculpted violet surfaces, confident Manrope typography and an asymmetric layout. Friendly geometry with a sharper product feel.',strength:'The most expressive and contemporary identity.',tradeoff:'More personality and a little more visual presence.'},
   H:{name:'Fieldwork',description:'A quiet, modern training journal. Mint accents, compact numerical summaries and a carefully divided layout.',strength:'Excellent everyday readability and information density.',tradeoff:'The most understated of the three.'}
 };
-const state={direction:'J',theme:'light',screen:'workout',format:'phone',material:'glass',completion:'circle',glassTimer:true,restSeconds:90,query:'',favorites:new Set(),feedback:'',entries:[{kg:60,reps:10,rir:2,done:true},{kg:60,reps:10,rir:null,done:false},{kg:60,reps:10,rir:null,done:false}]};
+const state={direction:'J',theme:'light',screen:'workout',format:'phone',material:'glass',completion:'square',glassTimer:true,restSeconds:90,query:'',favorites:new Set(),feedback:'',entries:[{kg:60,reps:10,rir:2,done:true},{kg:60,reps:10,rir:null,done:false},{kg:60,reps:10,rir:null,done:false}]};
 const params=new URLSearchParams(location.search);
 for(const key of ['direction','theme','screen','format','material','completion']){const value=params.get(key),valid={direction:Object.keys(directions),theme:['light','dark'],screen:['workout','active','gains','library','schedule','settings'],format:['phone','desktop'],material:['glass','reduced'],completion:['circle','square','inline']}[key];if(valid.includes(value))state[key]=value;}
 const preview=document.getElementById('prototype');

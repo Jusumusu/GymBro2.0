@@ -1,5 +1,7 @@
 # Gym Bro — Design study 02
 
+**Selection complete:** Contour + Prism with selective glass and **B — Soft square** is implemented in candidate 0.4.0. See [implementation and QA](../IMPLEMENTATION.md). The studies below are retained as review history.
+
 **Active review:** [Contour + Prism with glass](GLASS.md). The user approved the solid combination, then requested a glass treatment before app-wide styling resumes. Direction J is now the studio default; direction I remains the approved solid reference.
 
 **Previous refinement:** the user likes Contour and Prism and requests a combination with a different dark mode. [Contour + Prism](HYBRID.md) is the active review, now the studio’s default. The three directions below are retained as references.

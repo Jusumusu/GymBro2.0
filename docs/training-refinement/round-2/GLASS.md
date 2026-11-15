@@ -1,5 +1,8 @@
 # Contour + Prism — Glass refinement
 
+**Implemented in candidate 0.4.0:** the user approved this hybrid/glass direction and selected **B — Soft square**. The following records the preceding visual review. Current implementation and validation are documented in [IMPLEMENTATION.md](../IMPLEMENTATION.md).
+
+
 The user approved the combined design and its revised dark mode, then paused app-wide styling to ask for a liquid-glass treatment like Apple's. This is the concrete glass review requested before resuming implementation. Direction I remains the approved solid reference; direction J adds the proposed material.
 
 ## Where glass belongs
