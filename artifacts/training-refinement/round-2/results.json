@@ -1,0 +1,1522 @@
+{
+  "passed": 252,
+  "checks": [
+    {
+      "direction": "F",
+      "theme": "light",
+      "screen": "workout",
+      "width": 320
+    },
+    {
+      "direction": "F",
+      "theme": "light",
+      "screen": "workout",
+      "width": 375
+    },
+    {
+      "direction": "F",
+      "theme": "light",
+      "screen": "workout",
+      "width": 390
+    },
+    {
+      "direction": "F",
+      "theme": "light",
+      "screen": "workout",
+      "width": 430
+    },
+    {
+      "direction": "F",
+      "theme": "light",
+      "screen": "workout",
+      "width": 768
+    },
+    {
+      "direction": "F",
+      "theme": "light",
+      "screen": "workout",
+      "width": 1024
+    },
+    {
+      "direction": "F",
+      "theme": "light",
+      "screen": "workout",
+      "width": 1280
+    },
+    {
+      "direction": "F",
+      "theme": "light",
+      "screen": "active",
+      "width": 320
+    },
+    {
+      "direction": "F",
+      "theme": "light",
+      "screen": "active",
+      "width": 375
+    },
+    {
+      "direction": "F",
+      "theme": "light",
+      "screen": "active",
+      "width": 390
+    },
+    {
+      "direction": "F",
+      "theme": "light",
+      "screen": "active",
+      "width": 430
+    },
+    {
+      "direction": "F",
+      "theme": "light",
+      "screen": "active",
+      "width": 768
+    },
+    {
+      "direction": "F",
+      "theme": "light",
+      "screen": "active",
+      "width": 1024
+    },
+    {
+      "direction": "F",
+      "theme": "light",
+      "screen": "active",
+      "width": 1280
+    },
+    {
+      "direction": "F",
+      "theme": "light",
+      "screen": "gains",
+      "width": 320
+    },
+    {
+      "direction": "F",
+      "theme": "light",
+      "screen": "gains",
+      "width": 375
+    },
+    {
+      "direction": "F",
+      "theme": "light",
+      "screen": "gains",
+      "width": 390
+    },
+    {
+      "direction": "F",
+      "theme": "light",
+      "screen": "gains",
+      "width": 430
+    },
+    {
+      "direction": "F",
+      "theme": "light",
+      "screen": "gains",
+      "width": 768
+    },
+    {
+      "direction": "F",
+      "theme": "light",
+      "screen": "gains",
+      "width": 1024
+    },
+    {
+      "direction": "F",
+      "theme": "light",
+      "screen": "gains",
+      "width": 1280
+    },
+    {
+      "direction": "F",
+      "theme": "light",
+      "screen": "library",
+      "width": 320
+    },
+    {
+      "direction": "F",
+      "theme": "light",
+      "screen": "library",
+      "width": 375
+    },
+    {
+      "direction": "F",
+      "theme": "light",
+      "screen": "library",
+      "width": 390
+    },
+    {
+      "direction": "F",
+      "theme": "light",
+      "screen": "library",
+      "width": 430
+    },
+    {
+      "direction": "F",
+      "theme": "light",
+      "screen": "library",
+      "width": 768
+    },
+    {
+      "direction": "F",
+      "theme": "light",
+      "screen": "library",
+      "width": 1024
+    },
+    {
+      "direction": "F",
+      "theme": "light",
+      "screen": "library",
+      "width": 1280
+    },
+    {
+      "direction": "F",
+      "theme": "light",
+      "screen": "schedule",
+      "width": 320
+    },
+    {
+      "direction": "F",
+      "theme": "light",
+      "screen": "schedule",
+      "width": 375
+    },
+    {
+      "direction": "F",
+      "theme": "light",
+      "screen": "schedule",
+      "width": 390
+    },
+    {
+      "direction": "F",
+      "theme": "light",
+      "screen": "schedule",
+      "width": 430
+    },
+    {
+      "direction": "F",
+      "theme": "light",
+      "screen": "schedule",
+      "width": 768
+    },
+    {
+      "direction": "F",
+      "theme": "light",
+      "screen": "schedule",
+      "width": 1024
+    },
+    {
+      "direction": "F",
+      "theme": "light",
+      "screen": "schedule",
+      "width": 1280
+    },
+    {
+      "direction": "F",
+      "theme": "light",
+      "screen": "settings",
+      "width": 320
+    },
+    {
+      "direction": "F",
+      "theme": "light",
+      "screen": "settings",
+      "width": 375
+    },
+    {
+      "direction": "F",
+      "theme": "light",
+      "screen": "settings",
+      "width": 390
+    },
+    {
+      "direction": "F",
+      "theme": "light",
+      "screen": "settings",
+      "width": 430
+    },
+    {
+      "direction": "F",
+      "theme": "light",
+      "screen": "settings",
+      "width": 768
+    },
+    {
+      "direction": "F",
+      "theme": "light",
+      "screen": "settings",
+      "width": 1024
+    },
+    {
+      "direction": "F",
+      "theme": "light",
+      "screen": "settings",
+      "width": 1280
+    },
+    {
+      "direction": "F",
+      "theme": "dark",
+      "screen": "workout",
+      "width": 320
+    },
+    {
+      "direction": "F",
+      "theme": "dark",
+      "screen": "workout",
+      "width": 375
+    },
+    {
+      "direction": "F",
+      "theme": "dark",
+      "screen": "workout",
+      "width": 390
+    },
+    {
+      "direction": "F",
+      "theme": "dark",
+      "screen": "workout",
+      "width": 430
+    },
+    {
+      "direction": "F",
+      "theme": "dark",
+      "screen": "workout",
+      "width": 768
+    },
+    {
+      "direction": "F",
+      "theme": "dark",
+      "screen": "workout",
+      "width": 1024
+    },
+    {
+      "direction": "F",
+      "theme": "dark",
+      "screen": "workout",
+      "width": 1280
+    },
+    {
+      "direction": "F",
+      "theme": "dark",
+      "screen": "active",
+      "width": 320
+    },
+    {
+      "direction": "F",
+      "theme": "dark",
+      "screen": "active",
+      "width": 375
+    },
+    {
+      "direction": "F",
+      "theme": "dark",
+      "screen": "active",
+      "width": 390
+    },
+    {
+      "direction": "F",
+      "theme": "dark",
+      "screen": "active",
+      "width": 430
+    },
+    {
+      "direction": "F",
+      "theme": "dark",
+      "screen": "active",
+      "width": 768
+    },
+    {
+      "direction": "F",
+      "theme": "dark",
+      "screen": "active",
+      "width": 1024
+    },
+    {
+      "direction": "F",
+      "theme": "dark",
+      "screen": "active",
+      "width": 1280
+    },
+    {
+      "direction": "F",
+      "theme": "dark",
+      "screen": "gains",
+      "width": 320
+    },
+    {
+      "direction": "F",
+      "theme": "dark",
+      "screen": "gains",
+      "width": 375
+    },
+    {
+      "direction": "F",
+      "theme": "dark",
+      "screen": "gains",
+      "width": 390
+    },
+    {
+      "direction": "F",
+      "theme": "dark",
+      "screen": "gains",
+      "width": 430
+    },
+    {
+      "direction": "F",
+      "theme": "dark",
+      "screen": "gains",
+      "width": 768
+    },
+    {
+      "direction": "F",
+      "theme": "dark",
+      "screen": "gains",
+      "width": 1024
+    },
+    {
+      "direction": "F",
+      "theme": "dark",
+      "screen": "gains",
+      "width": 1280
+    },
+    {
+      "direction": "F",
+      "theme": "dark",
+      "screen": "library",
+      "width": 320
+    },
+    {
+      "direction": "F",
+      "theme": "dark",
+      "screen": "library",
+      "width": 375
+    },
+    {
+      "direction": "F",
+      "theme": "dark",
+      "screen": "library",
+      "width": 390
+    },
+    {
+      "direction": "F",
+      "theme": "dark",
+      "screen": "library",
+      "width": 430
+    },
+    {
+      "direction": "F",
+      "theme": "dark",
+      "screen": "library",
+      "width": 768
+    },
+    {
+      "direction": "F",
+      "theme": "dark",
+      "screen": "library",
+      "width": 1024
+    },
+    {
+      "direction": "F",
+      "theme": "dark",
+      "screen": "library",
+      "width": 1280
+    },
+    {
+      "direction": "F",
+      "theme": "dark",
+      "screen": "schedule",
+      "width": 320
+    },
+    {
+      "direction": "F",
+      "theme": "dark",
+      "screen": "schedule",
+      "width": 375
+    },
+    {
+      "direction": "F",
+      "theme": "dark",
+      "screen": "schedule",
+      "width": 390
+    },
+    {
+      "direction": "F",
+      "theme": "dark",
+      "screen": "schedule",
+      "width": 430
+    },
+    {
+      "direction": "F",
+      "theme": "dark",
+      "screen": "schedule",
+      "width": 768
+    },
+    {
+      "direction": "F",
+      "theme": "dark",
+      "screen": "schedule",
+      "width": 1024
+    },
+    {
+      "direction": "F",
+      "theme": "dark",
+      "screen": "schedule",
+      "width": 1280
+    },
+    {
+      "direction": "F",
+      "theme": "dark",
+      "screen": "settings",
+      "width": 320
+    },
+    {
+      "direction": "F",
+      "theme": "dark",
+      "screen": "settings",
+      "width": 375
+    },
+    {
+      "direction": "F",
+      "theme": "dark",
+      "screen": "settings",
+      "width": 390
+    },
+    {
+      "direction": "F",
+      "theme": "dark",
+      "screen": "settings",
+      "width": 430
+    },
+    {
+      "direction": "F",
+      "theme": "dark",
+      "screen": "settings",
+      "width": 768
+    },
+    {
+      "direction": "F",
+      "theme": "dark",
+      "screen": "settings",
+      "width": 1024
+    },
+    {
+      "direction": "F",
+      "theme": "dark",
+      "screen": "settings",
+      "width": 1280
+    },
+    {
+      "direction": "G",
+      "theme": "light",
+      "screen": "workout",
+      "width": 320
+    },
+    {
+      "direction": "G",
+      "theme": "light",
+      "screen": "workout",
+      "width": 375
+    },
+    {
+      "direction": "G",
+      "theme": "light",
+      "screen": "workout",
+      "width": 390
+    },
+    {
+      "direction": "G",
+      "theme": "light",
+      "screen": "workout",
+      "width": 430
+    },
+    {
+      "direction": "G",
+      "theme": "light",
+      "screen": "workout",
+      "width": 768
+    },
+    {
+      "direction": "G",
+      "theme": "light",
+      "screen": "workout",
+      "width": 1024
+    },
+    {
+      "direction": "G",
+      "theme": "light",
+      "screen": "workout",
+      "width": 1280
+    },
+    {
+      "direction": "G",
+      "theme": "light",
+      "screen": "active",
+      "width": 320
+    },
+    {
+      "direction": "G",
+      "theme": "light",
+      "screen": "active",
+      "width": 375
+    },
+    {
+      "direction": "G",
+      "theme": "light",
+      "screen": "active",
+      "width": 390
+    },
+    {
+      "direction": "G",
+      "theme": "light",
+      "screen": "active",
+      "width": 430
+    },
+    {
+      "direction": "G",
+      "theme": "light",
+      "screen": "active",
+      "width": 768
+    },
+    {
+      "direction": "G",
+      "theme": "light",
+      "screen": "active",
+      "width": 1024
+    },
+    {
+      "direction": "G",
+      "theme": "light",
+      "screen": "active",
+      "width": 1280
+    },
+    {
+      "direction": "G",
+      "theme": "light",
+      "screen": "gains",
+      "width": 320
+    },
+    {
+      "direction": "G",
+      "theme": "light",
+      "screen": "gains",
+      "width": 375
+    },
+    {
+      "direction": "G",
+      "theme": "light",
+      "screen": "gains",
+      "width": 390
+    },
+    {
+      "direction": "G",
+      "theme": "light",
+      "screen": "gains",
+      "width": 430
+    },
+    {
+      "direction": "G",
+      "theme": "light",
+      "screen": "gains",
+      "width": 768
+    },
+    {
+      "direction": "G",
+      "theme": "light",
+      "screen": "gains",
+      "width": 1024
+    },
+    {
+      "direction": "G",
+      "theme": "light",
+      "screen": "gains",
+      "width": 1280
+    },
+    {
+      "direction": "G",
+      "theme": "light",
+      "screen": "library",
+      "width": 320
+    },
+    {
+      "direction": "G",
+      "theme": "light",
+      "screen": "library",
+      "width": 375
+    },
+    {
+      "direction": "G",
+      "theme": "light",
+      "screen": "library",
+      "width": 390
+    },
+    {
+      "direction": "G",
+      "theme": "light",
+      "screen": "library",
+      "width": 430
+    },
+    {
+      "direction": "G",
+      "theme": "light",
+      "screen": "library",
+      "width": 768
+    },
+    {
+      "direction": "G",
+      "theme": "light",
+      "screen": "library",
+      "width": 1024
+    },
+    {
+      "direction": "G",
+      "theme": "light",
+      "screen": "library",
+      "width": 1280
+    },
+    {
+      "direction": "G",
+      "theme": "light",
+      "screen": "schedule",
+      "width": 320
+    },
+    {
+      "direction": "G",
+      "theme": "light",
+      "screen": "schedule",
+      "width": 375
+    },
+    {
+      "direction": "G",
+      "theme": "light",
+      "screen": "schedule",
+      "width": 390
+    },
+    {
+      "direction": "G",
+      "theme": "light",
+      "screen": "schedule",
+      "width": 430
+    },
+    {
+      "direction": "G",
+      "theme": "light",
+      "screen": "schedule",
+      "width": 768
+    },
+    {
+      "direction": "G",
+      "theme": "light",
+      "screen": "schedule",
+      "width": 1024
+    },
+    {
+      "direction": "G",
+      "theme": "light",
+      "screen": "schedule",
+      "width": 1280
+    },
+    {
+      "direction": "G",
+      "theme": "light",
+      "screen": "settings",
+      "width": 320
+    },
+    {
+      "direction": "G",
+      "theme": "light",
+      "screen": "settings",
+      "width": 375
+    },
+    {
+      "direction": "G",
+      "theme": "light",
+      "screen": "settings",
+      "width": 390
+    },
+    {
+      "direction": "G",
+      "theme": "light",
+      "screen": "settings",
+      "width": 430
+    },
+    {
+      "direction": "G",
+      "theme": "light",
+      "screen": "settings",
+      "width": 768
+    },
+    {
+      "direction": "G",
+      "theme": "light",
+      "screen": "settings",
+      "width": 1024
+    },
+    {
+      "direction": "G",
+      "theme": "light",
+      "screen": "settings",
+      "width": 1280
+    },
+    {
+      "direction": "G",
+      "theme": "dark",
+      "screen": "workout",
+      "width": 320
+    },
+    {
+      "direction": "G",
+      "theme": "dark",
+      "screen": "workout",
+      "width": 375
+    },
+    {
+      "direction": "G",
+      "theme": "dark",
+      "screen": "workout",
+      "width": 390
+    },
+    {
+      "direction": "G",
+      "theme": "dark",
+      "screen": "workout",
+      "width": 430
+    },
+    {
+      "direction": "G",
+      "theme": "dark",
+      "screen": "workout",
+      "width": 768
+    },
+    {
+      "direction": "G",
+      "theme": "dark",
+      "screen": "workout",
+      "width": 1024
+    },
+    {
+      "direction": "G",
+      "theme": "dark",
+      "screen": "workout",
+      "width": 1280
+    },
+    {
+      "direction": "G",
+      "theme": "dark",
+      "screen": "active",
+      "width": 320
+    },
+    {
+      "direction": "G",
+      "theme": "dark",
+      "screen": "active",
+      "width": 375
+    },
+    {
+      "direction": "G",
+      "theme": "dark",
+      "screen": "active",
+      "width": 390
+    },
+    {
+      "direction": "G",
+      "theme": "dark",
+      "screen": "active",
+      "width": 430
+    },
+    {
+      "direction": "G",
+      "theme": "dark",
+      "screen": "active",
+      "width": 768
+    },
+    {
+      "direction": "G",
+      "theme": "dark",
+      "screen": "active",
+      "width": 1024
+    },
+    {
+      "direction": "G",
+      "theme": "dark",
+      "screen": "active",
+      "width": 1280
+    },
+    {
+      "direction": "G",
+      "theme": "dark",
+      "screen": "gains",
+      "width": 320
+    },
+    {
+      "direction": "G",
+      "theme": "dark",
+      "screen": "gains",
+      "width": 375
+    },
+    {
+      "direction": "G",
+      "theme": "dark",
+      "screen": "gains",
+      "width": 390
+    },
+    {
+      "direction": "G",
+      "theme": "dark",
+      "screen": "gains",
+      "width": 430
+    },
+    {
+      "direction": "G",
+      "theme": "dark",
+      "screen": "gains",
+      "width": 768
+    },
+    {
+      "direction": "G",
+      "theme": "dark",
+      "screen": "gains",
+      "width": 1024
+    },
+    {
+      "direction": "G",
+      "theme": "dark",
+      "screen": "gains",
+      "width": 1280
+    },
+    {
+      "direction": "G",
+      "theme": "dark",
+      "screen": "library",
+      "width": 320
+    },
+    {
+      "direction": "G",
+      "theme": "dark",
+      "screen": "library",
+      "width": 375
+    },
+    {
+      "direction": "G",
+      "theme": "dark",
+      "screen": "library",
+      "width": 390
+    },
+    {
+      "direction": "G",
+      "theme": "dark",
+      "screen": "library",
+      "width": 430
+    },
+    {
+      "direction": "G",
+      "theme": "dark",
+      "screen": "library",
+      "width": 768
+    },
+    {
+      "direction": "G",
+      "theme": "dark",
+      "screen": "library",
+      "width": 1024
+    },
+    {
+      "direction": "G",
+      "theme": "dark",
+      "screen": "library",
+      "width": 1280
+    },
+    {
+      "direction": "G",
+      "theme": "dark",
+      "screen": "schedule",
+      "width": 320
+    },
+    {
+      "direction": "G",
+      "theme": "dark",
+      "screen": "schedule",
+      "width": 375
+    },
+    {
+      "direction": "G",
+      "theme": "dark",
+      "screen": "schedule",
+      "width": 390
+    },
+    {
+      "direction": "G",
+      "theme": "dark",
+      "screen": "schedule",
+      "width": 430
+    },
+    {
+      "direction": "G",
+      "theme": "dark",
+      "screen": "schedule",
+      "width": 768
+    },
+    {
+      "direction": "G",
+      "theme": "dark",
+      "screen": "schedule",
+      "width": 1024
+    },
+    {
+      "direction": "G",
+      "theme": "dark",
+      "screen": "schedule",
+      "width": 1280
+    },
+    {
+      "direction": "G",
+      "theme": "dark",
+      "screen": "settings",
+      "width": 320
+    },
+    {
+      "direction": "G",
+      "theme": "dark",
+      "screen": "settings",
+      "width": 375
+    },
+    {
+      "direction": "G",
+      "theme": "dark",
+      "screen": "settings",
+      "width": 390
+    },
+    {
+      "direction": "G",
+      "theme": "dark",
+      "screen": "settings",
+      "width": 430
+    },
+    {
+      "direction": "G",
+      "theme": "dark",
+      "screen": "settings",
+      "width": 768
+    },
+    {
+      "direction": "G",
+      "theme": "dark",
+      "screen": "settings",
+      "width": 1024
+    },
+    {
+      "direction": "G",
+      "theme": "dark",
+      "screen": "settings",
+      "width": 1280
+    },
+    {
+      "direction": "H",
+      "theme": "light",
+      "screen": "workout",
+      "width": 320
+    },
+    {
+      "direction": "H",
+      "theme": "light",
+      "screen": "workout",
+      "width": 375
+    },
+    {
+      "direction": "H",
+      "theme": "light",
+      "screen": "workout",
+      "width": 390
+    },
+    {
+      "direction": "H",
+      "theme": "light",
+      "screen": "workout",
+      "width": 430
+    },
+    {
+      "direction": "H",
+      "theme": "light",
+      "screen": "workout",
+      "width": 768
+    },
+    {
+      "direction": "H",
+      "theme": "light",
+      "screen": "workout",
+      "width": 1024
+    },
+    {
+      "direction": "H",
+      "theme": "light",
+      "screen": "workout",
+      "width": 1280
+    },
+    {
+      "direction": "H",
+      "theme": "light",
+      "screen": "active",
+      "width": 320
+    },
+    {
+      "direction": "H",
+      "theme": "light",
+      "screen": "active",
+      "width": 375
+    },
+    {
+      "direction": "H",
+      "theme": "light",
+      "screen": "active",
+      "width": 390
+    },
+    {
+      "direction": "H",
+      "theme": "light",
+      "screen": "active",
+      "width": 430
+    },
+    {
+      "direction": "H",
+      "theme": "light",
+      "screen": "active",
+      "width": 768
+    },
+    {
+      "direction": "H",
+      "theme": "light",
+      "screen": "active",
+      "width": 1024
+    },
+    {
+      "direction": "H",
+      "theme": "light",
+      "screen": "active",
+      "width": 1280
+    },
+    {
+      "direction": "H",
+      "theme": "light",
+      "screen": "gains",
+      "width": 320
+    },
+    {
+      "direction": "H",
+      "theme": "light",
+      "screen": "gains",
+      "width": 375
+    },
+    {
+      "direction": "H",
+      "theme": "light",
+      "screen": "gains",
+      "width": 390
+    },
+    {
+      "direction": "H",
+      "theme": "light",
+      "screen": "gains",
+      "width": 430
+    },
+    {
+      "direction": "H",
+      "theme": "light",
+      "screen": "gains",
+      "width": 768
+    },
+    {
+      "direction": "H",
+      "theme": "light",
+      "screen": "gains",
+      "width": 1024
+    },
+    {
+      "direction": "H",
+      "theme": "light",
+      "screen": "gains",
+      "width": 1280
+    },
+    {
+      "direction": "H",
+      "theme": "light",
+      "screen": "library",
+      "width": 320
+    },
+    {
+      "direction": "H",
+      "theme": "light",
+      "screen": "library",
+      "width": 375
+    },
+    {
+      "direction": "H",
+      "theme": "light",
+      "screen": "library",
+      "width": 390
+    },
+    {
+      "direction": "H",
+      "theme": "light",
+      "screen": "library",
+      "width": 430
+    },
+    {
+      "direction": "H",
+      "theme": "light",
+      "screen": "library",
+      "width": 768
+    },
+    {
+      "direction": "H",
+      "theme": "light",
+      "screen": "library",
+      "width": 1024
+    },
+    {
+      "direction": "H",
+      "theme": "light",
+      "screen": "library",
+      "width": 1280
+    },
+    {
+      "direction": "H",
+      "theme": "light",
+      "screen": "schedule",
+      "width": 320
+    },
+    {
+      "direction": "H",
+      "theme": "light",
+      "screen": "schedule",
+      "width": 375
+    },
+    {
+      "direction": "H",
+      "theme": "light",
+      "screen": "schedule",
+      "width": 390
+    },
+    {
+      "direction": "H",
+      "theme": "light",
+      "screen": "schedule",
+      "width": 430
+    },
+    {
+      "direction": "H",
+      "theme": "light",
+      "screen": "schedule",
+      "width": 768
+    },
+    {
+      "direction": "H",
+      "theme": "light",
+      "screen": "schedule",
+      "width": 1024
+    },
+    {
+      "direction": "H",
+      "theme": "light",
+      "screen": "schedule",
+      "width": 1280
+    },
+    {
+      "direction": "H",
+      "theme": "light",
+      "screen": "settings",
+      "width": 320
+    },
+    {
+      "direction": "H",
+      "theme": "light",
+      "screen": "settings",
+      "width": 375
+    },
+    {
+      "direction": "H",
+      "theme": "light",
+      "screen": "settings",
+      "width": 390
+    },
+    {
+      "direction": "H",
+      "theme": "light",
+      "screen": "settings",
+      "width": 430
+    },
+    {
+      "direction": "H",
+      "theme": "light",
+      "screen": "settings",
+      "width": 768
+    },
+    {
+      "direction": "H",
+      "theme": "light",
+      "screen": "settings",
+      "width": 1024
+    },
+    {
+      "direction": "H",
+      "theme": "light",
+      "screen": "settings",
+      "width": 1280
+    },
+    {
+      "direction": "H",
+      "theme": "dark",
+      "screen": "workout",
+      "width": 320
+    },
+    {
+      "direction": "H",
+      "theme": "dark",
+      "screen": "workout",
+      "width": 375
+    },
+    {
+      "direction": "H",
+      "theme": "dark",
+      "screen": "workout",
+      "width": 390
+    },
+    {
+      "direction": "H",
+      "theme": "dark",
+      "screen": "workout",
+      "width": 430
+    },
+    {
+      "direction": "H",
+      "theme": "dark",
+      "screen": "workout",
+      "width": 768
+    },
+    {
+      "direction": "H",
+      "theme": "dark",
+      "screen": "workout",
+      "width": 1024
+    },
+    {
+      "direction": "H",
+      "theme": "dark",
+      "screen": "workout",
+      "width": 1280
+    },
+    {
+      "direction": "H",
+      "theme": "dark",
+      "screen": "active",
+      "width": 320
+    },
+    {
+      "direction": "H",
+      "theme": "dark",
+      "screen": "active",
+      "width": 375
+    },
+    {
+      "direction": "H",
+      "theme": "dark",
+      "screen": "active",
+      "width": 390
+    },
+    {
+      "direction": "H",
+      "theme": "dark",
+      "screen": "active",
+      "width": 430
+    },
+    {
+      "direction": "H",
+      "theme": "dark",
+      "screen": "active",
+      "width": 768
+    },
+    {
+      "direction": "H",
+      "theme": "dark",
+      "screen": "active",
+      "width": 1024
+    },
+    {
+      "direction": "H",
+      "theme": "dark",
+      "screen": "active",
+      "width": 1280
+    },
+    {
+      "direction": "H",
+      "theme": "dark",
+      "screen": "gains",
+      "width": 320
+    },
+    {
+      "direction": "H",
+      "theme": "dark",
+      "screen": "gains",
+      "width": 375
+    },
+    {
+      "direction": "H",
+      "theme": "dark",
+      "screen": "gains",
+      "width": 390
+    },
+    {
+      "direction": "H",
+      "theme": "dark",
+      "screen": "gains",
+      "width": 430
+    },
+    {
+      "direction": "H",
+      "theme": "dark",
+      "screen": "gains",
+      "width": 768
+    },
+    {
+      "direction": "H",
+      "theme": "dark",
+      "screen": "gains",
+      "width": 1024
+    },
+    {
+      "direction": "H",
+      "theme": "dark",
+      "screen": "gains",
+      "width": 1280
+    },
+    {
+      "direction": "H",
+      "theme": "dark",
+      "screen": "library",
+      "width": 320
+    },
+    {
+      "direction": "H",
+      "theme": "dark",
+      "screen": "library",
+      "width": 375
+    },
+    {
+      "direction": "H",
+      "theme": "dark",
+      "screen": "library",
+      "width": 390
+    },
+    {
+      "direction": "H",
+      "theme": "dark",
+      "screen": "library",
+      "width": 430
+    },
+    {
+      "direction": "H",
+      "theme": "dark",
+      "screen": "library",
+      "width": 768
+    },
+    {
+      "direction": "H",
+      "theme": "dark",
+      "screen": "library",
+      "width": 1024
+    },
+    {
+      "direction": "H",
+      "theme": "dark",
+      "screen": "library",
+      "width": 1280
+    },
+    {
+      "direction": "H",
+      "theme": "dark",
+      "screen": "schedule",
+      "width": 320
+    },
+    {
+      "direction": "H",
+      "theme": "dark",
+      "screen": "schedule",
+      "width": 375
+    },
+    {
+      "direction": "H",
+      "theme": "dark",
+      "screen": "schedule",
+      "width": 390
+    },
+    {
+      "direction": "H",
+      "theme": "dark",
+      "screen": "schedule",
+      "width": 430
+    },
+    {
+      "direction": "H",
+      "theme": "dark",
+      "screen": "schedule",
+      "width": 768
+    },
+    {
+      "direction": "H",
+      "theme": "dark",
+      "screen": "schedule",
+      "width": 1024
+    },
+    {
+      "direction": "H",
+      "theme": "dark",
+      "screen": "schedule",
+      "width": 1280
+    },
+    {
+      "direction": "H",
+      "theme": "dark",
+      "screen": "settings",
+      "width": 320
+    },
+    {
+      "direction": "H",
+      "theme": "dark",
+      "screen": "settings",
+      "width": 375
+    },
+    {
+      "direction": "H",
+      "theme": "dark",
+      "screen": "settings",
+      "width": 390
+    },
+    {
+      "direction": "H",
+      "theme": "dark",
+      "screen": "settings",
+      "width": 430
+    },
+    {
+      "direction": "H",
+      "theme": "dark",
+      "screen": "settings",
+      "width": 768
+    },
+    {
+      "direction": "H",
+      "theme": "dark",
+      "screen": "settings",
+      "width": 1024
+    },
+    {
+      "direction": "H",
+      "theme": "dark",
+      "screen": "settings",
+      "width": 1280
+    }
+  ],
+  "contrast": "All six palettes: body, secondary, primary button and hero text ≥4.5:1",
+  "fonts": "Local Manrope and DM Sans loaded",
+  "interactions": "Valid set completion advances; invalid entry stays active; exercise search and favorites operate in memory",
+  "isolation": "No app database, localStorage, service worker, permissions or external requests",
+  "errors": []
+}

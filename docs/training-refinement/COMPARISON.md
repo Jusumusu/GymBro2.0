@@ -1,5 +1,7 @@
 # Five directions for Gym Bro
 
+**Historical review — rejected by the user.** The active review is [Design study 02](round-2/README.md). The recommendation below belongs to the rejected first study and is withdrawn.
+
 These are original, working HTML prototypes, not the final app redesign. Open `gallery.html` from the built development site. Use Direction, Appearance, Screen and Preview width. `comparison.html` displays rendered screens from all five prototypes side by side, with shared screen/theme controls and a swipeable rail on phones. The gallery offers six required screens plus Focus Mode, Training Blocks and Component States. Sample set logging, search, favorites and dialogs run in memory only. Other actions are explicitly mocked. No journal storage, service worker, permissions or AI calls are used.
 
 All directions share the same fictional Alex journal: 12 saved workouts, 36 weekly working sets, three weekly sessions, and bench press at 60 kg × 10. All support light and dark. Native system fonts keep the gallery fast without third-party font requests; their precise appearance depends on the device.

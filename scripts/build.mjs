@@ -12,6 +12,7 @@ const build=hash.digest('hex').slice(0,12);
 await rm('dist',{recursive:true,force:true});await mkdir('dist',{recursive:true});
 // Optional visual-review evidence is documentation, never part of the offline app shell.
 try{await cp('artifacts/training-refinement/gallery','dist/docs/training-refinement/previews',{recursive:true,filter:path=>!path.endsWith('results.json')&&!/comparison-(light|dark)\.png$/.test(path)});}catch(error){if(error.code!=='ENOENT')throw error;}
+try{await cp('artifacts/training-refinement/round-2','dist/docs/training-refinement/round-2/previews',{recursive:true,filter:path=>!path.endsWith('results.json')&&!/board-|failure\.png$/.test(path)});}catch(error){if(error.code!=='ENOENT')throw error;}
 await cp('src','dist/src',{recursive:true});await cp('public','dist',{recursive:true});await cp('docs','dist/docs',{recursive:true});
 const meta=`<head><meta name="production" content="true"><meta name="gymbro-build" content="${build}"><meta name="gymbro-version" content="${version}">${preview?'<meta name="gymbro-environment" content="preview">':''}`;
 await writeFile('dist/index.html',(await readFile('index.html','utf8')).replace('<head>',meta));

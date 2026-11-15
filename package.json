@@ -28,7 +28,8 @@
     "test:advanced": "node tests/browser-advanced-training.mjs",
     "test:advanced-design": "node tests/browser-advanced-design.mjs",
     "test:training-refinement": "node tests/browser-training-refinement.mjs",
-    "test:design-gallery": "node tests/browser-design-gallery.mjs"
+    "test:design-gallery": "node tests/browser-design-gallery.mjs",
+    "test:design-round-two": "node tests/browser-design-round-two.mjs"
   },
   "engines": {
     "node": ">=22"
