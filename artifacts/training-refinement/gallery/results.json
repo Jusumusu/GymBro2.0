@@ -3244,6 +3244,7 @@
   ],
   "contrast": "All 10 palettes: body, secondary and primary button text ≥4.5:1",
   "interactions": "set entry/advance, search and favorite toggles passed",
+  "comparison": "Five rendered concepts; shared theme/screen controls; phone swipe rail without page overflow",
   "storage": "No app database, localStorage or service worker created",
   "errors": []
 }
