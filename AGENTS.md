@@ -1,6 +1,8 @@
 # Gym Bro workflow
 
-- Current visual steering: the user rejected the first five concepts as insufficiently original, modern, clean and professional. The active visual review is `docs/training-refinement/round-2/`, with Contour, Prism and Fieldwork. No direction is approved. The earlier recommendation of Modern Athletic is withdrawn. Keep the real app and main unchanged pending selection.
+- Latest visual steering: the user likes Contour and Prism and asks to combine them, while disliking Contour’s dark mode. The active refinement is `docs/training-refinement/round-2/HYBRID.md`: direction I, Contour + Prism, with Contour’s structure, Prism’s type/controls/navigation and a neutral charcoal/plum/lavender dark theme. Show the combined result for review; no merge or final app redesign has been authorized.
+
+- Previous visual steering: the user rejected the first five concepts as insufficiently original, modern, clean and professional. The active visual review is `docs/training-refinement/round-2/`, with Contour, Prism and Fieldwork. No direction is approved. The earlier recommendation of Modern Athletic is withdrawn. Keep the real app and main unchanged pending selection.
 
 - Current task: training logic refinement, highlight alignment and five-concept visual exploration, on `feature/training-refinement-visual-redesign` from main `636b906`. Read `docs/training-refinement/BRIEF.md`. No main changes or merge are authorized for this update. Earlier release approvals are historical.
 - Five new aesthetic concepts must be presented before final redesign implementation. The earlier A — Quiet focus selection applies to the released 0.3.0 features, not this rebranding. Training logic fixes and minor existing-style alignment corrections may proceed independently.

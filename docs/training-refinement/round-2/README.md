@@ -1,5 +1,7 @@
 # Gym Bro — Design study 02
 
+**Current refinement:** the user likes Contour and Prism and requests a combination with a different dark mode. [Contour + Prism](HYBRID.md) is the active review, now the studio’s default. The three directions below are retained as references.
+
 The user rejected the first five proposals and asked for something original, modern, clean and professional. Those proposals remain historical; their previous recommendation is withdrawn. This is a new review, with three fully rendered alternatives and no selected aesthetic.
 
 Open `index.html` for the interactive studio, or `compare.html` for side-by-side rendered screens. Both are isolated documentation in the existing review branch. Public Pages publication is still subject to the github-pages branch restriction documented in the parent DEPLOYMENT.md; no new live URL is claimed.
