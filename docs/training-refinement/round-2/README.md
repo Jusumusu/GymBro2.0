@@ -1,6 +1,8 @@
 # Gym Bro — Design study 02
 
-**Current refinement:** the user likes Contour and Prism and requests a combination with a different dark mode. [Contour + Prism](HYBRID.md) is the active review, now the studio’s default. The three directions below are retained as references.
+**Active review:** [Contour + Prism with glass](GLASS.md). The user approved the solid combination, then requested a glass treatment before app-wide styling resumes. Direction J is now the studio default; direction I remains the approved solid reference.
+
+**Previous refinement:** the user likes Contour and Prism and requests a combination with a different dark mode. [Contour + Prism](HYBRID.md) is the active review, now the studio’s default. The three directions below are retained as references.
 
 The user rejected the first five proposals and asked for something original, modern, clean and professional. Those proposals remain historical; their previous recommendation is withdrawn. This is a new review, with three fully rendered alternatives and no selected aesthetic.
 

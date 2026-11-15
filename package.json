@@ -30,7 +30,8 @@
     "test:training-refinement": "node tests/browser-training-refinement.mjs",
     "test:design-gallery": "node tests/browser-design-gallery.mjs",
     "test:design-round-two": "node tests/browser-design-round-two.mjs",
-    "test:design-hybrid": "node tests/browser-design-round-two.mjs --hybrid"
+    "test:design-hybrid": "node tests/browser-design-round-two.mjs --hybrid",
+    "test:design-glass": "node tests/browser-design-round-two.mjs --glass"
   },
   "engines": {
     "node": ">=22"

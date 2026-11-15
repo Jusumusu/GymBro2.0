@@ -2,20 +2,22 @@
 <html lang="en">
 <head>
   <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Gym Bro — Contour + Prism</title>
-  <link rel="stylesheet" href="./studio.css"><link rel="stylesheet" href="./hybrid.css"><script type="module" src="./studio.js"></script>
+  <title>Gym Bro — Contour + Prism, in glass</title>
+  <link rel="stylesheet" href="./studio.css"><link rel="stylesheet" href="./hybrid.css"><link rel="stylesheet" href="./glass.css"><script type="module" src="./studio.js"></script>
 </head>
 <body>
   <div class="studio">
-    <header class="studio-head"><div><span class="studio-label">GYM BRO · CONTOUR + PRISM</span><h1>The best of both.</h1><p>Contour’s clear structure, with Prism’s softer touch and a new dark palette.</p></div><a href="./hybrid.html">Compare light and dark <span aria-hidden="true">↗</span></a></header>
+    <header class="studio-head"><div><span class="studio-label">GYM BRO · CONTOUR + PRISM</span><h1>Contour + Prism, in glass.</h1><p>Translucent floating controls, with solid, readable workout fields.</p></div><a href="./glass.html">Compare light and dark <span aria-hidden="true">↗</span></a></header>
     <div class="studio-controls">
-      <label>Direction<select id="direction"><option value="I">Combined — Contour + Prism</option><option value="F">01 — Contour</option><option value="G">02 — Prism</option><option value="H">03 — Fieldwork</option></select></label>
+      <label>Direction<select id="direction"><option value="J">Combined + Glass</option><option value="I">Combined — Contour + Prism</option><option value="F">01 — Contour</option><option value="G">02 — Prism</option><option value="H">03 — Fieldwork</option></select></label>
       <label>Screen<select id="screen"><option value="workout">Workout home</option><option value="active">Active workout</option><option value="gains">Gains dashboard</option><option value="library">Exercise library</option><option value="schedule">Schedule</option><option value="settings">Settings</option></select></label>
       <label>Appearance<select id="theme"><option value="light">Light</option><option value="dark">Dark</option></select></label>
       <label>Format<select id="format"><option value="phone">Phone</option><option value="desktop">Desktop</option></select></label>
+      <label id="completion-label">Set completion<select id="completion"><option value="circle">Quiet circle</option><option value="square">Soft square</option><option value="inline">Inline check</option></select></label>
+      <label id="material-label">Material<select id="material"><option value="glass">Glass</option><option value="reduced">Reduce transparency</option></select></label>
     </div>
-    <p class="studio-summary" id="direction-note"></p>
-    <div class="stage"><section id="prototype" data-direction="I" data-theme="light" data-format="phone" aria-label="Gym Bro design prototype"></section></div>
+    <p class="studio-summary" id="direction-note"></p><p><a href="./completion.html">Compare the three set-completion controls →</a></p>
+    <div class="stage"><section id="prototype" data-direction="J" data-theme="light" data-format="phone" aria-label="Gym Bro design prototype"></section></div>
     <footer class="studio-foot">Design prototypes · Same fictional journal · Sample logging stays in memory · No real workout data is accessed · No design selected</footer>
   </div>
 </body>

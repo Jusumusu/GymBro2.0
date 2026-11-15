@@ -1,0 +1,69 @@
+/* A glass material for floating controls. Working-set fields remain opaque. */
+#prototype[data-direction=J]{
+  --glass-fill:rgb(255 255 255 / .72);--glass-edge:rgb(255 255 255 / .9);
+  --glass-filter:blur(22px) saturate(1.65);--glass-rim:rgb(255 255 255 / .95);
+  --glass-shadow:0 8px 26px #28223812,inset 0 1px 0 var(--glass-rim),inset 0 -1px 0 #63557714;
+}
+#prototype[data-direction=J][data-theme=dark]{
+  --glass-fill:rgb(42 36 57 / .76);--glass-edge:rgb(224 209 255 / .24);
+  --glass-rim:rgb(239 227 255 / .22);
+  --glass-shadow:0 8px 30px #08070d3d,inset 0 1px 0 var(--glass-rim),inset 0 -1px 0 #ffffff05;
+}
+#prototype[data-direction=J] .app-frame{position:relative}
+#prototype[data-direction=J] .screen-body{padding-bottom:115px}
+#prototype[data-direction=J] .app-nav,
+#prototype[data-direction=J] .exercise-queue,
+#prototype[data-direction=J] .sample-rest{
+  background:var(--glass-fill);border:1px solid var(--glass-edge);
+  -webkit-backdrop-filter:var(--glass-filter);backdrop-filter:var(--glass-filter);
+  box-shadow:var(--glass-shadow);
+}
+#prototype[data-direction=J] .app-nav{position:absolute;left:13px;right:13px;bottom:12px;z-index:5;margin:0;min-height:66px;border-radius:23px;padding:8px 5px}
+#prototype[data-direction=J] .app-nav::before,
+#prototype[data-direction=J] .sample-rest::before{
+  content:'';position:absolute;inset:0;border-radius:inherit;pointer-events:none;
+  background:linear-gradient(115deg,#ffffff20 0%,#ffffff04 33%,transparent 56%,#ffffff12 100%);
+}
+#prototype[data-direction=J] .nav-item{border-radius:16px;z-index:1}
+#prototype[data-direction=J] .nav-item[aria-current]{box-shadow:inset 0 1px 0 #ffffff42,inset 0 -1px 0 #5c475b0c}
+#prototype[data-direction=J] .exercise-queue{position:sticky;top:-8px;z-index:3;padding:5px;gap:3px;border-radius:25px;min-height:47px}
+#prototype[data-direction=J] .exercise-queue button{border-color:transparent;flex:1;min-height:36px;font-size:10px;padding:8px;position:relative}
+#prototype[data-direction=J] .exercise-queue button.selected{border-color:var(--glass-edge);background:var(--soft);box-shadow:inset 0 1px 0 var(--glass-rim)}
+#prototype[data-direction=J] .sample-rest{position:absolute;z-index:4;right:24px;left:24px;bottom:92px;padding:12px 14px;border-radius:19px;display:flex;gap:8px;align-items:center}
+#prototype[data-direction=J] .sample-rest>div{flex:1;min-width:0;position:relative}
+#prototype[data-direction=J] .sample-rest small{display:block;font-size:8px;letter-spacing:1px;color:var(--muted)}
+#prototype[data-direction=J] .sample-rest strong{display:block;font:600 23px/1.1 'DM Sans',sans-serif;letter-spacing:-.6px;margin-top:3px;font-variant-numeric:tabular-nums}
+#prototype[data-direction=J] .sample-rest button{position:relative;width:44px;height:44px;min-width:44px;padding:5px;background:transparent;border-color:transparent;border-radius:50%;font-size:11px}
+#prototype[data-direction=J] .sample-rest button:hover{background:var(--soft)}
+#prototype[data-direction=J] .sample-rest .icon{width:15px;height:15px}
+#prototype[data-direction=J][data-format=desktop] .app-nav{position:relative;inset:auto;min-height:0;height:auto;width:155px;margin:14px 0 14px 14px;border-radius:17px;border:1px solid var(--glass-edge);padding:20px 12px}
+#prototype[data-direction=J][data-format=desktop] .sample-rest{left:auto;width:310px;bottom:25px;right:30px}
+#prototype[data-direction=J][data-format=desktop] .exercise-queue{max-width:460px}
+/* Use the same readable solid material for preference and capability fallbacks. */
+#prototype[data-direction=J][data-material=reduced]{--glass-fill:var(--surface);--glass-filter:none;--glass-edge:var(--line);--glass-rim:transparent;--glass-shadow:0 4px 15px #20142b0a}
+@media(prefers-reduced-transparency:reduce){#prototype[data-direction=J]{--glass-fill:var(--surface);--glass-filter:none;--glass-edge:var(--line);--glass-rim:transparent;--glass-shadow:none}}
+@supports not ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){#prototype[data-direction=J]{--glass-fill:var(--surface);--glass-filter:none;--glass-edge:var(--line);--glass-rim:transparent;--glass-shadow:none}}
+@media(max-width:360px){#prototype[data-direction=J] .sample-rest{left:17px;right:17px;padding:10px 11px}#prototype[data-direction=J] .exercise-queue button{font-size:9px;padding:8px 6px}#prototype[data-direction=J] .exercise-queue button>span{font-size:8px}}
+@media(min-width:761px){.studio-controls:has(#material-label:not([hidden])){grid-template-columns:1.6fr 1.5fr 1fr 1fr 1.2fr}}
+.studio [hidden]{display:none!important}
+/* Completion stays one tap, with a 44 px target around a quieter visual mark. */
+#prototype[data-direction=J] .set-row button{position:relative;isolation:isolate;width:44px;min-width:44px;height:44px;min-height:44px;border:0;background:transparent;color:var(--muted);border-radius:50%;padding:0;box-shadow:none}
+#prototype[data-direction=J] .set-row button::before{content:'';position:absolute;z-index:-1;left:50%;top:50%;transform:translate(-50%,-50%);width:27px;height:27px;border:1.5px solid var(--muted);border-radius:50%;background:transparent}
+#prototype[data-direction=J] .set-row button .icon{width:15px;height:15px;opacity:0;stroke-width:2.1}
+#prototype[data-direction=J] .set-row.active button::before{border-color:var(--accent)}
+#prototype[data-direction=J] .set-row.done button{color:var(--accent-on)}
+#prototype[data-direction=J] .set-row.done button::before{background:var(--accent);border-color:var(--accent)}
+#prototype[data-direction=J] .set-row.done button .icon{opacity:1}
+#prototype[data-direction=J] .set-row button:hover::before{background:var(--soft);border-color:var(--accent)}
+#prototype[data-direction=J] .set-row.done button:hover::before{background:var(--accent)}
+#prototype[data-direction=J][data-completion=square] .set-row button{border-radius:11px}
+#prototype[data-direction=J][data-completion=square] .set-row button::before{width:31px;height:31px;border-radius:9px;background:var(--surface);border-width:1px;border-color:var(--line)}
+#prototype[data-direction=J][data-completion=square] .set-row.active button::before{border-color:var(--accent)}
+#prototype[data-direction=J][data-completion=square] .set-row.done button::before{background:var(--accent);border-color:var(--accent)}
+#prototype[data-direction=J][data-completion=inline] .set-row button::before{border:0;background:transparent;width:29px;height:29px}
+#prototype[data-direction=J][data-completion=inline] .set-row button .icon{opacity:1;width:20px;height:20px;stroke-width:1.5}
+#prototype[data-direction=J][data-completion=inline] .set-row.active button{color:var(--accent)}
+#prototype[data-direction=J][data-completion=inline] .set-row.done button{color:var(--accent)}
+#prototype[data-direction=J][data-completion=inline] .set-row.done button::before{background:var(--soft);border:1px solid var(--line)}
+#prototype[data-direction=J][data-completion=inline] .set-row.done button .icon{stroke-width:2.4;width:16px;height:16px}
+@media(min-width:761px){.studio-controls:has(#completion-label:not([hidden])){grid-template-columns:1.4fr 1.4fr 1fr 1fr 1.2fr 1.2fr;max-width:none}}

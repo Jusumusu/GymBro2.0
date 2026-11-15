@@ -1,6 +1,8 @@
 # Gym Bro workflow
 
-- Latest visual steering: the user likes Contour and Prism and asks to combine them, while disliking Contour’s dark mode. The active refinement is `docs/training-refinement/round-2/HYBRID.md`: direction I, Contour + Prism, with Contour’s structure, Prism’s type/controls/navigation and a neutral charcoal/plum/lavender dark theme. Show the combined result for review; no merge or final app redesign has been authorized.
+- Current design status: the user approved the shown Contour + Prism combination and revised dark mode with “yes”. They then paused app-wide implementation to ask for Apple-like liquid glass, and responded “awesome” to a selective glass preview. The user also requests a cleaner, modern replacement for the per-set Log button; show Quiet circle, Soft square and Inline check variants, with Quiet circle recommended. Active review is direction J in `docs/training-refinement/round-2/GLASS.md`. Show this concrete glass refinement before resuming the app-wide styling. The approved solid hybrid remains direction I. No main merge is authorized.
+
+- Historical hybrid refinement: the user likes Contour and Prism and asks to combine them, while disliking Contour’s dark mode. The active refinement is `docs/training-refinement/round-2/HYBRID.md`: direction I, Contour + Prism, with Contour’s structure, Prism’s type/controls/navigation and a neutral charcoal/plum/lavender dark theme. Show the combined result for review; no merge or final app redesign has been authorized.
 
 - Previous visual steering: the user rejected the first five concepts as insufficiently original, modern, clean and professional. The active visual review is `docs/training-refinement/round-2/`, with Contour, Prism and Fieldwork. No direction is approved. The earlier recommendation of Modern Athletic is withdrawn. Keep the real app and main unchanged pending selection.
 
