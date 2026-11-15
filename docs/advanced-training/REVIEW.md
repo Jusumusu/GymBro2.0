@@ -1,6 +1,6 @@
 # Gym Bro 0.3.0 — advanced training review
 
-All six features are implemented on `feature/advanced-training-experience` using **A — Quiet focus**, selected by the user on November 14, 2026. Production remains 0.2.5; nothing has been merged into main. [Pull request #1](https://github.com/Jusumusu/GymBro2.0/pull/1).
+All six features are implemented on `feature/advanced-training-experience` using **A — Quiet focus**, selected by the user on November 14, 2026. The user subsequently approved “Merge to main”; this reviewed update is promoted through the existing main release workflow. [Pull request #1](https://github.com/Jusumusu/GymBro2.0/pull/1).
 
 ## Try the six features
 
@@ -29,4 +29,4 @@ See [QA.md](QA.md) for the executed suites, actual screenshots, independent cale
 
 No cloud sync/backend, paid service or account authentication was added. Password loss is unrecoverable. Large photo collections may exceed export or device quotas. Calendar imports on physical Apple/Google clients, OS alert delivery, physical phones and Safari/Firefox are not certified. File-writer completion/failure is tested with explicit browser API stubs; actual fallback downloads and file-input read-back/restore are exercised in Chromium. Superset duration estimates are conservative. Export before any code rollback: backward retention does not guarantee older code understands new training semantics.
 
-Main merge approval is still required separately. This update has not been merged. The production root remains the approved main build; the candidate is published only at `/preview/`.
+The user subsequently authorized “Merge to main”. Main publication promotes the reviewed 0.3.0 build while retaining the separate preview journal. See [release/data notes](RELEASE.md).

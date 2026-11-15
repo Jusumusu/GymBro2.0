@@ -13,4 +13,4 @@ Validation: **212 domain + 9 backend + 159 browser workflow checks**, plus **120
 
 Physical Apple/Google calendar import, mobile OS alerts/share sheets and Safari/Firefox are not certified. File-writer completion/failure uses explicit API stubs; real fallback download, file-input verification/restore and aborted IndexedDB transactions are exercised. No automatic cloud sync/backend, paid service or new runtime dependency is introduced.
 
-**Do not merge:** the user approved design A only. Main remains unchanged; release requires separate explicit merge approval.
+**Release approved:** after reviewing design A and the isolated preview, the user explicitly requested “Merge to main”. Preserve feature history with a normal merge, verify main publication, then remove the completed feature branch.

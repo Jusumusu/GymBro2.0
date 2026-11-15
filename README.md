@@ -1,10 +1,10 @@
 # Gym Bro 2.0
 
-## 0.3.0 advanced-training candidate
+## 0.3.0 advanced training
 
-The six-feature update is implemented on `feature/advanced-training-experience` using the user-approved **A — Quiet focus** design. Main remains the approved 0.2.5 release. See the [feature review and local preview instructions](docs/advanced-training/REVIEW.md), [executed QA](docs/advanced-training/QA.md), and [data/architecture changes](docs/advanced-training/ARCHITECTURE.md). [PR #1](https://github.com/Jusumusu/GymBro2.0/pull/1) is not merged. The [live candidate preview](https://jusumusu.github.io/GymBro2.0/preview/) is now published after the user adjusted deployment configuration. Main remains unchanged.
+The user approved **A — Quiet focus**, reviewed the isolated preview, and explicitly authorized “Merge to main”. This release adds backup protection/recovery, Focus Mode, training blocks, reversible time-adaptive sessions, private exercise feedback and iCalendar export. See the [feature guide](docs/advanced-training/REVIEW.md), [executed QA](docs/advanced-training/QA.md), [architecture](docs/advanced-training/ARCHITECTURE.md) and [release/data notes](docs/advanced-training/RELEASE.md). [PR #1](https://github.com/Jusumusu/GymBro2.0/pull/1) preserves the full feature history. Main publication uses the existing Pages workflow; the separate preview journal is retained.
 
-Private, offline-first strength training with an optional OpenAI-compatible coach backend. Native ES modules, Node 22+ and no npm dependencies. Version 0.2.5 adds an interactive anatomical map, recurring weekly schedules, optional active-app reminders and a stable, readable version screen with explicit update consent. Main holds the approved app; new experiments use one temporary feature branch, removed after approval and release.
+Private, offline-first strength training with an optional OpenAI-compatible coach backend. Native ES modules, Node 22+ and no npm dependencies. Version 0.3.0 retains the anatomical map, recurring schedules, optional reminders and explicit verified update consent while adding the six advanced-training features. Main holds the approved app; new experiments use one temporary feature branch, removed after approval and release.
 
 - Stable: https://jusumusu.github.io/GymBro2.0/
 - Upgrade preview: https://jusumusu.github.io/GymBro2.0/preview/

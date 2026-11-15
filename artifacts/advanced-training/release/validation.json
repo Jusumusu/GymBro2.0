@@ -1,0 +1,19 @@
+{
+  "approvedByUser": "Merge to main",
+  "reviewedSource": "03189a97de76b6b36e4554d16fc5ff46b67e1634",
+  "precedingMain": "df6000d8db32d3e5904a4f8e160dbd3ab15cc7f3",
+  "domainPassed": 212,
+  "backendPassed": 9,
+  "coreBrowserPassed": 24,
+  "production": {
+    "version": "0.3.0",
+    "build": "6cc880441d25",
+    "environment": "production"
+  },
+  "preview": {
+    "version": "0.3.0",
+    "build": "7abdda1beaf7",
+    "environment": "preview"
+  },
+  "scope": "Synthetic fixtures; no production journal accessed"
+}
