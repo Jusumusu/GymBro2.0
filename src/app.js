@@ -100,7 +100,7 @@ const actions={
  'confirm-delete-plan':async b=>{await queued(s=>{s.plans=s.plans.filter(p=>p.id!==b.dataset.id);},{undo:true});closeDialog();notify('Program deleted. Undo is available in Settings.');},
  generate:()=>confirmAction('Generate new programs?','New routines will be added using your profile, goal, equipment, and time budget. Existing programs will stay. Review personal exercise restrictions before training.','confirm-generate'),
  'confirm-generate':async()=>{await queued(s=>{s.plans.push(...generatePlans(s));});closeDialog();notify('Programs added. Edit any prescription to suit you.');},
- 'browse-library':()=>{const input=document.querySelector('#exercise-search');input.closest('[data-exercise-browser]').scrollIntoView({block:'start'});input.focus({preventScroll:true});},
+ 'browse-library':()=>{const reveal=()=>{const input=document.querySelector('#exercise-search');input?.closest('[data-exercise-browser]')?.scrollIntoView({block:'start'});input?.focus({preventScroll:true});};if(route==='programs')reveal();else{window.addEventListener('hashchange',()=>{if(route==='programs')reveal();},{once:true});go('programs');}},
  'pick-exercise':()=>picker(),
  'choose-exercise':b=>selectWorkoutExercise(b.dataset.id,b.dataset.replace||null),
  'confirm-swap-exercise':b=>applyWorkoutSelection(b.dataset.id,b.dataset.replace),
