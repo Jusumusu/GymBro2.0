@@ -10,8 +10,8 @@
   ],
   "errors": [],
   "main": "0.3.0",
-  "preview": "0.3.1",
+  "preview": "0.4.0",
   "mainBuild": "6cc880441d25",
-  "previewBuild": "cd2600bffec0",
+  "previewBuild": "3242de70aef1",
   "scope": "Real standalone-main + built-preview composition, tested locally; public publication is separately permission-gated"
 }

@@ -1,0 +1,27 @@
+{
+  "candidate": "0.4.0",
+  "previewBuild": "3242de70aef1",
+  "approvedMain": "0.3.0",
+  "mainBuild": "6cc880441d25",
+  "selection": "Contour + Prism, selective glass, B \u2014 Soft square",
+  "checks": {
+    "unit": 231,
+    "backend": 9,
+    "actualDesign": 178,
+    "coreBrowser": 24,
+    "advancedTraining": 21,
+    "refinement": 12,
+    "workoutUx": 19,
+    "automaticUpdater": 14,
+    "composedIsolation": 6
+  },
+  "fonts": {
+    "offline": true,
+    "assets": [
+      "dm-sans.woff",
+      "manrope.woff"
+    ]
+  },
+  "data": "Synthetic journals; actual storage and update flows; main code/history/draft unchanged after isolated preview use",
+  "publication": "Must verify GitHub deployment separately; prior environment branch allowance rejected feature preview."
+}
