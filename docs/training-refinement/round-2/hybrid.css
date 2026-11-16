@@ -1,0 +1,86 @@
+/* Contour's structure, Prism's typography and touch treatments. */
+#prototype:is([data-direction=I],[data-direction=J]){
+  --bg:#f8f8fa;--surface:#fff;--ink:#28262f;--muted:#706a79;--line:#dedbe4;
+  --accent:#b63c29;--accent-on:#fff;--tint:#f7e9e4;--soft:#efedf3;
+  --hero:#282630;--hero-ink:#f5f2f7;--hero-action:#ffac90;--hero-action-ink:#342019;
+  --success:#526c60;--radius:14px;--space:24px;--font:Manrope,sans-serif;
+}
+#prototype:is([data-direction=I],[data-direction=J])[data-theme=dark]{
+  --bg:#17151e;--surface:#24202e;--ink:#f3edf9;--muted:#b9afc8;--line:#464050;
+  --accent:#c8b4ff;--accent-on:#291c4b;--tint:#3a2f51;--soft:#2c2735;
+  --hero:#282330;--hero-ink:#f3edf9;--hero-action:#c8b4ff;--hero-action-ink:#291c4b;
+  --success:#c4bbd9;
+}
+#prototype:is([data-direction=I],[data-direction=J]) .app-header{border-bottom:0;height:68px;min-height:68px}
+#prototype:is([data-direction=I],[data-direction=J]) .header-avatar{background:var(--soft);border-color:transparent}
+#prototype:is([data-direction=I],[data-direction=J]) .section-heading{margin:0 0 25px}
+#prototype:is([data-direction=I],[data-direction=J]) .section-heading h1{font-size:29px;letter-spacing:-1.35px;font-weight:750}
+#prototype:is([data-direction=I],[data-direction=J]) .section-heading>.icon-button{background:var(--soft);border-color:transparent;border-radius:50%}
+#prototype:is([data-direction=I],[data-direction=J]) .session-ticket{padding:21px;border-radius:15px;border:1px solid #ffffff09}
+#prototype:is([data-direction=I],[data-direction=J]) .session-ticket::after{content:'';position:absolute;left:0;top:29px;width:3px;height:42px;background:var(--hero-action)}
+#prototype:is([data-direction=I],[data-direction=J]) .ticket-body{margin:25px 0}
+#prototype:is([data-direction=I],[data-direction=J]) .ticket-body h2{font-size:31px;font-weight:700;letter-spacing:-1.5px}
+#prototype:is([data-direction=I],[data-direction=J]) .ticket-body>div:first-child{min-width:0}
+#prototype:is([data-direction=I],[data-direction=J]) .ticket-body .accent-period{color:var(--hero-action)}
+#prototype:is([data-direction=I],[data-direction=J]) .ticket-mark>span{font-family:'DM Sans',sans-serif;font-weight:350;opacity:.5}
+#prototype:is([data-direction=I],[data-direction=J]) .ticket-footer{border-color:#bdb0cd28;gap:12px}
+#prototype:is([data-direction=I],[data-direction=J]) .ticket-footer>span{font-size:10px;max-width:98px}
+#prototype:is([data-direction=I],[data-direction=J]) .ticket-footer .primary,#prototype:is([data-direction=I],[data-direction=J]) .backup-panel .primary{background:var(--hero-action);color:var(--hero-action-ink);border-radius:11px;font-size:11px;padding:12px 14px}
+#prototype:is([data-direction=I],[data-direction=J]) .weekly{margin-bottom:22px}
+#prototype:is([data-direction=I],[data-direction=J]) .week-strip{gap:7px}
+#prototype:is([data-direction=I],[data-direction=J]) .day{border-radius:11px}
+#prototype:is([data-direction=I],[data-direction=J]) .movement{grid-template-columns:25px minmax(0,1fr) auto;gap:10px;padding:14px 0}
+#prototype:is([data-direction=I],[data-direction=J]) .movement-index{background:var(--soft);border-radius:8px;width:24px;height:27px;display:grid;place-items:center;font-size:9px;color:var(--muted)}
+#prototype:is([data-direction=I],[data-direction=J]) .movement h3{font-size:12px}
+#prototype:is([data-direction=I],[data-direction=J]) .movement-load{font-family:'DM Sans',sans-serif;font-size:12px}
+#prototype:is([data-direction=I],[data-direction=J]) .metric-grid strong,#prototype:is([data-direction=I],[data-direction=J]) .strength-value{font-family:'DM Sans',sans-serif}
+#prototype:is([data-direction=I],[data-direction=J]) .app-nav{border:1px solid var(--line);border-radius:16px;margin:0 13px 12px;padding:8px 5px;background:var(--surface)}
+#prototype:is([data-direction=I],[data-direction=J]) .nav-item{font-size:10px;gap:5px;min-height:48px;border-radius:10px}
+#prototype:is([data-direction=I],[data-direction=J]) .nav-item[aria-current]{background:var(--tint);color:var(--accent)}
+#prototype:is([data-direction=I],[data-direction=J]) .nav-item[aria-current]::before{display:none}
+#prototype:is([data-direction=I],[data-direction=J]) .exercise-queue button{border:1px solid var(--line);border-radius:18px;padding:8px 11px;background:transparent}
+#prototype:is([data-direction=I],[data-direction=J]) .exercise-queue button.selected{background:var(--soft);border-color:var(--line)}
+#prototype:is([data-direction=I],[data-direction=J]) .active-exercise{border:0;padding:0}
+#prototype:is([data-direction=I],[data-direction=J]) .active-exercise h1{font-size:28px;font-weight:750;letter-spacing:-1.3px;max-width:none}
+#prototype:is([data-direction=I],[data-direction=J]) .prescription{margin:12px 0 20px}
+#prototype:is([data-direction=I],[data-direction=J]) .previous{background:var(--soft);padding:14px 15px;border:0;border-radius:11px;margin-bottom:21px}
+#prototype:is([data-direction=I],[data-direction=J]) .set-row{border-radius:12px}
+#prototype:is([data-direction=I],[data-direction=J]) .set-row input{font-family:'DM Sans',sans-serif;border-radius:8px;font-size:18px;font-weight:600}
+#prototype:is([data-direction=I],[data-direction=J]) .set-row button{border-radius:8px}
+#prototype:is([data-direction=I],[data-direction=J])[data-theme=dark] .set-row.active{border-color:transparent;box-shadow:inset 3px 0 var(--accent)}
+#prototype:is([data-direction=I],[data-direction=J])[data-theme=dark] .set-row input{border-color:transparent}
+#prototype:is([data-direction=I],[data-direction=J])[data-theme=dark] .set-row.done input{background:transparent}
+#prototype:is([data-direction=I],[data-direction=J]) .strength-panel{background:var(--surface);border:1px solid var(--line);padding:21px 18px;border-radius:15px}
+#prototype:is([data-direction=I],[data-direction=J]) .chart-disclosure{font-size:10px}
+#prototype:is([data-direction=I],[data-direction=J]) .exercise-glyph{background:var(--soft);border-radius:11px}
+#prototype:is([data-direction=I],[data-direction=J]) .filter-chips button{border-radius:16px}
+#prototype:is([data-direction=I],[data-direction=J]) .filter-chips button.selected{background:var(--accent);color:var(--accent-on);border-color:var(--accent)}
+#prototype:is([data-direction=I],[data-direction=J]) .schedule-item.next .date-block{background:var(--tint);border-radius:10px;padding:10px 0;height:66px}
+#prototype:is([data-direction=I],[data-direction=J]) .backup-panel{border-radius:15px}
+#prototype:is([data-direction=I],[data-direction=J]) .backup-panel .text-button{color:var(--hero-ink)}
+#prototype:is([data-direction=I],[data-direction=J]) .setting-row select{border-radius:8px}
+#prototype:is([data-direction=I],[data-direction=J])[data-format=desktop] .app-header{height:72px;min-height:72px}
+#prototype:is([data-direction=I],[data-direction=J])[data-format=desktop] .section-heading h1{font-size:38px}
+#prototype:is([data-direction=I],[data-direction=J])[data-format=desktop] .app-nav{margin:0;padding:28px 15px;border:0;border-right:1px solid var(--line);border-radius:0;background:var(--bg)}
+#prototype:is([data-direction=I],[data-direction=J])[data-format=desktop] .nav-item{min-height:46px;gap:10px;font-size:11px}
+#prototype:is([data-direction=I],[data-direction=J])[data-format=desktop] .ticket-body h2{font-size:38px}
+#prototype:is([data-direction=I],[data-direction=J])[data-format=desktop] .active-exercise h1{font-size:33px}
+@media(max-width:760px){#prototype:is([data-direction=I],[data-direction=J])[data-format=desktop] .app-nav{padding:18px 7px}#prototype:is([data-direction=I],[data-direction=J])[data-format=desktop] .nav-item{font-size:8px;gap:6px}}
+@media(max-width:360px){
+  #prototype:is([data-direction=I],[data-direction=J]){--space:17px}
+  #prototype:is([data-direction=I],[data-direction=J]) .section-heading h1{font-size:26px}
+  #prototype:is([data-direction=I],[data-direction=J]) .session-ticket{padding:17px}
+  #prototype:is([data-direction=I],[data-direction=J]) .ticket-body h2{font-size:28px}
+  #prototype:is([data-direction=I],[data-direction=J]) .ticket-footer>span{font-size:9px;max-width:75px}
+  #prototype:is([data-direction=I],[data-direction=J]) .ticket-footer .primary{font-size:10px;padding:12px}
+  #prototype:is([data-direction=I],[data-direction=J]) .movement{gap:8px}
+  #prototype:is([data-direction=I],[data-direction=J]) .movement h3{font-size:11px}
+  #prototype:is([data-direction=I],[data-direction=J]) .active-exercise h1{font-size:27px}
+  #prototype:is([data-direction=I],[data-direction=J]) .set-row input{font-size:17px}
+}
+.hybrid-review{max-width:940px;padding:30px 32px 22px}
+.hybrid-review .studio-controls{max-width:300px;grid-template-columns:1fr}
+.hybrid-review .compare-rail{gap:30px}
+.hybrid-review .compare-rail h2{font-size:25px}
+.hybrid-review .compare-rail article>p{font-size:11px}
+@media(max-width:760px){.hybrid-review{padding:24px 16px}.hybrid-review .compare-rail{grid-auto-columns:minmax(300px,1fr)}}

@@ -1,6 +1,6 @@
 {
   "name": "gym-bro",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "private": true,
   "type": "module",
   "description": "Local-first, evidence-informed strength training PWA",
@@ -26,7 +26,13 @@
     "test:mobile-refinement": "node tests/browser-mobile-refinement.mjs",
     "benchmark:mobile": "node scripts/benchmark-mobile.mjs",
     "test:advanced": "node tests/browser-advanced-training.mjs",
-    "test:advanced-design": "node tests/browser-advanced-design.mjs"
+    "test:advanced-design": "node tests/browser-advanced-design.mjs",
+    "test:training-refinement": "node tests/browser-training-refinement.mjs",
+    "test:design-gallery": "node tests/browser-design-gallery.mjs",
+    "test:design-round-two": "node tests/browser-design-round-two.mjs",
+    "test:design-hybrid": "node tests/browser-design-round-two.mjs --hybrid",
+    "test:design-glass": "node tests/browser-design-round-two.mjs --glass",
+    "test:approved-design": "node tests/browser-design-implementation.mjs"
   },
   "engines": {
     "node": ">=22"

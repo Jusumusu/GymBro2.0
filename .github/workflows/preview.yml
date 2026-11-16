@@ -1,13 +1,14 @@
-name: Deploy isolated advanced training preview
+name: Deploy isolated training refinement preview
 on:
   push:
-    branches: [feature/advanced-training-experience]
+    branches: [feature/training-refinement-visual-redesign]
     paths:
       - 'src/**'
       - 'public/**'
       - 'server/**'
       - 'scripts/**'
       - 'tests/**'
+      - 'docs/training-refinement/**'
       - 'index.html'
       - 'package.json'
       - '.github/workflows/preview.yml'
@@ -21,7 +22,7 @@ concurrency:
   cancel-in-progress: false
 jobs:
   build:
-    if: github.ref == 'refs/heads/feature/advanced-training-experience'
+    if: github.ref == 'refs/heads/feature/training-refinement-visual-redesign'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -50,7 +51,7 @@ jobs:
         with:
           path: site
   deploy:
-    if: github.ref == 'refs/heads/feature/advanced-training-experience'
+    if: github.ref == 'refs/heads/feature/training-refinement-visual-redesign'
     needs: build
     runs-on: ubuntu-latest
     timeout-minutes: 15

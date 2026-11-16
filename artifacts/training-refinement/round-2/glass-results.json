@@ -1,0 +1,515 @@
+{
+  "passed": 84,
+  "checks": [
+    {
+      "direction": "J",
+      "theme": "light",
+      "screen": "workout",
+      "width": 320
+    },
+    {
+      "direction": "J",
+      "theme": "light",
+      "screen": "workout",
+      "width": 375
+    },
+    {
+      "direction": "J",
+      "theme": "light",
+      "screen": "workout",
+      "width": 390
+    },
+    {
+      "direction": "J",
+      "theme": "light",
+      "screen": "workout",
+      "width": 430
+    },
+    {
+      "direction": "J",
+      "theme": "light",
+      "screen": "workout",
+      "width": 768
+    },
+    {
+      "direction": "J",
+      "theme": "light",
+      "screen": "workout",
+      "width": 1024
+    },
+    {
+      "direction": "J",
+      "theme": "light",
+      "screen": "workout",
+      "width": 1280
+    },
+    {
+      "direction": "J",
+      "theme": "light",
+      "screen": "active",
+      "width": 320
+    },
+    {
+      "direction": "J",
+      "theme": "light",
+      "screen": "active",
+      "width": 375
+    },
+    {
+      "direction": "J",
+      "theme": "light",
+      "screen": "active",
+      "width": 390
+    },
+    {
+      "direction": "J",
+      "theme": "light",
+      "screen": "active",
+      "width": 430
+    },
+    {
+      "direction": "J",
+      "theme": "light",
+      "screen": "active",
+      "width": 768
+    },
+    {
+      "direction": "J",
+      "theme": "light",
+      "screen": "active",
+      "width": 1024
+    },
+    {
+      "direction": "J",
+      "theme": "light",
+      "screen": "active",
+      "width": 1280
+    },
+    {
+      "direction": "J",
+      "theme": "light",
+      "screen": "gains",
+      "width": 320
+    },
+    {
+      "direction": "J",
+      "theme": "light",
+      "screen": "gains",
+      "width": 375
+    },
+    {
+      "direction": "J",
+      "theme": "light",
+      "screen": "gains",
+      "width": 390
+    },
+    {
+      "direction": "J",
+      "theme": "light",
+      "screen": "gains",
+      "width": 430
+    },
+    {
+      "direction": "J",
+      "theme": "light",
+      "screen": "gains",
+      "width": 768
+    },
+    {
+      "direction": "J",
+      "theme": "light",
+      "screen": "gains",
+      "width": 1024
+    },
+    {
+      "direction": "J",
+      "theme": "light",
+      "screen": "gains",
+      "width": 1280
+    },
+    {
+      "direction": "J",
+      "theme": "light",
+      "screen": "library",
+      "width": 320
+    },
+    {
+      "direction": "J",
+      "theme": "light",
+      "screen": "library",
+      "width": 375
+    },
+    {
+      "direction": "J",
+      "theme": "light",
+      "screen": "library",
+      "width": 390
+    },
+    {
+      "direction": "J",
+      "theme": "light",
+      "screen": "library",
+      "width": 430
+    },
+    {
+      "direction": "J",
+      "theme": "light",
+      "screen": "library",
+      "width": 768
+    },
+    {
+      "direction": "J",
+      "theme": "light",
+      "screen": "library",
+      "width": 1024
+    },
+    {
+      "direction": "J",
+      "theme": "light",
+      "screen": "library",
+      "width": 1280
+    },
+    {
+      "direction": "J",
+      "theme": "light",
+      "screen": "schedule",
+      "width": 320
+    },
+    {
+      "direction": "J",
+      "theme": "light",
+      "screen": "schedule",
+      "width": 375
+    },
+    {
+      "direction": "J",
+      "theme": "light",
+      "screen": "schedule",
+      "width": 390
+    },
+    {
+      "direction": "J",
+      "theme": "light",
+      "screen": "schedule",
+      "width": 430
+    },
+    {
+      "direction": "J",
+      "theme": "light",
+      "screen": "schedule",
+      "width": 768
+    },
+    {
+      "direction": "J",
+      "theme": "light",
+      "screen": "schedule",
+      "width": 1024
+    },
+    {
+      "direction": "J",
+      "theme": "light",
+      "screen": "schedule",
+      "width": 1280
+    },
+    {
+      "direction": "J",
+      "theme": "light",
+      "screen": "settings",
+      "width": 320
+    },
+    {
+      "direction": "J",
+      "theme": "light",
+      "screen": "settings",
+      "width": 375
+    },
+    {
+      "direction": "J",
+      "theme": "light",
+      "screen": "settings",
+      "width": 390
+    },
+    {
+      "direction": "J",
+      "theme": "light",
+      "screen": "settings",
+      "width": 430
+    },
+    {
+      "direction": "J",
+      "theme": "light",
+      "screen": "settings",
+      "width": 768
+    },
+    {
+      "direction": "J",
+      "theme": "light",
+      "screen": "settings",
+      "width": 1024
+    },
+    {
+      "direction": "J",
+      "theme": "light",
+      "screen": "settings",
+      "width": 1280
+    },
+    {
+      "direction": "J",
+      "theme": "dark",
+      "screen": "workout",
+      "width": 320
+    },
+    {
+      "direction": "J",
+      "theme": "dark",
+      "screen": "workout",
+      "width": 375
+    },
+    {
+      "direction": "J",
+      "theme": "dark",
+      "screen": "workout",
+      "width": 390
+    },
+    {
+      "direction": "J",
+      "theme": "dark",
+      "screen": "workout",
+      "width": 430
+    },
+    {
+      "direction": "J",
+      "theme": "dark",
+      "screen": "workout",
+      "width": 768
+    },
+    {
+      "direction": "J",
+      "theme": "dark",
+      "screen": "workout",
+      "width": 1024
+    },
+    {
+      "direction": "J",
+      "theme": "dark",
+      "screen": "workout",
+      "width": 1280
+    },
+    {
+      "direction": "J",
+      "theme": "dark",
+      "screen": "active",
+      "width": 320
+    },
+    {
+      "direction": "J",
+      "theme": "dark",
+      "screen": "active",
+      "width": 375
+    },
+    {
+      "direction": "J",
+      "theme": "dark",
+      "screen": "active",
+      "width": 390
+    },
+    {
+      "direction": "J",
+      "theme": "dark",
+      "screen": "active",
+      "width": 430
+    },
+    {
+      "direction": "J",
+      "theme": "dark",
+      "screen": "active",
+      "width": 768
+    },
+    {
+      "direction": "J",
+      "theme": "dark",
+      "screen": "active",
+      "width": 1024
+    },
+    {
+      "direction": "J",
+      "theme": "dark",
+      "screen": "active",
+      "width": 1280
+    },
+    {
+      "direction": "J",
+      "theme": "dark",
+      "screen": "gains",
+      "width": 320
+    },
+    {
+      "direction": "J",
+      "theme": "dark",
+      "screen": "gains",
+      "width": 375
+    },
+    {
+      "direction": "J",
+      "theme": "dark",
+      "screen": "gains",
+      "width": 390
+    },
+    {
+      "direction": "J",
+      "theme": "dark",
+      "screen": "gains",
+      "width": 430
+    },
+    {
+      "direction": "J",
+      "theme": "dark",
+      "screen": "gains",
+      "width": 768
+    },
+    {
+      "direction": "J",
+      "theme": "dark",
+      "screen": "gains",
+      "width": 1024
+    },
+    {
+      "direction": "J",
+      "theme": "dark",
+      "screen": "gains",
+      "width": 1280
+    },
+    {
+      "direction": "J",
+      "theme": "dark",
+      "screen": "library",
+      "width": 320
+    },
+    {
+      "direction": "J",
+      "theme": "dark",
+      "screen": "library",
+      "width": 375
+    },
+    {
+      "direction": "J",
+      "theme": "dark",
+      "screen": "library",
+      "width": 390
+    },
+    {
+      "direction": "J",
+      "theme": "dark",
+      "screen": "library",
+      "width": 430
+    },
+    {
+      "direction": "J",
+      "theme": "dark",
+      "screen": "library",
+      "width": 768
+    },
+    {
+      "direction": "J",
+      "theme": "dark",
+      "screen": "library",
+      "width": 1024
+    },
+    {
+      "direction": "J",
+      "theme": "dark",
+      "screen": "library",
+      "width": 1280
+    },
+    {
+      "direction": "J",
+      "theme": "dark",
+      "screen": "schedule",
+      "width": 320
+    },
+    {
+      "direction": "J",
+      "theme": "dark",
+      "screen": "schedule",
+      "width": 375
+    },
+    {
+      "direction": "J",
+      "theme": "dark",
+      "screen": "schedule",
+      "width": 390
+    },
+    {
+      "direction": "J",
+      "theme": "dark",
+      "screen": "schedule",
+      "width": 430
+    },
+    {
+      "direction": "J",
+      "theme": "dark",
+      "screen": "schedule",
+      "width": 768
+    },
+    {
+      "direction": "J",
+      "theme": "dark",
+      "screen": "schedule",
+      "width": 1024
+    },
+    {
+      "direction": "J",
+      "theme": "dark",
+      "screen": "schedule",
+      "width": 1280
+    },
+    {
+      "direction": "J",
+      "theme": "dark",
+      "screen": "settings",
+      "width": 320
+    },
+    {
+      "direction": "J",
+      "theme": "dark",
+      "screen": "settings",
+      "width": 375
+    },
+    {
+      "direction": "J",
+      "theme": "dark",
+      "screen": "settings",
+      "width": 390
+    },
+    {
+      "direction": "J",
+      "theme": "dark",
+      "screen": "settings",
+      "width": 430
+    },
+    {
+      "direction": "J",
+      "theme": "dark",
+      "screen": "settings",
+      "width": 768
+    },
+    {
+      "direction": "J",
+      "theme": "dark",
+      "screen": "settings",
+      "width": 1024
+    },
+    {
+      "direction": "J",
+      "theme": "dark",
+      "screen": "settings",
+      "width": 1280
+    }
+  ],
+  "material": "Translucent blur rendered; set inputs opaque; current log action unobstructed; manual/system reduced-transparency fallbacks pass; sample timer adjusts and closes; all three completion styles log and undo with 44 px targets",
+  "contrast": "Both combined palettes, including hero action: body, secondary, primary button and hero text ≥4.5:1",
+  "fonts": "Local Manrope and DM Sans loaded",
+  "interactions": "Valid set completion advances; invalid entry stays active; exercise search and favorites operate in memory",
+  "isolation": "No app database, localStorage, service worker, permissions or external requests",
+  "errors": []
+}

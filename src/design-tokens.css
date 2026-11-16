@@ -1,0 +1,36 @@
+/* Approved Contour + Prism system. Shared by the app and standalone updater. */
+@font-face{font-family:Manrope;src:url('../manrope.woff') format('woff');font-style:normal;font-weight:200 800;font-display:swap}
+@font-face{font-family:'DM Sans';src:url('../dm-sans.woff') format('woff');font-style:normal;font-weight:100 1000;font-display:swap}
+:root,html[data-theme]{
+ --paper:#f8f8fa;--surface:#fff;--ink:#28262f;--muted:#706a79;--line:#dedbe4;
+ --accent:#b63c29;--on-accent:#fff;--accent-soft:#f7e9e4;--soft:#efedf3;
+ --hero-surface:#282630;--hero-ink:#f5f2f7;--hero-muted:#c1bacb;--hero-border:#4c4657;
+ --hero-action:#ffac90;--hero-action-ink:#342019;--success:#526c60;
+ --danger:#a52f40;--danger-on:#fff;--status-error:#a52f40;--status-error-ink:#fff;
+ --notice-surface:#fff4dc;--notice-ink:#6a4b17;--notice-border:#dbc087;
+ --missed-surface:#faece5;--missed-ink:#82402b;--preview-surface:#f2d8a7;--preview-ink:#432d13;
+ --control-border:#89828f;--overlay:#21162b80;--shadow:0 8px 30px #2822380a;
+ --glass-fill:rgb(255 255 255 / .76);--glass-edge:rgb(255 255 255 / .94);
+ --glass-rim:rgb(255 255 255 / .95);--glass-filter:blur(22px) saturate(1.6);
+ --glass-shadow:0 8px 26px #28223812,inset 0 1px 0 var(--glass-rim),inset 0 -1px 0 #63557714;
+ --heat-low:#f2e6e3;--heat-moderate:#d99d8f;--heat-high:#a83a29;
+ --radius:15px;--card-radius:15px;--card-padding:24px;--control-height:46px;
+ --sans:Manrope,ui-sans-serif,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+ --numerals:'DM Sans',var(--sans);--green:var(--accent);--lime:var(--hero-action);--chart-line:var(--accent);
+ font-family:var(--sans);color:var(--ink);background:var(--paper);color-scheme:light;font-synthesis:none;
+}
+html[data-theme=dark]{
+ --paper:#17151e;--surface:#24202e;--ink:#f3edf9;--muted:#b9afc8;--line:#464050;
+ --accent:#c8b4ff;--on-accent:#291c4b;--accent-soft:#3a2f51;--soft:#2c2735;
+ --hero-surface:#282330;--hero-ink:#f3edf9;--hero-muted:#c5bbd4;--hero-border:#4a405a;
+ --hero-action:#c8b4ff;--hero-action-ink:#291c4b;--success:#c4bbd9;
+ --danger:#f0a1af;--danger-on:#3a1620;--status-error:#773040;
+ --notice-surface:#3c3124;--notice-ink:#f4ddb4;--notice-border:#786441;
+ --missed-surface:#432d30;--missed-ink:#f5c6c0;--preview-surface:#e7c58f;--preview-ink:#34240f;
+ --control-border:#8b809c;--overlay:#0b0813b8;
+ --glass-fill:rgb(42 36 57 / .8);--glass-edge:rgb(224 209 255 / .24);--glass-rim:rgb(239 227 255 / .22);
+ --glass-shadow:0 8px 30px #08070d3d,inset 0 1px 0 var(--glass-rim),inset 0 -1px 0 #ffffff05;
+ --heat-low:#362d46;--heat-moderate:#786395;--heat-high:#c8b4ff;color-scheme:dark;
+}
+@media(prefers-reduced-transparency:reduce){:root,html[data-theme]{--glass-fill:var(--surface);--glass-filter:none;--glass-edge:var(--line);--glass-rim:transparent;--glass-shadow:none}}
+@supports not ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){:root,html[data-theme]{--glass-fill:var(--surface);--glass-filter:none;--glass-edge:var(--line);--glass-rim:transparent;--glass-shadow:none}}
