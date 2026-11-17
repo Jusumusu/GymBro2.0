@@ -1,5 +1,7 @@
 # Review publication
 
+**November 17, 2026:** A — Aero is selected and implemented on the feature branch. The actual isolated application is packaged for `/preview/` alongside the retained gallery. See [implementation evidence](IMPLEMENTATION.md) and [the implementation review page](aero.html). The gallery-only publication details below describe the earlier design-review phase. Main remains unchanged and merge approval is pending.
+
 The dedicated [interactive review gallery](https://gym-bro-design-review.jesse03sousa.chatgpt.site) is published as an owner-private Site, separate from Gym Bro's GitHub Pages deployment. Sign in with the owning ChatGPT account when prompted. The gallery has five concepts, two appearances, sixteen screens, four glass levels and phone/desktop canvases.
 
 Development branch: `feature/liquid-glass-visual-redesign`. [Draft PR #3](https://github.com/Jusumusu/GymBro2.0/pull/3) preserves the review boundary. Gym Bro main remains at `f8b5d80d914c8d877d67d4155965be26170bed08` / 0.4.0. No real app styles, controllers, training logic, schemas, package version or public assets changed.

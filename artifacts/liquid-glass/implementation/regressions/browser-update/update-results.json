@@ -1,0 +1,16 @@
+{
+  "passed": 10,
+  "checks": [
+    "Welcome screen offers direct import without profile setup",
+    "Reproduced stale cached code even after a newer app was deployed",
+    "Uncached update page opens through the old service worker",
+    "Updater blocks while another Gym Bro window is writing",
+    "Offline update leaves the working cached app intact",
+    "Update bypasses old cached code and opens the current app",
+    "History, unfinished workout, body entries, profile and photo metadata are unchanged",
+    "Private photo bytes remain intact",
+    "Other applications’ and nested scopes’ cache entries are preserved",
+    "Updated version is visible and offline shell re-registers"
+  ],
+  "errors": []
+}

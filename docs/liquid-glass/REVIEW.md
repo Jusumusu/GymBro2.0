@@ -1,5 +1,7 @@
 # Gym Bro / five directions
 
+**Selection recorded November 17, 2026:** the user chose **A — Aero**. The recommended balanced glass is being implemented as reviewed. See [implementation results](IMPLEMENTATION.md) and [the working-app review](aero.html). The following is the preserved pre-approval design package, not the current implementation status.
+
 This is a design decision package, before implementation. Your current light-mode session hierarchy and existing navigation remain the foundation. All studies use the same fictional journal. The purple surfaces have been replaced with individually designed neutral light and dark pairs.
 
 | Direction | Character and typography | Light → dark accent | Geometry and surfaces |

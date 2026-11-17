@@ -282,7 +282,7 @@ html[data-theme] .exercise-menu .menu-action{background:var(--surface);border-co
  html[data-theme] .page-head .eyebrow{font-size:9px;letter-spacing:1.5px}
  html[data-theme] .set-table .set-row:not(.focus-inputs),html[data-theme] .set-header{grid-template-columns:26px minmax(40px,.9fr) minmax(43px,1fr) minmax(40px,.9fr) minmax(34px,.75fr) 44px;gap:4px}
  html[data-theme] .set-row:not(.focus-inputs){padding:5px 2px}
- html[data-theme] .set-header{font-size:8px}
+ html[data-theme] .set-header{font-size:8px;padding-inline:3px}
  html[data-theme] .set-header small{font-size:7px}
  html[data-theme] .set-row input{font-size:16px;min-width:0;width:100%;padding:3px}
  html[data-theme] .set-row .previous{font-size:9px;line-height:1.3;overflow-wrap:anywhere}
@@ -292,3 +292,7 @@ html[data-theme] .exercise-menu .menu-action{background:var(--surface);border-co
  html[data-theme] .calendar-day{min-width:0}
  html[data-theme] .calendar-entry{max-width:100%;min-width:0;overflow-wrap:anywhere}
 }
+/* Keep the preview's environment label clear of floating controls. */
+html[data-theme] body.preview .exercise-jump-nav{top:48px}
+html[data-theme] body.preview .welcome-brand::after{content:'PREVIEW';margin-left:auto;padding:5px 9px;border-radius:6px;background:var(--preview-surface);color:var(--preview-ink);font:650 9px var(--sans);letter-spacing:1px}
+@media(min-width:651px){html[data-theme] body.preview .sidebar{top:104px;height:calc(100dvh - 104px)}}
