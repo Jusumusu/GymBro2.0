@@ -1,6 +1,14 @@
 # Review publication
 
-**November 17, 2026:** A — Aero is selected and implemented on the feature branch. The actual isolated application is packaged for `/preview/` alongside the retained gallery. See [implementation evidence](IMPLEMENTATION.md) and [the implementation review page](aero.html). The gallery-only publication details below describe the earlier design-review phase. Main remains unchanged and merge approval is pending.
+**November 17, 2026:** A — Aero is implemented and published. Open the [working 0.5.0 app preview](https://gym-bro-design-review.jesse03sousa.chatgpt.site/preview/) or the [before/after implementation review](https://gym-bro-design-review.jesse03sousa.chatgpt.site/docs/liquid-glass/aero.html). Sign in with the owning ChatGPT account if prompted. The original five-direction gallery remains at the Site root. Main remains unchanged and merge approval is pending.
+
+The native Sites publication returned **succeeded** for deployment `appgdep_6afc716c033481918884feed333f7593`, saved version `appgprj_6afb13cac5348191bf97192174fa7bf8~appgver_45a2cacd74ac81918f05f7ab9739c826`. Its exact pushed Site source is `7d54873cf448ddc654752aa9429bf242549e555c`; the app implementation was pushed as `28b9cca`. The 0.5.0 preview build is `da6575865be3`. All 61 offline assets match their SHA-256 release metadata locally after packaging; the updater, worker, manifest identity and isolated preview namespace are preserved. Only necessary app/recovery files and research documentation are included in `/preview/`.
+
+The existing owner-private audience is unchanged. The actual app opens its own preview journal; no personal data is bundled. Production remains on GitHub Pages at 0.4.0, build `4fd82fdc7399`. Local composition verifies its complete root is byte-identical to stable main.
+
+**Verification limit:** the execution environment's outbound proxy rejects direct connections to the private Site host with CONNECT 403 before an HTTP response from the Site. The native deployment result verifies publication; local real-browser checks verify the built app, offline shell and actual 0.4.0 update. Hosted browser behavior and physical iPhone/Safari/installed-PWA behavior are not certified. No network or audience protection was bypassed.
+
+See [implementation results](IMPLEMENTATION.md) and `artifacts/liquid-glass/implementation/publication.json`. The gallery-only publication details below describe the earlier design-review phase.
 
 The dedicated [interactive review gallery](https://gym-bro-design-review.jesse03sousa.chatgpt.site) is published as an owner-private Site, separate from Gym Bro's GitHub Pages deployment. Sign in with the owning ChatGPT account when prompted. The gallery has five concepts, two appearances, sixteen screens, four glass levels and phone/desktop canvases.
 
