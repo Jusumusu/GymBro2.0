@@ -11,7 +11,7 @@
   preference=value;const resolved=value==='system'?(media.matches?'dark':'light'):value;
   if(root.dataset.theme!==resolved){root.dataset.themeTransition='off';window.requestAnimationFrame?.(()=>window.requestAnimationFrame(()=>{delete root.dataset.themeTransition;}));}
   root.dataset.theme=resolved;
-  document.querySelector('meta[name="theme-color"]')?.setAttribute('content',resolved==='dark'?'#17151e':'#f8f8fa');
+  document.querySelector('meta[name="theme-color"]')?.setAttribute('content',resolved==='dark'?'#14191c':'#f4f6f7');
   document.querySelector('link[rel=manifest]')?.setAttribute('href',resolved==='light'?'./manifest-light.webmanifest':'./manifest.webmanifest');
   if(remember)try{localStorage.setItem(key,value);}catch{}
   return resolved;

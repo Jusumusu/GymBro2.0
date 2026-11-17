@@ -1,10 +1,10 @@
 {
-  "version": "0.4.0",
+  "version": "0.5.0",
   "notes": [
-    "Contour + Prism design with warm light mode and charcoal, plum and lavender dark mode.",
-    "Selective glass navigation, exercise selection and rest controls, with a solid reduced-transparency fallback.",
-    "Soft-square set completion, retaining one-tap logging, undo and large touch targets.",
-    "Progression explains optional RIR, working-set targets, available increments and next-session advice without adding work.",
-    "Existing backup, Focus Mode, blocks, scheduling and offline journal features are preserved."
+    "Aero design with mineral-blue accents, refined light surfaces and neutral graphite dark mode.",
+    "Balanced glass on navigation, exercise selection and rest controls; solid content and readable logging fields.",
+    "Clear blue active sets, green completed sets and distinct personal-record, warning and error colors.",
+    "Consistent typography, spacing and controls across workouts, gains, library, schedule, settings and the updater.",
+    "Existing training logic, backups, Focus Mode, exercise identities, journal data and offline update behavior are preserved."
   ]
 }
