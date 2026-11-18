@@ -1,0 +1,21 @@
+{
+  "timer": [
+    {
+      "phase": "started",
+      "label": "0:15",
+      "remaining": 15
+    },
+    {
+      "phase": "normal-countdown",
+      "label": "0:14",
+      "remaining": 13
+    },
+    {
+      "phase": "restored-lifecycle",
+      "label": "0:11",
+      "remaining": 11
+    }
+  ],
+  "scope": "Actual browser application; a persisted pagehide/pageshow is dispatched to isolate lifecycle cleanup. This does not claim physical iOS reproduction.",
+  "errors": []
+}

@@ -1,0 +1,1450 @@
+{
+  "audit": {
+    "baseline": "5fd52d1703f7cabb81e54218f5ddbae80c79f4d2 / 0.5.0",
+    "total": 43,
+    "primary": {
+      "Chest": 6,
+      "Back": 7,
+      "Quads": 8,
+      "Hamstrings": 4,
+      "Glutes": 3,
+      "Shoulders": 6,
+      "Biceps": 2,
+      "Triceps": 2,
+      "Calves": 2,
+      "Core": 3,
+      "Adductors": 0,
+      "Spinal erectors": 0,
+      "Forearms": 0,
+      "Obliques": 0
+    },
+    "discoverable": {
+      "Chest": 6,
+      "Back": 9,
+      "Quads": 9,
+      "Hamstrings": 5,
+      "Glutes": 12,
+      "Shoulders": 11,
+      "Biceps": 8,
+      "Triceps": 10,
+      "Calves": 2,
+      "Core": 3,
+      "Adductors": 7,
+      "Spinal erectors": 0,
+      "Forearms": 1,
+      "Obliques": 0
+    },
+    "equipment": {
+      "barbell": 8,
+      "bodyweight": 9,
+      "cable": 7,
+      "dumbbell": 13,
+      "machine": 6
+    },
+    "patterns": {
+      "abduction": 1,
+      "elbow extension": 2,
+      "elbow flexion": 2,
+      "hinge": 4,
+      "hip extension": 1,
+      "horizontal abduction": 1,
+      "horizontal adduction": 1,
+      "horizontal pull": 6,
+      "horizontal push": 5,
+      "knee extension": 1,
+      "knee flexion": 2,
+      "plantar flexion": 2,
+      "squat": 7,
+      "trunk flexion": 3,
+      "vertical pull": 2,
+      "vertical push": 3
+    },
+    "withAliases": 0,
+    "trackingTypes": [
+      "reps"
+    ]
+  },
+  "exercises": [
+    {
+      "id": "squat",
+      "name": "Barbell squat",
+      "muscle": "Quads",
+      "pattern": "squat",
+      "equipment": "barbell",
+      "secondary": [
+        "Glutes"
+      ],
+      "compound": true,
+      "contributions": [
+        {
+          "muscle": "Quads",
+          "role": "primary",
+          "level": "high"
+        },
+        {
+          "muscle": "Glutes",
+          "role": "secondary",
+          "level": "high"
+        },
+        {
+          "muscle": "Adductors",
+          "role": "secondary",
+          "level": "moderate"
+        },
+        {
+          "muscle": "Spinal erectors",
+          "role": "stabilizer",
+          "level": "low"
+        },
+        {
+          "muscle": "Core",
+          "role": "stabilizer",
+          "level": "low"
+        }
+      ],
+      "difficulty": "moderate",
+      "unilateral": false,
+      "loadKind": "total load",
+      "cues": "Brace before each rep. Sit between your hips, keep your feet planted, and use a comfortable depth."
+    },
+    {
+      "id": "goblet",
+      "name": "Goblet squat",
+      "muscle": "Quads",
+      "pattern": "squat",
+      "equipment": "dumbbell",
+      "secondary": [
+        "Glutes"
+      ],
+      "compound": true,
+      "contributions": [
+        {
+          "muscle": "Quads",
+          "role": "primary",
+          "level": "high"
+        },
+        {
+          "muscle": "Glutes",
+          "role": "secondary",
+          "level": "high"
+        },
+        {
+          "muscle": "Adductors",
+          "role": "secondary",
+          "level": "moderate"
+        },
+        {
+          "muscle": "Spinal erectors",
+          "role": "stabilizer",
+          "level": "low"
+        },
+        {
+          "muscle": "Core",
+          "role": "stabilizer",
+          "level": "low"
+        }
+      ],
+      "difficulty": "moderate",
+      "unilateral": false,
+      "loadKind": "per dumbbell",
+      "cues": "Hold the weight close to your chest. Keep your feet planted and stand tall."
+    },
+    {
+      "id": "body-squat",
+      "name": "Bodyweight squat",
+      "muscle": "Quads",
+      "pattern": "squat",
+      "equipment": "bodyweight",
+      "secondary": [
+        "Glutes"
+      ],
+      "compound": true,
+      "contributions": [
+        {
+          "muscle": "Quads",
+          "role": "primary",
+          "level": "high"
+        },
+        {
+          "muscle": "Glutes",
+          "role": "secondary",
+          "level": "high"
+        },
+        {
+          "muscle": "Adductors",
+          "role": "secondary",
+          "level": "moderate"
+        },
+        {
+          "muscle": "Spinal erectors",
+          "role": "stabilizer",
+          "level": "low"
+        },
+        {
+          "muscle": "Core",
+          "role": "stabilizer",
+          "level": "low"
+        }
+      ],
+      "difficulty": "moderate",
+      "unilateral": false,
+      "loadKind": "added load",
+      "cues": "Use a comfortable stance and depth. Control the lowering phase."
+    },
+    {
+      "id": "leg-press",
+      "name": "Leg press",
+      "muscle": "Quads",
+      "pattern": "squat",
+      "equipment": "machine",
+      "secondary": [
+        "Glutes"
+      ],
+      "compound": true,
+      "contributions": [
+        {
+          "muscle": "Quads",
+          "role": "primary",
+          "level": "high"
+        },
+        {
+          "muscle": "Glutes",
+          "role": "secondary",
+          "level": "high"
+        },
+        {
+          "muscle": "Adductors",
+          "role": "secondary",
+          "level": "moderate"
+        }
+      ],
+      "difficulty": "moderate",
+      "unilateral": false,
+      "loadKind": "total load",
+      "cues": "Keep your hips against the pad. Lower within your comfortable range without locking out forcefully."
+    },
+    {
+      "id": "bench",
+      "name": "Barbell bench press",
+      "muscle": "Chest",
+      "pattern": "horizontal push",
+      "equipment": "barbell",
+      "secondary": [
+        "Triceps",
+        "Shoulders"
+      ],
+      "compound": true,
+      "contributions": [
+        {
+          "muscle": "Chest",
+          "role": "primary",
+          "level": "high"
+        },
+        {
+          "muscle": "Triceps",
+          "role": "secondary",
+          "level": "moderate"
+        },
+        {
+          "muscle": "Shoulders",
+          "role": "secondary",
+          "level": "moderate"
+        }
+      ],
+      "difficulty": "moderate",
+      "unilateral": false,
+      "loadKind": "total load",
+      "cues": "Use a stable setup. Lower under control, keep wrists stacked, and use safeties or a spotter."
+    },
+    {
+      "id": "db-bench",
+      "name": "Dumbbell bench press",
+      "muscle": "Chest",
+      "pattern": "horizontal push",
+      "equipment": "dumbbell",
+      "secondary": [
+        "Triceps",
+        "Shoulders"
+      ],
+      "compound": true,
+      "contributions": [
+        {
+          "muscle": "Chest",
+          "role": "primary",
+          "level": "high"
+        },
+        {
+          "muscle": "Triceps",
+          "role": "secondary",
+          "level": "moderate"
+        },
+        {
+          "muscle": "Shoulders",
+          "role": "secondary",
+          "level": "moderate"
+        }
+      ],
+      "difficulty": "moderate",
+      "unilateral": false,
+      "loadKind": "per dumbbell",
+      "cues": "Keep a stable shoulder position. Use a comfortable elbow angle. Log the load of one dumbbell."
+    },
+    {
+      "id": "pushup",
+      "name": "Push-up",
+      "muscle": "Chest",
+      "pattern": "horizontal push",
+      "equipment": "bodyweight",
+      "secondary": [
+        "Triceps",
+        "Shoulders"
+      ],
+      "compound": true,
+      "contributions": [
+        {
+          "muscle": "Chest",
+          "role": "primary",
+          "level": "high"
+        },
+        {
+          "muscle": "Triceps",
+          "role": "secondary",
+          "level": "moderate"
+        },
+        {
+          "muscle": "Shoulders",
+          "role": "secondary",
+          "level": "moderate"
+        },
+        {
+          "muscle": "Core",
+          "role": "stabilizer",
+          "level": "low"
+        }
+      ],
+      "difficulty": "moderate",
+      "unilateral": false,
+      "loadKind": "added load",
+      "cues": "Keep your trunk braced. Use a raised surface if needed and lower with control."
+    },
+    {
+      "id": "chest-press",
+      "name": "Machine chest press",
+      "muscle": "Chest",
+      "pattern": "horizontal push",
+      "equipment": "machine",
+      "secondary": [
+        "Triceps",
+        "Shoulders"
+      ],
+      "compound": true,
+      "contributions": [
+        {
+          "muscle": "Chest",
+          "role": "primary",
+          "level": "high"
+        },
+        {
+          "muscle": "Triceps",
+          "role": "secondary",
+          "level": "moderate"
+        },
+        {
+          "muscle": "Shoulders",
+          "role": "secondary",
+          "level": "moderate"
+        }
+      ],
+      "difficulty": "moderate",
+      "unilateral": false,
+      "loadKind": "total load",
+      "cues": "Adjust the seat so handles sit around mid-chest. Press through a comfortable range."
+    },
+    {
+      "id": "rdl",
+      "name": "Romanian deadlift",
+      "muscle": "Hamstrings",
+      "pattern": "hinge",
+      "equipment": "barbell",
+      "secondary": [
+        "Glutes",
+        "Back"
+      ],
+      "compound": true,
+      "contributions": [
+        {
+          "muscle": "Hamstrings",
+          "role": "primary",
+          "level": "high"
+        },
+        {
+          "muscle": "Glutes",
+          "role": "secondary",
+          "level": "high"
+        },
+        {
+          "muscle": "Adductors",
+          "role": "secondary",
+          "level": "low"
+        },
+        {
+          "muscle": "Spinal erectors",
+          "role": "stabilizer",
+          "level": "moderate"
+        },
+        {
+          "muscle": "Forearms",
+          "role": "stabilizer",
+          "level": "low"
+        }
+      ],
+      "difficulty": "moderate",
+      "unilateral": false,
+      "loadKind": "total load",
+      "cues": "Keep the load close. Hinge at the hips with soft knees; stop before your back position changes."
+    },
+    {
+      "id": "db-rdl",
+      "name": "Dumbbell Romanian deadlift",
+      "muscle": "Hamstrings",
+      "pattern": "hinge",
+      "equipment": "dumbbell",
+      "secondary": [
+        "Glutes",
+        "Back"
+      ],
+      "compound": true,
+      "contributions": [
+        {
+          "muscle": "Hamstrings",
+          "role": "primary",
+          "level": "high"
+        },
+        {
+          "muscle": "Glutes",
+          "role": "secondary",
+          "level": "high"
+        },
+        {
+          "muscle": "Adductors",
+          "role": "secondary",
+          "level": "low"
+        },
+        {
+          "muscle": "Spinal erectors",
+          "role": "stabilizer",
+          "level": "moderate"
+        },
+        {
+          "muscle": "Forearms",
+          "role": "stabilizer",
+          "level": "low"
+        }
+      ],
+      "difficulty": "moderate",
+      "unilateral": false,
+      "loadKind": "per dumbbell",
+      "cues": "Push your hips back with a braced trunk. Keep the dumbbells close to your legs."
+    },
+    {
+      "id": "bridge",
+      "name": "Glute bridge",
+      "muscle": "Glutes",
+      "pattern": "hinge",
+      "equipment": "bodyweight",
+      "secondary": [
+        "Hamstrings"
+      ],
+      "compound": true,
+      "contributions": [
+        {
+          "muscle": "Glutes",
+          "role": "primary",
+          "level": "high"
+        },
+        {
+          "muscle": "Hamstrings",
+          "role": "secondary",
+          "level": "low"
+        },
+        {
+          "muscle": "Core",
+          "role": "stabilizer",
+          "level": "low"
+        }
+      ],
+      "difficulty": "moderate",
+      "unilateral": false,
+      "loadKind": "added load",
+      "cues": "Press through your feet, raise your hips, and avoid arching your lower back."
+    },
+    {
+      "id": "curl-leg",
+      "name": "Leg curl",
+      "muscle": "Hamstrings",
+      "pattern": "knee flexion",
+      "equipment": "machine",
+      "secondary": [],
+      "compound": false,
+      "contributions": [
+        {
+          "muscle": "Hamstrings",
+          "role": "primary",
+          "level": "high"
+        }
+      ],
+      "difficulty": "accessible",
+      "unilateral": false,
+      "loadKind": "total load",
+      "cues": "Adjust the pad to your lower legs. Curl smoothly without lifting your hips."
+    },
+    {
+      "id": "row",
+      "name": "Barbell row",
+      "muscle": "Back",
+      "pattern": "horizontal pull",
+      "equipment": "barbell",
+      "secondary": [
+        "Biceps"
+      ],
+      "compound": true,
+      "contributions": [
+        {
+          "muscle": "Back",
+          "role": "primary",
+          "level": "high"
+        },
+        {
+          "muscle": "Biceps",
+          "role": "secondary",
+          "level": "moderate"
+        },
+        {
+          "muscle": "Shoulders",
+          "role": "secondary",
+          "level": "low"
+        },
+        {
+          "muscle": "Spinal erectors",
+          "role": "stabilizer",
+          "level": "moderate"
+        },
+        {
+          "muscle": "Forearms",
+          "role": "stabilizer",
+          "level": "low"
+        },
+        {
+          "muscle": "Core",
+          "role": "stabilizer",
+          "level": "low"
+        }
+      ],
+      "difficulty": "moderate",
+      "unilateral": false,
+      "loadKind": "total load",
+      "cues": "Brace your trunk and hold a stable hinge. Pull toward the lower ribs without jerking."
+    },
+    {
+      "id": "db-row",
+      "name": "Dumbbell row",
+      "muscle": "Back",
+      "pattern": "horizontal pull",
+      "equipment": "dumbbell",
+      "secondary": [
+        "Biceps"
+      ],
+      "compound": true,
+      "contributions": [
+        {
+          "muscle": "Back",
+          "role": "primary",
+          "level": "high"
+        },
+        {
+          "muscle": "Biceps",
+          "role": "secondary",
+          "level": "moderate"
+        },
+        {
+          "muscle": "Shoulders",
+          "role": "secondary",
+          "level": "low"
+        },
+        {
+          "muscle": "Forearms",
+          "role": "stabilizer",
+          "level": "low"
+        },
+        {
+          "muscle": "Core",
+          "role": "stabilizer",
+          "level": "low"
+        }
+      ],
+      "difficulty": "moderate",
+      "unilateral": false,
+      "loadKind": "per dumbbell",
+      "cues": "Support your trunk. Pull toward your hip without rotating; log reps per side."
+    },
+    {
+      "id": "cable-row",
+      "name": "Seated cable row",
+      "muscle": "Back",
+      "pattern": "horizontal pull",
+      "equipment": "cable",
+      "secondary": [
+        "Biceps"
+      ],
+      "compound": true,
+      "contributions": [
+        {
+          "muscle": "Back",
+          "role": "primary",
+          "level": "high"
+        },
+        {
+          "muscle": "Biceps",
+          "role": "secondary",
+          "level": "moderate"
+        },
+        {
+          "muscle": "Shoulders",
+          "role": "secondary",
+          "level": "low"
+        },
+        {
+          "muscle": "Forearms",
+          "role": "stabilizer",
+          "level": "low"
+        }
+      ],
+      "difficulty": "moderate",
+      "unilateral": false,
+      "loadKind": "total load",
+      "cues": "Keep your torso stable. Pull toward your ribs and return under control."
+    },
+    {
+      "id": "floor-pull",
+      "name": "Prone floor pull",
+      "muscle": "Back",
+      "pattern": "horizontal pull",
+      "equipment": "bodyweight",
+      "secondary": [],
+      "compound": false,
+      "contributions": [
+        {
+          "muscle": "Back",
+          "role": "primary",
+          "level": "high"
+        },
+        {
+          "muscle": "Shoulders",
+          "role": "secondary",
+          "level": "low"
+        }
+      ],
+      "difficulty": "accessible",
+      "unilateral": false,
+      "loadKind": "added load",
+      "cues": "Lie face down, lift your arms gently and draw elbows toward your ribs. This has limited loading potential."
+    },
+    {
+      "id": "ohp",
+      "name": "Overhead press",
+      "muscle": "Shoulders",
+      "pattern": "vertical push",
+      "equipment": "barbell",
+      "secondary": [
+        "Triceps"
+      ],
+      "compound": true,
+      "contributions": [
+        {
+          "muscle": "Shoulders",
+          "role": "primary",
+          "level": "high"
+        },
+        {
+          "muscle": "Triceps",
+          "role": "secondary",
+          "level": "moderate"
+        },
+        {
+          "muscle": "Chest",
+          "role": "secondary",
+          "level": "low"
+        },
+        {
+          "muscle": "Core",
+          "role": "stabilizer",
+          "level": "low"
+        }
+      ],
+      "difficulty": "moderate",
+      "unilateral": false,
+      "loadKind": "total load",
+      "cues": "Brace your trunk. Press overhead through a comfortable range without leaning back."
+    },
+    {
+      "id": "db-ohp",
+      "name": "Dumbbell shoulder press",
+      "muscle": "Shoulders",
+      "pattern": "vertical push",
+      "equipment": "dumbbell",
+      "secondary": [
+        "Triceps"
+      ],
+      "compound": true,
+      "contributions": [
+        {
+          "muscle": "Shoulders",
+          "role": "primary",
+          "level": "high"
+        },
+        {
+          "muscle": "Triceps",
+          "role": "secondary",
+          "level": "moderate"
+        },
+        {
+          "muscle": "Chest",
+          "role": "secondary",
+          "level": "low"
+        },
+        {
+          "muscle": "Core",
+          "role": "stabilizer",
+          "level": "low"
+        }
+      ],
+      "difficulty": "moderate",
+      "unilateral": false,
+      "loadKind": "per dumbbell",
+      "cues": "Keep wrists above elbows. Use a comfortable range and a stable torso."
+    },
+    {
+      "id": "pike",
+      "name": "Pike push-up",
+      "muscle": "Shoulders",
+      "pattern": "vertical push",
+      "equipment": "bodyweight",
+      "secondary": [
+        "Triceps"
+      ],
+      "compound": true,
+      "contributions": [
+        {
+          "muscle": "Shoulders",
+          "role": "primary",
+          "level": "high"
+        },
+        {
+          "muscle": "Triceps",
+          "role": "secondary",
+          "level": "moderate"
+        },
+        {
+          "muscle": "Chest",
+          "role": "secondary",
+          "level": "low"
+        },
+        {
+          "muscle": "Core",
+          "role": "stabilizer",
+          "level": "low"
+        }
+      ],
+      "difficulty": "moderate",
+      "unilateral": false,
+      "loadKind": "added load",
+      "cues": "Raise your hips and bend your elbows under control. Adjust hand position for comfort."
+    },
+    {
+      "id": "pulldown",
+      "name": "Lat pulldown",
+      "muscle": "Back",
+      "pattern": "vertical pull",
+      "equipment": "cable",
+      "secondary": [
+        "Biceps"
+      ],
+      "compound": true,
+      "contributions": [
+        {
+          "muscle": "Back",
+          "role": "primary",
+          "level": "high"
+        },
+        {
+          "muscle": "Biceps",
+          "role": "secondary",
+          "level": "moderate"
+        },
+        {
+          "muscle": "Forearms",
+          "role": "stabilizer",
+          "level": "low"
+        },
+        {
+          "muscle": "Core",
+          "role": "stabilizer",
+          "level": "low"
+        }
+      ],
+      "difficulty": "moderate",
+      "unilateral": false,
+      "loadKind": "total load",
+      "cues": "Pull toward your upper chest, keeping your torso stable. Do not pull behind your neck."
+    },
+    {
+      "id": "pullup",
+      "name": "Pull-up",
+      "muscle": "Back",
+      "pattern": "vertical pull",
+      "equipment": "bodyweight",
+      "secondary": [
+        "Biceps"
+      ],
+      "compound": true,
+      "contributions": [
+        {
+          "muscle": "Back",
+          "role": "primary",
+          "level": "high"
+        },
+        {
+          "muscle": "Biceps",
+          "role": "secondary",
+          "level": "moderate"
+        },
+        {
+          "muscle": "Forearms",
+          "role": "stabilizer",
+          "level": "low"
+        },
+        {
+          "muscle": "Core",
+          "role": "stabilizer",
+          "level": "low"
+        }
+      ],
+      "difficulty": "moderate",
+      "unilateral": false,
+      "loadKind": "added load",
+      "cues": "Start from a comfortable hang. Pull without swinging and lower under control. Log added load only."
+    },
+    {
+      "id": "lateral",
+      "name": "Dumbbell lateral raise",
+      "muscle": "Shoulders",
+      "pattern": "abduction",
+      "equipment": "dumbbell",
+      "secondary": [],
+      "compound": false,
+      "contributions": [
+        {
+          "muscle": "Shoulders",
+          "role": "primary",
+          "level": "high"
+        }
+      ],
+      "difficulty": "accessible",
+      "unilateral": false,
+      "loadKind": "per dumbbell",
+      "cues": "Raise to a comfortable height with soft elbows. Avoid swinging."
+    },
+    {
+      "id": "curl",
+      "name": "Dumbbell curl",
+      "muscle": "Biceps",
+      "pattern": "elbow flexion",
+      "equipment": "dumbbell",
+      "secondary": [],
+      "compound": false,
+      "contributions": [
+        {
+          "muscle": "Biceps",
+          "role": "primary",
+          "level": "high"
+        },
+        {
+          "muscle": "Forearms",
+          "role": "secondary",
+          "level": "low"
+        }
+      ],
+      "difficulty": "accessible",
+      "unilateral": false,
+      "loadKind": "per dumbbell",
+      "cues": "Keep your elbows stable. Curl without swinging; record reps per side."
+    },
+    {
+      "id": "pushdown",
+      "name": "Cable triceps pushdown",
+      "muscle": "Triceps",
+      "pattern": "elbow extension",
+      "equipment": "cable",
+      "secondary": [],
+      "compound": false,
+      "contributions": [
+        {
+          "muscle": "Triceps",
+          "role": "primary",
+          "level": "high"
+        }
+      ],
+      "difficulty": "accessible",
+      "unilateral": false,
+      "loadKind": "total load",
+      "cues": "Keep elbows close to your sides. Extend under control without moving your shoulders."
+    },
+    {
+      "id": "calf",
+      "name": "Standing calf raise",
+      "muscle": "Calves",
+      "pattern": "plantar flexion",
+      "equipment": "bodyweight",
+      "secondary": [],
+      "compound": false,
+      "contributions": [
+        {
+          "muscle": "Calves",
+          "role": "primary",
+          "level": "high"
+        }
+      ],
+      "difficulty": "accessible",
+      "unilateral": false,
+      "loadKind": "added load",
+      "cues": "Rise onto your toes, pause, and lower with control. Use support for balance."
+    },
+    {
+      "id": "crunch",
+      "name": "Crunch",
+      "muscle": "Core",
+      "pattern": "trunk flexion",
+      "equipment": "bodyweight",
+      "secondary": [],
+      "compound": false,
+      "contributions": [
+        {
+          "muscle": "Core",
+          "role": "primary",
+          "level": "high"
+        },
+        {
+          "muscle": "Obliques",
+          "role": "secondary",
+          "level": "low"
+        }
+      ],
+      "difficulty": "accessible",
+      "unilateral": false,
+      "loadKind": "added load",
+      "cues": "Lift your shoulder blades gently and exhale. Avoid pulling on your neck."
+    },
+    {
+      "id": "incline-db",
+      "name": "Incline dumbbell press",
+      "muscle": "Chest",
+      "pattern": "horizontal push",
+      "equipment": "dumbbell",
+      "secondary": [
+        "Shoulders",
+        "Triceps"
+      ],
+      "compound": true,
+      "contributions": [
+        {
+          "muscle": "Chest",
+          "role": "primary",
+          "level": "high"
+        },
+        {
+          "muscle": "Shoulders",
+          "role": "secondary",
+          "level": "high"
+        },
+        {
+          "muscle": "Triceps",
+          "role": "secondary",
+          "level": "moderate"
+        }
+      ],
+      "difficulty": "moderate",
+      "unilateral": false,
+      "loadKind": "per dumbbell",
+      "cues": "Use a low incline and stable feet. Lower to a comfortable depth; log one dumbbell."
+    },
+    {
+      "id": "cable-fly",
+      "name": "Cable chest fly",
+      "muscle": "Chest",
+      "pattern": "horizontal adduction",
+      "equipment": "cable",
+      "secondary": [],
+      "compound": false,
+      "contributions": [
+        {
+          "muscle": "Chest",
+          "role": "primary",
+          "level": "high"
+        }
+      ],
+      "difficulty": "accessible",
+      "unilateral": false,
+      "loadKind": "total load",
+      "cues": "Keep a soft elbow bend. Bring your hands together without rounding or forcing the shoulder range."
+    },
+    {
+      "id": "db-split-squat",
+      "name": "Dumbbell split squat",
+      "muscle": "Quads",
+      "pattern": "squat",
+      "equipment": "dumbbell",
+      "secondary": [
+        "Glutes"
+      ],
+      "compound": true,
+      "contributions": [
+        {
+          "muscle": "Quads",
+          "role": "primary",
+          "level": "high"
+        },
+        {
+          "muscle": "Glutes",
+          "role": "secondary",
+          "level": "high"
+        },
+        {
+          "muscle": "Adductors",
+          "role": "secondary",
+          "level": "moderate"
+        },
+        {
+          "muscle": "Core",
+          "role": "stabilizer",
+          "level": "low"
+        }
+      ],
+      "difficulty": "moderate",
+      "unilateral": false,
+      "loadKind": "per dumbbell",
+      "cues": "Keep both feet planted in a split stance. Lower under control and record repetitions per side."
+    },
+    {
+      "id": "hip-thrust",
+      "name": "Barbell hip thrust",
+      "muscle": "Glutes",
+      "pattern": "hip extension",
+      "equipment": "barbell",
+      "secondary": [
+        "Hamstrings"
+      ],
+      "compound": true,
+      "contributions": [
+        {
+          "muscle": "Glutes",
+          "role": "primary",
+          "level": "high"
+        },
+        {
+          "muscle": "Hamstrings",
+          "role": "secondary",
+          "level": "low"
+        },
+        {
+          "muscle": "Core",
+          "role": "stabilizer",
+          "level": "low"
+        }
+      ],
+      "difficulty": "moderate",
+      "unilateral": false,
+      "loadKind": "total load",
+      "cues": "Use a stable bench and padded bar. Raise the hips while keeping your ribs controlled; avoid overextending."
+    },
+    {
+      "id": "leg-extension",
+      "name": "Leg extension",
+      "muscle": "Quads",
+      "pattern": "knee extension",
+      "equipment": "machine",
+      "secondary": [],
+      "compound": false,
+      "contributions": [
+        {
+          "muscle": "Quads",
+          "role": "primary",
+          "level": "high"
+        }
+      ],
+      "difficulty": "accessible",
+      "unilateral": false,
+      "loadKind": "total load",
+      "cues": "Align your knee with the machine pivot. Extend smoothly through a comfortable range."
+    },
+    {
+      "id": "seated-leg-curl",
+      "name": "Seated leg curl",
+      "muscle": "Hamstrings",
+      "pattern": "knee flexion",
+      "equipment": "machine",
+      "secondary": [],
+      "compound": false,
+      "contributions": [
+        {
+          "muscle": "Hamstrings",
+          "role": "primary",
+          "level": "high"
+        }
+      ],
+      "difficulty": "accessible",
+      "unilateral": false,
+      "loadKind": "total load",
+      "cues": "Secure the thigh pad and align the knee pivot. Curl under control without lifting your hips."
+    },
+    {
+      "id": "chest-supported-row",
+      "name": "Chest-supported dumbbell row",
+      "muscle": "Back",
+      "pattern": "horizontal pull",
+      "equipment": "dumbbell",
+      "secondary": [
+        "Biceps"
+      ],
+      "compound": true,
+      "contributions": [
+        {
+          "muscle": "Back",
+          "role": "primary",
+          "level": "high"
+        },
+        {
+          "muscle": "Biceps",
+          "role": "secondary",
+          "level": "moderate"
+        },
+        {
+          "muscle": "Shoulders",
+          "role": "secondary",
+          "level": "low"
+        },
+        {
+          "muscle": "Forearms",
+          "role": "stabilizer",
+          "level": "low"
+        }
+      ],
+      "difficulty": "moderate",
+      "unilateral": false,
+      "loadKind": "per dumbbell",
+      "cues": "Support your chest on a stable incline bench. Pull without lifting your torso; log one dumbbell."
+    },
+    {
+      "id": "rear-delt-fly",
+      "name": "Dumbbell rear delt fly",
+      "muscle": "Shoulders",
+      "pattern": "horizontal abduction",
+      "equipment": "dumbbell",
+      "secondary": [
+        "Back"
+      ],
+      "compound": false,
+      "contributions": [
+        {
+          "muscle": "Shoulders",
+          "role": "primary",
+          "level": "high"
+        },
+        {
+          "muscle": "Back",
+          "role": "secondary",
+          "level": "moderate"
+        }
+      ],
+      "difficulty": "accessible",
+      "unilateral": false,
+      "loadKind": "per dumbbell",
+      "cues": "Hinge with a stable trunk or use chest support. Move through a comfortable arc without swinging."
+    },
+    {
+      "id": "face-pull",
+      "name": "Cable face pull",
+      "muscle": "Shoulders",
+      "pattern": "horizontal pull",
+      "equipment": "cable",
+      "secondary": [
+        "Back"
+      ],
+      "compound": false,
+      "contributions": [
+        {
+          "muscle": "Shoulders",
+          "role": "primary",
+          "level": "high"
+        },
+        {
+          "muscle": "Back",
+          "role": "secondary",
+          "level": "moderate"
+        }
+      ],
+      "difficulty": "accessible",
+      "unilateral": false,
+      "loadKind": "total load",
+      "cues": "Use a light load and stable stance. Pull toward the face with a comfortable elbow position."
+    },
+    {
+      "id": "hammer-curl",
+      "name": "Dumbbell hammer curl",
+      "muscle": "Biceps",
+      "pattern": "elbow flexion",
+      "equipment": "dumbbell",
+      "secondary": [],
+      "compound": false,
+      "contributions": [
+        {
+          "muscle": "Biceps",
+          "role": "primary",
+          "level": "high"
+        },
+        {
+          "muscle": "Forearms",
+          "role": "secondary",
+          "level": "moderate"
+        }
+      ],
+      "difficulty": "accessible",
+      "unilateral": false,
+      "loadKind": "per dumbbell",
+      "cues": "Keep palms facing inward and elbows stable. Curl without rocking your torso; log one dumbbell."
+    },
+    {
+      "id": "overhead-cable-extension",
+      "name": "Overhead cable triceps extension",
+      "muscle": "Triceps",
+      "pattern": "elbow extension",
+      "equipment": "cable",
+      "secondary": [],
+      "compound": false,
+      "contributions": [
+        {
+          "muscle": "Triceps",
+          "role": "primary",
+          "level": "high"
+        }
+      ],
+      "difficulty": "accessible",
+      "unilateral": false,
+      "loadKind": "total load",
+      "cues": "Use a stable stance with elbows in a comfortable position. Extend smoothly without arching your back."
+    },
+    {
+      "id": "seated-calf",
+      "name": "Seated calf raise",
+      "muscle": "Calves",
+      "pattern": "plantar flexion",
+      "equipment": "machine",
+      "secondary": [],
+      "compound": false,
+      "contributions": [
+        {
+          "muscle": "Calves",
+          "role": "primary",
+          "level": "high"
+        }
+      ],
+      "difficulty": "accessible",
+      "unilateral": false,
+      "loadKind": "total load",
+      "cues": "Place the pad securely above your knees. Raise and lower the heels with control and a comfortable stretch."
+    },
+    {
+      "id": "reverse-crunch",
+      "name": "Reverse crunch",
+      "muscle": "Core",
+      "pattern": "trunk flexion",
+      "equipment": "bodyweight",
+      "secondary": [],
+      "compound": false,
+      "contributions": [
+        {
+          "muscle": "Core",
+          "role": "primary",
+          "level": "high"
+        },
+        {
+          "muscle": "Obliques",
+          "role": "secondary",
+          "level": "low"
+        }
+      ],
+      "difficulty": "accessible",
+      "unilateral": false,
+      "loadKind": "added load",
+      "cues": "Keep the movement small and controlled. Curl the pelvis gently rather than swinging your legs."
+    },
+    {
+      "id": "cable-crunch",
+      "name": "Cable crunch",
+      "muscle": "Core",
+      "pattern": "trunk flexion",
+      "equipment": "cable",
+      "secondary": [],
+      "compound": false,
+      "contributions": [
+        {
+          "muscle": "Core",
+          "role": "primary",
+          "level": "high"
+        },
+        {
+          "muscle": "Obliques",
+          "role": "secondary",
+          "level": "low"
+        }
+      ],
+      "difficulty": "accessible",
+      "unilateral": false,
+      "loadKind": "total load",
+      "cues": "Keep the hips stable and curl your trunk gently. Avoid pulling only with your arms."
+    },
+    {
+      "id": "front-squat",
+      "name": "Barbell front squat",
+      "muscle": "Quads",
+      "pattern": "squat",
+      "equipment": "barbell",
+      "secondary": [
+        "Glutes",
+        "Adductors"
+      ],
+      "compound": true,
+      "contributions": [
+        {
+          "muscle": "Quads",
+          "role": "primary",
+          "level": "high"
+        },
+        {
+          "muscle": "Glutes",
+          "role": "secondary",
+          "level": "high"
+        },
+        {
+          "muscle": "Adductors",
+          "role": "secondary",
+          "level": "moderate"
+        },
+        {
+          "muscle": "Spinal erectors",
+          "role": "stabilizer",
+          "level": "moderate"
+        },
+        {
+          "muscle": "Core",
+          "role": "stabilizer",
+          "level": "low"
+        }
+      ],
+      "difficulty": "moderate",
+      "unilateral": false,
+      "loadKind": "total load",
+      "cues": "Use a stable front rack and braced trunk. Keep the feet planted and choose a comfortable depth."
+    },
+    {
+      "id": "deadlift",
+      "name": "Conventional deadlift",
+      "muscle": "Glutes",
+      "pattern": "hinge",
+      "equipment": "barbell",
+      "secondary": [
+        "Hamstrings",
+        "Quads"
+      ],
+      "compound": true,
+      "contributions": [
+        {
+          "muscle": "Glutes",
+          "role": "primary",
+          "level": "high"
+        },
+        {
+          "muscle": "Quads",
+          "role": "secondary",
+          "level": "moderate"
+        },
+        {
+          "muscle": "Hamstrings",
+          "role": "secondary",
+          "level": "moderate"
+        },
+        {
+          "muscle": "Adductors",
+          "role": "secondary",
+          "level": "low"
+        },
+        {
+          "muscle": "Spinal erectors",
+          "role": "stabilizer",
+          "level": "moderate"
+        },
+        {
+          "muscle": "Back",
+          "role": "stabilizer",
+          "level": "low"
+        },
+        {
+          "muscle": "Forearms",
+          "role": "stabilizer",
+          "level": "low"
+        }
+      ],
+      "difficulty": "moderate",
+      "unilateral": false,
+      "loadKind": "total load",
+      "cues": "Brace before lifting. Keep the bar close and use a stable setup; lower with control."
+    },
+    {
+      "id": "lunge",
+      "name": "Dumbbell reverse lunge",
+      "muscle": "Quads",
+      "pattern": "squat",
+      "equipment": "dumbbell",
+      "secondary": [
+        "Glutes",
+        "Adductors"
+      ],
+      "compound": true,
+      "contributions": [
+        {
+          "muscle": "Quads",
+          "role": "primary",
+          "level": "high"
+        },
+        {
+          "muscle": "Glutes",
+          "role": "secondary",
+          "level": "high"
+        },
+        {
+          "muscle": "Adductors",
+          "role": "secondary",
+          "level": "moderate"
+        },
+        {
+          "muscle": "Core",
+          "role": "stabilizer",
+          "level": "low"
+        }
+      ],
+      "difficulty": "moderate",
+      "unilateral": false,
+      "loadKind": "per dumbbell",
+      "cues": "Step back under control. Keep a stable stance and record repetitions per side."
+    }
+  ]
+}
