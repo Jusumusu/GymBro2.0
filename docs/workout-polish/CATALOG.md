@@ -1,6 +1,6 @@
 # Exercise coverage and tracking boundary
 
-The available catalog grows from **43 to 198** exercises: **155 added**, covering all 14 existing muscle regions and 11 usable equipment categories. Every released definition, its order, ID and contribution rows remain byte-equivalent to `catalog-baseline.json`. No historical reference is remapped. The original 40 protected IDs remain unchanged; custom records still override a colliding newer ID and same-name custom exercises remain separate.
+The available catalog grows from **43 to 198** exercises: **155 added**, covering all 14 existing muscle regions and 11 usable equipment categories. Every released definition, its order, ID and contribution rows remain byte-equivalent to `catalog-baseline.json`. No historical reference is remapped. The original 40 protected IDs remain unchanged; custom records still override a colliding newer ID and same-name custom exercises remain separate. A Custom label in library and selection rows distinguishes user-created records.
 
 A further **21 definitions are prepared**, giving **219** total audited definitions: 12 band movements, 3 assisted-machine movements and 6 timed holds/carries. These are deliberately excluded from the active reps/load catalog until their tracking integration is complete. Static planks are not labeled as repetitions, band tension is not invented in kilograms, and assistance load is not treated as lifted weight. All requested equipment families have definitions; the active preview does not yet offer band, assisted-machine or weight-plate-only entries.
 
