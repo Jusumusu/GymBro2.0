@@ -26,7 +26,7 @@ The existing private Sites host is the working fallback. Source revision `f1c012
 
 Integrate the chosen chart/Focus/plan/timer design; complete duration/band/assistance logging and activate those entries with truthful metrics; implement the plan's dirty-close guard; then run final all-five-feature integration, offline/update and mobile acceptance checks. Keep the PR in draft until that work is complete. No merge is automatic.
 
-## Latest published checkpoint
+## Catalog publication checkpoint
 
 Candidate GitHub source `8ad380b06a984b448034a57b97d5f194f71c2a90`; candidate build **802bb4843f2a** (preview 0.5.0). Production composition remains build **22b389901373**, byte-identical to main `5fd52d1`. GitHub run https://github.com/Jusumusu/GymBro2.0/actions/runs/44352639335 passed its build/test/catalog/composition job, but its deploy job again failed before steps.
 
@@ -36,3 +36,9 @@ The working owner-private fallback now includes the **198-exercise catalog, conf
 - Isolated candidate app: https://gym-bro-design-review.jesse03sousa.chatgpt.site/preview/
 
 The review is RAM-only. The app has its own preview journal; existing installations may offer the normal Load update prompt for the new build. This publication does not approve or finalize a visual direction. The combined selection request is still pending, and no main merge is authorized.
+
+## Final published review checkpoint
+
+The compatibility refinement marks Custom rows explicitly in browse and selection results. GitHub application source `7c61c65a4f2f869586cf3400e71852504b845fb3`; preview build **9b290ef7fd20**. GitHub run https://github.com/Jusumusu/GymBro2.0/actions/runs/44354342619 passed build/tests/catalog/composition; deployment again failed before steps.
+
+Site source `bedeba2c03009e03979359e22e0b378c3aa0edd9`; saved version `appgprj_6afb13cac5348191bf97192174fa7bf8~appgver_d092451ec0788191ade4b611b559aa27`; deployment `appgdep_6afddaa461d48191955ff826b9e082e3` **succeeded**. The review and candidate URLs above are unchanged. The 14-check actual-app suite was rerun after the label change; overall executed validation remains 253 unit, 9 backend and 94 browser checks. The working tree is committed/pushed on the feature branch; main remains unchanged and design selection remains pending.
