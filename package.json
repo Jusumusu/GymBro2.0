@@ -32,7 +32,8 @@
     "test:design-round-two": "node tests/browser-design-round-two.mjs",
     "test:design-hybrid": "node tests/browser-design-round-two.mjs --hybrid",
     "test:design-glass": "node tests/browser-design-round-two.mjs --glass",
-    "test:approved-design": "node tests/browser-design-implementation.mjs"
+    "test:approved-design": "node tests/browser-design-implementation.mjs",
+    "validate:catalog": "node scripts/validate-exercise-catalog.mjs"
   },
   "engines": {
     "node": ">=22"

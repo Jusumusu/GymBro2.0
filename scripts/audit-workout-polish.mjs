@@ -1,5 +1,6 @@
 import {writeFile,mkdir} from 'node:fs/promises';
 import {EXERCISES} from '../src/exercises.js';
+if(EXERCISES.length!==43)throw Error('This captures the fixed 43-exercise baseline only. Use validate-exercise-catalog.mjs for the expanded catalog.');
 import {CONTRIBUTION_MUSCLES,discoverableMuscles,validateContributions} from '../src/muscle-contributions.js';
 const count=key=>Object.fromEntries([...new Set(EXERCISES.map(e=>e[key]))].sort().map(k=>[k,EXERCISES.filter(e=>e[key]===k).length]));
 for(const e of EXERCISES)validateContributions(e.contributions);

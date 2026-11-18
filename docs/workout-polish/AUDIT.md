@@ -33,3 +33,12 @@ The reproducible baseline is in `catalog-baseline.json`: **43** built-ins, **5**
 `review/` contains three isolated, interactive combined options in both themes: A Inline precision (recommended), B Field notebook, C Session console. These use fictional data in memory, import no storage/controller module and install no worker. Screenshots under `artifacts/workout-polish/concepts/` were rendered in Chromium at 390px. All three plan layouts were checked at 320, 375, 390, 430, 768, 1024 and 1440px. These are browser emulations, not physical iOS/Safari certification.
 
 Final visual integration and all-five-feature acceptance remain pending the user's explicit selection. Earlier Aero approval does not select a concept for this update.
+
+## Confirmed timer defects found during queue/bulk testing
+
+Further investigation reproduced two concrete baseline defects, independently of the rejected page-restoration hypothesis above:
+
+1. **Bulk completion bypassed automatic rest.** The released `check-all` handler never invoked the automatic-rest policy. With automatic timing enabled, the actual browser's “Check all sets” action completed the sets but left `draft.restTimer` absent. The new browser assertion failed before the fix. Bulk and individual completion now share the same policy, and repeated checking of already-completed sets does not restart rest.
+2. **Automatic-rest validation ran before the queued mutation.** If a workout finished between eligibility checking and applying the timer mutation, the callback attempted `null.restTimer` and raised a save error. Disabling auto rest, undoing/removing a set or changing superset completion before the mutation could also use stale decisions. The actual controller was tested with a deliberately delayed commit: all five regression cases failed before correction. Eligibility is now rechecked inside the serialized mutation, with the specific completed set ID when available; late adjustment/dismissal callbacks also tolerate a closed draft. All five cases pass after correction.
+
+`artifacts/workout-polish/timer-race/baseline-identity.json` verifies that the reproduced automatic and bulk handlers matched released main before modification. Before/after test evidence is retained beside it. These are confirmed causes for those exact flows, not a claim to have reproduced every possible physical-device failure. Manual baseline operation and the deliberate single-writer reload behavior remain as described earlier.

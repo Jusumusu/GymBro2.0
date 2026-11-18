@@ -1,3 +1,4 @@
+import {EXPANDED_EXERCISES} from './exercise-catalog.js';
 // Ordinal coaching classifications, not measured activation or growth percentages.
 export const CONTRIBUTION_MUSCLES=['Chest','Back','Quads','Hamstrings','Glutes','Shoulders','Biceps','Triceps','Calves','Core','Adductors','Spinal erectors','Forearms','Obliques'];
 export const muscleLabel=m=>({Quads:'Quadriceps',Core:'Abdominals','Spinal erectors':'Lower back',Adductors:'Adductors / hips'}[m]||m);
@@ -29,6 +30,7 @@ assign('crunch reverse-crunch cable-crunch',primary('Core'),secondary('Obliques'
 assign('cable-fly',primary('Chest'));
 assign('leg-extension',primary('Quads'));
 assign('rear-delt-fly face-pull',primary('Shoulders'),secondary('Back'));
+for(const exercise of EXPANDED_EXERCISES)catalog[exercise.id]=exercise.contributions;
 export const auditedExerciseIds=Object.freeze(Object.keys(catalog));
 export const catalogContributions=id=>catalog[id]?.map(r=>({...r}));
 export function contributions(exercise){

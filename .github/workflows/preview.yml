@@ -43,6 +43,7 @@ jobs:
         run: |
           npm test
           npm run test:backend
+          npm run validate:catalog
           npm run build:preview
       - name: Compose site and verify stable files did not change
         run: node candidate/scripts/compose-preview.mjs stable/dist candidate/dist site

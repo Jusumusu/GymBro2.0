@@ -1,0 +1,6 @@
+{
+  "baseline": "5fd52d1 / 0.5.0",
+  "originalAutomaticHandlerUnchanged": true,
+  "originalBulkHandlerUnchanged": true,
+  "scope": "Delayed callback tests execute the actual controller with a controlled commit queue."
+}

@@ -1,0 +1,23 @@
+# Exercise coverage and tracking boundary
+
+The available catalog grows from **43 to 198** exercises: **155 added**, covering all 14 existing muscle regions and 11 usable equipment categories. Every released definition, its order, ID and contribution rows remain byte-equivalent to `catalog-baseline.json`. No historical reference is remapped. The original 40 protected IDs remain unchanged; custom records still override a colliding newer ID and same-name custom exercises remain separate.
+
+A further **21 definitions are prepared**, giving **219** total audited definitions: 12 band movements, 3 assisted-machine movements and 6 timed holds/carries. These are deliberately excluded from the active reps/load catalog until their tracking integration is complete. Static planks are not labeled as repetitions, band tension is not invented in kilograms, and assistance load is not treated as lifted weight. All requested equipment families have definitions; the active preview does not yet offer band, assisted-machine or weight-plate-only entries.
+
+New coverage includes incline/decline/floor/Smith and plate-loaded pressing; dips and flyes; chin-ups, grip-specific pulldowns, supported/machine/cable rows and pullovers; shoulder presses and raises; EZ-bar, preacher, cable and incline curls; triceps extensions and close-grip pressing; direct wrist and forearm work; hack/belt/pendulum/Smith squats, step-ups and split squats; multiple hinges and leg curls; hip thrusts, abduction and adduction; calf variations; and controlled abdominal, anti-rotation and lower-back work. Full-body discovery includes the kettlebell swing. Holds/carries are in the prepared duration group.
+
+## Classification method
+
+The schema uses the existing 14 canonical regions. Primary, secondary and stabilizer roles have ordinal high/moderate/low emphasis, rather than purported activation percentages. Machine setup, posture, grip and loading conventions distinguish meaningful variations. Common alternative names are aliases. Original coaching cues describe the intended setup without importing an image or video library.
+
+Broad movement/anatomy checks used the [ACE exercise library](https://www.acefitness.org/resources/everyone/exercise-library/) and the [NSCA Personal Training Quarterly 9.3 exercise tables](https://www.nsca.com/globalassets/education/ptq/ptq-9.3-sept6.pdf), particularly supported pressing/rowing, hip adduction/abduction and lumbar extension. These references support conventional classifications; they do not establish precise per-exercise activation or validate every ordinal weight. For example, a hip-dominant 45-degree extension targets glutes/hamstrings with spinal stabilization; the separately defined supported lumbar-extension machine targets spinal erectors. Generic legacy exercise entries remain available beside specific setups so old logs keep their meaning.
+
+## Validation and compatibility
+
+Run `node scripts/validate-exercise-catalog.mjs`. It checks all 219 definitions for stable unique IDs/names, required metadata, equipment, canonical anatomy and primary relationships; checks aliases/filters; compares all 43 released definitions against the fixed snapshot; verifies custom-ID precedence; and records a small search benchmark. `catalog-coverage.json` separates available and prepared coverage and lists every pending entry. Unit and browser tests also cover new plan selection, actual set logging/muscle totals, favorites/recent selections, backup round trips and unchanged history/body data.
+
+The existing Machines preference includes Smith, selectorized and plate-loaded variants. Kettlebells, EZ bars and trap bars retain separate identities; selecting dumbbells does not opt into them. No equipment preference is silently changed. The browser keeps categories, favorites, recent selections, combined filters and 30-row result pagination.
+
+There is no persistence-schema reset or migration of old exercise references. Backups containing new built-in IDs need a version that knows those IDs; older apps reject unknown references rather than silently dropping records. Workout data remains on the user's device, and branch previews use a separate journal.
+
+Distance/cardio logging, Olympic-lift-specific analytics and mobility routines are outside the existing strength logger's supported tracking. They are not padded into the count. Duration, assistance and band integration remains a documented next step alongside approved UI integration.

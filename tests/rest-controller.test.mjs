@@ -1,0 +1,11 @@
+import {test} from 'node:test';
+import assert from 'node:assert/strict';
+import {createAdvancedController} from '../src/advanced-controller.js';
+import {refinementFixture} from './fixtures/refinement.mjs';
+import {makeDraft} from '../src/planner.js';
+function harness(){const s=refinementFixture('2026-11-18');s.profile.timer=true;s.draft=makeDraft(s.plans[0],'2026-11-18');for(const e of s.draft.exercises)for(const a of e.entries)Object.assign(a,{kg:60,reps:10,rir:2});const e=s.draft.exercises[0];e.entries[0].done=true;let operation;const controller=createAdvancedController({getState:()=>s,commit:fn=>{operation=fn;return Promise.resolve();}});return {s,e,controller,apply:()=>operation(s)};}
+test('a queued automatic rest callback cannot write to a workout finished in the meantime',async()=>{const h=harness();await h.controller.onCompleted(h.e.id,h.e.entries[0].id);h.s.draft=null;assert.doesNotThrow(h.apply);assert.equal(h.s.draft,null);});
+test('a queued automatic rest callback respects a newly disabled preference',async()=>{const h=harness();await h.controller.onCompleted(h.e.id,h.e.entries[0].id);h.s.profile.timer=false;h.apply();assert.equal(h.s.draft.restTimer,undefined);});
+test('a queued automatic rest callback does not follow a removed or undone set',async()=>{const h=harness();await h.controller.onCompleted(h.e.id,h.e.entries[0].id);h.e.entries[0].done=false;h.apply();assert.equal(h.s.draft.restTimer,undefined);h.e.entries[0].done=true;await h.controller.onCompleted(h.e.id,h.e.entries[0].id);h.s.draft.exercises=[];h.apply();assert.equal(h.s.draft.restTimer,undefined);});
+test('superset round gating uses state at commit time',async()=>{const h=harness();h.e.group='A';h.s.draft.exercises[1].group='A';h.s.draft.exercises[1].entries[0].done=true;await h.controller.onCompleted(h.e.id,h.e.entries[0].id);h.s.draft.exercises[1].entries[0].done=false;h.apply();assert.equal(h.s.draft.restTimer,undefined);});
+test('late adjustment and dismissal actions are harmless after the workout closes',async()=>{for(const action of ['rest-adjust','rest-dismiss','rest-pause','rest-resume','rest-reset']){const h=harness();await h.controller.actions[action]({dataset:{seconds:'15'}});h.s.draft=null;assert.doesNotThrow(h.apply);}});

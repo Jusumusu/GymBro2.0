@@ -70,8 +70,8 @@ test('repeated missed targets offer a bounded optional reduction without applyin
 });
 
 test('every built-in catalog identity is unique and valid in a saved program',()=>{
- assert.equal(new Set(EXERCISES.map(e=>e.id)).size,EXERCISES.length);assert.equal(EXERCISES.length,43);for(const id of ['squat','bench','rdl','row','front-squat','deadlift','lunge'])assert.ok(EXERCISES.some(e=>e.id===id));
- const s=state();s.plans=[0,40].map((start,i)=>({id:'catalog-'+i,name:'Catalog check',exercises:EXERCISES.slice(start,start+40).map(e=>({exerciseId:e.id,sets:1,min:6,max:10}))}));validateState(s);
+ assert.equal(new Set(EXERCISES.map(e=>e.id)).size,EXERCISES.length);assert.equal(EXERCISES.length,198);for(const id of ['squat','bench','rdl','row','front-squat','deadlift','lunge'])assert.ok(EXERCISES.some(e=>e.id===id));
+ const s=state();s.plans=Array.from({length:Math.ceil(EXERCISES.length/40)},(_,i)=>i*40).map((start,i)=>({id:'catalog-'+i,name:'Catalog check',exercises:EXERCISES.slice(start,start+40).map(e=>({exerciseId:e.id,sets:1,min:6,max:10}))}));validateState(s);
 });
 
 test('native backup round-trip preserves extension, advanced draft and canonical core data',async()=>{
