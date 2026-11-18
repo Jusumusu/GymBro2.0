@@ -1,5 +1,7 @@
 # Review publication
 
+**Release approval, November 18, 2026:** after reviewing the deployed GitHub Pages Aero preview, the user approved merging into main. Production publication follows the main Pages workflow; see [0.5.0 release notes](../RELEASE_0.5.0.md). The dated sections below document the earlier review deployments and their verification limits.
+
 **November 17, 2026:** A — Aero is implemented and published. Open the [working 0.5.0 app preview](https://gym-bro-design-review.jesse03sousa.chatgpt.site/preview/) or the [before/after implementation review](https://gym-bro-design-review.jesse03sousa.chatgpt.site/docs/liquid-glass/aero.html). Sign in with the owning ChatGPT account if prompted. The original five-direction gallery remains at the Site root. Main remains unchanged and merge approval is pending.
 
 The native Sites publication returned **succeeded** for deployment `appgdep_6afc716c033481918884feed333f7593`, saved version `appgprj_6afb13cac5348191bf97192174fa7bf8~appgver_45a2cacd74ac81918f05f7ab9739c826`. Its exact pushed Site source is `7d54873cf448ddc654752aa9429bf242549e555c`; the app implementation was pushed as `28b9cca`. The 0.5.0 preview build is `da6575865be3`. All 61 offline assets match their SHA-256 release metadata locally after packaging; the updater, worker, manifest identity and isolated preview namespace are preserved. Only necessary app/recovery files and research documentation are included in `/preview/`.

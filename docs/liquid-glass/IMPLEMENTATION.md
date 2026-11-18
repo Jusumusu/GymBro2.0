@@ -1,6 +1,6 @@
 # Approved Aero implementation
 
-The user selected **A** on November 17, 2026, approving Aero with the recommended balanced glass. Implementation is on `feature/liquid-glass-visual-redesign`. Main and the released GitHub Pages application remain unchanged; merge approval is still required.
+The user selected **A** on November 17, 2026, approving Aero with the recommended balanced glass, and explicitly approved merging on November 18 after reviewing the working preview. Implementation was developed on `feature/liquid-glass-visual-redesign`; [the 0.5.0 release notes](../RELEASE_0.5.0.md) describe the approved production release.
 
 ## Applied system
 
@@ -51,4 +51,4 @@ The active logger retains two visible material layers; blur decreases from 22px 
 
 The five-direction gallery is retained for reference. The actual app is packaged at `/preview/` on its separate review origin, using the existing preview database/lock namespace and its own worker/cache scope. Production records are never opened there. The implementation review page is `aero.html`; deployment status is recorded in `DEPLOYMENT.md`.
 
-Stable rollback remains main `f8b5d80d914c8d877d67d4155965be26170bed08` / 0.4.0. No data migration is introduced. The feature branch and draft PR retain the review and implementation history. Nothing has been merged into main; release approval is still required.
+The pre-release rollback point is `f8b5d80d914c8d877d67d4155965be26170bed08` / 0.4.0. No data migration is introduced. PR #3 retains the review and implementation history through a normal merge. Design review and release approval are complete; the main deployment is verified before handoff, then the completed feature branch is removed.

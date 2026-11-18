@@ -1,5 +1,7 @@
 # Deploying the Aero branch
 
+**Release approval, November 18, 2026:** the user approved merging Aero into main. This is the procedure used for the completed branch preview; the feature branch is removed after the production release is verified. See [0.5.0 release notes](RELEASE_0.5.0.md).
+
 Use **Deploy isolated Aero preview** (`.github/workflows/preview.yml`) on `feature/liquid-glass-visual-redesign`. Pushing a matching change starts a fresh run. For manual dispatch, choose that exact branch in the workflow's **Run workflow** menu.
 
 The previous preview configuration listened to the completed `feature/training-refinement-visual-redesign` branch, so Aero pushes started no workflow. Re-running an older run uses that run's original branch, commit and workflow; it does not deploy the latest Aero source.
