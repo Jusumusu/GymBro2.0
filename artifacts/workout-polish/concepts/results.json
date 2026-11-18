@@ -1,0 +1,214 @@
+{
+  "results": [
+    {
+      "concept": "a",
+      "view": "chart",
+      "theme": "light",
+      "width": 390,
+      "scroll": 390,
+      "fonts": true,
+      "completed": 0,
+      "active": 0
+    },
+    {
+      "concept": "a",
+      "view": "focus",
+      "theme": "light",
+      "width": 390,
+      "scroll": 390,
+      "fonts": true,
+      "completed": 2,
+      "active": 1
+    },
+    {
+      "concept": "a",
+      "view": "plan",
+      "theme": "light",
+      "width": 390,
+      "scroll": 390,
+      "fonts": true,
+      "completed": 0,
+      "active": 0
+    },
+    {
+      "concept": "b",
+      "view": "chart",
+      "theme": "light",
+      "width": 390,
+      "scroll": 390,
+      "fonts": true,
+      "completed": 0,
+      "active": 0
+    },
+    {
+      "concept": "b",
+      "view": "focus",
+      "theme": "light",
+      "width": 390,
+      "scroll": 390,
+      "fonts": true,
+      "completed": 2,
+      "active": 1
+    },
+    {
+      "concept": "b",
+      "view": "plan",
+      "theme": "light",
+      "width": 390,
+      "scroll": 390,
+      "fonts": true,
+      "completed": 0,
+      "active": 0
+    },
+    {
+      "concept": "c",
+      "view": "chart",
+      "theme": "light",
+      "width": 390,
+      "scroll": 390,
+      "fonts": true,
+      "completed": 0,
+      "active": 0
+    },
+    {
+      "concept": "c",
+      "view": "focus",
+      "theme": "light",
+      "width": 390,
+      "scroll": 390,
+      "fonts": true,
+      "completed": 2,
+      "active": 1
+    },
+    {
+      "concept": "c",
+      "view": "plan",
+      "theme": "light",
+      "width": 390,
+      "scroll": 390,
+      "fonts": true,
+      "completed": 0,
+      "active": 0
+    },
+    {
+      "concept": "a",
+      "view": "chart",
+      "theme": "dark",
+      "width": 390,
+      "scroll": 390,
+      "fonts": true,
+      "completed": 0,
+      "active": 0
+    },
+    {
+      "concept": "a",
+      "view": "focus",
+      "theme": "dark",
+      "width": 390,
+      "scroll": 390,
+      "fonts": true,
+      "completed": 2,
+      "active": 1
+    },
+    {
+      "concept": "a",
+      "view": "plan",
+      "theme": "dark",
+      "width": 390,
+      "scroll": 390,
+      "fonts": true,
+      "completed": 0,
+      "active": 0
+    },
+    {
+      "concept": "b",
+      "view": "chart",
+      "theme": "dark",
+      "width": 390,
+      "scroll": 390,
+      "fonts": true,
+      "completed": 0,
+      "active": 0
+    },
+    {
+      "concept": "b",
+      "view": "focus",
+      "theme": "dark",
+      "width": 390,
+      "scroll": 390,
+      "fonts": true,
+      "completed": 2,
+      "active": 1
+    },
+    {
+      "concept": "b",
+      "view": "plan",
+      "theme": "dark",
+      "width": 390,
+      "scroll": 390,
+      "fonts": true,
+      "completed": 0,
+      "active": 0
+    },
+    {
+      "concept": "c",
+      "view": "chart",
+      "theme": "dark",
+      "width": 390,
+      "scroll": 390,
+      "fonts": true,
+      "completed": 0,
+      "active": 0
+    },
+    {
+      "concept": "c",
+      "view": "focus",
+      "theme": "dark",
+      "width": 390,
+      "scroll": 390,
+      "fonts": true,
+      "completed": 2,
+      "active": 1
+    },
+    {
+      "concept": "c",
+      "view": "plan",
+      "theme": "dark",
+      "width": 390,
+      "scroll": 390,
+      "fonts": true,
+      "completed": 0,
+      "active": 0
+    },
+    {
+      "width": 320,
+      "layout": "all plan concepts fit"
+    },
+    {
+      "width": 375,
+      "layout": "all plan concepts fit"
+    },
+    {
+      "width": 390,
+      "layout": "all plan concepts fit"
+    },
+    {
+      "width": 430,
+      "layout": "all plan concepts fit"
+    },
+    {
+      "width": 768,
+      "layout": "all plan concepts fit"
+    },
+    {
+      "width": 1024,
+      "layout": "all plan concepts fit"
+    },
+    {
+      "width": 1440,
+      "layout": "all plan concepts fit"
+    }
+  ],
+  "errors": [],
+  "scope": "Headless Chromium; actual rendered prototypes. Physical mobile browsers not available."
+}

@@ -12,3 +12,6 @@ import './advanced-training.test.mjs';
 import './advanced-integration.test.mjs';
 
 import './training-refinement.test.mjs';
+
+import './rest-clock.test.mjs';
+import './chart-inspection.test.mjs';

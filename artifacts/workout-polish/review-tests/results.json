@@ -1,0 +1,17 @@
+{
+  "checks": [
+    "a: hover, keyboard, exact values and dates",
+    "b: hover, keyboard, exact values and dates",
+    "c: hover, keyboard, exact values and dates",
+    "Real CDP touch drag selects a source point without vertical scrolling",
+    "A vertical touch gesture inside the chart preserves native page scrolling",
+    "Completed sets are editable, undoable and distinct from the single active set",
+    "Shared timer operations drive real prototype pause/resume/adjust/reset/skip controls",
+    "a: picker preserves edits, ordering, unsaved guard and in-memory save",
+    "b: picker preserves edits, ordering, unsaved guard and in-memory save",
+    "c: picker preserves edits, ordering, unsaved guard and in-memory save",
+    "Review opens no database and installs no service worker"
+  ],
+  "errors": [],
+  "scope": "Actual Chromium rendering and CDP touch input; prototype state in RAM only."
+}
