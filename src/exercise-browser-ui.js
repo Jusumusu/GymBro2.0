@@ -10,6 +10,7 @@ export function browserShell({context='browse',replaceId='',rowId=''}={}){
 export function hydrateBrowser(root,state,{reset=false}={}){
  if(!root)return;
  const all=library(state),index=exerciseIndex(all);root._index=index;root._state=state;
+ const equipmentSelect=root.querySelector('[data-browser-filter=equipment]');for(const type of [...new Set(all.map(e=>e.equipment))])if(![...equipmentSelect.options].some(option=>option.value===type)){const option=document.createElement('option');option.value=type;option.textContent=EQUIPMENT[type]||type;equipmentSelect.append(option);}
  root._filters=reset?{query:'',category:'',equipment:'',type:'',pattern:'',limit:30}:root._filters||{query:'',category:'',equipment:'',type:'',pattern:'',limit:30};
  const patterns=root.querySelector('[data-browser-filter=pattern]');if(patterns.options.length===1)for(const pattern of [...new Set(all.map(e=>e.pattern))].sort()){const option=document.createElement('option');option.value=pattern;option.textContent=pattern;patterns.append(option);}
  renderBrowser(root);

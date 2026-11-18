@@ -12,6 +12,7 @@
     "Enabled automatic timing starts one timer after an actual completed set",
     "Check all sets uses the same enabled automatic-rest policy as individual completion",
     "Supersets start rest after a full round and preserve the deadline during Focus navigation",
+    "Editing and filtering an old custom exercise preserves unknown equipment and its original load convention",
     "Fixture history, body data and measurements remain byte-equivalent; no browser exceptions"
   ],
   "widths": [

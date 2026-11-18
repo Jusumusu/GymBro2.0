@@ -14,7 +14,7 @@ The user's brief explicitly says “Wait for my selection” and “Do not final
 - Expanded the available library to 198 exercises while preserving all 43 released definitions and custom/historical identities. Another 21 specialized tracking definitions are prepared separately. See CATALOG.md and catalog-coverage.json.
 - Rendered 18 phone concept screens plus the desktop review and checked the three plan layouts at seven widths. Executed CDP touch and keyboard tests, including normal vertical scrolling. Physical iOS/Safari testing is not claimed.
 
-Validation: [executed checks and limits](VALIDATION.md): 253 unit, 9 backend and 93 browser checks passed.
+Validation: [executed checks and limits](VALIDATION.md): 253 unit, 9 backend and 94 browser checks passed.
 
 ## Hosting
 

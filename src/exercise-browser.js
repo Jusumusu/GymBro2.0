@@ -28,6 +28,6 @@ export function customExerciseDefinition(data,prior,id){
  const unknown=(prior?.secondary||[]).filter(m=>!CONTRIBUTION_MUSCLES.includes(m));
  return {...prior,id:prior?.id||id,name:data.get('name').trim(),muscle:primary,pattern:data.get('pattern'),equipment,
   secondary:changed&&mapping?[...new Set([...mapping.filter(c=>c.role==='secondary').map(c=>c.muscle),...unknown])]:prior?.secondary||[],
-  compound:data.has('compound'),loadKind:data.get('loadKind')??prior?.loadKind??(equipment==='dumbbell'?'per dumbbell':equipment==='bodyweight'?'added load':'total load'),
+  compound:data.has('compound'),loadKind:data.get('loadKind')??prior?.loadKind??(equipment==='dumbbell'?'per dumbbell':equipment==='kettlebell'?'per kettlebell':equipment==='bodyweight'?'added load':'total load'),
   cues:data.get('cues'),unilateral:prior?.unilateral??false,difficulty:prior?.difficulty??'user-defined',...(changed&&mapping?{contributions:mapping}:{})};
 }
