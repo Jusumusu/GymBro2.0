@@ -1,14 +1,14 @@
-name: Deploy isolated training refinement preview
+name: Deploy isolated Aero preview
 on:
   push:
-    branches: [feature/training-refinement-visual-redesign]
+    branches: [feature/liquid-glass-visual-redesign]
     paths:
       - 'src/**'
       - 'public/**'
       - 'server/**'
       - 'scripts/**'
       - 'tests/**'
-      - 'docs/training-refinement/**'
+      - 'docs/liquid-glass/**'
       - 'index.html'
       - 'package.json'
       - '.github/workflows/preview.yml'
@@ -22,7 +22,7 @@ concurrency:
   cancel-in-progress: false
 jobs:
   build:
-    if: github.ref == 'refs/heads/feature/training-refinement-visual-redesign'
+    if: github.ref == 'refs/heads/feature/liquid-glass-visual-redesign'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -50,8 +50,26 @@ jobs:
       - uses: actions/upload-pages-artifact@v3
         with:
           path: site
+      - name: Summarize the branch preview and environment requirement
+        run: |
+          node --input-type=module <<'NODE'
+          import {readFileSync,appendFileSync} from 'node:fs';
+          const stable=JSON.parse(readFileSync('site/version.json','utf8'));
+          const preview=JSON.parse(readFileSync('site/preview/version.json','utf8'));
+          appendFileSync(process.env.GITHUB_STEP_SUMMARY,[
+            '## Aero branch preview',
+            `Branch: ${process.env.GITHUB_REF_NAME}; commit: ${process.env.GITHUB_SHA}`,
+            `Production root: ${stable.version} (${stable.build}), byte-identical to main.`,
+            `Isolated /preview/: ${preview.version} (${preview.build}).`,
+            '',
+            'Deployment uses the existing protected github-pages environment.',
+            'If GitHub rejects the branch before the deploy job starts, a repository owner must allow feature/liquid-glass-visual-redesign in Settings → Environments → github-pages → Deployment branches and tags.',
+            'Re-running an older workflow run reuses its original commit and branch; use this Aero run or dispatch this workflow on the Aero branch.',
+            '',
+          ].join('\n\n'));
+          NODE
   deploy:
-    if: github.ref == 'refs/heads/feature/training-refinement-visual-redesign'
+    if: github.ref == 'refs/heads/feature/liquid-glass-visual-redesign'
     needs: build
     runs-on: ubuntu-latest
     timeout-minutes: 15

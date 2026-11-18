@@ -1,0 +1,41 @@
+[
+  {
+    "suite": "browser",
+    "exitCode": 0,
+    "result": "24 browser checks passed."
+  },
+  {
+    "suite": "browser-advanced-training",
+    "exitCode": 0,
+    "result": "PASS 21 integrated browser checks"
+  },
+  {
+    "suite": "browser-app-updates",
+    "exitCode": 0,
+    "result": "14 automatic-update browser checks passed."
+  },
+  {
+    "suite": "browser-refinement",
+    "exitCode": 0,
+    "result": "12 refinement browser checks passed."
+  },
+  {
+    "suite": "browser-training-refinement",
+    "exitCode": 0,
+    "result": "after: 12 actual layout checks and screenshots completed"
+  },
+  {
+    "suite": "browser-update",
+    "exitCode": 0,
+    "result": "10 browser update checks passed."
+  },
+  {
+    "suite": "browser-workout-ux",
+    "exitCode": 0,
+    "result": "19 workout refinement browser checks passed."
+  },
+  {
+    "suite": "browser-review-site",
+    "exitCode": 0
+  }
+]

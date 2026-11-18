@@ -1,0 +1,26 @@
+{
+  "baseline": "0.4.0 / f8b5d80",
+  "views": [
+    "workout",
+    "gains",
+    "schedule",
+    "settings",
+    "muscles",
+    "review",
+    "programs",
+    "coach",
+    "library",
+    "blocks",
+    "summary",
+    "records",
+    "active",
+    "focus",
+    "update"
+  ],
+  "dialogs": [
+    "options",
+    "backup"
+  ],
+  "syntheticOnly": true,
+  "errors": []
+}

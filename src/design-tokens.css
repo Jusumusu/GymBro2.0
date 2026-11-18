@@ -1,36 +1,31 @@
-/* Approved Contour + Prism system. Shared by the app and standalone updater. */
+/* Approved A — Aero. Shared by the app and standalone updater. */
 @font-face{font-family:Manrope;src:url('../manrope.woff') format('woff');font-style:normal;font-weight:200 800;font-display:swap}
 @font-face{font-family:'DM Sans';src:url('../dm-sans.woff') format('woff');font-style:normal;font-weight:100 1000;font-display:swap}
 :root,html[data-theme]{
- --paper:#f8f8fa;--surface:#fff;--ink:#28262f;--muted:#706a79;--line:#dedbe4;
- --accent:#b63c29;--on-accent:#fff;--accent-soft:#f7e9e4;--soft:#efedf3;
- --hero-surface:#282630;--hero-ink:#f5f2f7;--hero-muted:#c1bacb;--hero-border:#4c4657;
- --hero-action:#ffac90;--hero-action-ink:#342019;--success:#526c60;
- --danger:#a52f40;--danger-on:#fff;--status-error:#a52f40;--status-error-ink:#fff;
- --notice-surface:#fff4dc;--notice-ink:#6a4b17;--notice-border:#dbc087;
- --missed-surface:#faece5;--missed-ink:#82402b;--preview-surface:#f2d8a7;--preview-ink:#432d13;
- --control-border:#89828f;--overlay:#21162b80;--shadow:0 8px 30px #2822380a;
- --glass-fill:rgb(255 255 255 / .76);--glass-edge:rgb(255 255 255 / .94);
- --glass-rim:rgb(255 255 255 / .95);--glass-filter:blur(22px) saturate(1.6);
- --glass-shadow:0 8px 26px #28223812,inset 0 1px 0 var(--glass-rim),inset 0 -1px 0 #63557714;
- --heat-low:#f2e6e3;--heat-moderate:#d99d8f;--heat-high:#a83a29;
- --radius:15px;--card-radius:15px;--card-padding:24px;--control-height:46px;
- --sans:Manrope,ui-sans-serif,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
- --numerals:'DM Sans',var(--sans);--green:var(--accent);--lime:var(--hero-action);--chart-line:var(--accent);
- font-family:var(--sans);color:var(--ink);background:var(--paper);color-scheme:light;font-synthesis:none;
+ --sans:Manrope,ui-sans-serif,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;--heading:Manrope,var(--sans);--numerals:'DM Sans',var(--sans);
+ --paper:#f4f6f7;--surface:#fff;--soft:#e9eef1;--ink:#202b32;--muted:#596a73;--line:#d3dde2;
+ --accent:#1c5680;--accent-soft:#e8f1f7;--on-accent:#fff;--control-border:#82949f;
+ --hero-surface:#202b32;--hero-ink:#f6f9fa;--hero-muted:#bccbd2;--hero-border:#43545e;--hero-action:#c4def0;--hero-action-ink:#173b56;
+ --success:#206345;--success-soft:#e5f1e9;--record:#805a15;--record-soft:#f6eedb;--progress:#2a647b;
+ --danger:#aa3540;--danger-on:#fff;--status-error:#aa3540;--status-error-ink:#fff;
+ --notice-surface:#fcf3df;--notice-ink:#735019;--notice-border:#c9ad72;--missed-surface:#f8e9e5;--missed-ink:#853b2d;
+ --heat-low:#e6ece9;--heat-moderate:#91afa5;--heat-high:#396e60;--overlay:#10181780;
+ --card-radius:14px;--radius:14px;--card-padding:22px;--control-radius:10px;--page-space:22px;--heading-weight:650;
+ --glass-rgb:255 255 255;--glass-alpha:.80;--glass-blur:16px;--glass-edge:#ffffffc9;--glass-rim:#ffffffd9;
+ --glass-fill:rgb(var(--glass-rgb) / var(--glass-alpha));--glass-filter:blur(var(--glass-blur)) saturate(1.15);
+ --glass-shadow:0 8px 24px #17232d14,inset 0 1px var(--glass-rim),inset 0 -1px #17232d0a;
+ --green:var(--success);--lime:var(--hero-action);--chart-line:var(--progress);--shadow:0 3px 20px #12212c06;--control-height:46px;--preview-surface:#f2d8a7;--preview-ink:#432d13;
+ color-scheme:light;font-synthesis:none;color:var(--ink);background:var(--paper);font-family:var(--sans);
 }
 html[data-theme=dark]{
- --paper:#17151e;--surface:#24202e;--ink:#f3edf9;--muted:#b9afc8;--line:#464050;
- --accent:#c8b4ff;--on-accent:#291c4b;--accent-soft:#3a2f51;--soft:#2c2735;
- --hero-surface:#282330;--hero-ink:#f3edf9;--hero-muted:#c5bbd4;--hero-border:#4a405a;
- --hero-action:#c8b4ff;--hero-action-ink:#291c4b;--success:#c4bbd9;
- --danger:#f0a1af;--danger-on:#3a1620;--status-error:#773040;
- --notice-surface:#3c3124;--notice-ink:#f4ddb4;--notice-border:#786441;
- --missed-surface:#432d30;--missed-ink:#f5c6c0;--preview-surface:#e7c58f;--preview-ink:#34240f;
- --control-border:#8b809c;--overlay:#0b0813b8;
- --glass-fill:rgb(42 36 57 / .8);--glass-edge:rgb(224 209 255 / .24);--glass-rim:rgb(239 227 255 / .22);
- --glass-shadow:0 8px 30px #08070d3d,inset 0 1px 0 var(--glass-rim),inset 0 -1px 0 #ffffff05;
- --heat-low:#362d46;--heat-moderate:#786395;--heat-high:#c8b4ff;color-scheme:dark;
+ --paper:#14191c;--surface:#20282c;--soft:#293338;--ink:#edf3f5;--muted:#a5b7c0;--line:#3b494f;
+ --accent:#86bded;--accent-soft:#223b4b;--on-accent:#112b40;--control-border:#71848e;
+ --hero-surface:#242f35;--hero-ink:#edf3f5;--hero-muted:#b6c5cd;--hero-border:#44575f;--hero-action:#b8d9ef;--hero-action-ink:#15364b;
+ --success:#8dc9a6;--success-soft:#243b30;--record:#dfc080;--record-soft:#3a3325;--progress:#8dbecb;
+ --danger:#efadb2;--danger-on:#431c23;--status-error:#84353e;--notice-surface:#3a3020;--notice-ink:#edcc94;--notice-border:#7f6a43;--missed-surface:#3d2b29;--missed-ink:#edb2a7;
+ --heat-low:#293633;--heat-moderate:#668d7d;--heat-high:#a5d1bc;--overlay:#080b0cc9;
+ --glass-rgb:39 48 53;--glass-edge:#a9c1ce38;--glass-rim:#d8e8f529;--glass-shadow:0 10px 28px #0004,inset 0 1px var(--glass-rim),inset 0 -1px #ffffff05;
+ --preview-surface:#e7c58f;--preview-ink:#34240f;--green:var(--success);--lime:var(--hero-action);--chart-line:var(--progress);color-scheme:dark;
 }
 @media(prefers-reduced-transparency:reduce){:root,html[data-theme]{--glass-fill:var(--surface);--glass-filter:none;--glass-edge:var(--line);--glass-rim:transparent;--glass-shadow:none}}
 @supports not ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){:root,html[data-theme]{--glass-fill:var(--surface);--glass-filter:none;--glass-edge:var(--line);--glass-rim:transparent;--glass-shadow:none}}

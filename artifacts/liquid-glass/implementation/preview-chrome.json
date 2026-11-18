@@ -1,0 +1,56 @@
+{
+  "checks": [
+    {
+      "width": 320,
+      "bannerBottom": 32,
+      "jumpTop": 129.046875,
+      "hit": true,
+      "overflow": false
+    },
+    {
+      "width": 375,
+      "bannerBottom": 32,
+      "jumpTop": 125.296875,
+      "hit": true,
+      "overflow": false
+    },
+    {
+      "width": 390,
+      "bannerBottom": 32,
+      "jumpTop": 125.296875,
+      "hit": true,
+      "overflow": false
+    },
+    {
+      "width": 430,
+      "bannerBottom": 32,
+      "jumpTop": 125.93392944335938,
+      "hit": true,
+      "overflow": false
+    },
+    {
+      "width": 768,
+      "bannerBottom": 32,
+      "jumpTop": 101.532470703125,
+      "hit": true,
+      "overflow": false
+    },
+    {
+      "width": 1024,
+      "bannerBottom": 32,
+      "jumpTop": 101.53244018554688,
+      "hit": true,
+      "overflow": false
+    },
+    {
+      "width": 1280,
+      "bannerBottom": 32,
+      "jumpTop": 102.27957153320312,
+      "hit": true,
+      "overflow": false
+    }
+  ],
+  "onboardingLabel": true,
+  "productionDatabaseOpened": false,
+  "errors": []
+}

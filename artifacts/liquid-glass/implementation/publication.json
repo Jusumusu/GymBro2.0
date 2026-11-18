@@ -1,0 +1,14 @@
+{
+  "status": "succeeded",
+  "url": "https://gym-bro-design-review.jesse03sousa.chatgpt.site/preview/",
+  "review_url": "https://gym-bro-design-review.jesse03sousa.chatgpt.site/docs/liquid-glass/aero.html",
+  "project_id": "appgprj_6afb13cac5348191bf97192174fa7bf8",
+  "deployment_id": "appgdep_6afc716c033481918884feed333f7593",
+  "version_id": "appgprj_6afb13cac5348191bf97192174fa7bf8~appgver_45a2cacd74ac81918f05f7ab9739c826",
+  "site_source_commit": "7d54873cf448ddc654752aa9429bf242549e555c",
+  "app_source_commit": "28b9cca",
+  "preview_build": "da6575865be3",
+  "version": "0.5.0",
+  "offline_assets_verified_locally": 61,
+  "hosted_http_verification": "Blocked before reaching the Site by the execution environment's outbound CONNECT proxy (403). Native Sites publication succeeded; no hosted browser or physical Safari/PWA certification is claimed."
+}

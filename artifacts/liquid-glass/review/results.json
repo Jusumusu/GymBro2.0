@@ -1,0 +1,867 @@
+{
+  "assertions": 2053,
+  "layouts": 960,
+  "screens": 16,
+  "contrasts": [
+    {
+      "concept": "A",
+      "theme": "light",
+      "fg": "#202b32",
+      "bg": "#f4f6f7",
+      "ratio": 13.332200987798773
+    },
+    {
+      "concept": "A",
+      "theme": "light",
+      "fg": "#202b32",
+      "bg": "#fff",
+      "ratio": 14.452618738142133
+    },
+    {
+      "concept": "A",
+      "theme": "light",
+      "fg": "#596a73",
+      "bg": "#f4f6f7",
+      "ratio": 5.188081642801656
+    },
+    {
+      "concept": "A",
+      "theme": "light",
+      "fg": "#596a73",
+      "bg": "#fff",
+      "ratio": 5.624080077579623
+    },
+    {
+      "concept": "A",
+      "theme": "light",
+      "fg": "#1c5680",
+      "bg": "#e8f1f7",
+      "ratio": 6.818366385305587
+    },
+    {
+      "concept": "A",
+      "theme": "light",
+      "fg": "#fff",
+      "bg": "#1c5680",
+      "ratio": 7.800331618404082
+    },
+    {
+      "concept": "A",
+      "theme": "light",
+      "fg": "#206345",
+      "bg": "#e5f1e9",
+      "ratio": 6.169792703638614
+    },
+    {
+      "concept": "A",
+      "theme": "light",
+      "fg": "#805a15",
+      "bg": "#f6eedb",
+      "ratio": 5.358466884120753
+    },
+    {
+      "concept": "A",
+      "theme": "light",
+      "fg": "#735019",
+      "bg": "#fcf3df",
+      "ratio": 6.5819307555628574
+    },
+    {
+      "concept": "A",
+      "theme": "light",
+      "fg": "#f6f9fa",
+      "bg": "#202b32",
+      "ratio": 13.660659467602219
+    },
+    {
+      "concept": "A",
+      "theme": "light",
+      "fg": "#bccbd2",
+      "bg": "#202b32",
+      "ratio": 8.679331790604932
+    },
+    {
+      "concept": "A",
+      "theme": "light",
+      "fg": "#173b56",
+      "bg": "#c4def0",
+      "ratio": 8.380072190635323
+    },
+    {
+      "concept": "A",
+      "theme": "dark",
+      "fg": "#edf3f5",
+      "bg": "#14191c",
+      "ratio": 15.806521361229203
+    },
+    {
+      "concept": "A",
+      "theme": "dark",
+      "fg": "#edf3f5",
+      "bg": "#20282c",
+      "ratio": 13.373034009833788
+    },
+    {
+      "concept": "A",
+      "theme": "dark",
+      "fg": "#a5b7c0",
+      "bg": "#14191c",
+      "ratio": 8.548174513583296
+    },
+    {
+      "concept": "A",
+      "theme": "dark",
+      "fg": "#a5b7c0",
+      "bg": "#20282c",
+      "ratio": 7.232143359040387
+    },
+    {
+      "concept": "A",
+      "theme": "dark",
+      "fg": "#86bded",
+      "bg": "#223b4b",
+      "ratio": 5.857607889298118
+    },
+    {
+      "concept": "A",
+      "theme": "dark",
+      "fg": "#112b40",
+      "bg": "#86bded",
+      "ratio": 7.285200725628898
+    },
+    {
+      "concept": "A",
+      "theme": "dark",
+      "fg": "#8dc9a6",
+      "bg": "#243b30",
+      "ratio": 6.331650414222264
+    },
+    {
+      "concept": "A",
+      "theme": "dark",
+      "fg": "#dfc080",
+      "bg": "#3a3325",
+      "ratio": 7.135750290651496
+    },
+    {
+      "concept": "A",
+      "theme": "dark",
+      "fg": "#edcc94",
+      "bg": "#3a3020",
+      "ratio": 8.417177585455482
+    },
+    {
+      "concept": "A",
+      "theme": "dark",
+      "fg": "#edf3f5",
+      "bg": "#242f35",
+      "ratio": 12.22394944825783
+    },
+    {
+      "concept": "A",
+      "theme": "dark",
+      "fg": "#b6c5cd",
+      "bg": "#242f35",
+      "ratio": 7.734414219224272
+    },
+    {
+      "concept": "A",
+      "theme": "dark",
+      "fg": "#15364b",
+      "bg": "#b8d9ef",
+      "ratio": 8.554066882325918
+    },
+    {
+      "concept": "B",
+      "theme": "light",
+      "fg": "#202420",
+      "bg": "#f6f6f4",
+      "ratio": 14.541341448897096
+    },
+    {
+      "concept": "B",
+      "theme": "light",
+      "fg": "#202420",
+      "bg": "#fff",
+      "ratio": 15.734784658442729
+    },
+    {
+      "concept": "B",
+      "theme": "light",
+      "fg": "#626960",
+      "bg": "#f6f6f4",
+      "ratio": 5.2326462242014875
+    },
+    {
+      "concept": "B",
+      "theme": "light",
+      "fg": "#626960",
+      "bg": "#fff",
+      "ratio": 5.662102208449866
+    },
+    {
+      "concept": "B",
+      "theme": "light",
+      "fg": "#202420",
+      "bg": "#e3e7e1",
+      "ratio": 12.575684072276779
+    },
+    {
+      "concept": "B",
+      "theme": "light",
+      "fg": "#fff",
+      "bg": "#202420",
+      "ratio": 15.734784658442729
+    },
+    {
+      "concept": "B",
+      "theme": "light",
+      "fg": "#206345",
+      "bg": "#e5f1e9",
+      "ratio": 6.169792703638614
+    },
+    {
+      "concept": "B",
+      "theme": "light",
+      "fg": "#805a15",
+      "bg": "#f6eedb",
+      "ratio": 5.358466884120753
+    },
+    {
+      "concept": "B",
+      "theme": "light",
+      "fg": "#735019",
+      "bg": "#fcf3df",
+      "ratio": 6.5819307555628574
+    },
+    {
+      "concept": "B",
+      "theme": "light",
+      "fg": "#f6f6f4",
+      "bg": "#202420",
+      "ratio": 14.541341448897096
+    },
+    {
+      "concept": "B",
+      "theme": "light",
+      "fg": "#c5cdc3",
+      "bg": "#202420",
+      "ratio": 9.661620910277243
+    },
+    {
+      "concept": "B",
+      "theme": "light",
+      "fg": "#202420",
+      "bg": "#f3f4ef",
+      "ratio": 14.234442779375962
+    },
+    {
+      "concept": "B",
+      "theme": "dark",
+      "fg": "#eef2ec",
+      "bg": "#101211",
+      "ratio": 16.609977612730354
+    },
+    {
+      "concept": "B",
+      "theme": "dark",
+      "fg": "#eef2ec",
+      "bg": "#1b1e1c",
+      "ratio": 14.848937721644655
+    },
+    {
+      "concept": "B",
+      "theme": "dark",
+      "fg": "#afb8ad",
+      "bg": "#101211",
+      "ratio": 9.20828166948126
+    },
+    {
+      "concept": "B",
+      "theme": "dark",
+      "fg": "#afb8ad",
+      "bg": "#1b1e1c",
+      "ratio": 8.231991891951324
+    },
+    {
+      "concept": "B",
+      "theme": "dark",
+      "fg": "#eef2ec",
+      "bg": "#30392f",
+      "ratio": 10.586634470510326
+    },
+    {
+      "concept": "B",
+      "theme": "dark",
+      "fg": "#162015",
+      "bg": "#eef2ec",
+      "ratio": 14.819653140431507
+    },
+    {
+      "concept": "B",
+      "theme": "dark",
+      "fg": "#8dc9a6",
+      "bg": "#243b30",
+      "ratio": 6.331650414222264
+    },
+    {
+      "concept": "B",
+      "theme": "dark",
+      "fg": "#dfc080",
+      "bg": "#3a3325",
+      "ratio": 7.135750290651496
+    },
+    {
+      "concept": "B",
+      "theme": "dark",
+      "fg": "#edcc94",
+      "bg": "#3a3020",
+      "ratio": 8.417177585455482
+    },
+    {
+      "concept": "B",
+      "theme": "dark",
+      "fg": "#eef2ec",
+      "bg": "#1b1e1c",
+      "ratio": 14.848937721644655
+    },
+    {
+      "concept": "B",
+      "theme": "dark",
+      "fg": "#afb8ad",
+      "bg": "#1b1e1c",
+      "ratio": 8.231991891951324
+    },
+    {
+      "concept": "B",
+      "theme": "dark",
+      "fg": "#162015",
+      "bg": "#eef2ec",
+      "ratio": 14.819653140431507
+    },
+    {
+      "concept": "C",
+      "theme": "light",
+      "fg": "#29342b",
+      "bg": "#f5f2e9",
+      "ratio": 11.577640027143081
+    },
+    {
+      "concept": "C",
+      "theme": "light",
+      "fg": "#29342b",
+      "bg": "#fffdf8",
+      "ratio": 12.748727736153787
+    },
+    {
+      "concept": "C",
+      "theme": "light",
+      "fg": "#636c5c",
+      "bg": "#f5f2e9",
+      "ratio": 4.898045996746384
+    },
+    {
+      "concept": "C",
+      "theme": "light",
+      "fg": "#636c5c",
+      "bg": "#fffdf8",
+      "ratio": 5.393487334662486
+    },
+    {
+      "concept": "C",
+      "theme": "light",
+      "fg": "#4b6149",
+      "bg": "#e7ecde",
+      "ratio": 5.6197452083551465
+    },
+    {
+      "concept": "C",
+      "theme": "light",
+      "fg": "#fff",
+      "bg": "#4b6149",
+      "ratio": 6.762726023866942
+    },
+    {
+      "concept": "C",
+      "theme": "light",
+      "fg": "#206345",
+      "bg": "#e5f1e9",
+      "ratio": 6.169792703638614
+    },
+    {
+      "concept": "C",
+      "theme": "light",
+      "fg": "#805a15",
+      "bg": "#f6eedb",
+      "ratio": 5.358466884120753
+    },
+    {
+      "concept": "C",
+      "theme": "light",
+      "fg": "#735019",
+      "bg": "#fcf3df",
+      "ratio": 6.5819307555628574
+    },
+    {
+      "concept": "C",
+      "theme": "light",
+      "fg": "#293b2e",
+      "bg": "#e5e9dc",
+      "ratio": 9.674546882770615
+    },
+    {
+      "concept": "C",
+      "theme": "light",
+      "fg": "#596951",
+      "bg": "#e5e9dc",
+      "ratio": 4.77542066027795
+    },
+    {
+      "concept": "C",
+      "theme": "light",
+      "fg": "#fff",
+      "bg": "#40583e",
+      "ratio": 7.825754683608776
+    },
+    {
+      "concept": "C",
+      "theme": "dark",
+      "fg": "#eceee3",
+      "bg": "#1c1d1b",
+      "ratio": 14.42897212533026
+    },
+    {
+      "concept": "C",
+      "theme": "dark",
+      "fg": "#eceee3",
+      "bg": "#292c27",
+      "ratio": 12.066963054500327
+    },
+    {
+      "concept": "C",
+      "theme": "dark",
+      "fg": "#b4bdab",
+      "bg": "#1c1d1b",
+      "ratio": 8.709274425825852
+    },
+    {
+      "concept": "C",
+      "theme": "dark",
+      "fg": "#b4bdab",
+      "bg": "#292c27",
+      "ratio": 7.283574451117712
+    },
+    {
+      "concept": "C",
+      "theme": "dark",
+      "fg": "#b5c9a9",
+      "bg": "#34432e",
+      "ratio": 5.981072903301093
+    },
+    {
+      "concept": "C",
+      "theme": "dark",
+      "fg": "#26371f",
+      "bg": "#b5c9a9",
+      "ratio": 7.21326161455154
+    },
+    {
+      "concept": "C",
+      "theme": "dark",
+      "fg": "#8dc9a6",
+      "bg": "#243b30",
+      "ratio": 6.331650414222264
+    },
+    {
+      "concept": "C",
+      "theme": "dark",
+      "fg": "#dfc080",
+      "bg": "#3a3325",
+      "ratio": 7.135750290651496
+    },
+    {
+      "concept": "C",
+      "theme": "dark",
+      "fg": "#edcc94",
+      "bg": "#3a3020",
+      "ratio": 8.417177585455482
+    },
+    {
+      "concept": "C",
+      "theme": "dark",
+      "fg": "#ecf0e4",
+      "bg": "#30382b",
+      "ratio": 10.51476938312846
+    },
+    {
+      "concept": "C",
+      "theme": "dark",
+      "fg": "#b7c5aa",
+      "bg": "#30382b",
+      "ratio": 6.708504634430565
+    },
+    {
+      "concept": "C",
+      "theme": "dark",
+      "fg": "#27391e",
+      "bg": "#c6d8b9",
+      "ratio": 8.237792817025303
+    },
+    {
+      "concept": "D",
+      "theme": "light",
+      "fg": "#242b2a",
+      "bg": "#f4f4f1",
+      "ratio": 13.106668493650776
+    },
+    {
+      "concept": "D",
+      "theme": "light",
+      "fg": "#242b2a",
+      "bg": "#fff",
+      "ratio": 14.442937690502703
+    },
+    {
+      "concept": "D",
+      "theme": "light",
+      "fg": "#606c68",
+      "bg": "#f4f4f1",
+      "ratio": 4.959833911964362
+    },
+    {
+      "concept": "D",
+      "theme": "light",
+      "fg": "#606c68",
+      "bg": "#fff",
+      "ratio": 5.465505759945426
+    },
+    {
+      "concept": "D",
+      "theme": "light",
+      "fg": "#aa4321",
+      "bg": "#f8e9df",
+      "ratio": 5.011951512755533
+    },
+    {
+      "concept": "D",
+      "theme": "light",
+      "fg": "#fff",
+      "bg": "#aa4321",
+      "ratio": 5.942220334432096
+    },
+    {
+      "concept": "D",
+      "theme": "light",
+      "fg": "#206345",
+      "bg": "#e5f1e9",
+      "ratio": 6.169792703638614
+    },
+    {
+      "concept": "D",
+      "theme": "light",
+      "fg": "#64721c",
+      "bg": "#eef0d6",
+      "ratio": 4.556854049109699
+    },
+    {
+      "concept": "D",
+      "theme": "light",
+      "fg": "#735019",
+      "bg": "#fcf3df",
+      "ratio": 6.5819307555628574
+    },
+    {
+      "concept": "D",
+      "theme": "light",
+      "fg": "#f4f6ef",
+      "bg": "#222927",
+      "ratio": 13.627067073648535
+    },
+    {
+      "concept": "D",
+      "theme": "light",
+      "fg": "#c1cbc2",
+      "bg": "#222927",
+      "ratio": 8.899950015302927
+    },
+    {
+      "concept": "D",
+      "theme": "light",
+      "fg": "#422814",
+      "bg": "#eeb189",
+      "ratio": 7.303271440276035
+    },
+    {
+      "concept": "D",
+      "theme": "dark",
+      "fg": "#eff2eb",
+      "bg": "#151817",
+      "ratio": 15.805976180720679
+    },
+    {
+      "concept": "D",
+      "theme": "dark",
+      "fg": "#eff2eb",
+      "bg": "#242927",
+      "ratio": 13.064240291748435
+    },
+    {
+      "concept": "D",
+      "theme": "dark",
+      "fg": "#b1bdb5",
+      "bg": "#151817",
+      "ratio": 9.205541724478225
+    },
+    {
+      "concept": "D",
+      "theme": "dark",
+      "fg": "#b1bdb5",
+      "bg": "#242927",
+      "ratio": 7.6087302504600105
+    },
+    {
+      "concept": "D",
+      "theme": "dark",
+      "fg": "#f0ad7c",
+      "bg": "#433125",
+      "ratio": 6.437228084281162
+    },
+    {
+      "concept": "D",
+      "theme": "dark",
+      "fg": "#432512",
+      "bg": "#f0ad7c",
+      "ratio": 7.257528505463266
+    },
+    {
+      "concept": "D",
+      "theme": "dark",
+      "fg": "#8dc9a6",
+      "bg": "#243b30",
+      "ratio": 6.331650414222264
+    },
+    {
+      "concept": "D",
+      "theme": "dark",
+      "fg": "#d2db91",
+      "bg": "#343b22",
+      "ratio": 7.9577770746767404
+    },
+    {
+      "concept": "D",
+      "theme": "dark",
+      "fg": "#edcc94",
+      "bg": "#3a3020",
+      "ratio": 8.417177585455482
+    },
+    {
+      "concept": "D",
+      "theme": "dark",
+      "fg": "#f4f6ed",
+      "bg": "#252e29",
+      "ratio": 12.821889314140737
+    },
+    {
+      "concept": "D",
+      "theme": "dark",
+      "fg": "#bdcbbf",
+      "bg": "#252e29",
+      "ratio": 8.297449762858625
+    },
+    {
+      "concept": "D",
+      "theme": "dark",
+      "fg": "#432512",
+      "bg": "#f0ad7c",
+      "ratio": 7.257528505463266
+    },
+    {
+      "concept": "E",
+      "theme": "light",
+      "fg": "#283535",
+      "bg": "#f9f6f0",
+      "ratio": 11.792858364722493
+    },
+    {
+      "concept": "E",
+      "theme": "light",
+      "fg": "#283535",
+      "bg": "#fffdf9",
+      "ratio": 12.520663783206397
+    },
+    {
+      "concept": "E",
+      "theme": "light",
+      "fg": "#666e67",
+      "bg": "#f9f6f0",
+      "ratio": 4.8778794451320096
+    },
+    {
+      "concept": "E",
+      "theme": "light",
+      "fg": "#666e67",
+      "bg": "#fffdf9",
+      "ratio": 5.178921565802122
+    },
+    {
+      "concept": "E",
+      "theme": "light",
+      "fg": "#2c6266",
+      "bg": "#e4eeea",
+      "ratio": 5.81633029419992
+    },
+    {
+      "concept": "E",
+      "theme": "light",
+      "fg": "#fff",
+      "bg": "#2c6266",
+      "ratio": 6.894221089269685
+    },
+    {
+      "concept": "E",
+      "theme": "light",
+      "fg": "#206345",
+      "bg": "#e5f1e9",
+      "ratio": 6.169792703638614
+    },
+    {
+      "concept": "E",
+      "theme": "light",
+      "fg": "#805a15",
+      "bg": "#f6eedb",
+      "ratio": 5.358466884120753
+    },
+    {
+      "concept": "E",
+      "theme": "light",
+      "fg": "#735019",
+      "bg": "#fcf3df",
+      "ratio": 6.5819307555628574
+    },
+    {
+      "concept": "E",
+      "theme": "light",
+      "fg": "#283535",
+      "bg": "#f9f6f0",
+      "ratio": 11.792858364722493
+    },
+    {
+      "concept": "E",
+      "theme": "light",
+      "fg": "#666e67",
+      "bg": "#f9f6f0",
+      "ratio": 4.8778794451320096
+    },
+    {
+      "concept": "E",
+      "theme": "light",
+      "fg": "#fff",
+      "bg": "#2c6266",
+      "ratio": 6.894221089269685
+    },
+    {
+      "concept": "E",
+      "theme": "dark",
+      "fg": "#edf0e8",
+      "bg": "#191b1a",
+      "ratio": 15.028703747052573
+    },
+    {
+      "concept": "E",
+      "theme": "dark",
+      "fg": "#edf0e8",
+      "bg": "#252a27",
+      "ratio": 12.667364730978722
+    },
+    {
+      "concept": "E",
+      "theme": "dark",
+      "fg": "#b4bdb2",
+      "bg": "#191b1a",
+      "ratio": 8.954948974930637
+    },
+    {
+      "concept": "E",
+      "theme": "dark",
+      "fg": "#b4bdb2",
+      "bg": "#252a27",
+      "ratio": 7.5479300624977315
+    },
+    {
+      "concept": "E",
+      "theme": "dark",
+      "fg": "#a2d0cb",
+      "bg": "#2a413d",
+      "ratio": 6.462695793547295
+    },
+    {
+      "concept": "E",
+      "theme": "dark",
+      "fg": "#183b37",
+      "bg": "#a2d0cb",
+      "ratio": 7.223221085780639
+    },
+    {
+      "concept": "E",
+      "theme": "dark",
+      "fg": "#8dc9a6",
+      "bg": "#243b30",
+      "ratio": 6.331650414222264
+    },
+    {
+      "concept": "E",
+      "theme": "dark",
+      "fg": "#dfc080",
+      "bg": "#3a3325",
+      "ratio": 7.135750290651496
+    },
+    {
+      "concept": "E",
+      "theme": "dark",
+      "fg": "#edcc94",
+      "bg": "#3a3020",
+      "ratio": 8.417177585455482
+    },
+    {
+      "concept": "E",
+      "theme": "dark",
+      "fg": "#edf0e8",
+      "bg": "#191b1a",
+      "ratio": 15.028703747052573
+    },
+    {
+      "concept": "E",
+      "theme": "dark",
+      "fg": "#b4bdb2",
+      "bg": "#191b1a",
+      "ratio": 8.954948974930637
+    },
+    {
+      "concept": "E",
+      "theme": "dark",
+      "fg": "#183b37",
+      "bg": "#a2d0cb",
+      "ratio": 7.223221085780639
+    }
+  ],
+  "glass": [
+    [
+      "rgb(36, 41, 39)",
+      "none"
+    ],
+    [
+      "rgba(43, 51, 46, 0.94)",
+      "blur(8px) saturate(1.15)"
+    ],
+    [
+      "rgba(43, 51, 46, 0.8)",
+      "blur(16px) saturate(1.15)"
+    ],
+    [
+      "rgba(43, 51, 46, 0.66)",
+      "blur(24px) saturate(1.15)"
+    ]
+  ],
+  "errors": [],
+  "executed": "Chromium; synthetic RAM-only prototypes; not physical Safari certification"
+}
