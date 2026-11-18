@@ -1,7 +1,7 @@
 import {advanced,advancedDefaults,createBlock,blockWeek,blockProgress,blockTrends,changeBlockStatus,editBlockWeek,backupDue,blockEndDate} from './advanced-data.js';
 import {feedbackLabels} from './advanced-ui.js';
 import {proposeTimeAdaptation,applyTimeAdaptation,undoTimeAdaptation,estimateRemaining} from './time-adaptive.js';
-import {startRest,remainingRest,adjustRest} from './focus-timer.js';
+import {startRest,remainingRest,adjustRest,pauseRest,resumeRest,resetRest,restPhase} from './focus-timer.js';
 import {getOccurrence} from './recurrence.js';
 import {exportCalendar} from './calendar-export.js';
 import {exportBackup,parseBackup,download} from './backup.js';
@@ -29,6 +29,9 @@ export function createAdvancedController(ctx){
   'focus-set':el=>focusGo(el.dataset.exercise,el.dataset.set),
   'focus-nav':el=>{const es=state().draft.exercises,index=es.findIndex(e=>e.id===el.dataset.id),e=es[index+Number(el.dataset.offset)];if(e)return focusGo(e.id);},
   'focus-skip':async el=>{ensureDraft();await save(s=>{const e=s.draft.exercises.find(e=>e.id===el.dataset.id);if(!e)throw Error('This exercise is no longer present.');for(const set of e.entries)if(!set.done)set.skipped=true;delete s.draft.focusExerciseId;delete s.draft.focusSetId;},{undo:true});ctx.close();},
+  'rest-pause':()=>save(s=>{if(s.draft?.restTimer)s.draft.restTimer=pauseRest(s.draft.restTimer);},{award:false}),
+  'rest-resume':()=>save(s=>{if(s.draft?.restTimer)s.draft.restTimer=resumeRest(s.draft.restTimer);},{award:false}),
+  'rest-reset':()=>save(s=>{if(s.draft?.restTimer)s.draft.restTimer=resetRest(s.draft.restTimer,s.profile.restSeconds);},{award:false}),
   'rest-settings':()=>{ensureDraft();ctx.dialog('Optional rest timer',`<form id="rest-settings-form">${field('Rest duration · seconds',`<input name="seconds" type="number" min="15" max="600" value="${state().profile.restSeconds}" required>`)}<label class="toggle"><input type="checkbox" name="auto" ${state().profile.timer?'checked':''}>Start automatically after completed sets</label><p class="muted">Supersets rest after a round, rather than between partner exercises. Timer deadlines stay accurate when screens change.</p><button class="primary" type="submit">Start rest</button></form>`);},
   'rest-dismiss':async()=>{if(state().draft)await save(s=>{delete s.draft.restTimer;},{award:false});},
   'rest-adjust':async el=>{ensureDraft();await save(s=>{s.draft.restTimer=adjustRest(s.draft.restTimer,Number(el.dataset.seconds));},{award:false});},
@@ -73,7 +76,7 @@ export function createAdvancedController(ctx){
   default:return false;
  }}
  async function onCompleted(recordId){const s=state();if(!s.profile.timer||!s.draft)return;const e=s.draft.exercises.find(x=>x.id===recordId);if(e?.group){const group=s.draft.exercises.filter(x=>x.group===e.group),counts=group.map(x=>x.entries.filter(a=>(a.done||a.skipped)&&a.type!=='warmup').length);if(new Set(counts).size>1&&group.some(x=>x.entries.some(a=>!a.done&&!a.skipped)))return;}await save(s=>{s.draft.restTimer=startRest(s.upgrade.exerciseRules[e?.exerciseId]?.restSeconds||e?.restSeconds||s.profile.restSeconds);},{award:false});}
- function paintRest(){if(!state().upgrade?.notifications?.enabled)document.querySelector('#backup-reminder')?.remove();const n=remainingRest(state().draft?.restTimer),el=document.querySelector('#rest-count');if(el)el.textContent=`${Math.floor(n/60)}:${String(n%60).padStart(2,'0')}`;const done=document.querySelector('#rest-finished');if(done)done.hidden=n>0;}
+ function paintRest(){if(!state().upgrade?.notifications?.enabled)document.querySelector('#backup-reminder')?.remove();const timer=state().draft?.restTimer,n=remainingRest(timer),phase=restPhase(timer),el=document.querySelector('#rest-count'),text=`${Math.floor(n/60)}:${String(n%60).padStart(2,'0')}`;if(el&&el.textContent!==text)el.textContent=text;const panel=document.querySelector('#rest-timer');if(panel)panel.dataset.phase=phase;const done=document.querySelector('#rest-finished');if(done)done.hidden=phase!=='complete';}
  async function remind(){if(reminderBusy||!state().profile||document.visibilityState==='hidden'||!backupDue(state()))return;reminderBusy=true;try{await save(s=>{s.upgrade.advanced.backup.lastReminderAt=Date.now();},{draw:false,award:false,preserveUndo:true});if(!state().upgrade.notifications.enabled)return;document.querySelector('#backup-reminder')?.remove();const box=document.createElement('aside');box.id='backup-reminder';box.className='backup-reminder panel';box.setAttribute('role','status');box.innerHTML='<strong>Keep a separate copy of your progress.</strong><p>Your optional backup reminder is due.</p><div class="actions">'+b('Export backup','export-json','secondary')+b('Later','backup-reminder-dismiss','quiet')+'</div>';document.body.append(box);}catch{}finally{reminderBusy=false;}}
  return {actions,submit,onCompleted,paintRest,remind};
 }
