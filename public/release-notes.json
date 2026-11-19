@@ -1,11 +1,8 @@
 {
-  "version": "0.6.0",
+  "version": "0.7.0",
   "notes": [
-    "Exercise library expanded from 43 to 198 available exercises, with aliases and equipment filters.",
-    "Automatic rest starts after individual or bulk set completion and handles changing or finished workouts reliably.",
-    "Custom exercises retain their identities, equipment labels and load conventions, and are clearly marked in the library.",
-    "App and updater version labels now match the current release.",
-    "Existing workouts, photos, preferences and unfinished workouts are preserved.",
-    "Chart, Focus Mode and plan-creator concepts remain available in the separate design review."
+    "Development preview: weekly review, progression, search and exercise-library improvements are under review.",
+    "Weekly Check-In layouts and glass levels require your selection before final visual integration.",
+    "Production remains on the approved 0.6.0 release; preview journal data stays separate."
   ]
 }

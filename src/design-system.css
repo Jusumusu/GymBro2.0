@@ -296,3 +296,11 @@ html[data-theme] .exercise-menu .menu-action{background:var(--surface);border-co
 html[data-theme] body.preview .exercise-jump-nav{top:48px}
 html[data-theme] body.preview .welcome-brand::after{content:'PREVIEW';margin-left:auto;padding:5px 9px;border-radius:6px;background:var(--preview-surface);color:var(--preview-ink);font:650 9px var(--sans);letter-spacing:1px}
 @media(min-width:651px){html[data-theme] body.preview .sidebar{top:104px;height:calc(100dvh - 104px)}}
+
+/* One search frame owns its geometry and focus ring; the child is borderless. */
+html[data-theme] .browser-search{align-items:center;gap:8px}
+html[data-theme] .browser-search .search{margin:0;min-height:48px;padding:0 12px;gap:10px;border-radius:var(--radius-control,12px);overflow:visible}
+html[data-theme] .browser-search .search>.icon{display:block;width:20px;height:20px;flex:0 0 20px;color:var(--muted)}
+html[data-theme] .browser-search .search input{min-width:0;flex:1;min-height:46px;padding:0;border:0;border-radius:0;background:transparent;box-shadow:none;outline:none;font-size:14px;line-height:1.5}
+html[data-theme] .browser-search .search:focus-within{border-color:var(--accent);outline:3px solid var(--accent-soft);outline-offset:2px}
+html[data-theme] .browser-search>.quiet{margin:0;min-height:48px;align-self:center}

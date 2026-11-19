@@ -1,0 +1,663 @@
+{
+  "strength": {
+    "version": 1,
+    "context": {
+      "lighter": 0,
+      "shortened": 0,
+      "blocks": []
+    },
+    "observations": [],
+    "comparison": {
+      "current": {
+        "workouts": 3,
+        "sets": 27,
+        "reps": 216,
+        "volume": 5760
+      },
+      "previous": {
+        "workouts": 2,
+        "sets": 18,
+        "reps": 117,
+        "volume": 3120
+      },
+      "previousThrough": "2026-11-12",
+      "days": 4,
+      "description": "Matching elapsed days, with no missing workouts or measurements imputed."
+    },
+    "start": "2026-11-16",
+    "end": "2026-11-22",
+    "through": "2026-11-19",
+    "previousStart": "2026-11-09",
+    "previousEnd": "2026-11-15",
+    "historical": false,
+    "partial": true,
+    "weekStartsOn": 1,
+    "totals": {
+      "workouts": 3,
+      "sets": 27,
+      "reps": 216,
+      "volume": 5760
+    },
+    "priorTotals": {
+      "workouts": 3,
+      "sets": 27,
+      "reps": 189,
+      "volume": 5040
+    },
+    "consistency": {
+      "target": 3,
+      "completed": 2,
+      "scheduled": 3,
+      "missed": 0,
+      "upcoming": 1,
+      "met": false,
+      "percent": 66.66666666666666
+    },
+    "frequency": {
+      "target": 3,
+      "completed": 3,
+      "met": true,
+      "percent": 100
+    },
+    "goals": [
+      {
+        "id": "lift",
+        "name": "Bench working-load target",
+        "type": "load",
+        "exerciseId": "bench",
+        "target": 30,
+        "createdAt": 1792238400000,
+        "current": {
+          "value": 20,
+          "percent": 66.66666666666666,
+          "reached": false,
+          "available": true,
+          "remaining": 10
+        },
+        "prior": {
+          "value": 20,
+          "percent": 66.66666666666666,
+          "reached": false,
+          "available": true,
+          "remaining": 10
+        },
+        "newlyReached": false,
+        "newThisWeek": false
+      },
+      {
+        "id": "consistency",
+        "name": "Complete fifteen recorded workouts",
+        "type": "workouts",
+        "target": 15,
+        "createdAt": 1792238400000,
+        "current": {
+          "value": 12,
+          "percent": 80,
+          "reached": false,
+          "available": true,
+          "remaining": 3
+        },
+        "prior": {
+          "value": 9,
+          "percent": 60,
+          "reached": false,
+          "available": true,
+          "remaining": 6
+        },
+        "newlyReached": false,
+        "newThisWeek": false
+      }
+    ],
+    "weights": {
+      "rapid": false,
+      "coverageRule": "At least three actual samples spanning three days in each matching window; an observation, not a physiological trend estimate.",
+      "previousThrough": "2026-11-12",
+      "currentCount": 0,
+      "previousCount": 0,
+      "currentKg": null,
+      "previousKg": null,
+      "smoothed": false,
+      "delta": null
+    },
+    "trends": [
+      {
+        "exerciseId": "squat",
+        "name": "Barbell squat",
+        "date": "2026-11-19",
+        "previousDate": "2026-11-18",
+        "reps": 27,
+        "priorReps": 24,
+        "sets": 3,
+        "load": 40,
+        "repsGain": 3,
+        "loadGain": false,
+        "effortComfortable": true
+      },
+      {
+        "exerciseId": "bench",
+        "name": "Barbell bench press",
+        "date": "2026-11-19",
+        "previousDate": "2026-11-18",
+        "reps": 27,
+        "priorReps": 24,
+        "sets": 3,
+        "load": 20,
+        "repsGain": 3,
+        "loadGain": false,
+        "effortComfortable": true
+      },
+      {
+        "exerciseId": "row",
+        "name": "Barbell row",
+        "date": "2026-11-19",
+        "previousDate": "2026-11-18",
+        "reps": 27,
+        "priorReps": 24,
+        "sets": 3,
+        "load": 20,
+        "repsGain": 3,
+        "loadGain": false,
+        "effortComfortable": true
+      }
+    ],
+    "records": [
+      {
+        "exerciseId": "squat",
+        "name": "Barbell squat",
+        "date": "2026-11-19",
+        "kinds": [
+          "reps at the same load",
+          "estimated strength"
+        ]
+      },
+      {
+        "exerciseId": "bench",
+        "name": "Barbell bench press",
+        "date": "2026-11-19",
+        "kinds": [
+          "reps at the same load",
+          "estimated strength"
+        ]
+      },
+      {
+        "exerciseId": "row",
+        "name": "Barbell row",
+        "date": "2026-11-19",
+        "kinds": [
+          "reps at the same load",
+          "estimated strength"
+        ]
+      }
+    ],
+    "milestones": [
+      {
+        "id": "workouts-2",
+        "label": "Workouts completed",
+        "tier": 3,
+        "target": 10,
+        "value": 12
+      },
+      {
+        "id": "days-2",
+        "label": "Training days",
+        "tier": 3,
+        "target": 10,
+        "value": 12
+      },
+      {
+        "id": "weeks-2",
+        "label": "Consistent weeks",
+        "tier": 3,
+        "target": 4,
+        "value": 4
+      },
+      {
+        "id": "streak-2",
+        "label": "Weeks in a row",
+        "tier": 3,
+        "target": 4,
+        "value": 4
+      },
+      {
+        "id": "sets-2",
+        "label": "Working sets",
+        "tier": 3,
+        "target": 100,
+        "value": 108
+      },
+      {
+        "id": "rir-4",
+        "label": "RIR entries",
+        "tier": 5,
+        "target": 100,
+        "value": 108
+      }
+    ],
+    "wins": [
+      {
+        "key": "exercise-bench",
+        "priority": 108,
+        "type": "performance",
+        "exerciseId": "bench",
+        "title": "Barbell bench press",
+        "detail": "24 → 27 total reps across 3 sets at matching loads (2026-11-18 → 2026-11-19)."
+      },
+      {
+        "key": "exercise-squat",
+        "priority": 100,
+        "type": "performance",
+        "exerciseId": "squat",
+        "title": "Barbell squat",
+        "detail": "24 → 27 total reps across 3 sets at matching loads (2026-11-18 → 2026-11-19)."
+      },
+      {
+        "key": "milestone-workouts-2",
+        "priority": 60,
+        "type": "milestone",
+        "title": "Workouts completed · tier 3",
+        "detail": "10 reached in the records through 2026-11-19. Reopening this review does not award a duplicate."
+      }
+    ],
+    "headline": "Your lifting records show progress.",
+    "message": "Alex, Barbell bench press added 3 total reps at the same recorded loads. It is useful evidence toward your strength goal, not a tested maximum. You recorded 27 working sets across 3 workouts. 1 scheduled session remains in this review week.",
+    "focus": [
+      "Plan 3 manageable sessions for the next week, or adjust the target to your available time.",
+      "Keep Barbell bench press controlled at your saved targets. If it feels comfortable, aim for one more rep within the prescribed range; the load remains your choice."
+    ],
+    "primaryGoal": "Get stronger",
+    "secondaryGoals": [
+      "Build muscle"
+    ]
+  },
+  "body": {
+    "version": 1,
+    "context": {
+      "lighter": 0,
+      "shortened": 0,
+      "blocks": []
+    },
+    "observations": [
+      {
+        "type": "measurement",
+        "name": "Waist",
+        "date": "2026-11-19",
+        "previousDate": "2026-11-14",
+        "cm": 84,
+        "previousCm": 85,
+        "detail": "Recorded tape measurements; differences can reflect technique and do not directly measure muscle or fat."
+      }
+    ],
+    "comparison": {
+      "current": {
+        "workouts": 3,
+        "sets": 27,
+        "reps": 216,
+        "volume": 5760
+      },
+      "previous": {
+        "workouts": 2,
+        "sets": 18,
+        "reps": 117,
+        "volume": 3120
+      },
+      "previousThrough": "2026-11-12",
+      "days": 4,
+      "description": "Matching elapsed days, with no missing workouts or measurements imputed."
+    },
+    "start": "2026-11-16",
+    "end": "2026-11-22",
+    "through": "2026-11-19",
+    "previousStart": "2026-11-09",
+    "previousEnd": "2026-11-15",
+    "historical": false,
+    "partial": true,
+    "weekStartsOn": 1,
+    "totals": {
+      "workouts": 3,
+      "sets": 27,
+      "reps": 216,
+      "volume": 5760
+    },
+    "priorTotals": {
+      "workouts": 3,
+      "sets": 27,
+      "reps": 189,
+      "volume": 5040
+    },
+    "consistency": {
+      "target": 3,
+      "completed": 2,
+      "scheduled": 3,
+      "missed": 0,
+      "upcoming": 1,
+      "met": false,
+      "percent": 66.66666666666666
+    },
+    "frequency": {
+      "target": 3,
+      "completed": 3,
+      "met": true,
+      "percent": 100
+    },
+    "goals": [
+      {
+        "id": "body",
+        "name": "Reach my recorded weight target",
+        "type": "body",
+        "target": 80,
+        "baseline": 90,
+        "createdAt": 1792238400000,
+        "current": {
+          "value": 89,
+          "percent": 10,
+          "reached": false,
+          "available": true,
+          "remaining": 9
+        },
+        "prior": {
+          "value": 89.5,
+          "percent": 5,
+          "reached": false,
+          "available": true,
+          "remaining": 9.5
+        },
+        "newlyReached": false,
+        "newThisWeek": false
+      },
+      {
+        "id": "lift",
+        "name": "Bench working-load target",
+        "type": "load",
+        "exerciseId": "bench",
+        "target": 30,
+        "createdAt": 1792238400000,
+        "current": {
+          "value": 20,
+          "percent": 66.66666666666666,
+          "reached": false,
+          "available": true,
+          "remaining": 10
+        },
+        "prior": {
+          "value": 20,
+          "percent": 66.66666666666666,
+          "reached": false,
+          "available": true,
+          "remaining": 10
+        },
+        "newlyReached": false,
+        "newThisWeek": false
+      },
+      {
+        "id": "consistency",
+        "name": "Complete fifteen recorded workouts",
+        "type": "workouts",
+        "target": 15,
+        "createdAt": 1792238400000,
+        "current": {
+          "value": 12,
+          "percent": 80,
+          "reached": false,
+          "available": true,
+          "remaining": 3
+        },
+        "prior": {
+          "value": 9,
+          "percent": 60,
+          "reached": false,
+          "available": true,
+          "remaining": 6
+        },
+        "newlyReached": false,
+        "newThisWeek": false
+      }
+    ],
+    "weights": {
+      "rapid": false,
+      "coverageRule": "At least three actual samples spanning three days in each matching window; an observation, not a physiological trend estimate.",
+      "previousThrough": "2026-11-12",
+      "currentCount": 3,
+      "previousCount": 3,
+      "currentKg": 89,
+      "previousKg": 89.5,
+      "smoothed": true,
+      "delta": -0.5
+    },
+    "trends": [
+      {
+        "exerciseId": "squat",
+        "name": "Barbell squat",
+        "date": "2026-11-19",
+        "previousDate": "2026-11-18",
+        "reps": 27,
+        "priorReps": 24,
+        "sets": 3,
+        "load": 40,
+        "repsGain": 3,
+        "loadGain": false,
+        "effortComfortable": true
+      },
+      {
+        "exerciseId": "bench",
+        "name": "Barbell bench press",
+        "date": "2026-11-19",
+        "previousDate": "2026-11-18",
+        "reps": 27,
+        "priorReps": 24,
+        "sets": 3,
+        "load": 20,
+        "repsGain": 3,
+        "loadGain": false,
+        "effortComfortable": true
+      },
+      {
+        "exerciseId": "row",
+        "name": "Barbell row",
+        "date": "2026-11-19",
+        "previousDate": "2026-11-18",
+        "reps": 27,
+        "priorReps": 24,
+        "sets": 3,
+        "load": 20,
+        "repsGain": 3,
+        "loadGain": false,
+        "effortComfortable": true
+      }
+    ],
+    "records": [
+      {
+        "exerciseId": "squat",
+        "name": "Barbell squat",
+        "date": "2026-11-19",
+        "kinds": [
+          "reps at the same load",
+          "estimated strength"
+        ]
+      },
+      {
+        "exerciseId": "bench",
+        "name": "Barbell bench press",
+        "date": "2026-11-19",
+        "kinds": [
+          "reps at the same load",
+          "estimated strength"
+        ]
+      },
+      {
+        "exerciseId": "row",
+        "name": "Barbell row",
+        "date": "2026-11-19",
+        "kinds": [
+          "reps at the same load",
+          "estimated strength"
+        ]
+      }
+    ],
+    "milestones": [
+      {
+        "id": "workouts-2",
+        "label": "Workouts completed",
+        "tier": 3,
+        "target": 10,
+        "value": 12
+      },
+      {
+        "id": "days-2",
+        "label": "Training days",
+        "tier": 3,
+        "target": 10,
+        "value": 12
+      },
+      {
+        "id": "weeks-2",
+        "label": "Consistent weeks",
+        "tier": 3,
+        "target": 4,
+        "value": 4
+      },
+      {
+        "id": "streak-2",
+        "label": "Weeks in a row",
+        "tier": 3,
+        "target": 4,
+        "value": 4
+      },
+      {
+        "id": "sets-2",
+        "label": "Working sets",
+        "tier": 3,
+        "target": 100,
+        "value": 108
+      },
+      {
+        "id": "rir-4",
+        "label": "RIR entries",
+        "tier": 5,
+        "target": 100,
+        "value": 108
+      }
+    ],
+    "wins": [
+      {
+        "key": "body-body",
+        "priority": 110,
+        "type": "body",
+        "title": "Closer to Reach my recorded weight target",
+        "detail": "Your recorded weekly average moved 0.5 kg closer to the target. Based on 3 previous-week and 3 current-week measurements; short-term changes can include water and normal fluctuations.",
+        "closerKg": 0.5
+      },
+      {
+        "key": "exercise-bench",
+        "priority": 78,
+        "type": "performance",
+        "exerciseId": "bench",
+        "title": "Barbell bench press",
+        "detail": "24 → 27 total reps across 3 sets at matching loads (2026-11-18 → 2026-11-19)."
+      },
+      {
+        "key": "exercise-squat",
+        "priority": 70,
+        "type": "performance",
+        "exerciseId": "squat",
+        "title": "Barbell squat",
+        "detail": "24 → 27 total reps across 3 sets at matching loads (2026-11-18 → 2026-11-19)."
+      }
+    ],
+    "headline": "Progress toward your weight target.",
+    "message": "Alex, your recorded weight average moved from 89.5 to 89 kg, closer to your stated target. Short-term changes can include water and normal fluctuations; this does not measure fat or muscle gained or lost. You also recorded 3 workouts toward your training goal. 1 scheduled session remains in this review week.",
+    "focus": [
+      "Plan 3 manageable sessions for the next week, or adjust the target to your available time.",
+      "Record weight under similar conditions and compare weekly averages. Do not try to repeat a particular weekly change."
+    ],
+    "primaryGoal": "Preserve muscle in fat loss",
+    "secondaryGoals": [
+      "Build muscle"
+    ]
+  },
+  "beginner": {
+    "version": 1,
+    "context": {
+      "lighter": 0,
+      "shortened": 0,
+      "blocks": []
+    },
+    "observations": [],
+    "comparison": {
+      "current": {
+        "workouts": 0,
+        "sets": 0,
+        "reps": 0,
+        "volume": 0
+      },
+      "previous": {
+        "workouts": 0,
+        "sets": 0,
+        "reps": 0,
+        "volume": 0
+      },
+      "previousThrough": "2026-11-12",
+      "days": 4,
+      "description": "Matching elapsed days, with no missing workouts or measurements imputed."
+    },
+    "start": "2026-11-16",
+    "end": "2026-11-22",
+    "through": "2026-11-19",
+    "previousStart": "2026-11-09",
+    "previousEnd": "2026-11-15",
+    "historical": false,
+    "partial": true,
+    "weekStartsOn": 1,
+    "totals": {
+      "workouts": 0,
+      "sets": 0,
+      "reps": 0,
+      "volume": 0
+    },
+    "priorTotals": {
+      "workouts": 0,
+      "sets": 0,
+      "reps": 0,
+      "volume": 0
+    },
+    "consistency": {
+      "target": 3,
+      "completed": 0,
+      "scheduled": 3,
+      "missed": 2,
+      "upcoming": 1,
+      "met": false,
+      "percent": 0
+    },
+    "frequency": {
+      "target": 3,
+      "completed": 0,
+      "met": false,
+      "percent": 0
+    },
+    "goals": [],
+    "weights": {
+      "rapid": false,
+      "coverageRule": "At least three actual samples spanning three days in each matching window; an observation, not a physiological trend estimate.",
+      "previousThrough": "2026-11-12",
+      "currentCount": 0,
+      "previousCount": 0,
+      "currentKg": null,
+      "previousKg": null,
+      "smoothed": false,
+      "delta": null
+    },
+    "trends": [],
+    "records": [],
+    "milestones": [],
+    "wins": [],
+    "headline": "Your first review starts here.",
+    "message": "As you save workouts, this review will connect your actual sets, performance and goals. There is no training baseline to evaluate yet. 1 scheduled session remains in this review week. 2 scheduled sessions have no matching workout; completed work still counts.",
+    "focus": [
+      "Plan 3 manageable sessions for the next week, or adjust the target to your available time."
+    ],
+    "primaryGoal": "Get stronger",
+    "secondaryGoals": [
+      "Build muscle"
+    ]
+  }
+}

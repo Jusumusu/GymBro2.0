@@ -17,3 +17,5 @@ import './rest-clock.test.mjs';
 import './chart-inspection.test.mjs';
 import './exercise-catalog.test.mjs';
 import './rest-controller.test.mjs';
+
+import './weekly-update.test.mjs';

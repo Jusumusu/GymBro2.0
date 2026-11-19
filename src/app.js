@@ -28,6 +28,7 @@ import {esc,icon,button,field,options,empty,chart} from './ui.js';
 import {prepareLegacyImport} from './legacy-import.js';
 import {IS_PREVIEW,WRITER_LOCK} from './environment.js';
 import {migrateState,nextExercise} from './extensions.js';
+import {applyRecommendedLoad} from './engine.js';
 import {recommendationFor} from './training-tools.js';
 import {coachView,calendarView,goalsView,muscleView,completionView,upgradeSettings,clearMuscle,setSummaryId,insightStrip,analyticsExtras,analyticsDetails} from './upgrade-ui.js';
 import {createUpgradeController} from './upgrade-controller.js';
@@ -125,7 +126,7 @@ const actions={
  'toggle-set':async b=>{let checked=false;await queued(s=>{const a=exerciseById(s,b.dataset.id).entries.find(x=>x.id===b.dataset.set);if(!a.done&&(a.kg===null||a.reps===null||a.reps<1))throw Error('Enter a load and at least one repetition first. For unweighted bodyweight sets, enter 0.');a.done=!a.done;if(a.done&&a.skipped)a.skipped=false;if(!a.done)s.draft.activeSetId=a.id;checked=a.done;if(s.draft.focusMode){delete s.draft.focusExerciseId;delete s.draft.focusSetId;}});if(checked&&state.upgrade?.haptics&&navigator.vibrate)navigator.vibrate(25);if(checked)await advancedController.onCompleted(b.dataset.id,b.dataset.set);},
  'set-type':b=>{const e=exerciseById(state,b.dataset.id);const a=e.entries.find(a=>a.id===b.dataset.set);dialog('Set type',`<p>Warm-ups are recorded separately and excluded from progression and working-set totals.</p><div class="stack">${!a.done?button('Make this the current set','select-active-set','primary',`data-id="${e.id}" data-set="${a.id}"`)+button(a.skipped?'Return this set to workout':'Skip this set (keep values)','skip-set','secondary',`data-id="${e.id}" data-set="${a.id}"`):''}${['working','warmup','drop','failure'].map(t=>button(t[0].toUpperCase()+t.slice(1),'choose-type',a.type===t?'primary':'secondary',`data-id="${e.id}" data-set="${a.id}" data-value="${t}"`)).join('')}</div>`);},
  'choose-type':async b=>{await queued(s=>{exerciseById(s,b.dataset.id).entries.find(a=>a.id===b.dataset.set).type=b.dataset.value;});closeDialog();},
- 'apply-rec':async b=>{await queued(s=>{const e=exerciseById(s,b.dataset.id);const r=recFor(e);if(r.kg===null)return;for(const a of e.entries.filter(a=>!a.done))a.kg=r.kg;});notify('Suggested load applied to unfinished sets. Edit it any time.');},
+ 'apply-rec':async b=>{await queued(s=>{const e=exerciseById(s,b.dataset.id);const r=recFor(e);if(r.kg===null)return;applyRecommendedLoad(e,r.kg);});notify('Suggested load applied to unfinished working sets. Edit it any time.');},
  readiness:async b=>queued(s=>{s.draft.readiness=s.draft.readiness===Number(b.dataset.value)?null:Number(b.dataset.value);}),
  discard:()=>confirmAction('Discard this draft?','Your saved workouts will remain. You can undo this discard in Settings.','confirm-discard'),
  'confirm-discard':async()=>{await queued(s=>{s.draft=null;},{undo:true});closeDialog();},
