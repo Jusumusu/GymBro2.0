@@ -78,10 +78,11 @@
     "finalAestheticIntegration": false
   },
   "deployment": {
-    "githubRun": 44547940383,
+    "githubRun": 44550737996,
     "githubBuild": "success",
-    "githubDeploy": "rejected by exact branch environment rule",
-    "privateReview": "https://gym-bro-design-review.jesse03sousa.chatgpt.site/preview/docs/weekly-review-progression-search/review/"
+    "githubDeploy": "rejected before deploy steps by exact branch environment rule",
+    "privateReview": "https://gym-bro-design-review.jesse03sousa.chatgpt.site/preview/docs/weekly-review-progression-search/review/",
+    "githubHead": "4c937d093e41dc263b56f22903f414e1e309f31a"
   },
   "limits": [
     "No merge to main.",

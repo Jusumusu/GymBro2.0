@@ -61,7 +61,7 @@ No database migration, storage deletion, history rewrite or automatic plan chang
 
 ## Publication constraint
 
-GitHub run #27, https://github.com/Jusumusu/GymBro2.0/actions/runs/44547940383, built successfully at `4633d10`, then rejected deployment before any deploy steps:
+GitHub runs #27 and #28 built successfully. Run #28, https://github.com/Jusumusu/GymBro2.0/actions/runs/44550737996, tested `4c937d0` and then rejected deployment before any deploy steps:
 
 > Branch "feature/weekly-review-progression-search" is not allowed to deploy to github-pages due to environment protection rules.
 

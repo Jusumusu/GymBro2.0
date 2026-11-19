@@ -15,3 +15,6 @@ PASS Workout replacement is fully undoable without editing saved history
 PASS Both week-start preferences update the calendar without changing recorded dates or active workout values
 PASS All five refinements fit seven viewport widths in light/dark themes; calendar weekday/date centers and widths align
 PASS Month and year transitions retain a complete symmetric calendar grid
+PASS Global search over 1455 exercises and paginated results stay usable without rendering the whole database
+PASS Library search, favorites and active-set guidance work offline while history remains unchanged
+19 workout refinement browser checks passed.
