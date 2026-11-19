@@ -1,0 +1,31 @@
+{
+  "githubSource": "7c61c65a4f2f869586cf3400e71852504b845fb3",
+  "branch": "feature/workout-polish-exercise-library",
+  "pullRequest": "https://github.com/Jusumusu/GymBro2.0/pull/4",
+  "main": "5fd52d1703f7cabb81e54218f5ddbae80c79f4d2",
+  "stableBuild": "22b389901373",
+  "previewBuild": "9b290ef7fd20",
+  "previewOfflineAssets": 65,
+  "githubRun": 44354342619,
+  "githubBuild": "success",
+  "githubDeploy": "failure before steps",
+  "siteSource": "bedeba2c03009e03979359e22e0b378c3aa0edd9",
+  "siteVersion": "appgprj_6afb13cac5348191bf97192174fa7bf8~appgver_d092451ec0788191ade4b611b559aa27",
+  "siteDeployment": "appgdep_6afddaa461d48191955ff826b9e082e3",
+  "siteStatus": "succeeded",
+  "audience": "existing owner-only policy retained",
+  "url": "https://gym-bro-design-review.jesse03sousa.chatgpt.site",
+  "reviewPath": "/preview/docs/workout-polish/review/",
+  "availableExercises": 198,
+  "preparedSpecialExercises": 21,
+  "unitTests": 253,
+  "backendTests": 9,
+  "browserChecks": 94,
+  "visualSelection": "pending",
+  "mainMerged": false,
+  "verificationLimits": [
+    "Physical iOS/Safari not certified",
+    "Managed live Site browser routing unavailable; native publication succeeded",
+    "Final all-five-feature integration awaits explicit visual selection"
+  ]
+}

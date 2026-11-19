@@ -1,10 +1,11 @@
 {
-  "version": "0.5.0",
+  "version": "0.6.0",
   "notes": [
-    "Aero design with mineral-blue accents, refined light surfaces and neutral graphite dark mode.",
-    "Balanced glass on navigation, exercise selection and rest controls; solid content and readable logging fields.",
-    "Clear blue active sets, green completed sets and distinct personal-record, warning and error colors.",
-    "Consistent typography, spacing and controls across workouts, gains, library, schedule, settings and the updater.",
-    "Existing training logic, backups, Focus Mode, exercise identities, journal data and offline update behavior are preserved."
+    "Exercise library expanded from 43 to 198 available exercises, with aliases and equipment filters.",
+    "Automatic rest starts after individual or bulk set completion and handles changing or finished workouts reliably.",
+    "Custom exercises retain their identities, equipment labels and load conventions, and are clearly marked in the library.",
+    "App and updater version labels now match the current release.",
+    "Existing workouts, photos, preferences and unfinished workouts are preserved.",
+    "Chart, Focus Mode and plan-creator concepts remain available in the separate design review."
   ]
 }

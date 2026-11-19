@@ -48,7 +48,7 @@ export function editBlockWeek(block,index,target,on){if(!Number.isInteger(index)
 export const blockEndDate=block=>addDays(block.startDate,block.duration*7-1+block.pauses.reduce((n,p)=>n+(p.end?daysBetween(p.start,p.end):0),0));
 export function validateAdvancedSession(w){
  if(w.focusMode!==undefined&&typeof w.focusMode!=='boolean')bad();for(const k of ['focusExerciseId','focusSetId'])if(w[k]!==undefined&&w[k]!==null&&!text(w[k]))bad();
- if(w.restTimer!==undefined&&(!w.restTimer||w.restTimer.version!==1||!instant(w.restTimer.endsAt)))bad();
+ if(w.restTimer!==undefined){const t=w.restTimer;if(!t||t.version!==1||!instant(t.endsAt)||t.durationSeconds!==undefined&&(!Number.isInteger(t.durationSeconds)||t.durationSeconds<1||t.durationSeconds>3600)||t.pausedRemainingMs!==undefined&&(!Number.isFinite(t.pausedRemainingMs)||t.pausedRemainingMs<0||t.pausedRemainingMs>3600000))bad();}
  if(w.timeAdaptation!==undefined){const a=w.timeAdaptation;if(!a||a.version!==1||!instant(a.at)||a.intentional!==true||!Number.isFinite(a.targetMinutes)||a.targetMinutes<5||a.targetMinutes>180)bad();}
  if(w.blockContext!==undefined){const c=w.blockContext,t=c?.target;if(!c||c.version!==1||!text(c.blockId)||!text(c.blockName,80)||!Number.isInteger(c.week)||c.week<1||c.week>52||!t||typeof t.lighter!=='boolean'||!Number.isFinite(t.setFactor)||t.setFactor<.25||t.setFactor>1.5||!Number.isFinite(t.loadFactor)||t.loadFactor<.5||t.loadFactor>1.1||!Number.isInteger(t.min)||t.min<1||!Number.isInteger(t.max)||t.max<t.min||t.max>100||!Number.isInteger(t.rir)||t.rir<0||t.rir>10)bad();}
  for(const e of w.exercises||[])for(const set of e.entries||[])if(set.deferredForTime!==undefined&&typeof set.deferredForTime!=='boolean')bad();

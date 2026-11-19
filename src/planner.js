@@ -1,8 +1,9 @@
+import {equipmentAvailable} from './exercise-equipment.js';
 import { library } from './exercises.js';
 import { uid } from './model.js';
 import { goalRange } from './engine.js';
 export function generatePlans(state){
- const p=state.profile;const all=library(state).filter(e=>p.equipment.includes(e.equipment)&&!p.excluded.includes(e.id));
+ const p=state.profile;const all=library(state).filter(e=>equipmentAvailable(e,p.equipment)&&!p.excluded.includes(e.id));
  const [min,max]=goalRange(p.goal);const sets=p.experience==='beginner'||p.minutes<30?2:3;
  const split=p.split==='custom'?'full':p.split;
  const patterns=split==='upperlower'?[['horizontal push','horizontal pull','vertical push','vertical pull'],['squat','hinge','knee flexion','plantar flexion']]:split==='ppl'?[['horizontal push','vertical push','elbow extension'],['horizontal pull','vertical pull','elbow flexion'],['squat','hinge','plantar flexion']]:[['squat','horizontal push','horizontal pull','hinge','vertical push'],['hinge','vertical pull','horizontal push','squat','trunk flexion']];

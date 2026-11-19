@@ -2,6 +2,7 @@
 const button=document.querySelector('#update'),status=document.querySelector('#status');
 let updating=false;
 const base=new URL('./',location.href),environment=base.pathname.split('/').includes('preview')?'preview':'production';
+const channelLabel=document.querySelector('.eyebrow');if(channelLabel)channelLabel.textContent=environment==='preview'?'PREVIEW APP UPDATE':'APP UPDATE';
 const writerLock=environment==='preview'?'gymbro-preview-writer':'gymbro-writer';
 button.disabled=false;
 status.textContent='Your saved data stays in this browser. Close any other Gym Bro windows before updating.';
@@ -59,7 +60,7 @@ button.addEventListener('click',async()=>{
 // Old clients send auto=1 on a Settings visit. Deliberately ignore that flag:
 // viewing version information is not consent to install or navigate away.
 function showRelease(release){
- document.querySelector('#release-version').textContent='Gym Bro '+release.version;
+ document.querySelector('#release-version').textContent='Gym Bro '+release.version+(environment==='preview'?' preview':'');
  const list=document.querySelector('#release-notes');list.replaceChildren();
  for(const text of (release.notes||['The latest published Gym Bro release.']).slice(0,12)){const li=document.createElement('li');li.textContent=String(text).slice(0,300);list.append(li);}
 }

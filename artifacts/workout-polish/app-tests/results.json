@@ -1,0 +1,29 @@
+{
+  "checks": [
+    "Manual timer survives route changes, exercise navigation, Focus entry/exit and refresh",
+    "Foreground wake paints an elapsed deadline at zero and completion remains stable",
+    "Disabled automatic timing remains disabled after set completion",
+    "Expanded search selects a stable new exercise into a plan without losing its unsaved name",
+    "Common aliases reach the correct new built-ins in the actual library",
+    "A new built-in favorite persists through refresh",
+    "Smith filtering uses its own equipment identity",
+    "Previously sparse forearm category has meaningful discoverable coverage",
+    "Actual Aero library and long-name plan rows fit all seven requested widths",
+    "Enabled automatic timing starts one timer after an actual completed set",
+    "Check all sets uses the same enabled automatic-rest policy as individual completion",
+    "Supersets start rest after a full round and preserve the deadline during Focus navigation",
+    "Editing and filtering an old custom exercise preserves unknown equipment and its original load convention",
+    "Fixture history, body data and measurements remain byte-equivalent; no browser exceptions"
+  ],
+  "widths": [
+    320,
+    375,
+    390,
+    430,
+    768,
+    1024,
+    1440
+  ],
+  "errors": [],
+  "scope": "Current app in fresh disposable Chromium profile. Final visual integration is pending approval. Lifecycle wake simulated; no physical phone certification."
+}

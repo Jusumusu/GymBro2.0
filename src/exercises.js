@@ -1,3 +1,5 @@
+import {EXPANDED_EXERCISES} from './exercise-catalog.js';
+import {EQUIPMENT,equipmentAvailable,equipmentMatches} from './exercise-equipment.js';
 import {CONTRIBUTION_MUSCLES,catalogContributions} from './muscle-contributions.js';
 const ex=(id,name,muscle,pattern,equipment,secondary,compound,cues)=>({id,name,muscle,pattern,equipment,secondary,compound,contributions:catalogContributions(id),difficulty:compound?'moderate':'accessible',unilateral:false,loadKind:equipment==='dumbbell'?'per dumbbell':equipment==='bodyweight'?'added load':'total load',cues});
 export const EXERCISES=[
@@ -43,22 +45,25 @@ export const EXERCISES=[
  ex('cable-crunch','Cable crunch','Core','trunk flexion','cable',[],false,'Keep the hips stable and curl your trunk gently. Avoid pulling only with your arms.'),
  ex('front-squat','Barbell front squat','Quads','squat','barbell',['Glutes','Adductors'],true,'Use a stable front rack and braced trunk. Keep the feet planted and choose a comfortable depth.'),
  ex('deadlift','Conventional deadlift','Glutes','hinge','barbell',['Hamstrings','Quads'],true,'Brace before lifting. Keep the bar close and use a stable setup; lower with control.'),
- ex('lunge','Dumbbell reverse lunge','Quads','squat','dumbbell',['Glutes','Adductors'],true,'Step back under control. Keep a stable stance and record repetitions per side.')
+ ex('lunge','Dumbbell reverse lunge','Quads','squat','dumbbell',['Glutes','Adductors'],true,'Step back under control. Keep a stable stance and record repetitions per side.'),
+ ...EXPANDED_EXERCISES
 ];
 export const MUSCLES=CONTRIBUTION_MUSCLES;
 export const GOALS={hypertrophy:'Build muscle',strength:'Get stronger',balanced:'Muscle & strength',recomposition:'Body recomposition',fatloss:'Preserve muscle in fat loss',endurance:'Muscular endurance',fitness:'General fitness'};
 // Preserve custom IDs valid before this release, even if a new catalog entry shares one.
 export const LEGACY_BUILTIN_IDS=Object.freeze(['squat', 'goblet', 'body-squat', 'leg-press', 'bench', 'db-bench', 'pushup', 'chest-press', 'rdl', 'db-rdl', 'bridge', 'curl-leg', 'row', 'db-row', 'cable-row', 'floor-pull', 'ohp', 'db-ohp', 'pike', 'pulldown', 'pullup', 'lateral', 'curl', 'pushdown', 'calf', 'crunch', 'incline-db', 'cable-fly', 'db-split-squat', 'hip-thrust', 'leg-extension', 'seated-leg-curl', 'chest-supported-row', 'rear-delt-fly', 'face-pull', 'hammer-curl', 'overhead-cable-extension', 'seated-calf', 'reverse-crunch', 'cable-crunch']);
 export const library=state=>{const ids=new Set(state.customExercises.map(e=>e.id));return [...EXERCISES.filter(e=>!ids.has(e.id)),...state.customExercises];};
-export const findExercise=(state,id)=>library(state).find(e=>e.id===id);
+const builtinsById=new Map(EXERCISES.map(e=>[e.id,e]));
+export const findExercise=(state,id)=>state.customExercises.find(e=>e.id===id)||builtinsById.get(id);
+export const AVAILABLE_EQUIPMENT=Object.freeze(Object.keys(EQUIPMENT).filter(type=>EXERCISES.some(e=>e.equipment===type)));
 export const substitutions=(state,id)=>{
  const e=findExercise(state,id);if(!e)return [];
  const used=new Set(state.sessions.slice(-12).flatMap(w=>w.exercises.map(x=>x.exerciseId)));
- return library(state).filter(x=>x.id!==id&&state.profile.equipment.includes(x.equipment)&&!state.profile.excluded.includes(x.id)&&(x.pattern===e.pattern||x.muscle===e.muscle)).map(x=>{
-  const familiar=used.has(x.id),beginner=state.profile.experience==='beginner',supported=x.equipment==='machine'||x.equipment==='cable'||x.difficulty==='accessible';
+ return library(state).filter(x=>x.id!==id&&equipmentAvailable(x,state.profile.equipment)&&!state.profile.excluded.includes(x.id)&&(x.pattern===e.pattern||x.muscle===e.muscle)).map(x=>{
+  const familiar=used.has(x.id),beginner=state.profile.experience==='beginner',supported=equipmentMatches(x.equipment,'machine')||x.equipment==='cable'||x.difficulty==='accessible';
   const goalFit=state.profile.goal==='strength'?x.compound&&x.loadKind===e.loadKind:state.profile.priorities.includes(x.muscle);
   const matchScore=(x.pattern===e.pattern?6:0)+(x.muscle===e.muscle?5:0)+(x.equipment===e.equipment?1:0)+(x.compound===e.compound?1:0)+(goalFit?1:0)+(beginner&&supported?1:0)+(familiar?1:0);
   const difference=(x.pattern===e.pattern?'Same movement pattern.':'Same primary muscle; different movement pattern.')+(goalFit?' Fits your recorded goal/priorities.':'')+(beginner&&supported?' Supported or accessible option.':'')+(familiar?' Used in your recent history.':'')+' Use this exercise’s own load baseline.';
   return {...x,matchScore,difference};
- }).sort((a,b)=>b.matchScore-a.matchScore||a.name.localeCompare(b.name));
+ }).sort((a,b)=>b.matchScore-a.matchScore||Number(used.has(b.id))-Number(used.has(a.id))||a.name.localeCompare(b.name));
 };

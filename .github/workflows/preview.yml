@@ -1,14 +1,14 @@
-name: Deploy isolated Aero preview
+name: Deploy isolated workout polish preview
 on:
   push:
-    branches: [feature/liquid-glass-visual-redesign]
+    branches: [feature/workout-polish-exercise-library]
     paths:
       - 'src/**'
       - 'public/**'
       - 'server/**'
       - 'scripts/**'
       - 'tests/**'
-      - 'docs/liquid-glass/**'
+      - 'docs/workout-polish/**'
       - 'index.html'
       - 'package.json'
       - '.github/workflows/preview.yml'
@@ -22,7 +22,7 @@ concurrency:
   cancel-in-progress: false
 jobs:
   build:
-    if: github.ref == 'refs/heads/feature/liquid-glass-visual-redesign'
+    if: github.ref == 'refs/heads/feature/workout-polish-exercise-library'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -43,6 +43,7 @@ jobs:
         run: |
           npm test
           npm run test:backend
+          npm run validate:catalog
           npm run build:preview
       - name: Compose site and verify stable files did not change
         run: node candidate/scripts/compose-preview.mjs stable/dist candidate/dist site
@@ -57,19 +58,19 @@ jobs:
           const stable=JSON.parse(readFileSync('site/version.json','utf8'));
           const preview=JSON.parse(readFileSync('site/preview/version.json','utf8'));
           appendFileSync(process.env.GITHUB_STEP_SUMMARY,[
-            '## Aero branch preview',
+            '## Workout polish branch preview',
             `Branch: ${process.env.GITHUB_REF_NAME}; commit: ${process.env.GITHUB_SHA}`,
             `Production root: ${stable.version} (${stable.build}), byte-identical to main.`,
             `Isolated /preview/: ${preview.version} (${preview.build}).`,
             '',
             'Deployment uses the existing protected github-pages environment.',
-            'If GitHub rejects the branch before the deploy job starts, a repository owner must allow feature/liquid-glass-visual-redesign in Settings → Environments → github-pages → Deployment branches and tags.',
-            'Re-running an older workflow run reuses its original commit and branch; use this Aero run or dispatch this workflow on the Aero branch.',
+            'If GitHub rejects the branch before the deploy job starts, a repository owner must allow feature/workout-polish-exercise-library in Settings → Environments → github-pages → Deployment branches and tags.',
+            'Re-running an older workflow run reuses its original commit and branch; use this workout polish run or dispatch this workflow on the workout polish branch.',
             '',
           ].join('\n\n'));
           NODE
   deploy:
-    if: github.ref == 'refs/heads/feature/liquid-glass-visual-redesign'
+    if: github.ref == 'refs/heads/feature/workout-polish-exercise-library'
     needs: build
     runs-on: ubuntu-latest
     timeout-minutes: 15
