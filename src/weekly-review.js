@@ -52,7 +52,7 @@ export function buildWeeklyReview(state,{date=today(),asOf=today(),includeBody=t
  const frequency={target:state.profile.days,completed:totals.workouts,met:totals.workouts>=state.profile.days,percent:Math.min(100,totals.workouts/state.profile.days*100)};
  const consistency={target,completed,scheduled:scheduled.length,missed,upcoming,met:completed>=target,percent:Math.min(100,completed/target*100)};
  const comparisonEnd=addDays(through,-7),comparisonTotals=summary(previous.filter(w=>w.date<=comparisonEnd));
- const context={lighter:sessions.filter(w=>w.blockContext?.target?.lighter).length,shortened:sessions.filter(w=>w.timeAdaptation?.intentional).length,blocks:[...new Set(sessions.map(w=>w.blockContext?.name).filter(Boolean))]};
+ const context={lighter:sessions.filter(w=>w.blockContext?.target?.lighter).length,shortened:sessions.filter(w=>w.timeAdaptation?.intentional).length,blocks:[...new Set(sessions.map(w=>w.blockContext?.blockName).filter(Boolean))]};
  const observations=[];
  const trends=[],records=[];
  for(const exercise of library(state)){
@@ -111,10 +111,12 @@ export function buildWeeklyReview(state,{date=today(),asOf=today(),includeBody=t
  if(scheduled.length&&missed)message+=` ${missed} scheduled ${missed===1?'session has':'sessions have'} no matching workout; completed work still counts.`;
  if(weights?.delta!==null&&weights?.delta!==undefined&&!weights.smoothed)message+=' There are too few weight entries or too little date coverage for a weekly-average comparison; isolated measurements can fluctuate.';
  if(scheduled.length&&target!==state.profile.days)message+=` Your profile target is ${state.profile.days} weekly sessions; ${totals.workouts} are recorded, separate from the ${scheduled.length} scheduled entries.`;
+ if(context.blocks.length)message+=` Recorded block context: ${context.blocks.join(', ')}. Saved session targets take precedence over chasing a weekly increase.`;
  const focus=[];
- if(!frequency.met||!consistency.met)focus.push(`Plan ${state.profile.days} manageable sessions for the next week, or adjust the target to your available time.`);
+ if(context.lighter)focus.push('Follow your saved training-block targets for the next session. A planned lighter week is not a performance target to beat.');
+ if((!frequency.met||!consistency.met)&&focus.length<2)focus.push(`Plan ${state.profile.days} manageable sessions for the next week, or adjust the target to your available time.`);
  const bodyGoal=goals.find(g=>g.type==='body');
- if(bodyGoal&&focus.length<2)focus.push('Record weight under similar conditions and compare weekly averages. Do not try to repeat a particular weekly change.');
+ if(bodyGoal&&bodyPrimary&&focus.length<2)focus.push('Record weight under similar conditions and compare weekly averages. Do not try to repeat a particular weekly change.');
  const safeTrend=progressing.find(t=>t.effortComfortable&&!state.profile.excluded.includes(t.exerciseId)&&equipmentAvailable(findExercise(state,t.exerciseId),state.profile.equipment));
  if(!bodyPrimary&&safeTrend&&focus.length<2){
   const p=state.draft?.exercises.find(e=>e.exerciseId===safeTrend.exerciseId)||state.plans.flatMap(p=>p.exercises).find(e=>e.exerciseId===safeTrend.exerciseId);
@@ -122,6 +124,7 @@ export function buildWeeklyReview(state,{date=today(),asOf=today(),includeBody=t
   const repRoom=p&&latest.sets.length>=p.sets&&latest.sets.every(s=>s.reps>=p.min)&&latest.sets.some(s=>s.reps<p.max);
   focus.push(repRoom?`Keep ${safeTrend.name} controlled at your saved targets. If it feels comfortable, aim for one more rep within the prescribed range; the load remains your choice.`:`Repeat ${safeTrend.name} with controlled reps and review its progression suggestion before changing the load.`);
  }
+ if(bodyGoal&&!bodyPrimary&&focus.length<2)focus.push('Record weight under similar conditions and compare weekly averages. Do not try to repeat a particular weekly change.');
  if(focus.length<2&&totals.workouts)focus.push('Repeat your current targets and log effort when useful before making a larger program change.');
  if(includeBody)for(const name of [...new Set(bounded.measurements.map(x=>x.name))]){const rows=bounded.measurements.filter(x=>x.name===name).sort((a,b)=>a.date.localeCompare(b.date)),last=rows.at(-1),prior=rows.slice(0,-1).reverse().find(x=>x.date<start);if(last?.date>=start&&prior)observations.push({type:'measurement',name,date:last.date,previousDate:prior.date,cm:last.cm,previousCm:prior.cm,detail:'Recorded tape measurements; differences can reflect technique and do not directly measure muscle or fat.'});}
  const secondary=state.profile.secondaryGoals.filter(g=>g!==state.profile.goal).map(g=>GOALS[g]||g);

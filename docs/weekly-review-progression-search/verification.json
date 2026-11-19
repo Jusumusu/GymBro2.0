@@ -1,0 +1,92 @@
+{
+  "branch": "feature/weekly-review-progression-search",
+  "pr": "https://github.com/Jusumusu/GymBro2.0/pull/5",
+  "stableMain": "30b63d01483cb7c4fe3df9dace07c98b9d416d9e",
+  "publishedProduction": {
+    "version": "0.6.0",
+    "build": "062b5fb80f5d"
+  },
+  "candidatePreview": {
+    "version": "0.7.0",
+    "build": "ba90abb98e4e",
+    "environment": "preview"
+  },
+  "checks": {
+    "unit": 284,
+    "backend": 9,
+    "catalog": {
+      "available": 254,
+      "added": 56,
+      "unchangedReleasedDefinitions": 198,
+      "preparedInactive": 21,
+      "duplicates": 0,
+      "invalidMappings": 0
+    },
+    "existingBrowserSuites": [
+      {
+        "suite": "browser-training-refinement",
+        "exitCode": 0
+      },
+      {
+        "suite": "browser",
+        "exitCode": 0
+      },
+      {
+        "suite": "browser-advanced-training",
+        "exitCode": 0
+      },
+      {
+        "suite": "browser-workout-ux",
+        "exitCode": 0
+      },
+      {
+        "suite": "browser-app-updates",
+        "exitCode": 0
+      },
+      {
+        "suite": "browser-refinement",
+        "exitCode": 0
+      },
+      {
+        "suite": "browser-update",
+        "exitCode": 0
+      }
+    ],
+    "app": 10,
+    "archivedPreviewUpgrade": 7,
+    "prototype": 46,
+    "responsiveWidths": [
+      320,
+      375,
+      390,
+      430,
+      768,
+      1024,
+      1440
+    ]
+  },
+  "search": {
+    "syntheticRows": 5000,
+    "chromiumCpuSlowdown": 4,
+    "maxQueryMedianMs": 47.600000001490116,
+    "scope": "Headless Chromium with 4x CPU slowdown; synthetic 5,000-row catalog, pure local search. Not a physical-device or input-to-paint guarantee."
+  },
+  "designApproval": {
+    "weekly": null,
+    "glass": null,
+    "recommendation": "Weekly A + Glass B",
+    "finalAestheticIntegration": false
+  },
+  "deployment": {
+    "githubRun": 44547940383,
+    "githubBuild": "success",
+    "githubDeploy": "rejected by exact branch environment rule",
+    "privateReview": "https://gym-bro-design-review.jesse03sousa.chatgpt.site/preview/docs/weekly-review-progression-search/review/"
+  },
+  "limits": [
+    "No merge to main.",
+    "No physical Safari/iOS/Android certification.",
+    "Private Site publication verified through native deployment; no managed live-browser tool.",
+    "Twenty-one previously prepared specialized tracking definitions remain inactive."
+  ]
+}

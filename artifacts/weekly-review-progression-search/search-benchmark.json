@@ -80,5 +80,6 @@
       "median": 2.4557119999999486
     }
   ],
-  "scope": "Node local observation, not physical phone timing"
+  "scope": "Node local observation, not physical phone timing",
+  "source": "4633d10a09a993c7c45632dd4ade33045135fd53; earlier ranking pass, retained as a dated observation"
 }

@@ -1,0 +1,27 @@
+{
+  "passed": 21,
+  "tests": [
+    "Existing 0.2.5 journal opens with all workout, body and photo data preserved",
+    "Block creation links existing programs and leaves saved plans and calendar unchanged",
+    "Future-week editing and pause/resume preserve history",
+    "Focus Mode uses normal autosave and logs real load, repetitions and RIR",
+    "Exercise feedback creates and edits private, correctly associated memory",
+    "Optional rest timer persists an epoch deadline across reload and supports adjustments",
+    "Time adaptation previews before approval, keeps completed work/plan intact, and reverses in Focus Mode",
+    "Focus navigation and exit retain sets and surface the same recent feedback in normal mode",
+    "Superset focus switches exercises while retaining separate completion states",
+    "Actual integrated screens fit all six requested viewport widths in light and dark",
+    "Fallback download records a request, never a false successful-backup timestamp",
+    "Failed file-writer close does not record a successful backup timestamp (API stub)",
+    "Encrypted export records success only after a completed file-writer close (API stub)",
+    "Read-back verification validates the actual file against the current journal before recording evidence",
+    "Confirmed restore validates all records and retains private photo bytes",
+    "Atomic pre-restore recovery restores the preceding journal and its photo bytes",
+    "Actual aborted IndexedDB restore leaves the entire preceding journal unchanged",
+    "Encrypted restore rejects wrong passwords, previews correct files, and leaves data unchanged on cancel",
+    "Calendar UI exports actual recurring rules and preserves every journal record",
+    "Complete version2 backups retain blocks, exercise feedback, schedules, preferences and active draft",
+    "Optional backup reminder persists dismissal, avoids repeat prompts, and respects the master notification preference"
+  ],
+  "runtimeErrors": []
+}

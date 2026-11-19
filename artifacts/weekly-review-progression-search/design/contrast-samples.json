@@ -1,0 +1,50 @@
+[
+  {
+    "file": "glass-a-light.png",
+    "id": "a",
+    "theme": "light",
+    "foreground": "rgb(89, 106, 115)",
+    "x": 195,
+    "y": 826
+  },
+  {
+    "file": "glass-b-light.png",
+    "id": "b",
+    "theme": "light",
+    "foreground": "rgb(89, 106, 115)",
+    "x": 195,
+    "y": 826
+  },
+  {
+    "file": "glass-c-light.png",
+    "id": "c",
+    "theme": "light",
+    "foreground": "rgb(89, 106, 115)",
+    "x": 195,
+    "y": 826
+  },
+  {
+    "file": "glass-a-dark.png",
+    "id": "a",
+    "theme": "dark",
+    "foreground": "rgb(165, 183, 192)",
+    "x": 195,
+    "y": 826
+  },
+  {
+    "file": "glass-b-dark.png",
+    "id": "b",
+    "theme": "dark",
+    "foreground": "rgb(165, 183, 192)",
+    "x": 195,
+    "y": 826
+  },
+  {
+    "file": "glass-c-dark.png",
+    "id": "c",
+    "theme": "dark",
+    "foreground": "rgb(165, 183, 192)",
+    "x": 195,
+    "y": 826
+  }
+]

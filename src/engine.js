@@ -13,7 +13,7 @@ export function recommend({exerciseId,sessions,goal='hypertrophy',prescription,i
  if(!last)return result('baseline',null,'Choose a comfortable starting load. Log completed working sets to establish this exercise’s own baseline.');
  last.sets.forEach(s=>{number(s.kg,0,1000);number(s.reps,1,200);if(s.rir!==null)number(s.rir,0,10);});
  const kg=Math.min(...last.sets.map(s=>s.kg));
- const confidence=history.length>=3&&last.sets.every(s=>s.rir!==null)?'moderate':'limited';
+ const confidence=history.filter(sameTargets).length>=3&&last.sets.length===target.sets&&last.sets.every(s=>s.rir!==null)?'moderate':'limited';
  if(!auto||strategy==='maintain')return result('maintain',kg,!auto?'Automatic adaptations are off. Your last completed load is shown for reference.':'Your maintain strategy keeps the recorded load as a reference. Change it manually whenever appropriate.',confidence);
  const gap=(Date.parse(cutoff+'T00:00:00Z')-Date.parse(last.date+'T00:00:00Z'))/86400000;
  const comparable=x=>sameTargets(x)&&x.sets.length===target.sets&&x.sets.every(s=>Math.abs(s.kg-kg)<.001)&&(Date.parse(last.date)-Date.parse(x.date))/86400000<=42;

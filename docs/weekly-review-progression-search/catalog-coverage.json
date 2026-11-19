@@ -126,8 +126,8 @@
   "protectedLegacyIds": 40,
   "search": {
     "runs": 600,
-    "totalMs": 51.92,
-    "averageMs": 0.0865,
+    "totalMs": 148.7,
+    "averageMs": 0.2478,
     "scope": "Node, local observation; not a phone benchmark"
   },
   "pendingTracking": [
