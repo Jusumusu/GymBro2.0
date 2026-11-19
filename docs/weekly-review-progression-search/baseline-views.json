@@ -1,0 +1,544 @@
+{
+  "views": {
+    "weekly-light": "<nav class=\"tracking-subnav\" aria-label=\"Tracking sections\"><a href=\"#progress\">Gains</a><a href=\"#body\">Body</a><a href=\"#history\">History</a><a href=\"#calendar\">Calendar</a><a href=\"#goals\">Goals</a><a href=\"#muscles\">Muscle map</a><a href=\"#review\" aria-current=\"page\">Weekly review</a></nav><section class=\"weekly-checkin\" aria-labelledby=\"weekly-review-title\" data-week-start=\"2026-11-16\" data-week-end=\"2026-11-22\" data-through=\"2026-11-19\">\n  <header class=\"review-header\"><div><p class=\"eyebrow\">YOUR WEEKLY CHECK-IN</p><h1 id=\"weekly-review-title\">Your training is moving forward.</h1><p class=\"review-range\"><time datetime=\"2026-11-16\">Nov 16, 2026</time> – <time datetime=\"2026-11-22\">Nov 22, 2026</time><span class=\"badge\">WEEK SO FAR</span></p><p class=\"review-goal\">Current goal: Build muscle · Also: Get stronger, General fitness</p></div>\n   <div class=\"review-navigation\"><div class=\"actions\"><button type=\"button\" class=\"secondary\" data-action=\"review-previous\" aria-label=\"Previous weekly check-in\" data-date=\"2026-11-09\">←</button><button type=\"button\" class=\"secondary\" data-action=\"review-next\" aria-label=\"Next weekly check-in\" data-date=\"2026-11-23\" disabled=\"\">→</button><button type=\"button\" class=\"quiet\" data-action=\"review-current\">This week</button></div><label class=\"review-date\"><span>Review any week</span><input id=\"review-date\" type=\"date\" max=\"2026-11-19\" value=\"2026-11-16\" aria-label=\"Choose a date in the review week\"></label></div></header>\n  <div class=\"review-overview\"><div class=\"review-metric\"><span>Workouts recorded</span><strong>3</strong><small>Through Nov 19, 2026</small></div><div class=\"review-metric\"><span>Working sets</span><strong>27</strong><small>Warm-ups and unchecked rows excluded</small></div><div class=\"review-metric\"><span>Weekly session target</span><strong>3 / 3</strong><small>Your current profile frequency target</small></div><div class=\"review-metric\"><span>Performance records</span><strong>3</strong><small>Exercise-specific; first records are baselines</small></div><div class=\"review-metric\"><span>Recorded weight average</span><strong>88.7 kg</strong><small>2 actual samples · -1.2 kg vs previous week</small></div></div>\n  <div class=\"review-consistency\"><div><strong>Your weekly frequency</strong><span>100% recorded</span></div><progress max=\"100\" value=\"100\" aria-label=\"Weekly session completion\"></progress></div>\n  <section class=\"review-wins\" aria-labelledby=\"weekly-wins-title\"><h3 id=\"weekly-wins-title\">Your biggest wins</h3><div class=\"review-win-grid\"><article class=\"review-win\"><span class=\"review-win-icon\"><svg class=\"icon\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"m5 12 4 4L19 6\"></path></svg></span><h4>Barbell bench press</h4><p>24 → 27 total reps across 3 sets at matching loads (2026-11-18 → 2026-11-19).</p></article><article class=\"review-win\"><span class=\"review-win-icon\"><svg class=\"icon\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"m5 12 4 4L19 6\"></path></svg></span><h4>Barbell squat</h4><p>24 → 27 total reps across 3 sets at matching loads (2026-11-18 → 2026-11-19).</p></article><article class=\"review-win\"><span class=\"review-win-icon\"><svg class=\"icon\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"m5 12 4 4L19 6\"></path></svg></span><h4>Your weekly frequency target is met</h4><p>3 of 3 target sessions recorded.</p></article></div></section>\n  <div class=\"review-coaching\"><section><p class=\"eyebrow\">IN CONTEXT</p><h3>Your week, considered.</h3><p>Jordan, Barbell bench press added 3 total reps at the same recorded loads. That supports your muscle-building process, but it does not measure muscle gained. You recorded 27 working sets across 3 workouts.</p></section><section class=\"review-focus\"><p class=\"eyebrow\">A MANAGEABLE NEXT STEP</p><h3>Focus for next week</h3><ul><li>Record weight under similar conditions and compare weekly averages. Do not try to repeat a particular weekly change.</li><li>Keep Barbell bench press controlled at your saved targets. If it feels comfortable, aim for one more rep within the prescribed range; the load remains your choice.</li></ul></section></div>\n  <section class=\"review-goals\"><div class=\"section-head\"><h3>Progress toward your targets</h3><a class=\"text-link\" href=\"#goals\">Manage goals <svg class=\"icon\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M5 12h14m-5-5 5 5-5 5\"></path></svg></a></div><div class=\"review-goal-grid\"><article class=\"review-goal-card\"><div><span class=\"badge\">RECORDED BODY WEIGHT</span><h4>Reach my recorded weight target</h4></div><p><strong>88.6 kg</strong><span>target 80 kg</span></p><progress max=\"100\" value=\"14.000000000000057\" aria-label=\"Reach my recorded weight target recorded progress\"></progress><small>8.6 kg remaining. Body composition is not measured.</small></article><article class=\"review-goal-card\"><div><span class=\"badge\">WORKING LOAD</span><h4>Bench working-load target</h4></div><p><strong>20 kg</strong><span>target 30 kg</span></p><progress max=\"100\" value=\"66.66666666666666\" aria-label=\"Bench working-load target recorded progress\"></progress><small>10 kg remaining.</small></article><article class=\"review-goal-card\"><div><span class=\"badge\">WORKOUT COUNT</span><h4>Complete fifteen recorded workouts</h4></div><p><strong>12</strong><span>target 15</span></p><progress max=\"100\" value=\"80\" aria-label=\"Complete fifteen recorded workouts recorded progress\"></progress><small>3 remaining.</small></article></div></section>\n  <details class=\"review-method\"><summary>About this review</summary><p>Recalculated from recorded entries through 2026-11-19, using your current targets and Monday–Sunday weeks. Changing the layout never changes workout dates. Historical targets are not saved snapshots. Workload is context, not proof of muscle growth. Weight averages use actual measurements only; short-term changes can reflect water, conditions or normal fluctuations. No achievement is awarded again by reopening a review.</p></details>\n </section>",
+    "workout-light": "<header class=\"page-head\"><div><p class=\"eyebrow\">YOUR ACTIVE SESSION</p><h1>Full body A</h1><p class=\"subtitle\">Nov 19 · 3 of 9 sets complete</p></div><span class=\"saved-status\"><svg class=\"icon\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"m12 3 8 3v6c0 5-8 9-8 9s-8-4-8-9V6zM8 12l3 3 5-6\"></path></svg>Autosaved on device</span></header><div class=\"workout-toolbar\"><div class=\"actions\"><button type=\"button\" class=\"secondary\" data-action=\"focus-enter\">Focus Mode</button><button type=\"button\" class=\"quiet\" data-action=\"time-dialog\">Shorten workout</button><button type=\"button\" class=\"quiet\" data-action=\"rest-settings\">Rest timer</button><button type=\"button\" class=\"secondary\" data-action=\"pick-exercise\">Add exercise +</button><button type=\"button\" class=\"quiet\" data-action=\"session-details\">Session details</button><button type=\"button\" class=\"quiet\" data-action=\"recovery-dialog\">Recovery check-in</button><button type=\"button\" class=\"quiet\" data-action=\"plates-dialog\">Plate calculator</button></div><div class=\"actions\"><button type=\"button\" class=\"quiet\" data-action=\"discard\">Discard</button><button type=\"button\" class=\"primary\" data-action=\"finish\">Finish workout</button></div></div><div class=\"readiness\"><span><svg class=\"icon\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M12 3v2m0 14v2M3 12h2m14 0h2M6 6l1 1m10 10 1 1M6 18l1-1M17 7l1-1M16 12a4 4 0 1 1-8 0 4 4 0 0 1 8 0\"></path></svg>How are you feeling? <small>Optional</small></span><div class=\"chips\"><button type=\"button\" class=\"chip\" data-action=\"readiness\" data-value=\"1\" aria-pressed=\"false\">Low</button><button type=\"button\" class=\"chip\" data-action=\"readiness\" data-value=\"2\" aria-pressed=\"false\">Tired</button><button type=\"button\" class=\"chip\" data-action=\"readiness\" data-value=\"3\" aria-pressed=\"false\">Okay</button><button type=\"button\" class=\"chip\" data-action=\"readiness\" data-value=\"4\" aria-pressed=\"false\">Good</button><button type=\"button\" class=\"chip\" data-action=\"readiness\" data-value=\"5\" aria-pressed=\"false\">Great</button></div></div><nav class=\"exercise-jump-nav\" aria-label=\"Workout exercises\"><button type=\"button\" class=\"\" data-action=\"jump-exercise\" data-id=\"1c717452-3dcc-4985-b7fc-73e4952de799\" aria-current=\"step\"><span>01</span>Barbell bench press</button><button type=\"button\" class=\"\" data-action=\"jump-exercise\" data-id=\"7c6860cc-72fc-455d-91d1-3646f1d63c88\"><span>02</span>Barbell squat</button><button type=\"button\" class=\"\" data-action=\"jump-exercise\" data-id=\"088f5e24-936b-44e2-bda9-8378dc6b0bd7\"><span>03</span>Barbell row</button></nav><div class=\"workout-list\"><section class=\"exercise-card\" data-exercise=\"1c717452-3dcc-4985-b7fc-73e4952de799\"><div class=\"exercise-heading\"><span class=\"exercise-order\">01</span><div><h2>Barbell bench press <span class=\"exercise-completion\" hidden=\"\"></span></h2><p>Chest · barbell · total load</p></div><button type=\"button\" class=\"quiet\" data-action=\"exercise-options\" data-id=\"1c717452-3dcc-4985-b7fc-73e4952de799\">Options</button></div><div class=\"recommendation\"><span><svg class=\"icon\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"m13 3-8 11h6l-1 7 9-11h-6z\"></path></svg></span><div><strong>20 kg · 3 × 6–10</strong><details><summary>Why this suggestion?</summary><p>Next session: maintain this load and aim for 3 more total reps across your working sets to reach the ceiling. No extra sets or exercises are requested.</p></details><small>12 saved exposures · moderate confidence · editable coaching suggestion</small></div><button type=\"button\" class=\"quiet\" data-action=\"apply-rec\" data-id=\"1c717452-3dcc-4985-b7fc-73e4952de799\">Use load</button></div><details class=\"rir-explanation\"><summary>RIR is optional · What does it mean?</summary><p>Reps in reserve: how many more controlled repetitions you think you could do. 0 means none; 2 means about two. Leave it blank if unsure.</p></details><div class=\"exercise-memory\"><button type=\"button\" class=\"text-link\" data-action=\"feedback-open\" data-exercise=\"bench\" data-record=\"1c717452-3dcc-4985-b7fc-73e4952de799\">Feedback &amp; notes</button></div><div class=\"exercise-history\"><span>Last session · Nov 19<br><small>First logged working set</small></span><strong>20 kg × 9</strong></div><div class=\"set-table\"><div class=\"set-header\"><span>SET</span><span>PREVIOUS</span><span>KG</span><span>REPS</span><span>RIR <small>opt.</small></span><span>DONE</span></div><div class=\"set-row complete  \" data-set-row=\"68cf954b-4929-494b-a86a-662e4cf910e5\"><button class=\"set-type\" data-action=\"set-type\" data-id=\"1c717452-3dcc-4985-b7fc-73e4952de799\" data-set=\"68cf954b-4929-494b-a86a-662e4cf910e5\" aria-label=\"Set 1 type: working. Open type and current-set options\">1</button><span class=\"previous\">20 × 9</span><input type=\"number\" inputmode=\"decimal\" min=\"0\" max=\"1000\" step=\"any\" data-field=\"kg\" data-id=\"1c717452-3dcc-4985-b7fc-73e4952de799\" data-set=\"68cf954b-4929-494b-a86a-662e4cf910e5\" aria-label=\"Barbell bench press set 1 weight in kg\" placeholder=\"—\" value=\"60\"><input type=\"number\" inputmode=\"decimal\" min=\"0\" max=\"200\" step=\"1\" data-field=\"reps\" data-id=\"1c717452-3dcc-4985-b7fc-73e4952de799\" data-set=\"68cf954b-4929-494b-a86a-662e4cf910e5\" aria-label=\"Barbell bench press set 1 reps\" placeholder=\"—\" value=\"10\"><input type=\"number\" inputmode=\"decimal\" min=\"0\" max=\"10\" step=\"1\" data-field=\"rir\" data-id=\"1c717452-3dcc-4985-b7fc-73e4952de799\" data-set=\"68cf954b-4929-494b-a86a-662e4cf910e5\" aria-label=\"Barbell bench press set 1 optional reps in reserve\" placeholder=\"—\" value=\"2\"><button type=\"button\" class=\"complete-button checked\" data-action=\"toggle-set\" data-id=\"1c717452-3dcc-4985-b7fc-73e4952de799\" data-set=\"68cf954b-4929-494b-a86a-662e4cf910e5\" aria-label=\"Uncheck Barbell bench press set 1\" aria-pressed=\"true\"><svg class=\"icon\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"m5 12 4 4L19 6\"></path></svg></button></div><div class=\"set-row   active-set\" data-set-row=\"23f3e355-6e09-45d2-8130-218e6210677e\"><button class=\"set-type\" data-action=\"set-type\" data-id=\"1c717452-3dcc-4985-b7fc-73e4952de799\" data-set=\"23f3e355-6e09-45d2-8130-218e6210677e\" aria-current=\"step\" aria-label=\"Set 2 type: working. Open type and current-set options\">2</button><span class=\"previous\">20 × 9</span><input type=\"number\" inputmode=\"decimal\" min=\"0\" max=\"1000\" step=\"any\" data-field=\"kg\" data-id=\"1c717452-3dcc-4985-b7fc-73e4952de799\" data-set=\"23f3e355-6e09-45d2-8130-218e6210677e\" aria-label=\"Barbell bench press set 2 weight in kg\" placeholder=\"—\" value=\"60\"><input type=\"number\" inputmode=\"decimal\" min=\"0\" max=\"200\" step=\"1\" data-field=\"reps\" data-id=\"1c717452-3dcc-4985-b7fc-73e4952de799\" data-set=\"23f3e355-6e09-45d2-8130-218e6210677e\" aria-label=\"Barbell bench press set 2 reps\" placeholder=\"—\" value=\"10\"><input type=\"number\" inputmode=\"decimal\" min=\"0\" max=\"10\" step=\"1\" data-field=\"rir\" data-id=\"1c717452-3dcc-4985-b7fc-73e4952de799\" data-set=\"23f3e355-6e09-45d2-8130-218e6210677e\" aria-label=\"Barbell bench press set 2 optional reps in reserve\" placeholder=\"—\" value=\"2\"><button type=\"button\" class=\"complete-button \" data-action=\"toggle-set\" data-id=\"1c717452-3dcc-4985-b7fc-73e4952de799\" data-set=\"23f3e355-6e09-45d2-8130-218e6210677e\" aria-label=\"Complete Barbell bench press set 2\" aria-pressed=\"false\"><svg class=\"icon\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"m5 12 4 4L19 6\"></path></svg></button></div><div class=\"set-row   \" data-set-row=\"ab669505-2be9-48a8-9efc-58ca3949ee52\"><button class=\"set-type\" data-action=\"set-type\" data-id=\"1c717452-3dcc-4985-b7fc-73e4952de799\" data-set=\"ab669505-2be9-48a8-9efc-58ca3949ee52\" aria-label=\"Set 3 type: working. Open type and current-set options\">3</button><span class=\"previous\">20 × 9</span><input type=\"number\" inputmode=\"decimal\" min=\"0\" max=\"1000\" step=\"any\" data-field=\"kg\" data-id=\"1c717452-3dcc-4985-b7fc-73e4952de799\" data-set=\"ab669505-2be9-48a8-9efc-58ca3949ee52\" aria-label=\"Barbell bench press set 3 weight in kg\" placeholder=\"—\" value=\"60\"><input type=\"number\" inputmode=\"decimal\" min=\"0\" max=\"200\" step=\"1\" data-field=\"reps\" data-id=\"1c717452-3dcc-4985-b7fc-73e4952de799\" data-set=\"ab669505-2be9-48a8-9efc-58ca3949ee52\" aria-label=\"Barbell bench press set 3 reps\" placeholder=\"—\" value=\"10\"><input type=\"number\" inputmode=\"decimal\" min=\"0\" max=\"10\" step=\"1\" data-field=\"rir\" data-id=\"1c717452-3dcc-4985-b7fc-73e4952de799\" data-set=\"ab669505-2be9-48a8-9efc-58ca3949ee52\" aria-label=\"Barbell bench press set 3 optional reps in reserve\" placeholder=\"—\" value=\"2\"><button type=\"button\" class=\"complete-button \" data-action=\"toggle-set\" data-id=\"1c717452-3dcc-4985-b7fc-73e4952de799\" data-set=\"ab669505-2be9-48a8-9efc-58ca3949ee52\" aria-label=\"Complete Barbell bench press set 3\" aria-pressed=\"false\"><svg class=\"icon\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"m5 12 4 4L19 6\"></path></svg></button></div></div><div class=\"exercise-footer\"><button type=\"button\" class=\"text-link\" data-action=\"add-set\" data-id=\"1c717452-3dcc-4985-b7fc-73e4952de799\">+ Add set</button><span>3 working sets · target 6–10 reps · rest 120s</span></div></section><section class=\"exercise-card\" data-exercise=\"7c6860cc-72fc-455d-91d1-3646f1d63c88\"><div class=\"exercise-heading\"><span class=\"exercise-order\">02</span><div><h2>Barbell squat <span class=\"exercise-completion\" hidden=\"\"></span></h2><p>Quads · barbell · total load</p></div><button type=\"button\" class=\"quiet\" data-action=\"exercise-options\" data-id=\"7c6860cc-72fc-455d-91d1-3646f1d63c88\">Options</button></div><div class=\"recommendation\"><span><svg class=\"icon\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"m13 3-8 11h6l-1 7 9-11h-6z\"></path></svg></span><div><strong>40 kg · 3 × 6–10</strong><details><summary>Why this suggestion?</summary><p>Next session: maintain this load and aim for 3 more total reps across your working sets to reach the ceiling. No extra sets or exercises are requested.</p></details><small>12 saved exposures · moderate confidence · editable coaching suggestion</small></div><button type=\"button\" class=\"quiet\" data-action=\"apply-rec\" data-id=\"7c6860cc-72fc-455d-91d1-3646f1d63c88\">Use load</button></div><div class=\"exercise-memory\"><button type=\"button\" class=\"text-link\" data-action=\"feedback-open\" data-exercise=\"squat\" data-record=\"7c6860cc-72fc-455d-91d1-3646f1d63c88\">Feedback &amp; notes</button></div><div class=\"exercise-history\"><span>Last session · Nov 19<br><small>First logged working set</small></span><strong>40 kg × 9</strong></div><div class=\"set-table\"><div class=\"set-header\"><span>SET</span><span>PREVIOUS</span><span>KG</span><span>REPS</span><span>RIR <small>opt.</small></span><span>DONE</span></div><div class=\"set-row complete  \" data-set-row=\"0366a905-aeba-460a-879e-a6dc08ea13b9\"><button class=\"set-type\" data-action=\"set-type\" data-id=\"7c6860cc-72fc-455d-91d1-3646f1d63c88\" data-set=\"0366a905-aeba-460a-879e-a6dc08ea13b9\" aria-label=\"Set 1 type: working. Open type and current-set options\">1</button><span class=\"previous\">40 × 9</span><input type=\"number\" inputmode=\"decimal\" min=\"0\" max=\"1000\" step=\"any\" data-field=\"kg\" data-id=\"7c6860cc-72fc-455d-91d1-3646f1d63c88\" data-set=\"0366a905-aeba-460a-879e-a6dc08ea13b9\" aria-label=\"Barbell squat set 1 weight in kg\" placeholder=\"—\" value=\"60\"><input type=\"number\" inputmode=\"decimal\" min=\"0\" max=\"200\" step=\"1\" data-field=\"reps\" data-id=\"7c6860cc-72fc-455d-91d1-3646f1d63c88\" data-set=\"0366a905-aeba-460a-879e-a6dc08ea13b9\" aria-label=\"Barbell squat set 1 reps\" placeholder=\"—\" value=\"10\"><input type=\"number\" inputmode=\"decimal\" min=\"0\" max=\"10\" step=\"1\" data-field=\"rir\" data-id=\"7c6860cc-72fc-455d-91d1-3646f1d63c88\" data-set=\"0366a905-aeba-460a-879e-a6dc08ea13b9\" aria-label=\"Barbell squat set 1 optional reps in reserve\" placeholder=\"—\" value=\"2\"><button type=\"button\" class=\"complete-button checked\" data-action=\"toggle-set\" data-id=\"7c6860cc-72fc-455d-91d1-3646f1d63c88\" data-set=\"0366a905-aeba-460a-879e-a6dc08ea13b9\" aria-label=\"Uncheck Barbell squat set 1\" aria-pressed=\"true\"><svg class=\"icon\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"m5 12 4 4L19 6\"></path></svg></button></div><div class=\"set-row   \" data-set-row=\"de651368-ab5c-4930-a895-3f6d9477e06f\"><button class=\"set-type\" data-action=\"set-type\" data-id=\"7c6860cc-72fc-455d-91d1-3646f1d63c88\" data-set=\"de651368-ab5c-4930-a895-3f6d9477e06f\" aria-label=\"Set 2 type: working. Open type and current-set options\">2</button><span class=\"previous\">40 × 9</span><input type=\"number\" inputmode=\"decimal\" min=\"0\" max=\"1000\" step=\"any\" data-field=\"kg\" data-id=\"7c6860cc-72fc-455d-91d1-3646f1d63c88\" data-set=\"de651368-ab5c-4930-a895-3f6d9477e06f\" aria-label=\"Barbell squat set 2 weight in kg\" placeholder=\"—\" value=\"60\"><input type=\"number\" inputmode=\"decimal\" min=\"0\" max=\"200\" step=\"1\" data-field=\"reps\" data-id=\"7c6860cc-72fc-455d-91d1-3646f1d63c88\" data-set=\"de651368-ab5c-4930-a895-3f6d9477e06f\" aria-label=\"Barbell squat set 2 reps\" placeholder=\"—\" value=\"10\"><input type=\"number\" inputmode=\"decimal\" min=\"0\" max=\"10\" step=\"1\" data-field=\"rir\" data-id=\"7c6860cc-72fc-455d-91d1-3646f1d63c88\" data-set=\"de651368-ab5c-4930-a895-3f6d9477e06f\" aria-label=\"Barbell squat set 2 optional reps in reserve\" placeholder=\"—\" value=\"2\"><button type=\"button\" class=\"complete-button \" data-action=\"toggle-set\" data-id=\"7c6860cc-72fc-455d-91d1-3646f1d63c88\" data-set=\"de651368-ab5c-4930-a895-3f6d9477e06f\" aria-label=\"Complete Barbell squat set 2\" aria-pressed=\"false\"><svg class=\"icon\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"m5 12 4 4L19 6\"></path></svg></button></div><div class=\"set-row   \" data-set-row=\"7fa0cc2a-038d-4099-9639-1990f21bed88\"><button class=\"set-type\" data-action=\"set-type\" data-id=\"7c6860cc-72fc-455d-91d1-3646f1d63c88\" data-set=\"7fa0cc2a-038d-4099-9639-1990f21bed88\" aria-label=\"Set 3 type: working. Open type and current-set options\">3</button><span class=\"previous\">40 × 9</span><input type=\"number\" inputmode=\"decimal\" min=\"0\" max=\"1000\" step=\"any\" data-field=\"kg\" data-id=\"7c6860cc-72fc-455d-91d1-3646f1d63c88\" data-set=\"7fa0cc2a-038d-4099-9639-1990f21bed88\" aria-label=\"Barbell squat set 3 weight in kg\" placeholder=\"—\" value=\"60\"><input type=\"number\" inputmode=\"decimal\" min=\"0\" max=\"200\" step=\"1\" data-field=\"reps\" data-id=\"7c6860cc-72fc-455d-91d1-3646f1d63c88\" data-set=\"7fa0cc2a-038d-4099-9639-1990f21bed88\" aria-label=\"Barbell squat set 3 reps\" placeholder=\"—\" value=\"10\"><input type=\"number\" inputmode=\"decimal\" min=\"0\" max=\"10\" step=\"1\" data-field=\"rir\" data-id=\"7c6860cc-72fc-455d-91d1-3646f1d63c88\" data-set=\"7fa0cc2a-038d-4099-9639-1990f21bed88\" aria-label=\"Barbell squat set 3 optional reps in reserve\" placeholder=\"—\" value=\"2\"><button type=\"button\" class=\"complete-button \" data-action=\"toggle-set\" data-id=\"7c6860cc-72fc-455d-91d1-3646f1d63c88\" data-set=\"7fa0cc2a-038d-4099-9639-1990f21bed88\" aria-label=\"Complete Barbell squat set 3\" aria-pressed=\"false\"><svg class=\"icon\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"m5 12 4 4L19 6\"></path></svg></button></div></div><div class=\"exercise-footer\"><button type=\"button\" class=\"text-link\" data-action=\"add-set\" data-id=\"7c6860cc-72fc-455d-91d1-3646f1d63c88\">+ Add set</button><span>3 working sets · target 6–10 reps · rest 120s</span></div></section><section class=\"exercise-card\" data-exercise=\"088f5e24-936b-44e2-bda9-8378dc6b0bd7\"><div class=\"exercise-heading\"><span class=\"exercise-order\">03</span><div><h2>Barbell row <span class=\"exercise-completion\" hidden=\"\"></span></h2><p>Back · barbell · total load</p></div><button type=\"button\" class=\"quiet\" data-action=\"exercise-options\" data-id=\"088f5e24-936b-44e2-bda9-8378dc6b0bd7\">Options</button></div><div class=\"recommendation\"><span><svg class=\"icon\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"m13 3-8 11h6l-1 7 9-11h-6z\"></path></svg></span><div><strong>20 kg · 3 × 8–12</strong><details><summary>Why this suggestion?</summary><p>Next session: maintain this load and aim for 9 more total reps across your working sets to reach the ceiling. No extra sets or exercises are requested.</p></details><small>12 saved exposures · moderate confidence · editable coaching suggestion</small></div><button type=\"button\" class=\"quiet\" data-action=\"apply-rec\" data-id=\"088f5e24-936b-44e2-bda9-8378dc6b0bd7\">Use load</button></div><div class=\"exercise-memory\"><button type=\"button\" class=\"text-link\" data-action=\"feedback-open\" data-exercise=\"row\" data-record=\"088f5e24-936b-44e2-bda9-8378dc6b0bd7\">Feedback &amp; notes</button></div><div class=\"exercise-history\"><span>Last session · Nov 19<br><small>First logged working set</small></span><strong>20 kg × 9</strong></div><div class=\"set-table\"><div class=\"set-header\"><span>SET</span><span>PREVIOUS</span><span>KG</span><span>REPS</span><span>RIR <small>opt.</small></span><span>DONE</span></div><div class=\"set-row complete  \" data-set-row=\"add7485b-1f28-4db7-ba4d-2c9a827a0d90\"><button class=\"set-type\" data-action=\"set-type\" data-id=\"088f5e24-936b-44e2-bda9-8378dc6b0bd7\" data-set=\"add7485b-1f28-4db7-ba4d-2c9a827a0d90\" aria-label=\"Set 1 type: working. Open type and current-set options\">1</button><span class=\"previous\">20 × 9</span><input type=\"number\" inputmode=\"decimal\" min=\"0\" max=\"1000\" step=\"any\" data-field=\"kg\" data-id=\"088f5e24-936b-44e2-bda9-8378dc6b0bd7\" data-set=\"add7485b-1f28-4db7-ba4d-2c9a827a0d90\" aria-label=\"Barbell row set 1 weight in kg\" placeholder=\"—\" value=\"60\"><input type=\"number\" inputmode=\"decimal\" min=\"0\" max=\"200\" step=\"1\" data-field=\"reps\" data-id=\"088f5e24-936b-44e2-bda9-8378dc6b0bd7\" data-set=\"add7485b-1f28-4db7-ba4d-2c9a827a0d90\" aria-label=\"Barbell row set 1 reps\" placeholder=\"—\" value=\"10\"><input type=\"number\" inputmode=\"decimal\" min=\"0\" max=\"10\" step=\"1\" data-field=\"rir\" data-id=\"088f5e24-936b-44e2-bda9-8378dc6b0bd7\" data-set=\"add7485b-1f28-4db7-ba4d-2c9a827a0d90\" aria-label=\"Barbell row set 1 optional reps in reserve\" placeholder=\"—\" value=\"2\"><button type=\"button\" class=\"complete-button checked\" data-action=\"toggle-set\" data-id=\"088f5e24-936b-44e2-bda9-8378dc6b0bd7\" data-set=\"add7485b-1f28-4db7-ba4d-2c9a827a0d90\" aria-label=\"Uncheck Barbell row set 1\" aria-pressed=\"true\"><svg class=\"icon\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"m5 12 4 4L19 6\"></path></svg></button></div><div class=\"set-row   \" data-set-row=\"97c0439e-2980-43e3-9f24-719c18877bac\"><button class=\"set-type\" data-action=\"set-type\" data-id=\"088f5e24-936b-44e2-bda9-8378dc6b0bd7\" data-set=\"97c0439e-2980-43e3-9f24-719c18877bac\" aria-label=\"Set 2 type: working. Open type and current-set options\">2</button><span class=\"previous\">20 × 9</span><input type=\"number\" inputmode=\"decimal\" min=\"0\" max=\"1000\" step=\"any\" data-field=\"kg\" data-id=\"088f5e24-936b-44e2-bda9-8378dc6b0bd7\" data-set=\"97c0439e-2980-43e3-9f24-719c18877bac\" aria-label=\"Barbell row set 2 weight in kg\" placeholder=\"—\" value=\"60\"><input type=\"number\" inputmode=\"decimal\" min=\"0\" max=\"200\" step=\"1\" data-field=\"reps\" data-id=\"088f5e24-936b-44e2-bda9-8378dc6b0bd7\" data-set=\"97c0439e-2980-43e3-9f24-719c18877bac\" aria-label=\"Barbell row set 2 reps\" placeholder=\"—\" value=\"10\"><input type=\"number\" inputmode=\"decimal\" min=\"0\" max=\"10\" step=\"1\" data-field=\"rir\" data-id=\"088f5e24-936b-44e2-bda9-8378dc6b0bd7\" data-set=\"97c0439e-2980-43e3-9f24-719c18877bac\" aria-label=\"Barbell row set 2 optional reps in reserve\" placeholder=\"—\" value=\"2\"><button type=\"button\" class=\"complete-button \" data-action=\"toggle-set\" data-id=\"088f5e24-936b-44e2-bda9-8378dc6b0bd7\" data-set=\"97c0439e-2980-43e3-9f24-719c18877bac\" aria-label=\"Complete Barbell row set 2\" aria-pressed=\"false\"><svg class=\"icon\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"m5 12 4 4L19 6\"></path></svg></button></div><div class=\"set-row   \" data-set-row=\"aad9007f-eb1e-4aab-bb1d-2405a7bcd973\"><button class=\"set-type\" data-action=\"set-type\" data-id=\"088f5e24-936b-44e2-bda9-8378dc6b0bd7\" data-set=\"aad9007f-eb1e-4aab-bb1d-2405a7bcd973\" aria-label=\"Set 3 type: working. Open type and current-set options\">3</button><span class=\"previous\">20 × 9</span><input type=\"number\" inputmode=\"decimal\" min=\"0\" max=\"1000\" step=\"any\" data-field=\"kg\" data-id=\"088f5e24-936b-44e2-bda9-8378dc6b0bd7\" data-set=\"aad9007f-eb1e-4aab-bb1d-2405a7bcd973\" aria-label=\"Barbell row set 3 weight in kg\" placeholder=\"—\" value=\"60\"><input type=\"number\" inputmode=\"decimal\" min=\"0\" max=\"200\" step=\"1\" data-field=\"reps\" data-id=\"088f5e24-936b-44e2-bda9-8378dc6b0bd7\" data-set=\"aad9007f-eb1e-4aab-bb1d-2405a7bcd973\" aria-label=\"Barbell row set 3 reps\" placeholder=\"—\" value=\"10\"><input type=\"number\" inputmode=\"decimal\" min=\"0\" max=\"10\" step=\"1\" data-field=\"rir\" data-id=\"088f5e24-936b-44e2-bda9-8378dc6b0bd7\" data-set=\"aad9007f-eb1e-4aab-bb1d-2405a7bcd973\" aria-label=\"Barbell row set 3 optional reps in reserve\" placeholder=\"—\" value=\"2\"><button type=\"button\" class=\"complete-button \" data-action=\"toggle-set\" data-id=\"088f5e24-936b-44e2-bda9-8378dc6b0bd7\" data-set=\"aad9007f-eb1e-4aab-bb1d-2405a7bcd973\" aria-label=\"Complete Barbell row set 3\" aria-pressed=\"false\"><svg class=\"icon\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"m5 12 4 4L19 6\"></path></svg></button></div></div><div class=\"exercise-footer\"><button type=\"button\" class=\"text-link\" data-action=\"add-set\" data-id=\"088f5e24-936b-44e2-bda9-8378dc6b0bd7\">+ Add set</button><span>3 working sets · target 8–12 reps · rest 120s</span></div></section></div><div class=\"workout-end\"><button type=\"button\" class=\"secondary\" data-action=\"pick-exercise\">Add exercise +</button><span>Completed sets count toward your progress.</span><button type=\"button\" class=\"primary\" data-action=\"finish\">Finish workout</button></div>",
+    "options-light": "<div class=\"dialog-head\"><h2>Barbell bench press</h2><button type=\"button\" class=\"icon-button\" data-action=\"close\" aria-label=\"Close dialog\"><svg class=\"icon\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"m6 6 12 12M6 18 18 6\"></path></svg></button></div><div class=\"exercise-menu\"><div class=\"menu-primary\"><button type=\"button\" class=\"menu-action\" data-action=\"swap\" data-id=\"1c717452-3dcc-4985-b7fc-73e4952de799\"><svg class=\"icon\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M5 12h14m-5-5 5 5-5 5\"></path></svg> Replace exercise</button><button type=\"button\" class=\"menu-action\" data-action=\"exercise-details\" data-id=\"1c717452-3dcc-4985-b7fc-73e4952de799\"><svg class=\"icon\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M4 5h16v16H4zM8 3v4m8-4v4M8 11h8m-8 4h5\"></path></svg> Targets &amp; notes</button><button type=\"button\" class=\"menu-action\" data-action=\"exercise-rule\" data-id=\"1c717452-3dcc-4985-b7fc-73e4952de799\"><svg class=\"icon\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M9 4h6l1 3 3 1v6l-3 1-1 3H9l-1-3-3-1V8l3-1zM12 8a3 3 0 1 0 0 6 3 3 0 0 0 0-6\"></path></svg> Progression &amp; rest</button></div><details class=\"menu-more\"><summary>More actions</summary><div class=\"menu-grid\"><button type=\"button\" class=\"menu-action\" data-action=\"copy-kg\" data-id=\"1c717452-3dcc-4985-b7fc-73e4952de799\">Copy first weight</button><button type=\"button\" class=\"menu-action\" data-action=\"copy-reps\" data-id=\"1c717452-3dcc-4985-b7fc-73e4952de799\">Copy first reps</button><button type=\"button\" class=\"menu-action\" data-action=\"check-all\" data-id=\"1c717452-3dcc-4985-b7fc-73e4952de799\">Check all sets</button><button type=\"button\" class=\"menu-action\" data-action=\"uncheck-all\" data-id=\"1c717452-3dcc-4985-b7fc-73e4952de799\">Uncheck all sets</button><button type=\"button\" class=\"menu-action\" data-action=\"move-up\" data-id=\"1c717452-3dcc-4985-b7fc-73e4952de799\">Move up</button><button type=\"button\" class=\"menu-action\" data-action=\"move-down\" data-id=\"1c717452-3dcc-4985-b7fc-73e4952de799\">Move down</button></div><div class=\"menu-destructive\"><button type=\"button\" class=\"menu-action\" data-action=\"remove-set\" data-id=\"1c717452-3dcc-4985-b7fc-73e4952de799\">Remove last set</button><button type=\"button\" class=\"menu-action\" data-action=\"remove-exercise\" data-id=\"1c717452-3dcc-4985-b7fc-73e4952de799\">Remove exercise</button></div></details><details class=\"menu-technique\"><summary>Technique cues</summary><p>Use a stable setup. Lower under control, keep wrists stacked, and use safeties or a spotter.</p></details></div>",
+    "weekly-dark": "<nav class=\"tracking-subnav\" aria-label=\"Tracking sections\"><a href=\"#progress\">Gains</a><a href=\"#body\">Body</a><a href=\"#history\">History</a><a href=\"#calendar\">Calendar</a><a href=\"#goals\">Goals</a><a href=\"#muscles\">Muscle map</a><a href=\"#review\" aria-current=\"page\">Weekly review</a></nav><section class=\"weekly-checkin\" aria-labelledby=\"weekly-review-title\" data-week-start=\"2026-11-16\" data-week-end=\"2026-11-22\" data-through=\"2026-11-19\">\n  <header class=\"review-header\"><div><p class=\"eyebrow\">YOUR WEEKLY CHECK-IN</p><h1 id=\"weekly-review-title\">Your training is moving forward.</h1><p class=\"review-range\"><time datetime=\"2026-11-16\">Nov 16, 2026</time> – <time datetime=\"2026-11-22\">Nov 22, 2026</time><span class=\"badge\">WEEK SO FAR</span></p><p class=\"review-goal\">Current goal: Build muscle · Also: Get stronger, General fitness</p></div>\n   <div class=\"review-navigation\"><div class=\"actions\"><button type=\"button\" class=\"secondary\" data-action=\"review-previous\" aria-label=\"Previous weekly check-in\" data-date=\"2026-11-09\">←</button><button type=\"button\" class=\"secondary\" data-action=\"review-next\" aria-label=\"Next weekly check-in\" data-date=\"2026-11-23\" disabled=\"\">→</button><button type=\"button\" class=\"quiet\" data-action=\"review-current\">This week</button></div><label class=\"review-date\"><span>Review any week</span><input id=\"review-date\" type=\"date\" max=\"2026-11-19\" value=\"2026-11-16\" aria-label=\"Choose a date in the review week\"></label></div></header>\n  <div class=\"review-overview\"><div class=\"review-metric\"><span>Workouts recorded</span><strong>3</strong><small>Through Nov 19, 2026</small></div><div class=\"review-metric\"><span>Working sets</span><strong>27</strong><small>Warm-ups and unchecked rows excluded</small></div><div class=\"review-metric\"><span>Weekly session target</span><strong>3 / 3</strong><small>Your current profile frequency target</small></div><div class=\"review-metric\"><span>Performance records</span><strong>3</strong><small>Exercise-specific; first records are baselines</small></div><div class=\"review-metric\"><span>Recorded weight average</span><strong>88.7 kg</strong><small>2 actual samples · -1.2 kg vs previous week</small></div></div>\n  <div class=\"review-consistency\"><div><strong>Your weekly frequency</strong><span>100% recorded</span></div><progress max=\"100\" value=\"100\" aria-label=\"Weekly session completion\"></progress></div>\n  <section class=\"review-wins\" aria-labelledby=\"weekly-wins-title\"><h3 id=\"weekly-wins-title\">Your biggest wins</h3><div class=\"review-win-grid\"><article class=\"review-win\"><span class=\"review-win-icon\"><svg class=\"icon\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"m5 12 4 4L19 6\"></path></svg></span><h4>Barbell bench press</h4><p>24 → 27 total reps across 3 sets at matching loads (2026-11-18 → 2026-11-19).</p></article><article class=\"review-win\"><span class=\"review-win-icon\"><svg class=\"icon\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"m5 12 4 4L19 6\"></path></svg></span><h4>Barbell squat</h4><p>24 → 27 total reps across 3 sets at matching loads (2026-11-18 → 2026-11-19).</p></article><article class=\"review-win\"><span class=\"review-win-icon\"><svg class=\"icon\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"m5 12 4 4L19 6\"></path></svg></span><h4>Your weekly frequency target is met</h4><p>3 of 3 target sessions recorded.</p></article></div></section>\n  <div class=\"review-coaching\"><section><p class=\"eyebrow\">IN CONTEXT</p><h3>Your week, considered.</h3><p>Jordan, Barbell bench press added 3 total reps at the same recorded loads. That supports your muscle-building process, but it does not measure muscle gained. You recorded 27 working sets across 3 workouts.</p></section><section class=\"review-focus\"><p class=\"eyebrow\">A MANAGEABLE NEXT STEP</p><h3>Focus for next week</h3><ul><li>Record weight under similar conditions and compare weekly averages. Do not try to repeat a particular weekly change.</li><li>Keep Barbell bench press controlled at your saved targets. If it feels comfortable, aim for one more rep within the prescribed range; the load remains your choice.</li></ul></section></div>\n  <section class=\"review-goals\"><div class=\"section-head\"><h3>Progress toward your targets</h3><a class=\"text-link\" href=\"#goals\">Manage goals <svg class=\"icon\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M5 12h14m-5-5 5 5-5 5\"></path></svg></a></div><div class=\"review-goal-grid\"><article class=\"review-goal-card\"><div><span class=\"badge\">RECORDED BODY WEIGHT</span><h4>Reach my recorded weight target</h4></div><p><strong>88.6 kg</strong><span>target 80 kg</span></p><progress max=\"100\" value=\"14.000000000000057\" aria-label=\"Reach my recorded weight target recorded progress\"></progress><small>8.6 kg remaining. Body composition is not measured.</small></article><article class=\"review-goal-card\"><div><span class=\"badge\">WORKING LOAD</span><h4>Bench working-load target</h4></div><p><strong>20 kg</strong><span>target 30 kg</span></p><progress max=\"100\" value=\"66.66666666666666\" aria-label=\"Bench working-load target recorded progress\"></progress><small>10 kg remaining.</small></article><article class=\"review-goal-card\"><div><span class=\"badge\">WORKOUT COUNT</span><h4>Complete fifteen recorded workouts</h4></div><p><strong>12</strong><span>target 15</span></p><progress max=\"100\" value=\"80\" aria-label=\"Complete fifteen recorded workouts recorded progress\"></progress><small>3 remaining.</small></article></div></section>\n  <details class=\"review-method\"><summary>About this review</summary><p>Recalculated from recorded entries through 2026-11-19, using your current targets and Monday–Sunday weeks. Changing the layout never changes workout dates. Historical targets are not saved snapshots. Workload is context, not proof of muscle growth. Weight averages use actual measurements only; short-term changes can reflect water, conditions or normal fluctuations. No achievement is awarded again by reopening a review.</p></details>\n </section>",
+    "workout-dark": "<header class=\"page-head\"><div><p class=\"eyebrow\">YOUR ACTIVE SESSION</p><h1>Full body A</h1><p class=\"subtitle\">Nov 19 · 3 of 9 sets complete</p></div><span class=\"saved-status\"><svg class=\"icon\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"m12 3 8 3v6c0 5-8 9-8 9s-8-4-8-9V6zM8 12l3 3 5-6\"></path></svg>Autosaved on device</span></header><div class=\"workout-toolbar\"><div class=\"actions\"><button type=\"button\" class=\"secondary\" data-action=\"focus-enter\">Focus Mode</button><button type=\"button\" class=\"quiet\" data-action=\"time-dialog\">Shorten workout</button><button type=\"button\" class=\"quiet\" data-action=\"rest-settings\">Rest timer</button><button type=\"button\" class=\"secondary\" data-action=\"pick-exercise\">Add exercise +</button><button type=\"button\" class=\"quiet\" data-action=\"session-details\">Session details</button><button type=\"button\" class=\"quiet\" data-action=\"recovery-dialog\">Recovery check-in</button><button type=\"button\" class=\"quiet\" data-action=\"plates-dialog\">Plate calculator</button></div><div class=\"actions\"><button type=\"button\" class=\"quiet\" data-action=\"discard\">Discard</button><button type=\"button\" class=\"primary\" data-action=\"finish\">Finish workout</button></div></div><div class=\"readiness\"><span><svg class=\"icon\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M12 3v2m0 14v2M3 12h2m14 0h2M6 6l1 1m10 10 1 1M6 18l1-1M17 7l1-1M16 12a4 4 0 1 1-8 0 4 4 0 0 1 8 0\"></path></svg>How are you feeling? <small>Optional</small></span><div class=\"chips\"><button type=\"button\" class=\"chip\" data-action=\"readiness\" data-value=\"1\" aria-pressed=\"false\">Low</button><button type=\"button\" class=\"chip\" data-action=\"readiness\" data-value=\"2\" aria-pressed=\"false\">Tired</button><button type=\"button\" class=\"chip\" data-action=\"readiness\" data-value=\"3\" aria-pressed=\"false\">Okay</button><button type=\"button\" class=\"chip\" data-action=\"readiness\" data-value=\"4\" aria-pressed=\"false\">Good</button><button type=\"button\" class=\"chip\" data-action=\"readiness\" data-value=\"5\" aria-pressed=\"false\">Great</button></div></div><nav class=\"exercise-jump-nav\" aria-label=\"Workout exercises\"><button type=\"button\" class=\"\" data-action=\"jump-exercise\" data-id=\"1c717452-3dcc-4985-b7fc-73e4952de799\" aria-current=\"step\"><span>01</span>Barbell bench press</button><button type=\"button\" class=\"\" data-action=\"jump-exercise\" data-id=\"7c6860cc-72fc-455d-91d1-3646f1d63c88\"><span>02</span>Barbell squat</button><button type=\"button\" class=\"\" data-action=\"jump-exercise\" data-id=\"088f5e24-936b-44e2-bda9-8378dc6b0bd7\"><span>03</span>Barbell row</button></nav><div class=\"workout-list\"><section class=\"exercise-card\" data-exercise=\"1c717452-3dcc-4985-b7fc-73e4952de799\"><div class=\"exercise-heading\"><span class=\"exercise-order\">01</span><div><h2>Barbell bench press <span class=\"exercise-completion\" hidden=\"\"></span></h2><p>Chest · barbell · total load</p></div><button type=\"button\" class=\"quiet\" data-action=\"exercise-options\" data-id=\"1c717452-3dcc-4985-b7fc-73e4952de799\">Options</button></div><div class=\"recommendation\"><span><svg class=\"icon\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"m13 3-8 11h6l-1 7 9-11h-6z\"></path></svg></span><div><strong>20 kg · 3 × 6–10</strong><details><summary>Why this suggestion?</summary><p>Next session: maintain this load and aim for 3 more total reps across your working sets to reach the ceiling. No extra sets or exercises are requested.</p></details><small>12 saved exposures · moderate confidence · editable coaching suggestion</small></div><button type=\"button\" class=\"quiet\" data-action=\"apply-rec\" data-id=\"1c717452-3dcc-4985-b7fc-73e4952de799\">Use load</button></div><details class=\"rir-explanation\"><summary>RIR is optional · What does it mean?</summary><p>Reps in reserve: how many more controlled repetitions you think you could do. 0 means none; 2 means about two. Leave it blank if unsure.</p></details><div class=\"exercise-memory\"><button type=\"button\" class=\"text-link\" data-action=\"feedback-open\" data-exercise=\"bench\" data-record=\"1c717452-3dcc-4985-b7fc-73e4952de799\">Feedback &amp; notes</button></div><div class=\"exercise-history\"><span>Last session · Nov 19<br><small>First logged working set</small></span><strong>20 kg × 9</strong></div><div class=\"set-table\"><div class=\"set-header\"><span>SET</span><span>PREVIOUS</span><span>KG</span><span>REPS</span><span>RIR <small>opt.</small></span><span>DONE</span></div><div class=\"set-row complete  \" data-set-row=\"68cf954b-4929-494b-a86a-662e4cf910e5\"><button class=\"set-type\" data-action=\"set-type\" data-id=\"1c717452-3dcc-4985-b7fc-73e4952de799\" data-set=\"68cf954b-4929-494b-a86a-662e4cf910e5\" aria-label=\"Set 1 type: working. Open type and current-set options\">1</button><span class=\"previous\">20 × 9</span><input type=\"number\" inputmode=\"decimal\" min=\"0\" max=\"1000\" step=\"any\" data-field=\"kg\" data-id=\"1c717452-3dcc-4985-b7fc-73e4952de799\" data-set=\"68cf954b-4929-494b-a86a-662e4cf910e5\" aria-label=\"Barbell bench press set 1 weight in kg\" placeholder=\"—\" value=\"60\"><input type=\"number\" inputmode=\"decimal\" min=\"0\" max=\"200\" step=\"1\" data-field=\"reps\" data-id=\"1c717452-3dcc-4985-b7fc-73e4952de799\" data-set=\"68cf954b-4929-494b-a86a-662e4cf910e5\" aria-label=\"Barbell bench press set 1 reps\" placeholder=\"—\" value=\"10\"><input type=\"number\" inputmode=\"decimal\" min=\"0\" max=\"10\" step=\"1\" data-field=\"rir\" data-id=\"1c717452-3dcc-4985-b7fc-73e4952de799\" data-set=\"68cf954b-4929-494b-a86a-662e4cf910e5\" aria-label=\"Barbell bench press set 1 optional reps in reserve\" placeholder=\"—\" value=\"2\"><button type=\"button\" class=\"complete-button checked\" data-action=\"toggle-set\" data-id=\"1c717452-3dcc-4985-b7fc-73e4952de799\" data-set=\"68cf954b-4929-494b-a86a-662e4cf910e5\" aria-label=\"Uncheck Barbell bench press set 1\" aria-pressed=\"true\"><svg class=\"icon\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"m5 12 4 4L19 6\"></path></svg></button></div><div class=\"set-row   active-set\" data-set-row=\"23f3e355-6e09-45d2-8130-218e6210677e\"><button class=\"set-type\" data-action=\"set-type\" data-id=\"1c717452-3dcc-4985-b7fc-73e4952de799\" data-set=\"23f3e355-6e09-45d2-8130-218e6210677e\" aria-current=\"step\" aria-label=\"Set 2 type: working. Open type and current-set options\">2</button><span class=\"previous\">20 × 9</span><input type=\"number\" inputmode=\"decimal\" min=\"0\" max=\"1000\" step=\"any\" data-field=\"kg\" data-id=\"1c717452-3dcc-4985-b7fc-73e4952de799\" data-set=\"23f3e355-6e09-45d2-8130-218e6210677e\" aria-label=\"Barbell bench press set 2 weight in kg\" placeholder=\"—\" value=\"60\"><input type=\"number\" inputmode=\"decimal\" min=\"0\" max=\"200\" step=\"1\" data-field=\"reps\" data-id=\"1c717452-3dcc-4985-b7fc-73e4952de799\" data-set=\"23f3e355-6e09-45d2-8130-218e6210677e\" aria-label=\"Barbell bench press set 2 reps\" placeholder=\"—\" value=\"10\"><input type=\"number\" inputmode=\"decimal\" min=\"0\" max=\"10\" step=\"1\" data-field=\"rir\" data-id=\"1c717452-3dcc-4985-b7fc-73e4952de799\" data-set=\"23f3e355-6e09-45d2-8130-218e6210677e\" aria-label=\"Barbell bench press set 2 optional reps in reserve\" placeholder=\"—\" value=\"2\"><button type=\"button\" class=\"complete-button \" data-action=\"toggle-set\" data-id=\"1c717452-3dcc-4985-b7fc-73e4952de799\" data-set=\"23f3e355-6e09-45d2-8130-218e6210677e\" aria-label=\"Complete Barbell bench press set 2\" aria-pressed=\"false\"><svg class=\"icon\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"m5 12 4 4L19 6\"></path></svg></button></div><div class=\"set-row   \" data-set-row=\"ab669505-2be9-48a8-9efc-58ca3949ee52\"><button class=\"set-type\" data-action=\"set-type\" data-id=\"1c717452-3dcc-4985-b7fc-73e4952de799\" data-set=\"ab669505-2be9-48a8-9efc-58ca3949ee52\" aria-label=\"Set 3 type: working. Open type and current-set options\">3</button><span class=\"previous\">20 × 9</span><input type=\"number\" inputmode=\"decimal\" min=\"0\" max=\"1000\" step=\"any\" data-field=\"kg\" data-id=\"1c717452-3dcc-4985-b7fc-73e4952de799\" data-set=\"ab669505-2be9-48a8-9efc-58ca3949ee52\" aria-label=\"Barbell bench press set 3 weight in kg\" placeholder=\"—\" value=\"60\"><input type=\"number\" inputmode=\"decimal\" min=\"0\" max=\"200\" step=\"1\" data-field=\"reps\" data-id=\"1c717452-3dcc-4985-b7fc-73e4952de799\" data-set=\"ab669505-2be9-48a8-9efc-58ca3949ee52\" aria-label=\"Barbell bench press set 3 reps\" placeholder=\"—\" value=\"10\"><input type=\"number\" inputmode=\"decimal\" min=\"0\" max=\"10\" step=\"1\" data-field=\"rir\" data-id=\"1c717452-3dcc-4985-b7fc-73e4952de799\" data-set=\"ab669505-2be9-48a8-9efc-58ca3949ee52\" aria-label=\"Barbell bench press set 3 optional reps in reserve\" placeholder=\"—\" value=\"2\"><button type=\"button\" class=\"complete-button \" data-action=\"toggle-set\" data-id=\"1c717452-3dcc-4985-b7fc-73e4952de799\" data-set=\"ab669505-2be9-48a8-9efc-58ca3949ee52\" aria-label=\"Complete Barbell bench press set 3\" aria-pressed=\"false\"><svg class=\"icon\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"m5 12 4 4L19 6\"></path></svg></button></div></div><div class=\"exercise-footer\"><button type=\"button\" class=\"text-link\" data-action=\"add-set\" data-id=\"1c717452-3dcc-4985-b7fc-73e4952de799\">+ Add set</button><span>3 working sets · target 6–10 reps · rest 120s</span></div></section><section class=\"exercise-card\" data-exercise=\"7c6860cc-72fc-455d-91d1-3646f1d63c88\"><div class=\"exercise-heading\"><span class=\"exercise-order\">02</span><div><h2>Barbell squat <span class=\"exercise-completion\" hidden=\"\"></span></h2><p>Quads · barbell · total load</p></div><button type=\"button\" class=\"quiet\" data-action=\"exercise-options\" data-id=\"7c6860cc-72fc-455d-91d1-3646f1d63c88\">Options</button></div><div class=\"recommendation\"><span><svg class=\"icon\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"m13 3-8 11h6l-1 7 9-11h-6z\"></path></svg></span><div><strong>40 kg · 3 × 6–10</strong><details><summary>Why this suggestion?</summary><p>Next session: maintain this load and aim for 3 more total reps across your working sets to reach the ceiling. No extra sets or exercises are requested.</p></details><small>12 saved exposures · moderate confidence · editable coaching suggestion</small></div><button type=\"button\" class=\"quiet\" data-action=\"apply-rec\" data-id=\"7c6860cc-72fc-455d-91d1-3646f1d63c88\">Use load</button></div><div class=\"exercise-memory\"><button type=\"button\" class=\"text-link\" data-action=\"feedback-open\" data-exercise=\"squat\" data-record=\"7c6860cc-72fc-455d-91d1-3646f1d63c88\">Feedback &amp; notes</button></div><div class=\"exercise-history\"><span>Last session · Nov 19<br><small>First logged working set</small></span><strong>40 kg × 9</strong></div><div class=\"set-table\"><div class=\"set-header\"><span>SET</span><span>PREVIOUS</span><span>KG</span><span>REPS</span><span>RIR <small>opt.</small></span><span>DONE</span></div><div class=\"set-row complete  \" data-set-row=\"0366a905-aeba-460a-879e-a6dc08ea13b9\"><button class=\"set-type\" data-action=\"set-type\" data-id=\"7c6860cc-72fc-455d-91d1-3646f1d63c88\" data-set=\"0366a905-aeba-460a-879e-a6dc08ea13b9\" aria-label=\"Set 1 type: working. Open type and current-set options\">1</button><span class=\"previous\">40 × 9</span><input type=\"number\" inputmode=\"decimal\" min=\"0\" max=\"1000\" step=\"any\" data-field=\"kg\" data-id=\"7c6860cc-72fc-455d-91d1-3646f1d63c88\" data-set=\"0366a905-aeba-460a-879e-a6dc08ea13b9\" aria-label=\"Barbell squat set 1 weight in kg\" placeholder=\"—\" value=\"60\"><input type=\"number\" inputmode=\"decimal\" min=\"0\" max=\"200\" step=\"1\" data-field=\"reps\" data-id=\"7c6860cc-72fc-455d-91d1-3646f1d63c88\" data-set=\"0366a905-aeba-460a-879e-a6dc08ea13b9\" aria-label=\"Barbell squat set 1 reps\" placeholder=\"—\" value=\"10\"><input type=\"number\" inputmode=\"decimal\" min=\"0\" max=\"10\" step=\"1\" data-field=\"rir\" data-id=\"7c6860cc-72fc-455d-91d1-3646f1d63c88\" data-set=\"0366a905-aeba-460a-879e-a6dc08ea13b9\" aria-label=\"Barbell squat set 1 optional reps in reserve\" placeholder=\"—\" value=\"2\"><button type=\"button\" class=\"complete-button checked\" data-action=\"toggle-set\" data-id=\"7c6860cc-72fc-455d-91d1-3646f1d63c88\" data-set=\"0366a905-aeba-460a-879e-a6dc08ea13b9\" aria-label=\"Uncheck Barbell squat set 1\" aria-pressed=\"true\"><svg class=\"icon\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"m5 12 4 4L19 6\"></path></svg></button></div><div class=\"set-row   \" data-set-row=\"de651368-ab5c-4930-a895-3f6d9477e06f\"><button class=\"set-type\" data-action=\"set-type\" data-id=\"7c6860cc-72fc-455d-91d1-3646f1d63c88\" data-set=\"de651368-ab5c-4930-a895-3f6d9477e06f\" aria-label=\"Set 2 type: working. Open type and current-set options\">2</button><span class=\"previous\">40 × 9</span><input type=\"number\" inputmode=\"decimal\" min=\"0\" max=\"1000\" step=\"any\" data-field=\"kg\" data-id=\"7c6860cc-72fc-455d-91d1-3646f1d63c88\" data-set=\"de651368-ab5c-4930-a895-3f6d9477e06f\" aria-label=\"Barbell squat set 2 weight in kg\" placeholder=\"—\" value=\"60\"><input type=\"number\" inputmode=\"decimal\" min=\"0\" max=\"200\" step=\"1\" data-field=\"reps\" data-id=\"7c6860cc-72fc-455d-91d1-3646f1d63c88\" data-set=\"de651368-ab5c-4930-a895-3f6d9477e06f\" aria-label=\"Barbell squat set 2 reps\" placeholder=\"—\" value=\"10\"><input type=\"number\" inputmode=\"decimal\" min=\"0\" max=\"10\" step=\"1\" data-field=\"rir\" data-id=\"7c6860cc-72fc-455d-91d1-3646f1d63c88\" data-set=\"de651368-ab5c-4930-a895-3f6d9477e06f\" aria-label=\"Barbell squat set 2 optional reps in reserve\" placeholder=\"—\" value=\"2\"><button type=\"button\" class=\"complete-button \" data-action=\"toggle-set\" data-id=\"7c6860cc-72fc-455d-91d1-3646f1d63c88\" data-set=\"de651368-ab5c-4930-a895-3f6d9477e06f\" aria-label=\"Complete Barbell squat set 2\" aria-pressed=\"false\"><svg class=\"icon\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"m5 12 4 4L19 6\"></path></svg></button></div><div class=\"set-row   \" data-set-row=\"7fa0cc2a-038d-4099-9639-1990f21bed88\"><button class=\"set-type\" data-action=\"set-type\" data-id=\"7c6860cc-72fc-455d-91d1-3646f1d63c88\" data-set=\"7fa0cc2a-038d-4099-9639-1990f21bed88\" aria-label=\"Set 3 type: working. Open type and current-set options\">3</button><span class=\"previous\">40 × 9</span><input type=\"number\" inputmode=\"decimal\" min=\"0\" max=\"1000\" step=\"any\" data-field=\"kg\" data-id=\"7c6860cc-72fc-455d-91d1-3646f1d63c88\" data-set=\"7fa0cc2a-038d-4099-9639-1990f21bed88\" aria-label=\"Barbell squat set 3 weight in kg\" placeholder=\"—\" value=\"60\"><input type=\"number\" inputmode=\"decimal\" min=\"0\" max=\"200\" step=\"1\" data-field=\"reps\" data-id=\"7c6860cc-72fc-455d-91d1-3646f1d63c88\" data-set=\"7fa0cc2a-038d-4099-9639-1990f21bed88\" aria-label=\"Barbell squat set 3 reps\" placeholder=\"—\" value=\"10\"><input type=\"number\" inputmode=\"decimal\" min=\"0\" max=\"10\" step=\"1\" data-field=\"rir\" data-id=\"7c6860cc-72fc-455d-91d1-3646f1d63c88\" data-set=\"7fa0cc2a-038d-4099-9639-1990f21bed88\" aria-label=\"Barbell squat set 3 optional reps in reserve\" placeholder=\"—\" value=\"2\"><button type=\"button\" class=\"complete-button \" data-action=\"toggle-set\" data-id=\"7c6860cc-72fc-455d-91d1-3646f1d63c88\" data-set=\"7fa0cc2a-038d-4099-9639-1990f21bed88\" aria-label=\"Complete Barbell squat set 3\" aria-pressed=\"false\"><svg class=\"icon\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"m5 12 4 4L19 6\"></path></svg></button></div></div><div class=\"exercise-footer\"><button type=\"button\" class=\"text-link\" data-action=\"add-set\" data-id=\"7c6860cc-72fc-455d-91d1-3646f1d63c88\">+ Add set</button><span>3 working sets · target 6–10 reps · rest 120s</span></div></section><section class=\"exercise-card\" data-exercise=\"088f5e24-936b-44e2-bda9-8378dc6b0bd7\"><div class=\"exercise-heading\"><span class=\"exercise-order\">03</span><div><h2>Barbell row <span class=\"exercise-completion\" hidden=\"\"></span></h2><p>Back · barbell · total load</p></div><button type=\"button\" class=\"quiet\" data-action=\"exercise-options\" data-id=\"088f5e24-936b-44e2-bda9-8378dc6b0bd7\">Options</button></div><div class=\"recommendation\"><span><svg class=\"icon\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"m13 3-8 11h6l-1 7 9-11h-6z\"></path></svg></span><div><strong>20 kg · 3 × 8–12</strong><details><summary>Why this suggestion?</summary><p>Next session: maintain this load and aim for 9 more total reps across your working sets to reach the ceiling. No extra sets or exercises are requested.</p></details><small>12 saved exposures · moderate confidence · editable coaching suggestion</small></div><button type=\"button\" class=\"quiet\" data-action=\"apply-rec\" data-id=\"088f5e24-936b-44e2-bda9-8378dc6b0bd7\">Use load</button></div><div class=\"exercise-memory\"><button type=\"button\" class=\"text-link\" data-action=\"feedback-open\" data-exercise=\"row\" data-record=\"088f5e24-936b-44e2-bda9-8378dc6b0bd7\">Feedback &amp; notes</button></div><div class=\"exercise-history\"><span>Last session · Nov 19<br><small>First logged working set</small></span><strong>20 kg × 9</strong></div><div class=\"set-table\"><div class=\"set-header\"><span>SET</span><span>PREVIOUS</span><span>KG</span><span>REPS</span><span>RIR <small>opt.</small></span><span>DONE</span></div><div class=\"set-row complete  \" data-set-row=\"add7485b-1f28-4db7-ba4d-2c9a827a0d90\"><button class=\"set-type\" data-action=\"set-type\" data-id=\"088f5e24-936b-44e2-bda9-8378dc6b0bd7\" data-set=\"add7485b-1f28-4db7-ba4d-2c9a827a0d90\" aria-label=\"Set 1 type: working. Open type and current-set options\">1</button><span class=\"previous\">20 × 9</span><input type=\"number\" inputmode=\"decimal\" min=\"0\" max=\"1000\" step=\"any\" data-field=\"kg\" data-id=\"088f5e24-936b-44e2-bda9-8378dc6b0bd7\" data-set=\"add7485b-1f28-4db7-ba4d-2c9a827a0d90\" aria-label=\"Barbell row set 1 weight in kg\" placeholder=\"—\" value=\"60\"><input type=\"number\" inputmode=\"decimal\" min=\"0\" max=\"200\" step=\"1\" data-field=\"reps\" data-id=\"088f5e24-936b-44e2-bda9-8378dc6b0bd7\" data-set=\"add7485b-1f28-4db7-ba4d-2c9a827a0d90\" aria-label=\"Barbell row set 1 reps\" placeholder=\"—\" value=\"10\"><input type=\"number\" inputmode=\"decimal\" min=\"0\" max=\"10\" step=\"1\" data-field=\"rir\" data-id=\"088f5e24-936b-44e2-bda9-8378dc6b0bd7\" data-set=\"add7485b-1f28-4db7-ba4d-2c9a827a0d90\" aria-label=\"Barbell row set 1 optional reps in reserve\" placeholder=\"—\" value=\"2\"><button type=\"button\" class=\"complete-button checked\" data-action=\"toggle-set\" data-id=\"088f5e24-936b-44e2-bda9-8378dc6b0bd7\" data-set=\"add7485b-1f28-4db7-ba4d-2c9a827a0d90\" aria-label=\"Uncheck Barbell row set 1\" aria-pressed=\"true\"><svg class=\"icon\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"m5 12 4 4L19 6\"></path></svg></button></div><div class=\"set-row   \" data-set-row=\"97c0439e-2980-43e3-9f24-719c18877bac\"><button class=\"set-type\" data-action=\"set-type\" data-id=\"088f5e24-936b-44e2-bda9-8378dc6b0bd7\" data-set=\"97c0439e-2980-43e3-9f24-719c18877bac\" aria-label=\"Set 2 type: working. Open type and current-set options\">2</button><span class=\"previous\">20 × 9</span><input type=\"number\" inputmode=\"decimal\" min=\"0\" max=\"1000\" step=\"any\" data-field=\"kg\" data-id=\"088f5e24-936b-44e2-bda9-8378dc6b0bd7\" data-set=\"97c0439e-2980-43e3-9f24-719c18877bac\" aria-label=\"Barbell row set 2 weight in kg\" placeholder=\"—\" value=\"60\"><input type=\"number\" inputmode=\"decimal\" min=\"0\" max=\"200\" step=\"1\" data-field=\"reps\" data-id=\"088f5e24-936b-44e2-bda9-8378dc6b0bd7\" data-set=\"97c0439e-2980-43e3-9f24-719c18877bac\" aria-label=\"Barbell row set 2 reps\" placeholder=\"—\" value=\"10\"><input type=\"number\" inputmode=\"decimal\" min=\"0\" max=\"10\" step=\"1\" data-field=\"rir\" data-id=\"088f5e24-936b-44e2-bda9-8378dc6b0bd7\" data-set=\"97c0439e-2980-43e3-9f24-719c18877bac\" aria-label=\"Barbell row set 2 optional reps in reserve\" placeholder=\"—\" value=\"2\"><button type=\"button\" class=\"complete-button \" data-action=\"toggle-set\" data-id=\"088f5e24-936b-44e2-bda9-8378dc6b0bd7\" data-set=\"97c0439e-2980-43e3-9f24-719c18877bac\" aria-label=\"Complete Barbell row set 2\" aria-pressed=\"false\"><svg class=\"icon\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"m5 12 4 4L19 6\"></path></svg></button></div><div class=\"set-row   \" data-set-row=\"aad9007f-eb1e-4aab-bb1d-2405a7bcd973\"><button class=\"set-type\" data-action=\"set-type\" data-id=\"088f5e24-936b-44e2-bda9-8378dc6b0bd7\" data-set=\"aad9007f-eb1e-4aab-bb1d-2405a7bcd973\" aria-label=\"Set 3 type: working. Open type and current-set options\">3</button><span class=\"previous\">20 × 9</span><input type=\"number\" inputmode=\"decimal\" min=\"0\" max=\"1000\" step=\"any\" data-field=\"kg\" data-id=\"088f5e24-936b-44e2-bda9-8378dc6b0bd7\" data-set=\"aad9007f-eb1e-4aab-bb1d-2405a7bcd973\" aria-label=\"Barbell row set 3 weight in kg\" placeholder=\"—\" value=\"60\"><input type=\"number\" inputmode=\"decimal\" min=\"0\" max=\"200\" step=\"1\" data-field=\"reps\" data-id=\"088f5e24-936b-44e2-bda9-8378dc6b0bd7\" data-set=\"aad9007f-eb1e-4aab-bb1d-2405a7bcd973\" aria-label=\"Barbell row set 3 reps\" placeholder=\"—\" value=\"10\"><input type=\"number\" inputmode=\"decimal\" min=\"0\" max=\"10\" step=\"1\" data-field=\"rir\" data-id=\"088f5e24-936b-44e2-bda9-8378dc6b0bd7\" data-set=\"aad9007f-eb1e-4aab-bb1d-2405a7bcd973\" aria-label=\"Barbell row set 3 optional reps in reserve\" placeholder=\"—\" value=\"2\"><button type=\"button\" class=\"complete-button \" data-action=\"toggle-set\" data-id=\"088f5e24-936b-44e2-bda9-8378dc6b0bd7\" data-set=\"aad9007f-eb1e-4aab-bb1d-2405a7bcd973\" aria-label=\"Complete Barbell row set 3\" aria-pressed=\"false\"><svg class=\"icon\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"m5 12 4 4L19 6\"></path></svg></button></div></div><div class=\"exercise-footer\"><button type=\"button\" class=\"text-link\" data-action=\"add-set\" data-id=\"088f5e24-936b-44e2-bda9-8378dc6b0bd7\">+ Add set</button><span>3 working sets · target 8–12 reps · rest 120s</span></div></section></div><div class=\"workout-end\"><button type=\"button\" class=\"secondary\" data-action=\"pick-exercise\">Add exercise +</button><span>Completed sets count toward your progress.</span><button type=\"button\" class=\"primary\" data-action=\"finish\">Finish workout</button></div>",
+    "options-dark": "<div class=\"dialog-head\"><h2>Barbell bench press</h2><button type=\"button\" class=\"icon-button\" data-action=\"close\" aria-label=\"Close dialog\"><svg class=\"icon\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"m6 6 12 12M6 18 18 6\"></path></svg></button></div><div class=\"exercise-menu\"><div class=\"menu-primary\"><button type=\"button\" class=\"menu-action\" data-action=\"swap\" data-id=\"1c717452-3dcc-4985-b7fc-73e4952de799\"><svg class=\"icon\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M5 12h14m-5-5 5 5-5 5\"></path></svg> Replace exercise</button><button type=\"button\" class=\"menu-action\" data-action=\"exercise-details\" data-id=\"1c717452-3dcc-4985-b7fc-73e4952de799\"><svg class=\"icon\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M4 5h16v16H4zM8 3v4m8-4v4M8 11h8m-8 4h5\"></path></svg> Targets &amp; notes</button><button type=\"button\" class=\"menu-action\" data-action=\"exercise-rule\" data-id=\"1c717452-3dcc-4985-b7fc-73e4952de799\"><svg class=\"icon\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M9 4h6l1 3 3 1v6l-3 1-1 3H9l-1-3-3-1V8l3-1zM12 8a3 3 0 1 0 0 6 3 3 0 0 0 0-6\"></path></svg> Progression &amp; rest</button></div><details class=\"menu-more\"><summary>More actions</summary><div class=\"menu-grid\"><button type=\"button\" class=\"menu-action\" data-action=\"copy-kg\" data-id=\"1c717452-3dcc-4985-b7fc-73e4952de799\">Copy first weight</button><button type=\"button\" class=\"menu-action\" data-action=\"copy-reps\" data-id=\"1c717452-3dcc-4985-b7fc-73e4952de799\">Copy first reps</button><button type=\"button\" class=\"menu-action\" data-action=\"check-all\" data-id=\"1c717452-3dcc-4985-b7fc-73e4952de799\">Check all sets</button><button type=\"button\" class=\"menu-action\" data-action=\"uncheck-all\" data-id=\"1c717452-3dcc-4985-b7fc-73e4952de799\">Uncheck all sets</button><button type=\"button\" class=\"menu-action\" data-action=\"move-up\" data-id=\"1c717452-3dcc-4985-b7fc-73e4952de799\">Move up</button><button type=\"button\" class=\"menu-action\" data-action=\"move-down\" data-id=\"1c717452-3dcc-4985-b7fc-73e4952de799\">Move down</button></div><div class=\"menu-destructive\"><button type=\"button\" class=\"menu-action\" data-action=\"remove-set\" data-id=\"1c717452-3dcc-4985-b7fc-73e4952de799\">Remove last set</button><button type=\"button\" class=\"menu-action\" data-action=\"remove-exercise\" data-id=\"1c717452-3dcc-4985-b7fc-73e4952de799\">Remove exercise</button></div></details><details class=\"menu-technique\"><summary>Technique cues</summary><p>Use a stable setup. Lower under control, keep wrists stacked, and use safeties or a spotter.</p></details></div>"
+  },
+  "geometry": [
+    {
+      "theme": "light",
+      "width": 320,
+      "input": {
+        "x": 27,
+        "y": 436.765625,
+        "w": 208.71875,
+        "h": 46,
+        "border": "0px",
+        "padding": "11px 12px",
+        "outline": "rgb(32, 43, 50) none 3px",
+        "shadow": "none",
+        "display": "block"
+      },
+      "frame": {
+        "x": 16,
+        "y": 435.765625,
+        "w": 230.71875,
+        "h": 48,
+        "border": "1px",
+        "padding": "0px 10px",
+        "outline": "rgb(32, 43, 50) none 3px",
+        "shadow": "none",
+        "display": "flex"
+      },
+      "icon": {
+        "x": 0,
+        "y": 0,
+        "w": 0,
+        "h": 0,
+        "border": "0px",
+        "padding": "0px",
+        "outline": "rgb(32, 43, 50) none 3px",
+        "shadow": "none",
+        "display": "none"
+      },
+      "overflow": false
+    },
+    {
+      "theme": "light",
+      "width": 375,
+      "input": {
+        "x": 33,
+        "y": 370.03125,
+        "w": 251.71875,
+        "h": 46,
+        "border": "0px",
+        "padding": "11px 12px",
+        "outline": "rgb(32, 43, 50) none 3px",
+        "shadow": "none",
+        "display": "block"
+      },
+      "frame": {
+        "x": 22,
+        "y": 369.03125,
+        "w": 273.71875,
+        "h": 48,
+        "border": "1px",
+        "padding": "0px 10px",
+        "outline": "rgb(32, 43, 50) none 3px",
+        "shadow": "none",
+        "display": "flex"
+      },
+      "icon": {
+        "x": 0,
+        "y": 0,
+        "w": 0,
+        "h": 0,
+        "border": "0px",
+        "padding": "0px",
+        "outline": "rgb(32, 43, 50) none 3px",
+        "shadow": "none",
+        "display": "none"
+      },
+      "overflow": false
+    },
+    {
+      "theme": "light",
+      "width": 390,
+      "input": {
+        "x": 33,
+        "y": 370.03125,
+        "w": 266.71875,
+        "h": 46,
+        "border": "0px",
+        "padding": "11px 12px",
+        "outline": "rgb(32, 43, 50) none 3px",
+        "shadow": "none",
+        "display": "block"
+      },
+      "frame": {
+        "x": 22,
+        "y": 369.03125,
+        "w": 288.71875,
+        "h": 48,
+        "border": "1px",
+        "padding": "0px 10px",
+        "outline": "rgb(32, 43, 50) none 3px",
+        "shadow": "none",
+        "display": "flex"
+      },
+      "icon": {
+        "x": 0,
+        "y": 0,
+        "w": 0,
+        "h": 0,
+        "border": "0px",
+        "padding": "0px",
+        "outline": "rgb(32, 43, 50) none 3px",
+        "shadow": "none",
+        "display": "none"
+      },
+      "overflow": false
+    },
+    {
+      "theme": "light",
+      "width": 430,
+      "input": {
+        "x": 33,
+        "y": 308.03125,
+        "w": 306.71875,
+        "h": 46,
+        "border": "0px",
+        "padding": "11px 12px",
+        "outline": "rgb(32, 43, 50) none 3px",
+        "shadow": "none",
+        "display": "block"
+      },
+      "frame": {
+        "x": 22,
+        "y": 307.03125,
+        "w": 328.71875,
+        "h": 48,
+        "border": "1px",
+        "padding": "0px 10px",
+        "outline": "rgb(32, 43, 50) none 3px",
+        "shadow": "none",
+        "display": "flex"
+      },
+      "icon": {
+        "x": 0,
+        "y": 0,
+        "w": 0,
+        "h": 0,
+        "border": "0px",
+        "padding": "0px",
+        "outline": "rgb(32, 43, 50) none 3px",
+        "shadow": "none",
+        "display": "none"
+      },
+      "overflow": false
+    },
+    {
+      "theme": "light",
+      "width": 768,
+      "input": {
+        "x": 242,
+        "y": 278.859375,
+        "w": 408.71875,
+        "h": 46,
+        "border": "0px",
+        "padding": "11px 12px",
+        "outline": "rgb(32, 43, 50) none 3px",
+        "shadow": "none",
+        "display": "block"
+      },
+      "frame": {
+        "x": 198,
+        "y": 277.859375,
+        "w": 465.71875,
+        "h": 48,
+        "border": "1px",
+        "padding": "0px 12px",
+        "outline": "rgb(32, 43, 50) none 3px",
+        "shadow": "none",
+        "display": "flex"
+      },
+      "icon": {
+        "x": 211,
+        "y": 291.359375,
+        "w": 21,
+        "h": 21,
+        "border": "0px",
+        "padding": "0px",
+        "outline": "rgb(32, 43, 50) none 3px",
+        "shadow": "none",
+        "display": "block"
+      },
+      "overflow": false
+    },
+    {
+      "theme": "light",
+      "width": 1024,
+      "input": {
+        "x": 242,
+        "y": 256.671875,
+        "w": 664.71875,
+        "h": 46,
+        "border": "0px",
+        "padding": "11px 12px",
+        "outline": "rgb(32, 43, 50) none 3px",
+        "shadow": "none",
+        "display": "block"
+      },
+      "frame": {
+        "x": 198,
+        "y": 255.671875,
+        "w": 721.71875,
+        "h": 48,
+        "border": "1px",
+        "padding": "0px 12px",
+        "outline": "rgb(32, 43, 50) none 3px",
+        "shadow": "none",
+        "display": "flex"
+      },
+      "icon": {
+        "x": 211,
+        "y": 269.171875,
+        "w": 21,
+        "h": 21,
+        "border": "0px",
+        "padding": "0px",
+        "outline": "rgb(32, 43, 50) none 3px",
+        "shadow": "none",
+        "display": "block"
+      },
+      "overflow": false
+    },
+    {
+      "theme": "light",
+      "width": 1440,
+      "input": {
+        "x": 271.5,
+        "y": 256.671875,
+        "w": 1021.71875,
+        "h": 46,
+        "border": "0px",
+        "padding": "11px 12px",
+        "outline": "rgb(32, 43, 50) none 3px",
+        "shadow": "none",
+        "display": "block"
+      },
+      "frame": {
+        "x": 227.5,
+        "y": 255.671875,
+        "w": 1078.71875,
+        "h": 48,
+        "border": "1px",
+        "padding": "0px 12px",
+        "outline": "rgb(32, 43, 50) none 3px",
+        "shadow": "none",
+        "display": "flex"
+      },
+      "icon": {
+        "x": 240.5,
+        "y": 269.171875,
+        "w": 21,
+        "h": 21,
+        "border": "0px",
+        "padding": "0px",
+        "outline": "rgb(32, 43, 50) none 3px",
+        "shadow": "none",
+        "display": "block"
+      },
+      "overflow": false
+    },
+    {
+      "theme": "dark",
+      "width": 320,
+      "input": {
+        "x": 27,
+        "y": 436.765625,
+        "w": 208.71875,
+        "h": 46,
+        "border": "0px",
+        "padding": "11px 12px",
+        "outline": "rgb(237, 243, 245) none 3px",
+        "shadow": "none",
+        "display": "block"
+      },
+      "frame": {
+        "x": 16,
+        "y": 435.765625,
+        "w": 230.71875,
+        "h": 48,
+        "border": "1px",
+        "padding": "0px 10px",
+        "outline": "rgb(237, 243, 245) none 3px",
+        "shadow": "none",
+        "display": "flex"
+      },
+      "icon": {
+        "x": 0,
+        "y": 0,
+        "w": 0,
+        "h": 0,
+        "border": "0px",
+        "padding": "0px",
+        "outline": "rgb(237, 243, 245) none 3px",
+        "shadow": "none",
+        "display": "none"
+      },
+      "overflow": false
+    },
+    {
+      "theme": "dark",
+      "width": 375,
+      "input": {
+        "x": 33,
+        "y": 370.03125,
+        "w": 251.71875,
+        "h": 46,
+        "border": "0px",
+        "padding": "11px 12px",
+        "outline": "rgb(237, 243, 245) none 3px",
+        "shadow": "none",
+        "display": "block"
+      },
+      "frame": {
+        "x": 22,
+        "y": 369.03125,
+        "w": 273.71875,
+        "h": 48,
+        "border": "1px",
+        "padding": "0px 10px",
+        "outline": "rgb(237, 243, 245) none 3px",
+        "shadow": "none",
+        "display": "flex"
+      },
+      "icon": {
+        "x": 0,
+        "y": 0,
+        "w": 0,
+        "h": 0,
+        "border": "0px",
+        "padding": "0px",
+        "outline": "rgb(237, 243, 245) none 3px",
+        "shadow": "none",
+        "display": "none"
+      },
+      "overflow": false
+    },
+    {
+      "theme": "dark",
+      "width": 390,
+      "input": {
+        "x": 33,
+        "y": 370.03125,
+        "w": 266.71875,
+        "h": 46,
+        "border": "0px",
+        "padding": "11px 12px",
+        "outline": "rgb(237, 243, 245) none 3px",
+        "shadow": "none",
+        "display": "block"
+      },
+      "frame": {
+        "x": 22,
+        "y": 369.03125,
+        "w": 288.71875,
+        "h": 48,
+        "border": "1px",
+        "padding": "0px 10px",
+        "outline": "rgb(237, 243, 245) none 3px",
+        "shadow": "none",
+        "display": "flex"
+      },
+      "icon": {
+        "x": 0,
+        "y": 0,
+        "w": 0,
+        "h": 0,
+        "border": "0px",
+        "padding": "0px",
+        "outline": "rgb(237, 243, 245) none 3px",
+        "shadow": "none",
+        "display": "none"
+      },
+      "overflow": false
+    },
+    {
+      "theme": "dark",
+      "width": 430,
+      "input": {
+        "x": 33,
+        "y": 308.03125,
+        "w": 306.71875,
+        "h": 46,
+        "border": "0px",
+        "padding": "11px 12px",
+        "outline": "rgb(237, 243, 245) none 3px",
+        "shadow": "none",
+        "display": "block"
+      },
+      "frame": {
+        "x": 22,
+        "y": 307.03125,
+        "w": 328.71875,
+        "h": 48,
+        "border": "1px",
+        "padding": "0px 10px",
+        "outline": "rgb(237, 243, 245) none 3px",
+        "shadow": "none",
+        "display": "flex"
+      },
+      "icon": {
+        "x": 0,
+        "y": 0,
+        "w": 0,
+        "h": 0,
+        "border": "0px",
+        "padding": "0px",
+        "outline": "rgb(237, 243, 245) none 3px",
+        "shadow": "none",
+        "display": "none"
+      },
+      "overflow": false
+    },
+    {
+      "theme": "dark",
+      "width": 768,
+      "input": {
+        "x": 242,
+        "y": 278.859375,
+        "w": 408.71875,
+        "h": 46,
+        "border": "0px",
+        "padding": "11px 12px",
+        "outline": "rgb(237, 243, 245) none 3px",
+        "shadow": "none",
+        "display": "block"
+      },
+      "frame": {
+        "x": 198,
+        "y": 277.859375,
+        "w": 465.71875,
+        "h": 48,
+        "border": "1px",
+        "padding": "0px 12px",
+        "outline": "rgb(237, 243, 245) none 3px",
+        "shadow": "none",
+        "display": "flex"
+      },
+      "icon": {
+        "x": 211,
+        "y": 291.359375,
+        "w": 21,
+        "h": 21,
+        "border": "0px",
+        "padding": "0px",
+        "outline": "rgb(237, 243, 245) none 3px",
+        "shadow": "none",
+        "display": "block"
+      },
+      "overflow": false
+    },
+    {
+      "theme": "dark",
+      "width": 1024,
+      "input": {
+        "x": 242,
+        "y": 256.671875,
+        "w": 664.71875,
+        "h": 46,
+        "border": "0px",
+        "padding": "11px 12px",
+        "outline": "rgb(237, 243, 245) none 3px",
+        "shadow": "none",
+        "display": "block"
+      },
+      "frame": {
+        "x": 198,
+        "y": 255.671875,
+        "w": 721.71875,
+        "h": 48,
+        "border": "1px",
+        "padding": "0px 12px",
+        "outline": "rgb(237, 243, 245) none 3px",
+        "shadow": "none",
+        "display": "flex"
+      },
+      "icon": {
+        "x": 211,
+        "y": 269.171875,
+        "w": 21,
+        "h": 21,
+        "border": "0px",
+        "padding": "0px",
+        "outline": "rgb(237, 243, 245) none 3px",
+        "shadow": "none",
+        "display": "block"
+      },
+      "overflow": false
+    },
+    {
+      "theme": "dark",
+      "width": 1440,
+      "input": {
+        "x": 271.5,
+        "y": 256.671875,
+        "w": 1021.71875,
+        "h": 46,
+        "border": "0px",
+        "padding": "11px 12px",
+        "outline": "rgb(237, 243, 245) none 3px",
+        "shadow": "none",
+        "display": "block"
+      },
+      "frame": {
+        "x": 227.5,
+        "y": 255.671875,
+        "w": 1078.71875,
+        "h": 48,
+        "border": "1px",
+        "padding": "0px 12px",
+        "outline": "rgb(237, 243, 245) none 3px",
+        "shadow": "none",
+        "display": "flex"
+      },
+      "icon": {
+        "x": 240.5,
+        "y": 269.171875,
+        "w": 21,
+        "h": 21,
+        "border": "0px",
+        "padding": "0px",
+        "outline": "rgb(237, 243, 245) none 3px",
+        "shadow": "none",
+        "display": "block"
+      },
+      "overflow": false
+    }
+  ]
+}

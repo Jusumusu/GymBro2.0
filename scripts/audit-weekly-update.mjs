@@ -1,0 +1,18 @@
+import assert from 'node:assert/strict';
+import {mkdir,writeFile} from 'node:fs/promises';
+import {EXERCISES} from '../src/exercises.js';
+import {ALL_EXPANDED_EXERCISES,PREPARED_SPECIAL_EXERCISES} from '../src/exercise-catalog.js';
+import {CONTRIBUTION_MUSCLES,discoverableMuscles} from '../src/muscle-contributions.js';
+import {buildWeeklyReview} from '../src/weekly-review.js';
+import {recommend} from '../src/engine.js';
+import {exerciseIndex,browseExercises} from '../src/exercise-browser.js';
+import {refinementFixture} from '../tests/fixtures/refinement.mjs';
+assert.equal(EXERCISES.length,198,'This audit captures the fixed 0.6.0 baseline; do not replace it after expansion.');
+const count=key=>Object.fromEntries([...new Set(EXERCISES.map(e=>e[key]))].sort().map(v=>[v,EXERCISES.filter(e=>e[key]===v).length]));
+const catalog={version:'0.6.0',source:'30b63d01483cb7c4fe3df9dace07c98b9d416d9e',available:EXERCISES.length,preparedSpecial:PREPARED_SPECIAL_EXERCISES.length,allDefined:43+ALL_EXPANDED_EXERCISES.length,primary:Object.fromEntries(CONTRIBUTION_MUSCLES.map(m=>[m,EXERCISES.filter(e=>e.muscle===m).length])),discoverable:Object.fromEntries(CONTRIBUTION_MUSCLES.map(m=>[m,EXERCISES.filter(e=>discoverableMuscles(e).includes(m)).length])),equipment:count('equipment'),patterns:count('pattern')};
+const fixture=refinementFixture('2026-11-19');fixture.photos=[];fixture.upgrade.schedule=[];fixture.upgrade.recurring=[{id:'review-week',planId:'routine',planName:'Full body A',startDate:'2026-11-16',endDate:null,weekdays:[1,3,5],time:'19:00',reminderMinutes:30}];fixture.sessions.find(w=>w.id==='week-0-0').scheduledOccurrenceId='review-week@2026-11-16';fixture.sessions.find(w=>w.id==='week-0-1').scheduledOccurrenceId='review-week@2026-11-18';
+const review=buildWeeklyReview(fixture,{date:'2026-11-19',asOf:'2026-11-19'}),index=exerciseIndex(EXERCISES),search={};for(const query of ['bench','benhc','sqaute','deadlfift','lat pulldwon','bicep crul','RDL','DB Bench','incline dumbbell'])search[query]=browseExercises(index,{query}).slice(0,5).map(e=>({id:e.id,name:e.name}));
+const prescription={sets:3,min:6,max:10},session=(id,reps,rir,kg=60)=>({id,date:'2026-11-18',startedAt:1,readiness:null,exercises:[{exerciseId:'bench',...prescription,entries:reps.map((reps,i)=>({id:String(i),kg,reps,rir,done:true,type:'working'}))}]});
+const inputs={ceiling:[session('ceiling',[10,10,10],null)],bodyweight:[session('bodyweight',[10,10,10],2,0)],mixed:[session('mixed',[10,10,10],2)]};inputs.mixed[0].exercises[0].entries[2].kg=57.5;
+const progression=Object.fromEntries(Object.entries(inputs).map(([name,sessions])=>[name,recommend({exerciseId:'bench',sessions,prescription,increment:2.5,now:new Date('2026-11-19T12:00:00Z')})]));
+await mkdir('docs/weekly-review-progression-search',{recursive:true});await writeFile('docs/weekly-review-progression-search/catalog-baseline.json',JSON.stringify({catalog,exercises:EXERCISES},null,2)+'\n');await writeFile('docs/weekly-review-progression-search/baseline.json',JSON.stringify({catalog,review,search,progression,fixture},null,2)+'\n');console.log(JSON.stringify({catalog,search,progression,scheduledSessionsReported:review.consistency.scheduled},null,2));
