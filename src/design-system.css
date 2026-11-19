@@ -1,4 +1,4 @@
-/* Approved A — Aero: shared geometry, solid content and selective balanced glass. */
+/* Approved A — Aero: shared geometry, solid content and selective Clear glass. */
 html{scroll-padding-top:24px;scroll-padding-bottom:140px}
 body{font-family:var(--sans);font-size:14px;line-height:1.6;background:var(--paper);color:var(--ink)}
 html[data-theme] h1{font-size:34px;font-weight:var(--heading-weight);letter-spacing:-1.3px;line-height:1.08}
@@ -304,3 +304,7 @@ html[data-theme] .browser-search .search>.icon{display:block;width:20px;height:2
 html[data-theme] .browser-search .search input{min-width:0;flex:1;min-height:46px;padding:0;border:0;border-radius:0;background:transparent;box-shadow:none;outline:none;font-size:14px;line-height:1.5}
 html[data-theme] .browser-search .search:focus-within{border-color:var(--accent);outline:3px solid var(--accent-soft);outline-offset:2px}
 html[data-theme] .browser-search>.quiet{margin:0;min-height:48px;align-self:center;background:transparent;border-radius:12px}
+
+/* Keep controls readable when a photo or a short viewport puts unpredictable content behind them. */
+html[data-theme] body:has(.photo-grid img) :is(.mobile-nav,.advanced-rest){--glass-fill:var(--surface);--glass-filter:none;--glass-edge:var(--line)}
+@media(max-height:600px){html[data-theme] .mobile-nav{--glass-fill:var(--surface);--glass-filter:none;--glass-edge:var(--line)}}

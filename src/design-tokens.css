@@ -1,4 +1,4 @@
-/* Approved A — Aero. Shared by the app and standalone updater. */
+/* Approved A — Aero, requested Clear glass refinement. Shared by the app and standalone updater. */
 @font-face{font-family:Manrope;src:url('../manrope.woff') format('woff');font-style:normal;font-weight:200 800;font-display:swap}
 @font-face{font-family:'DM Sans';src:url('../dm-sans.woff') format('woff');font-style:normal;font-weight:100 1000;font-display:swap}
 :root,html[data-theme]{
@@ -11,7 +11,7 @@
  --notice-surface:#fcf3df;--notice-ink:#735019;--notice-border:#c9ad72;--missed-surface:#f8e9e5;--missed-ink:#853b2d;
  --heat-low:#e6ece9;--heat-moderate:#91afa5;--heat-high:#396e60;--overlay:#10181780;
  --card-radius:14px;--radius:14px;--card-padding:22px;--control-radius:10px;--page-space:22px;--heading-weight:650;
- --glass-rgb:255 255 255;--glass-alpha:.80;--glass-blur:16px;--glass-edge:#ffffffc9;--glass-rim:#ffffffd9;
+ --glass-rgb:255 255 255;--glass-alpha:.28;--glass-blur:16px;--glass-edge:#ffffffc9;--glass-rim:#ffffffd9;
  --glass-fill:rgb(var(--glass-rgb) / var(--glass-alpha));--glass-filter:blur(var(--glass-blur)) saturate(1.15);
  --glass-shadow:0 8px 24px #17232d14,inset 0 1px var(--glass-rim),inset 0 -1px #17232d0a;
  --green:var(--success);--lime:var(--hero-action);--chart-line:var(--progress);--shadow:0 3px 20px #12212c06;--control-height:46px;--preview-surface:#f2d8a7;--preview-ink:#432d13;
@@ -24,7 +24,7 @@ html[data-theme=dark]{
  --success:#8dc9a6;--success-soft:#243b30;--record:#dfc080;--record-soft:#3a3325;--progress:#8dbecb;
  --danger:#efadb2;--danger-on:#431c23;--status-error:#84353e;--notice-surface:#3a3020;--notice-ink:#edcc94;--notice-border:#7f6a43;--missed-surface:#3d2b29;--missed-ink:#edb2a7;
  --heat-low:#293633;--heat-moderate:#668d7d;--heat-high:#a5d1bc;--overlay:#080b0cc9;
- --glass-rgb:39 48 53;--glass-edge:#a9c1ce38;--glass-rim:#d8e8f529;--glass-shadow:0 10px 28px #0004,inset 0 1px var(--glass-rim),inset 0 -1px #ffffff05;
+ --glass-rgb:39 48 53;--glass-alpha:.34;--glass-edge:#a9c1ce38;--glass-rim:#d8e8f529;--glass-shadow:0 10px 28px #0004,inset 0 1px var(--glass-rim),inset 0 -1px #ffffff05;
  --preview-surface:#e7c58f;--preview-ink:#34240f;--green:var(--success);--lime:var(--hero-action);--chart-line:var(--progress);color-scheme:dark;
 }
 @media(prefers-reduced-transparency:reduce){:root,html[data-theme]{--glass-fill:var(--surface);--glass-filter:none;--glass-edge:var(--line);--glass-rim:transparent;--glass-shadow:none}}

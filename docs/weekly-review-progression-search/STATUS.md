@@ -9,11 +9,19 @@ Functional app: https://gym-bro-design-review.jesse03sousa.chatgpt.site/preview/
 
 The retained Sites project is private to its owner. Its source was tested in local Chromium before packaging; native Sites deployment verifies publication. The managed live-site browser is unavailable, so no live Safari or physical-phone verification is claimed.
 
-## Approval record
+## Requested Clear-glass refinement
 
-No Weekly Check-In layout or new glass level is selected. The brief requires this checkpoint before meaningful final aesthetic integration. Three actual rendered, paired light/dark layouts are available: **A Weekly brief**, **B Coach’s letter**, **C Week in view**. Three independently selectable glass levels are available: **A Subtle**, **B Balanced**, **C High**. Recommendation: **Weekly A + Glass B**. The review supports mixing, body/strength/new-journal fixtures, active workouts, menus, modals and opaque fallback. Choices in the preview do not submit approval.
+The user explicitly kept **A — Aero** and requested glass more transparent than **Expressive**. Clear is applied to the branch's existing selective glass controls: **28% light / 34% dark fill, 16px blur**, compared with Expressive's **66% fill, 24px blur**. Palette, typography, geometry and the existing Weekly layout are retained. Inputs/cards/dialog content stay solid. Photo backgrounds, short navigation viewports, reduced-transparency preferences and unsupported filtering use readable solid fallbacks. No new runtime dependency or backdrop observer is added.
 
-The functional app retains the approved Aero layout and glass values. Its search alignment is a minor repair to the existing component. Earlier chart/Focus/program-creator concepts and 21 special tracking definitions remain unselected/inactive; this update does not claim their integration.
+Current refinement review: https://gym-bro-design-review.jesse03sousa.chatgpt.site/preview/docs/weekly-review-progression-search/clear-glass/
+
+Seven actual Chromium checks cover paired real-app captures, seven widths in each theme, solid fields/cards, unchanged journal, short-screen/reduced-transparency/photo fallbacks and offline reload with the complete active journal. This does not certify physical Safari/iOS/Android behavior.
+
+## Earlier design checkpoint
+
+No new Weekly Check-In layout is selected. The earlier three glass presets were superseded by the user’s explicit request for Clear glass beyond Expressive. The brief requires this checkpoint before meaningful final aesthetic integration. Three actual rendered, paired light/dark layouts are available: **A Weekly brief**, **B Coach’s letter**, **C Week in view**. Three independently selectable glass levels are available: **A Subtle**, **B Balanced**, **C High**. Recommendation: **Weekly A + Glass B**. The review supports mixing, body/strength/new-journal fixtures, active workouts, menus, modals and opaque fallback. Choices in the preview do not submit approval.
+
+The functional app retains the approved Aero layout with the requested Clear glass values. Its search alignment is a minor repair to the existing component. Earlier chart/Focus/program-creator concepts and 21 special tracking definitions remain unselected/inactive; this update does not claim their integration.
 
 ## Implemented independently
 

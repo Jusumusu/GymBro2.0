@@ -8,7 +8,7 @@
   },
   "candidatePreview": {
     "version": "0.7.0",
-    "build": "ba90abb98e4e",
+    "build": "7cc2b2abc06f",
     "environment": "preview"
   },
   "checks": {
@@ -63,7 +63,8 @@
       768,
       1024,
       1440
-    ]
+    ],
+    "clearGlassBrowser": 7
   },
   "search": {
     "syntheticRows": 5000,
@@ -73,9 +74,10 @@
   },
   "designApproval": {
     "weekly": null,
-    "glass": null,
-    "recommendation": "Weekly A + Glass B",
-    "finalAestheticIntegration": false
+    "identity": "A \u2014 Aero, retained by user",
+    "glass": "Clear: requested beyond Expressive, 28% light / 34% dark, 16px blur",
+    "weeklyAestheticIntegration": false,
+    "glassAestheticIntegration": true
   },
   "deployment": {
     "githubRun": 44550737996,
