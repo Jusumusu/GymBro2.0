@@ -1,0 +1,21 @@
+{
+  "from": {
+    "version": "0.5.0",
+    "build": "22b389901373"
+  },
+  "to": {
+    "version": "0.6.0",
+    "build": "062b5fb80f5d"
+  },
+  "checks": [
+    "Released production 0.5.0 contains history, an active timer/draft, custom ID collision, preferences and private photo",
+    "Publishing 0.6.0 prompts the installed production app without interrupting its workout",
+    "Normal Update app opens production 0.6.0 with accurate released-feature notes",
+    "Explicit production update preserves the full journal, including colliding custom identity and old-format timer",
+    "Private photo bytes remain identical",
+    "Design review links always open the isolated preview from both production and preview documentation",
+    "Production 0.6.0 and its unchanged complete journal reopen offline"
+  ],
+  "errors": [],
+  "scope": "Actual archived production bundle upgraded in Chromium with synthetic data and real worker activation; physical mobile browsers not certified."
+}
