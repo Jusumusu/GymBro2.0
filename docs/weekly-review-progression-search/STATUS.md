@@ -9,7 +9,17 @@ Functional app: https://gym-bro-design-review.jesse03sousa.chatgpt.site/preview/
 
 The retained Sites project is private to its owner. Its source was tested in local Chromium before packaging; native Sites deployment verifies publication. The managed live-site browser is unavailable, so no live Safari or physical-phone verification is claimed.
 
-## Current Chrome-on-iOS correction — November 21
+## Current fluid-material revision — November 21
+
+The user rejected the static transparent result and requested the liquid part of the effect plus a little frost. This supersedes the preceding zero-fill requirements. Aero colours, geometry, fonts, working fields and the existing Weekly layout are preserved.
+
+The material now has **4px frost / 10% fill in light mode and 5px / 14% in dark**. Both iOS/WebKit and Chromium get the same **touch-following highlights, elastic press/release, and a glass selection that stretches and springs between tabs**. The backdrop itself moves on a decorative surface; labels and hit targets stay fixed. Motion survives the app's navigation and timer-adjustment redraws. No timers or journal fields are read or modified by the material controller. Resize and direct pointer events drive the effect; there is no continuous JavaScript animation loop. Decorative nodes are aria-hidden.
+
+The old implementation had gated refraction on Chromium and left WebKit static. Motion is now independent of that enhancement. Apple’s proprietary native background refraction remains unavailable on the website; Chromium can additionally render the SVG rim field. **Reduced Motion** disables every spring/selection animation and **Reduced Transparency** makes the surface solid. Their preview Settings notices update live when the device preferences change. The installed build label remains visible for update verification.
+
+Validation: ten browser workflow checks cover real touch deformation/highlight movement, actual selected-pill positions over time across app redraw, timer press and a real +15-second adjustment, both accessibility preferences, unobstructed set completion, four phone sizes in both themes, the interactive review demo, unchanged records and offline reload. Four actual archived **95604f6248bc → current-build** update checks preserve the full journal and active timer and install/cache the new shared material stylesheet. All 287 unit tests pass; the existing Aero full-app suite passes 178 layout checks and pointer/keyboard/dialog/timer/offline/updater flows. These are Chromium/Chrome-iOS-UA tests, not physical WebKit/iPhone certification.
+
+## Earlier Chrome-on-iOS correction — superseded
 
 The user identified bottom navigation and the rest timer in **Chrome on iOS** as still frosted. A real prior-build reproduction (`0f82e99`, build `12a7709690c4`) confirms the old max-height:600px rule makes the navigation **100% opaque** at compact phone sizes. The photo-presence rule also silently replaced clear panes with solid surfaces. Both blanket rules are removed.
 

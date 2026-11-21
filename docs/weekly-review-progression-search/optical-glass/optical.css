@@ -5,3 +5,5 @@
 @media(prefers-reduced-transparency:reduce){.optical-demo-lens[data-liquid-glass=clear-css]{background:var(--surface);backdrop-filter:none;-webkit-backdrop-filter:none}}
 
 .optical-demo-lens[data-liquid-glass=clear-css]::before{content:none;display:none;background:none;-webkit-mask:none;mask:none}
+
+.demo-tabbar{position:relative!important;inset:auto!important;display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr));height:68px;border:1px solid transparent;border-radius:25px;max-width:460px;padding:6px;gap:5px;margin:25px auto;z-index:1}.demo-tabbar button{min-height:54px;min-width:0;border:0;background:transparent;color:var(--muted);border-radius:17px;font:600 13px var(--sans);cursor:pointer}.demo-tabbar button[aria-current]{color:var(--accent)}.optical-demo-lens{cursor:pointer}.optical-demo-lens:focus-visible{outline:3px solid var(--accent);outline-offset:5px}

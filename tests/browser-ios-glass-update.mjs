@@ -1,3 +1,4 @@
+// Historical zero-fill material check; current material coverage is browser-fluid-glass.mjs and browser-fluid-update.mjs.
 import assert from 'node:assert/strict';
 import {cp,mkdir,readFile,writeFile} from 'node:fs/promises';
 import {browser} from './helpers/mobile-browser.mjs';

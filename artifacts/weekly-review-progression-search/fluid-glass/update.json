@@ -1,0 +1,18 @@
+{
+  "from": {
+    "version": "0.7.0",
+    "build": "95604f6248bc"
+  },
+  "to": {
+    "version": "0.7.0",
+    "build": "5a0e98cff28d"
+  },
+  "checks": [
+    "The actual previously published clear-only build is installed with the full active journal",
+    "The installed 0.7 app detects the new fluid-material build without interrupting the draft",
+    "Explicit update verifies the new shell, including the new shared material stylesheet, and preserves the entire journal/timer",
+    "The new material, motion controller and unchanged full journal reopen offline"
+  ],
+  "errors": [],
+  "scope": "Actual archived prior worker and real update/offline lifecycle in Chromium with Chrome-iOS UA. Physical WebKit/iPhone not certified."
+}
