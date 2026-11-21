@@ -115,14 +115,17 @@ html[data-theme] .recommendation>span{color:var(--accent)}
 html[data-theme] .recommendation strong{font-size:13px}.recommendation small{display:block;line-height:1.6}
 html[data-theme] .recommendation small,.recommendation p{color:var(--muted)}
 /* One reusable glass material; content itself remains opaque. */
-html[data-theme] :is(.mobile-nav,.exercise-jump-nav,.advanced-rest){background:var(--glass-fill);border:1px solid var(--glass-edge);-webkit-backdrop-filter:var(--glass-filter);backdrop-filter:var(--glass-filter);box-shadow:var(--glass-shadow)}
+html[data-theme] :is(.mobile-nav,.exercise-jump-nav,.advanced-rest){background:var(--glass-fill);border:1px solid var(--glass-edge);-webkit-backdrop-filter:var(--glass-optics,var(--glass-filter));backdrop-filter:var(--glass-optics,var(--glass-filter));box-shadow:var(--glass-shadow)}
 .exercise-jump-nav{display:flex;gap:5px;padding:6px;border-radius:calc(var(--control-radius) + 10px);overflow-x:auto;scrollbar-width:none;margin:0 0 24px;position:sticky;top:8px;z-index:12;max-width:100%}
 .exercise-jump-nav button{white-space:nowrap;min-height:44px;padding:8px 13px;border:1px solid transparent;border-radius:19px;font-size:11px;flex-shrink:0;color:var(--muted)}
 .exercise-jump-nav button span{font:500 10px var(--numerals);margin-right:6px}
-.exercise-jump-nav button[aria-current]{background:var(--surface);border-color:var(--glass-edge);color:var(--accent);box-shadow:inset 0 1px 0 var(--glass-rim)}
+.exercise-jump-nav button[aria-current]{background:var(--glass-active-fill);border-color:var(--glass-edge);color:var(--accent);box-shadow:inset 0 1px 0 var(--glass-rim)}
 html[data-theme] .advanced-rest{color:var(--ink);border-radius:19px;bottom:24px;padding:12px 16px}
 .advanced-rest strong{font-family:var(--numerals);font-weight:600}.advanced-rest .quiet{color:var(--ink)}
-html[data-theme] .mobile-nav::before,html[data-theme] .advanced-rest::before{content:'';position:absolute;inset:0;border-radius:inherit;pointer-events:none;background:linear-gradient(115deg,#ffffff20,transparent 56%,#ffffff10)}
+/* Reflection is restricted to a thin rim; there is no white wash across the pane. */
+html[data-theme] :is(.mobile-nav,.advanced-rest,.exercise-jump-nav,.sidebar nav)::before{content:'';position:absolute;inset:0;padding:1px;border-radius:inherit;pointer-events:none;background:linear-gradient(130deg,#fffffff0 0%,#ffffff08 26%,#ffffff00 52%,#ffffff50 76%,#ffffffa0 100%);-webkit-mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);-webkit-mask-composite:xor;mask-composite:exclude}
+html[data-theme] .sidebar nav{position:relative}
+
 /* Secondary screens share the same controls and hierarchy. */
 html[data-theme] .chart-label{fill:var(--muted);font-family:var(--sans)}
 html[data-theme] .gridline{stroke:var(--line);stroke-dasharray:none}
@@ -205,7 +208,7 @@ html[data-theme] .preview-banner{background:var(--preview-surface);color:var(--p
  .exercise-jump-nav button{font-size:10px;padding:8px 10px}
  html[data-theme] .mobile-nav{display:flex;inset:auto max(12px,env(safe-area-inset-right)) max(16px,env(safe-area-inset-bottom)) max(12px,env(safe-area-inset-left));height:71px;border-radius:26px;padding:6px;z-index:40}
  html[data-theme] .mobile-nav a{height:57px;min-height:44px;border:1px solid transparent;border-radius:17px;gap:5px;font-size:9px;z-index:1;position:relative;color:var(--muted)}
- html[data-theme] .mobile-nav a[aria-current]{background:var(--surface);color:var(--accent);border-color:var(--glass-edge);box-shadow:0 2px 9px #152b3810}
+ html[data-theme] .mobile-nav a[aria-current]{background:var(--glass-active-fill);color:var(--accent);border-color:var(--glass-edge);box-shadow:0 2px 9px #152b3810}
  html[data-theme] .mobile-nav a .icon,html[data-theme] .mobile-nav a[aria-current] .icon{box-shadow:none;background:transparent;margin:0;padding:0;width:19px;height:19px}
  html[data-theme] .app-footer{padding:16px 22px calc(115px + env(safe-area-inset-bottom));font-size:10px;gap:16px}
  html[data-theme] .advanced-rest{bottom:calc(102px + env(safe-area-inset-bottom));right:16px;left:16px;max-width:none;padding:12px 15px;gap:10px;justify-content:space-between}
@@ -257,7 +260,7 @@ html[data-theme] .quiet{display:inline-flex;align-items:center;justify-content:c
 html[data-theme] input[aria-invalid=true]{border-color:var(--danger);box-shadow:0 0 0 1px var(--danger)}
 /* Dialog content stays opaque; only its sticky control bar carries material. */
 html[data-theme] dialog{border-radius:calc(var(--control-radius) + 8px);box-shadow:0 24px 80px #0005}
-html[data-theme] .dialog-head{position:sticky;top:0;z-index:1;background:var(--glass-fill);border-bottom:1px solid var(--glass-edge);-webkit-backdrop-filter:var(--glass-filter);backdrop-filter:var(--glass-filter);padding-bottom:12px}
+html[data-theme] .dialog-head{position:sticky;top:0;z-index:1;background:var(--glass-fill);border-bottom:1px solid var(--glass-edge);-webkit-backdrop-filter:var(--glass-optics,var(--glass-filter));backdrop-filter:var(--glass-optics,var(--glass-filter));padding-bottom:12px}
 html[data-theme] .exercise-menu .menu-action{background:var(--surface);border-color:var(--line);color:var(--ink);border-radius:var(--control-radius)}
 
 /* The reviewed desktop control rail, retaining profile and privacy information. */
@@ -268,9 +271,9 @@ html[data-theme] .exercise-menu .menu-action{background:var(--surface);border-co
  html[data-theme] .topbar{margin-left:-166px;width:calc(100% + 166px);height:72px;padding:0 32px;border-bottom:1px solid var(--line)}
  html[data-theme] .mobile-brand{display:flex!important;font-size:22px;margin-right:auto}
  html[data-theme] .topbar-label{flex:0 0 auto;white-space:nowrap;font-size:8px}
- html[data-theme] .sidebar nav{padding:7px;border-radius:26px;background:var(--glass-fill);border:1px solid var(--glass-edge);-webkit-backdrop-filter:var(--glass-filter);backdrop-filter:var(--glass-filter);box-shadow:var(--glass-shadow)}
+ html[data-theme] .sidebar nav{padding:7px;border-radius:26px;background:var(--glass-fill);border:1px solid var(--glass-edge);-webkit-backdrop-filter:var(--glass-optics,var(--glass-filter));backdrop-filter:var(--glass-optics,var(--glass-filter));box-shadow:var(--glass-shadow)}
  html[data-theme] .nav-link{min-height:48px;padding:12px;gap:12px;font-size:11px;border:1px solid transparent;border-radius:var(--control-radius)}
- html[data-theme] .nav-link.active{background:var(--surface);color:var(--accent);border-color:var(--glass-edge)}
+ html[data-theme] .nav-link.active{background:var(--glass-active-fill);color:var(--accent);border-color:var(--glass-edge)}
  html[data-theme] .nav-dot{display:none}
  html[data-theme] .sidebar-bottom{padding-right:12px}
  html[data-theme] .privacy{font-size:10px;gap:7px}
@@ -308,3 +311,12 @@ html[data-theme] .browser-search>.quiet{margin:0;min-height:48px;align-self:cent
 /* Keep controls readable when a photo or a short viewport puts unpredictable content behind them. */
 html[data-theme] body:has(.photo-grid img) :is(.mobile-nav,.advanced-rest){--glass-fill:var(--surface);--glass-filter:none;--glass-edge:var(--line)}
 @media(max-height:600px){html[data-theme] .mobile-nav{--glass-fill:var(--surface);--glass-filter:none;--glass-edge:var(--line)}}
+
+/* Native WebKit keeps the clear, sharp pane and rim; SVG backdrop refraction is progressive. */
+html[data-theme] body:has(.photo-grid img) :is(.mobile-nav,.advanced-rest){-webkit-backdrop-filter:none;backdrop-filter:none}
+@media(max-height:600px){html[data-theme] .mobile-nav{-webkit-backdrop-filter:none;backdrop-filter:none}}
+@media(prefers-reduced-transparency:reduce){html[data-theme] :is(.mobile-nav,.exercise-jump-nav,.advanced-rest,.sidebar nav,.dialog-head){background:var(--surface);-webkit-backdrop-filter:none;backdrop-filter:none;box-shadow:0 2px 8px #0001}html[data-theme] :is(.mobile-nav,.exercise-jump-nav,.advanced-rest,.sidebar nav)::before{display:none}}
+
+/* Local glyph contrast leaves the pane itself clear. */
+html[data-theme] :is(.mobile-nav a,.exercise-jump-nav button,.advanced-rest){text-shadow:0 1px 2px var(--paper),0 0 3px var(--paper)}
+html[data-theme] :is(.mobile-nav a,.exercise-jump-nav button,.advanced-rest) .icon{filter:drop-shadow(0 1px 1px var(--paper))}

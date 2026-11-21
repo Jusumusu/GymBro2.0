@@ -19,3 +19,5 @@ import './exercise-catalog.test.mjs';
 import './rest-controller.test.mjs';
 
 import './weekly-update.test.mjs';
+
+import './liquid-glass.test.mjs';

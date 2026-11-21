@@ -9,7 +9,19 @@ Functional app: https://gym-bro-design-review.jesse03sousa.chatgpt.site/preview/
 
 The retained Sites project is private to its owner. Its source was tested in local Chromium before packaging; native Sites deployment verifies publication. The managed live-site browser is unavailable, so no live Safari or physical-phone verification is claimed.
 
-## Requested Clear-glass refinement
+## Current optical-glass correction — November 21
+
+The user rejected the previous frosted result: “it should be clear just with the liquid glass effect”. The current finish removes the 16px blur and broad white wash. The centre is sharp with only 2.5% light / 3.5% dark white fill; reflections and shadows are confined to the rim. Small text/icon halos preserve local contrast while leaving the pane clear. Selected-control geometry, typography, Aero colours and all logging surfaces remain unchanged.
+
+Current review and live optical demo: https://gym-bro-design-review.jesse03sousa.chatgpt.site/preview/docs/weekly-review-progression-search/optical-glass/
+
+A small SVG displacement field bends only the rounded perimeter of supported Chromium backdrops. Geometry is cached (maximum 24 inactive/active size entries), rebuilt on resize rather than scrolling, and disposed on page exit. No journal access, DOM screenshot, cloned workout content, provider dependency or animation loop is used. SVG references use the actual document URL so the hosted root's base URL does not break the effect.
+
+Safari/WebKit does not reliably support SVG backdrop displacement ([WebKit bug 245510](https://bugs.webkit.org/show_bug.cgi?id=245510)); it gets the clear CSS finish and reflective rim, with no unsupported filter URL or frosted fallback. This is a web approximation, not Apple's native shader. A Safari-targeted branch was checked through user-agent emulation in Chromium; actual physical iPhone/Safari rendering is not certified.
+
+Eight browser checks cover the same real app/material comparison in both themes, seven widths, unchanged solid fields/cards and complete journal, photo/short-screen/reduced-transparency fallbacks, offline reload, the interactive optical demo and WebKit-targeted compatibility path. A stationary before/after pixel comparison confirms the actual refraction affects only the lens bounds. Three new pure geometry tests check the neutral centre, bounded/symmetric edge field and rejected unbounded allocations; all 287 domain/unit tests pass. The existing full-app Aero suite also passed 178 layout checks plus real pointer completion, keyboard undo, navigation, timer, dialogs, offline reload and updater flows.
+
+## Earlier Clear-glass refinement — superseded
 
 The user explicitly kept **A — Aero** and requested glass more transparent than **Expressive**. Clear is applied to the branch's existing selective glass controls: **28% light / 34% dark fill, 16px blur**, compared with Expressive's **66% fill, 24px blur**. Palette, typography, geometry and the existing Weekly layout are retained. Inputs/cards/dialog content stay solid. Photo backgrounds, short navigation viewports, reduced-transparency preferences and unsupported filtering use readable solid fallbacks. No new runtime dependency or backdrop observer is added.
 

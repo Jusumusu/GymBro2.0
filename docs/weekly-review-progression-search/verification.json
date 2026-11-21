@@ -8,11 +8,11 @@
   },
   "candidatePreview": {
     "version": "0.7.0",
-    "build": "7cc2b2abc06f",
+    "build": "12a7709690c4",
     "environment": "preview"
   },
   "checks": {
-    "unit": 284,
+    "unit": 287,
     "backend": 9,
     "catalog": {
       "available": 254,
@@ -64,7 +64,10 @@
       1024,
       1440
     ],
-    "clearGlassBrowser": 7
+    "clearGlassBrowser": 7,
+    "opticalGlassBrowser": 8,
+    "opticalPixelComparison": "Actual rendered differences stay inside the stationary lens bounds",
+    "opticalFullAppLayouts": 178
   },
   "search": {
     "syntheticRows": 5000,
@@ -75,7 +78,7 @@
   "designApproval": {
     "weekly": null,
     "identity": "A \u2014 Aero, retained by user",
-    "glass": "Clear: requested beyond Expressive, 28% light / 34% dark, 16px blur",
+    "glass": "Clear optical: sharp centre; reflective rim; 2.5% light / 3.5% dark fill; progressive Chromium edge refraction and clear CSS/WebKit fallback",
     "weeklyAestheticIntegration": false,
     "glassAestheticIntegration": true
   },
@@ -90,6 +93,7 @@
     "No merge to main.",
     "No physical Safari/iOS/Android certification.",
     "Private Site publication verified through native deployment; no managed live-browser tool.",
-    "Twenty-one previously prepared specialized tracking definitions remain inactive."
+    "Twenty-one previously prepared specialized tracking definitions remain inactive.",
+    "Safari/WebKit uses clear CSS reflection without SVG backdrop refraction; native Apple Liquid Glass is not reproduced."
   ]
 }

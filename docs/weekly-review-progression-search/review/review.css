@@ -5,5 +5,5 @@
 .menu header .dots,.modal header .dots{flex:0 0 44px;width:44px;text-align:center;border:1px solid var(--line);min-height:44px}.menu header h3{min-width:0}.track>i{max-width:100%}
 
 /* User-requested Clear refinement, beyond the original comparison presets. */
-html[data-glass=d]{--glass-fill:rgb(255 255 255 / .28);--blur:16px}
-html[data-theme=dark][data-glass=d]{--glass-fill:rgb(39 48 53 / .34)}
+html[data-glass=d]{--glass-fill:rgb(255 255 255 / .025);--blur:0px}
+html[data-theme=dark][data-glass=d]{--glass-fill:rgb(255 255 255 / .035)}
