@@ -1,0 +1,99 @@
+{
+  "branch": "feature/weekly-review-progression-search",
+  "pr": "https://github.com/Jusumusu/GymBro2.0/pull/5",
+  "stableMain": "30b63d01483cb7c4fe3df9dace07c98b9d416d9e",
+  "publishedProduction": {
+    "version": "0.6.0",
+    "build": "062b5fb80f5d"
+  },
+  "candidatePreview": {
+    "version": "0.7.0",
+    "build": "12a7709690c4",
+    "environment": "preview"
+  },
+  "checks": {
+    "unit": 287,
+    "backend": 9,
+    "catalog": {
+      "available": 254,
+      "added": 56,
+      "unchangedReleasedDefinitions": 198,
+      "preparedInactive": 21,
+      "duplicates": 0,
+      "invalidMappings": 0
+    },
+    "existingBrowserSuites": [
+      {
+        "suite": "browser-training-refinement",
+        "exitCode": 0
+      },
+      {
+        "suite": "browser",
+        "exitCode": 0
+      },
+      {
+        "suite": "browser-advanced-training",
+        "exitCode": 0
+      },
+      {
+        "suite": "browser-workout-ux",
+        "exitCode": 0
+      },
+      {
+        "suite": "browser-app-updates",
+        "exitCode": 0
+      },
+      {
+        "suite": "browser-refinement",
+        "exitCode": 0
+      },
+      {
+        "suite": "browser-update",
+        "exitCode": 0
+      }
+    ],
+    "app": 10,
+    "archivedPreviewUpgrade": 7,
+    "prototype": 46,
+    "responsiveWidths": [
+      320,
+      375,
+      390,
+      430,
+      768,
+      1024,
+      1440
+    ],
+    "clearGlassBrowser": 7,
+    "opticalGlassBrowser": 8,
+    "opticalPixelComparison": "Actual rendered differences stay inside the stationary lens bounds",
+    "opticalFullAppLayouts": 178
+  },
+  "search": {
+    "syntheticRows": 5000,
+    "chromiumCpuSlowdown": 4,
+    "maxQueryMedianMs": 47.600000001490116,
+    "scope": "Headless Chromium with 4x CPU slowdown; synthetic 5,000-row catalog, pure local search. Not a physical-device or input-to-paint guarantee."
+  },
+  "designApproval": {
+    "weekly": null,
+    "identity": "A \u2014 Aero, retained by user",
+    "glass": "Clear optical: sharp centre; reflective rim; 2.5% light / 3.5% dark fill; progressive Chromium edge refraction and clear CSS/WebKit fallback",
+    "weeklyAestheticIntegration": false,
+    "glassAestheticIntegration": true
+  },
+  "deployment": {
+    "githubRun": 44550737996,
+    "githubBuild": "success",
+    "githubDeploy": "rejected before deploy steps by exact branch environment rule",
+    "privateReview": "https://gym-bro-design-review.jesse03sousa.chatgpt.site/preview/docs/weekly-review-progression-search/review/",
+    "githubHead": "4c937d093e41dc263b56f22903f414e1e309f31a"
+  },
+  "limits": [
+    "No merge to main.",
+    "No physical Safari/iOS/Android certification.",
+    "Private Site publication verified through native deployment; no managed live-browser tool.",
+    "Twenty-one previously prepared specialized tracking definitions remain inactive.",
+    "Safari/WebKit uses clear CSS reflection without SVG backdrop refraction; native Apple Liquid Glass is not reproduced."
+  ]
+}

@@ -1,0 +1,2043 @@
+{
+  "catalog": {
+    "version": "0.6.0",
+    "source": "30b63d01483cb7c4fe3df9dace07c98b9d416d9e",
+    "available": 198,
+    "preparedSpecial": 21,
+    "allDefined": 219,
+    "primary": {
+      "Chest": 26,
+      "Back": 27,
+      "Quads": 26,
+      "Hamstrings": 14,
+      "Glutes": 18,
+      "Shoulders": 21,
+      "Biceps": 13,
+      "Triceps": 14,
+      "Calves": 9,
+      "Core": 12,
+      "Adductors": 3,
+      "Spinal erectors": 2,
+      "Forearms": 8,
+      "Obliques": 5
+    },
+    "discoverable": {
+      "Chest": 31,
+      "Back": 31,
+      "Quads": 30,
+      "Hamstrings": 20,
+      "Glutes": 52,
+      "Shoulders": 46,
+      "Biceps": 36,
+      "Triceps": 46,
+      "Calves": 9,
+      "Core": 17,
+      "Adductors": 28,
+      "Spinal erectors": 3,
+      "Forearms": 10,
+      "Obliques": 7
+    },
+    "equipment": {
+      "barbell": 26,
+      "bodyweight": 37,
+      "cable": 35,
+      "dumbbell": 45,
+      "ez-bar": 4,
+      "kettlebell": 6,
+      "machine": 8,
+      "plate-loaded": 12,
+      "selectorized": 17,
+      "smith": 7,
+      "trap-bar": 1
+    },
+    "patterns": {
+      "abduction": 3,
+      "anti-extension": 2,
+      "anti-rotation": 3,
+      "ballistic hinge": 1,
+      "diagonal pull": 1,
+      "diagonal push": 1,
+      "elbow extension": 11,
+      "elbow flexion": 15,
+      "external rotation": 1,
+      "forearm rotation": 2,
+      "hinge": 13,
+      "hip abduction": 3,
+      "hip adduction": 3,
+      "hip extension": 8,
+      "horizontal abduction": 3,
+      "horizontal adduction": 6,
+      "horizontal pull": 14,
+      "horizontal push": 21,
+      "knee extension": 2,
+      "knee flexion": 7,
+      "lateral flexion": 2,
+      "lateral squat": 1,
+      "plantar flexion": 9,
+      "scapular elevation": 2,
+      "shoulder extension": 3,
+      "shoulder flexion": 2,
+      "spinal extension": 1,
+      "squat": 23,
+      "trunk flexion": 9,
+      "trunk rotation": 2,
+      "vertical pull": 8,
+      "vertical push": 12,
+      "wrist extension": 2,
+      "wrist flexion": 2
+    }
+  },
+  "review": {
+    "version": 1,
+    "start": "2026-11-16",
+    "end": "2026-11-22",
+    "through": "2026-11-19",
+    "previousStart": "2026-11-09",
+    "previousEnd": "2026-11-15",
+    "historical": false,
+    "partial": true,
+    "weekStartsOn": 1,
+    "totals": {
+      "workouts": 3,
+      "sets": 27,
+      "reps": 216,
+      "volume": 5760
+    },
+    "priorTotals": {
+      "workouts": 3,
+      "sets": 27,
+      "reps": 189,
+      "volume": 5040
+    },
+    "consistency": {
+      "target": 3,
+      "completed": 3,
+      "scheduled": 0,
+      "missed": 0,
+      "upcoming": 0,
+      "met": true,
+      "percent": 100
+    },
+    "frequency": {
+      "target": 3,
+      "completed": 3,
+      "met": true,
+      "percent": 100
+    },
+    "goals": [
+      {
+        "id": "body",
+        "name": "Reach my recorded weight target",
+        "type": "body",
+        "target": 80,
+        "baseline": 90,
+        "createdAt": 1792238400000,
+        "current": {
+          "value": 88.6,
+          "percent": 14.000000000000057,
+          "reached": false,
+          "available": true,
+          "remaining": 8.599999999999994
+        },
+        "prior": {
+          "value": 89.8,
+          "percent": 2.0000000000000284,
+          "reached": false,
+          "available": true,
+          "remaining": 9.799999999999997
+        },
+        "newlyReached": false,
+        "newThisWeek": false
+      },
+      {
+        "id": "lift",
+        "name": "Bench working-load target",
+        "type": "load",
+        "exerciseId": "bench",
+        "target": 30,
+        "createdAt": 1792238400000,
+        "current": {
+          "value": 20,
+          "percent": 66.66666666666666,
+          "reached": false,
+          "available": true,
+          "remaining": 10
+        },
+        "prior": {
+          "value": 20,
+          "percent": 66.66666666666666,
+          "reached": false,
+          "available": true,
+          "remaining": 10
+        },
+        "newlyReached": false,
+        "newThisWeek": false
+      },
+      {
+        "id": "consistency",
+        "name": "Complete fifteen recorded workouts",
+        "type": "workouts",
+        "target": 15,
+        "createdAt": 1792238400000,
+        "current": {
+          "value": 12,
+          "percent": 80,
+          "reached": false,
+          "available": true,
+          "remaining": 3
+        },
+        "prior": {
+          "value": 9,
+          "percent": 60,
+          "reached": false,
+          "available": true,
+          "remaining": 6
+        },
+        "newlyReached": false,
+        "newThisWeek": false
+      }
+    ],
+    "weights": {
+      "currentCount": 2,
+      "previousCount": 2,
+      "currentKg": 88.69999999999999,
+      "previousKg": 89.9,
+      "smoothed": true,
+      "delta": -1.200000000000017
+    },
+    "trends": [
+      {
+        "exerciseId": "squat",
+        "name": "Barbell squat",
+        "date": "2026-11-19",
+        "previousDate": "2026-11-18",
+        "reps": 27,
+        "priorReps": 24,
+        "sets": 3,
+        "load": 40,
+        "repsGain": 3,
+        "loadGain": false,
+        "effortComfortable": true
+      },
+      {
+        "exerciseId": "bench",
+        "name": "Barbell bench press",
+        "date": "2026-11-19",
+        "previousDate": "2026-11-18",
+        "reps": 27,
+        "priorReps": 24,
+        "sets": 3,
+        "load": 20,
+        "repsGain": 3,
+        "loadGain": false,
+        "effortComfortable": true
+      },
+      {
+        "exerciseId": "row",
+        "name": "Barbell row",
+        "date": "2026-11-19",
+        "previousDate": "2026-11-18",
+        "reps": 27,
+        "priorReps": 24,
+        "sets": 3,
+        "load": 20,
+        "repsGain": 3,
+        "loadGain": false,
+        "effortComfortable": true
+      }
+    ],
+    "records": [
+      {
+        "exerciseId": "squat",
+        "name": "Barbell squat",
+        "date": "2026-11-19",
+        "kinds": [
+          "reps at the same load",
+          "estimated strength"
+        ]
+      },
+      {
+        "exerciseId": "bench",
+        "name": "Barbell bench press",
+        "date": "2026-11-19",
+        "kinds": [
+          "reps at the same load",
+          "estimated strength"
+        ]
+      },
+      {
+        "exerciseId": "row",
+        "name": "Barbell row",
+        "date": "2026-11-19",
+        "kinds": [
+          "reps at the same load",
+          "estimated strength"
+        ]
+      }
+    ],
+    "milestones": [
+      {
+        "id": "workouts-2",
+        "label": "Workouts completed",
+        "tier": 3,
+        "target": 10,
+        "value": 12
+      },
+      {
+        "id": "days-2",
+        "label": "Training days",
+        "tier": 3,
+        "target": 10,
+        "value": 12
+      },
+      {
+        "id": "weeks-2",
+        "label": "Consistent weeks",
+        "tier": 3,
+        "target": 4,
+        "value": 4
+      },
+      {
+        "id": "streak-2",
+        "label": "Weeks in a row",
+        "tier": 3,
+        "target": 4,
+        "value": 4
+      },
+      {
+        "id": "sets-2",
+        "label": "Working sets",
+        "tier": 3,
+        "target": 100,
+        "value": 108
+      },
+      {
+        "id": "rir-4",
+        "label": "RIR entries",
+        "tier": 5,
+        "target": 100,
+        "value": 108
+      },
+      {
+        "id": "body-1",
+        "label": "Weigh-ins",
+        "tier": 2,
+        "target": 3,
+        "value": 4
+      }
+    ],
+    "wins": [
+      {
+        "key": "exercise-bench",
+        "priority": 108,
+        "type": "performance",
+        "exerciseId": "bench",
+        "title": "Barbell bench press",
+        "detail": "24 → 27 total reps across 3 sets at matching loads (2026-11-18 → 2026-11-19)."
+      },
+      {
+        "key": "exercise-squat",
+        "priority": 100,
+        "type": "performance",
+        "exerciseId": "squat",
+        "title": "Barbell squat",
+        "detail": "24 → 27 total reps across 3 sets at matching loads (2026-11-18 → 2026-11-19)."
+      },
+      {
+        "key": "consistency",
+        "priority": 90,
+        "type": "consistency",
+        "title": "Your weekly frequency target is met",
+        "detail": "3 of 3 target sessions recorded."
+      }
+    ],
+    "headline": "Your training is moving forward.",
+    "message": "Jordan, Barbell bench press added 3 total reps at the same recorded loads. That supports your muscle-building process, but it does not measure muscle gained. You recorded 27 working sets across 3 workouts.",
+    "focus": [
+      "Record weight under similar conditions and compare weekly averages. Do not try to repeat a particular weekly change.",
+      "Keep Barbell bench press controlled at your saved targets. If it feels comfortable, aim for one more rep within the prescribed range; the load remains your choice."
+    ],
+    "primaryGoal": "Build muscle",
+    "secondaryGoals": [
+      "Get stronger",
+      "General fitness"
+    ]
+  },
+  "search": {
+    "bench": [
+      {
+        "id": "bench",
+        "name": "Barbell bench press"
+      },
+      {
+        "id": "db-bench",
+        "name": "Dumbbell bench press"
+      },
+      {
+        "id": "incline-db",
+        "name": "Incline dumbbell press"
+      },
+      {
+        "id": "gb-incline-bb-bench",
+        "name": "Incline barbell bench press"
+      },
+      {
+        "id": "gb-decline-bb-bench",
+        "name": "Decline barbell bench press"
+      }
+    ],
+    "benhc": [],
+    "sqaute": [],
+    "deadlfift": [],
+    "lat pulldwon": [],
+    "bicep crul": [],
+    "RDL": [
+      {
+        "id": "rdl",
+        "name": "Romanian deadlift"
+      },
+      {
+        "id": "db-rdl",
+        "name": "Dumbbell Romanian deadlift"
+      },
+      {
+        "id": "gb-single-leg-rdl",
+        "name": "Single-leg dumbbell Romanian deadlift"
+      },
+      {
+        "id": "gb-kb-rdl",
+        "name": "Kettlebell Romanian deadlift"
+      },
+      {
+        "id": "gb-smith-rdl",
+        "name": "Smith machine Romanian deadlift"
+      }
+    ],
+    "DB Bench": [
+      {
+        "id": "db-bench",
+        "name": "Dumbbell bench press"
+      },
+      {
+        "id": "incline-db",
+        "name": "Incline dumbbell press"
+      },
+      {
+        "id": "gb-decline-db-bench",
+        "name": "Decline dumbbell bench press"
+      },
+      {
+        "id": "gb-db-pullover",
+        "name": "Dumbbell pullover"
+      }
+    ],
+    "incline dumbbell": [
+      {
+        "id": "incline-db",
+        "name": "Incline dumbbell press"
+      },
+      {
+        "id": "gb-incline-db-fly",
+        "name": "Incline dumbbell fly"
+      },
+      {
+        "id": "gb-incline-db-curl",
+        "name": "Incline dumbbell curl"
+      }
+    ]
+  },
+  "progression": {
+    "ceiling": {
+      "action": "increase",
+      "kg": 62.5,
+      "sets": 3,
+      "min": 6,
+      "max": 10,
+      "reason": "All 3 completed working sets reached the rep ceiling. Next session: consider this small load increase and rebuild reps. RIR was not recorded, so effort is uncertain; it remains optional.",
+      "confidence": "limited",
+      "evidence": 1
+    },
+    "bodyweight": {
+      "action": "reps",
+      "kg": 0,
+      "sets": 3,
+      "min": 6,
+      "max": 10,
+      "reason": "Next session: maintain this load and aim for 0 more total reps across your working sets to reach the ceiling. No extra sets or exercises are requested.",
+      "confidence": "limited",
+      "evidence": 1
+    },
+    "mixed": {
+      "action": "maintain",
+      "kg": 57.5,
+      "sets": 3,
+      "min": 6,
+      "max": 10,
+      "reason": "Next session: review the different working loads you recorded. Double progression compares all target sets at a consistent load before suggesting an increase.",
+      "confidence": "limited",
+      "evidence": 1
+    }
+  },
+  "fixture": {
+    "version": 1,
+    "profile": {
+      "name": "Jordan Example",
+      "goal": "hypertrophy",
+      "experience": "intermediate",
+      "days": 3,
+      "minutes": 60,
+      "unit": "kg",
+      "incrementKg": 2.5,
+      "split": "full",
+      "equipment": [
+        "barbell",
+        "dumbbell",
+        "machine",
+        "cable",
+        "bodyweight"
+      ],
+      "excluded": [],
+      "priorities": [
+        "Chest"
+      ],
+      "secondaryGoals": [
+        "strength",
+        "fitness"
+      ],
+      "trainingDays": [
+        "Mon",
+        "Wed",
+        "Fri"
+      ],
+      "restrictions": "",
+      "auto": true,
+      "timer": false,
+      "restSeconds": 120,
+      "targetWeight": 80
+    },
+    "customExercises": [],
+    "plans": [
+      {
+        "id": "routine",
+        "name": "Full body A",
+        "exercises": [
+          {
+            "exerciseId": "bench",
+            "sets": 3,
+            "min": 6,
+            "max": 10,
+            "restSeconds": 120
+          },
+          {
+            "exerciseId": "squat",
+            "sets": 3,
+            "min": 6,
+            "max": 10
+          },
+          {
+            "exerciseId": "row",
+            "sets": 3,
+            "min": 8,
+            "max": 12
+          }
+        ]
+      }
+    ],
+    "sessions": [
+      {
+        "id": "week--3-0",
+        "name": "Full body A",
+        "planId": "routine",
+        "date": "2026-10-26",
+        "startedAt": 1793008800000,
+        "finishedAt": 1793012400000,
+        "notes": "Synthetic QA record",
+        "readiness": 3,
+        "exercises": [
+          {
+            "id": "week--3-0-0",
+            "exerciseId": "bench",
+            "sets": 3,
+            "min": 6,
+            "max": 10,
+            "notes": "",
+            "entries": [
+              {
+                "id": "set-0",
+                "kg": 20,
+                "reps": 6,
+                "rir": 2,
+                "type": "working",
+                "done": true
+              },
+              {
+                "id": "set-1",
+                "kg": 20,
+                "reps": 6,
+                "rir": 2,
+                "type": "working",
+                "done": true
+              },
+              {
+                "id": "set-2",
+                "kg": 20,
+                "reps": 6,
+                "rir": 2,
+                "type": "working",
+                "done": true
+              }
+            ]
+          },
+          {
+            "id": "week--3-0-1",
+            "exerciseId": "squat",
+            "sets": 3,
+            "min": 6,
+            "max": 10,
+            "notes": "",
+            "entries": [
+              {
+                "id": "set-0",
+                "kg": 40,
+                "reps": 6,
+                "rir": 2,
+                "type": "working",
+                "done": true
+              },
+              {
+                "id": "set-1",
+                "kg": 40,
+                "reps": 6,
+                "rir": 2,
+                "type": "working",
+                "done": true
+              },
+              {
+                "id": "set-2",
+                "kg": 40,
+                "reps": 6,
+                "rir": 2,
+                "type": "working",
+                "done": true
+              }
+            ]
+          },
+          {
+            "id": "week--3-0-2",
+            "exerciseId": "row",
+            "sets": 3,
+            "min": 6,
+            "max": 10,
+            "notes": "",
+            "entries": [
+              {
+                "id": "set-0",
+                "kg": 20,
+                "reps": 6,
+                "rir": 2,
+                "type": "working",
+                "done": true
+              },
+              {
+                "id": "set-1",
+                "kg": 20,
+                "reps": 6,
+                "rir": 2,
+                "type": "working",
+                "done": true
+              },
+              {
+                "id": "set-2",
+                "kg": 20,
+                "reps": 6,
+                "rir": 2,
+                "type": "working",
+                "done": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "week--3-1",
+        "name": "Full body A",
+        "planId": "routine",
+        "date": "2026-10-28",
+        "startedAt": 1793181660000,
+        "finishedAt": 1793185260000,
+        "notes": "Synthetic QA record",
+        "readiness": 3,
+        "exercises": [
+          {
+            "id": "week--3-1-0",
+            "exerciseId": "bench",
+            "sets": 3,
+            "min": 6,
+            "max": 10,
+            "notes": "",
+            "entries": [
+              {
+                "id": "set-0",
+                "kg": 20,
+                "reps": 6,
+                "rir": 2,
+                "type": "working",
+                "done": true
+              },
+              {
+                "id": "set-1",
+                "kg": 20,
+                "reps": 6,
+                "rir": 2,
+                "type": "working",
+                "done": true
+              },
+              {
+                "id": "set-2",
+                "kg": 20,
+                "reps": 6,
+                "rir": 2,
+                "type": "working",
+                "done": true
+              }
+            ]
+          },
+          {
+            "id": "week--3-1-1",
+            "exerciseId": "squat",
+            "sets": 3,
+            "min": 6,
+            "max": 10,
+            "notes": "",
+            "entries": [
+              {
+                "id": "set-0",
+                "kg": 40,
+                "reps": 6,
+                "rir": 2,
+                "type": "working",
+                "done": true
+              },
+              {
+                "id": "set-1",
+                "kg": 40,
+                "reps": 6,
+                "rir": 2,
+                "type": "working",
+                "done": true
+              },
+              {
+                "id": "set-2",
+                "kg": 40,
+                "reps": 6,
+                "rir": 2,
+                "type": "working",
+                "done": true
+              }
+            ]
+          },
+          {
+            "id": "week--3-1-2",
+            "exerciseId": "row",
+            "sets": 3,
+            "min": 6,
+            "max": 10,
+            "notes": "",
+            "entries": [
+              {
+                "id": "set-0",
+                "kg": 20,
+                "reps": 6,
+                "rir": 2,
+                "type": "working",
+                "done": true
+              },
+              {
+                "id": "set-1",
+                "kg": 20,
+                "reps": 6,
+                "rir": 2,
+                "type": "working",
+                "done": true
+              },
+              {
+                "id": "set-2",
+                "kg": 20,
+                "reps": 6,
+                "rir": 2,
+                "type": "working",
+                "done": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "week--3-2",
+        "name": "Full body A",
+        "planId": "routine",
+        "date": "2026-10-30",
+        "startedAt": 1793354520000,
+        "finishedAt": 1793358120000,
+        "notes": "Synthetic QA record",
+        "readiness": 3,
+        "exercises": [
+          {
+            "id": "week--3-2-0",
+            "exerciseId": "bench",
+            "sets": 3,
+            "min": 6,
+            "max": 10,
+            "notes": "",
+            "entries": [
+              {
+                "id": "set-0",
+                "kg": 20,
+                "reps": 6,
+                "rir": 2,
+                "type": "working",
+                "done": true
+              },
+              {
+                "id": "set-1",
+                "kg": 20,
+                "reps": 6,
+                "rir": 2,
+                "type": "working",
+                "done": true
+              },
+              {
+                "id": "set-2",
+                "kg": 20,
+                "reps": 6,
+                "rir": 2,
+                "type": "working",
+                "done": true
+              }
+            ]
+          },
+          {
+            "id": "week--3-2-1",
+            "exerciseId": "squat",
+            "sets": 3,
+            "min": 6,
+            "max": 10,
+            "notes": "",
+            "entries": [
+              {
+                "id": "set-0",
+                "kg": 40,
+                "reps": 6,
+                "rir": 2,
+                "type": "working",
+                "done": true
+              },
+              {
+                "id": "set-1",
+                "kg": 40,
+                "reps": 6,
+                "rir": 2,
+                "type": "working",
+                "done": true
+              },
+              {
+                "id": "set-2",
+                "kg": 40,
+                "reps": 6,
+                "rir": 2,
+                "type": "working",
+                "done": true
+              }
+            ]
+          },
+          {
+            "id": "week--3-2-2",
+            "exerciseId": "row",
+            "sets": 3,
+            "min": 6,
+            "max": 10,
+            "notes": "",
+            "entries": [
+              {
+                "id": "set-0",
+                "kg": 20,
+                "reps": 6,
+                "rir": 2,
+                "type": "working",
+                "done": true
+              },
+              {
+                "id": "set-1",
+                "kg": 20,
+                "reps": 6,
+                "rir": 2,
+                "type": "working",
+                "done": true
+              },
+              {
+                "id": "set-2",
+                "kg": 20,
+                "reps": 6,
+                "rir": 2,
+                "type": "working",
+                "done": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "week--2-0",
+        "name": "Full body A",
+        "planId": "routine",
+        "date": "2026-11-02",
+        "startedAt": 1793613600000,
+        "finishedAt": 1793617200000,
+        "notes": "Synthetic QA record",
+        "readiness": 3,
+        "exercises": [
+          {
+            "id": "week--2-0-0",
+            "exerciseId": "bench",
+            "sets": 3,
+            "min": 6,
+            "max": 10,
+            "notes": "",
+            "entries": [
+              {
+                "id": "set-0",
+                "kg": 20,
+                "reps": 6,
+                "rir": 2,
+                "type": "working",
+                "done": true
+              },
+              {
+                "id": "set-1",
+                "kg": 20,
+                "reps": 6,
+                "rir": 2,
+                "type": "working",
+                "done": true
+              },
+              {
+                "id": "set-2",
+                "kg": 20,
+                "reps": 6,
+                "rir": 2,
+                "type": "working",
+                "done": true
+              }
+            ]
+          },
+          {
+            "id": "week--2-0-1",
+            "exerciseId": "squat",
+            "sets": 3,
+            "min": 6,
+            "max": 10,
+            "notes": "",
+            "entries": [
+              {
+                "id": "set-0",
+                "kg": 40,
+                "reps": 6,
+                "rir": 2,
+                "type": "working",
+                "done": true
+              },
+              {
+                "id": "set-1",
+                "kg": 40,
+                "reps": 6,
+                "rir": 2,
+                "type": "working",
+                "done": true
+              },
+              {
+                "id": "set-2",
+                "kg": 40,
+                "reps": 6,
+                "rir": 2,
+                "type": "working",
+                "done": true
+              }
+            ]
+          },
+          {
+            "id": "week--2-0-2",
+            "exerciseId": "row",
+            "sets": 3,
+            "min": 6,
+            "max": 10,
+            "notes": "",
+            "entries": [
+              {
+                "id": "set-0",
+                "kg": 20,
+                "reps": 6,
+                "rir": 2,
+                "type": "working",
+                "done": true
+              },
+              {
+                "id": "set-1",
+                "kg": 20,
+                "reps": 6,
+                "rir": 2,
+                "type": "working",
+                "done": true
+              },
+              {
+                "id": "set-2",
+                "kg": 20,
+                "reps": 6,
+                "rir": 2,
+                "type": "working",
+                "done": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "week--2-1",
+        "name": "Full body A",
+        "planId": "routine",
+        "date": "2026-11-04",
+        "startedAt": 1793786460000,
+        "finishedAt": 1793790060000,
+        "notes": "Synthetic QA record",
+        "readiness": 3,
+        "exercises": [
+          {
+            "id": "week--2-1-0",
+            "exerciseId": "bench",
+            "sets": 3,
+            "min": 6,
+            "max": 10,
+            "notes": "",
+            "entries": [
+              {
+                "id": "set-0",
+                "kg": 20,
+                "reps": 6,
+                "rir": 2,
+                "type": "working",
+                "done": true
+              },
+              {
+                "id": "set-1",
+                "kg": 20,
+                "reps": 6,
+                "rir": 2,
+                "type": "working",
+                "done": true
+              },
+              {
+                "id": "set-2",
+                "kg": 20,
+                "reps": 6,
+                "rir": 2,
+                "type": "working",
+                "done": true
+              }
+            ]
+          },
+          {
+            "id": "week--2-1-1",
+            "exerciseId": "squat",
+            "sets": 3,
+            "min": 6,
+            "max": 10,
+            "notes": "",
+            "entries": [
+              {
+                "id": "set-0",
+                "kg": 40,
+                "reps": 6,
+                "rir": 2,
+                "type": "working",
+                "done": true
+              },
+              {
+                "id": "set-1",
+                "kg": 40,
+                "reps": 6,
+                "rir": 2,
+                "type": "working",
+                "done": true
+              },
+              {
+                "id": "set-2",
+                "kg": 40,
+                "reps": 6,
+                "rir": 2,
+                "type": "working",
+                "done": true
+              }
+            ]
+          },
+          {
+            "id": "week--2-1-2",
+            "exerciseId": "row",
+            "sets": 3,
+            "min": 6,
+            "max": 10,
+            "notes": "",
+            "entries": [
+              {
+                "id": "set-0",
+                "kg": 20,
+                "reps": 6,
+                "rir": 2,
+                "type": "working",
+                "done": true
+              },
+              {
+                "id": "set-1",
+                "kg": 20,
+                "reps": 6,
+                "rir": 2,
+                "type": "working",
+                "done": true
+              },
+              {
+                "id": "set-2",
+                "kg": 20,
+                "reps": 6,
+                "rir": 2,
+                "type": "working",
+                "done": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "week--2-2",
+        "name": "Full body A",
+        "planId": "routine",
+        "date": "2026-11-06",
+        "startedAt": 1793959320000,
+        "finishedAt": 1793962920000,
+        "notes": "Synthetic QA record",
+        "readiness": 3,
+        "exercises": [
+          {
+            "id": "week--2-2-0",
+            "exerciseId": "bench",
+            "sets": 3,
+            "min": 6,
+            "max": 10,
+            "notes": "",
+            "entries": [
+              {
+                "id": "set-0",
+                "kg": 20,
+                "reps": 7,
+                "rir": 2,
+                "type": "working",
+                "done": true
+              },
+              {
+                "id": "set-1",
+                "kg": 20,
+                "reps": 7,
+                "rir": 2,
+                "type": "working",
+                "done": true
+              },
+              {
+                "id": "set-2",
+                "kg": 20,
+                "reps": 7,
+                "rir": 2,
+                "type": "working",
+                "done": true
+              }
+            ]
+          },
+          {
+            "id": "week--2-2-1",
+            "exerciseId": "squat",
+            "sets": 3,
+            "min": 6,
+            "max": 10,
+            "notes": "",
+            "entries": [
+              {
+                "id": "set-0",
+                "kg": 40,
+                "reps": 7,
+                "rir": 2,
+                "type": "working",
+                "done": true
+              },
+              {
+                "id": "set-1",
+                "kg": 40,
+                "reps": 7,
+                "rir": 2,
+                "type": "working",
+                "done": true
+              },
+              {
+                "id": "set-2",
+                "kg": 40,
+                "reps": 7,
+                "rir": 2,
+                "type": "working",
+                "done": true
+              }
+            ]
+          },
+          {
+            "id": "week--2-2-2",
+            "exerciseId": "row",
+            "sets": 3,
+            "min": 6,
+            "max": 10,
+            "notes": "",
+            "entries": [
+              {
+                "id": "set-0",
+                "kg": 20,
+                "reps": 7,
+                "rir": 2,
+                "type": "working",
+                "done": true
+              },
+              {
+                "id": "set-1",
+                "kg": 20,
+                "reps": 7,
+                "rir": 2,
+                "type": "working",
+                "done": true
+              },
+              {
+                "id": "set-2",
+                "kg": 20,
+                "reps": 7,
+                "rir": 2,
+                "type": "working",
+                "done": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "week--1-0",
+        "name": "Full body A",
+        "planId": "routine",
+        "date": "2026-11-09",
+        "startedAt": 1794218400000,
+        "finishedAt": 1794222000000,
+        "notes": "Synthetic QA record",
+        "readiness": 3,
+        "exercises": [
+          {
+            "id": "week--1-0-0",
+            "exerciseId": "bench",
+            "sets": 3,
+            "min": 6,
+            "max": 10,
+            "notes": "",
+            "entries": [
+              {
+                "id": "set-0",
+                "kg": 20,
+                "reps": 6,
+                "rir": 2,
+                "type": "working",
+                "done": true
+              },
+              {
+                "id": "set-1",
+                "kg": 20,
+                "reps": 6,
+                "rir": 2,
+                "type": "working",
+                "done": true
+              },
+              {
+                "id": "set-2",
+                "kg": 20,
+                "reps": 6,
+                "rir": 2,
+                "type": "working",
+                "done": true
+              }
+            ]
+          },
+          {
+            "id": "week--1-0-1",
+            "exerciseId": "squat",
+            "sets": 3,
+            "min": 6,
+            "max": 10,
+            "notes": "",
+            "entries": [
+              {
+                "id": "set-0",
+                "kg": 40,
+                "reps": 6,
+                "rir": 2,
+                "type": "working",
+                "done": true
+              },
+              {
+                "id": "set-1",
+                "kg": 40,
+                "reps": 6,
+                "rir": 2,
+                "type": "working",
+                "done": true
+              },
+              {
+                "id": "set-2",
+                "kg": 40,
+                "reps": 6,
+                "rir": 2,
+                "type": "working",
+                "done": true
+              }
+            ]
+          },
+          {
+            "id": "week--1-0-2",
+            "exerciseId": "row",
+            "sets": 3,
+            "min": 6,
+            "max": 10,
+            "notes": "",
+            "entries": [
+              {
+                "id": "set-0",
+                "kg": 20,
+                "reps": 6,
+                "rir": 2,
+                "type": "working",
+                "done": true
+              },
+              {
+                "id": "set-1",
+                "kg": 20,
+                "reps": 6,
+                "rir": 2,
+                "type": "working",
+                "done": true
+              },
+              {
+                "id": "set-2",
+                "kg": 20,
+                "reps": 6,
+                "rir": 2,
+                "type": "working",
+                "done": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "week--1-1",
+        "name": "Full body A",
+        "planId": "routine",
+        "date": "2026-11-11",
+        "startedAt": 1794391260000,
+        "finishedAt": 1794394860000,
+        "notes": "Synthetic QA record",
+        "readiness": 3,
+        "exercises": [
+          {
+            "id": "week--1-1-0",
+            "exerciseId": "bench",
+            "sets": 3,
+            "min": 6,
+            "max": 10,
+            "notes": "",
+            "entries": [
+              {
+                "id": "set-0",
+                "kg": 20,
+                "reps": 7,
+                "rir": 2,
+                "type": "working",
+                "done": true
+              },
+              {
+                "id": "set-1",
+                "kg": 20,
+                "reps": 7,
+                "rir": 2,
+                "type": "working",
+                "done": true
+              },
+              {
+                "id": "set-2",
+                "kg": 20,
+                "reps": 7,
+                "rir": 2,
+                "type": "working",
+                "done": true
+              }
+            ]
+          },
+          {
+            "id": "week--1-1-1",
+            "exerciseId": "squat",
+            "sets": 3,
+            "min": 6,
+            "max": 10,
+            "notes": "",
+            "entries": [
+              {
+                "id": "set-0",
+                "kg": 40,
+                "reps": 7,
+                "rir": 2,
+                "type": "working",
+                "done": true
+              },
+              {
+                "id": "set-1",
+                "kg": 40,
+                "reps": 7,
+                "rir": 2,
+                "type": "working",
+                "done": true
+              },
+              {
+                "id": "set-2",
+                "kg": 40,
+                "reps": 7,
+                "rir": 2,
+                "type": "working",
+                "done": true
+              }
+            ]
+          },
+          {
+            "id": "week--1-1-2",
+            "exerciseId": "row",
+            "sets": 3,
+            "min": 6,
+            "max": 10,
+            "notes": "",
+            "entries": [
+              {
+                "id": "set-0",
+                "kg": 20,
+                "reps": 7,
+                "rir": 2,
+                "type": "working",
+                "done": true
+              },
+              {
+                "id": "set-1",
+                "kg": 20,
+                "reps": 7,
+                "rir": 2,
+                "type": "working",
+                "done": true
+              },
+              {
+                "id": "set-2",
+                "kg": 20,
+                "reps": 7,
+                "rir": 2,
+                "type": "working",
+                "done": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "week--1-2",
+        "name": "Full body A",
+        "planId": "routine",
+        "date": "2026-11-13",
+        "startedAt": 1794564120000,
+        "finishedAt": 1794567720000,
+        "notes": "Synthetic QA record",
+        "readiness": 3,
+        "exercises": [
+          {
+            "id": "week--1-2-0",
+            "exerciseId": "bench",
+            "sets": 3,
+            "min": 6,
+            "max": 10,
+            "notes": "",
+            "entries": [
+              {
+                "id": "set-0",
+                "kg": 20,
+                "reps": 8,
+                "rir": 2,
+                "type": "working",
+                "done": true
+              },
+              {
+                "id": "set-1",
+                "kg": 20,
+                "reps": 8,
+                "rir": 2,
+                "type": "working",
+                "done": true
+              },
+              {
+                "id": "set-2",
+                "kg": 20,
+                "reps": 8,
+                "rir": 2,
+                "type": "working",
+                "done": true
+              }
+            ]
+          },
+          {
+            "id": "week--1-2-1",
+            "exerciseId": "squat",
+            "sets": 3,
+            "min": 6,
+            "max": 10,
+            "notes": "",
+            "entries": [
+              {
+                "id": "set-0",
+                "kg": 40,
+                "reps": 8,
+                "rir": 2,
+                "type": "working",
+                "done": true
+              },
+              {
+                "id": "set-1",
+                "kg": 40,
+                "reps": 8,
+                "rir": 2,
+                "type": "working",
+                "done": true
+              },
+              {
+                "id": "set-2",
+                "kg": 40,
+                "reps": 8,
+                "rir": 2,
+                "type": "working",
+                "done": true
+              }
+            ]
+          },
+          {
+            "id": "week--1-2-2",
+            "exerciseId": "row",
+            "sets": 3,
+            "min": 6,
+            "max": 10,
+            "notes": "",
+            "entries": [
+              {
+                "id": "set-0",
+                "kg": 20,
+                "reps": 8,
+                "rir": 2,
+                "type": "working",
+                "done": true
+              },
+              {
+                "id": "set-1",
+                "kg": 20,
+                "reps": 8,
+                "rir": 2,
+                "type": "working",
+                "done": true
+              },
+              {
+                "id": "set-2",
+                "kg": 20,
+                "reps": 8,
+                "rir": 2,
+                "type": "working",
+                "done": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "week-0-0",
+        "name": "Full body A",
+        "planId": "routine",
+        "date": "2026-11-16",
+        "startedAt": 1794823200000,
+        "finishedAt": 1794826800000,
+        "notes": "Synthetic QA record",
+        "readiness": 3,
+        "exercises": [
+          {
+            "id": "week-0-0-0",
+            "exerciseId": "bench",
+            "sets": 3,
+            "min": 6,
+            "max": 10,
+            "notes": "",
+            "entries": [
+              {
+                "id": "set-0",
+                "kg": 20,
+                "reps": 7,
+                "rir": 2,
+                "type": "working",
+                "done": true
+              },
+              {
+                "id": "set-1",
+                "kg": 20,
+                "reps": 7,
+                "rir": 2,
+                "type": "working",
+                "done": true
+              },
+              {
+                "id": "set-2",
+                "kg": 20,
+                "reps": 7,
+                "rir": 2,
+                "type": "working",
+                "done": true
+              }
+            ]
+          },
+          {
+            "id": "week-0-0-1",
+            "exerciseId": "squat",
+            "sets": 3,
+            "min": 6,
+            "max": 10,
+            "notes": "",
+            "entries": [
+              {
+                "id": "set-0",
+                "kg": 40,
+                "reps": 7,
+                "rir": 2,
+                "type": "working",
+                "done": true
+              },
+              {
+                "id": "set-1",
+                "kg": 40,
+                "reps": 7,
+                "rir": 2,
+                "type": "working",
+                "done": true
+              },
+              {
+                "id": "set-2",
+                "kg": 40,
+                "reps": 7,
+                "rir": 2,
+                "type": "working",
+                "done": true
+              }
+            ]
+          },
+          {
+            "id": "week-0-0-2",
+            "exerciseId": "row",
+            "sets": 3,
+            "min": 6,
+            "max": 10,
+            "notes": "",
+            "entries": [
+              {
+                "id": "set-0",
+                "kg": 20,
+                "reps": 7,
+                "rir": 2,
+                "type": "working",
+                "done": true
+              },
+              {
+                "id": "set-1",
+                "kg": 20,
+                "reps": 7,
+                "rir": 2,
+                "type": "working",
+                "done": true
+              },
+              {
+                "id": "set-2",
+                "kg": 20,
+                "reps": 7,
+                "rir": 2,
+                "type": "working",
+                "done": true
+              }
+            ]
+          }
+        ],
+        "scheduledOccurrenceId": "review-week@2026-11-16"
+      },
+      {
+        "id": "week-0-1",
+        "name": "Full body A",
+        "planId": "routine",
+        "date": "2026-11-18",
+        "startedAt": 1794996060000,
+        "finishedAt": 1794999660000,
+        "notes": "Synthetic QA record",
+        "readiness": 3,
+        "exercises": [
+          {
+            "id": "week-0-1-0",
+            "exerciseId": "bench",
+            "sets": 3,
+            "min": 6,
+            "max": 10,
+            "notes": "",
+            "entries": [
+              {
+                "id": "set-0",
+                "kg": 20,
+                "reps": 8,
+                "rir": 2,
+                "type": "working",
+                "done": true
+              },
+              {
+                "id": "set-1",
+                "kg": 20,
+                "reps": 8,
+                "rir": 2,
+                "type": "working",
+                "done": true
+              },
+              {
+                "id": "set-2",
+                "kg": 20,
+                "reps": 8,
+                "rir": 2,
+                "type": "working",
+                "done": true
+              }
+            ]
+          },
+          {
+            "id": "week-0-1-1",
+            "exerciseId": "squat",
+            "sets": 3,
+            "min": 6,
+            "max": 10,
+            "notes": "",
+            "entries": [
+              {
+                "id": "set-0",
+                "kg": 40,
+                "reps": 8,
+                "rir": 2,
+                "type": "working",
+                "done": true
+              },
+              {
+                "id": "set-1",
+                "kg": 40,
+                "reps": 8,
+                "rir": 2,
+                "type": "working",
+                "done": true
+              },
+              {
+                "id": "set-2",
+                "kg": 40,
+                "reps": 8,
+                "rir": 2,
+                "type": "working",
+                "done": true
+              }
+            ]
+          },
+          {
+            "id": "week-0-1-2",
+            "exerciseId": "row",
+            "sets": 3,
+            "min": 6,
+            "max": 10,
+            "notes": "",
+            "entries": [
+              {
+                "id": "set-0",
+                "kg": 20,
+                "reps": 8,
+                "rir": 2,
+                "type": "working",
+                "done": true
+              },
+              {
+                "id": "set-1",
+                "kg": 20,
+                "reps": 8,
+                "rir": 2,
+                "type": "working",
+                "done": true
+              },
+              {
+                "id": "set-2",
+                "kg": 20,
+                "reps": 8,
+                "rir": 2,
+                "type": "working",
+                "done": true
+              }
+            ]
+          }
+        ],
+        "scheduledOccurrenceId": "review-week@2026-11-18"
+      },
+      {
+        "id": "week-0-2",
+        "name": "Full body A",
+        "planId": "routine",
+        "date": "2026-11-19",
+        "startedAt": 1795082520000,
+        "finishedAt": 1795086120000,
+        "notes": "Synthetic QA record",
+        "readiness": 3,
+        "exercises": [
+          {
+            "id": "week-0-2-0",
+            "exerciseId": "bench",
+            "sets": 3,
+            "min": 6,
+            "max": 10,
+            "notes": "",
+            "entries": [
+              {
+                "id": "set-0",
+                "kg": 20,
+                "reps": 9,
+                "rir": 2,
+                "type": "working",
+                "done": true
+              },
+              {
+                "id": "set-1",
+                "kg": 20,
+                "reps": 9,
+                "rir": 2,
+                "type": "working",
+                "done": true
+              },
+              {
+                "id": "set-2",
+                "kg": 20,
+                "reps": 9,
+                "rir": 2,
+                "type": "working",
+                "done": true
+              }
+            ]
+          },
+          {
+            "id": "week-0-2-1",
+            "exerciseId": "squat",
+            "sets": 3,
+            "min": 6,
+            "max": 10,
+            "notes": "",
+            "entries": [
+              {
+                "id": "set-0",
+                "kg": 40,
+                "reps": 9,
+                "rir": 2,
+                "type": "working",
+                "done": true
+              },
+              {
+                "id": "set-1",
+                "kg": 40,
+                "reps": 9,
+                "rir": 2,
+                "type": "working",
+                "done": true
+              },
+              {
+                "id": "set-2",
+                "kg": 40,
+                "reps": 9,
+                "rir": 2,
+                "type": "working",
+                "done": true
+              }
+            ]
+          },
+          {
+            "id": "week-0-2-2",
+            "exerciseId": "row",
+            "sets": 3,
+            "min": 6,
+            "max": 10,
+            "notes": "",
+            "entries": [
+              {
+                "id": "set-0",
+                "kg": 20,
+                "reps": 9,
+                "rir": 2,
+                "type": "working",
+                "done": true
+              },
+              {
+                "id": "set-1",
+                "kg": 20,
+                "reps": 9,
+                "rir": 2,
+                "type": "working",
+                "done": true
+              },
+              {
+                "id": "set-2",
+                "kg": 20,
+                "reps": 9,
+                "rir": 2,
+                "type": "working",
+                "done": true
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "draft": null,
+    "weights": [
+      {
+        "date": "2026-11-10",
+        "kg": 90
+      },
+      {
+        "date": "2026-11-13",
+        "kg": 89.8
+      },
+      {
+        "date": "2026-11-17",
+        "kg": 88.8
+      },
+      {
+        "date": "2026-11-19",
+        "kg": 88.6
+      }
+    ],
+    "measurements": [
+      {
+        "date": "2026-11-14",
+        "name": "Waist",
+        "cm": 85
+      },
+      {
+        "date": "2026-11-19",
+        "name": "Waist",
+        "cm": 84
+      }
+    ],
+    "photos": [],
+    "unlocks": [],
+    "upgrade": {
+      "version": 1,
+      "advanced": {
+        "version": 1,
+        "backup": {
+          "interval": "never",
+          "lastSuccessful": null,
+          "lastRequestedAt": null,
+          "lastReminderAt": null
+        },
+        "blocks": [],
+        "feedback": []
+      },
+      "theme": "dark",
+      "weekStartsOn": 1,
+      "exerciseBrowser": {
+        "favorites": [],
+        "recentSelections": []
+      },
+      "haptics": false,
+      "exerciseRules": {},
+      "goals": [
+        {
+          "id": "body",
+          "name": "Reach my recorded weight target",
+          "type": "body",
+          "target": 80,
+          "baseline": 90,
+          "createdAt": 1792238400000
+        },
+        {
+          "id": "lift",
+          "name": "Bench working-load target",
+          "type": "load",
+          "exerciseId": "bench",
+          "target": 30,
+          "createdAt": 1792238400000
+        },
+        {
+          "id": "consistency",
+          "name": "Complete fifteen recorded workouts",
+          "type": "workouts",
+          "target": 15,
+          "createdAt": 1792238400000
+        }
+      ],
+      "schedule": [],
+      "recurring": [
+        {
+          "id": "review-week",
+          "planId": "routine",
+          "planName": "Full body A",
+          "startDate": "2026-11-16",
+          "endDate": null,
+          "weekdays": [
+            1,
+            3,
+            5
+          ],
+          "time": "19:00",
+          "reminderMinutes": 30
+        }
+      ],
+      "scheduleExceptions": [],
+      "notifications": {
+        "enabled": false,
+        "defaultMinutes": 30,
+        "delivered": []
+      },
+      "readiness": [],
+      "coach": {
+        "style": "analytical",
+        "detail": "concise",
+        "memory": [],
+        "messages": [],
+        "decisions": [],
+        "dismissedInsights": [],
+        "endpoint": "",
+        "consent": false,
+        "shareBody": false,
+        "shareReadiness": false
+      },
+      "plates": [
+        20,
+        10,
+        5,
+        2.5,
+        1.25
+      ],
+      "barKg": 20
+    }
+  }
+}

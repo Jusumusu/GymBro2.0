@@ -1,0 +1,267 @@
+{
+  "baseline": 198,
+  "available": 254,
+  "addedAvailable": 56,
+  "preparedSpecial": 21,
+  "preparedTotal": 275,
+  "availableCoverage": {
+    "primary": {
+      "Chest": 31,
+      "Back": 33,
+      "Quads": 31,
+      "Hamstrings": 20,
+      "Glutes": 22,
+      "Shoulders": 26,
+      "Biceps": 18,
+      "Triceps": 16,
+      "Calves": 12,
+      "Core": 15,
+      "Adductors": 7,
+      "Spinal erectors": 4,
+      "Forearms": 12,
+      "Obliques": 7
+    },
+    "equipment": {
+      "barbell": 31,
+      "dumbbell": 59,
+      "bodyweight": 48,
+      "machine": 8,
+      "cable": 49,
+      "smith": 9,
+      "plate-loaded": 15,
+      "selectorized": 20,
+      "kettlebell": 10,
+      "ez-bar": 4,
+      "trap-bar": 1
+    }
+  },
+  "preparedCoverage": {
+    "primary": {
+      "Quads": 31,
+      "Chest": 33,
+      "Hamstrings": 21,
+      "Glutes": 24,
+      "Back": 36,
+      "Shoulders": 29,
+      "Biceps": 19,
+      "Triceps": 17,
+      "Calves": 12,
+      "Core": 16,
+      "Forearms": 15,
+      "Spinal erectors": 4,
+      "Adductors": 8,
+      "Obliques": 10
+    },
+    "equipment": {
+      "barbell": 31,
+      "dumbbell": 61,
+      "bodyweight": 50,
+      "machine": 8,
+      "cable": 49,
+      "smith": 9,
+      "plate-loaded": 15,
+      "selectorized": 20,
+      "band": 12,
+      "assisted-machine": 3,
+      "kettlebell": 11,
+      "ez-bar": 4,
+      "trap-bar": 1,
+      "weight-plate": 1
+    },
+    "patterns": {
+      "squat": 26,
+      "horizontal push": 27,
+      "hinge": 15,
+      "knee flexion": 12,
+      "horizontal pull": 21,
+      "vertical push": 15,
+      "vertical pull": 11,
+      "abduction": 4,
+      "elbow flexion": 21,
+      "elbow extension": 14,
+      "plantar flexion": 12,
+      "trunk flexion": 10,
+      "horizontal adduction": 6,
+      "hip extension": 11,
+      "knee extension": 2,
+      "horizontal abduction": 4,
+      "diagonal pull": 1,
+      "shoulder extension": 3,
+      "scapular elevation": 2,
+      "diagonal push": 1,
+      "shoulder flexion": 2,
+      "external rotation": 1,
+      "wrist flexion": 3,
+      "wrist extension": 3,
+      "forearm rotation": 2,
+      "lateral squat": 2,
+      "hip abduction": 6,
+      "ballistic hinge": 1,
+      "spinal extension": 3,
+      "hip adduction": 7,
+      "anti-extension": 5,
+      "anti-rotation": 4,
+      "trunk rotation": 3,
+      "lateral flexion": 3,
+      "anti-lateral-flexion": 1,
+      "loaded carry": 3,
+      "grip hold": 1,
+      "shoulder abduction": 1,
+      "shoulder elevation": 1,
+      "shoulder rotation": 1,
+      "wrist deviation": 2,
+      "lunge": 2
+    },
+    "categories": {
+      "Legacy strength": 43,
+      "Upper body": 124,
+      "Lower body": 78,
+      "Full body": 4,
+      "Core": 26
+    }
+  },
+  "duplicates": 0,
+  "invalidMappings": 0,
+  "legacyDefinitionsUnchanged": 198,
+  "protectedLegacyIds": 40,
+  "search": {
+    "runs": 600,
+    "totalMs": 148.7,
+    "averageMs": 0.2478,
+    "scope": "Node, local observation; not a phone benchmark"
+  },
+  "pendingTracking": [
+    {
+      "id": "gb-band-chest-press",
+      "name": "Resistance band chest press",
+      "trackingType": "reps",
+      "loadKind": "band setup in notes"
+    },
+    {
+      "id": "gb-assisted-chest-dip",
+      "name": "Assisted chest dip",
+      "trackingType": "reps",
+      "loadKind": "assistance load"
+    },
+    {
+      "id": "gb-assisted-pullup",
+      "name": "Assisted pull-up",
+      "trackingType": "reps",
+      "loadKind": "assistance load"
+    },
+    {
+      "id": "gb-assisted-chinup",
+      "name": "Assisted chin-up",
+      "trackingType": "reps",
+      "loadKind": "assistance load"
+    },
+    {
+      "id": "gb-band-row",
+      "name": "Resistance band row",
+      "trackingType": "reps",
+      "loadKind": "band setup in notes"
+    },
+    {
+      "id": "gb-band-lateral",
+      "name": "Resistance band lateral raise",
+      "trackingType": "reps",
+      "loadKind": "band setup in notes"
+    },
+    {
+      "id": "gb-band-pull-apart",
+      "name": "Band pull-apart",
+      "trackingType": "reps",
+      "loadKind": "band setup in notes"
+    },
+    {
+      "id": "gb-band-face-pull",
+      "name": "Band face pull",
+      "trackingType": "reps",
+      "loadKind": "band setup in notes"
+    },
+    {
+      "id": "gb-band-curl",
+      "name": "Resistance band biceps curl",
+      "trackingType": "reps",
+      "loadKind": "band setup in notes"
+    },
+    {
+      "id": "gb-band-triceps-extension",
+      "name": "Band triceps pushdown",
+      "trackingType": "reps",
+      "loadKind": "band setup in notes"
+    },
+    {
+      "id": "gb-band-leg-curl",
+      "name": "Prone resistance band leg curl",
+      "trackingType": "reps",
+      "loadKind": "band setup in notes"
+    },
+    {
+      "id": "gb-band-hip-abduction",
+      "name": "Standing band hip abduction",
+      "trackingType": "reps",
+      "loadKind": "band setup in notes"
+    },
+    {
+      "id": "gb-band-lateral-walk",
+      "name": "Lateral band walk",
+      "trackingType": "reps",
+      "loadKind": "band setup in notes"
+    },
+    {
+      "id": "gb-band-hip-adduction",
+      "name": "Standing band hip adduction",
+      "trackingType": "reps",
+      "loadKind": "band setup in notes"
+    },
+    {
+      "id": "gb-band-pallof",
+      "name": "Band Pallof press",
+      "trackingType": "reps",
+      "loadKind": "band setup in notes"
+    },
+    {
+      "id": "gb-forearm-plank",
+      "name": "Forearm plank",
+      "trackingType": "duration",
+      "loadKind": "added load"
+    },
+    {
+      "id": "gb-side-plank",
+      "name": "Side plank",
+      "trackingType": "duration",
+      "loadKind": "added load"
+    },
+    {
+      "id": "gb-db-farmer-carry",
+      "name": "Dumbbell farmer carry",
+      "trackingType": "duration",
+      "loadKind": "per dumbbell"
+    },
+    {
+      "id": "gb-kb-farmer-carry",
+      "name": "Kettlebell farmer carry",
+      "trackingType": "duration",
+      "loadKind": "per kettlebell"
+    },
+    {
+      "id": "gb-db-suitcase-carry",
+      "name": "Dumbbell suitcase carry",
+      "trackingType": "duration",
+      "loadKind": "single implement"
+    },
+    {
+      "id": "gb-plate-pinch",
+      "name": "Plate pinch hold",
+      "trackingType": "duration",
+      "loadKind": "plates held per hand"
+    }
+  ],
+  "limits": [
+    "Ordinal roles are coaching estimates, not measured activation or growth percentages.",
+    "Timed holds/carries, assistance load and band setup entries are prepared but excluded from the current reps/load logger until their tracking integration.",
+    "Olympic lifts, distance/cardio tracking and mobility routines are not added to this strength logger.",
+    "Generic legacy entries are retained alongside explicit equipment/setup variations; no history is remapped."
+  ]
+}

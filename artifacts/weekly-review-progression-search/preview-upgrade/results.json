@@ -1,0 +1,22 @@
+{
+  "from": {
+    "version": "0.6.0",
+    "build": "99f04ce94cbc"
+  },
+  "to": {
+    "version": "0.7.0",
+    "build": "ba90abb98e4e"
+  },
+  "production": "0.6.0",
+  "checks": [
+    "Actual 0.6.0 preview is installed beside a distinct production journal",
+    "Old preview detects 0.7.0 and offers an update without interrupting the session",
+    "Updater clearly identifies 0.7.0 preview and its new release notes",
+    "Explicit update installs 0.7.0 and Settings uses the same release version",
+    "History, active workout, preferences, body records and private photo bytes survive unchanged",
+    "Updated preview opens offline with the complete journal",
+    "Production remains 0.6.0 with its own unchanged journal and release metadata"
+  ],
+  "errors": [],
+  "scope": "Actual archived 0.6.0 preview to 0.7.0 in Chromium; fresh synthetic production and preview journals, real worker update and offline reload. Physical mobile browsers not certified."
+}

@@ -1,13 +1,17 @@
 import {equipmentMatches} from './exercise-equipment.js';
 import {contributions,discoverableMuscles,muscleLabel,CONTRIBUTION_MUSCLES} from './muscle-contributions.js';
 const aliases={row:'rows bent over row bb row','db-row':'rows db row dumbbell row','cable-row':'rows seated cable row','chest-supported-row':'rows supported row',crunch:'abs abdominals crunches','reverse-crunch':'abs reverse crunches','cable-crunch':'abs cable crunches',squat:'back squat bb squat squats',bench:'bp flat bench bb bench',ohp:'ohp overhead press military press',rdl:'rdl rdls romanian deadlift', 'db-rdl':'db rdl dumbbell romanian deadlift',pulldown:'lat pulldown pull down pulldowns latpulldown',pullup:'pull up pullup pullups pull ups',pushup:'push up pushup pushups push ups', 'incline-db':'incline bench press db incline',deadlift:'dl conventional deadlift','curl-leg':'hamstring curl leg curl'};
-export const normalizeSearch=value=>String(value||'').normalize('NFKD').replace(/\p{M}/gu,'').toLowerCase().replace(/[^\p{L}\p{N}]+/gu,' ').trim();
+import {normalizeSearch,searchDocument,rankSearch} from './exercise-search.js';
+export {normalizeSearch} from './exercise-search.js';
 const upper=new Set(['Chest','Back','Shoulders','Biceps','Triceps','Forearms']),lower=new Set(['Quads','Hamstrings','Glutes','Calves','Adductors']);
 const broadCategory=exercise=>upper.has(exercise.muscle)?'Upper body':lower.has(exercise.muscle)?'Lower body':'Core training';
-export function exerciseIndex(exercises){return [...new Map(exercises.map(e=>[e.id,e])).values()].map(exercise=>({exercise,categories:[...discoverableMuscles(exercise),broadCategory(exercise),...(exercise.category==='Full body'?['Full body']:[])],text:normalizeSearch([exercise.id,exercise.name,exercise.name.replace(/dumbbell/gi,'db').replace(/barbell/gi,'bb'),aliases[exercise.id],...(exercise.aliases||[]),exercise.equipment,exercise.pattern,exercise.muscle,broadCategory(exercise),exercise.category,...contributions(exercise).filter(r=>r.role!=='stabilizer').map(r=>muscleLabel(r.muscle))].join(' '))}));}
-export function browseExercises(index,{query='',category='',equipment='',pattern='',type='',customIds=new Set()}={}){
- const words=normalizeSearch(query).split(' ').filter(Boolean);
- return index.filter(x=>(words.length?words.every(w=>x.text.includes(w)):!category||x.categories.includes(category))&&equipmentMatches(x.exercise.equipment,equipment)&&(!pattern||x.exercise.pattern===pattern)&&(!type||type==='custom'?(!type||customIds.has(x.exercise.id)):type==='compound'?x.exercise.compound:!x.exercise.compound)).map(x=>x.exercise);
+export function exerciseIndex(exercises){return [...new Map(exercises.map(e=>[e.id,e])).values()].map(exercise=>{const names=[...(exercise.aliases||[]),exercise.name.replace(/dumbbell/gi,'db').replace(/barbell/gi,'bb').replace(/kettlebell/gi,'kb'),...(aliases[exercise.id]?[aliases[exercise.id]]:[])];
+ // Preserve legacy aliases while treating abbreviations as complete phrases.
+ const shorthand={bench:['bench','bench press','bp','flat bench','bb bench'],ohp:['ohp','military press'],rdl:['rdl','rdls'],deadlift:['deadlift','dl'],pulldown:['lat pulldown','pull down','latpulldown'],squat:['squat','squats','back squat','bb squat'],curl:['curl','bicep curl','biceps curl']};names.push(...(shorthand[exercise.id]||[]));
+ const categories=[...discoverableMuscles(exercise),broadCategory(exercise),...(exercise.category==='Full body'?['Full body']:[])],text=[exercise.id,exercise.name,...names,exercise.equipment,exercise.pattern,exercise.muscle,...categories,...contributions(exercise).filter(r=>r.role!=='stabilizer').map(r=>muscleLabel(r.muscle))].join(' ');return {exercise,categories,text:normalizeSearch(text),search:searchDocument(exercise.name,names,text)};});}
+export function browseExercises(index,{query='',category='',equipment='',pattern='',type='',customIds=new Set(),favorites=new Set(),recentIds=[],respectCategory=false}={}){
+ const filtered=index.filter(x=>(query&&!respectCategory||!category||x.categories.includes(category))&&equipmentMatches(x.exercise.equipment,equipment)&&(!pattern||x.exercise.pattern===pattern)&&(!type||type==='custom'?(!type||customIds.has(x.exercise.id)):type==='compound'?x.exercise.compound:!x.exercise.compound));
+ return rankSearch(filtered,query,{favorites,recentIds}).map(x=>x.exercise);
 }
 export function recentExercises(state,exercises,limit=6){
  const latest=new Map();
