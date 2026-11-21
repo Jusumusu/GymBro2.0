@@ -8,7 +8,7 @@
   },
   "candidatePreview": {
     "version": "0.7.0",
-    "build": "05d562bfc192",
+    "build": "95604f6248bc",
     "environment": "preview"
   },
   "checks": {
@@ -81,7 +81,7 @@
   "designApproval": {
     "weekly": null,
     "identity": "A \u2014 Aero, retained by user",
-    "glass": "Chrome iOS/CSS path: fully transparent control faces, no backdrop filter; no forced solid rules for compact screens/photos; device reduced-transparency honored",
+    "glass": "iOS/CSS path: transparent face, no backdrop processing, no masked gradient overlay; edge strokes only. Device reduced-transparency honored.",
     "weeklyAestheticIntegration": false,
     "glassAestheticIntegration": true
   },

@@ -5,7 +5,7 @@
   },
   "to": {
     "version": "0.7.0",
-    "build": "05d562bfc192"
+    "build": "95604f6248bc"
   },
   "checks": [
     "The actual previous 0.7 build is installed with its opaque compact-screen bar and active journal",

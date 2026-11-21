@@ -9,7 +9,9 @@
         "filter": "none",
         "image": "none",
         "mode": "clear-css",
-        "rimMask": "exclude, exclude",
+        "rimMask": "add",
+        "rimDisplay": "none",
+        "rimImage": "none",
         "shadow": "none"
       },
       "rest": {
@@ -17,7 +19,9 @@
         "filter": "none",
         "image": "none",
         "mode": "clear-css",
-        "rimMask": "exclude, exclude",
+        "rimMask": "add",
+        "rimDisplay": "none",
+        "rimImage": "none",
         "shadow": "rgb(244, 246, 247) 0px 1px 0px"
       },
       "overflow": false,
@@ -32,7 +36,9 @@
         "filter": "none",
         "image": "none",
         "mode": "clear-css",
-        "rimMask": "exclude, exclude",
+        "rimMask": "add",
+        "rimDisplay": "none",
+        "rimImage": "none",
         "shadow": "none"
       },
       "rest": {
@@ -40,7 +46,9 @@
         "filter": "none",
         "image": "none",
         "mode": "clear-css",
-        "rimMask": "exclude, exclude",
+        "rimMask": "add",
+        "rimDisplay": "none",
+        "rimImage": "none",
         "shadow": "rgb(244, 246, 247) 0px 1px 0px"
       },
       "overflow": false,
@@ -55,7 +63,9 @@
         "filter": "none",
         "image": "none",
         "mode": "clear-css",
-        "rimMask": "exclude, exclude",
+        "rimMask": "add",
+        "rimDisplay": "none",
+        "rimImage": "none",
         "shadow": "none"
       },
       "rest": {
@@ -63,7 +73,9 @@
         "filter": "none",
         "image": "none",
         "mode": "clear-css",
-        "rimMask": "exclude, exclude",
+        "rimMask": "add",
+        "rimDisplay": "none",
+        "rimImage": "none",
         "shadow": "rgb(244, 246, 247) 0px 1px 0px"
       },
       "overflow": false,
@@ -78,7 +90,9 @@
         "filter": "none",
         "image": "none",
         "mode": "clear-css",
-        "rimMask": "exclude, exclude",
+        "rimMask": "add",
+        "rimDisplay": "none",
+        "rimImage": "none",
         "shadow": "none"
       },
       "rest": {
@@ -86,7 +100,9 @@
         "filter": "none",
         "image": "none",
         "mode": "clear-css",
-        "rimMask": "exclude, exclude",
+        "rimMask": "add",
+        "rimDisplay": "none",
+        "rimImage": "none",
         "shadow": "rgb(244, 246, 247) 0px 1px 0px"
       },
       "overflow": false,
@@ -101,7 +117,9 @@
         "filter": "none",
         "image": "none",
         "mode": "clear-css",
-        "rimMask": "exclude, exclude",
+        "rimMask": "add",
+        "rimDisplay": "none",
+        "rimImage": "none",
         "shadow": "none"
       },
       "rest": {
@@ -109,7 +127,9 @@
         "filter": "none",
         "image": "none",
         "mode": "clear-css",
-        "rimMask": "exclude, exclude",
+        "rimMask": "add",
+        "rimDisplay": "none",
+        "rimImage": "none",
         "shadow": "rgb(244, 246, 247) 0px 1px 0px"
       },
       "overflow": false,
@@ -124,7 +144,9 @@
         "filter": "none",
         "image": "none",
         "mode": "clear-css",
-        "rimMask": "exclude, exclude",
+        "rimMask": "add",
+        "rimDisplay": "none",
+        "rimImage": "none",
         "shadow": "none"
       },
       "rest": {
@@ -132,7 +154,9 @@
         "filter": "none",
         "image": "none",
         "mode": "clear-css",
-        "rimMask": "exclude, exclude",
+        "rimMask": "add",
+        "rimDisplay": "none",
+        "rimImage": "none",
         "shadow": "rgb(20, 25, 28) 0px 1px 0px"
       },
       "overflow": false,
@@ -147,7 +171,9 @@
         "filter": "none",
         "image": "none",
         "mode": "clear-css",
-        "rimMask": "exclude, exclude",
+        "rimMask": "add",
+        "rimDisplay": "none",
+        "rimImage": "none",
         "shadow": "none"
       },
       "rest": {
@@ -155,7 +181,9 @@
         "filter": "none",
         "image": "none",
         "mode": "clear-css",
-        "rimMask": "exclude, exclude",
+        "rimMask": "add",
+        "rimDisplay": "none",
+        "rimImage": "none",
         "shadow": "rgb(20, 25, 28) 0px 1px 0px"
       },
       "overflow": false,
@@ -170,7 +198,9 @@
         "filter": "none",
         "image": "none",
         "mode": "clear-css",
-        "rimMask": "exclude, exclude",
+        "rimMask": "add",
+        "rimDisplay": "none",
+        "rimImage": "none",
         "shadow": "none"
       },
       "rest": {
@@ -178,7 +208,9 @@
         "filter": "none",
         "image": "none",
         "mode": "clear-css",
-        "rimMask": "exclude, exclude",
+        "rimMask": "add",
+        "rimDisplay": "none",
+        "rimImage": "none",
         "shadow": "rgb(20, 25, 28) 0px 1px 0px"
       },
       "overflow": false,
@@ -193,7 +225,9 @@
         "filter": "none",
         "image": "none",
         "mode": "clear-css",
-        "rimMask": "exclude, exclude",
+        "rimMask": "add",
+        "rimDisplay": "none",
+        "rimImage": "none",
         "shadow": "none"
       },
       "rest": {
@@ -201,7 +235,9 @@
         "filter": "none",
         "image": "none",
         "mode": "clear-css",
-        "rimMask": "exclude, exclude",
+        "rimMask": "add",
+        "rimDisplay": "none",
+        "rimImage": "none",
         "shadow": "rgb(20, 25, 28) 0px 1px 0px"
       },
       "overflow": false,
@@ -216,7 +252,9 @@
         "filter": "none",
         "image": "none",
         "mode": "clear-css",
-        "rimMask": "exclude, exclude",
+        "rimMask": "add",
+        "rimDisplay": "none",
+        "rimImage": "none",
         "shadow": "none"
       },
       "rest": {
@@ -224,7 +262,9 @@
         "filter": "none",
         "image": "none",
         "mode": "clear-css",
-        "rimMask": "exclude, exclude",
+        "rimMask": "add",
+        "rimDisplay": "none",
+        "rimImage": "none",
         "shadow": "rgb(20, 25, 28) 0px 1px 0px"
       },
       "overflow": false,

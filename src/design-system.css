@@ -316,5 +316,7 @@ html[data-theme] .mobile-nav[data-liquid-glass=clear-css] a{color:var(--ink);tex
 html[data-theme] .mobile-nav[data-liquid-glass=clear-css] a[aria-current]{color:var(--accent)}
 html[data-theme] :is(.advanced-rest,.exercise-jump-nav)[data-liquid-glass=clear-css]{text-shadow:0 1px 0 var(--paper)}
 html[data-theme] :is(.mobile-nav,.advanced-rest,.exercise-jump-nav)[data-liquid-glass=clear-css] .icon{filter:drop-shadow(0 1px 0 var(--paper))}
+/* WebKit fallback does not depend on mask-composite: no painted overlay can cover the face. */
+html[data-theme] :is(.mobile-nav,.advanced-rest,.exercise-jump-nav,.sidebar nav)[data-liquid-glass=clear-css]::before{content:none;display:none;background:none;-webkit-mask:none;mask:none}
 /* A device accessibility preference is the only reason to replace clear controls with solid ones. */
 @media(prefers-reduced-transparency:reduce){html[data-theme] :is(.mobile-nav,.exercise-jump-nav,.advanced-rest,.sidebar nav,.dialog-head),html[data-theme] :is(.mobile-nav,.exercise-jump-nav,.advanced-rest,.sidebar nav)[data-liquid-glass]{background:var(--surface);-webkit-backdrop-filter:none;backdrop-filter:none;box-shadow:0 2px 8px #0001}html[data-theme] :is(.mobile-nav,.exercise-jump-nav,.advanced-rest,.sidebar nav)::before{display:none}}
