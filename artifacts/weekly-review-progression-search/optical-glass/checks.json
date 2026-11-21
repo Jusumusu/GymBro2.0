@@ -2,9 +2,9 @@
   "checks": [
     "light: Clear optical and prior frosted glass rendered on the same real workout, inputs/cards remain solid, seven widths fit and the journal is unchanged",
     "dark: Clear optical and prior frosted glass rendered on the same real workout, inputs/cards remain solid, seven widths fit and the journal is unchanged",
-    "Short-screen navigation uses a solid readability fallback",
+    "Short-screen navigation retains its clear material",
     "Reduced-transparency preference makes navigation and rest timer opaque",
-    "A real synthetic photo activates the solid navigation readability fallback",
+    "A photo does not silently replace the clear material with a solid pane",
     "Optical glass reloads offline while the full active journal remains unchanged",
     "Live optical demo moves the pane and the actual paired comparison loads in both themes",
     "WebKit-targeted compatibility path stays clear without an unsupported SVG backdrop (UA emulation, not Safari engine certification)"
