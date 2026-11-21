@@ -9,7 +9,17 @@ Functional app: https://gym-bro-design-review.jesse03sousa.chatgpt.site/preview/
 
 The retained Sites project is private to its owner. Its source was tested in local Chromium before packaging; native Sites deployment verifies publication. The managed live-site browser is unavailable, so no live Safari or physical-phone verification is claimed.
 
-## Current optical-glass correction — November 21
+## Current Chrome-on-iOS correction — November 21
+
+The user identified bottom navigation and the rest timer in **Chrome on iOS** as still frosted. A real prior-build reproduction (`0f82e99`, build `12a7709690c4`) confirms the old max-height:600px rule makes the navigation **100% opaque** at compact phone sizes. The photo-presence rule also silently replaced clear panes with solid surfaces. Both blanket rules are removed.
+
+The CSS/WebKit path now uses a literally **transparent background (alpha 0), background-image:none, backdrop-filter:none** for navigation/timer faces, with crisp rim highlights and thin local glyph contrast. No broad tint, diffuse white glyph glow or backdrop processing remains in this path. Device **Reduced Transparency** remains honored; preview Settings reports when it is active and shows the exact installed build. Aero colours/geometry, solid workout fields and all journal data are preserved.
+
+Validation: ten material/viewport cases (five phone sizes × light/dark), six new workflow checks including photo context, accessibility preference/status, actual pointer completion and offline state preservation; four actual old-0.7 → new-0.7 worker/update checks preserve the entire existing journal and active timer while installing the exact new build. The eight optical-regression checks and all 287 unit tests pass. Browser engine testing uses Chromium with a Chrome-iOS user agent and viewport/media emulation, not physical WebKit certification.
+
+The GitHub preview branch is now allowed: run 44905202214 attempt 2 successfully published the prior optical build. This correction is deployed through the same protected preview workflow. The original GitHub URL and its journal storage are retained; no main merge is authorized.
+
+## Earlier optical-glass correction — superseded where noted
 
 The user rejected the previous frosted result: “it should be clear just with the liquid glass effect”. The current finish removes the 16px blur and broad white wash. The centre is sharp with only 2.5% light / 3.5% dark white fill; reflections and shadows are confined to the rim. Small text/icon halos preserve local contrast while leaving the pane clear. Selected-control geometry, typography, Aero colours and all logging surfaces remain unchanged.
 

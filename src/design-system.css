@@ -308,15 +308,13 @@ html[data-theme] .browser-search .search input{min-width:0;flex:1;min-height:46p
 html[data-theme] .browser-search .search:focus-within{border-color:var(--accent);outline:3px solid var(--accent-soft);outline-offset:2px}
 html[data-theme] .browser-search>.quiet{margin:0;min-height:48px;align-self:center;background:transparent;border-radius:12px}
 
-/* Keep controls readable when a photo or a short viewport puts unpredictable content behind them. */
-html[data-theme] body:has(.photo-grid img) :is(.mobile-nav,.advanced-rest){--glass-fill:var(--surface);--glass-filter:none;--glass-edge:var(--line)}
-@media(max-height:600px){html[data-theme] .mobile-nav{--glass-fill:var(--surface);--glass-filter:none;--glass-edge:var(--line)}}
-
-/* Native WebKit keeps the clear, sharp pane and rim; SVG backdrop refraction is progressive. */
-html[data-theme] body:has(.photo-grid img) :is(.mobile-nav,.advanced-rest){-webkit-backdrop-filter:none;backdrop-filter:none}
-@media(max-height:600px){html[data-theme] .mobile-nav{-webkit-backdrop-filter:none;backdrop-filter:none}}
-@media(prefers-reduced-transparency:reduce){html[data-theme] :is(.mobile-nav,.exercise-jump-nav,.advanced-rest,.sidebar nav,.dialog-head){background:var(--surface);-webkit-backdrop-filter:none;backdrop-filter:none;box-shadow:0 2px 8px #0001}html[data-theme] :is(.mobile-nav,.exercise-jump-nav,.advanced-rest,.sidebar nav)::before{display:none}}
-
-/* Local glyph contrast leaves the pane itself clear. */
+/* CSS/WebKit finish: transparent face and a crisp edge, with no backdrop processing. */
+html[data-theme] :is(.mobile-nav,.advanced-rest,.exercise-jump-nav,.sidebar nav)[data-liquid-glass=clear-css]{background:transparent;--glass-active-fill:transparent;-webkit-backdrop-filter:none;backdrop-filter:none;box-shadow:0 2px 6px #00000018,inset 0 1px 0 #ffffff70,inset 0 -1px 0 #00000018}
 html[data-theme] :is(.mobile-nav a,.exercise-jump-nav button,.advanced-rest){text-shadow:0 1px 2px var(--paper),0 0 3px var(--paper)}
 html[data-theme] :is(.mobile-nav a,.exercise-jump-nav button,.advanced-rest) .icon{filter:drop-shadow(0 1px 1px var(--paper))}
+html[data-theme] .mobile-nav[data-liquid-glass=clear-css] a{color:var(--ink);text-shadow:0 1px 0 var(--paper)}
+html[data-theme] .mobile-nav[data-liquid-glass=clear-css] a[aria-current]{color:var(--accent)}
+html[data-theme] :is(.advanced-rest,.exercise-jump-nav)[data-liquid-glass=clear-css]{text-shadow:0 1px 0 var(--paper)}
+html[data-theme] :is(.mobile-nav,.advanced-rest,.exercise-jump-nav)[data-liquid-glass=clear-css] .icon{filter:drop-shadow(0 1px 0 var(--paper))}
+/* A device accessibility preference is the only reason to replace clear controls with solid ones. */
+@media(prefers-reduced-transparency:reduce){html[data-theme] :is(.mobile-nav,.exercise-jump-nav,.advanced-rest,.sidebar nav,.dialog-head),html[data-theme] :is(.mobile-nav,.exercise-jump-nav,.advanced-rest,.sidebar nav)[data-liquid-glass]{background:var(--surface);-webkit-backdrop-filter:none;backdrop-filter:none;box-shadow:0 2px 8px #0001}html[data-theme] :is(.mobile-nav,.exercise-jump-nav,.advanced-rest,.sidebar nav)::before{display:none}}

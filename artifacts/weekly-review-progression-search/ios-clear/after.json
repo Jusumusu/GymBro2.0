@@ -1,0 +1,244 @@
+{
+  "materials": [
+    {
+      "theme": "light",
+      "width": 320,
+      "height": 568,
+      "nav": {
+        "color": "rgba(0, 0, 0, 0)",
+        "filter": "none",
+        "image": "none",
+        "mode": "clear-css",
+        "rimMask": "exclude, exclude",
+        "shadow": "none"
+      },
+      "rest": {
+        "color": "rgba(0, 0, 0, 0)",
+        "filter": "none",
+        "image": "none",
+        "mode": "clear-css",
+        "rimMask": "exclude, exclude",
+        "shadow": "rgb(244, 246, 247) 0px 1px 0px"
+      },
+      "overflow": false,
+      "reduce": false
+    },
+    {
+      "theme": "light",
+      "width": 375,
+      "height": 548,
+      "nav": {
+        "color": "rgba(0, 0, 0, 0)",
+        "filter": "none",
+        "image": "none",
+        "mode": "clear-css",
+        "rimMask": "exclude, exclude",
+        "shadow": "none"
+      },
+      "rest": {
+        "color": "rgba(0, 0, 0, 0)",
+        "filter": "none",
+        "image": "none",
+        "mode": "clear-css",
+        "rimMask": "exclude, exclude",
+        "shadow": "rgb(244, 246, 247) 0px 1px 0px"
+      },
+      "overflow": false,
+      "reduce": false
+    },
+    {
+      "theme": "light",
+      "width": 390,
+      "height": 664,
+      "nav": {
+        "color": "rgba(0, 0, 0, 0)",
+        "filter": "none",
+        "image": "none",
+        "mode": "clear-css",
+        "rimMask": "exclude, exclude",
+        "shadow": "none"
+      },
+      "rest": {
+        "color": "rgba(0, 0, 0, 0)",
+        "filter": "none",
+        "image": "none",
+        "mode": "clear-css",
+        "rimMask": "exclude, exclude",
+        "shadow": "rgb(244, 246, 247) 0px 1px 0px"
+      },
+      "overflow": false,
+      "reduce": false
+    },
+    {
+      "theme": "light",
+      "width": 430,
+      "height": 740,
+      "nav": {
+        "color": "rgba(0, 0, 0, 0)",
+        "filter": "none",
+        "image": "none",
+        "mode": "clear-css",
+        "rimMask": "exclude, exclude",
+        "shadow": "none"
+      },
+      "rest": {
+        "color": "rgba(0, 0, 0, 0)",
+        "filter": "none",
+        "image": "none",
+        "mode": "clear-css",
+        "rimMask": "exclude, exclude",
+        "shadow": "rgb(244, 246, 247) 0px 1px 0px"
+      },
+      "overflow": false,
+      "reduce": false
+    },
+    {
+      "theme": "light",
+      "width": 390,
+      "height": 420,
+      "nav": {
+        "color": "rgba(0, 0, 0, 0)",
+        "filter": "none",
+        "image": "none",
+        "mode": "clear-css",
+        "rimMask": "exclude, exclude",
+        "shadow": "none"
+      },
+      "rest": {
+        "color": "rgba(0, 0, 0, 0)",
+        "filter": "none",
+        "image": "none",
+        "mode": "clear-css",
+        "rimMask": "exclude, exclude",
+        "shadow": "rgb(244, 246, 247) 0px 1px 0px"
+      },
+      "overflow": false,
+      "reduce": false
+    },
+    {
+      "theme": "dark",
+      "width": 320,
+      "height": 568,
+      "nav": {
+        "color": "rgba(0, 0, 0, 0)",
+        "filter": "none",
+        "image": "none",
+        "mode": "clear-css",
+        "rimMask": "exclude, exclude",
+        "shadow": "none"
+      },
+      "rest": {
+        "color": "rgba(0, 0, 0, 0)",
+        "filter": "none",
+        "image": "none",
+        "mode": "clear-css",
+        "rimMask": "exclude, exclude",
+        "shadow": "rgb(20, 25, 28) 0px 1px 0px"
+      },
+      "overflow": false,
+      "reduce": false
+    },
+    {
+      "theme": "dark",
+      "width": 375,
+      "height": 548,
+      "nav": {
+        "color": "rgba(0, 0, 0, 0)",
+        "filter": "none",
+        "image": "none",
+        "mode": "clear-css",
+        "rimMask": "exclude, exclude",
+        "shadow": "none"
+      },
+      "rest": {
+        "color": "rgba(0, 0, 0, 0)",
+        "filter": "none",
+        "image": "none",
+        "mode": "clear-css",
+        "rimMask": "exclude, exclude",
+        "shadow": "rgb(20, 25, 28) 0px 1px 0px"
+      },
+      "overflow": false,
+      "reduce": false
+    },
+    {
+      "theme": "dark",
+      "width": 390,
+      "height": 664,
+      "nav": {
+        "color": "rgba(0, 0, 0, 0)",
+        "filter": "none",
+        "image": "none",
+        "mode": "clear-css",
+        "rimMask": "exclude, exclude",
+        "shadow": "none"
+      },
+      "rest": {
+        "color": "rgba(0, 0, 0, 0)",
+        "filter": "none",
+        "image": "none",
+        "mode": "clear-css",
+        "rimMask": "exclude, exclude",
+        "shadow": "rgb(20, 25, 28) 0px 1px 0px"
+      },
+      "overflow": false,
+      "reduce": false
+    },
+    {
+      "theme": "dark",
+      "width": 430,
+      "height": 740,
+      "nav": {
+        "color": "rgba(0, 0, 0, 0)",
+        "filter": "none",
+        "image": "none",
+        "mode": "clear-css",
+        "rimMask": "exclude, exclude",
+        "shadow": "none"
+      },
+      "rest": {
+        "color": "rgba(0, 0, 0, 0)",
+        "filter": "none",
+        "image": "none",
+        "mode": "clear-css",
+        "rimMask": "exclude, exclude",
+        "shadow": "rgb(20, 25, 28) 0px 1px 0px"
+      },
+      "overflow": false,
+      "reduce": false
+    },
+    {
+      "theme": "dark",
+      "width": 390,
+      "height": 420,
+      "nav": {
+        "color": "rgba(0, 0, 0, 0)",
+        "filter": "none",
+        "image": "none",
+        "mode": "clear-css",
+        "rimMask": "exclude, exclude",
+        "shadow": "none"
+      },
+      "rest": {
+        "color": "rgba(0, 0, 0, 0)",
+        "filter": "none",
+        "image": "none",
+        "mode": "clear-css",
+        "rimMask": "exclude, exclude",
+        "shadow": "rgb(20, 25, 28) 0px 1px 0px"
+      },
+      "overflow": false,
+      "reduce": false
+    }
+  ],
+  "checks": [
+    "light: five iPhone-sized viewports preserve the journal and responsive layout",
+    "dark: five iPhone-sized viewports preserve the journal and responsive layout",
+    "A photo does not force the iOS pane opaque",
+    "Device reduced-transparency preference is honored and reported with the exact installed preview build",
+    "Clear rim never intercepts the actual completion action",
+    "Updated iOS path reloads offline with full saved state unchanged"
+  ],
+  "errors": [],
+  "scope": "Chrome iOS user-agent, phone viewports and media preferences emulated in Chromium; physical iOS/WebKit engine not certified."
+}
