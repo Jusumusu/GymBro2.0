@@ -8,7 +8,7 @@ export const concepts={
 };
 const screens={workout:'Workout',active:'Active workout',gains:'Gains dashboard',library:'Exercise library',schedule:'Schedule',settings:'Settings',muscles:'Muscle map',review:'Weekly review',focus:'Focus Mode',blocks:'Training blocks',records:'Records & achievements',summary:'Completion summary',programs:'Programs',coach:'Coach',update:'App update',states:'Component states'};
 const params=new URLSearchParams(location.search),valid=(key,values,fallback)=>values.includes(params.get(key))?params.get(key):fallback;
-let concept=valid('concept',Object.keys(concepts),'A'),theme=valid('theme',['light','dark','pair'],innerWidth<760?'dark':'pair'),screen=valid('screen',Object.keys(screens),'workout'),glass=valid('glass',['solid','subtle','balanced','expressive'],'balanced'),size=valid('size',['phone','desktop'],'phone'),compare=params.get('compare')==='1';
+let concept=valid('concept',Object.keys(concepts),'A'),theme=valid('theme',['light','dark','pair'],innerWidth<760?'dark':'pair'),screen=valid('screen',Object.keys(screens),'workout'),glass=valid('glass',['solid','subtle','balanced','expressive','clear'],'balanced'),size=valid('size',['phone','desktop'],'phone'),compare=params.get('compare')==='1';
 const solo=params.get('solo')==='1';if(solo){document.body.classList.add('solo');if(theme==='pair')theme='dark';}
 document.querySelector('#concepts').innerHTML=Object.entries(concepts).map(([id,c])=>`<button type="button" data-concept="${id}" aria-pressed="${id===concept}"><strong><i>${id}</i>${c.name}</strong><small>${c.tag}</small></button>`).join('');
 document.querySelector('#screen').innerHTML=Object.entries(screens).map(([id,name])=>`<option value="${id}">${name}</option>`).join('');

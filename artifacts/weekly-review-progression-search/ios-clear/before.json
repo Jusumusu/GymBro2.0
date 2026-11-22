@@ -1,0 +1,240 @@
+{
+  "source": "0f82e992225afbd7068698e6317e99d0405b487d",
+  "materials": [
+    {
+      "theme": "light",
+      "width": 320,
+      "height": 568,
+      "nav": {
+        "color": "rgb(255, 255, 255)",
+        "filter": "none",
+        "image": "none",
+        "mode": "clear-css",
+        "rimMask": "exclude, exclude",
+        "shadow": "none"
+      },
+      "rest": {
+        "color": "rgba(255, 255, 255, 0.024)",
+        "filter": "saturate(1.03)",
+        "image": "none",
+        "mode": "clear-css",
+        "rimMask": "exclude, exclude",
+        "shadow": "rgb(244, 246, 247) 0px 1px 2px, rgb(244, 246, 247) 0px 0px 3px"
+      },
+      "overflow": false,
+      "reduce": false
+    },
+    {
+      "theme": "light",
+      "width": 375,
+      "height": 548,
+      "nav": {
+        "color": "rgb(255, 255, 255)",
+        "filter": "none",
+        "image": "none",
+        "mode": "clear-css",
+        "rimMask": "exclude, exclude",
+        "shadow": "none"
+      },
+      "rest": {
+        "color": "rgba(255, 255, 255, 0.024)",
+        "filter": "saturate(1.03)",
+        "image": "none",
+        "mode": "clear-css",
+        "rimMask": "exclude, exclude",
+        "shadow": "rgb(244, 246, 247) 0px 1px 2px, rgb(244, 246, 247) 0px 0px 3px"
+      },
+      "overflow": false,
+      "reduce": false
+    },
+    {
+      "theme": "light",
+      "width": 390,
+      "height": 664,
+      "nav": {
+        "color": "rgba(255, 255, 255, 0.024)",
+        "filter": "saturate(1.03)",
+        "image": "none",
+        "mode": "clear-css",
+        "rimMask": "exclude, exclude",
+        "shadow": "none"
+      },
+      "rest": {
+        "color": "rgba(255, 255, 255, 0.024)",
+        "filter": "saturate(1.03)",
+        "image": "none",
+        "mode": "clear-css",
+        "rimMask": "exclude, exclude",
+        "shadow": "rgb(244, 246, 247) 0px 1px 2px, rgb(244, 246, 247) 0px 0px 3px"
+      },
+      "overflow": false,
+      "reduce": false
+    },
+    {
+      "theme": "light",
+      "width": 430,
+      "height": 740,
+      "nav": {
+        "color": "rgba(255, 255, 255, 0.024)",
+        "filter": "saturate(1.03)",
+        "image": "none",
+        "mode": "clear-css",
+        "rimMask": "exclude, exclude",
+        "shadow": "none"
+      },
+      "rest": {
+        "color": "rgba(255, 255, 255, 0.024)",
+        "filter": "saturate(1.03)",
+        "image": "none",
+        "mode": "clear-css",
+        "rimMask": "exclude, exclude",
+        "shadow": "rgb(244, 246, 247) 0px 1px 2px, rgb(244, 246, 247) 0px 0px 3px"
+      },
+      "overflow": false,
+      "reduce": false
+    },
+    {
+      "theme": "light",
+      "width": 390,
+      "height": 420,
+      "nav": {
+        "color": "rgb(255, 255, 255)",
+        "filter": "none",
+        "image": "none",
+        "mode": "clear-css",
+        "rimMask": "exclude, exclude",
+        "shadow": "none"
+      },
+      "rest": {
+        "color": "rgba(255, 255, 255, 0.024)",
+        "filter": "saturate(1.03)",
+        "image": "none",
+        "mode": "clear-css",
+        "rimMask": "exclude, exclude",
+        "shadow": "rgb(244, 246, 247) 0px 1px 2px, rgb(244, 246, 247) 0px 0px 3px"
+      },
+      "overflow": false,
+      "reduce": false
+    },
+    {
+      "theme": "dark",
+      "width": 320,
+      "height": 568,
+      "nav": {
+        "color": "rgb(32, 40, 44)",
+        "filter": "none",
+        "image": "none",
+        "mode": "clear-css",
+        "rimMask": "exclude, exclude",
+        "shadow": "none"
+      },
+      "rest": {
+        "color": "rgba(255, 255, 255, 0.035)",
+        "filter": "saturate(1.03)",
+        "image": "none",
+        "mode": "clear-css",
+        "rimMask": "exclude, exclude",
+        "shadow": "rgb(20, 25, 28) 0px 1px 2px, rgb(20, 25, 28) 0px 0px 3px"
+      },
+      "overflow": false,
+      "reduce": false
+    },
+    {
+      "theme": "dark",
+      "width": 375,
+      "height": 548,
+      "nav": {
+        "color": "rgb(32, 40, 44)",
+        "filter": "none",
+        "image": "none",
+        "mode": "clear-css",
+        "rimMask": "exclude, exclude",
+        "shadow": "none"
+      },
+      "rest": {
+        "color": "rgba(255, 255, 255, 0.035)",
+        "filter": "saturate(1.03)",
+        "image": "none",
+        "mode": "clear-css",
+        "rimMask": "exclude, exclude",
+        "shadow": "rgb(20, 25, 28) 0px 1px 2px, rgb(20, 25, 28) 0px 0px 3px"
+      },
+      "overflow": false,
+      "reduce": false
+    },
+    {
+      "theme": "dark",
+      "width": 390,
+      "height": 664,
+      "nav": {
+        "color": "rgba(255, 255, 255, 0.035)",
+        "filter": "saturate(1.03)",
+        "image": "none",
+        "mode": "clear-css",
+        "rimMask": "exclude, exclude",
+        "shadow": "none"
+      },
+      "rest": {
+        "color": "rgba(255, 255, 255, 0.035)",
+        "filter": "saturate(1.03)",
+        "image": "none",
+        "mode": "clear-css",
+        "rimMask": "exclude, exclude",
+        "shadow": "rgb(20, 25, 28) 0px 1px 2px, rgb(20, 25, 28) 0px 0px 3px"
+      },
+      "overflow": false,
+      "reduce": false
+    },
+    {
+      "theme": "dark",
+      "width": 430,
+      "height": 740,
+      "nav": {
+        "color": "rgba(255, 255, 255, 0.035)",
+        "filter": "saturate(1.03)",
+        "image": "none",
+        "mode": "clear-css",
+        "rimMask": "exclude, exclude",
+        "shadow": "none"
+      },
+      "rest": {
+        "color": "rgba(255, 255, 255, 0.035)",
+        "filter": "saturate(1.03)",
+        "image": "none",
+        "mode": "clear-css",
+        "rimMask": "exclude, exclude",
+        "shadow": "rgb(20, 25, 28) 0px 1px 2px, rgb(20, 25, 28) 0px 0px 3px"
+      },
+      "overflow": false,
+      "reduce": false
+    },
+    {
+      "theme": "dark",
+      "width": 390,
+      "height": 420,
+      "nav": {
+        "color": "rgb(32, 40, 44)",
+        "filter": "none",
+        "image": "none",
+        "mode": "clear-css",
+        "rimMask": "exclude, exclude",
+        "shadow": "none"
+      },
+      "rest": {
+        "color": "rgba(255, 255, 255, 0.035)",
+        "filter": "saturate(1.03)",
+        "image": "none",
+        "mode": "clear-css",
+        "rimMask": "exclude, exclude",
+        "shadow": "rgb(20, 25, 28) 0px 1px 2px, rgb(20, 25, 28) 0px 0px 3px"
+      },
+      "overflow": false,
+      "reduce": false
+    }
+  ],
+  "checks": [
+    "light: five iPhone-sized viewports preserve the journal and responsive layout",
+    "dark: five iPhone-sized viewports preserve the journal and responsive layout"
+  ],
+  "scope": "Actual archived prior compiled bundle, Chrome iOS UA and viewport emulation in Chromium."
+}

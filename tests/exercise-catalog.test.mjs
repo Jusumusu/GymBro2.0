@@ -15,9 +15,9 @@ import {exportBackup,parseBackup} from '../src/backup.js';
 const baseline=JSON.parse(readFileSync(new URL('../docs/workout-polish/catalog-baseline.json',import.meta.url),'utf8')).exercises;
 const fixture=()=>refinementFixture('2026-11-18');
 const program=id=>({id:'coverage',name:'Catalog exercise',exercises:[{exerciseId:id,sets:2,min:8,max:12}]});
-test('43 released definitions and the original 40 protected IDs remain unchanged',()=>{assert.deepEqual(EXERCISES.slice(0,43),baseline);assert.equal(LEGACY_BUILTIN_IDS.length,40);assert.equal(EXERCISES.length,198);});
+test('43 released definitions and the original 40 protected IDs remain unchanged',()=>{assert.deepEqual(EXERCISES.slice(0,43),baseline);assert.equal(LEGACY_BUILTIN_IDS.length,40);assert.equal(EXERCISES.length,254);});
 test('every available and prepared exercise has unique identities and valid centralized anatomy',()=>{
- const all=[...baseline,...ALL_EXPANDED_EXERCISES];assert.equal(all.length,219);assert.equal(new Set(all.map(e=>e.id)).size,219);assert.equal(new Set(all.map(e=>e.name.toLowerCase())).size,219);
+ const all=[...baseline,...ALL_EXPANDED_EXERCISES];assert.equal(all.length,275);assert.equal(new Set(all.map(e=>e.id)).size,275);assert.equal(new Set(all.map(e=>e.name.toLowerCase())).size,275);
  for(const e of all){assert.ok(Object.hasOwn(EQUIPMENT,e.equipment));validateContributions(e.contributions);assert.ok(e.contributions.some(c=>c.role==='primary'&&c.muscle===e.muscle));}
  for(const muscle of CONTRIBUTION_MUSCLES)assert.ok(EXERCISES.some(e=>e.muscle===muscle),'Direct-primary coverage '+muscle);
  assert.equal(PREPARED_SPECIAL_EXERCISES.length,21);for(const e of PREPARED_SPECIAL_EXERCISES)assert.ok(!EXERCISES.some(x=>x.id===e.id),'Unsupported tracking cannot enter the live reps/load logger');

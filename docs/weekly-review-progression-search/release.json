@@ -1,0 +1,25 @@
+{
+  "version": "0.7.0",
+  "authorized": "2026-11-22",
+  "pullRequest": "https://github.com/Jusumusu/GymBro2.0/pull/5",
+  "previousMain": "30b63d01483cb7c4fe3df9dace07c98b9d416d9e",
+  "previousProductionBuild": "062b5fb80f5d",
+  "productionBuild": "054060a0162f",
+  "previewBuild": "712a19c6f441",
+  "checks": {
+    "unit": 287,
+    "backend": 9,
+    "productionUpgrade": 8,
+    "catalog": "254 available; all 198 released definitions unchanged; zero duplicates or invalid mappings",
+    "priorFluidWorkflows": 10,
+    "priorSameVersionUpdate": 4,
+    "priorAeroLayouts": 178
+  },
+  "approvedScope": "Current technical improvements and Aero light-frost fluid material. Existing Weekly layout retained; alternatives unselected and 21 specialized tracking definitions inactive.",
+  "storage": "Production and preview remain separate. Full journals, active draft/timer, custom ID collision and private photo bytes preserved through exact archived 0.6.0 → 0.7.0 update.",
+  "deployment": "Production deployment is verified from the merge workflow; this file records the tested release candidate before merge.",
+  "limits": [
+    "Chromium worker/touch/viewport tests; no physical iPhone/WebKit certification.",
+    "Web approximation; native Apple backdrop refraction is not implemented."
+  ]
+}

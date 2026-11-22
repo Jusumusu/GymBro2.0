@@ -1,0 +1,18 @@
+{
+  "from": {
+    "version": "0.7.0",
+    "build": "12a7709690c4"
+  },
+  "to": {
+    "version": "0.7.0",
+    "build": "95604f6248bc"
+  },
+  "checks": [
+    "The actual previous 0.7 build is installed with its opaque compact-screen bar and active journal",
+    "The installed app detects a new build even though both releases are version 0.7.0",
+    "Explicit update installs the exact new build and preserves the complete journal and active timer",
+    "The clear iOS pane and unchanged journal reopen offline"
+  ],
+  "errors": [],
+  "scope": "Actual prior/new worker lifecycle and synthetic journal under Chrome iOS UA and compact viewport emulation in Chromium, not physical iOS certification."
+}

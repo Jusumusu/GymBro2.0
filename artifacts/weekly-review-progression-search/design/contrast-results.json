@@ -1,0 +1,89 @@
+{
+  "samples": [
+    {
+      "file": "glass-a-light.png",
+      "id": "a",
+      "theme": "light",
+      "foreground": "rgb(89, 106, 115)",
+      "x": 195,
+      "y": 826,
+      "background": [
+        252,
+        252,
+        252
+      ],
+      "contrast": 5.48
+    },
+    {
+      "file": "glass-b-light.png",
+      "id": "b",
+      "theme": "light",
+      "foreground": "rgb(89, 106, 115)",
+      "x": 195,
+      "y": 826,
+      "background": [
+        250,
+        251,
+        251
+      ],
+      "contrast": 5.43
+    },
+    {
+      "file": "glass-c-light.png",
+      "id": "c",
+      "theme": "light",
+      "foreground": "rgb(89, 106, 115)",
+      "x": 195,
+      "y": 826,
+      "background": [
+        249,
+        250,
+        250
+      ],
+      "contrast": 5.38
+    },
+    {
+      "file": "glass-a-dark.png",
+      "id": "a",
+      "theme": "dark",
+      "foreground": "rgb(165, 183, 192)",
+      "x": 195,
+      "y": 826,
+      "background": [
+        31,
+        40,
+        44
+      ],
+      "contrast": 7.25
+    },
+    {
+      "file": "glass-b-dark.png",
+      "id": "b",
+      "theme": "dark",
+      "foreground": "rgb(165, 183, 192)",
+      "x": 195,
+      "y": 826,
+      "background": [
+        32,
+        40,
+        45
+      ],
+      "contrast": 7.22
+    },
+    {
+      "file": "glass-c-dark.png",
+      "id": "c",
+      "theme": "dark",
+      "foreground": "rgb(165, 183, 192)",
+      "x": 195,
+      "y": 826,
+      "background": [
+        32,
+        41,
+        46
+      ],
+      "contrast": 7.15
+    }
+  ],
+  "scope": "Representative rendered navigation background points, CSS foreground colors; not a universal image-background or full accessibility certification."
+}

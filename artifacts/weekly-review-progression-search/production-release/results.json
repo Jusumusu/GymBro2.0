@@ -1,0 +1,23 @@
+{
+  "from": {
+    "version": "0.6.0",
+    "build": "062b5fb80f5d"
+  },
+  "to": {
+    "version": "0.7.0",
+    "build": "054060a0162f"
+  },
+  "previewBuild": "712a19c6f441",
+  "checks": [
+    "The exact released 0.6.0 production and preview workers hold distinct full journals",
+    "Production detects 0.7.0 without interrupting the existing workout or timer",
+    "Explicit production update installs the exact 0.7.0 shell and preserves every journal field",
+    "Private photo bytes, custom-ID collisions, history, plans and active timer survive",
+    "The updated production app and new glass material reopen offline with unchanged data",
+    "Updating production preserves an independent sibling preview worker cache and journal",
+    "Preview can independently update to 0.7.0 without moving or replacing either journal",
+    "Returning to production retains its exact build and original journal after both updates"
+  ],
+  "errors": [],
+  "scope": "Actual archived 0.6.0 production and preview workers, explicit verified updates and offline reload in Chromium. Synthetic journals only; no physical iPhone certification."
+}

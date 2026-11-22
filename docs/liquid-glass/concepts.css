@@ -44,6 +44,8 @@
 :host([data-glass=subtle]){--glass-alpha:.94;--glass-blur:8px}
 :host([data-glass=balanced]){--glass-alpha:.80;--glass-blur:16px}
 :host([data-glass=expressive]){--glass-alpha:.66;--glass-blur:24px}
+:host([data-glass=clear]){--glass-alpha:.025;--glass-blur:0px;--glass-filter:saturate(1.03)}
+:host([data-glass=clear][data-theme=dark]){--glass-alpha:.035;}
 /* Shared real-app structure. */
 :host *{box-sizing:border-box}:host [hidden]{display:none!important}
 :host .sample-frame{height:100%;display:flex;flex-direction:column;margin:0;min-width:0;background:var(--paper);font:14px/1.6 var(--sans);color:var(--ink);overflow:hidden}

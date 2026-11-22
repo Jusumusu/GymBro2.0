@@ -1,0 +1,10 @@
+{
+  "differenceBounds": [
+    75,
+    391,
+    313,
+    511
+  ],
+  "changedPixelsOver4": 1062,
+  "scope": "Same stationary pane/background, actual SVG rim enabled vs disabled; all changes are bounded by the lens."
+}

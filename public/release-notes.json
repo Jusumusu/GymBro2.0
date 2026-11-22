@@ -1,11 +1,11 @@
 {
-  "version": "0.6.0",
+  "version": "0.7.0",
   "notes": [
-    "Exercise library expanded from 43 to 198 available exercises, with aliases and equipment filters.",
-    "Automatic rest starts after individual or bulk set completion and handles changing or finished workouts reliably.",
-    "Custom exercises retain their identities, equipment labels and load conventions, and are clearly marked in the library.",
-    "App and updater version labels now match the current release.",
-    "Existing workouts, photos, preferences and unfinished workouts are preserved.",
-    "Chart, Focus Mode and plan-creator concepts remain available in the separate design review."
+    "Version 0.7.0 improves weekly training feedback, progression, exercise discovery and the Aero glass experience while preserving your existing journal.",
+    "Weekly reviews include recurring schedules, matching-day comparisons, conservative weight context and saved lighter-week targets.",
+    "Progression compares relevant recent exposures. Use load preserves warm-ups, drop sets, skipped rows and completed work.",
+    "The library grows from 198 to 254 available exercises. All released definitions and custom identities are preserved.",
+    "Offline search ranks names and aliases, tolerates common typos and honors selected filters. Search alignment is corrected in both themes.",
+    "Lightly frosted glass responds to touch with moving highlights, a springing tab selection and elastic press/release. iOS uses the same motion layer. Device Reduce Motion and Reduce Transparency preferences remain honored."
   ]
 }

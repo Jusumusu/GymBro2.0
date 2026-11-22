@@ -1,0 +1,59 @@
+{
+  "checks": [
+    "light: Clear and Expressive rendered on the same real workout, inputs/cards remain solid, seven widths fit and the journal is unchanged",
+    "dark: Clear and Expressive rendered on the same real workout, inputs/cards remain solid, seven widths fit and the journal is unchanged",
+    "Short-screen navigation uses a solid readability fallback",
+    "Reduced-transparency preference makes navigation and rest timer opaque",
+    "A real synthetic photo activates the solid navigation readability fallback",
+    "Clear finish reloads offline while the full active journal remains unchanged",
+    "Clear review loads real screenshots in both themes and links to the isolated app"
+  ],
+  "materials": [
+    {
+      "theme": "light",
+      "mode": "expressive",
+      "nav": "rgba(255, 255, 255, 0.66)",
+      "rest": "rgba(255, 255, 255, 0.66)",
+      "blur": "blur(24px) saturate(1.15)",
+      "input": "rgb(255, 255, 255)",
+      "card": "rgb(255, 255, 255)",
+      "paper": "#f4f6f7",
+      "font": "Manrope, ui-sans-serif, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif"
+    },
+    {
+      "theme": "light",
+      "mode": "clear",
+      "nav": "rgba(255, 255, 255, 0.28)",
+      "rest": "rgba(255, 255, 255, 0.28)",
+      "blur": "blur(16px) saturate(1.15)",
+      "input": "rgb(255, 255, 255)",
+      "card": "rgb(255, 255, 255)",
+      "paper": "#f4f6f7",
+      "font": "Manrope, ui-sans-serif, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif"
+    },
+    {
+      "theme": "dark",
+      "mode": "expressive",
+      "nav": "rgba(39, 48, 53, 0.66)",
+      "rest": "rgba(39, 48, 53, 0.66)",
+      "blur": "blur(24px) saturate(1.15)",
+      "input": "rgb(32, 40, 44)",
+      "card": "rgb(32, 40, 44)",
+      "paper": "#14191c",
+      "font": "Manrope, ui-sans-serif, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif"
+    },
+    {
+      "theme": "dark",
+      "mode": "clear",
+      "nav": "rgba(39, 48, 53, 0.34)",
+      "rest": "rgba(39, 48, 53, 0.34)",
+      "blur": "blur(16px) saturate(1.15)",
+      "input": "rgb(32, 40, 44)",
+      "card": "rgb(32, 40, 44)",
+      "paper": "#14191c",
+      "font": "Manrope, ui-sans-serif, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif"
+    }
+  ],
+  "errors": [],
+  "scope": "Local Chromium and viewport/media emulation with synthetic data. Live managed-Site browser and physical phones unavailable."
+}

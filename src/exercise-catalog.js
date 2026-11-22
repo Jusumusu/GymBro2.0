@@ -1,12 +1,9 @@
 // Additive catalog. Existing identities and classifications stay in exercises.js.
 // Ordinal roles describe coaching emphasis; these are not EMG/growth percentages.
 const rows=[];
-const P=muscle=>({muscle,role:'primary',level:'high'}),S=(muscle,level='moderate')=>({muscle,role:'secondary',level}),T=(muscle,level='low')=>({muscle,role:'stabilizer',level});
-const upper=new Set(['Chest','Back','Shoulders','Biceps','Triceps','Forearms']),lower=new Set(['Quads','Hamstrings','Glutes','Calves','Adductors']);
-function add(slug,name,equipment,pattern,mapping,cues,{aliases=[],compound=true,unilateral=false,loadKind,trackingType='reps',difficulty='moderate',category}={}){
- const primary=mapping.filter(r=>r.role==='primary').map(r=>r.muscle);
- rows.push({id:'gb-'+slug,name,aliases,muscle:primary[0],primaryMuscles:primary,secondary:mapping.filter(r=>r.role==='secondary').map(r=>r.muscle),contributions:mapping,equipment,pattern,category:category||(upper.has(primary[0])?'Upper body':lower.has(primary[0])?'Lower body':'Core'),trackingType,compound,unilateral,difficulty,loadKind:loadKind||(equipment==='dumbbell'?'per dumbbell':equipment==='kettlebell'?'per kettlebell':equipment==='bodyweight'?'added load':'total load'),cues});
-}
+import {P,S,T,defineExercise} from './exercise-definition.js';
+import {WEEKLY_CATALOG_ADDITIONS} from './exercise-catalog-weekly.js';
+const add=(...args)=>rows.push(defineExercise(...args));
 const press=[P('Chest'),S('Triceps'),S('Shoulders')],incline=[P('Chest'),S('Shoulders','high'),S('Triceps')],fly=[P('Chest'),S('Shoulders','low')];
 add('incline-bb-bench','Incline barbell bench press','barbell','horizontal push',incline,'Set a low incline, keep a stable upper back and lower under control. Use safeties or a spotter.',{aliases:['incline bb bench','incline bench press']});
 add('decline-bb-bench','Decline barbell bench press','barbell','horizontal push',press,'Secure your legs on a decline bench and use safeties or a spotter. Keep wrists stacked.',{aliases:['decline bench']});
@@ -196,6 +193,7 @@ add('db-farmer-carry','Dumbbell farmer carry','dumbbell','loaded carry',[P('Fore
 add('kb-farmer-carry','Kettlebell farmer carry','kettlebell','loaded carry',[P('Forearms'),S('Back'),S('Core'),T('Glutes'),T('Spinal erectors')],'Carry one kettlebell in each hand with a steady trunk. Log one kettlebell and seconds carried.',{aliases:['kb farmers walk'],trackingType:'duration',category:'Full body'});
 add('db-suitcase-carry','Dumbbell suitcase carry','dumbbell','loaded carry',[P('Obliques'),S('Forearms'),S('Core'),T('Glutes')],'Carry one dumbbell without leaning sideways. Log the single load and seconds per side.',{aliases:['one arm farmer carry'],trackingType:'duration',unilateral:true,loadKind:'single implement',category:'Full body'});
 add('plate-pinch','Plate pinch hold','weight-plate','grip hold',[P('Forearms')],'Pinch smooth plates securely above a clear floor area. Log the combined plates in one hand and seconds per side.',{aliases:['pinch grip hold'],trackingType:'duration',unilateral:true,compound:false,loadKind:'plates held per hand'});
+rows.push(...WEEKLY_CATALOG_ADDITIONS);
 export const EXPANDED_EXERCISES=Object.freeze(rows.filter(e=>e.trackingType==='reps'&&e.equipment!=='band'&&e.loadKind!=='assistance load'));
 export const PREPARED_SPECIAL_EXERCISES=Object.freeze(rows.filter(e=>!EXPANDED_EXERCISES.includes(e)));
 export const PREPARED_TIMED_EXERCISES=Object.freeze(rows.filter(e=>e.trackingType==='duration'));
