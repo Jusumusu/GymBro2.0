@@ -1,7 +1,7 @@
 {
   "version": "0.7.0",
   "notes": [
-    "Development preview: 0.7.0 is under review. Production remains on the approved 0.6.0 release.",
+    "Version 0.7.0 improves weekly training feedback, progression, exercise discovery and the Aero glass experience while preserving your existing journal.",
     "Weekly reviews include recurring schedules, matching-day comparisons, conservative weight context and saved lighter-week targets.",
     "Progression compares relevant recent exposures. Use load preserves warm-ups, drop sets, skipped rows and completed work.",
     "The library grows from 198 to 254 available exercises. All released definitions and custom identities are preserved.",

@@ -1,4 +1,8 @@
-# 0.7.0 development preview — awaiting visual selection
+# 0.7.0 release
+
+On November 22, 2026, the user explicitly authorized merging the current reviewed branch to main. This supersedes the historical no-merge statements below for this release. The released scope retains the existing Weekly layout and the approved Aero identity with lightly frosted touch-responsive glass; no unselected Weekly alternatives or inactive tracking definitions are activated. Production and preview journals remain separate. Release validation and build identities are recorded in `release.json`.
+
+## Historical preview status
 
 Branch: `feature/weekly-review-progression-search`  
 Draft PR: https://github.com/Jusumusu/GymBro2.0/pull/5  
