@@ -1,0 +1,100 @@
+{
+  "branch": "feature/workout-interactions-ux-refinement",
+  "pr": "https://github.com/Jusumusu/GymBro2.0/pull/6",
+  "stableMain": "2ce9a22c675d30fda5501dcc2e3edfeefef66295",
+  "stable": {
+    "version": "0.7.0",
+    "build": "054060a0162f"
+  },
+  "candidate": {
+    "version": "0.8.0",
+    "build": "519dac74fd42",
+    "environment": "preview",
+    "assets": 76
+  },
+  "unit": 300,
+  "backend": 9,
+  "checks": {
+    "app": {
+      "passed": 10,
+      "errors": [],
+      "scope": "Real Chromium touch, keyboard, layout and storage tests. Wake Lock is an injected lifecycle double; no physical mobile certification.",
+      "geometryCases": 14
+    },
+    "audio": {
+      "passed": 7,
+      "errors": [],
+      "scope": "Actual Web Audio oscillator scheduling and trusted CDP pointer gestures in Chromium; pause/resume, mute and simulated visibility changes. No physical speaker, locked-phone or background-OS certification."
+    },
+    "review": {
+      "passed": 7,
+      "errors": [],
+      "scope": "Rendered and interactive repository prototypes in Chromium. Synthetic in-memory state only. No physical Safari/iOS certification; no Site live-browser QA.",
+      "layouts": 36
+    },
+    "upgrade": {
+      "passed": 7,
+      "errors": [],
+      "scope": "Actual archived 0.7.0 preview to 0.8.0 in Chromium; fresh synthetic production and preview journals, real worker update and offline reload. Physical mobile browsers not certified."
+    }
+  },
+  "regressions": [
+    {
+      "suite": "browser-training-refinement",
+      "exitCode": 0
+    },
+    {
+      "suite": "browser",
+      "exitCode": 0
+    },
+    {
+      "suite": "browser-advanced-training",
+      "exitCode": 0
+    },
+    {
+      "suite": "browser-app-updates",
+      "exitCode": 0
+    },
+    {
+      "suite": "browser-workout-ux",
+      "exitCode": 0
+    },
+    {
+      "suite": "browser-refinement",
+      "exitCode": 0
+    },
+    {
+      "suite": "browser-update",
+      "exitCode": 0
+    },
+    {
+      "suite": "browser-design-implementation",
+      "exitCode": 0
+    }
+  ],
+  "designApproval": {
+    "identity": "A — Aero, retained",
+    "packagesPresented": [
+      "A — Continuity",
+      "B — Center stage",
+      "C — Quiet control"
+    ],
+    "selected": null,
+    "finalVisualIntegration": false
+  },
+  "publication": {
+    "review": "https://gym-bro-design-review.jesse03sousa.chatgpt.site/",
+    "functionalPreview": "https://gym-bro-design-review.jesse03sousa.chatgpt.site/preview/",
+    "audience": "Existing owner-private Site; native publication receipt is recorded in PR #6.",
+    "githubRun": 45001047784,
+    "githubBuild": "success",
+    "githubDeploy": "rejected by existing environment protection rules for this exact new branch; verified from the run summary"
+  },
+  "limits": [
+    "No main merge.",
+    "No physical iPhone/Safari/Android or Home Screen PWA certification.",
+    "Native Chromium Web Audio scheduling checked; no physical-speaker/locked-phone guarantee.",
+    "Wake Lock lifecycle uses a test double; device power policy and screen-sleep behavior are not certified.",
+    "Repository browser QA; no live managed-Site browser tool available."
+  ]
+}

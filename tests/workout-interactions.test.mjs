@@ -10,6 +10,9 @@ import {refinementFixture} from './fixtures/refinement.mjs';
 import {makeDraft} from '../src/planner.js';
 const row=(done=false,extra={})=>({type:'working',done,...extra});
 const draft=entries=>({exercises:[{entries}]});
+test('long workouts never round progress to 100 while required work remains',()=>{
+ const w={exercises:Array.from({length:10},()=>({entries:Array.from({length:30},()=>row(true))}))};w.exercises.at(-1).entries.at(-1).done=false;assert.equal(workoutProgress(w).percent,99);assert.equal(workoutProgress(w).complete,false);w.exercises.at(-1).entries.at(-1).done=true;assert.equal(workoutProgress(w).percent,100);assert.equal(workoutProgress(w).complete,true);
+});
 test('one required-work measure excludes warm-ups and opted-out work without inflating completion',()=>{
  const w=draft([row(true),row(false),row(true,{type:'warmup'}),row(false,{skipped:true}),row(false,{deferred:true}),row(false,{optional:true})]);
  assert.deepEqual(workoutProgress(w),{total:2,completed:1,remaining:1,percent:50,complete:false});w.exercises[0].entries[1].done=true;assert.equal(workoutProgress(w).complete,true);w.exercises[0].entries.push(row());assert.equal(workoutProgress(w).percent,67);w.exercises[0].entries[0].done=false;assert.equal(workoutProgress(w).remaining,2);assert.equal(workoutProgress(null).complete,false);

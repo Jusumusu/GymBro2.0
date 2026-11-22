@@ -1,0 +1,213 @@
+{
+  "checks": [
+    "Eighteen actual mobile captures cover three packages, three experiences and both themes",
+    "All packages show accurate beginning, middle, almost-finished and completed progress without narrow-screen overflow",
+    "All three Focus timer placements keep header and input controls unobstructed at 320×548",
+    "Each set animation runs from an immediate authoritative state change; Reduced Motion completes without animated overlays",
+    "All three Settings architectures retain every existing form and named control from the actual rendered inventory",
+    "Hybrid quick controls and category forms reflect the same demo preference without conflicting states",
+    "The consolidated gallery loads real paired captures, interactive frames and synchronized light/dark and experience controls"
+  ],
+  "layouts": [
+    {
+      "concept": "a",
+      "view": "focus",
+      "theme": "light",
+      "width": 390
+    },
+    {
+      "concept": "a",
+      "view": "focus",
+      "theme": "dark",
+      "width": 390
+    },
+    {
+      "concept": "a",
+      "view": "sets",
+      "theme": "light",
+      "width": 390
+    },
+    {
+      "concept": "a",
+      "view": "sets",
+      "theme": "dark",
+      "width": 390
+    },
+    {
+      "concept": "a",
+      "view": "settings",
+      "theme": "light",
+      "width": 390
+    },
+    {
+      "concept": "a",
+      "view": "settings",
+      "theme": "dark",
+      "width": 390
+    },
+    {
+      "concept": "b",
+      "view": "focus",
+      "theme": "light",
+      "width": 390
+    },
+    {
+      "concept": "b",
+      "view": "focus",
+      "theme": "dark",
+      "width": 390
+    },
+    {
+      "concept": "b",
+      "view": "sets",
+      "theme": "light",
+      "width": 390
+    },
+    {
+      "concept": "b",
+      "view": "sets",
+      "theme": "dark",
+      "width": 390
+    },
+    {
+      "concept": "b",
+      "view": "settings",
+      "theme": "light",
+      "width": 390
+    },
+    {
+      "concept": "b",
+      "view": "settings",
+      "theme": "dark",
+      "width": 390
+    },
+    {
+      "concept": "c",
+      "view": "focus",
+      "theme": "light",
+      "width": 390
+    },
+    {
+      "concept": "c",
+      "view": "focus",
+      "theme": "dark",
+      "width": 390
+    },
+    {
+      "concept": "c",
+      "view": "sets",
+      "theme": "light",
+      "width": 390
+    },
+    {
+      "concept": "c",
+      "view": "sets",
+      "theme": "dark",
+      "width": 390
+    },
+    {
+      "concept": "c",
+      "view": "settings",
+      "theme": "light",
+      "width": 390
+    },
+    {
+      "concept": "c",
+      "view": "settings",
+      "theme": "dark",
+      "width": 390
+    },
+    {
+      "concept": "a",
+      "view": "focus",
+      "width": 320
+    },
+    {
+      "concept": "a",
+      "view": "focus",
+      "width": 375
+    },
+    {
+      "concept": "a",
+      "view": "focus",
+      "width": 390
+    },
+    {
+      "concept": "a",
+      "view": "focus",
+      "width": 430
+    },
+    {
+      "concept": "a",
+      "view": "focus",
+      "width": 768
+    },
+    {
+      "concept": "a",
+      "view": "focus",
+      "width": 1024
+    },
+    {
+      "concept": "b",
+      "view": "focus",
+      "width": 320
+    },
+    {
+      "concept": "b",
+      "view": "focus",
+      "width": 375
+    },
+    {
+      "concept": "b",
+      "view": "focus",
+      "width": 390
+    },
+    {
+      "concept": "b",
+      "view": "focus",
+      "width": 430
+    },
+    {
+      "concept": "b",
+      "view": "focus",
+      "width": 768
+    },
+    {
+      "concept": "b",
+      "view": "focus",
+      "width": 1024
+    },
+    {
+      "concept": "c",
+      "view": "focus",
+      "width": 320
+    },
+    {
+      "concept": "c",
+      "view": "focus",
+      "width": 375
+    },
+    {
+      "concept": "c",
+      "view": "focus",
+      "width": 390
+    },
+    {
+      "concept": "c",
+      "view": "focus",
+      "width": 430
+    },
+    {
+      "concept": "c",
+      "view": "focus",
+      "width": 768
+    },
+    {
+      "concept": "c",
+      "view": "focus",
+      "width": 1024
+    }
+  ],
+  "errors": [],
+  "scope": "Rendered and interactive repository prototypes in Chromium. Synthetic in-memory state only. No physical Safari/iOS certification; no Site live-browser QA."
+}
