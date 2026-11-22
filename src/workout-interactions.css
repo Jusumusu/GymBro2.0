@@ -1,0 +1,10 @@
+/* Geometry repair only; the final interaction treatments remain in the design review. */
+#block-create-form .block-dates{grid-template-columns:repeat(2,minmax(0,1fr));align-items:start}
+#block-create-form .block-dates>label{min-width:0;max-width:100%}
+#block-create-form .block-dates :is(input,select){width:100%;min-width:0;max-width:100%;min-height:48px;height:48px;box-sizing:border-box}
+@media(max-width:600px){#block-create-form .block-dates{grid-template-columns:minmax(0,1fr)}}
+.focus-workout{touch-action:pan-y pinch-zoom}
+body.focus-mode:has(.advanced-rest) .focus-workout{padding-bottom:calc(var(--rest-reserved,140px) + env(safe-area-inset-bottom))}
+
+#toast{pointer-events:none}
+body:has(.advanced-rest) #toast{bottom:var(--toast-rest-clearance,240px)}

@@ -1,0 +1,227 @@
+[
+  {
+    "id": "backup-reminder-form",
+    "controls": [
+      {
+        "name": "interval",
+        "type": "select-one",
+        "label": "Remind me to back upNeverWeeklyMonthlyEvery three months"
+      }
+    ]
+  },
+  {
+    "id": "appearance-form",
+    "controls": [
+      {
+        "name": "theme",
+        "type": "select-one",
+        "label": "AppearanceDark ModeLight ModeSystem Default"
+      },
+      {
+        "name": "style",
+        "type": "select-one",
+        "label": "Coach styleSupportiveDirect & analyticalMotivationalEducationalMinimal"
+      },
+      {
+        "name": "haptics",
+        "type": "checkbox",
+        "label": "Optional haptic feedback where supported"
+      }
+    ]
+  },
+  {
+    "id": "calendar-preferences-form",
+    "controls": [
+      {
+        "name": "weekStartsOn",
+        "type": "select-one",
+        "label": "Start of WeekSundayMondaySunday–Saturday or Monday–Sunday. Dates stay unchanged; weekly summaries use your choice."
+      }
+    ]
+  },
+  {
+    "id": "notifications-form",
+    "controls": [
+      {
+        "name": "enabled",
+        "type": "checkbox",
+        "label": "Workout Notifications Off"
+      },
+      {
+        "name": "defaultMinutes",
+        "type": "select-one",
+        "label": "Default reminder timingAt workout time15 minutes before30 minutes before1 hour before1 day before"
+      }
+    ]
+  },
+  {
+    "id": "profile-form",
+    "controls": [
+      {
+        "name": "name",
+        "type": "text",
+        "label": "Your name"
+      },
+      {
+        "name": "goal",
+        "type": "select-one",
+        "label": "Primary goalBuild muscleGet strongerMuscle & strengthBody recompositionPreserve muscle in fat lossMuscular enduranceGeneral fitness"
+      },
+      {
+        "name": "experience",
+        "type": "select-one",
+        "label": "ExperienceGetting startedTraining regularlyExperienced lifter"
+      },
+      {
+        "name": "days",
+        "type": "number",
+        "label": "Sessions per week"
+      },
+      {
+        "name": "minutes",
+        "type": "number",
+        "label": "Session length (minutes)"
+      },
+      {
+        "name": "split",
+        "type": "select-one",
+        "label": "Training structureFull bodyUpper / lowerPush / pull / legsCustom / manual"
+      },
+      {
+        "name": "unit",
+        "type": "select-one",
+        "label": "Display unitsKilograms · centimetersPounds · inches"
+      },
+      {
+        "name": "increment",
+        "type": "number",
+        "label": "Equipment increment (in selected units)Smallest available total-load increment; dumbbell loads are per dumbbell."
+      },
+      {
+        "name": "equipment",
+        "type": "checkbox",
+        "label": "Barbell"
+      },
+      {
+        "name": "equipment",
+        "type": "checkbox",
+        "label": "Dumbbell"
+      },
+      {
+        "name": "equipment",
+        "type": "checkbox",
+        "label": "Cable"
+      },
+      {
+        "name": "equipment",
+        "type": "checkbox",
+        "label": "Machines (all)"
+      },
+      {
+        "name": "equipment",
+        "type": "checkbox",
+        "label": "Bodyweight"
+      },
+      {
+        "name": "equipment",
+        "type": "checkbox",
+        "label": "Smith machine"
+      },
+      {
+        "name": "equipment",
+        "type": "checkbox",
+        "label": "Plate-loaded machine"
+      },
+      {
+        "name": "equipment",
+        "type": "checkbox",
+        "label": "Selectorized machine"
+      },
+      {
+        "name": "equipment",
+        "type": "checkbox",
+        "label": "Kettlebell"
+      },
+      {
+        "name": "equipment",
+        "type": "checkbox",
+        "label": "EZ bar"
+      },
+      {
+        "name": "equipment",
+        "type": "checkbox",
+        "label": "Trap bar"
+      },
+      {
+        "name": "secondaryGoal",
+        "type": "select-one",
+        "label": "Secondary goalNoneBuild muscleGet strongerMuscle & strengthBody recompositionPreserve muscle in fat lossMuscular enduranceGeneral fitness"
+      },
+      {
+        "name": "priority",
+        "type": "select-one",
+        "label": "Muscle priorityBalancedChestBackQuadsHamstringsGlutesShouldersBicepsTricepsCalvesCoreAdductorsSpinal erectorsForearmsObliques"
+      },
+      {
+        "name": "trainingDays",
+        "type": "checkbox",
+        "label": "Mon"
+      },
+      {
+        "name": "trainingDays",
+        "type": "checkbox",
+        "label": "Tue"
+      },
+      {
+        "name": "trainingDays",
+        "type": "checkbox",
+        "label": "Wed"
+      },
+      {
+        "name": "trainingDays",
+        "type": "checkbox",
+        "label": "Thu"
+      },
+      {
+        "name": "trainingDays",
+        "type": "checkbox",
+        "label": "Fri"
+      },
+      {
+        "name": "trainingDays",
+        "type": "checkbox",
+        "label": "Sat"
+      },
+      {
+        "name": "trainingDays",
+        "type": "checkbox",
+        "label": "Sun"
+      },
+      {
+        "name": "restrictions",
+        "type": "textarea",
+        "label": "Personal exercise restrictions or notesThese notes are reminders, not automatically interpreted medical constraints. Exclude specific exercises below."
+      },
+      {
+        "name": "excluded",
+        "type": "select-multiple",
+        "label": "Exclude exercisesBarbell squatGoblet squatBodyweight squatLeg pressBarbell bench pressDumbbell bench pressPush-upMachine chest pressRomanian deadliftDumbbell Romanian deadliftGlute bridgeLeg curlBarbell rowDumbbell rowSeated cable rowProne floor pullOverhead pressDumbbell shoulder pressPike push-upLat pulldownPull-upDumbbell lateral raiseDumbbell curlCable triceps pushdownStanding calf raiseCrunchIncline dumbbell pressCable chest flyDumbbell split squatBarbell hip thrustLeg extensionSeated leg curlChest-supported dumbbell rowDumbbell rear delt flyCable face pullDumbbell hammer curlOverhead cable triceps extensionSeated calf raiseReverse crunchCable crunchBarbell front squatConventional deadliftDumbbell reverse lungeIncline barbell bench pressDecline barbell bench pressDecline dumbbell bench pressDumbbell floor pressBarbell floor pressSmith machine bench pressSmith machine incline bench pressPlate-loaded chest pressPlate-loaded incline chest pressSelectorized incline chest pressDumbbell chest flyIncline dumbbell flyPec deck flyLow-to-high cable flyHigh-to-low cable flySingle-arm cable chest pressIncline push-upDecline push-upKneeling push-upChest-emphasis dipChin-upNeutral-grip pull-upNeutral-grip lat pulldownUnderhand lat pulldownSingle-arm cable pulldownPlate-loaded lat pulldownT-bar rowChest-supported T-bar rowSelectorized seated rowPlate-loaded high rowWide-grip cable rowSingle-arm cable rowUnderhand barbell rowPendlay rowInverted rowStraight-arm cable pulldownDumbbell pulloverMachine pulloverDumbbell shrugBarbell shrugSeated barbell overhead pressSelectorized shoulder pressPlate-loaded shoulder pressSmith machine shoulder pressArnold dumbbell pressSingle-arm dumbbell shoulder pressSingle-arm kettlebell overhead pressSingle-arm landmine pressSingle-arm cable lateral raiseMachine lateral raiseDumbbell front raiseCable front raiseReverse pec deckCable rear delt flyCable shoulder external rotationBarbell curlEZ-bar curlIncline dumbbell curlSingle-arm dumbbell preacher curlEZ-bar preacher curlMachine preacher curlCable biceps curlSingle-arm behind-body cable curlCable rope hammer curlDumbbell concentration curlDumbbell spider curlEZ-bar lying triceps extensionDumbbell lying triceps extensionTwo-hand dumbbell overhead extensionSingle-arm dumbbell overhead extensionSingle-arm cable triceps kickbackDumbbell triceps kickbackRope triceps pushdownSingle-arm cable pushdownMachine triceps extensionClose-grip barbell bench pressTriceps-emphasis dipClose-grip push-upDumbbell wrist curlBarbell wrist curlDumbbell reverse wrist curlBarbell reverse wrist curlEZ-bar reverse curlCable reverse curlDumbbell forearm pronationDumbbell forearm supinationPlate-loaded hack squatPendulum squat machineSmith machine squatBarbell box squatHeel-elevated goblet squatKettlebell goblet squatDouble kettlebell front squatBarbell split squatDumbbell rear-foot-elevated split squatBodyweight split squatDumbbell walking lungeBodyweight forward lungeDumbbell lateral lungeDumbbell step-upBodyweight step-upSingle-leg pressSingle-leg extensionBelt squat machineBarbell stiff-leg deadliftSingle-leg dumbbell Romanian deadliftKettlebell Romanian deadliftSmith machine Romanian deadliftBarbell good morningLying leg curlStanding single-leg curlStanding cable leg curlNordic hamstring curlSliding leg curlDumbbell hip thrustSmith machine hip thrustPlate-loaded hip thrustBarbell glute bridgeSingle-leg glute bridgeCable glute kickbackCable pull-throughSeated hip abduction machineStanding cable hip abductionSide-lying hip abductionTrap-bar deadliftSumo deadliftKettlebell deadliftTwo-hand kettlebell swingHip extension on 45-degree benchSupported lumbar extension machineSeated hip adduction machineStanding cable hip adductionSide-lying hip adductionStanding calf raise machineSmith machine calf raiseLeg press calf raiseSingle-leg calf raiseDumbbell standing calf raiseDumbbell seated calf raisePlate-loaded seated calf raiseHanging knee raiseHanging leg raiseCaptain’s chair knee raiseDecline bench crunchMachine abdominal crunchDumbbell weighted crunchKneeling ab wheel rolloutDead bugBird dogCable Pallof pressHigh-to-low cable wood chopLow-to-high cable liftDumbbell side bendSide plank hip liftPlank shoulder tapNeutral-grip dumbbell bench pressSingle-arm dumbbell bench pressDumbbell squeeze pressStanding bilateral cable chest pressSmith machine decline bench pressBarbell seal rowDumbbell seal rowMeadows landmine rowTall-kneeling cable lat pulldownSingle-arm plate-loaded high rowIncline chest-supported cable rowHalf-kneeling kettlebell pressSeated dumbbell lateral raiseCable Y raiseCable shoulder internal rotationDouble kettlebell overhead pressAlternating dumbbell curlCross-body dumbbell hammer curlCable preacher curlHigh cable biceps curlLying cable triceps extensionCross-body cable triceps extensionCable wrist curlCable reverse wrist curlDumbbell wrist radial deviationDumbbell wrist ulnar deviationDumbbell Zottman curlSmith machine rear-foot-elevated split squatFront-foot-elevated dumbbell split squatHeel-elevated barbell front squatBodyweight Cossack squatKettlebell front-rack reverse lungeBarbell reverse lungeB-stance dumbbell Romanian deadliftB-stance barbell Romanian deadliftSingle-leg seated leg curlSingle-leg lying leg curlStability-ball leg curlGlute-ham raiseSingle-leg bodyweight hip thrustReverse hyperextension machineQuadruped bent-knee hip extensionQuadruped hip abductionDonkey calf raise machineSingle-leg dumbbell calf raiseKettlebell seated calf raiseShort-lever Copenhagen hip liftStanding sliding hip adductionSeated cable hip adductionProne floor trunk extensionSeated cable trunk extensionSeated torso rotation machineStanding cable oblique crunchDecline bench leg raiseStability-ball rolloutDumbbell dead bug"
+      },
+      {
+        "name": "auto",
+        "type": "checkbox",
+        "label": "Enable editable progression suggestions"
+      },
+      {
+        "name": "timer",
+        "type": "checkbox",
+        "label": "Optional rest timer after a completed set"
+      },
+      {
+        "name": "restSeconds",
+        "type": "number",
+        "label": "Rest timer (seconds)"
+      }
+    ]
+  }
+]

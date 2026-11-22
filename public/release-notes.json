@@ -1,11 +1,11 @@
 {
-  "version": "0.7.0",
+  "version": "0.8.0",
   "notes": [
-    "Version 0.7.0 improves weekly training feedback, progression, exercise discovery and the Aero glass experience while preserving your existing journal.",
-    "Weekly reviews include recurring schedules, matching-day comparisons, conservative weight context and saved lighter-week targets.",
-    "Progression compares relevant recent exposures. Use load preserves warm-ups, drop sets, skipped rows and completed work.",
-    "The library grows from 198 to 254 available exercises. All released definitions and custom identities are preserved.",
-    "Offline search ranks names and aliases, tolerates common typos and honors selected filters. Search alignment is corrected in both themes.",
-    "Lightly frosted glass responds to touch with moving highlights, a springing tab selection and elastic press/release. iOS uses the same motion layer. Device Reduce Motion and Reduce Transparency preferences remain honored."
+    "Development preview: 0.8.0 is under review. Production remains on the approved 0.7.0 release.",
+    "Training Block date and duration fields stack on phones. Automatic rest stops when required workout work is finished.",
+    "Optional five-second rest sounds and a distinct completion alert use the existing shared timer. Audio needs interaction and a visible app.",
+    "Optional Keep Screen Awake follows the workout and visibility lifecycle where the browser permits it.",
+    "Focus navigation supports guarded horizontal swipes and keyboard arrows. Existing controls remain while the visual concepts are reviewed.",
+    "Required-work progress and horizontal exercise tracking share the authoritative workout state. Final visual treatments await selection."
   ]
 }
