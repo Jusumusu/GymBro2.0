@@ -8,3 +8,65 @@ body.focus-mode:has(.advanced-rest) .focus-workout{padding-bottom:calc(var(--res
 
 #toast{pointer-events:none}
 body:has(.advanced-rest) #toast{bottom:var(--toast-rest-clearance,240px)}
+/* Approved A — Continuity. Aero palette, typography and glass material are retained. */
+body{--workout-nav-top:8px}body.preview{--workout-nav-top:48px}
+.workout-navigation{position:sticky;top:var(--workout-nav-top);z-index:12;margin:0 0 24px;padding:0 0 12px;background:var(--paper)}
+html[data-theme] .workout-navigation .exercise-jump-nav{position:relative;top:auto;margin:0;padding:5px;max-width:100%}
+html[data-theme] .exercise-jump-nav button{display:flex;align-items:center;max-width:calc(100% - 12px);min-width:0}
+html[data-theme] .exercise-jump-nav .exercise-nav-index{font:550 11px var(--numerals);margin-right:8px;flex:none}
+html[data-theme] .exercise-jump-nav .exercise-nav-name{font:500 12px var(--sans);margin:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+html[data-theme] .exercise-jump-nav [data-status=complete] .exercise-nav-index{color:var(--success)}
+html[data-theme] .exercise-jump-nav [data-status=skipped]{opacity:.7}
+.workout-progress-copy{display:flex;justify-content:space-between;align-items:center;gap:12px;margin:10px 2px 8px;color:var(--muted);font:500 11px var(--numerals)}
+.workout-progress-copy>span:first-child{text-transform:uppercase;letter-spacing:.6px;font-size:10px}
+.workout-progress-track{height:3px;overflow:hidden;border-radius:8px;background:var(--line)}
+.workout-progress-fill{display:block;width:100%;height:100%;border-radius:8px;background:var(--accent);transform:scaleX(0);transform-origin:left;transition:transform 220ms ease-out}
+.workout-progress-semantic{position:absolute;width:1px!important;height:1px!important;overflow:hidden;clip-path:inset(50%);margin:0!important}
+html[data-theme] .exercise-card{scroll-margin-top:calc(var(--workout-nav-height,90px) + var(--workout-nav-top) + 16px)}
+html[data-theme] body.focus-mode .focus-workout{padding-bottom:16px;max-width:800px;margin:auto}
+.focus-session-tools{position:sticky;top:0;z-index:14;padding:0 0 12px;margin-bottom:20px;background:var(--paper)}
+html[data-theme] .focus-session-tools .workout-navigation{position:relative;top:auto;margin:0;padding-bottom:0}
+html[data-theme] .focus-session-tools .exercise-jump-nav{display:flex}
+html[data-theme] body.focus-mode .focus-header-rest .advanced-rest{position:relative;inset:auto;width:100%;max-width:none;margin:0 0 12px;padding:10px 12px;display:flex;flex-wrap:wrap;gap:8px;justify-content:space-between;align-items:center;border-radius:16px}
+html[data-theme] .focus-header-rest .advanced-rest>span{display:flex;align-items:baseline;gap:7px;font-size:12px}
+html[data-theme] .focus-header-rest .advanced-rest strong{font:600 23px var(--numerals)}
+html[data-theme] .focus-header-rest .advanced-rest small{font-size:12px}
+html[data-theme] .focus-header-rest .advanced-rest .actions{display:flex;gap:2px;flex-wrap:wrap;margin:0}
+html[data-theme] .focus-header-rest .advanced-rest .quiet{min-height:44px;min-width:40px;padding:7px;font-size:12px}
+html:has(body.focus-mode){scroll-padding-top:calc(var(--focus-tools-height,0px) + 16px);scroll-padding-bottom:24px}
+.focus-carousel{overflow:hidden;position:relative;padding:1px 0 0}
+html[data-theme] .focus-carousel .focus-card{position:relative;width:100%;margin:0 0 18px;padding:26px 22px;overflow:visible}
+html[data-theme] .focus-carousel.has-next .focus-card{width:calc(100% - 14px)}
+.focus-adjacent-peek{position:absolute;top:14px;bottom:14px;left:calc(100% + 10px);width:70px;background:var(--soft);border:1px solid var(--line);border-radius:16px;pointer-events:none;display:flex;align-items:center;padding-left:10px}
+.focus-adjacent-peek span{writing-mode:vertical-rl;font-size:12px;color:var(--muted)}
+.focus-carousel-controls{display:flex;justify-content:space-between;align-items:center;gap:12px;margin:0 0 22px}
+.focus-carousel-controls button{min-width:72px;min-height:44px;font-size:13px}
+.focus-carousel-controls button:disabled{cursor:default;opacity:.4}
+.focus-position{display:flex;align-items:center;justify-content:center;gap:5px;color:var(--muted);font:500 12px var(--numerals)}
+.focus-position-dot{width:5px;height:5px;background:var(--control-border);border-radius:10px}.focus-position-dot.current{width:16px;background:var(--accent)}
+html[data-theme] .focus-carousel .focus-inputs{grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;padding:0}
+html[data-theme] .focus-carousel .focus-inputs label{min-width:0;font-size:12px}
+.workout-motion-plane{position:fixed;z-index:24;pointer-events:none;border:1px solid var(--accent);border-radius:var(--control-radius);box-shadow:inset 3px 0 var(--accent);background:color-mix(in srgb,var(--accent) 12%,transparent);transform-origin:0 0}
+html[data-theme] .set-table .set-row.workout-motion-target{border-color:transparent!important;outline:none!important;box-shadow:none!important;background:var(--surface)!important}
+.continuity-settings{max-width:900px;margin:0 auto}.continuity-settings .page-head{margin-bottom:22px}
+.settings-index{display:flex;flex-wrap:wrap;gap:6px 18px;padding-bottom:24px;border-bottom:1px solid var(--line)}
+.settings-index a{display:inline-flex;align-items:center;min-height:40px;font-size:13px;color:var(--muted)}.settings-index a:hover{color:var(--accent)}
+.settings-group{padding:26px 0;border-bottom:1px solid var(--line);scroll-margin-top:30px}
+html[data-theme] .settings-group .panel{padding:0;margin:0;background:transparent;border:0;border-radius:0;box-shadow:none}
+html[data-theme] .settings-group h2{font-size:19px;margin:0 0 16px}.settings-group h3{font-size:16px;margin-bottom:10px}
+.settings-group p,.settings-group small{line-height:1.65}.settings-group p.muted{font-size:13px}
+.settings-group .toggle{min-height:52px;border-bottom:1px solid var(--line);margin:0;padding:10px 0;font-size:14px;align-items:center}
+.settings-group .toggle input{flex:none}.settings-group form>.secondary,.settings-group form>.primary{margin-top:16px;min-height:44px}
+.settings-group .form-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:0 18px}
+.settings-group .training-tools{margin-top:24px!important}.settings-group .training-tools .actions{flex-wrap:wrap;gap:8px}
+.profile-disclosure>summary{display:flex;justify-content:space-between;align-items:center;gap:12px;list-style:none;cursor:pointer;min-height:52px;font-size:17px}
+.profile-disclosure>summary::-webkit-details-marker{display:none}.profile-disclosure summary strong{font-weight:600}.profile-disclosure summary small{display:block;color:var(--muted);font-size:13px;margin-top:5px}
+.profile-disclosure[open]>summary{margin-bottom:24px}.profile-disclosure[open]>summary>span:last-child{transform:rotate(45deg)}
+.settings-group .backup-settings .stack{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin:20px 0}
+.settings-group .backup-settings .stack>button{min-width:0;min-height:48px;white-space:normal;font-size:13px;text-align:left;justify-content:flex-start}
+.settings-group .backup-settings .badge{margin-bottom:14px}.settings-group .panel+.panel{margin-top:24px!important}
+@media(max-width:650px){html[data-theme] .focus-carousel .focus-card{padding:22px 18px}.settings-group .form-grid{grid-template-columns:minmax(0,1fr)}.continuity-settings .page-head h1{font-size:34px}.settings-group{padding:24px 0}.settings-index{gap:0 16px}}
+@media(max-width:340px){html[data-theme] .focus-carousel .focus-card{padding:20px 12px}html[data-theme] .focus-carousel .focus-card h2{font-size:26px}.focus-carousel-controls{gap:8px}.focus-carousel-controls button{min-width:64px}}
+@media(prefers-reduced-motion:reduce){.workout-progress-fill{transition:none}.workout-motion-plane{display:none}}
+html[data-theme] body .workout-navigation .exercise-jump-nav{position:relative;top:auto}
+html[data-theme] body.focus-mode :is(.sidebar,.topbar,.mobile-nav,.app-footer){display:none}

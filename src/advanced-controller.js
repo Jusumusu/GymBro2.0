@@ -14,6 +14,14 @@ import {calendarDate,addDays} from './calendar.js';
 import {activeSet,selectActiveSet} from './active-workout.js';
 import {esc,button as b,field,options} from './ui.js';
 const plainState=s=>{const copy=structuredClone(s);if(copy.upgrade?.advanced)copy.upgrade.advanced.backup=advancedDefaults().backup;return copy;};
+export function automaticRestDuration(s,recordId,setId){
+  if(!s.profile?.timer||!s.draft||workoutProgress(s.draft).remaining===0)return null;
+  const e=s.draft.exercises.find(x=>x.id===recordId);
+  if(!e||!e.entries.some(a=>a.done&&(!setId||a.id===setId)))return null;
+  if(e.group){const group=s.draft.exercises.filter(x=>x.group===e.group),counts=group.map(x=>x.entries.filter(a=>(a.done||a.skipped)&&a.type!=='warmup').length);if(new Set(counts).size>1&&group.some(x=>x.entries.some(a=>!a.done&&!a.skipped)))return null;}
+  return s.upgrade.exerciseRules[e.exerciseId]?.restSeconds||e.restSeconds||s.profile.restSeconds;
+ }
+export function applyAutomaticRest(s,recordId,setId=null){const seconds=automaticRestDuration(s,recordId,setId);if(seconds!==null){const rounded=Math.round(seconds);if(Number.isFinite(rounded)&&rounded>=1&&rounded<=3600)s.draft.restTimer=startRest(rounded);}}
 export function createAdvancedController(ctx){
  const state=ctx.getState,save=ctx.commit;let timeProposal=null,calendarFile=null,reminderBusy=false;
  const block=id=>advanced(state()).blocks.find(x=>x.id===id);
@@ -76,16 +84,10 @@ export function createAdvancedController(ctx){
   case 'calendar-export-form':{calendarFile=exportCalendar(state(),{from:d.get('from'),through:d.get('through'),timeZone:d.get('timeZone'),reminderMinutes:d.get('reminderMinutes')==='off'?null:Number(d.get('reminderMinutes')),occurrenceId:form.dataset.occurrence||null});const shareFile=new File([calendarFile],'gymbro-calendar.ics',{type:'text/calendar'}),canShare=!!navigator.canShare?.({files:[shareFile]});ctx.dialog('Add workouts to your calendar',`<h3>${(calendarFile.match(/BEGIN:VEVENT/g)||[]).length} calendar event definitions</h3><p>Window: ${d.get('from')} through ${d.get('through')} · ${esc(d.get('timeZone'))}. Recurring rules use that end date and include occurrence exceptions.</p><div class="actions">${b('Download .ics','calendar-download','primary')}${canShare?b('Share file','calendar-share','secondary'):''}</div><p>Apple Calendar: open the downloaded file or share it to Calendar where supported. Google Calendar: on desktop, open Settings → Import & export and import the file into your chosen calendar.</p><div class="advanced-note">One-way export. Reimporting can create duplicates even with stable event identifiers. Calendar notification delivery depends on your calendar app and operating system. Gym Bro’s Notifications switch does not disable alerts already imported into another calendar.</div>`);return true;}
   default:return false;
  }}
- function automaticRestDuration(s,recordId,setId){
-  if(!s.profile?.timer||!s.draft||workoutProgress(s.draft).remaining===0)return null;
-  const e=s.draft.exercises.find(x=>x.id===recordId);
-  if(!e||!e.entries.some(a=>a.done&&(!setId||a.id===setId)))return null;
-  if(e.group){const group=s.draft.exercises.filter(x=>x.group===e.group),counts=group.map(x=>x.entries.filter(a=>(a.done||a.skipped)&&a.type!=='warmup').length);if(new Set(counts).size>1&&group.some(x=>x.entries.some(a=>!a.done&&!a.skipped)))return null;}
-  return s.upgrade.exerciseRules[e.exerciseId]?.restSeconds||e.restSeconds||s.profile.restSeconds;
- }
- async function onCompleted(recordId,setId=null){
+
+ async function onCompleted(recordId,setId=null,{draw=true}={}){
   if(automaticRestDuration(state(),recordId,setId)===null)return;
-  await save(s=>{const seconds=automaticRestDuration(s,recordId,setId);if(seconds!==null)s.draft.restTimer=startRest(seconds);},{award:false});
+  await save(s=>{applyAutomaticRest(s,recordId,setId);},{award:false,draw});
  }
 
  function paintRest(){if(!state().upgrade?.notifications?.enabled)document.querySelector('#backup-reminder')?.remove();const timer=state().draft?.restTimer,n=remainingRest(timer),phase=restPhase(timer),el=document.querySelector('#rest-count'),text=`${Math.floor(n/60)}:${String(n%60).padStart(2,'0')}`;if(el&&el.textContent!==text)el.textContent=text;const panel=document.querySelector('#rest-timer');if(panel){panel.dataset.phase=phase;panel.dataset.countdown=String(phase==='running'&&n<=5);const control=panel.querySelector('[data-rest-toggle]');if(control){control.dataset.action=phase==='paused'?'rest-resume':'rest-pause';control.textContent=phase==='paused'?'Resume':'Pause';control.hidden=phase==='complete';}}const done=document.querySelector('#rest-finished');if(done)done.hidden=phase!=='complete';}

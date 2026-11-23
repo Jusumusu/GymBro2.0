@@ -15,12 +15,13 @@ export function createFocusGestures({navigate,document:doc=document}){
  return {sync,stop:detach};
 }
 export function createExerciseFollower({document:doc=document}={}){
- let node=null,selected=null,draftId=null,left=0;
+ let node=null,selected=null,draftId=null,left=0,width=0;
  const remember=()=>{if(node?.isConnected)left=node.scrollLeft;};
- function sync(id){const next=doc.querySelector('.exercise-jump-nav');if(draftId!==id){left=0;selected=null;draftId=id;}const replaced=next!==node;if(replaced){node?.removeEventListener('scroll',remember);node=next;if(node){node.scrollLeft=left;node.addEventListener('scroll',remember,{passive:true});}}
-  if(!node)return;const current=node.querySelector('[aria-current]'),key=current?.dataset.id;if(!current||key===selected)return;selected=key;
+ const resize=globalThis.ResizeObserver?new ResizeObserver(()=>{if(node?.isConnected&&Math.abs(node.clientWidth-width)>1)sync(draftId);}):null;
+ function sync(id){const next=doc.querySelector('.exercise-jump-nav');if(draftId!==id){left=0;selected=null;draftId=id;}const replaced=next!==node;if(replaced){node?.removeEventListener('scroll',remember);if(node)resize?.unobserve(node);node=next;if(node){node.scrollLeft=left;node.addEventListener('scroll',remember,{passive:true});resize?.observe(node);}}
+  if(!node)return;const resized=Math.abs(node.clientWidth-width)>1;width=node.clientWidth;const current=node.querySelector('[aria-current]'),key=current?.dataset.id;if(!current||key===selected&&!resized)return;selected=key;
   const r=current.getBoundingClientRect(),bar=node.getBoundingClientRect();if(r.left>=bar.left+8&&r.right<=bar.right-8)return;
   const target=Math.max(0,Math.min(node.scrollWidth-node.clientWidth,node.scrollLeft+r.left-bar.left-(bar.width-r.width)/2));node.scrollTo({left:target,behavior:replaced||matchMedia('(prefers-reduced-motion:reduce)').matches?'instant':'smooth'});left=target;
  }
- return {sync,capture:remember,stop:()=>{node?.removeEventListener('scroll',remember);node=null;}};
+ return {sync,capture:remember,stop:()=>{node?.removeEventListener('scroll',remember);resize?.disconnect();node=null;}};
 }
