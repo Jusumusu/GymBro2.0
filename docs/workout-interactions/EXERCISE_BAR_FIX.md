@@ -4,7 +4,7 @@ The reported glitch was reproduced with real touch input against published previ
 
 The actual normal and Focus workout now render a stationary glass frame around the native horizontal rail. The face, optical rim and backdrop remain aligned with the entire visible bar at every scroll position. Labels and the selected pill scroll together. Manual scrolling ends any selection spring; the pill uses a left-edge transform origin to keep width changes aligned. The exercise bar keeps touch lighting but does not scale on press or release. Bottom navigation and timer press/release behavior are preserved.
 
-No workout data, training logic, material values or release boundaries change. The candidate remains an isolated 0.8.0 preview; production remains 0.7.0 / `054060a0162f`.
+No workout data, training logic, material values or release boundaries change. These repair checks used an isolated 0.8.0 preview beside unchanged 0.7.0 / `054060a0162f` production. The user subsequently authorized the 0.8.0 release; see `release.json`.
 
 Verified fixed build: `7febcc8a695c`.
 
@@ -24,4 +24,4 @@ GYMBRO_UPGRADE_ARTIFACTS=artifacts/workout-interactions/exercise-bar-upgrade \
 node tests/browser-continuity-upgrade.mjs
 ```
 
-Browser checks execute Chromium. The Chrome-iOS UA exercises the CSS fallback; it does not certify a physical iPhone or the WebKit engine. The public deployment receipt and current updater link are maintained in PR #6. No main merge is authorized.
+Browser checks execute Chromium. The Chrome-iOS UA exercises the CSS fallback; it does not certify a physical iPhone or the WebKit engine. The public deployment receipt and current updater link are maintained in PR #6. Release was authorized November 23, 2026; the current release builds and upgrade checks are recorded in `release.json`.

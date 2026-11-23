@@ -1,0 +1,29 @@
+{
+  "version": "0.8.0",
+  "authorized": "2026-11-23",
+  "pullRequest": "https://github.com/Jusumusu/GymBro2.0/pull/6",
+  "previousMain": "2ce9a22c675d30fda5501dcc2e3edfeefef66295",
+  "previousProductionBuild": "054060a0162f",
+  "previousPreviewCommit": "9c5840b0d660f875bca7413087b6fc220abb67ea",
+  "previousPreviewBuild": "7febcc8a695c",
+  "productionBuild": "4b0e4c7ae1d1",
+  "previewBuild": "539371b238f9",
+  "checks": {
+    "unit": 301,
+    "backend": 9,
+    "productionAndPreviewUpdate": 8,
+    "catalog": "254 available; 198 released definitions unchanged; zero duplicates",
+    "exerciseBar": 8,
+    "exerciseBarLayouts": 16,
+    "sharedGlass": 10,
+    "continuity": 9,
+    "continuityLayouts": 14
+  },
+  "approvedScope": "Approved A \u2014 Continuity, Training Block layout, shared timer alerts, guarded Focus swipes, required-work progress, optional wake lock and fixed exercise-bar glass.",
+  "storage": "Exact published production and current preview bundles retain separate full journals, active drafts/timers, custom identity collisions, photos and worker/cache scopes through explicit updates and offline reload.",
+  "deployment": "The merged main workflow must verify publication. The exact merge/deployment receipt is maintained in PR #6.",
+  "limits": [
+    "Chromium browser checks, including Chrome-iOS UA CSS fallback; physical iPhone/WebKit not certified.",
+    "Native device background audio, Home Screen behavior and device power policy are not certified."
+  ]
+}

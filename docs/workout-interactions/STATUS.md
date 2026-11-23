@@ -1,11 +1,11 @@
 # 0.8.0 — A Continuity implemented
 
-Branch: `feature/workout-interactions-ux-refinement`. Stable main remains `2ce9a22c675d30fda5501dcc2e3edfeefef66295` / 0.7.0. No main merge is authorized. The full request is in BRIEF.md; root causes, Settings inventory and API compatibility evidence are in AUDIT.md.
+Release authorized November 23, 2026: the user instructed “merge to main” for PR #6, including approved A — Continuity and the exercise-bar glass repair. The preceding main is `2ce9a22c675d30fda5501dcc2e3edfeefef66295` / 0.7.0. `release.json` records the release checks; the deployment receipt is maintained in PR #6. The original request and audit remain in BRIEF.md and AUDIT.md.
 
 
 ## Current implementation — November 23, 2026
 
-The user explicitly selected **A — Continuity** with “use A”. All five approved treatments are now integrated in the real app: adjacent-card Focus carousel, compact accessible Previous/Next controls and position cues, continuous set highlight, grouped single-page Settings, shared compact header timer and thin required-work progress. Approval is recorded in `approval.json`. Existing Aero colours, fonts, glass values and logging fields are retained. No main merge is authorized.
+The user explicitly selected **A — Continuity** with “use A”. All five approved treatments are now integrated in the real app: adjacent-card Focus carousel, compact accessible Previous/Next controls and position cues, continuous set highlight, grouped single-page Settings, shared compact header timer and thin required-work progress. Approval is recorded in `approval.json`. Existing Aero colours, fonts, glass values and logging fields are retained. The release authorization above supersedes the earlier review boundary.
 
 Set completion and automatic rest now share one saved state transition. The decorative plane observes the successfully saved result, respects Reduced Motion and cancels on scrolling/resizing; destinations outside the visual viewport use a simpler transition. Final-work feedback is explicit, completed values remain editable, and Finish stays a separate action.
 
