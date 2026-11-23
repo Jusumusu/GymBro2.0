@@ -1,4 +1,4 @@
-// Install the actual archived 0.7 preview and update to 0.8, preserving both journals.
+// Update an archived published preview, preserving both journals and private media.
 import assert from 'node:assert/strict';
 import {cp,mkdir,readFile,writeFile} from 'node:fs/promises';
 import path from 'node:path';
@@ -7,12 +7,13 @@ import {EXERCISES} from '../src/exercises.js';
 import {browser,sleep} from './helpers/mobile-browser.mjs';
 import {refinementFixture} from './fixtures/refinement.mjs';
 import {makeDraft} from '../src/planner.js';
-const work=path.resolve('work/workout-interactions/continuity-upgrade'),site=work+'/site',out='artifacts/workout-interactions/continuity-upgrade',checks=[];
+const previousCommit=process.env.GYMBRO_UPGRADE_FROM_COMMIT||'508d10ec5da188c0d66de5cb8b423955372ec1fe',previousBuild=process.env.GYMBRO_UPGRADE_FROM_BUILD||'519dac74fd42';
+const work=path.resolve('work/workout-interactions/continuity-upgrade/'+previousCommit),site=work+'/site',out=process.env.GYMBRO_UPGRADE_ARTIFACTS||'artifacts/workout-interactions/continuity-upgrade',checks=[];
 await mkdir(out,{recursive:true});await mkdir(work+'/previous',{recursive:true});
-const run=(cmd,args,cwd=process.cwd())=>{const r=spawnSync(cmd,args,{cwd,encoding:'utf8'});assert.equal(r.status,0,r.stderr);};run('git',['archive','--format=tar','--output='+work+'/old.tar','508d10ec5da188c0d66de5cb8b423955372ec1fe','src','public','scripts','docs','package.json','index.html']);run('tar',['-xf',work+'/old.tar','-C',work+'/previous']);run(process.execPath,['scripts/build.mjs','--preview'],work+'/previous');
+const run=(cmd,args,cwd=process.cwd())=>{const r=spawnSync(cmd,args,{cwd,encoding:'utf8'});assert.equal(r.status,0,r.stderr);};run('git',['archive','--format=tar','--output='+work+'/old.tar',previousCommit,'src','public','scripts','docs','package.json','index.html']);run('tar',['-xf',work+'/old.tar','-C',work+'/previous']);run(process.execPath,['scripts/build.mjs','--preview'],work+'/previous');
 await cp('review-site',site,{recursive:true});await cp(work+'/previous/dist',site+'/preview',{recursive:true});
 const old=JSON.parse(await readFile(work+'/previous/dist/version.json','utf8')),next=JSON.parse(await readFile('review-site/preview/version.json','utf8')),production=await readFile(site+'/version.json','utf8');
-assert.equal(old.version,'0.8.0');assert.equal(old.build,'519dac74fd42');assert.equal(old.environment,'preview');assert.equal(next.version,'0.8.0');assert.equal(next.environment,'preview');assert.equal(JSON.parse(production).version,'0.7.0');
+assert.equal(old.version,'0.8.0');assert.equal(old.build,previousBuild);assert.equal(old.environment,'preview');assert.equal(next.version,'0.8.0');assert.equal(next.environment,'preview');assert.equal(JSON.parse(production).version,'0.7.0');
 const b=await browser({root:site,port:5302,debug:9372});const pass=message=>{checks.push(message);console.log('PASS '+message);};
 const seed=async(name)=>{const s=refinementFixture('2026-11-19');s.profile.name=name;s.photos=[];s.customExercises.push({...EXERCISES[0],id:'gb-neutral-db-bench',name:'Existing custom press'});s.plans.push({id:'collision',name:'Existing custom plan',exercises:[{exerciseId:'gb-neutral-db-bench',sets:2,min:8,max:12}]});s.draft=makeDraft(s.plans[0],'2026-11-19');for(const e of s.draft.exercises)for(const [i,a]of e.entries.entries())Object.assign(a,{kg:60,reps:10,rir:i===0?2:null,done:i===0});s.draft.restTimer={version:1,endsAt:Date.now()+180000};await b.js(`(async()=>await(await import('./src/storage.js')).saveState(${JSON.stringify(s)}))()`);await b.reload('document.querySelector(".sidebar")');return b.data();};
 const version=()=>b.js('document.querySelector("meta[name=gymbro-version]").content');

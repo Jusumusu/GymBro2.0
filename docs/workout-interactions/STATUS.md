@@ -15,6 +15,12 @@ The exercise bar follows the current exercise on selection and resize while pres
 
 The current landing page is `continuity/`, with four actual app screenshots. The original three studies and their captured Settings fixture are retained as historical review evidence. Updated verification and publication results are in `verification.json` and PR #6. The sections below record the original pre-approval work; statements about waiting for visual selection are superseded by this approval.
 
+## Exercise-bar repair — November 23, 2026
+
+Horizontal finger drags previously moved the glass face with the exercise labels and scaled the full bar on press. The glass now belongs to a stationary outer frame; the native scrolling rail owns only the labels and selected pill. Scrolling cancels the pill spring, and this bar retains its lighting response without resizing the frame. Both normal and Focus workouts retain the approved Aero material, current-exercise tracking and progress.
+
+The fixed preview build is `7febcc8a695c`. Eight targeted browser checks cover sixteen layouts in Chromium lens and Chrome-iOS UA CSS modes. The ten shared-glass and nine Continuity checks pass, as do all 301 unit tests and seven exact published-build `3783d0b16a28` → fixed-build update checks. See `EXERCISE_BAR_FIX.md` and `artifacts/workout-interactions/exercise-bar*/`. The exact public deployment receipt is maintained in PR #6.
+
 ## Original independent implementation
 
 Training Block date/duration fields stack at phone widths and use equal control heights. The existing timer no longer starts after the last outstanding required working set; skipping or shortening the last required work also resolves active rest. Existing Finish remains explicit and saves the workout once.

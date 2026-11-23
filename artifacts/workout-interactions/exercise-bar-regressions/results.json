@@ -1,0 +1,10 @@
+[
+  {
+    "suite": "browser-fluid-glass",
+    "exitCode": 0
+  },
+  {
+    "suite": "browser-continuity",
+    "exitCode": 0
+  }
+]

@@ -1,0 +1,10 @@
+PASS light: light frost on navigation/timer fits four phone sizes with unchanged journal
+PASS dark: light frost on navigation/timer fits four phone sizes with unchanged journal
+PASS Real touch compresses the surface, moves highlights and springs the glass selection across an app redraw without editing the journal
+PASS The timer has a visible elastic press/release without changing timer values
+PASS The spring survives an actual timer adjustment and app redraw while applying exactly the requested 15 seconds
+PASS Reduced Motion stops surface and selection animations and is reported in Settings
+PASS Reduced Transparency keeps a solid readable material
+PASS Decorative motion layers never intercept set-completion touch input
+PASS Fluid material and the complete active journal reopen offline
+PASS The published review prototype uses the same iOS-capable spring, press and frosted material

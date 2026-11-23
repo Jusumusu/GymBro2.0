@@ -1,0 +1,124 @@
+{
+  "checks": [
+    "light: light frost on navigation/timer fits four phone sizes with unchanged journal",
+    "dark: light frost on navigation/timer fits four phone sizes with unchanged journal",
+    "Real touch compresses the surface, moves highlights and springs the glass selection across an app redraw without editing the journal",
+    "The timer has a visible elastic press/release without changing timer values",
+    "The spring survives an actual timer adjustment and app redraw while applying exactly the requested 15 seconds",
+    "Reduced Motion stops surface and selection animations and is reported in Settings",
+    "Reduced Transparency keeps a solid readable material",
+    "Decorative motion layers never intercept set-completion touch input",
+    "Fluid material and the complete active journal reopen offline",
+    "The published review prototype uses the same iOS-capable spring, press and frosted material"
+  ],
+  "samples": [
+    {
+      "theme": "light",
+      "width": 320,
+      "height": 568,
+      "mode": "fluid-css",
+      "nav": "blur(4px) saturate(1.15)",
+      "timer": "blur(4px) saturate(1.15)",
+      "fill": "rgba(255, 255, 255, 0.1)",
+      "overflow": false,
+      "links": 5,
+      "selected": 1
+    },
+    {
+      "theme": "light",
+      "width": 375,
+      "height": 548,
+      "mode": "fluid-css",
+      "nav": "blur(4px) saturate(1.15)",
+      "timer": "blur(4px) saturate(1.15)",
+      "fill": "rgba(255, 255, 255, 0.1)",
+      "overflow": false,
+      "links": 5,
+      "selected": 1
+    },
+    {
+      "theme": "light",
+      "width": 390,
+      "height": 664,
+      "mode": "fluid-css",
+      "nav": "blur(4px) saturate(1.15)",
+      "timer": "blur(4px) saturate(1.15)",
+      "fill": "rgba(255, 255, 255, 0.1)",
+      "overflow": false,
+      "links": 5,
+      "selected": 1
+    },
+    {
+      "theme": "light",
+      "width": 430,
+      "height": 740,
+      "mode": "fluid-css",
+      "nav": "blur(4px) saturate(1.15)",
+      "timer": "blur(4px) saturate(1.15)",
+      "fill": "rgba(255, 255, 255, 0.1)",
+      "overflow": false,
+      "links": 5,
+      "selected": 1
+    },
+    {
+      "theme": "dark",
+      "width": 320,
+      "height": 568,
+      "mode": "fluid-css",
+      "nav": "blur(5px) saturate(1.15)",
+      "timer": "blur(5px) saturate(1.15)",
+      "fill": "rgba(255, 255, 255, 0.14)",
+      "overflow": false,
+      "links": 5,
+      "selected": 1
+    },
+    {
+      "theme": "dark",
+      "width": 375,
+      "height": 548,
+      "mode": "fluid-css",
+      "nav": "blur(5px) saturate(1.15)",
+      "timer": "blur(5px) saturate(1.15)",
+      "fill": "rgba(255, 255, 255, 0.14)",
+      "overflow": false,
+      "links": 5,
+      "selected": 1
+    },
+    {
+      "theme": "dark",
+      "width": 390,
+      "height": 664,
+      "mode": "fluid-css",
+      "nav": "blur(5px) saturate(1.15)",
+      "timer": "blur(5px) saturate(1.15)",
+      "fill": "rgba(255, 255, 255, 0.14)",
+      "overflow": false,
+      "links": 5,
+      "selected": 1
+    },
+    {
+      "theme": "dark",
+      "width": 430,
+      "height": 740,
+      "mode": "fluid-css",
+      "nav": "blur(5px) saturate(1.15)",
+      "timer": "blur(5px) saturate(1.15)",
+      "fill": "rgba(255, 255, 255, 0.14)",
+      "overflow": false,
+      "links": 5,
+      "selected": 1
+    }
+  ],
+  "press": {
+    "transform": "matrix(1.0114, 0, 0, 0.969598, 0, 0)",
+    "light": "30.763319672131146%"
+  },
+  "selectionFrames": [
+    "matrix(0.999778, 0, 0, 1, 6, 0)",
+    "matrix(1.06212, 0, 0, 0.987712, 66.5707, 0)",
+    "matrix(0.979255, 0, 0, 1.01729, 77.6075, 0)",
+    "matrix(0.992939, 0, 0, 1.00588, 76.8048, 0)"
+  ],
+  "errors": [],
+  "scope": "Actual touch/animation, media, layout and worker behavior under Chrome-iOS UA in Chromium. Physical iOS/WebKit engine not certified."
+}

@@ -1,0 +1,22 @@
+{
+  "from": {
+    "version": "0.8.0",
+    "build": "3783d0b16a28"
+  },
+  "to": {
+    "version": "0.8.0",
+    "build": "7febcc8a695c"
+  },
+  "production": "0.7.0",
+  "checks": [
+    "Actual previously published 0.8.0 preview is installed beside a distinct production journal",
+    "Old 0.8 preview detects the new Continuity build and offers an update without interrupting the session",
+    "Updater clearly identifies 0.8.0 preview and its new release notes",
+    "Explicit update installs 0.8.0 and Settings uses the same release version",
+    "History, active workout, preferences, body records and private photo bytes survive unchanged",
+    "Updated preview opens offline with the complete journal",
+    "Production remains 0.7.0 with its own unchanged journal and release metadata"
+  ],
+  "errors": [],
+  "scope": "Actual archived published 0.8.0 preview to the approved Continuity build in Chromium; fresh synthetic production and preview journals, real worker update and offline reload. Physical mobile browsers not certified."
+}
