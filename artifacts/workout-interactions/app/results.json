@@ -1,0 +1,312 @@
+{
+  "checks": [
+    "Every existing Settings control remains available while the new layout is awaiting approval",
+    "New preferences default off, persist, and survive saving the existing training profile",
+    "Block date/duration controls have matching heights and no collisions across seven widths in both themes",
+    "Training Block creation works at reduced keyboard-height viewport with the chosen date and duration",
+    "Actual touch swipes navigate forward/back without wrapping at the first exercise",
+    "Vertical scroll, short drags, system-edge starts and numeric input drags do not navigate",
+    "Keyboard navigation and swipes preserve every entered set, RIR, note and timer deadline",
+    "Horizontal auto-follow reveals a distant active exercise and unrelated redraws preserve manual scrolling",
+    "Out-of-order final required set finishes progress, clears rest, releases wake lock and keeps the unsaved workout",
+    "The existing explicit Finish flow saves once and leaves no timer or wake lock"
+  ],
+  "geometry": [
+    {
+      "theme": "light",
+      "width": 320,
+      "a": {
+        "x": 35,
+        "y": 339.078125,
+        "right": 285,
+        "bottom": 387.078125,
+        "w": 250,
+        "h": 48
+      },
+      "b": {
+        "x": 35,
+        "y": 430.078125,
+        "right": 285,
+        "bottom": 478.078125,
+        "w": 250,
+        "h": 48
+      },
+      "overflow": false
+    },
+    {
+      "theme": "light",
+      "width": 375,
+      "a": {
+        "x": 35,
+        "y": 327.890625,
+        "right": 340,
+        "bottom": 375.890625,
+        "w": 305,
+        "h": 48
+      },
+      "b": {
+        "x": 35,
+        "y": 418.890625,
+        "right": 340,
+        "bottom": 466.890625,
+        "w": 305,
+        "h": 48
+      },
+      "overflow": false
+    },
+    {
+      "theme": "light",
+      "width": 390,
+      "a": {
+        "x": 35,
+        "y": 327.890625,
+        "right": 355,
+        "bottom": 375.890625,
+        "w": 320,
+        "h": 48
+      },
+      "b": {
+        "x": 35,
+        "y": 418.890625,
+        "right": 355,
+        "bottom": 466.890625,
+        "w": 320,
+        "h": 48
+      },
+      "overflow": false
+    },
+    {
+      "theme": "light",
+      "width": 430,
+      "a": {
+        "x": 35,
+        "y": 327.890625,
+        "right": 395,
+        "bottom": 375.890625,
+        "w": 360,
+        "h": 48
+      },
+      "b": {
+        "x": 35,
+        "y": 418.890625,
+        "right": 395,
+        "bottom": 466.890625,
+        "w": 360,
+        "h": 48
+      },
+      "overflow": false
+    },
+    {
+      "theme": "light",
+      "width": 768,
+      "a": {
+        "x": 119.5,
+        "y": 346.515625,
+        "right": 368,
+        "bottom": 394.515625,
+        "w": 248.5,
+        "h": 48
+      },
+      "b": {
+        "x": 385,
+        "y": 346.515625,
+        "right": 633.5,
+        "bottom": 394.515625,
+        "w": 248.5,
+        "h": 48
+      },
+      "overflow": false
+    },
+    {
+      "theme": "light",
+      "width": 1024,
+      "a": {
+        "x": 247.5,
+        "y": 346.515625,
+        "right": 496,
+        "bottom": 394.515625,
+        "w": 248.5,
+        "h": 48
+      },
+      "b": {
+        "x": 513,
+        "y": 346.515625,
+        "right": 761.5,
+        "bottom": 394.515625,
+        "w": 248.5,
+        "h": 48
+      },
+      "overflow": false
+    },
+    {
+      "theme": "light",
+      "width": 1440,
+      "a": {
+        "x": 455.5,
+        "y": 346.515625,
+        "right": 704,
+        "bottom": 394.515625,
+        "w": 248.5,
+        "h": 48
+      },
+      "b": {
+        "x": 721,
+        "y": 346.515625,
+        "right": 969.5,
+        "bottom": 394.515625,
+        "w": 248.5,
+        "h": 48
+      },
+      "overflow": false
+    },
+    {
+      "theme": "dark",
+      "width": 320,
+      "a": {
+        "x": 35,
+        "y": 339.078125,
+        "right": 285,
+        "bottom": 387.078125,
+        "w": 250,
+        "h": 48
+      },
+      "b": {
+        "x": 35,
+        "y": 430.078125,
+        "right": 285,
+        "bottom": 478.078125,
+        "w": 250,
+        "h": 48
+      },
+      "overflow": false
+    },
+    {
+      "theme": "dark",
+      "width": 375,
+      "a": {
+        "x": 35,
+        "y": 327.890625,
+        "right": 340,
+        "bottom": 375.890625,
+        "w": 305,
+        "h": 48
+      },
+      "b": {
+        "x": 35,
+        "y": 418.890625,
+        "right": 340,
+        "bottom": 466.890625,
+        "w": 305,
+        "h": 48
+      },
+      "overflow": false
+    },
+    {
+      "theme": "dark",
+      "width": 390,
+      "a": {
+        "x": 35,
+        "y": 327.890625,
+        "right": 355,
+        "bottom": 375.890625,
+        "w": 320,
+        "h": 48
+      },
+      "b": {
+        "x": 35,
+        "y": 418.890625,
+        "right": 355,
+        "bottom": 466.890625,
+        "w": 320,
+        "h": 48
+      },
+      "overflow": false
+    },
+    {
+      "theme": "dark",
+      "width": 430,
+      "a": {
+        "x": 35,
+        "y": 327.890625,
+        "right": 395,
+        "bottom": 375.890625,
+        "w": 360,
+        "h": 48
+      },
+      "b": {
+        "x": 35,
+        "y": 418.890625,
+        "right": 395,
+        "bottom": 466.890625,
+        "w": 360,
+        "h": 48
+      },
+      "overflow": false
+    },
+    {
+      "theme": "dark",
+      "width": 768,
+      "a": {
+        "x": 119.5,
+        "y": 346.515625,
+        "right": 368,
+        "bottom": 394.515625,
+        "w": 248.5,
+        "h": 48
+      },
+      "b": {
+        "x": 385,
+        "y": 346.515625,
+        "right": 633.5,
+        "bottom": 394.515625,
+        "w": 248.5,
+        "h": 48
+      },
+      "overflow": false
+    },
+    {
+      "theme": "dark",
+      "width": 1024,
+      "a": {
+        "x": 247.5,
+        "y": 346.515625,
+        "right": 496,
+        "bottom": 394.515625,
+        "w": 248.5,
+        "h": 48
+      },
+      "b": {
+        "x": 513,
+        "y": 346.515625,
+        "right": 761.5,
+        "bottom": 394.515625,
+        "w": 248.5,
+        "h": 48
+      },
+      "overflow": false
+    },
+    {
+      "theme": "dark",
+      "width": 1440,
+      "a": {
+        "x": 455.5,
+        "y": 346.515625,
+        "right": 704,
+        "bottom": 394.515625,
+        "w": 248.5,
+        "h": 48
+      },
+      "b": {
+        "x": 721,
+        "y": 346.515625,
+        "right": 969.5,
+        "bottom": 394.515625,
+        "w": 248.5,
+        "h": 48
+      },
+      "overflow": false
+    }
+  ],
+  "errors": [],
+  "scope": "Real Chromium touch, keyboard, layout and storage tests. Wake Lock is an injected lifecycle double; no physical mobile certification."
+}

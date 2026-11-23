@@ -1,0 +1,209 @@
+{
+  "measurements": [
+    {
+      "theme": "light",
+      "width": 320,
+      "viewport": 320,
+      "scroll": 320,
+      "row": {
+        "left": 23,
+        "right": 297,
+        "width": 274
+      },
+      "leftInset": 3,
+      "rightInset": 3,
+      "padding": "5px 2px",
+      "activeCount": 1,
+      "inputTop": 6,
+      "inputBottom": 6
+    },
+    {
+      "theme": "light",
+      "width": 375,
+      "viewport": 375,
+      "scroll": 375,
+      "row": {
+        "left": 35,
+        "right": 340,
+        "width": 305
+      },
+      "leftInset": 3,
+      "rightInset": 3,
+      "padding": "5px 2px",
+      "activeCount": 1,
+      "inputTop": 6,
+      "inputBottom": 6
+    },
+    {
+      "theme": "light",
+      "width": 390,
+      "viewport": 390,
+      "scroll": 390,
+      "row": {
+        "left": 35,
+        "right": 355,
+        "width": 320
+      },
+      "leftInset": 3,
+      "rightInset": 3.015625,
+      "padding": "5px 2px",
+      "activeCount": 1,
+      "inputTop": 6,
+      "inputBottom": 6
+    },
+    {
+      "theme": "light",
+      "width": 430,
+      "viewport": 430,
+      "scroll": 430,
+      "row": {
+        "left": 35,
+        "right": 395,
+        "width": 360
+      },
+      "leftInset": 3,
+      "rightInset": 3.015625,
+      "padding": "5px 2px",
+      "activeCount": 1,
+      "inputTop": 6,
+      "inputBottom": 6
+    },
+    {
+      "theme": "light",
+      "width": 768,
+      "viewport": 768,
+      "scroll": 753,
+      "row": {
+        "left": 221,
+        "right": 698,
+        "width": 477
+      },
+      "leftInset": 9,
+      "rightInset": 9,
+      "padding": "8px",
+      "activeCount": 1,
+      "inputTop": 9,
+      "inputBottom": 9
+    },
+    {
+      "theme": "light",
+      "width": 1024,
+      "viewport": 1024,
+      "scroll": 1009,
+      "row": {
+        "left": 221,
+        "right": 954,
+        "width": 733
+      },
+      "leftInset": 9,
+      "rightInset": 9,
+      "padding": "8px",
+      "activeCount": 1,
+      "inputTop": 9,
+      "inputBottom": 9
+    },
+    {
+      "theme": "dark",
+      "width": 320,
+      "viewport": 320,
+      "scroll": 320,
+      "row": {
+        "left": 23,
+        "right": 297,
+        "width": 274
+      },
+      "leftInset": 3,
+      "rightInset": 3,
+      "padding": "5px 2px",
+      "activeCount": 1,
+      "inputTop": 6,
+      "inputBottom": 6
+    },
+    {
+      "theme": "dark",
+      "width": 375,
+      "viewport": 375,
+      "scroll": 375,
+      "row": {
+        "left": 35,
+        "right": 340,
+        "width": 305
+      },
+      "leftInset": 3,
+      "rightInset": 3,
+      "padding": "5px 2px",
+      "activeCount": 1,
+      "inputTop": 6,
+      "inputBottom": 6
+    },
+    {
+      "theme": "dark",
+      "width": 390,
+      "viewport": 390,
+      "scroll": 390,
+      "row": {
+        "left": 35,
+        "right": 355,
+        "width": 320
+      },
+      "leftInset": 3,
+      "rightInset": 3.015625,
+      "padding": "5px 2px",
+      "activeCount": 1,
+      "inputTop": 6,
+      "inputBottom": 6
+    },
+    {
+      "theme": "dark",
+      "width": 430,
+      "viewport": 430,
+      "scroll": 430,
+      "row": {
+        "left": 35,
+        "right": 395,
+        "width": 360
+      },
+      "leftInset": 3,
+      "rightInset": 3.015625,
+      "padding": "5px 2px",
+      "activeCount": 1,
+      "inputTop": 6,
+      "inputBottom": 6
+    },
+    {
+      "theme": "dark",
+      "width": 768,
+      "viewport": 768,
+      "scroll": 753,
+      "row": {
+        "left": 221,
+        "right": 698,
+        "width": 477
+      },
+      "leftInset": 9,
+      "rightInset": 9,
+      "padding": "8px",
+      "activeCount": 1,
+      "inputTop": 9,
+      "inputBottom": 9
+    },
+    {
+      "theme": "dark",
+      "width": 1024,
+      "viewport": 1024,
+      "scroll": 1009,
+      "row": {
+        "left": 221,
+        "right": 954,
+        "width": 733
+      },
+      "leftInset": 9,
+      "rightInset": 9,
+      "padding": "8px",
+      "activeCount": 1,
+      "inputTop": 9,
+      "inputBottom": 9
+    }
+  ],
+  "errors": []
+}

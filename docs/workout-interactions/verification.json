@@ -1,0 +1,177 @@
+{
+  "branch": "feature/workout-interactions-ux-refinement",
+  "pr": "https://github.com/Jusumusu/GymBro2.0/pull/6",
+  "stableMain": "2ce9a22c675d30fda5501dcc2e3edfeefef66295",
+  "stable": {
+    "version": "0.7.0",
+    "build": "054060a0162f"
+  },
+  "candidate": {
+    "version": "0.8.0",
+    "build": "7febcc8a695c",
+    "environment": "preview",
+    "assets": 78
+  },
+  "unit": 301,
+  "backend": 9,
+  "checks": {
+    "app": {
+      "passed": 10,
+      "errors": [],
+      "scope": "Real Chromium touch, keyboard, layout and storage tests. Wake Lock is an injected lifecycle double; no physical mobile certification.",
+      "geometryCases": 14
+    },
+    "audio": {
+      "passed": 7,
+      "errors": [],
+      "scope": "Actual Web Audio oscillator scheduling and trusted CDP pointer gestures in Chromium; pause/resume, mute and simulated visibility changes. No physical speaker, locked-phone or background-OS certification."
+    },
+    "review": {
+      "passed": 7,
+      "errors": [],
+      "scope": "Rendered and interactive repository prototypes in Chromium. Synthetic in-memory state only. No physical Safari/iOS certification; no Site live-browser QA.",
+      "layouts": 36
+    },
+    "upgrade": {
+      "passed": 7,
+      "errors": [],
+      "scope": "Actual archived 0.7.0 preview to 0.8.0 in Chromium; fresh synthetic production and preview journals, real worker update and offline reload. Physical mobile browsers not certified."
+    },
+    "continuity": {
+      "passed": 9,
+      "errors": [],
+      "scope": "Actual integrated Continuity app in Chromium: touch/keyboard-capable controls, Web Animations, layouts and offline journal. Physical iPhone/WebKit not certified.",
+      "layouts": 14
+    },
+    "continuityAudio": {
+      "passed": 7,
+      "errors": [],
+      "scope": "Actual Web Audio oscillator scheduling and trusted CDP pointer gestures in Chromium; pause/resume, mute and simulated visibility changes. No physical speaker, locked-phone or background-OS certification."
+    },
+    "continuityUpgrade": {
+      "passed": 7,
+      "errors": [],
+      "scope": "Actual archived published 0.8.0 preview to the approved Continuity build in Chromium; fresh synthetic production and preview journals, real worker update and offline reload. Physical mobile browsers not certified.",
+      "from": {
+        "version": "0.8.0",
+        "build": "519dac74fd42"
+      },
+      "to": {
+        "version": "0.8.0",
+        "build": "3783d0b16a28"
+      }
+    },
+    "continuityCore": {
+      "passed": 10,
+      "errors": [],
+      "scope": "Real Chromium touch, keyboard, layout and storage tests. Wake Lock is an injected lifecycle double; no physical mobile certification.",
+      "geometryCases": 14
+    },
+    "exerciseBar": {
+      "passed": 8,
+      "layouts": 16,
+      "errors": [],
+      "evidence": "artifacts/workout-interactions/exercise-bar/results.json",
+      "scope": "Real Chromium touch in native lens and Chrome-iOS UA CSS fallback; physical WebKit is not certified."
+    },
+    "exerciseBarSharedGlass": {
+      "passed": 10,
+      "errors": [],
+      "evidence": "artifacts/workout-interactions/exercise-bar-regressions/browser-fluid-glass/weekly-review-progression-search/fluid-glass/results.json"
+    },
+    "exerciseBarContinuity": {
+      "passed": 9,
+      "layouts": 14,
+      "errors": [],
+      "evidence": "artifacts/workout-interactions/exercise-bar-regressions/browser-continuity/workout-interactions/continuity/results.json"
+    },
+    "exerciseBarUpgrade": {
+      "from": {
+        "version": "0.8.0",
+        "build": "3783d0b16a28"
+      },
+      "to": {
+        "version": "0.8.0",
+        "build": "7febcc8a695c"
+      },
+      "production": "0.7.0",
+      "checks": [
+        "Actual previously published 0.8.0 preview is installed beside a distinct production journal",
+        "Old 0.8 preview detects the new Continuity build and offers an update without interrupting the session",
+        "Updater clearly identifies 0.8.0 preview and its new release notes",
+        "Explicit update installs 0.8.0 and Settings uses the same release version",
+        "History, active workout, preferences, body records and private photo bytes survive unchanged",
+        "Updated preview opens offline with the complete journal",
+        "Production remains 0.7.0 with its own unchanged journal and release metadata"
+      ],
+      "errors": [],
+      "scope": "Actual archived published 0.8.0 preview to the approved Continuity build in Chromium; fresh synthetic production and preview journals, real worker update and offline reload. Physical mobile browsers not certified."
+    }
+  },
+  "regressions": [
+    {
+      "suite": "browser-training-refinement",
+      "exitCode": 0
+    },
+    {
+      "suite": "browser",
+      "exitCode": 0
+    },
+    {
+      "suite": "browser-advanced-training",
+      "exitCode": 0
+    },
+    {
+      "suite": "browser-app-updates",
+      "exitCode": 0
+    },
+    {
+      "suite": "browser-workout-ux",
+      "exitCode": 0
+    },
+    {
+      "suite": "browser-refinement",
+      "exitCode": 0
+    },
+    {
+      "suite": "browser-update",
+      "exitCode": 0
+    },
+    {
+      "suite": "browser-design-implementation",
+      "exitCode": 0
+    }
+  ],
+  "designApproval": {
+    "identity": "A \u2014 Aero, retained",
+    "packagesPresented": [
+      "A \u2014 Continuity",
+      "B \u2014 Center stage",
+      "C \u2014 Quiet control"
+    ],
+    "selected": "A \u2014 Continuity",
+    "selectedOn": "2026-11-23",
+    "userInstruction": "use A",
+    "finalVisualIntegration": true,
+    "record": "approval.json"
+  },
+  "publication": {
+    "review": "https://gym-bro-design-review.jesse03sousa.chatgpt.site/",
+    "functionalPreview": "https://gym-bro-design-review.jesse03sousa.chatgpt.site/preview/",
+    "audience": "Public GitHub preview; the owner-private Site retains the preceding Continuity snapshot.",
+    "githubRun": 45181684826,
+    "githubBuild": "success",
+    "githubDeploy": "Previous Continuity build 3783d0b16a28 successfully deployed on attempt 2. The fixed build deployment receipt is maintained in PR #6.",
+    "implementation": "https://gym-bro-design-review.jesse03sousa.chatgpt.site/preview/docs/workout-interactions/continuity/",
+    "receipt": "Native publication result and exact Site source SHA are recorded in PR #6.",
+    "githubPreview": "https://jusumusu.github.io/GymBro2.0/preview/",
+    "githubUpdate": "https://jusumusu.github.io/GymBro2.0/preview/update.html?latest=0.8.0&refresh=7febcc8a695c"
+  },
+  "limits": [
+    "No main merge.",
+    "No physical iPhone/Safari/Android or Home Screen PWA certification.",
+    "Native Chromium Web Audio scheduling checked; no physical-speaker/locked-phone guarantee.",
+    "Wake Lock lifecycle uses a test double; device power policy and screen-sleep behavior are not certified.",
+    "Repository browser QA; no live managed-Site browser tool available."
+  ]
+}

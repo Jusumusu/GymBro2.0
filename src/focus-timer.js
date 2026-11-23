@@ -2,7 +2,7 @@
 const validNow=now=>{if(!Number.isFinite(now)||now<0)throw Error('Invalid timer clock.');};
 export function startRest(seconds,now=Date.now()){
  if(!Number.isInteger(seconds)||seconds<1||seconds>3600)throw Error('Choose 1–3600 rest seconds.');validNow(now);
- return {version:1,endsAt:now+seconds*1000,durationSeconds:seconds};
+ return {version:1,id:crypto.randomUUID(),endsAt:now+seconds*1000,durationSeconds:seconds};
 }
 export function remainingMilliseconds(timer,now=Date.now()){
  if(!timer)return 0;validNow(now);

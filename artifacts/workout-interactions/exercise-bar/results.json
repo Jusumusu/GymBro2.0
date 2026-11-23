@@ -1,0 +1,607 @@
+{
+  "checks": [
+    "chromium: real touch drags in both directions and at the ends keep the entire glass frame fixed across eight layouts without changing the journal",
+    "chromium: auto-follow and selected pill align after distant selection; a full redraw retains manual scroll and fixed glass",
+    "chromium: Focus bar scrolling stays independent of carousel gestures; exercise selection and its glass pill remain aligned",
+    "chromium: accessibility preferences retain a stable readable frame with no decorative animation or browser errors",
+    "ios-css: real touch drags in both directions and at the ends keep the entire glass frame fixed across eight layouts without changing the journal",
+    "ios-css: auto-follow and selected pill align after distant selection; a full redraw retains manual scroll and fixed glass",
+    "ios-css: Focus bar scrolling stays independent of carousel gestures; exercise selection and its glass pill remain aligned",
+    "ios-css: accessibility preferences retain a stable readable frame with no decorative animation or browser errors"
+  ],
+  "samples": [
+    {
+      "mode": "lens",
+      "theme": "light",
+      "width": 320,
+      "rail": {
+        "x": 16,
+        "y": 48,
+        "width": 288,
+        "height": 56,
+        "right": 304
+      },
+      "glass": {
+        "x": 16,
+        "y": 48,
+        "width": 288,
+        "height": 56,
+        "right": 304
+      },
+      "selected": {
+        "x": -510,
+        "y": 54,
+        "width": 151.796875,
+        "height": 44,
+        "right": -358.203125
+      },
+      "pill": {
+        "x": -510,
+        "y": 53.984375,
+        "width": 151.796875,
+        "height": 44,
+        "right": -358.203125
+      },
+      "scroll": 532,
+      "max": 1054,
+      "transform": "none",
+      "overflow": false
+    },
+    {
+      "mode": "lens",
+      "theme": "light",
+      "width": 390,
+      "rail": {
+        "x": 22,
+        "y": 48,
+        "width": 346,
+        "height": 56,
+        "right": 368
+      },
+      "glass": {
+        "x": 22,
+        "y": 48,
+        "width": 346,
+        "height": 56,
+        "right": 368
+      },
+      "selected": {
+        "x": -503,
+        "y": 54,
+        "width": 151.796875,
+        "height": 44,
+        "right": -351.203125
+      },
+      "pill": {
+        "x": -503,
+        "y": 54,
+        "width": 151.796875,
+        "height": 44,
+        "right": -351.203125
+      },
+      "scroll": 531,
+      "max": 996,
+      "transform": "none",
+      "overflow": false
+    },
+    {
+      "mode": "lens",
+      "theme": "light",
+      "width": 430,
+      "rail": {
+        "x": 22,
+        "y": 48,
+        "width": 386,
+        "height": 56,
+        "right": 408
+      },
+      "glass": {
+        "x": 22,
+        "y": 48,
+        "width": 386,
+        "height": 56,
+        "right": 408
+      },
+      "selected": {
+        "x": -408,
+        "y": 54,
+        "width": 151.796875,
+        "height": 44,
+        "right": -256.203125
+      },
+      "pill": {
+        "x": -408,
+        "y": 54,
+        "width": 151.796875,
+        "height": 44,
+        "right": -256.203125
+      },
+      "scroll": 436,
+      "max": 956,
+      "transform": "none",
+      "overflow": false
+    },
+    {
+      "mode": "lens",
+      "theme": "light",
+      "width": 768,
+      "rail": {
+        "x": 198,
+        "y": 48,
+        "width": 523,
+        "height": 56,
+        "right": 721
+      },
+      "glass": {
+        "x": 198,
+        "y": 48,
+        "width": 523,
+        "height": 56,
+        "right": 721
+      },
+      "selected": {
+        "x": -335,
+        "y": 54,
+        "width": 157.796875,
+        "height": 44,
+        "right": -177.203125
+      },
+      "pill": {
+        "x": -335,
+        "y": 54,
+        "width": 157.796875,
+        "height": 44,
+        "right": -177.203125
+      },
+      "scroll": 539,
+      "max": 879,
+      "transform": "none",
+      "overflow": false
+    },
+    {
+      "mode": "lens",
+      "theme": "dark",
+      "width": 320,
+      "rail": {
+        "x": 16,
+        "y": 48,
+        "width": 288,
+        "height": 56,
+        "right": 304
+      },
+      "glass": {
+        "x": 16,
+        "y": 48,
+        "width": 288,
+        "height": 56,
+        "right": 304
+      },
+      "selected": {
+        "x": -512,
+        "y": 54,
+        "width": 151.796875,
+        "height": 44,
+        "right": -360.203125
+      },
+      "pill": {
+        "x": -512,
+        "y": 54,
+        "width": 151.796875,
+        "height": 44,
+        "right": -360.203125
+      },
+      "scroll": 534,
+      "max": 1054,
+      "transform": "none",
+      "overflow": false
+    },
+    {
+      "mode": "lens",
+      "theme": "dark",
+      "width": 390,
+      "rail": {
+        "x": 22,
+        "y": 48,
+        "width": 346,
+        "height": 56,
+        "right": 368
+      },
+      "glass": {
+        "x": 22,
+        "y": 48,
+        "width": 346,
+        "height": 56,
+        "right": 368
+      },
+      "selected": {
+        "x": -506,
+        "y": 54,
+        "width": 151.796875,
+        "height": 44,
+        "right": -354.203125
+      },
+      "pill": {
+        "x": -506,
+        "y": 54,
+        "width": 151.796875,
+        "height": 44,
+        "right": -354.203125
+      },
+      "scroll": 534,
+      "max": 996,
+      "transform": "none",
+      "overflow": false
+    },
+    {
+      "mode": "lens",
+      "theme": "dark",
+      "width": 430,
+      "rail": {
+        "x": 22,
+        "y": 48,
+        "width": 386,
+        "height": 56,
+        "right": 408
+      },
+      "glass": {
+        "x": 22,
+        "y": 48,
+        "width": 386,
+        "height": 56,
+        "right": 408
+      },
+      "selected": {
+        "x": -515,
+        "y": 54,
+        "width": 151.796875,
+        "height": 44,
+        "right": -363.203125
+      },
+      "pill": {
+        "x": -515,
+        "y": 54,
+        "width": 151.796875,
+        "height": 44,
+        "right": -363.203125
+      },
+      "scroll": 543,
+      "max": 956,
+      "transform": "none",
+      "overflow": false
+    },
+    {
+      "mode": "lens",
+      "theme": "dark",
+      "width": 768,
+      "rail": {
+        "x": 198,
+        "y": 48,
+        "width": 523,
+        "height": 56,
+        "right": 721
+      },
+      "glass": {
+        "x": 198,
+        "y": 48,
+        "width": 523,
+        "height": 56,
+        "right": 721
+      },
+      "selected": {
+        "x": -334,
+        "y": 54,
+        "width": 157.796875,
+        "height": 44,
+        "right": -176.203125
+      },
+      "pill": {
+        "x": -334,
+        "y": 54,
+        "width": 157.796875,
+        "height": 44,
+        "right": -176.203125
+      },
+      "scroll": 538,
+      "max": 879,
+      "transform": "none",
+      "overflow": false
+    },
+    {
+      "mode": "fluid-css",
+      "theme": "light",
+      "width": 320,
+      "rail": {
+        "x": 16,
+        "y": 48,
+        "width": 288,
+        "height": 56,
+        "right": 304
+      },
+      "glass": {
+        "x": 16,
+        "y": 48,
+        "width": 288,
+        "height": 56,
+        "right": 304
+      },
+      "selected": {
+        "x": -528,
+        "y": 54,
+        "width": 151.796875,
+        "height": 44,
+        "right": -376.203125
+      },
+      "pill": {
+        "x": -528,
+        "y": 53.984375,
+        "width": 151.796875,
+        "height": 44,
+        "right": -376.203125
+      },
+      "scroll": 550,
+      "max": 1054,
+      "transform": "none",
+      "overflow": false
+    },
+    {
+      "mode": "fluid-css",
+      "theme": "light",
+      "width": 390,
+      "rail": {
+        "x": 22,
+        "y": 48,
+        "width": 346,
+        "height": 56,
+        "right": 368
+      },
+      "glass": {
+        "x": 22,
+        "y": 48,
+        "width": 346,
+        "height": 56,
+        "right": 368
+      },
+      "selected": {
+        "x": -177,
+        "y": 54,
+        "width": 151.796875,
+        "height": 44,
+        "right": -25.203125
+      },
+      "pill": {
+        "x": -177,
+        "y": 54,
+        "width": 151.796875,
+        "height": 44,
+        "right": -25.203125
+      },
+      "scroll": 205,
+      "max": 996,
+      "transform": "none",
+      "overflow": false
+    },
+    {
+      "mode": "fluid-css",
+      "theme": "light",
+      "width": 430,
+      "rail": {
+        "x": 22,
+        "y": 48,
+        "width": 386,
+        "height": 56,
+        "right": 408
+      },
+      "glass": {
+        "x": 22,
+        "y": 48,
+        "width": 386,
+        "height": 56,
+        "right": 408
+      },
+      "selected": {
+        "x": -538,
+        "y": 54,
+        "width": 151.796875,
+        "height": 44,
+        "right": -386.203125
+      },
+      "pill": {
+        "x": -538,
+        "y": 54,
+        "width": 151.796875,
+        "height": 44,
+        "right": -386.203125
+      },
+      "scroll": 566,
+      "max": 956,
+      "transform": "none",
+      "overflow": false
+    },
+    {
+      "mode": "fluid-css",
+      "theme": "light",
+      "width": 768,
+      "rail": {
+        "x": 198,
+        "y": 48,
+        "width": 523,
+        "height": 56,
+        "right": 721
+      },
+      "glass": {
+        "x": 198,
+        "y": 48,
+        "width": 523,
+        "height": 56,
+        "right": 721
+      },
+      "selected": {
+        "x": -306,
+        "y": 54,
+        "width": 157.796875,
+        "height": 44,
+        "right": -148.203125
+      },
+      "pill": {
+        "x": -306,
+        "y": 54,
+        "width": 157.796875,
+        "height": 44,
+        "right": -148.203125
+      },
+      "scroll": 510,
+      "max": 879,
+      "transform": "none",
+      "overflow": false
+    },
+    {
+      "mode": "fluid-css",
+      "theme": "dark",
+      "width": 320,
+      "rail": {
+        "x": 16,
+        "y": 48,
+        "width": 288,
+        "height": 56,
+        "right": 304
+      },
+      "glass": {
+        "x": 16,
+        "y": 48,
+        "width": 288,
+        "height": 56,
+        "right": 304
+      },
+      "selected": {
+        "x": -511,
+        "y": 54,
+        "width": 151.796875,
+        "height": 44,
+        "right": -359.203125
+      },
+      "pill": {
+        "x": -511,
+        "y": 54,
+        "width": 151.796875,
+        "height": 44,
+        "right": -359.203125
+      },
+      "scroll": 533,
+      "max": 1054,
+      "transform": "none",
+      "overflow": false
+    },
+    {
+      "mode": "fluid-css",
+      "theme": "dark",
+      "width": 390,
+      "rail": {
+        "x": 22,
+        "y": 48,
+        "width": 346,
+        "height": 56,
+        "right": 368
+      },
+      "glass": {
+        "x": 22,
+        "y": 48,
+        "width": 346,
+        "height": 56,
+        "right": 368
+      },
+      "selected": {
+        "x": -177,
+        "y": 54,
+        "width": 151.796875,
+        "height": 44,
+        "right": -25.203125
+      },
+      "pill": {
+        "x": -177,
+        "y": 54,
+        "width": 151.796875,
+        "height": 44,
+        "right": -25.203125
+      },
+      "scroll": 205,
+      "max": 996,
+      "transform": "none",
+      "overflow": false
+    },
+    {
+      "mode": "fluid-css",
+      "theme": "dark",
+      "width": 430,
+      "rail": {
+        "x": 22,
+        "y": 48,
+        "width": 386,
+        "height": 56,
+        "right": 408
+      },
+      "glass": {
+        "x": 22,
+        "y": 48,
+        "width": 386,
+        "height": 56,
+        "right": 408
+      },
+      "selected": {
+        "x": -505,
+        "y": 54,
+        "width": 151.796875,
+        "height": 44,
+        "right": -353.203125
+      },
+      "pill": {
+        "x": -505,
+        "y": 54,
+        "width": 151.796875,
+        "height": 44,
+        "right": -353.203125
+      },
+      "scroll": 533,
+      "max": 956,
+      "transform": "none",
+      "overflow": false
+    },
+    {
+      "mode": "fluid-css",
+      "theme": "dark",
+      "width": 768,
+      "rail": {
+        "x": 198,
+        "y": 48,
+        "width": 523,
+        "height": 56,
+        "right": 721
+      },
+      "glass": {
+        "x": 198,
+        "y": 48,
+        "width": 523,
+        "height": 56,
+        "right": 721
+      },
+      "selected": {
+        "x": -347,
+        "y": 54,
+        "width": 157.796875,
+        "height": 44,
+        "right": -189.203125
+      },
+      "pill": {
+        "x": -347,
+        "y": 54,
+        "width": 157.796875,
+        "height": 44,
+        "right": -189.203125
+      },
+      "scroll": 551,
+      "max": 879,
+      "transform": "none",
+      "overflow": false
+    }
+  ],
+  "scope": "Real Chromium touch and geometry, with Chromium lens and Chrome-iOS UA CSS fallback. Physical iPhone/WebKit not certified."
+}

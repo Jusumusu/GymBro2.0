@@ -1,0 +1,27 @@
+{
+  "from": {
+    "version": "0.7.0",
+    "build": "054060a0162f"
+  },
+  "fromPreview": {
+    "version": "0.8.0",
+    "build": "7febcc8a695c"
+  },
+  "to": {
+    "version": "0.8.0",
+    "build": "4b0e4c7ae1d1"
+  },
+  "previewBuild": "539371b238f9",
+  "checks": [
+    "Exact released 0.7 production and current 0.8 preview have distinct full journals, active drafts/timers, custom collisions and photos",
+    "Publishing 0.8 offers an update without interrupting the production workout",
+    "Explicit production update installs the exact new shell with released notes and preserves every record and photo byte",
+    "Released Continuity controls and fixed glass work in normal/Focus mode and reopen offline with the saved workout",
+    "Production activation preserves the preceding preview worker/cache and its distinct complete journal",
+    "Preview independently updates to the release preview build without moving either journal or photo",
+    "The independently updated preview opens offline with all saved data",
+    "Returning to production retains its exact release, journal and private media after both updates"
+  ],
+  "errors": [],
+  "scope": "Exact archived production and current preview bundles; real verified worker updates and offline checks in Chromium with synthetic journals. Physical iPhone/WebKit not certified."
+}

@@ -1,0 +1,129 @@
+{
+  "checks": [
+    "Grouped single-page Settings retains every existing control and gives rest defaults one owner",
+    "Profile expansion, canonical units, rest preferences, section links and refresh preserve saved behavior",
+    "A continuous blue plane moves between visible sets after the completed state is saved; only one set is active",
+    "Reduced Motion skips decorative transitions and rapid taps cannot duplicate a completion",
+    "Focus uses the approved carousel, shared header timer and synchronized exercise bar without changing entered work",
+    "Compact accessible controls and swipe boundaries never wrap or finish the workout",
+    "The header timer and set inputs remain usable across seven widths in both themes, including 320×548",
+    "Switching modes, appearance changes and offline reload preserve all saved records and the entire active draft/timer",
+    "Final working-set feedback stays explicit, retains editable completed styling and starts no rest"
+  ],
+  "layouts": [
+    {
+      "theme": "light",
+      "width": 320,
+      "overflow": false,
+      "hit": true,
+      "timer": "relative",
+      "tools": 219.00001525878906
+    },
+    {
+      "theme": "light",
+      "width": 375,
+      "overflow": false,
+      "hit": true,
+      "timer": "relative",
+      "tools": 181.00001525878906
+    },
+    {
+      "theme": "light",
+      "width": 390,
+      "overflow": false,
+      "hit": true,
+      "timer": "relative",
+      "tools": 181
+    },
+    {
+      "theme": "light",
+      "width": 430,
+      "overflow": false,
+      "hit": true,
+      "timer": "relative",
+      "tools": 181
+    },
+    {
+      "theme": "light",
+      "width": 768,
+      "overflow": false,
+      "hit": true,
+      "timer": "relative",
+      "tools": 181
+    },
+    {
+      "theme": "light",
+      "width": 1024,
+      "overflow": false,
+      "hit": true,
+      "timer": "relative",
+      "tools": 181
+    },
+    {
+      "theme": "light",
+      "width": 1440,
+      "overflow": false,
+      "hit": true,
+      "timer": "relative",
+      "tools": 181
+    },
+    {
+      "theme": "dark",
+      "width": 320,
+      "overflow": false,
+      "hit": true,
+      "timer": "relative",
+      "tools": 218.99998474121094
+    },
+    {
+      "theme": "dark",
+      "width": 375,
+      "overflow": false,
+      "hit": true,
+      "timer": "relative",
+      "tools": 180.99998474121094
+    },
+    {
+      "theme": "dark",
+      "width": 390,
+      "overflow": false,
+      "hit": true,
+      "timer": "relative",
+      "tools": 180.99998474121094
+    },
+    {
+      "theme": "dark",
+      "width": 430,
+      "overflow": false,
+      "hit": true,
+      "timer": "relative",
+      "tools": 181
+    },
+    {
+      "theme": "dark",
+      "width": 768,
+      "overflow": false,
+      "hit": true,
+      "timer": "relative",
+      "tools": 181
+    },
+    {
+      "theme": "dark",
+      "width": 1024,
+      "overflow": false,
+      "hit": true,
+      "timer": "relative",
+      "tools": 181
+    },
+    {
+      "theme": "dark",
+      "width": 1440,
+      "overflow": false,
+      "hit": true,
+      "timer": "relative",
+      "tools": 181
+    }
+  ],
+  "errors": [],
+  "scope": "Actual integrated Continuity app in Chromium: touch/keyboard-capable controls, Web Animations, layouts and offline journal. Physical iPhone/WebKit not certified."
+}

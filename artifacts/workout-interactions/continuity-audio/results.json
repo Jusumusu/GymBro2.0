@@ -1,0 +1,63 @@
+{
+  "checks": [
+    "A real preference-save pointer gesture initializes one native Web Audio context",
+    "Pausing during the final countdown preserves milliseconds and stops sound scheduling",
+    "The deadline-based 5–1 sequence schedules five distinct beeps and one two-tone completion without duplicates after resume",
+    "Sound and timer repainting leave workout values and journal records unchanged",
+    "Muted preferences create no audio context or oscillator while the visual countdown still completes",
+    "A simulated background expiry returns to the completed state without replaying missed sounds",
+    "Dismissing the timer cancels subsequent sound events"
+  ],
+  "evidence": {
+    "contexts": 1,
+    "starts": [
+      1795438954129,
+      1795438955128,
+      1795438956128,
+      1795438959128,
+      1795438960128,
+      1795438961129
+    ],
+    "frequencies": [
+      {
+        "value": 660,
+        "at": 1795438954129
+      },
+      {
+        "value": 660,
+        "at": 1795438955128
+      },
+      {
+        "value": 660,
+        "at": 1795438956128
+      },
+      {
+        "value": 660,
+        "at": 1795438959128
+      },
+      {
+        "value": 660,
+        "at": 1795438960128
+      },
+      {
+        "value": 880,
+        "at": 1795438961129
+      },
+      {
+        "value": 1175,
+        "at": 1795438961129
+      }
+    ],
+    "stops": [
+      1795438954129,
+      1795438955128,
+      1795438956128,
+      1795438956171,
+      1795438959128,
+      1795438960128,
+      1795438961129
+    ]
+  },
+  "errors": [],
+  "scope": "Actual Web Audio oscillator scheduling and trusted CDP pointer gestures in Chromium; pause/resume, mute and simulated visibility changes. No physical speaker, locked-phone or background-OS certification."
+}

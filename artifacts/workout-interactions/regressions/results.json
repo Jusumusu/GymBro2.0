@@ -1,0 +1,34 @@
+[
+  {
+    "suite": "browser-training-refinement",
+    "exitCode": 0
+  },
+  {
+    "suite": "browser",
+    "exitCode": 0
+  },
+  {
+    "suite": "browser-advanced-training",
+    "exitCode": 0
+  },
+  {
+    "suite": "browser-app-updates",
+    "exitCode": 0
+  },
+  {
+    "suite": "browser-workout-ux",
+    "exitCode": 0
+  },
+  {
+    "suite": "browser-refinement",
+    "exitCode": 0
+  },
+  {
+    "suite": "browser-update",
+    "exitCode": 0
+  },
+  {
+    "suite": "browser-design-implementation",
+    "exitCode": 0
+  }
+]

@@ -1,0 +1,23 @@
+import {activeSet,exerciseStatus} from './active-workout.js';
+import {workoutProgress} from './workout-progress.js';
+import {findExercise} from './exercises.js';
+import {esc,button} from './ui.js';
+
+function status(exercise){const progress=workoutProgress({exercises:[exercise]});return progress.complete?'complete':exerciseStatus(exercise).allSkipped?'skipped':'upcoming';}
+export function exerciseNavigation(state,{focus=false,currentId=null}={}){
+ const draft=state.draft;if(!draft?.exercises.length)return '';const current=currentId||activeSet(draft)?.exercise.id,progress=workoutProgress(draft);
+ return `<section class="workout-navigation" aria-label="Workout navigation and progress"><div class="exercise-glass-frame"><nav class="exercise-jump-nav" aria-label="Workout exercises">${draft.exercises.map((exercise,index)=>{const phase=status(exercise),name=findExercise(state,exercise.exerciseId)?.name||'Exercise';return button(`<span class="exercise-nav-index" aria-hidden="true">${phase==='complete'?'✓':String(index+1).padStart(2,'0')}</span><span class="exercise-nav-name">${esc(name)}</span>`,focus?'focus-go':'jump-exercise','',`data-id="${esc(exercise.id)}" data-status="${phase}" title="${esc(name)}" aria-label="${esc(name)}, ${phase==='complete'?'required work completed':phase==='skipped'?'skipped':exercise.id===current?'current exercise':'upcoming exercise'}" ${exercise.id===current?'aria-current="step"':''}`);}).join('')}</nav></div><div class="workout-progress-copy"><span>Required working sets</span><span data-workout-progress-label>${progress.completed} / ${progress.total}</span></div><div class="workout-progress-track" aria-hidden="true"><span class="workout-progress-fill"></span></div><progress class="workout-progress-semantic" max="${Math.max(1,progress.total)}" value="${progress.completed}" aria-label="Completed required workout sets"></progress></section>`;
+}
+export function refreshWorkoutNavigation(state,documentRoot=document){
+ const progress=workoutProgress(state.draft),current=documentRoot.querySelector('[data-focus-exercise]')?.dataset.focusExercise||activeSet(state.draft)?.exercise.id;
+ for(const node of documentRoot.querySelectorAll('[data-workout-progress-label]'))node.textContent=`${progress.completed} / ${progress.total}`;
+ for(const node of documentRoot.querySelectorAll('.workout-progress-fill'))node.style.transform=`scaleX(${progress.percent/100})`;
+ for(const node of documentRoot.querySelectorAll('.workout-progress-semantic')){node.max=Math.max(1,progress.total);node.value=progress.completed;}
+ for(const node of documentRoot.querySelectorAll('.exercise-jump-nav button[data-id]')){const exercise=state.draft?.exercises.find(e=>e.id===node.dataset.id);if(!exercise)continue;const phase=status(exercise),name=findExercise(state,exercise.exerciseId)?.name||'Exercise';node.dataset.status=phase;if(exercise.id===current)node.setAttribute('aria-current','step');else node.removeAttribute('aria-current');node.setAttribute('aria-label',`${name}, ${phase==='complete'?'required work completed':phase==='skipped'?'skipped':exercise.id===current?'current exercise':'upcoming exercise'}`);const index=node.querySelector('.exercise-nav-index');if(index)index.textContent=phase==='complete'?'✓':String(state.draft.exercises.indexOf(exercise)+1).padStart(2,'0');}
+}
+export function continuitySettings({heading,appearance,workout,training,notifications,calendar,data,about,undo=''}){
+ const groups=[['appearance','Appearance',appearance],['workout','Workout preferences',workout],['training','Training profile',training],['notifications','Notifications',notifications],['calendar','Calendar',calendar],['data','Data and backup',data],['app','About and app',about]];
+ return `<div class="continuity-settings">${heading}<nav class="settings-index" aria-label="Settings sections">${groups.map(([id,title])=>`<a href="#settings-${id}" data-settings-anchor="settings-${id}">${title}</a>`).join('')}</nav>${groups.map(([id,title,content])=>`<section id="settings-${id}" class="settings-group" aria-label="${title}">${content}${id==='data'?undo:''}</section>`).join('')}</div>`;
+}
+
+export function workoutCompletionNote(draft){return workoutProgress(draft).complete?'<p class="workout-complete-note" role="status">Required work complete. Review your sets, then finish when you’re ready.</p>':'';}
