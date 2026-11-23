@@ -7,7 +7,8 @@
     "Focus uses the approved carousel, shared header timer and synchronized exercise bar without changing entered work",
     "Compact accessible controls and swipe boundaries never wrap or finish the workout",
     "The header timer and set inputs remain usable across seven widths in both themes, including 320×548",
-    "Switching modes, appearance changes and offline reload preserve all saved records and the entire active draft/timer"
+    "Switching modes, appearance changes and offline reload preserve all saved records and the entire active draft/timer",
+    "Final working-set feedback stays explicit, retains editable completed styling and starts no rest"
   ],
   "layouts": [
     {
@@ -16,7 +17,7 @@
       "overflow": false,
       "hit": true,
       "timer": "relative",
-      "tools": 219
+      "tools": 219.00001525878906
     },
     {
       "theme": "light",
@@ -24,7 +25,7 @@
       "overflow": false,
       "hit": true,
       "timer": "relative",
-      "tools": 181
+      "tools": 181.00001525878906
     },
     {
       "theme": "light",
@@ -72,7 +73,7 @@
       "overflow": false,
       "hit": true,
       "timer": "relative",
-      "tools": 219
+      "tools": 218.99998474121094
     },
     {
       "theme": "dark",
@@ -80,7 +81,7 @@
       "overflow": false,
       "hit": true,
       "timer": "relative",
-      "tools": 181
+      "tools": 180.99998474121094
     },
     {
       "theme": "dark",
@@ -88,7 +89,7 @@
       "overflow": false,
       "hit": true,
       "timer": "relative",
-      "tools": 181
+      "tools": 180.99998474121094
     },
     {
       "theme": "dark",

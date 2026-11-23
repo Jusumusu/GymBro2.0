@@ -3,7 +3,7 @@ import {mkdir,writeFile} from 'node:fs/promises';
 import {browser,sleep} from './helpers/mobile-browser.mjs';
 import {makeDraft} from '../src/planner.js';
 import {startRest} from '../src/focus-timer.js';
-const b=await browser({root:'review-site',port:5293,debug:9363}),checks=[],out='artifacts/workout-interactions/audio';await mkdir(out,{recursive:true});const pass=x=>{checks.push(x);console.log('PASS '+x);};
+const b=await browser({root:'review-site',port:5293,debug:9363}),checks=[],out='artifacts/workout-interactions/continuity-audio';await mkdir(out,{recursive:true});const pass=x=>{checks.push(x);console.log('PASS '+x);};
 async function pointerClick(selector){await b.js(`document.querySelector(${JSON.stringify(selector)}).scrollIntoView({block:'center',behavior:'instant'})`);const p=await b.js(`(()=>{const e=document.querySelector(${JSON.stringify(selector)}),r=e.getBoundingClientRect(),x=r.x+r.width/2,y=r.y+r.height/2,h=document.elementFromPoint(x,y);return{x,y,hit:e===h||e.contains(h),cover:h?.outerHTML.slice(0,500),target:e.outerHTML,scroll:scrollY}})()`);if(!p.hit){console.log('HIT',JSON.stringify(p));await b.shot(out+'/hit-failure.png');}assert.ok(p.hit);await b.cdp('Input.dispatchMouseEvent',{type:'mousePressed',x:p.x,y:p.y,button:'left',clickCount:1});await b.cdp('Input.dispatchMouseEvent',{type:'mouseReleased',x:p.x,y:p.y,button:'left',clickCount:1});await sleep(100);}
 const seed=async s=>{await b.js(`(async()=>await(await import('./src/storage.js')).saveState(${JSON.stringify(s)}))()`);await b.reload('document.querySelector(".sidebar")');};
 try{

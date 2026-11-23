@@ -1,5 +1,7 @@
 # Workout experience audit — 0.7.0 baseline
 
+Historical audit before visual approval. A — Continuity was selected on November 23 and is integrated; see STATUS.md for the current implementation.
+
 Stable main: `2ce9a22c675d30fda5501dcc2e3edfeefef66295`, production 0.7.0 / `054060a0162f`. This update is isolated on `feature/workout-interactions-ux-refinement`; no main merge is authorized.
 
 ## Findings and boundaries

@@ -1,4 +1,4 @@
-/* Geometry repair only; the final interaction treatments remain in the design review. */
+/* Layout guards and the approved A — Continuity workout experience. */
 #block-create-form .block-dates{grid-template-columns:repeat(2,minmax(0,1fr));align-items:start}
 #block-create-form .block-dates>label{min-width:0;max-width:100%}
 #block-create-form .block-dates :is(input,select){width:100%;min-width:0;max-width:100%;min-height:48px;height:48px;box-sizing:border-box}
@@ -70,3 +70,10 @@ html[data-theme] .settings-group h2{font-size:19px;margin:0 0 16px}.settings-gro
 @media(prefers-reduced-motion:reduce){.workout-progress-fill{transition:none}.workout-motion-plane{display:none}}
 html[data-theme] body .workout-navigation .exercise-jump-nav{position:relative;top:auto}
 html[data-theme] body.focus-mode :is(.sidebar,.topbar,.mobile-nav,.app-footer){display:none}
+
+html[data-theme] .focus-carousel .focus-card h2{overflow-wrap:anywhere}
+
+.workout-complete-note{padding:14px 16px;margin:12px 0 20px;background:var(--success-soft);color:var(--success);border-radius:var(--control-radius);font-size:14px;line-height:1.6}
+html[data-theme] .focus-carousel .focus-inputs.complete{background:var(--success-soft);border-radius:var(--control-radius);padding:8px}
+html[data-theme] .focus-carousel [data-action=toggle-set][aria-pressed=true]{background:var(--success-soft);color:var(--success)}
+html[data-theme] .focus-carousel .focus-inputs.active-set{outline:none;box-shadow:none;background:transparent;border-color:transparent}

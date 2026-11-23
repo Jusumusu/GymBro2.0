@@ -19,3 +19,5 @@ export function continuitySettings({heading,appearance,workout,training,notifica
  const groups=[['appearance','Appearance',appearance],['workout','Workout preferences',workout],['training','Training profile',training],['notifications','Notifications',notifications],['calendar','Calendar',calendar],['data','Data and backup',data],['app','About and app',about]];
  return `<div class="continuity-settings">${heading}<nav class="settings-index" aria-label="Settings sections">${groups.map(([id,title])=>`<a href="#settings-${id}" data-settings-anchor="settings-${id}">${title}</a>`).join('')}</nav>${groups.map(([id,title,content])=>`<section id="settings-${id}" class="settings-group" aria-label="${title}">${content}${id==='data'?undo:''}</section>`).join('')}</div>`;
 }
+
+export function workoutCompletionNote(draft){return workoutProgress(draft).complete?'<p class="workout-complete-note" role="status">Required work complete. Review your sets, then finish when you’re ready.</p>':'';}

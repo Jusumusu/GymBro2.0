@@ -1,0 +1,14 @@
+{
+  "date": "2026-11-23",
+  "userSelection": "use A",
+  "selected": "A — Continuity",
+  "identity": "A — Aero, retained",
+  "areas": {
+    "focusNavigation": "Adjacent-card carousel with compact accessible controls",
+    "setCompletion": "Continuous sliding active-set highlight",
+    "settings": "Grouped single page with expandable training profile",
+    "focusRestTimer": "One shared timer in a compact header",
+    "workoutProgress": "Thin required-working-set progress beneath exercise navigation"
+  },
+  "mainMergeAuthorized": false
+}

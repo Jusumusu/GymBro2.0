@@ -1,8 +1,21 @@
-# 0.8.0 workout experience — visual review
+# 0.8.0 — A Continuity implemented
 
 Branch: `feature/workout-interactions-ux-refinement`. Stable main remains `2ce9a22c675d30fda5501dcc2e3edfeefef66295` / 0.7.0. No main merge is authorized. The full request is in BRIEF.md; root causes, Settings inventory and API compatibility evidence are in AUDIT.md.
 
-## Implemented independently
+
+## Current implementation — November 23, 2026
+
+The user explicitly selected **A — Continuity** with “use A”. All five approved treatments are now integrated in the real app: adjacent-card Focus carousel, compact accessible Previous/Next controls and position cues, continuous set highlight, grouped single-page Settings, shared compact header timer and thin required-work progress. Approval is recorded in `approval.json`. Existing Aero colours, fonts, glass values and logging fields are retained. No main merge is authorized.
+
+Set completion and automatic rest now share one saved state transition. The decorative plane observes the successfully saved result, respects Reduced Motion and cancels on scrolling/resizing; destinations outside the visual viewport use a simpler transition. Final-work feedback is explicit, completed values remain editable, and Finish stays a separate action.
+
+Settings keeps every existing control. Default rest and automatic-rest preferences now have one owner in Workout preferences; profile saves retain them. Canonical unit increments, active form disclosures, section anchors, backup tools, notification preferences and app update status remain functional.
+
+The exercise bar follows the current exercise on selection and resize while preserving manual scroll on unrelated updates. Focus hides the normal app chrome, keeps its shared timer clear of the inputs, and respects safe-area/keyboard viewport constraints.
+
+The current landing page is `continuity/`, with four actual app screenshots. The original three studies and their captured Settings fixture are retained as historical review evidence. Updated verification and publication results are in `verification.json` and PR #6. The sections below record the original pre-approval work; statements about waiting for visual selection are superseded by this approval.
+
+## Original independent implementation
 
 Training Block date/duration fields stack at phone widths and use equal control heights. The existing timer no longer starts after the last outstanding required working set; skipping or shortening the last required work also resolves active rest. Existing Finish remains explicit and saves the workout once.
 
@@ -18,7 +31,7 @@ Timer alerts sample the existing deadline: one beep at each final second, then a
 
 Wake lock defaults off, follows only a visible active workout and releases at work completion, save/discard, preference-off or page exit. Late requests are released. Device releases/refusals remain quiet and bounded; visibility or a new interaction can retry. Unsupported or power-restricted devices remain usable.
 
-## Three design packages — none selected
+## Original design packages — A selected November 23
 
 | Decision | A — Continuity (recommended) | B — Center stage | C — Quiet control |
 |---|---|---|---|
@@ -50,10 +63,12 @@ Only Chromium was executed. Native iPhone/Safari, Home Screen PWA operation, And
 
 Review: https://gym-bro-design-review.jesse03sousa.chatgpt.site/
 
-Functional preview update: https://gym-bro-design-review.jesse03sousa.chatgpt.site/preview/update.html?latest=0.8.0&refresh=519dac74fd42
+Functional preview update: https://gym-bro-design-review.jesse03sousa.chatgpt.site/preview/update.html?latest=0.8.0&refresh=3783d0b16a28
 
 Draft PR: https://github.com/Jusumusu/GymBro2.0/pull/6
 
 The existing Site stays owner-private. Source packaging verifies every offline asset digest; native publication verifies the exact pushed Site commit. No live managed-Site browser tool is available, so Site publication is verified through its native deployment result and repository browser QA.
 
 GitHub Actions run [45001047784](https://github.com/Jusumusu/GymBro2.0/actions/runs/45001047784) built successfully but rejected deployment: `Branch "feature/workout-interactions-ux-refinement" is not allowed to deploy to github-pages due to environment protection rules.` This was verified from the run summary. The existing protected rule is retained. An owner can allow this exact branch in Settings → Environments → github-pages → Deployment branches and tags; the existing private Site supplies the working review without weakening those rules. PR #6 records the final publication result.
+
+Post-approval validation: 301 unit checks, 9 backend checks, 9 integrated Continuity workflows with 14 paired layouts, 7 native Web Audio checks, 7 actual published-0.8 → Continuity update checks, and all 8 existing browser suites (including 178 Aero layouts) pass. Four actual 390×844 app captures are in continuity/previews/. The full preview journal, draft/timer, custom identities and private photo bytes survive the verified update and offline reload. Physical iPhone/WebKit and hardware behavior remain unverified.

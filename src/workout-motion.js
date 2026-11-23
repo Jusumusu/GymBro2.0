@@ -6,7 +6,7 @@ export function createWorkoutMotion({document:doc=document,window:win=window}={}
  const reduced=win.matchMedia('(prefers-reduced-motion:reduce)'),running=new Set();let plane=null,target=null,stopped=false;
  const row=id=>id?doc.querySelector(`[data-set-row="${CSS.escape(id)}"]`):null;
  const rect=node=>{if(!node)return null;const r=node.getBoundingClientRect();return {left:r.left,top:r.top,right:r.right,bottom:r.bottom,width:r.width,height:r.height};};
- const visible=r=>r&&r.width>0&&r.height>0&&r.top>=0&&r.bottom<=win.innerHeight&&r.left>=0&&r.right<=win.innerWidth;
+ const visible=r=>{const v=win.visualViewport,top=v?.offsetTop||0,left=v?.offsetLeft||0;return r&&r.width>0&&r.height>0&&r.top>=top&&r.bottom<=top+(v?.height||win.innerHeight)&&r.left>=left&&r.right<=left+(v?.width||win.innerWidth);};
  function cancel(){for(const animation of running)animation.cancel();running.clear();plane?.remove();plane=null;target?.classList.remove('workout-motion-target');target=null;}
  function play(node,frames,options){if(!node||!node.animate||reduced.matches||stopped)return null;const animation=node.animate(frames,options);running.add(animation);animation.finished.catch(()=>{}).finally(()=>running.delete(animation));return animation;}
  function capture(state,{setId=null}={}){
@@ -32,6 +32,6 @@ export function createWorkoutMotion({document:doc=document,window:win=window}={}
   const clicked=row(before.clickedId);if(clicked&&visible(rect(clicked))&&before.clickedColor){const color=win.getComputedStyle(clicked).backgroundColor;if(color!==before.clickedColor)play(clicked,[{backgroundColor:before.clickedColor},{backgroundColor:color}],{duration:160,easing:'ease-out'});}
  }
  const scroll=event=>{if(event.target===doc||event.target===doc.scrollingElement||event.target===win)cancel();};
- doc.addEventListener('scroll',scroll,{capture:true,passive:true});win.addEventListener('resize',cancel);if(reduced.addEventListener)reduced.addEventListener('change',cancel);else reduced.addListener(cancel);
- return {capture,apply,stop(){stopped=true;cancel();doc.removeEventListener('scroll',scroll,true);win.removeEventListener('resize',cancel);if(reduced.removeEventListener)reduced.removeEventListener('change',cancel);else reduced.removeListener(cancel);}};
+ doc.addEventListener('scroll',scroll,{capture:true,passive:true});win.addEventListener('resize',cancel);win.visualViewport?.addEventListener('resize',cancel);win.visualViewport?.addEventListener('scroll',cancel);if(reduced.addEventListener)reduced.addEventListener('change',cancel);else reduced.addListener(cancel);
+ return {capture,apply,stop(){stopped=true;cancel();doc.removeEventListener('scroll',scroll,true);win.removeEventListener('resize',cancel);win.visualViewport?.removeEventListener('resize',cancel);win.visualViewport?.removeEventListener('scroll',cancel);if(reduced.removeEventListener)reduced.removeEventListener('change',cancel);else reduced.removeListener(cancel);}};
 }

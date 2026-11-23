@@ -8,11 +8,11 @@
   },
   "candidate": {
     "version": "0.8.0",
-    "build": "519dac74fd42",
+    "build": "3783d0b16a28",
     "environment": "preview",
-    "assets": 76
+    "assets": 78
   },
-  "unit": 300,
+  "unit": 301,
   "backend": 9,
   "checks": {
     "app": {
@@ -36,6 +36,36 @@
       "passed": 7,
       "errors": [],
       "scope": "Actual archived 0.7.0 preview to 0.8.0 in Chromium; fresh synthetic production and preview journals, real worker update and offline reload. Physical mobile browsers not certified."
+    },
+    "continuity": {
+      "passed": 9,
+      "errors": [],
+      "scope": "Actual integrated Continuity app in Chromium: touch/keyboard-capable controls, Web Animations, layouts and offline journal. Physical iPhone/WebKit not certified.",
+      "layouts": 14
+    },
+    "continuityAudio": {
+      "passed": 7,
+      "errors": [],
+      "scope": "Actual Web Audio oscillator scheduling and trusted CDP pointer gestures in Chromium; pause/resume, mute and simulated visibility changes. No physical speaker, locked-phone or background-OS certification."
+    },
+    "continuityUpgrade": {
+      "passed": 7,
+      "errors": [],
+      "scope": "Actual archived published 0.8.0 preview to the approved Continuity build in Chromium; fresh synthetic production and preview journals, real worker update and offline reload. Physical mobile browsers not certified.",
+      "from": {
+        "version": "0.8.0",
+        "build": "519dac74fd42"
+      },
+      "to": {
+        "version": "0.8.0",
+        "build": "3783d0b16a28"
+      }
+    },
+    "continuityCore": {
+      "passed": 10,
+      "errors": [],
+      "scope": "Real Chromium touch, keyboard, layout and storage tests. Wake Lock is an injected lifecycle double; no physical mobile certification.",
+      "geometryCases": 14
     }
   },
   "regressions": [
@@ -79,8 +109,11 @@
       "B — Center stage",
       "C — Quiet control"
     ],
-    "selected": null,
-    "finalVisualIntegration": false
+    "selected": "A — Continuity",
+    "selectedOn": "2026-11-23",
+    "userInstruction": "use A",
+    "finalVisualIntegration": true,
+    "record": "approval.json"
   },
   "publication": {
     "review": "https://gym-bro-design-review.jesse03sousa.chatgpt.site/",
@@ -88,7 +121,9 @@
     "audience": "Existing owner-private Site; native publication receipt is recorded in PR #6.",
     "githubRun": 45001047784,
     "githubBuild": "success",
-    "githubDeploy": "rejected by existing environment protection rules for this exact new branch; verified from the run summary"
+    "githubDeploy": "rejected by existing environment protection rules for this exact new branch; verified from the run summary",
+    "implementation": "https://gym-bro-design-review.jesse03sousa.chatgpt.site/preview/docs/workout-interactions/continuity/",
+    "receipt": "Native publication result and exact Site source SHA are recorded in PR #6."
   },
   "limits": [
     "No main merge.",
