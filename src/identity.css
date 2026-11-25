@@ -1,0 +1,3 @@
+/* Approved D — Aperture. The app keeps the existing Aero type system and palette. */
+html[data-theme] :is(.brand,.welcome-brand){font-family:var(--sans);font-weight:500;letter-spacing:-1.3px}
+html[data-theme] .brand-icon{background:none;border-radius:0;box-shadow:none;object-fit:contain;flex-shrink:0}

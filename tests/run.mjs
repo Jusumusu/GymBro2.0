@@ -25,3 +25,7 @@ import './workout-interactions.test.mjs';
 import './mobile-polish-charts.test.mjs';
 import './mobile-polish-pwa.test.mjs';
 import './mobile-polish-coach.test.mjs';
+import './mobile-polish-identity.test.mjs';
+import './mobile-polish-atlas.test.mjs';
+import './mobile-polish-weekly-design.test.mjs';
+import './mobile-polish-settings-design.test.mjs';

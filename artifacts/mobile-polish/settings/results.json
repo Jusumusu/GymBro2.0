@@ -1,0 +1,101 @@
+{
+  "candidate": {
+    "version": "0.9.0",
+    "build": "d11b7d0a82f0"
+  },
+  "checks": [
+    "Direct Settings route opens the approved seven-category index with all 44 controls retained and one visible panel",
+    "Every category reveals its original fields without remounting inputs or writing to the journal",
+    "Unsaved profile fields, lb increment metadata and multiple exclusions survive category switching and an unrelated appearance save",
+    "Original profile and workout preference controllers save canonical values, retain category/disclosure and preserve all workout records",
+    "Vertical keyboard navigation uses roving focus, hidden fields cannot take focus and returning to Settings remembers the category",
+    "Seven categories fit eight widths in both themes, with no horizontal overflow, 44px targets or data writes from navigation",
+    "Reduced-height input hit geometry, backup/restore tools and safe app updates stay accessible through the existing controls",
+    "The integrated Settings layout reloads offline with the entire saved journal and preferences intact"
+  ],
+  "layouts": [
+    {
+      "theme": "light",
+      "width": 320,
+      "categories": 7
+    },
+    {
+      "theme": "light",
+      "width": 360,
+      "categories": 7
+    },
+    {
+      "theme": "light",
+      "width": 375,
+      "categories": 7
+    },
+    {
+      "theme": "light",
+      "width": 390,
+      "categories": 7
+    },
+    {
+      "theme": "light",
+      "width": 414,
+      "categories": 7
+    },
+    {
+      "theme": "light",
+      "width": 430,
+      "categories": 7
+    },
+    {
+      "theme": "light",
+      "width": 768,
+      "categories": 7
+    },
+    {
+      "theme": "light",
+      "width": 1280,
+      "categories": 7
+    },
+    {
+      "theme": "dark",
+      "width": 320,
+      "categories": 7
+    },
+    {
+      "theme": "dark",
+      "width": 360,
+      "categories": 7
+    },
+    {
+      "theme": "dark",
+      "width": 375,
+      "categories": 7
+    },
+    {
+      "theme": "dark",
+      "width": 390,
+      "categories": 7
+    },
+    {
+      "theme": "dark",
+      "width": 414,
+      "categories": 7
+    },
+    {
+      "theme": "dark",
+      "width": 430,
+      "categories": 7
+    },
+    {
+      "theme": "dark",
+      "width": 768,
+      "categories": 7
+    },
+    {
+      "theme": "dark",
+      "width": 1280,
+      "categories": 7
+    }
+  ],
+  "controls": 44,
+  "errors": [],
+  "scope": "Actual integrated Settings B in Chromium with synthetic records, real form saves, keyboard focus, retained fields, viewport geometry and offline worker. Physical mobile keyboards/WebKit not certified."
+}

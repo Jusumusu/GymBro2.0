@@ -1,0 +1,35 @@
+/* Approved C — Athletic Atlas. Actual weekly contribution levels own the fill;
+   selection remains a separate outline. No global palette or analytics change. */
+.atlas-map{--atlas-body:#edf1f3;--atlas-edge:#becbd3;--atlas-muscle:#e0e7eb;--atlas-muscle-edge:#a3b4bf;--atlas-low:#dae8ef;--atlas-moderate:#aacbdf;--atlas-high:#5f9fc6;--atlas-selected:#115f8f;--atlas-landmark:#7d97a9}
+html[data-theme=dark] .atlas-map{--atlas-body:#27323c;--atlas-edge:#4e6474;--atlas-muscle:#344452;--atlas-muscle-edge:#617989;--atlas-low:#304a5b;--atlas-moderate:#477f9e;--atlas-high:#74b8dd;--atlas-selected:#c1e8ff;--atlas-landmark:#9ab8cb}
+.atlas-layout .atlas-map{display:block;width:min(100%,300px);max-width:100%;height:auto;max-height:none;aspect-ratio:320/680;margin:0 auto 18px;overflow:visible;touch-action:manipulation}
+.atlas-map .atlas-scaffold>.body-outline{fill:var(--atlas-body);stroke:var(--atlas-edge);stroke-width:1.15;stroke-linecap:round;stroke-linejoin:round;vector-effect:non-scaling-stroke}
+.atlas-map .atlas-ground{fill:var(--atlas-landmark);opacity:.1;pointer-events:none}
+.atlas-map .atlas-body-line{fill:none;stroke:var(--atlas-muscle-edge);stroke-width:.85;stroke-linecap:round;stroke-linejoin:round;opacity:.65;pointer-events:none}
+.atlas-map.anatomical-map .muscle-region{fill:var(--atlas-muscle);stroke:var(--atlas-muscle-edge);stroke-width:1.3;stroke-linecap:round;stroke-linejoin:round;vector-effect:non-scaling-stroke;transition:fill 140ms ease,stroke 140ms ease;outline:none}
+.atlas-map.anatomical-map .muscle-region[data-level=none]{fill:var(--atlas-muscle)}
+.atlas-map.anatomical-map .muscle-region[data-level=low]{fill:var(--atlas-low)}
+.atlas-map.anatomical-map .muscle-region[data-level=moderate]{fill:var(--atlas-moderate)}
+.atlas-map.anatomical-map .muscle-region[data-level=high]{fill:var(--atlas-high)}
+.atlas-map.anatomical-map .muscle-region:hover{stroke:var(--atlas-selected);stroke-width:1.8}
+.atlas-map.anatomical-map .muscle-region.selected,.atlas-map.anatomical-map .muscle-region:focus-visible{stroke:var(--atlas-selected);stroke-width:2.3;stroke-dasharray:4 2.5;paint-order:stroke fill}
+.atlas-map .atlas-landmarks{fill:none;stroke:var(--atlas-landmark);stroke-width:.65;opacity:.55;pointer-events:none;stroke-linecap:round;stroke-linejoin:round}
+.atlas-layout .muscle-legend [data-level=none]{background:#e0e7eb}
+.atlas-layout .muscle-legend [data-level=low]{background:#dae8ef}
+.atlas-layout .muscle-legend [data-level=moderate]{background:#aacbdf}
+.atlas-layout .muscle-legend [data-level=high]{background:#5f9fc6}
+html[data-theme=dark] .atlas-layout .muscle-legend [data-level=none]{background:#344452}
+html[data-theme=dark] .atlas-layout .muscle-legend [data-level=low]{background:#304a5b}
+html[data-theme=dark] .atlas-layout .muscle-legend [data-level=moderate]{background:#477f9e}
+html[data-theme=dark] .atlas-layout .muscle-legend [data-level=high]{background:#74b8dd}
+.atlas-layout .selection-key:before{border-color:#115f8f}
+html[data-theme=dark] .atlas-layout .selection-key:before{border-color:#c1e8ff}
+.atlas-layout .muscle-name-selector .chip{min-height:44px}
+@media(min-width:900px){.atlas-layout .atlas-map{width:310px}}
+@media(max-width:430px){.atlas-layout .atlas-map{width:min(100%,268px)}.atlas-layout .anatomy-panel{padding-inline:18px}}
+@media(prefers-reduced-motion:reduce){.atlas-map .muscle-region{transition:none!important}}
+@media(forced-colors:active){.atlas-map .body-outline{fill:Canvas;stroke:GrayText}.atlas-map .muscle-region{fill:Canvas;stroke:GrayText}.atlas-map .muscle-region[data-level=high]{fill:Highlight}.atlas-map .muscle-region.selected{stroke:CanvasText}}
+/* Match the approved C front/back control and remove its legacy green underline. */
+.atlas-layout .map-segments{display:inline-flex;gap:4px;padding:4px;border-radius:13px;background:var(--soft);margin:0 auto 14px}
+.atlas-layout .map-segments button{min-width:82px;min-height:44px;padding:8px 13px;border:0;border-radius:10px;background:transparent;color:var(--muted);box-shadow:none;font-size:12px;font-weight:500}
+.atlas-layout .map-segments button[aria-pressed=true]{background:var(--surface);color:var(--accent);box-shadow:0 2px 7px #00000009;font-weight:550}

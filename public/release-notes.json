@@ -1,10 +1,11 @@
 {
   "version": "0.9.0",
   "notes": [
-    "Development preview: mobile interaction repairs and design studies. Production remains on the approved 0.8.0 release.",
-    "Review three Weekly Check-In layouts, four anatomical muscle maps, five logo concepts and three Settings approaches before selecting visual changes.",
-    "Technical work focuses on chart touch inspection, stable workout completion, consent-controlled updates and mobile alignment.",
-    "Coach is temporarily presented as in development. Existing Coach records, workout history and photos are retained on this device.",
-    "The muscle map, installed logo and approved layouts stay unchanged while the new concepts await your selection."
+    "Development preview: your selected mobile designs are integrated. Production remains on the approved 0.8.0 release.",
+    "Weekly B unifies your real session count, weekly rhythm and working-set statistics, with centered date controls.",
+    "Anatomy C introduces the original Athletic Atlas with selectable front/back muscles and clear trapezius regions, using your existing muscle classifications.",
+    "Identity D brings the Aperture symbol to the header and light/dark app icons. Installed icon refresh timing is controlled by your browser or operating system.",
+    "Settings B replaces the crowded category row with an aligned category index and focused sections, retaining every existing control.",
+    "Chart touch inspection, stable set completion and controlled app updates remain included. Your records, photos, active workout and saved Coach data are preserved."
   ]
 }
