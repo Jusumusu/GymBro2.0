@@ -1,0 +1,8 @@
+PASS chromium: real touch drags in both directions and at the ends keep the entire glass frame fixed across eight layouts without changing the journal
+PASS chromium: auto-follow and selected pill align after distant selection; a full redraw retains manual scroll and fixed glass
+PASS chromium: Focus bar scrolling stays independent of carousel gestures; exercise selection and its glass pill remain aligned
+PASS chromium: accessibility preferences retain a stable readable frame with no decorative animation or browser errors
+PASS ios-css: real touch drags in both directions and at the ends keep the entire glass frame fixed across eight layouts without changing the journal
+PASS ios-css: auto-follow and selected pill align after distant selection; a full redraw retains manual scroll and fixed glass
+PASS ios-css: Focus bar scrolling stays independent of carousel gestures; exercise selection and its glass pill remain aligned
+PASS ios-css: accessibility preferences retain a stable readable frame with no decorative animation or browser errors

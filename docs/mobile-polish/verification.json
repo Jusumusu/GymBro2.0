@@ -1,0 +1,85 @@
+{
+  "branch": "feature/mobile-polish-muscle-map-refresh",
+  "stableMain": "234c6f1ef1226b47a032c69897a9a1ad3b6c7873",
+  "stable": {
+    "version": "0.8.0",
+    "build": "4b0e4c7ae1d1"
+  },
+  "candidate": {
+    "version": "0.9.0",
+    "build": "52573e398570",
+    "environment": "preview",
+    "assets": 79
+  },
+  "unit": 312,
+  "backend": 9,
+  "checks": {
+    "charts": {
+      "passed": 10,
+      "layouts": 16,
+      "errors": [],
+      "evidence": "artifacts/mobile-polish/charts/results.json"
+    },
+    "workout": {
+      "passed": 12,
+      "layouts": 0,
+      "errors": [],
+      "evidence": "artifacts/mobile-polish/workout/results.json"
+    },
+    "pwa": {
+      "passed": 10,
+      "layouts": 0,
+      "errors": [],
+      "evidence": "artifacts/mobile-polish/pwa/results.json"
+    },
+    "layout": {
+      "passed": 5,
+      "layouts": 18,
+      "errors": [],
+      "evidence": "artifacts/mobile-polish/layout/results.json"
+    },
+    "review": {
+      "passed": 6,
+      "layouts": 154,
+      "errors": [],
+      "evidence": "artifacts/mobile-polish/review/results.json"
+    },
+    "muscleReview": {
+      "passed": 7,
+      "layouts": 64,
+      "errors": [],
+      "evidence": "artifacts/mobile-polish/muscle-review/results.json"
+    },
+    "retainedUpdates": {
+      "passed": 14,
+      "layouts": 0,
+      "errors": [],
+      "evidence": "artifacts/mobile-polish/pwa/retained/app-updates/browser-results.json"
+    },
+    "retainedContinuity": {
+      "passed": 9,
+      "layouts": 14,
+      "errors": [],
+      "evidence": "artifacts/mobile-polish/workout/continuity-regression/workout-interactions/continuity/results.json"
+    }
+  },
+  "visualApproval": "Pending per-area selection; actual app muscle map, logo and substantive Weekly/Settings visual treatments remain unchanged.",
+  "publication": {
+    "status": "Prepared for isolated preview; exact native publication receipt is maintained in the draft PR."
+  },
+  "limits": [
+    "Chromium source browser QA and touch/viewport simulation; no physical iPhone/WebKit or Android certification.",
+    "Managed live-Site browser tools unavailable; publication verified through native deployment receipts.",
+    "Review anatomy is educational original vector work, not clinical validation; aggregate Back totals do not measure separate trapezius histories."
+  ],
+  "regressions": [
+    {
+      "suite": "browser-workout-interactions",
+      "exitCode": 0
+    },
+    {
+      "suite": "browser-exercise-bar",
+      "exitCode": 0
+    }
+  ]
+}

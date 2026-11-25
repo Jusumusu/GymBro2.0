@@ -1,0 +1,10 @@
+[
+  {
+    "suite": "browser-workout-interactions",
+    "exitCode": 0
+  },
+  {
+    "suite": "browser-exercise-bar",
+    "exitCode": 0
+  }
+]
