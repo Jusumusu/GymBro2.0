@@ -1,0 +1,21 @@
+/* Repair shared divider geometry without changing Aero colours or type. */
+html[data-theme] .metric-row{grid-template-columns:repeat(4,minmax(0,1fr));grid-auto-rows:1fr;gap:0;padding:0;border:1px solid var(--line)}
+html[data-theme] .metric-row>.metric{padding:22px 25px;border:0;min-width:0}
+html[data-theme] .metric-row>.metric+.metric{border-inline-start:1px solid var(--line)}
+/* Centre the native date value as well as its responsive container. */
+html[data-theme] .review-date input{text-align:center;min-width:0}
+html[data-theme] .review-date input::-webkit-date-and-time-value{text-align:center;min-width:0}
+html[data-theme] .settings-index a{min-height:44px}
+html[data-theme] .settings-group label.toggle{min-height:44px;align-items:center}
+@media(max-width:850px){
+ html[data-theme] .metric-row{grid-template-columns:repeat(2,minmax(0,1fr))}
+ html[data-theme] .metric-row>.metric{padding:18px}
+ html[data-theme] .metric-row>.metric:nth-child(2n+1){border-inline-start:0}
+ html[data-theme] .metric-row>.metric:nth-child(n+3){border-block-start:1px solid var(--line)}
+}
+@media(max-width:650px){
+ html[data-theme] .review-navigation{display:grid;grid-template-columns:minmax(0,1fr);justify-items:stretch;align-items:start;gap:12px}
+ html[data-theme] .review-navigation>.actions{justify-content:center;flex-wrap:wrap}
+ html[data-theme] .review-date{width:100%;min-width:0;max-width:none;align-items:center}
+ html[data-theme] .review-date input{width:100%}
+}

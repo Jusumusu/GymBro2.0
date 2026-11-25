@@ -1,0 +1,28 @@
+{
+  "unit": {
+    "passed": 5,
+    "command": "node --test tests/mobile-polish-pwa.test.mjs"
+  },
+  "targetedBrowser": {
+    "passed": 10,
+    "from": {
+      "version": "0.8.0",
+      "build": "4b0e4c7ae1d1"
+    },
+    "to": {
+      "version": "0.9.0",
+      "build": "5ced3f4c0f7a"
+    },
+    "navigationCounts": {
+      "legacyExplicitReturn": 1,
+      "currentExplicitReturn": 1
+    },
+    "errors": []
+  },
+  "retainedBrowser": {
+    "passed": 14,
+    "command": "tests/browser-app-updates.mjs in isolated fixture cwd",
+    "errors": []
+  },
+  "limitations": "Actual archived published 0.8 production to source-built 0.9 candidate in Chromium; same-version variants are real fixture-only source deltas. Persisted page lifecycle events are dispatched, not physical WebKit BFCache/device certification."
+}

@@ -1,14 +1,14 @@
-name: Deploy isolated workout interactions preview
+name: Deploy isolated mobile polish preview
 on:
   push:
-    branches: [feature/workout-interactions-ux-refinement]
+    branches: [feature/mobile-polish-muscle-map-refresh]
     paths:
       - 'src/**'
       - 'public/**'
       - 'server/**'
       - 'scripts/**'
       - 'tests/**'
-      - 'docs/workout-interactions/**'
+      - 'docs/mobile-polish/**'
       - 'index.html'
       - 'package.json'
       - '.github/workflows/preview.yml'
@@ -22,7 +22,7 @@ concurrency:
   cancel-in-progress: false
 jobs:
   build:
-    if: github.ref == 'refs/heads/feature/workout-interactions-ux-refinement'
+    if: github.ref == 'refs/heads/feature/mobile-polish-muscle-map-refresh'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -58,19 +58,19 @@ jobs:
           const stable=JSON.parse(readFileSync('site/version.json','utf8'));
           const preview=JSON.parse(readFileSync('site/preview/version.json','utf8'));
           appendFileSync(process.env.GITHUB_STEP_SUMMARY,[
-            '## Workout interactions branch preview',
+            '## Mobile polish branch preview',
             `Branch: ${process.env.GITHUB_REF_NAME}; commit: ${process.env.GITHUB_SHA}`,
             `Production root: ${stable.version} (${stable.build}), byte-identical to main.`,
             `Isolated /preview/: ${preview.version} (${preview.build}).`,
             '',
             'Deployment uses the existing protected github-pages environment.',
-            'If GitHub rejects the branch before the deploy job starts, a repository owner must allow feature/workout-interactions-ux-refinement in Settings → Environments → github-pages → Deployment branches and tags.',
-            'Re-running an older workflow run reuses its original commit and branch; use this workout interactions run or dispatch this workflow on the workout interactions branch.',
+            'If GitHub rejects the branch before the deploy job starts, a repository owner must allow feature/mobile-polish-muscle-map-refresh in Settings → Environments → github-pages → Deployment branches and tags.',
+            'Re-running an older workflow run reuses its original commit and branch; use this mobile polish run or dispatch this workflow on the mobile polish branch.',
             '',
           ].join('\n\n'));
           NODE
   deploy:
-    if: github.ref == 'refs/heads/feature/workout-interactions-ux-refinement'
+    if: github.ref == 'refs/heads/feature/mobile-polish-muscle-map-refresh'
     needs: build
     runs-on: ubuntu-latest
     timeout-minutes: 15

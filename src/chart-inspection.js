@@ -55,8 +55,13 @@ export function hydrateInspector(figure){
   if(figure.dataset.variant==='a'){const r=plot.getBoundingClientRect(),w=readout.getBoundingClientRect().width;readout.style.left=Math.max(8,Math.min(r.width-w-8,p.x/640*r.width-w/2))+'px';}
  }
  function point(event){const r=svg.getBoundingClientRect();return nearestPoint(model,(event.clientX-r.left)/r.width*640,(event.clientY-r.top)/r.height*224);}
- function request(event){pending=point(event);if(!frame)frame=requestAnimationFrame(()=>{frame=0;show(pending);});}
- function end(event){if(down&&plot.hasPointerCapture?.(down.id))plot.releasePointerCapture(down.id);down=null;if(event?.type==='pointercancel'){if(frame)cancelAnimationFrame(frame);frame=0;figure.dataset.inspecting='false';guide.setAttribute('hidden','');}}
+ function request(event){pending={clientX:event.clientX,clientY:event.clientY};if(!frame)frame=requestAnimationFrame(()=>{frame=0;show(point(pending));});}
+ function end(event){
+  // Touch starts on an SVG child with implicit capture. Transferring capture to
+  // the plot emits a bubbling child lostpointercapture, not the end of our drag.
+  if(event?.type==='lostpointercapture'&&event.target!==plot)return;
+  const previous=down;down=null;if(previous&&plot.hasPointerCapture?.(previous.id))plot.releasePointerCapture(previous.id);if(event?.type==='pointercancel'){if(frame)cancelAnimationFrame(frame);frame=0;figure.dataset.inspecting='false';guide.setAttribute('hidden','');}
+ }
  plot.addEventListener('pointerdown',event=>{if(!event.isPrimary||event.button>0)return;down={id:event.pointerId,x:event.clientX,y:event.clientY,drag:false};show(point(event));if(event.pointerType==='mouse')plot.focus({preventScroll:true});},events);
  plot.addEventListener('pointermove',event=>{
   if(event.pointerType==='mouse'&&!down){request(event);return;}if(!down||event.pointerId!==down.id)return;
@@ -69,4 +74,10 @@ export function hydrateInspector(figure){
  plot.addEventListener('focus',()=>show(current),events);
  const resize=new ResizeObserver(()=>{if(figure.dataset.inspecting==='true')show(current);});resize.observe(plot);
  const api={model,select:show,destroy(){abort.abort();resize.disconnect();if(frame)cancelAnimationFrame(frame);instances.delete(figure);}};instances.set(figure,api);return api;
+}
+// The app remounts chart markup on route/filter changes; release old observers/listeners.
+export function createChartInspectors(root=document){
+ const active=new Map();
+ function sync(){const figures=new Set(root.querySelectorAll('[data-inspector]'));for(const [figure,api]of active)if(!figures.has(figure)){api.destroy();active.delete(figure);}for(const figure of figures)if(!active.has(figure))active.set(figure,hydrateInspector(figure));}
+ return {sync,stop(){for(const api of active.values())api.destroy();active.clear();}};
 }

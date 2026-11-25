@@ -1,12 +1,10 @@
 {
-  "version": "0.8.0",
+  "version": "0.9.0",
   "notes": [
-    "0.8.0 adds a smoother workout experience, clearer Settings and improved rest-timer controls.",
-    "Focus includes a swipeable exercise carousel, compact navigation and a shared header rest timer. Completed sets use a continuous highlight.",
-    "Settings groups your everyday controls on one page with an expandable training profile.",
-    "The exercise bar keeps its glass frame steady while you scroll. A thin progress line tracks completed required working sets.",
-    "Training Block date and duration fields fit phones. Automatic rest stops when required workout work is finished.",
-    "Optional countdown and completion sounds, vibration and Keep Screen Awake follow your workout preferences and browser capabilities.",
-    "Your saved records, photos and active workout remain on your device. Production and preview journals stay separate."
+    "Development preview: mobile interaction repairs and design studies. Production remains on the approved 0.8.0 release.",
+    "Review three Weekly Check-In layouts, four anatomical muscle maps, five logo concepts and three Settings approaches before selecting visual changes.",
+    "Technical work focuses on chart touch inspection, stable workout completion, consent-controlled updates and mobile alignment.",
+    "Coach is temporarily presented as in development. Existing Coach records, workout history and photos are retained on this device.",
+    "The muscle map, installed logo and approved layouts stay unchanged while the new concepts await your selection."
   ]
 }

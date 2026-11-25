@@ -1,0 +1,113 @@
+{
+  "candidate": {
+    "version": "0.9.0",
+    "build": "4f04ce280f59"
+  },
+  "checks": 12,
+  "cases": [
+    {
+      "name": "ordinary set",
+      "frames": 33,
+      "writes": 1,
+      "rowRange": 0,
+      "oldCardRetained": true,
+      "verticalAnimations": 0
+    },
+    {
+      "name": "final exercise set 320",
+      "frames": 31,
+      "writes": 1,
+      "rowRange": 0.5,
+      "oldCardRetained": true,
+      "verticalAnimations": 0
+    },
+    {
+      "name": "final exercise set 390",
+      "frames": 31,
+      "writes": 1,
+      "rowRange": 0.5,
+      "oldCardRetained": true,
+      "verticalAnimations": 0
+    },
+    {
+      "name": "final exercise set 430",
+      "frames": 31,
+      "writes": 1,
+      "rowRange": 0.5,
+      "oldCardRetained": true,
+      "verticalAnimations": 0
+    },
+    {
+      "name": "final workout set",
+      "frames": 31,
+      "writes": 1,
+      "rowRange": 0.28125,
+      "oldCardRetained": true,
+      "verticalAnimations": 0
+    },
+    {
+      "name": "out-of-order exercise",
+      "frames": 31,
+      "writes": 1,
+      "rowRange": 0.5,
+      "oldCardRetained": true,
+      "verticalAnimations": 0
+    },
+    {
+      "name": "superset handoff",
+      "frames": 31,
+      "writes": 1,
+      "rowRange": 0,
+      "oldCardRetained": true,
+      "verticalAnimations": 0
+    },
+    {
+      "name": "reopened completed set",
+      "frames": 31,
+      "writes": 1,
+      "rowRange": 0.5,
+      "oldCardRetained": true,
+      "verticalAnimations": 0
+    },
+    {
+      "name": "rapid repeated tap",
+      "frames": 27,
+      "writes": 1,
+      "rowRange": 0,
+      "oldCardRetained": true,
+      "verticalAnimations": 0
+    },
+    {
+      "name": "Focus timer appearance 320",
+      "frames": 31,
+      "writes": 1,
+      "rowRange": 0,
+      "oldCardRetained": false,
+      "firstInputTop": 341.625,
+      "firstAnimatedInputTop": 341.625,
+      "finalInputTop": 457.625,
+      "verticalAnimations": 1
+    },
+    {
+      "name": "Focus timer appearance 390",
+      "frames": 31,
+      "writes": 1,
+      "rowRange": 0,
+      "oldCardRetained": false,
+      "firstInputTop": 342.078125,
+      "firstAnimatedInputTop": 342.078125,
+      "finalInputTop": 420.078125,
+      "verticalAnimations": 1
+    },
+    {
+      "name": "Reduced Motion Focus",
+      "frames": 31,
+      "writes": 1,
+      "rowRange": 0,
+      "oldCardRetained": false,
+      "firstInputTop": 342.078125,
+      "finalInputTop": 420.078125,
+      "verticalAnimations": 0
+    }
+  ]
+}

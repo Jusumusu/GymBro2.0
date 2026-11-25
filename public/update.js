@@ -1,6 +1,6 @@
 // Uncached recovery entry point: stage the complete release before activation.
 const button=document.querySelector('#update'),status=document.querySelector('#status');
-let updating=false;
+let updating=false,interaction=0;
 const base=new URL('./',location.href),environment=base.pathname.split('/').includes('preview')?'preview':'production';
 const channelLabel=document.querySelector('.eyebrow');if(channelLabel)channelLabel.textContent=environment==='preview'?'PREVIEW APP UPDATE':'APP UPDATE';
 const writerLock=environment==='preview'?'gymbro-preview-writer':'gymbro-writer';
@@ -51,7 +51,7 @@ async function refreshApp(){
  }catch(error){if(navigator.onLine===false||error.name==='TypeError')throw Error('Connect to the internet and try again. Your saved data and offline files are unchanged.');throw error;}
 }
 button.addEventListener('click',async()=>{
- if(updating)return;updating=true;button.disabled=true;
+ if(updating)return;updating=true;interaction++;button.disabled=true;
  try{
   if(navigator.locks)await navigator.locks.request(writerLock,{ifAvailable:true},async lock=>{if(!lock)throw Error('Another Gym Bro window is still open. Close it, then click Update again here.');await refreshApp();});
   else await refreshApp();
@@ -65,17 +65,27 @@ function showRelease(release){
  for(const text of (release.notes||['The latest published Gym Bro release.']).slice(0,12)){const li=document.createElement('li');li.textContent=String(text).slice(0,300);list.append(li);}
 }
 async function describeRelease(){
+ const startedInteraction=interaction;
  try{
-  const release=await latestRelease();if(updating)return;showRelease(release);
+  const release=await latestRelease();if(updating||startedInteraction!==interaction)return;showRelease(release);
   if(!window.isSecureContext||!('serviceWorker'in navigator)){status.textContent='Offline app updates are unavailable in this browser. Open the HTTPS app in a supported browser; release information remains readable here.';button.textContent='Offline updates unavailable';button.disabled=true;return;}
   const registration=await navigator.serviceWorker.getRegistration(base.href);
   const info=registration?.scope===base.href&&registration.active?await message(registration.active,{type:'GET_BUILD_INFO'}).catch(()=>null):null;
-  if(updating)return;
+  if(updating||startedInteraction!==interaction)return;
   const current=info?.build===release.build&&info?.environment===environment;
   status.textContent=current?'You’re running the latest version. You can refresh its verified offline files below.':'A published version is available. Read the notes and choose when to update.';
   button.textContent=current?'Refresh current version':'Update Now';
- }catch(error){if(updating)return;status.textContent=navigator.onLine===false||error.name==='TypeError'?'You’re offline. Your saved app and workouts are kept. Reconnect to check the latest version.':error.message;document.querySelector('#release-version').textContent='Version check unavailable';}
+ }catch(error){if(updating||startedInteraction!==interaction)return;status.textContent=navigator.onLine===false||error.name==='TypeError'?'You’re offline. Your saved app and workouts are kept. Reconnect to check the latest version.':error.message;document.querySelector('#release-version').textContent='Version check unavailable';}
 }
-// Only the new notice's explicit Update Now action carries this install intent.
-if(new URL(location.href).searchParams.get('intent')==='apply')button.click();
-else describeRelease();
+// Consume fresh, tab-local consent before doing any work. Reloading, history,
+// bookmarks and old ?intent=apply links must never replay an installation.
+function consumeUpdateIntent(){
+ const url=new URL(location.href),token=url.searchParams.get('intent');if(!token)return false;
+ url.searchParams.delete('intent');history.replaceState(history.state,'',url.href);
+ try{
+  const key='gymbro-update-intent:'+base.href,raw=sessionStorage.getItem(key);sessionStorage.removeItem(key);
+  const intent=JSON.parse(raw),age=Date.now()-intent?.at;
+  return token!=='apply'&&intent?.token===token&&intent.environment===environment&&Number.isFinite(age)&&age>=0&&age<60000;
+ }catch{return false;}
+}
+if(consumeUpdateIntent())button.click();else describeRelease();

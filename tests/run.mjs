@@ -22,3 +22,6 @@ import './weekly-update.test.mjs';
 
 import './liquid-glass.test.mjs';
 import './workout-interactions.test.mjs';
+import './mobile-polish-charts.test.mjs';
+import './mobile-polish-pwa.test.mjs';
+import './mobile-polish-coach.test.mjs';

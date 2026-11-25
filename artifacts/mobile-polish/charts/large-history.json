@@ -1,0 +1,19 @@
+{
+  "samples": [
+    {
+      "name": "released",
+      "records": 50000,
+      "circles": 50000,
+      "bytes": 10180664,
+      "renderMs": 742.82
+    },
+    {
+      "name": "candidate",
+      "records": 50000,
+      "circles": 641,
+      "bytes": 1758102,
+      "renderMs": 181.34
+    }
+  ],
+  "scope": "Local Node string-render observation on synthetic50000-point histories, not a physical-phone benchmark. Candidate retains every exact model record and bounds SVG drawing via existing min/max buckets."
+}
