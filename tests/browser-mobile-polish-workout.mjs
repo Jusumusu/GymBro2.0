@@ -6,7 +6,7 @@ import {browser,sleep} from './helpers/mobile-browser.mjs';
 import {refinementFixture} from './fixtures/refinement.mjs';
 import {makeDraft} from '../src/planner.js';
 import {activeSet} from '../src/active-workout.js';
-const work=path.resolve('work/mobile-polish/workout'),out='artifacts/mobile-polish/workout',checks=[],cases=[];
+const work=path.resolve('work/mobile-polish/workout'),out=process.env.GYMBRO_WORKOUT_ARTIFACTS||'artifacts/mobile-polish/workout',checks=[],cases=[];
 await mkdir(work,{recursive:true});await mkdir(out,{recursive:true});
 const run=(cmd,args,cwd=process.cwd())=>{const r=spawnSync(cmd,args,{cwd,encoding:'utf8'});assert.equal(r.status,0,r.stderr);};
 let root=process.env.GYMBRO_WORKOUT_TEST_ROOT;

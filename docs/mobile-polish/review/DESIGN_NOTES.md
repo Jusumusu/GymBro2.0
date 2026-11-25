@@ -1,6 +1,6 @@
 # Gym Bro — Mobile design review
 
-These are proposals awaiting explicit selection. No concept selection in this gallery changes the app, installs branding, records approval or opens a journal database. The working preview retains the approved Aero identity while independent functional repairs proceed.
+Historical design review: the user selected Weekly B, Anatomy C, Identity D and Settings B on November 25, 2026. The actual integrated app is documented at ../implementation/. The remaining studies are unselected alternatives. No concept selection in this gallery changes the app, installs branding, records approval or opens a journal database. The working preview retains the approved Aero identity while independent functional repairs proceed.
 
 The unified gallery is `index.html`. Each standalone interactive study is `screen.html?area=weekly|settings|logo&concept=a&theme=light|dark`. The anatomy area links `../muscle-map/` and its matched front/back comparison sheets.
 

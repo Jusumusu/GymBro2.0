@@ -19,12 +19,16 @@ Aero styling layers existing layout CSS, design tokens, design-system rules, liq
 | Weekly date | Responsive action/date wrapping and native value alignment did not share one centred mobile structure. | A single-column mobile control group and centred native value replace uneven wrapping; calendar math and existing statistics are unchanged. The proposed visual layouts await selection. |
 | Coach | The user explicitly set aside the visible unfinished experience. | Existing-style In Development view exposes no unfinished actions. Legacy rendering/controllers and all saved Coach fields remain. |
 
-## Design boundary
+## Original design boundary before approval
 
-The real app retains the current muscle map, installed logo, Weekly statistics treatment and A — Continuity Settings composition. New significant visual directions are isolated studies: three Weekly, four anatomical maps, five logo identities and three Settings approaches. They use matched fictional data; clicking a shortlist is not approval. Original SVGs do not introduce unlicensed artwork or new historical muscle categories. Trapezius already exists under canonical Back in the app; the studies improve its shape/subregions without pretending aggregate Back totals measure separate trap histories.
+Before approval, the real app retained its then-current muscle map, installed logo, Weekly statistics treatment and A — Continuity Settings composition. New significant visual directions are isolated studies: three Weekly, four anatomical maps, five logo identities and three Settings approaches. They use matched fictional data; clicking a shortlist is not approval. Original SVGs do not introduce unlicensed artwork or new historical muscle categories. Trapezius already exists under canonical Back in the app; the studies improve its shape/subregions without pretending aggregate Back totals measure separate trap histories.
 
 ## Mobile/performance evidence
 
 Actual touch and animation-frame checks target the reported failures. Horizontal chart inspection is frame-coalesced; large-history drawing retains all 50,000 inspection records while reducing SVG circles from 50,000 to 641 and generated markup from about 10.18 MB to 1.76 MB in a local synthetic observation. Workout completion retains mounted cards and inputs rather than reconstructing them. No heavy charting or 3D runtime was added.
 
 Eleven screens were inspected at nine widths in both themes; plan/block dialogs at seven widths; reduced keyboard-height Focus inputs remain hit-testable. The gallery covers seven widths, anatomy eight, and chart readouts eight. Source browser QA uses fresh Chromium profiles and synthetic records; it does not certify physical iPhone/WebKit, Android or installed Home Screen behavior. Root production files remain byte-identical in the composed preview build. No real personal exports or photos are used.
+
+## Approved integration
+
+The subsequent explicit selection was Weekly B, Anatomy C, Identity D and Settings B. Those designs are integrated without changing the authoritative record/calculation/storage contracts. See approval.json, STATUS.md and the four implementation notes for current behavior.

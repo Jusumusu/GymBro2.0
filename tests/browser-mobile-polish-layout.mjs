@@ -3,7 +3,7 @@ import {mkdir,readFile,writeFile} from 'node:fs/promises';
 import {browser,sleep} from './helpers/mobile-browser.mjs';
 import {refinementFixture} from './fixtures/refinement.mjs';
 import {makeDraft} from '../src/planner.js';
-const out='artifacts/mobile-polish/layout';await mkdir(out,{recursive:true});const b=await browser({root:'review-site',port:5329,debug:9399}),checks=[],layouts=[];
+const out=process.env.GYMBRO_LAYOUT_ARTIFACTS||'artifacts/mobile-polish/layout';await mkdir(out,{recursive:true});const b=await browser({root:'review-site',port:5329,debug:9399}),checks=[],layouts=[];
 const pass=name=>{checks.push(name);console.log('PASS '+name);};
 try{
  await b.cdp('Emulation.setTimezoneOverride',{timezoneId:'Asia/Jerusalem'});await b.navigate('/preview/');await b.until('document.querySelector("#onboard-form")');await b.submit('#onboard-form');const date=await b.js('new Date().toLocaleDateString("en-CA")'),s=refinementFixture(date);s.photos=[];s.upgrade.coach.messages=[{id:'saved',role:'user',text:'Synthetic retained coaching question',at:1,mode:'local'}];s.upgrade.coach.memory=[{id:'saved-memory',text:'Synthetic saved preference',source:'explicit'}];s.draft=makeDraft(s.plans[0],date);for(const e of s.draft.exercises)for(const row of e.entries)Object.assign(row,{kg:40,reps:10,rir:2});await b.js(`(async()=>await(await import('./src/storage.js')).saveState(${JSON.stringify(s)}))()`);await b.reload('document.querySelector(".sidebar")');const initial=await b.data();

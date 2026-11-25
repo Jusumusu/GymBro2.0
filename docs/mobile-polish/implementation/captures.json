@@ -1,0 +1,62 @@
+{
+  "captures": [
+    {
+      "area": "identity",
+      "theme": "light",
+      "width": 390,
+      "height": 950,
+      "file": "identity-light.png"
+    },
+    {
+      "area": "weekly",
+      "theme": "light",
+      "width": 390,
+      "height": 950,
+      "file": "weekly-light.png"
+    },
+    {
+      "area": "anatomy",
+      "theme": "light",
+      "width": 390,
+      "height": 950,
+      "file": "anatomy-light.png"
+    },
+    {
+      "area": "settings",
+      "theme": "light",
+      "width": 390,
+      "height": 950,
+      "file": "settings-light.png"
+    },
+    {
+      "area": "identity",
+      "theme": "dark",
+      "width": 390,
+      "height": 950,
+      "file": "identity-dark.png"
+    },
+    {
+      "area": "weekly",
+      "theme": "dark",
+      "width": 390,
+      "height": 950,
+      "file": "weekly-dark.png"
+    },
+    {
+      "area": "anatomy",
+      "theme": "dark",
+      "width": 390,
+      "height": 950,
+      "file": "anatomy-dark.png"
+    },
+    {
+      "area": "settings",
+      "theme": "dark",
+      "width": 390,
+      "height": 950,
+      "file": "settings-dark.png"
+    }
+  ],
+  "errors": [],
+  "scope": "Actual integrated 0.9 app in Chromium with synthetic saved history and active workout; physical phone not certified."
+}

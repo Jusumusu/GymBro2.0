@@ -2,7 +2,7 @@ import assert from 'node:assert/strict';
 import {mkdir,writeFile} from 'node:fs/promises';
 import {browser,sleep} from './helpers/mobile-browser.mjs';
 import {refinementFixture} from './fixtures/refinement.mjs';
-const root=process.env.GYMBRO_CHART_ROOT||'review-site',baseline=process.env.GYMBRO_CHART_BASELINE==='1',out='artifacts/mobile-polish/charts';await mkdir(out,{recursive:true});
+const root=process.env.GYMBRO_CHART_ROOT||'review-site',baseline=process.env.GYMBRO_CHART_BASELINE==='1',out=process.env.GYMBRO_CHART_ARTIFACTS||'artifacts/mobile-polish/charts';await mkdir(out,{recursive:true});
 const b=await browser({root,port:5326,debug:9396}),checks=[],layouts=[],selections=[],pass=name=>{checks.push(name);console.log('PASS '+name);};
 const state=refinementFixture('2026-11-25');state.photos=[];state.weights=[{date:'2026-10-30',kg:71.25},{date:'2026-11-07',kg:70.875},{date:'2026-11-24',kg:70.125}];state.measurements=[{date:'2026-10-25',name:'Waist',cm:84.125},{date:'2026-11-12',name:'Waist',cm:83.875},{date:'2026-11-25',name:'Waist',cm:83.5}];
 const source=selector=>b.js(`JSON.parse(document.querySelector(${JSON.stringify(selector)}).querySelector('[data-chart-model]').content.textContent).input`);

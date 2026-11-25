@@ -1,0 +1,832 @@
+{
+  "checks": [
+    "Real horizontal touch drag tracks exact saved weights/dates continuously, including sparse dates and both chart edges",
+    "Measurement chart uses the same drag inspector with exact saved fractional values and correct units",
+    "Live tooltip remains readable and within the viewport across eight widths in light/dark mode without horizontal drag scrolling the page",
+    "Pound/inch preferences are honored using actual stored kilogram/centimeter values",
+    "Vertical finger motion over the chart still scrolls the page; horizontal inspection does not globally suppress scrolling",
+    "Mouse hover and keyboard Home/End/arrow inspection expose the same exact recorded data accessibly",
+    "Actual Gains strength, workload, frequency, repetition and recorded-load charts are hydrated, including lazily inserted analytics",
+    "Selected-muscle weekly history also uses the same live recorded-point inspector",
+    "Same-date series can be individually inspected by vertical proximity with explicit series labels and unrounded values",
+    "Pointer, keyboard, filtering and route changes preserve all source records without browser exceptions"
+  ],
+  "layouts": [
+    {
+      "theme": "light",
+      "width": 320,
+      "left": 47,
+      "right": 273,
+      "top": 241.828125,
+      "bottom": 305.828125
+    },
+    {
+      "theme": "light",
+      "width": 360,
+      "left": 67,
+      "right": 307,
+      "top": 255.546875,
+      "bottom": 319.546875
+    },
+    {
+      "theme": "light",
+      "width": 375,
+      "left": 82,
+      "right": 322,
+      "top": 256.359375,
+      "bottom": 320.359375
+    },
+    {
+      "theme": "light",
+      "width": 390,
+      "left": 97,
+      "right": 337,
+      "top": 256.359375,
+      "bottom": 320.359375
+    },
+    {
+      "theme": "light",
+      "width": 414,
+      "left": 121,
+      "right": 361,
+      "top": 255.359375,
+      "bottom": 319.359375
+    },
+    {
+      "theme": "light",
+      "width": 430,
+      "left": 137,
+      "right": 377,
+      "top": 252.359375,
+      "bottom": 316.359375
+    },
+    {
+      "theme": "light",
+      "width": 768,
+      "left": 450,
+      "right": 690,
+      "top": 227.875,
+      "bottom": 291.875
+    },
+    {
+      "theme": "light",
+      "width": 1024,
+      "left": 706,
+      "right": 946,
+      "top": 183.09375,
+      "bottom": 247.09375
+    },
+    {
+      "theme": "dark",
+      "width": 320,
+      "left": 47,
+      "right": 273,
+      "top": 241.828125,
+      "bottom": 305.828125
+    },
+    {
+      "theme": "dark",
+      "width": 360,
+      "left": 67,
+      "right": 307,
+      "top": 255.546875,
+      "bottom": 319.546875
+    },
+    {
+      "theme": "dark",
+      "width": 375,
+      "left": 82,
+      "right": 322,
+      "top": 256.359375,
+      "bottom": 320.359375
+    },
+    {
+      "theme": "dark",
+      "width": 390,
+      "left": 97,
+      "right": 337,
+      "top": 256.359375,
+      "bottom": 320.359375
+    },
+    {
+      "theme": "dark",
+      "width": 414,
+      "left": 121,
+      "right": 361,
+      "top": 255.359375,
+      "bottom": 319.359375
+    },
+    {
+      "theme": "dark",
+      "width": 430,
+      "left": 137,
+      "right": 377,
+      "top": 252.359375,
+      "bottom": 316.359375
+    },
+    {
+      "theme": "dark",
+      "width": 768,
+      "left": 450,
+      "right": 690,
+      "top": 227.875,
+      "bottom": 291.875
+    },
+    {
+      "theme": "dark",
+      "width": 1024,
+      "left": 706,
+      "right": 946,
+      "top": 183.09375,
+      "bottom": 247.09375
+    }
+  ],
+  "selections": [
+    {
+      "selector": ".analytics-grid>section:first-child .chart",
+      "records": [
+        {
+          "date": "2026-10-30",
+          "value": "71.25 kg",
+          "series": "Recorded body weight",
+          "now": "1"
+        },
+        {
+          "date": "2026-10-30",
+          "value": "71.25 kg",
+          "series": "Recorded body weight",
+          "now": "1"
+        },
+        {
+          "date": "2026-11-07",
+          "value": "70.875 kg",
+          "series": "Recorded body weight",
+          "now": "2"
+        },
+        {
+          "date": "2026-11-07",
+          "value": "70.875 kg",
+          "series": "Recorded body weight",
+          "now": "2"
+        },
+        {
+          "date": "2026-11-07",
+          "value": "70.875 kg",
+          "series": "Recorded body weight",
+          "now": "2"
+        },
+        {
+          "date": "2026-11-07",
+          "value": "70.875 kg",
+          "series": "Recorded body weight",
+          "now": "2"
+        },
+        {
+          "date": "2026-11-24",
+          "value": "70.125 kg",
+          "series": "Recorded body weight",
+          "now": "3"
+        },
+        {
+          "date": "2026-11-24",
+          "value": "70.125 kg",
+          "series": "Recorded body weight",
+          "now": "3"
+        },
+        {
+          "date": "2026-11-24",
+          "value": "70.125 kg",
+          "series": "Recorded body weight",
+          "now": "3"
+        },
+        {
+          "date": "2026-11-24",
+          "value": "70.125 kg",
+          "series": "Recorded body weight",
+          "now": "3"
+        }
+      ],
+      "geometry": {
+        "left": 97,
+        "right": 337,
+        "top": 282.359375,
+        "bottom": 346.359375,
+        "scroll": 480,
+        "viewport": 390,
+        "height": 900,
+        "opacity": "1",
+        "overflow": false
+      }
+    },
+    {
+      "selector": ".analytics-grid>section:nth-child(2) .chart",
+      "records": [
+        {
+          "date": "2026-10-25",
+          "value": "84.125 cm",
+          "series": "Waist",
+          "now": "1"
+        },
+        {
+          "date": "2026-10-25",
+          "value": "84.125 cm",
+          "series": "Waist",
+          "now": "1"
+        },
+        {
+          "date": "2026-10-25",
+          "value": "84.125 cm",
+          "series": "Waist",
+          "now": "1"
+        },
+        {
+          "date": "2026-11-12",
+          "value": "83.875 cm",
+          "series": "Waist",
+          "now": "2"
+        },
+        {
+          "date": "2026-11-12",
+          "value": "83.875 cm",
+          "series": "Waist",
+          "now": "2"
+        },
+        {
+          "date": "2026-11-12",
+          "value": "83.875 cm",
+          "series": "Waist",
+          "now": "2"
+        },
+        {
+          "date": "2026-11-12",
+          "value": "83.875 cm",
+          "series": "Waist",
+          "now": "2"
+        },
+        {
+          "date": "2026-11-12",
+          "value": "83.875 cm",
+          "series": "Waist",
+          "now": "2"
+        },
+        {
+          "date": "2026-11-25",
+          "value": "83.5 cm",
+          "series": "Waist",
+          "now": "3"
+        },
+        {
+          "date": "2026-11-25",
+          "value": "83.5 cm",
+          "series": "Waist",
+          "now": "3"
+        }
+      ],
+      "geometry": {
+        "left": 97,
+        "right": 337,
+        "top": 284.359375,
+        "bottom": 348.359375,
+        "scroll": 1168,
+        "viewport": 390,
+        "height": 900,
+        "opacity": "1",
+        "overflow": false
+      }
+    },
+    {
+      "selector": "#main .chart[data-chart-test=\"0\"]",
+      "records": [
+        {
+          "date": "2026-11-02",
+          "value": "52.910942924370616 lb",
+          "series": "Barbell bench press · Epley estimated 1RM",
+          "now": "1"
+        },
+        {
+          "date": "2026-11-04",
+          "value": "52.910942924370616 lb",
+          "series": "Barbell bench press · Epley estimated 1RM",
+          "now": "2"
+        },
+        {
+          "date": "2026-11-06",
+          "value": "52.910942924370616 lb",
+          "series": "Barbell bench press · Epley estimated 1RM",
+          "now": "3"
+        },
+        {
+          "date": "2026-11-09",
+          "value": "52.910942924370616 lb",
+          "series": "Barbell bench press · Epley estimated 1RM",
+          "now": "4"
+        },
+        {
+          "date": "2026-11-13",
+          "value": "54.38069133893647 lb",
+          "series": "Barbell bench press · Epley estimated 1RM",
+          "now": "6"
+        },
+        {
+          "date": "2026-11-16",
+          "value": "52.910942924370616 lb",
+          "series": "Barbell bench press · Epley estimated 1RM",
+          "now": "7"
+        },
+        {
+          "date": "2026-11-18",
+          "value": "54.38069133893647 lb",
+          "series": "Barbell bench press · Epley estimated 1RM",
+          "now": "8"
+        },
+        {
+          "date": "2026-11-20",
+          "value": "55.850439753502314 lb",
+          "series": "Barbell bench press · Epley estimated 1RM",
+          "now": "9"
+        },
+        {
+          "date": "2026-11-23",
+          "value": "54.38069133893647 lb",
+          "series": "Barbell bench press · Epley estimated 1RM",
+          "now": "10"
+        },
+        {
+          "date": "2026-11-25",
+          "value": "55.850439753502314 lb",
+          "series": "Barbell bench press · Epley estimated 1RM",
+          "now": "11"
+        }
+      ],
+      "geometry": {
+        "left": 97,
+        "right": 337,
+        "top": 247.640625,
+        "bottom": 311.640625,
+        "scroll": 500,
+        "viewport": 390,
+        "height": 844,
+        "opacity": "1",
+        "overflow": false
+      }
+    },
+    {
+      "selector": "#main .chart[data-chart-test=\"1\"]",
+      "records": [
+        {
+          "date": "2026-10-05",
+          "value": "0 lb × reps",
+          "series": "Weekly logged load × reps",
+          "now": "1"
+        },
+        {
+          "date": "2026-10-12",
+          "value": "0 lb × reps",
+          "series": "Weekly logged load × reps",
+          "now": "2"
+        },
+        {
+          "date": "2026-10-19",
+          "value": "0 lb × reps",
+          "series": "Weekly logged load × reps",
+          "now": "3"
+        },
+        {
+          "date": "2026-10-19",
+          "value": "0 lb × reps",
+          "series": "Weekly logged load × reps",
+          "now": "3"
+        },
+        {
+          "date": "2026-10-26",
+          "value": "0 lb × reps",
+          "series": "Weekly logged load × reps",
+          "now": "4"
+        },
+        {
+          "date": "2026-11-02",
+          "value": "9523.969726386711 lb × reps",
+          "series": "Weekly logged load × reps",
+          "now": "5"
+        },
+        {
+          "date": "2026-11-09",
+          "value": "10053.079155630418 lb × reps",
+          "series": "Weekly logged load × reps",
+          "now": "6"
+        },
+        {
+          "date": "2026-11-09",
+          "value": "10053.079155630418 lb × reps",
+          "series": "Weekly logged load × reps",
+          "now": "6"
+        },
+        {
+          "date": "2026-11-16",
+          "value": "11111.298014117829 lb × reps",
+          "series": "Weekly logged load × reps",
+          "now": "7"
+        },
+        {
+          "date": "2026-11-23",
+          "value": "12698.626301848948 lb × reps",
+          "series": "Weekly logged load × reps",
+          "now": "8"
+        }
+      ],
+      "geometry": {
+        "left": 97,
+        "right": 337,
+        "top": 251.3125,
+        "bottom": 315.3125,
+        "scroll": 1630,
+        "viewport": 390,
+        "height": 844,
+        "opacity": "1",
+        "overflow": false
+      }
+    },
+    {
+      "selector": "#main .chart[data-chart-test=\"2\"]",
+      "records": [
+        {
+          "date": "2026-10-05",
+          "value": "0 sessions",
+          "series": "Completed sessions per week",
+          "now": "1"
+        },
+        {
+          "date": "2026-10-12",
+          "value": "0 sessions",
+          "series": "Completed sessions per week",
+          "now": "2"
+        },
+        {
+          "date": "2026-10-19",
+          "value": "0 sessions",
+          "series": "Completed sessions per week",
+          "now": "3"
+        },
+        {
+          "date": "2026-10-19",
+          "value": "0 sessions",
+          "series": "Completed sessions per week",
+          "now": "3"
+        },
+        {
+          "date": "2026-10-26",
+          "value": "0 sessions",
+          "series": "Completed sessions per week",
+          "now": "4"
+        },
+        {
+          "date": "2026-11-02",
+          "value": "3 sessions",
+          "series": "Completed sessions per week",
+          "now": "5"
+        },
+        {
+          "date": "2026-11-09",
+          "value": "3 sessions",
+          "series": "Completed sessions per week",
+          "now": "6"
+        },
+        {
+          "date": "2026-11-09",
+          "value": "3 sessions",
+          "series": "Completed sessions per week",
+          "now": "6"
+        },
+        {
+          "date": "2026-11-16",
+          "value": "3 sessions",
+          "series": "Completed sessions per week",
+          "now": "7"
+        },
+        {
+          "date": "2026-11-23",
+          "value": "3 sessions",
+          "series": "Completed sessions per week",
+          "now": "8"
+        }
+      ],
+      "geometry": {
+        "left": 97,
+        "right": 337,
+        "top": 250.90625,
+        "bottom": 314.90625,
+        "scroll": 1932,
+        "viewport": 390,
+        "height": 844,
+        "opacity": "1",
+        "overflow": false
+      }
+    },
+    {
+      "selector": "#main .chart[data-chart-test=\"3\"]",
+      "records": [
+        {
+          "date": "2026-11-02",
+          "value": "18 reps",
+          "series": "Total working reps per exposure",
+          "now": "1"
+        },
+        {
+          "date": "2026-11-04",
+          "value": "18 reps",
+          "series": "Total working reps per exposure",
+          "now": "2"
+        },
+        {
+          "date": "2026-11-06",
+          "value": "18 reps",
+          "series": "Total working reps per exposure",
+          "now": "3"
+        },
+        {
+          "date": "2026-11-09",
+          "value": "18 reps",
+          "series": "Total working reps per exposure",
+          "now": "4"
+        },
+        {
+          "date": "2026-11-13",
+          "value": "21 reps",
+          "series": "Total working reps per exposure",
+          "now": "6"
+        },
+        {
+          "date": "2026-11-16",
+          "value": "18 reps",
+          "series": "Total working reps per exposure",
+          "now": "7"
+        },
+        {
+          "date": "2026-11-18",
+          "value": "21 reps",
+          "series": "Total working reps per exposure",
+          "now": "8"
+        },
+        {
+          "date": "2026-11-20",
+          "value": "24 reps",
+          "series": "Total working reps per exposure",
+          "now": "9"
+        },
+        {
+          "date": "2026-11-23",
+          "value": "21 reps",
+          "series": "Total working reps per exposure",
+          "now": "10"
+        },
+        {
+          "date": "2026-11-25",
+          "value": "24 reps",
+          "series": "Total working reps per exposure",
+          "now": "11"
+        }
+      ],
+      "geometry": {
+        "left": 97,
+        "right": 337,
+        "top": 250.5,
+        "bottom": 314.5,
+        "scroll": 2234,
+        "viewport": 390,
+        "height": 844,
+        "opacity": "1",
+        "overflow": false
+      }
+    },
+    {
+      "selector": "#main .chart[data-chart-test=\"4\"]",
+      "records": [
+        {
+          "date": "2026-11-02",
+          "value": "44.09245243697551 lb",
+          "series": "Highest recorded working-set load",
+          "now": "1"
+        },
+        {
+          "date": "2026-11-04",
+          "value": "44.09245243697551 lb",
+          "series": "Highest recorded working-set load",
+          "now": "2"
+        },
+        {
+          "date": "2026-11-06",
+          "value": "44.09245243697551 lb",
+          "series": "Highest recorded working-set load",
+          "now": "3"
+        },
+        {
+          "date": "2026-11-09",
+          "value": "44.09245243697551 lb",
+          "series": "Highest recorded working-set load",
+          "now": "4"
+        },
+        {
+          "date": "2026-11-13",
+          "value": "44.09245243697551 lb",
+          "series": "Highest recorded working-set load",
+          "now": "6"
+        },
+        {
+          "date": "2026-11-16",
+          "value": "44.09245243697551 lb",
+          "series": "Highest recorded working-set load",
+          "now": "7"
+        },
+        {
+          "date": "2026-11-18",
+          "value": "44.09245243697551 lb",
+          "series": "Highest recorded working-set load",
+          "now": "8"
+        },
+        {
+          "date": "2026-11-20",
+          "value": "44.09245243697551 lb",
+          "series": "Highest recorded working-set load",
+          "now": "9"
+        },
+        {
+          "date": "2026-11-23",
+          "value": "44.09245243697551 lb",
+          "series": "Highest recorded working-set load",
+          "now": "10"
+        },
+        {
+          "date": "2026-11-25",
+          "value": "44.09245243697551 lb",
+          "series": "Highest recorded working-set load",
+          "now": "11"
+        }
+      ],
+      "geometry": {
+        "left": 97,
+        "right": 337,
+        "top": 251.09375,
+        "bottom": 315.09375,
+        "scroll": 2535,
+        "viewport": 390,
+        "height": 844,
+        "opacity": "1",
+        "overflow": false
+      }
+    },
+    {
+      "selector": "#main .chart[data-chart-test=\"5\"]",
+      "records": [
+        {
+          "date": "2026-10-19",
+          "value": "0 lb × reps",
+          "series": "Weekly recorded workload · week beginning",
+          "now": "1"
+        },
+        {
+          "date": "2026-10-26",
+          "value": "0 lb × reps",
+          "series": "Weekly recorded workload · week beginning",
+          "now": "2"
+        },
+        {
+          "date": "2026-10-26",
+          "value": "0 lb × reps",
+          "series": "Weekly recorded workload · week beginning",
+          "now": "2"
+        },
+        {
+          "date": "2026-11-02",
+          "value": "9523.969726386711 lb × reps",
+          "series": "Weekly recorded workload · week beginning",
+          "now": "3"
+        },
+        {
+          "date": "2026-11-02",
+          "value": "9523.969726386711 lb × reps",
+          "series": "Weekly recorded workload · week beginning",
+          "now": "3"
+        },
+        {
+          "date": "2026-11-09",
+          "value": "10053.079155630418 lb × reps",
+          "series": "Weekly recorded workload · week beginning",
+          "now": "4"
+        },
+        {
+          "date": "2026-11-09",
+          "value": "10053.079155630418 lb × reps",
+          "series": "Weekly recorded workload · week beginning",
+          "now": "4"
+        },
+        {
+          "date": "2026-11-16",
+          "value": "11111.298014117829 lb × reps",
+          "series": "Weekly recorded workload · week beginning",
+          "now": "5"
+        },
+        {
+          "date": "2026-11-16",
+          "value": "11111.298014117829 lb × reps",
+          "series": "Weekly recorded workload · week beginning",
+          "now": "5"
+        },
+        {
+          "date": "2026-11-23",
+          "value": "12698.626301848948 lb × reps",
+          "series": "Weekly recorded workload · week beginning",
+          "now": "6"
+        }
+      ],
+      "geometry": {
+        "left": 120,
+        "right": 360,
+        "top": 251.71875,
+        "bottom": 315.71875,
+        "scroll": 3982,
+        "viewport": 390,
+        "height": 844,
+        "opacity": "1",
+        "overflow": false
+      }
+    },
+    {
+      "selector": ".muscle-information .chart",
+      "records": [
+        {
+          "date": "2026-10-19",
+          "value": "0 units",
+          "series": "Back weekly direct + secondary contributions",
+          "now": "1"
+        },
+        {
+          "date": "2026-10-26",
+          "value": "0 units",
+          "series": "Back weekly direct + secondary contributions",
+          "now": "2"
+        },
+        {
+          "date": "2026-10-26",
+          "value": "0 units",
+          "series": "Back weekly direct + secondary contributions",
+          "now": "2"
+        },
+        {
+          "date": "2026-11-02",
+          "value": "9 units",
+          "series": "Back weekly direct + secondary contributions",
+          "now": "3"
+        },
+        {
+          "date": "2026-11-02",
+          "value": "9 units",
+          "series": "Back weekly direct + secondary contributions",
+          "now": "3"
+        },
+        {
+          "date": "2026-11-09",
+          "value": "9 units",
+          "series": "Back weekly direct + secondary contributions",
+          "now": "4"
+        },
+        {
+          "date": "2026-11-09",
+          "value": "9 units",
+          "series": "Back weekly direct + secondary contributions",
+          "now": "4"
+        },
+        {
+          "date": "2026-11-16",
+          "value": "9 units",
+          "series": "Back weekly direct + secondary contributions",
+          "now": "5"
+        },
+        {
+          "date": "2026-11-16",
+          "value": "9 units",
+          "series": "Back weekly direct + secondary contributions",
+          "now": "5"
+        },
+        {
+          "date": "2026-11-23",
+          "value": "9 units",
+          "series": "Back weekly direct + secondary contributions",
+          "now": "6"
+        }
+      ],
+      "geometry": {
+        "left": 97,
+        "right": 337,
+        "top": 242.8125,
+        "bottom": 306.8125,
+        "scroll": 1733,
+        "viewport": 390,
+        "height": 844,
+        "opacity": "1",
+        "overflow": false
+      }
+    }
+  ],
+  "errors": [],
+  "scope": "Actual Chromium touch, pointer capture, native vertical scrolling, mouse, keyboard and saved-data comparisons. Viewport/UA emulation is not physical iPhone or Android certification."
+}

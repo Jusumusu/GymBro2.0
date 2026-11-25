@@ -1,0 +1,22 @@
+{
+  "from": {
+    "version": "0.9.0",
+    "build": "52573e398570"
+  },
+  "to": {
+    "version": "0.9.0",
+    "build": "f8b740dc12bf"
+  },
+  "production": "0.8.0",
+  "checks": [
+    "Actual previously published 0.9.0 preview is installed beside a distinct production journal",
+    "Old 0.9 preview detects the approved mobile design build and offers an update without interrupting the session",
+    "Updater clearly identifies 0.9.0 preview and its new release notes",
+    "Explicit update installs 0.9.0 and Settings uses the same release version",
+    "History, active workout, preferences, body records and private photo bytes survive unchanged",
+    "Updated preview opens offline with the complete journal",
+    "Production remains 0.8.0 with its own unchanged journal and release metadata"
+  ],
+  "errors": [],
+  "scope": "Actual archived published 0.9.0 preview to the approved mobile design build in Chromium; fresh synthetic production and preview journals, real worker update and offline reload. Physical mobile browsers not certified."
+}
