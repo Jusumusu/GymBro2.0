@@ -1,0 +1,1963 @@
+{
+  "checks": [
+    "All four original models cover the same fourteen canonical groups; upper/middle/lower trapezius stay under Back and a grid audit finds no cross-muscle fill overlaps",
+    "Every concept fits eight widths in both themes, with visible nonblack materials and no inline-style CSP dependency: 64 rendered layouts",
+    "Real touch selects only the intended chest or Back group in every concept/theme and toggles selection without phantom highlights",
+    "Space/Enter selection retains keyboard focus and pressed state; fourteen name controls supply full-size alternative touch targets",
+    "The row example distinguishes primary, secondary and stabilizing roles; review interactions open no journal databases",
+    "Reduced Motion disables region transitions and the review has no uncaught browser exceptions",
+    "Captured eight matched neutral/selected/trained front-back comparison sheets and eight actual 390px phone-context screenshots"
+  ],
+  "layouts": [
+    {
+      "concept": "A",
+      "theme": "light",
+      "width": 320,
+      "overflow": false,
+      "figures": [
+        {
+          "width": 135,
+          "height": 286.875,
+          "left": 24,
+          "right": 159
+        },
+        {
+          "width": 135,
+          "height": 286.875,
+          "left": 161,
+          "right": 296
+        }
+      ],
+      "phone": {
+        "width": 290,
+        "height": 810.578125,
+        "left": 15,
+        "right": 305
+      },
+      "fill": "rgb(95, 159, 198)",
+      "inlineStyles": 0
+    },
+    {
+      "concept": "A",
+      "theme": "light",
+      "width": 360,
+      "overflow": false,
+      "figures": [
+        {
+          "width": 155,
+          "height": 329.375,
+          "left": 24,
+          "right": 179
+        },
+        {
+          "width": 155,
+          "height": 329.375,
+          "left": 181,
+          "right": 336
+        }
+      ],
+      "phone": {
+        "width": 330,
+        "height": 810.578125,
+        "left": 15,
+        "right": 345
+      },
+      "fill": "rgb(95, 159, 198)",
+      "inlineStyles": 0
+    },
+    {
+      "concept": "A",
+      "theme": "light",
+      "width": 375,
+      "overflow": false,
+      "figures": [
+        {
+          "width": 162.5,
+          "height": 345.3125,
+          "left": 24,
+          "right": 186.5
+        },
+        {
+          "width": 162.5,
+          "height": 345.3125,
+          "left": 188.5,
+          "right": 351
+        }
+      ],
+      "phone": {
+        "width": 345,
+        "height": 810.578125,
+        "left": 15,
+        "right": 360
+      },
+      "fill": "rgb(95, 159, 198)",
+      "inlineStyles": 0
+    },
+    {
+      "concept": "A",
+      "theme": "light",
+      "width": 390,
+      "overflow": false,
+      "figures": [
+        {
+          "width": 170,
+          "height": 361.25,
+          "left": 24,
+          "right": 194
+        },
+        {
+          "width": 170,
+          "height": 361.25,
+          "left": 196,
+          "right": 366
+        }
+      ],
+      "phone": {
+        "width": 360,
+        "height": 810.578125,
+        "left": 15,
+        "right": 375
+      },
+      "fill": "rgb(95, 159, 198)",
+      "inlineStyles": 0
+    },
+    {
+      "concept": "A",
+      "theme": "light",
+      "width": 414,
+      "overflow": false,
+      "figures": [
+        {
+          "width": 182,
+          "height": 386.75,
+          "left": 24,
+          "right": 206
+        },
+        {
+          "width": 182,
+          "height": 386.75,
+          "left": 208,
+          "right": 390
+        }
+      ],
+      "phone": {
+        "width": 360,
+        "height": 810.578125,
+        "left": 27,
+        "right": 387
+      },
+      "fill": "rgb(95, 159, 198)",
+      "inlineStyles": 0
+    },
+    {
+      "concept": "A",
+      "theme": "light",
+      "width": 430,
+      "overflow": false,
+      "figures": [
+        {
+          "width": 190,
+          "height": 403.75,
+          "left": 24,
+          "right": 214
+        },
+        {
+          "width": 190,
+          "height": 403.75,
+          "left": 216,
+          "right": 406
+        }
+      ],
+      "phone": {
+        "width": 360,
+        "height": 810.578125,
+        "left": 35,
+        "right": 395
+      },
+      "fill": "rgb(95, 159, 198)",
+      "inlineStyles": 0
+    },
+    {
+      "concept": "A",
+      "theme": "light",
+      "width": 768,
+      "overflow": false,
+      "figures": [
+        {
+          "width": 287,
+          "height": 609.875,
+          "left": 84.5,
+          "right": 371.5
+        },
+        {
+          "width": 287,
+          "height": 609.875,
+          "left": 381.5,
+          "right": 668.5
+        }
+      ],
+      "phone": {
+        "width": 360,
+        "height": 840.578125,
+        "left": 196.5,
+        "right": 556.5
+      },
+      "fill": "rgb(95, 159, 198)",
+      "inlineStyles": 0
+    },
+    {
+      "concept": "A",
+      "theme": "light",
+      "width": 1440,
+      "overflow": false,
+      "figures": [
+        {
+          "width": 317,
+          "height": 630,
+          "left": 204.5,
+          "right": 521.5
+        },
+        {
+          "width": 317,
+          "height": 630,
+          "left": 531.5,
+          "right": 848.5
+        }
+      ],
+      "phone": {
+        "width": 348,
+        "height": 790.578125,
+        "left": 1039.5,
+        "right": 1387.5
+      },
+      "fill": "rgb(95, 159, 198)",
+      "inlineStyles": 0
+    },
+    {
+      "concept": "A",
+      "theme": "dark",
+      "width": 320,
+      "overflow": false,
+      "figures": [
+        {
+          "width": 135,
+          "height": 286.875,
+          "left": 24,
+          "right": 159
+        },
+        {
+          "width": 135,
+          "height": 286.875,
+          "left": 161,
+          "right": 296
+        }
+      ],
+      "phone": {
+        "width": 290,
+        "height": 810.578125,
+        "left": 15,
+        "right": 305
+      },
+      "fill": "rgb(116, 184, 221)",
+      "inlineStyles": 0
+    },
+    {
+      "concept": "A",
+      "theme": "dark",
+      "width": 360,
+      "overflow": false,
+      "figures": [
+        {
+          "width": 155,
+          "height": 329.375,
+          "left": 24,
+          "right": 179
+        },
+        {
+          "width": 155,
+          "height": 329.375,
+          "left": 181,
+          "right": 336
+        }
+      ],
+      "phone": {
+        "width": 330,
+        "height": 810.578125,
+        "left": 15,
+        "right": 345
+      },
+      "fill": "rgb(116, 184, 221)",
+      "inlineStyles": 0
+    },
+    {
+      "concept": "A",
+      "theme": "dark",
+      "width": 375,
+      "overflow": false,
+      "figures": [
+        {
+          "width": 162.5,
+          "height": 345.3125,
+          "left": 24,
+          "right": 186.5
+        },
+        {
+          "width": 162.5,
+          "height": 345.3125,
+          "left": 188.5,
+          "right": 351
+        }
+      ],
+      "phone": {
+        "width": 345,
+        "height": 810.578125,
+        "left": 15,
+        "right": 360
+      },
+      "fill": "rgb(116, 184, 221)",
+      "inlineStyles": 0
+    },
+    {
+      "concept": "A",
+      "theme": "dark",
+      "width": 390,
+      "overflow": false,
+      "figures": [
+        {
+          "width": 170,
+          "height": 361.25,
+          "left": 24,
+          "right": 194
+        },
+        {
+          "width": 170,
+          "height": 361.25,
+          "left": 196,
+          "right": 366
+        }
+      ],
+      "phone": {
+        "width": 360,
+        "height": 810.578125,
+        "left": 15,
+        "right": 375
+      },
+      "fill": "rgb(116, 184, 221)",
+      "inlineStyles": 0
+    },
+    {
+      "concept": "A",
+      "theme": "dark",
+      "width": 414,
+      "overflow": false,
+      "figures": [
+        {
+          "width": 182,
+          "height": 386.75,
+          "left": 24,
+          "right": 206
+        },
+        {
+          "width": 182,
+          "height": 386.75,
+          "left": 208,
+          "right": 390
+        }
+      ],
+      "phone": {
+        "width": 360,
+        "height": 810.578125,
+        "left": 27,
+        "right": 387
+      },
+      "fill": "rgb(116, 184, 221)",
+      "inlineStyles": 0
+    },
+    {
+      "concept": "A",
+      "theme": "dark",
+      "width": 430,
+      "overflow": false,
+      "figures": [
+        {
+          "width": 190,
+          "height": 403.75,
+          "left": 24,
+          "right": 214
+        },
+        {
+          "width": 190,
+          "height": 403.75,
+          "left": 216,
+          "right": 406
+        }
+      ],
+      "phone": {
+        "width": 360,
+        "height": 810.578125,
+        "left": 35,
+        "right": 395
+      },
+      "fill": "rgb(116, 184, 221)",
+      "inlineStyles": 0
+    },
+    {
+      "concept": "A",
+      "theme": "dark",
+      "width": 768,
+      "overflow": false,
+      "figures": [
+        {
+          "width": 287,
+          "height": 609.875,
+          "left": 84.5,
+          "right": 371.5
+        },
+        {
+          "width": 287,
+          "height": 609.875,
+          "left": 381.5,
+          "right": 668.5
+        }
+      ],
+      "phone": {
+        "width": 360,
+        "height": 840.578125,
+        "left": 196.5,
+        "right": 556.5
+      },
+      "fill": "rgb(116, 184, 221)",
+      "inlineStyles": 0
+    },
+    {
+      "concept": "A",
+      "theme": "dark",
+      "width": 1440,
+      "overflow": false,
+      "figures": [
+        {
+          "width": 317,
+          "height": 630,
+          "left": 204.5,
+          "right": 521.5
+        },
+        {
+          "width": 317,
+          "height": 630,
+          "left": 531.5,
+          "right": 848.5
+        }
+      ],
+      "phone": {
+        "width": 348,
+        "height": 790.578125,
+        "left": 1039.5,
+        "right": 1387.5
+      },
+      "fill": "rgb(116, 184, 221)",
+      "inlineStyles": 0
+    },
+    {
+      "concept": "B",
+      "theme": "light",
+      "width": 320,
+      "overflow": false,
+      "figures": [
+        {
+          "width": 135,
+          "height": 286.875,
+          "left": 24,
+          "right": 159
+        },
+        {
+          "width": 135,
+          "height": 286.875,
+          "left": 161,
+          "right": 296
+        }
+      ],
+      "phone": {
+        "width": 290,
+        "height": 810.578125,
+        "left": 15,
+        "right": 305
+      },
+      "fill": "rgb(95, 159, 198)",
+      "inlineStyles": 0
+    },
+    {
+      "concept": "B",
+      "theme": "light",
+      "width": 360,
+      "overflow": false,
+      "figures": [
+        {
+          "width": 155,
+          "height": 329.375,
+          "left": 24,
+          "right": 179
+        },
+        {
+          "width": 155,
+          "height": 329.375,
+          "left": 181,
+          "right": 336
+        }
+      ],
+      "phone": {
+        "width": 330,
+        "height": 810.578125,
+        "left": 15,
+        "right": 345
+      },
+      "fill": "rgb(95, 159, 198)",
+      "inlineStyles": 0
+    },
+    {
+      "concept": "B",
+      "theme": "light",
+      "width": 375,
+      "overflow": false,
+      "figures": [
+        {
+          "width": 162.5,
+          "height": 345.3125,
+          "left": 24,
+          "right": 186.5
+        },
+        {
+          "width": 162.5,
+          "height": 345.3125,
+          "left": 188.5,
+          "right": 351
+        }
+      ],
+      "phone": {
+        "width": 345,
+        "height": 810.578125,
+        "left": 15,
+        "right": 360
+      },
+      "fill": "rgb(95, 159, 198)",
+      "inlineStyles": 0
+    },
+    {
+      "concept": "B",
+      "theme": "light",
+      "width": 390,
+      "overflow": false,
+      "figures": [
+        {
+          "width": 170,
+          "height": 361.25,
+          "left": 24,
+          "right": 194
+        },
+        {
+          "width": 170,
+          "height": 361.25,
+          "left": 196,
+          "right": 366
+        }
+      ],
+      "phone": {
+        "width": 360,
+        "height": 810.578125,
+        "left": 15,
+        "right": 375
+      },
+      "fill": "rgb(95, 159, 198)",
+      "inlineStyles": 0
+    },
+    {
+      "concept": "B",
+      "theme": "light",
+      "width": 414,
+      "overflow": false,
+      "figures": [
+        {
+          "width": 182,
+          "height": 386.75,
+          "left": 24,
+          "right": 206
+        },
+        {
+          "width": 182,
+          "height": 386.75,
+          "left": 208,
+          "right": 390
+        }
+      ],
+      "phone": {
+        "width": 360,
+        "height": 810.578125,
+        "left": 27,
+        "right": 387
+      },
+      "fill": "rgb(95, 159, 198)",
+      "inlineStyles": 0
+    },
+    {
+      "concept": "B",
+      "theme": "light",
+      "width": 430,
+      "overflow": false,
+      "figures": [
+        {
+          "width": 190,
+          "height": 403.75,
+          "left": 24,
+          "right": 214
+        },
+        {
+          "width": 190,
+          "height": 403.75,
+          "left": 216,
+          "right": 406
+        }
+      ],
+      "phone": {
+        "width": 360,
+        "height": 810.578125,
+        "left": 35,
+        "right": 395
+      },
+      "fill": "rgb(95, 159, 198)",
+      "inlineStyles": 0
+    },
+    {
+      "concept": "B",
+      "theme": "light",
+      "width": 768,
+      "overflow": false,
+      "figures": [
+        {
+          "width": 287,
+          "height": 609.875,
+          "left": 84.5,
+          "right": 371.5
+        },
+        {
+          "width": 287,
+          "height": 609.875,
+          "left": 381.5,
+          "right": 668.5
+        }
+      ],
+      "phone": {
+        "width": 360,
+        "height": 840.578125,
+        "left": 196.5,
+        "right": 556.5
+      },
+      "fill": "rgb(95, 159, 198)",
+      "inlineStyles": 0
+    },
+    {
+      "concept": "B",
+      "theme": "light",
+      "width": 1440,
+      "overflow": false,
+      "figures": [
+        {
+          "width": 317,
+          "height": 630,
+          "left": 204.5,
+          "right": 521.5
+        },
+        {
+          "width": 317,
+          "height": 630,
+          "left": 531.5,
+          "right": 848.5
+        }
+      ],
+      "phone": {
+        "width": 348,
+        "height": 790.578125,
+        "left": 1039.5,
+        "right": 1387.5
+      },
+      "fill": "rgb(95, 159, 198)",
+      "inlineStyles": 0
+    },
+    {
+      "concept": "B",
+      "theme": "dark",
+      "width": 320,
+      "overflow": false,
+      "figures": [
+        {
+          "width": 135,
+          "height": 286.875,
+          "left": 24,
+          "right": 159
+        },
+        {
+          "width": 135,
+          "height": 286.875,
+          "left": 161,
+          "right": 296
+        }
+      ],
+      "phone": {
+        "width": 290,
+        "height": 810.578125,
+        "left": 15,
+        "right": 305
+      },
+      "fill": "rgb(116, 184, 221)",
+      "inlineStyles": 0
+    },
+    {
+      "concept": "B",
+      "theme": "dark",
+      "width": 360,
+      "overflow": false,
+      "figures": [
+        {
+          "width": 155,
+          "height": 329.375,
+          "left": 24,
+          "right": 179
+        },
+        {
+          "width": 155,
+          "height": 329.375,
+          "left": 181,
+          "right": 336
+        }
+      ],
+      "phone": {
+        "width": 330,
+        "height": 810.578125,
+        "left": 15,
+        "right": 345
+      },
+      "fill": "rgb(116, 184, 221)",
+      "inlineStyles": 0
+    },
+    {
+      "concept": "B",
+      "theme": "dark",
+      "width": 375,
+      "overflow": false,
+      "figures": [
+        {
+          "width": 162.5,
+          "height": 345.3125,
+          "left": 24,
+          "right": 186.5
+        },
+        {
+          "width": 162.5,
+          "height": 345.3125,
+          "left": 188.5,
+          "right": 351
+        }
+      ],
+      "phone": {
+        "width": 345,
+        "height": 810.578125,
+        "left": 15,
+        "right": 360
+      },
+      "fill": "rgb(116, 184, 221)",
+      "inlineStyles": 0
+    },
+    {
+      "concept": "B",
+      "theme": "dark",
+      "width": 390,
+      "overflow": false,
+      "figures": [
+        {
+          "width": 170,
+          "height": 361.25,
+          "left": 24,
+          "right": 194
+        },
+        {
+          "width": 170,
+          "height": 361.25,
+          "left": 196,
+          "right": 366
+        }
+      ],
+      "phone": {
+        "width": 360,
+        "height": 810.578125,
+        "left": 15,
+        "right": 375
+      },
+      "fill": "rgb(116, 184, 221)",
+      "inlineStyles": 0
+    },
+    {
+      "concept": "B",
+      "theme": "dark",
+      "width": 414,
+      "overflow": false,
+      "figures": [
+        {
+          "width": 182,
+          "height": 386.75,
+          "left": 24,
+          "right": 206
+        },
+        {
+          "width": 182,
+          "height": 386.75,
+          "left": 208,
+          "right": 390
+        }
+      ],
+      "phone": {
+        "width": 360,
+        "height": 810.578125,
+        "left": 27,
+        "right": 387
+      },
+      "fill": "rgb(116, 184, 221)",
+      "inlineStyles": 0
+    },
+    {
+      "concept": "B",
+      "theme": "dark",
+      "width": 430,
+      "overflow": false,
+      "figures": [
+        {
+          "width": 190,
+          "height": 403.75,
+          "left": 24,
+          "right": 214
+        },
+        {
+          "width": 190,
+          "height": 403.75,
+          "left": 216,
+          "right": 406
+        }
+      ],
+      "phone": {
+        "width": 360,
+        "height": 810.578125,
+        "left": 35,
+        "right": 395
+      },
+      "fill": "rgb(116, 184, 221)",
+      "inlineStyles": 0
+    },
+    {
+      "concept": "B",
+      "theme": "dark",
+      "width": 768,
+      "overflow": false,
+      "figures": [
+        {
+          "width": 287,
+          "height": 609.875,
+          "left": 84.5,
+          "right": 371.5
+        },
+        {
+          "width": 287,
+          "height": 609.875,
+          "left": 381.5,
+          "right": 668.5
+        }
+      ],
+      "phone": {
+        "width": 360,
+        "height": 840.578125,
+        "left": 196.5,
+        "right": 556.5
+      },
+      "fill": "rgb(116, 184, 221)",
+      "inlineStyles": 0
+    },
+    {
+      "concept": "B",
+      "theme": "dark",
+      "width": 1440,
+      "overflow": false,
+      "figures": [
+        {
+          "width": 317,
+          "height": 630,
+          "left": 204.5,
+          "right": 521.5
+        },
+        {
+          "width": 317,
+          "height": 630,
+          "left": 531.5,
+          "right": 848.5
+        }
+      ],
+      "phone": {
+        "width": 348,
+        "height": 790.578125,
+        "left": 1039.5,
+        "right": 1387.5
+      },
+      "fill": "rgb(116, 184, 221)",
+      "inlineStyles": 0
+    },
+    {
+      "concept": "C",
+      "theme": "light",
+      "width": 320,
+      "overflow": false,
+      "figures": [
+        {
+          "width": 135,
+          "height": 286.875,
+          "left": 24,
+          "right": 159
+        },
+        {
+          "width": 135,
+          "height": 286.875,
+          "left": 161,
+          "right": 296
+        }
+      ],
+      "phone": {
+        "width": 290,
+        "height": 810.578125,
+        "left": 15,
+        "right": 305
+      },
+      "fill": "rgb(95, 159, 198)",
+      "inlineStyles": 0
+    },
+    {
+      "concept": "C",
+      "theme": "light",
+      "width": 360,
+      "overflow": false,
+      "figures": [
+        {
+          "width": 155,
+          "height": 329.375,
+          "left": 24,
+          "right": 179
+        },
+        {
+          "width": 155,
+          "height": 329.375,
+          "left": 181,
+          "right": 336
+        }
+      ],
+      "phone": {
+        "width": 330,
+        "height": 810.578125,
+        "left": 15,
+        "right": 345
+      },
+      "fill": "rgb(95, 159, 198)",
+      "inlineStyles": 0
+    },
+    {
+      "concept": "C",
+      "theme": "light",
+      "width": 375,
+      "overflow": false,
+      "figures": [
+        {
+          "width": 162.5,
+          "height": 345.3125,
+          "left": 24,
+          "right": 186.5
+        },
+        {
+          "width": 162.5,
+          "height": 345.3125,
+          "left": 188.5,
+          "right": 351
+        }
+      ],
+      "phone": {
+        "width": 345,
+        "height": 810.578125,
+        "left": 15,
+        "right": 360
+      },
+      "fill": "rgb(95, 159, 198)",
+      "inlineStyles": 0
+    },
+    {
+      "concept": "C",
+      "theme": "light",
+      "width": 390,
+      "overflow": false,
+      "figures": [
+        {
+          "width": 170,
+          "height": 361.25,
+          "left": 24,
+          "right": 194
+        },
+        {
+          "width": 170,
+          "height": 361.25,
+          "left": 196,
+          "right": 366
+        }
+      ],
+      "phone": {
+        "width": 360,
+        "height": 810.578125,
+        "left": 15,
+        "right": 375
+      },
+      "fill": "rgb(95, 159, 198)",
+      "inlineStyles": 0
+    },
+    {
+      "concept": "C",
+      "theme": "light",
+      "width": 414,
+      "overflow": false,
+      "figures": [
+        {
+          "width": 182,
+          "height": 386.75,
+          "left": 24,
+          "right": 206
+        },
+        {
+          "width": 182,
+          "height": 386.75,
+          "left": 208,
+          "right": 390
+        }
+      ],
+      "phone": {
+        "width": 360,
+        "height": 810.578125,
+        "left": 27,
+        "right": 387
+      },
+      "fill": "rgb(95, 159, 198)",
+      "inlineStyles": 0
+    },
+    {
+      "concept": "C",
+      "theme": "light",
+      "width": 430,
+      "overflow": false,
+      "figures": [
+        {
+          "width": 190,
+          "height": 403.75,
+          "left": 24,
+          "right": 214
+        },
+        {
+          "width": 190,
+          "height": 403.75,
+          "left": 216,
+          "right": 406
+        }
+      ],
+      "phone": {
+        "width": 360,
+        "height": 810.578125,
+        "left": 35,
+        "right": 395
+      },
+      "fill": "rgb(95, 159, 198)",
+      "inlineStyles": 0
+    },
+    {
+      "concept": "C",
+      "theme": "light",
+      "width": 768,
+      "overflow": false,
+      "figures": [
+        {
+          "width": 287,
+          "height": 609.875,
+          "left": 84.5,
+          "right": 371.5
+        },
+        {
+          "width": 287,
+          "height": 609.875,
+          "left": 381.5,
+          "right": 668.5
+        }
+      ],
+      "phone": {
+        "width": 360,
+        "height": 840.578125,
+        "left": 196.5,
+        "right": 556.5
+      },
+      "fill": "rgb(95, 159, 198)",
+      "inlineStyles": 0
+    },
+    {
+      "concept": "C",
+      "theme": "light",
+      "width": 1440,
+      "overflow": false,
+      "figures": [
+        {
+          "width": 317,
+          "height": 630,
+          "left": 204.5,
+          "right": 521.5
+        },
+        {
+          "width": 317,
+          "height": 630,
+          "left": 531.5,
+          "right": 848.5
+        }
+      ],
+      "phone": {
+        "width": 348,
+        "height": 790.578125,
+        "left": 1039.5,
+        "right": 1387.5
+      },
+      "fill": "rgb(95, 159, 198)",
+      "inlineStyles": 0
+    },
+    {
+      "concept": "C",
+      "theme": "dark",
+      "width": 320,
+      "overflow": false,
+      "figures": [
+        {
+          "width": 135,
+          "height": 286.875,
+          "left": 24,
+          "right": 159
+        },
+        {
+          "width": 135,
+          "height": 286.875,
+          "left": 161,
+          "right": 296
+        }
+      ],
+      "phone": {
+        "width": 290,
+        "height": 810.578125,
+        "left": 15,
+        "right": 305
+      },
+      "fill": "rgb(116, 184, 221)",
+      "inlineStyles": 0
+    },
+    {
+      "concept": "C",
+      "theme": "dark",
+      "width": 360,
+      "overflow": false,
+      "figures": [
+        {
+          "width": 155,
+          "height": 329.375,
+          "left": 24,
+          "right": 179
+        },
+        {
+          "width": 155,
+          "height": 329.375,
+          "left": 181,
+          "right": 336
+        }
+      ],
+      "phone": {
+        "width": 330,
+        "height": 810.578125,
+        "left": 15,
+        "right": 345
+      },
+      "fill": "rgb(116, 184, 221)",
+      "inlineStyles": 0
+    },
+    {
+      "concept": "C",
+      "theme": "dark",
+      "width": 375,
+      "overflow": false,
+      "figures": [
+        {
+          "width": 162.5,
+          "height": 345.3125,
+          "left": 24,
+          "right": 186.5
+        },
+        {
+          "width": 162.5,
+          "height": 345.3125,
+          "left": 188.5,
+          "right": 351
+        }
+      ],
+      "phone": {
+        "width": 345,
+        "height": 810.578125,
+        "left": 15,
+        "right": 360
+      },
+      "fill": "rgb(116, 184, 221)",
+      "inlineStyles": 0
+    },
+    {
+      "concept": "C",
+      "theme": "dark",
+      "width": 390,
+      "overflow": false,
+      "figures": [
+        {
+          "width": 170,
+          "height": 361.25,
+          "left": 24,
+          "right": 194
+        },
+        {
+          "width": 170,
+          "height": 361.25,
+          "left": 196,
+          "right": 366
+        }
+      ],
+      "phone": {
+        "width": 360,
+        "height": 810.578125,
+        "left": 15,
+        "right": 375
+      },
+      "fill": "rgb(116, 184, 221)",
+      "inlineStyles": 0
+    },
+    {
+      "concept": "C",
+      "theme": "dark",
+      "width": 414,
+      "overflow": false,
+      "figures": [
+        {
+          "width": 182,
+          "height": 386.75,
+          "left": 24,
+          "right": 206
+        },
+        {
+          "width": 182,
+          "height": 386.75,
+          "left": 208,
+          "right": 390
+        }
+      ],
+      "phone": {
+        "width": 360,
+        "height": 810.578125,
+        "left": 27,
+        "right": 387
+      },
+      "fill": "rgb(116, 184, 221)",
+      "inlineStyles": 0
+    },
+    {
+      "concept": "C",
+      "theme": "dark",
+      "width": 430,
+      "overflow": false,
+      "figures": [
+        {
+          "width": 190,
+          "height": 403.75,
+          "left": 24,
+          "right": 214
+        },
+        {
+          "width": 190,
+          "height": 403.75,
+          "left": 216,
+          "right": 406
+        }
+      ],
+      "phone": {
+        "width": 360,
+        "height": 810.578125,
+        "left": 35,
+        "right": 395
+      },
+      "fill": "rgb(116, 184, 221)",
+      "inlineStyles": 0
+    },
+    {
+      "concept": "C",
+      "theme": "dark",
+      "width": 768,
+      "overflow": false,
+      "figures": [
+        {
+          "width": 287,
+          "height": 609.875,
+          "left": 84.5,
+          "right": 371.5
+        },
+        {
+          "width": 287,
+          "height": 609.875,
+          "left": 381.5,
+          "right": 668.5
+        }
+      ],
+      "phone": {
+        "width": 360,
+        "height": 840.578125,
+        "left": 196.5,
+        "right": 556.5
+      },
+      "fill": "rgb(116, 184, 221)",
+      "inlineStyles": 0
+    },
+    {
+      "concept": "C",
+      "theme": "dark",
+      "width": 1440,
+      "overflow": false,
+      "figures": [
+        {
+          "width": 317,
+          "height": 630,
+          "left": 204.5,
+          "right": 521.5
+        },
+        {
+          "width": 317,
+          "height": 630,
+          "left": 531.5,
+          "right": 848.5
+        }
+      ],
+      "phone": {
+        "width": 348,
+        "height": 790.578125,
+        "left": 1039.5,
+        "right": 1387.5
+      },
+      "fill": "rgb(116, 184, 221)",
+      "inlineStyles": 0
+    },
+    {
+      "concept": "D",
+      "theme": "light",
+      "width": 320,
+      "overflow": false,
+      "figures": [
+        {
+          "width": 135,
+          "height": 286.875,
+          "left": 24,
+          "right": 159
+        },
+        {
+          "width": 135,
+          "height": 286.875,
+          "left": 161,
+          "right": 296
+        }
+      ],
+      "phone": {
+        "width": 290,
+        "height": 810.578125,
+        "left": 15,
+        "right": 305
+      },
+      "fill": "url(\"#anatomy-D-front-1-trained\")",
+      "inlineStyles": 0
+    },
+    {
+      "concept": "D",
+      "theme": "light",
+      "width": 360,
+      "overflow": false,
+      "figures": [
+        {
+          "width": 155,
+          "height": 329.375,
+          "left": 24,
+          "right": 179
+        },
+        {
+          "width": 155,
+          "height": 329.375,
+          "left": 181,
+          "right": 336
+        }
+      ],
+      "phone": {
+        "width": 330,
+        "height": 810.578125,
+        "left": 15,
+        "right": 345
+      },
+      "fill": "url(\"#anatomy-D-front-1-trained\")",
+      "inlineStyles": 0
+    },
+    {
+      "concept": "D",
+      "theme": "light",
+      "width": 375,
+      "overflow": false,
+      "figures": [
+        {
+          "width": 162.5,
+          "height": 345.3125,
+          "left": 24,
+          "right": 186.5
+        },
+        {
+          "width": 162.5,
+          "height": 345.3125,
+          "left": 188.5,
+          "right": 351
+        }
+      ],
+      "phone": {
+        "width": 345,
+        "height": 810.578125,
+        "left": 15,
+        "right": 360
+      },
+      "fill": "url(\"#anatomy-D-front-1-trained\")",
+      "inlineStyles": 0
+    },
+    {
+      "concept": "D",
+      "theme": "light",
+      "width": 390,
+      "overflow": false,
+      "figures": [
+        {
+          "width": 170,
+          "height": 361.25,
+          "left": 24,
+          "right": 194
+        },
+        {
+          "width": 170,
+          "height": 361.25,
+          "left": 196,
+          "right": 366
+        }
+      ],
+      "phone": {
+        "width": 360,
+        "height": 810.578125,
+        "left": 15,
+        "right": 375
+      },
+      "fill": "url(\"#anatomy-D-front-1-trained\")",
+      "inlineStyles": 0
+    },
+    {
+      "concept": "D",
+      "theme": "light",
+      "width": 414,
+      "overflow": false,
+      "figures": [
+        {
+          "width": 182,
+          "height": 386.75,
+          "left": 24,
+          "right": 206
+        },
+        {
+          "width": 182,
+          "height": 386.75,
+          "left": 208,
+          "right": 390
+        }
+      ],
+      "phone": {
+        "width": 360,
+        "height": 810.578125,
+        "left": 27,
+        "right": 387
+      },
+      "fill": "url(\"#anatomy-D-front-1-trained\")",
+      "inlineStyles": 0
+    },
+    {
+      "concept": "D",
+      "theme": "light",
+      "width": 430,
+      "overflow": false,
+      "figures": [
+        {
+          "width": 190,
+          "height": 403.75,
+          "left": 24,
+          "right": 214
+        },
+        {
+          "width": 190,
+          "height": 403.75,
+          "left": 216,
+          "right": 406
+        }
+      ],
+      "phone": {
+        "width": 360,
+        "height": 810.578125,
+        "left": 35,
+        "right": 395
+      },
+      "fill": "url(\"#anatomy-D-front-1-trained\")",
+      "inlineStyles": 0
+    },
+    {
+      "concept": "D",
+      "theme": "light",
+      "width": 768,
+      "overflow": false,
+      "figures": [
+        {
+          "width": 287,
+          "height": 609.875,
+          "left": 84.5,
+          "right": 371.5
+        },
+        {
+          "width": 287,
+          "height": 609.875,
+          "left": 381.5,
+          "right": 668.5
+        }
+      ],
+      "phone": {
+        "width": 360,
+        "height": 840.578125,
+        "left": 196.5,
+        "right": 556.5
+      },
+      "fill": "url(\"#anatomy-D-front-1-trained\")",
+      "inlineStyles": 0
+    },
+    {
+      "concept": "D",
+      "theme": "light",
+      "width": 1440,
+      "overflow": false,
+      "figures": [
+        {
+          "width": 317,
+          "height": 630,
+          "left": 204.5,
+          "right": 521.5
+        },
+        {
+          "width": 317,
+          "height": 630,
+          "left": 531.5,
+          "right": 848.5
+        }
+      ],
+      "phone": {
+        "width": 348,
+        "height": 790.578125,
+        "left": 1039.5,
+        "right": 1387.5
+      },
+      "fill": "url(\"#anatomy-D-front-1-trained\")",
+      "inlineStyles": 0
+    },
+    {
+      "concept": "D",
+      "theme": "dark",
+      "width": 320,
+      "overflow": false,
+      "figures": [
+        {
+          "width": 135,
+          "height": 286.875,
+          "left": 24,
+          "right": 159
+        },
+        {
+          "width": 135,
+          "height": 286.875,
+          "left": 161,
+          "right": 296
+        }
+      ],
+      "phone": {
+        "width": 290,
+        "height": 810.578125,
+        "left": 15,
+        "right": 305
+      },
+      "fill": "url(\"#anatomy-D-front-1-trained\")",
+      "inlineStyles": 0
+    },
+    {
+      "concept": "D",
+      "theme": "dark",
+      "width": 360,
+      "overflow": false,
+      "figures": [
+        {
+          "width": 155,
+          "height": 329.375,
+          "left": 24,
+          "right": 179
+        },
+        {
+          "width": 155,
+          "height": 329.375,
+          "left": 181,
+          "right": 336
+        }
+      ],
+      "phone": {
+        "width": 330,
+        "height": 810.578125,
+        "left": 15,
+        "right": 345
+      },
+      "fill": "url(\"#anatomy-D-front-1-trained\")",
+      "inlineStyles": 0
+    },
+    {
+      "concept": "D",
+      "theme": "dark",
+      "width": 375,
+      "overflow": false,
+      "figures": [
+        {
+          "width": 162.5,
+          "height": 345.3125,
+          "left": 24,
+          "right": 186.5
+        },
+        {
+          "width": 162.5,
+          "height": 345.3125,
+          "left": 188.5,
+          "right": 351
+        }
+      ],
+      "phone": {
+        "width": 345,
+        "height": 810.578125,
+        "left": 15,
+        "right": 360
+      },
+      "fill": "url(\"#anatomy-D-front-1-trained\")",
+      "inlineStyles": 0
+    },
+    {
+      "concept": "D",
+      "theme": "dark",
+      "width": 390,
+      "overflow": false,
+      "figures": [
+        {
+          "width": 170,
+          "height": 361.25,
+          "left": 24,
+          "right": 194
+        },
+        {
+          "width": 170,
+          "height": 361.25,
+          "left": 196,
+          "right": 366
+        }
+      ],
+      "phone": {
+        "width": 360,
+        "height": 810.578125,
+        "left": 15,
+        "right": 375
+      },
+      "fill": "url(\"#anatomy-D-front-1-trained\")",
+      "inlineStyles": 0
+    },
+    {
+      "concept": "D",
+      "theme": "dark",
+      "width": 414,
+      "overflow": false,
+      "figures": [
+        {
+          "width": 182,
+          "height": 386.75,
+          "left": 24,
+          "right": 206
+        },
+        {
+          "width": 182,
+          "height": 386.75,
+          "left": 208,
+          "right": 390
+        }
+      ],
+      "phone": {
+        "width": 360,
+        "height": 810.578125,
+        "left": 27,
+        "right": 387
+      },
+      "fill": "url(\"#anatomy-D-front-1-trained\")",
+      "inlineStyles": 0
+    },
+    {
+      "concept": "D",
+      "theme": "dark",
+      "width": 430,
+      "overflow": false,
+      "figures": [
+        {
+          "width": 190,
+          "height": 403.75,
+          "left": 24,
+          "right": 214
+        },
+        {
+          "width": 190,
+          "height": 403.75,
+          "left": 216,
+          "right": 406
+        }
+      ],
+      "phone": {
+        "width": 360,
+        "height": 810.578125,
+        "left": 35,
+        "right": 395
+      },
+      "fill": "url(\"#anatomy-D-front-1-trained\")",
+      "inlineStyles": 0
+    },
+    {
+      "concept": "D",
+      "theme": "dark",
+      "width": 768,
+      "overflow": false,
+      "figures": [
+        {
+          "width": 287,
+          "height": 609.875,
+          "left": 84.5,
+          "right": 371.5
+        },
+        {
+          "width": 287,
+          "height": 609.875,
+          "left": 381.5,
+          "right": 668.5
+        }
+      ],
+      "phone": {
+        "width": 360,
+        "height": 840.578125,
+        "left": 196.5,
+        "right": 556.5
+      },
+      "fill": "url(\"#anatomy-D-front-1-trained\")",
+      "inlineStyles": 0
+    },
+    {
+      "concept": "D",
+      "theme": "dark",
+      "width": 1440,
+      "overflow": false,
+      "figures": [
+        {
+          "width": 317,
+          "height": 630,
+          "left": 204.5,
+          "right": 521.5
+        },
+        {
+          "width": 317,
+          "height": 630,
+          "left": 531.5,
+          "right": 848.5
+        }
+      ],
+      "phone": {
+        "width": 348,
+        "height": 790.578125,
+        "left": 1039.5,
+        "right": 1387.5
+      },
+      "fill": "url(\"#anatomy-D-front-1-trained\")",
+      "inlineStyles": 0
+    }
+  ],
+  "geometry": [
+    {
+      "concept": "A",
+      "side": "front",
+      "regions": 22,
+      "samples": 14760,
+      "overlaps": []
+    },
+    {
+      "concept": "A",
+      "side": "back",
+      "regions": 24,
+      "samples": 14760,
+      "overlaps": []
+    },
+    {
+      "concept": "B",
+      "side": "front",
+      "regions": 36,
+      "samples": 14760,
+      "overlaps": []
+    },
+    {
+      "concept": "B",
+      "side": "back",
+      "regions": 32,
+      "samples": 14760,
+      "overlaps": []
+    },
+    {
+      "concept": "C",
+      "side": "front",
+      "regions": 24,
+      "samples": 14760,
+      "overlaps": []
+    },
+    {
+      "concept": "C",
+      "side": "back",
+      "regions": 24,
+      "samples": 14760,
+      "overlaps": []
+    },
+    {
+      "concept": "D",
+      "side": "front",
+      "regions": 36,
+      "samples": 14760,
+      "overlaps": []
+    },
+    {
+      "concept": "D",
+      "side": "back",
+      "regions": 32,
+      "samples": 14760,
+      "overlaps": []
+    }
+  ],
+  "captures": [
+    {
+      "concept": "A",
+      "theme": "light",
+      "type": "neutral-selected-trained-pairs",
+      "file": "a-light-comparison.png"
+    },
+    {
+      "concept": "A",
+      "theme": "light",
+      "type": "phone-context",
+      "file": "a-light-phone.png"
+    },
+    {
+      "concept": "A",
+      "theme": "dark",
+      "type": "neutral-selected-trained-pairs",
+      "file": "a-dark-comparison.png"
+    },
+    {
+      "concept": "A",
+      "theme": "dark",
+      "type": "phone-context",
+      "file": "a-dark-phone.png"
+    },
+    {
+      "concept": "B",
+      "theme": "light",
+      "type": "neutral-selected-trained-pairs",
+      "file": "b-light-comparison.png"
+    },
+    {
+      "concept": "B",
+      "theme": "light",
+      "type": "phone-context",
+      "file": "b-light-phone.png"
+    },
+    {
+      "concept": "B",
+      "theme": "dark",
+      "type": "neutral-selected-trained-pairs",
+      "file": "b-dark-comparison.png"
+    },
+    {
+      "concept": "B",
+      "theme": "dark",
+      "type": "phone-context",
+      "file": "b-dark-phone.png"
+    },
+    {
+      "concept": "C",
+      "theme": "light",
+      "type": "neutral-selected-trained-pairs",
+      "file": "c-light-comparison.png"
+    },
+    {
+      "concept": "C",
+      "theme": "light",
+      "type": "phone-context",
+      "file": "c-light-phone.png"
+    },
+    {
+      "concept": "C",
+      "theme": "dark",
+      "type": "neutral-selected-trained-pairs",
+      "file": "c-dark-comparison.png"
+    },
+    {
+      "concept": "C",
+      "theme": "dark",
+      "type": "phone-context",
+      "file": "c-dark-phone.png"
+    },
+    {
+      "concept": "D",
+      "theme": "light",
+      "type": "neutral-selected-trained-pairs",
+      "file": "d-light-comparison.png"
+    },
+    {
+      "concept": "D",
+      "theme": "light",
+      "type": "phone-context",
+      "file": "d-light-phone.png"
+    },
+    {
+      "concept": "D",
+      "theme": "dark",
+      "type": "neutral-selected-trained-pairs",
+      "file": "d-dark-comparison.png"
+    },
+    {
+      "concept": "D",
+      "theme": "dark",
+      "type": "phone-context",
+      "file": "d-dark-phone.png"
+    }
+  ],
+  "errors": [],
+  "scope": "Original review-only SVGs and real Chromium touch/keyboard/layout tests with fictional data. No app journal access. Physical iPhone/WebKit and clinical anatomy certification are not claimed."
+}
