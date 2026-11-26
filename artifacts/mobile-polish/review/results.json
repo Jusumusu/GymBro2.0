@@ -1,0 +1,1227 @@
+{
+  "checks": [
+    "All11 Weekly, Settings and logo studies render in both themes at seven widths without overflow or duplicate document IDs;22 actual phone captures recorded",
+    "All three Weekly controls stay centered, navigate actual week boundaries, respect Sunday/Monday and show a deliberate empty state",
+    "Weekly demo chart follows actual touch movement and keyboard inspection of exact fictional recorded points",
+    "Every Settings concept exposes all44 current controls; category navigation, temporary preferences, save feedback and appearance changes retain example values",
+    "Unified gallery exposes all areas, five unique logo studies, paired themes, independent temporary shortlists and the anatomy review",
+    "Review opens no journal database or service worker and produces no uncaught browser exceptions"
+  ],
+  "layouts": [
+    {
+      "area": "weekly",
+      "concept": "a",
+      "theme": "light",
+      "width": 320,
+      "overflow": false
+    },
+    {
+      "area": "weekly",
+      "concept": "a",
+      "theme": "light",
+      "width": 360,
+      "overflow": false
+    },
+    {
+      "area": "weekly",
+      "concept": "a",
+      "theme": "light",
+      "width": 375,
+      "overflow": false
+    },
+    {
+      "area": "weekly",
+      "concept": "a",
+      "theme": "light",
+      "width": 390,
+      "overflow": false
+    },
+    {
+      "area": "weekly",
+      "concept": "a",
+      "theme": "light",
+      "width": 414,
+      "overflow": false
+    },
+    {
+      "area": "weekly",
+      "concept": "a",
+      "theme": "light",
+      "width": 430,
+      "overflow": false
+    },
+    {
+      "area": "weekly",
+      "concept": "a",
+      "theme": "light",
+      "width": 768,
+      "overflow": false
+    },
+    {
+      "area": "weekly",
+      "concept": "a",
+      "theme": "dark",
+      "width": 320,
+      "overflow": false
+    },
+    {
+      "area": "weekly",
+      "concept": "a",
+      "theme": "dark",
+      "width": 360,
+      "overflow": false
+    },
+    {
+      "area": "weekly",
+      "concept": "a",
+      "theme": "dark",
+      "width": 375,
+      "overflow": false
+    },
+    {
+      "area": "weekly",
+      "concept": "a",
+      "theme": "dark",
+      "width": 390,
+      "overflow": false
+    },
+    {
+      "area": "weekly",
+      "concept": "a",
+      "theme": "dark",
+      "width": 414,
+      "overflow": false
+    },
+    {
+      "area": "weekly",
+      "concept": "a",
+      "theme": "dark",
+      "width": 430,
+      "overflow": false
+    },
+    {
+      "area": "weekly",
+      "concept": "a",
+      "theme": "dark",
+      "width": 768,
+      "overflow": false
+    },
+    {
+      "area": "weekly",
+      "concept": "b",
+      "theme": "light",
+      "width": 320,
+      "overflow": false
+    },
+    {
+      "area": "weekly",
+      "concept": "b",
+      "theme": "light",
+      "width": 360,
+      "overflow": false
+    },
+    {
+      "area": "weekly",
+      "concept": "b",
+      "theme": "light",
+      "width": 375,
+      "overflow": false
+    },
+    {
+      "area": "weekly",
+      "concept": "b",
+      "theme": "light",
+      "width": 390,
+      "overflow": false
+    },
+    {
+      "area": "weekly",
+      "concept": "b",
+      "theme": "light",
+      "width": 414,
+      "overflow": false
+    },
+    {
+      "area": "weekly",
+      "concept": "b",
+      "theme": "light",
+      "width": 430,
+      "overflow": false
+    },
+    {
+      "area": "weekly",
+      "concept": "b",
+      "theme": "light",
+      "width": 768,
+      "overflow": false
+    },
+    {
+      "area": "weekly",
+      "concept": "b",
+      "theme": "dark",
+      "width": 320,
+      "overflow": false
+    },
+    {
+      "area": "weekly",
+      "concept": "b",
+      "theme": "dark",
+      "width": 360,
+      "overflow": false
+    },
+    {
+      "area": "weekly",
+      "concept": "b",
+      "theme": "dark",
+      "width": 375,
+      "overflow": false
+    },
+    {
+      "area": "weekly",
+      "concept": "b",
+      "theme": "dark",
+      "width": 390,
+      "overflow": false
+    },
+    {
+      "area": "weekly",
+      "concept": "b",
+      "theme": "dark",
+      "width": 414,
+      "overflow": false
+    },
+    {
+      "area": "weekly",
+      "concept": "b",
+      "theme": "dark",
+      "width": 430,
+      "overflow": false
+    },
+    {
+      "area": "weekly",
+      "concept": "b",
+      "theme": "dark",
+      "width": 768,
+      "overflow": false
+    },
+    {
+      "area": "weekly",
+      "concept": "c",
+      "theme": "light",
+      "width": 320,
+      "overflow": false
+    },
+    {
+      "area": "weekly",
+      "concept": "c",
+      "theme": "light",
+      "width": 360,
+      "overflow": false
+    },
+    {
+      "area": "weekly",
+      "concept": "c",
+      "theme": "light",
+      "width": 375,
+      "overflow": false
+    },
+    {
+      "area": "weekly",
+      "concept": "c",
+      "theme": "light",
+      "width": 390,
+      "overflow": false
+    },
+    {
+      "area": "weekly",
+      "concept": "c",
+      "theme": "light",
+      "width": 414,
+      "overflow": false
+    },
+    {
+      "area": "weekly",
+      "concept": "c",
+      "theme": "light",
+      "width": 430,
+      "overflow": false
+    },
+    {
+      "area": "weekly",
+      "concept": "c",
+      "theme": "light",
+      "width": 768,
+      "overflow": false
+    },
+    {
+      "area": "weekly",
+      "concept": "c",
+      "theme": "dark",
+      "width": 320,
+      "overflow": false
+    },
+    {
+      "area": "weekly",
+      "concept": "c",
+      "theme": "dark",
+      "width": 360,
+      "overflow": false
+    },
+    {
+      "area": "weekly",
+      "concept": "c",
+      "theme": "dark",
+      "width": 375,
+      "overflow": false
+    },
+    {
+      "area": "weekly",
+      "concept": "c",
+      "theme": "dark",
+      "width": 390,
+      "overflow": false
+    },
+    {
+      "area": "weekly",
+      "concept": "c",
+      "theme": "dark",
+      "width": 414,
+      "overflow": false
+    },
+    {
+      "area": "weekly",
+      "concept": "c",
+      "theme": "dark",
+      "width": 430,
+      "overflow": false
+    },
+    {
+      "area": "weekly",
+      "concept": "c",
+      "theme": "dark",
+      "width": 768,
+      "overflow": false
+    },
+    {
+      "area": "settings",
+      "concept": "a",
+      "theme": "light",
+      "width": 320,
+      "overflow": false
+    },
+    {
+      "area": "settings",
+      "concept": "a",
+      "theme": "light",
+      "width": 360,
+      "overflow": false
+    },
+    {
+      "area": "settings",
+      "concept": "a",
+      "theme": "light",
+      "width": 375,
+      "overflow": false
+    },
+    {
+      "area": "settings",
+      "concept": "a",
+      "theme": "light",
+      "width": 390,
+      "overflow": false
+    },
+    {
+      "area": "settings",
+      "concept": "a",
+      "theme": "light",
+      "width": 414,
+      "overflow": false
+    },
+    {
+      "area": "settings",
+      "concept": "a",
+      "theme": "light",
+      "width": 430,
+      "overflow": false
+    },
+    {
+      "area": "settings",
+      "concept": "a",
+      "theme": "light",
+      "width": 768,
+      "overflow": false
+    },
+    {
+      "area": "settings",
+      "concept": "a",
+      "theme": "dark",
+      "width": 320,
+      "overflow": false
+    },
+    {
+      "area": "settings",
+      "concept": "a",
+      "theme": "dark",
+      "width": 360,
+      "overflow": false
+    },
+    {
+      "area": "settings",
+      "concept": "a",
+      "theme": "dark",
+      "width": 375,
+      "overflow": false
+    },
+    {
+      "area": "settings",
+      "concept": "a",
+      "theme": "dark",
+      "width": 390,
+      "overflow": false
+    },
+    {
+      "area": "settings",
+      "concept": "a",
+      "theme": "dark",
+      "width": 414,
+      "overflow": false
+    },
+    {
+      "area": "settings",
+      "concept": "a",
+      "theme": "dark",
+      "width": 430,
+      "overflow": false
+    },
+    {
+      "area": "settings",
+      "concept": "a",
+      "theme": "dark",
+      "width": 768,
+      "overflow": false
+    },
+    {
+      "area": "settings",
+      "concept": "b",
+      "theme": "light",
+      "width": 320,
+      "overflow": false
+    },
+    {
+      "area": "settings",
+      "concept": "b",
+      "theme": "light",
+      "width": 360,
+      "overflow": false
+    },
+    {
+      "area": "settings",
+      "concept": "b",
+      "theme": "light",
+      "width": 375,
+      "overflow": false
+    },
+    {
+      "area": "settings",
+      "concept": "b",
+      "theme": "light",
+      "width": 390,
+      "overflow": false
+    },
+    {
+      "area": "settings",
+      "concept": "b",
+      "theme": "light",
+      "width": 414,
+      "overflow": false
+    },
+    {
+      "area": "settings",
+      "concept": "b",
+      "theme": "light",
+      "width": 430,
+      "overflow": false
+    },
+    {
+      "area": "settings",
+      "concept": "b",
+      "theme": "light",
+      "width": 768,
+      "overflow": false
+    },
+    {
+      "area": "settings",
+      "concept": "b",
+      "theme": "dark",
+      "width": 320,
+      "overflow": false
+    },
+    {
+      "area": "settings",
+      "concept": "b",
+      "theme": "dark",
+      "width": 360,
+      "overflow": false
+    },
+    {
+      "area": "settings",
+      "concept": "b",
+      "theme": "dark",
+      "width": 375,
+      "overflow": false
+    },
+    {
+      "area": "settings",
+      "concept": "b",
+      "theme": "dark",
+      "width": 390,
+      "overflow": false
+    },
+    {
+      "area": "settings",
+      "concept": "b",
+      "theme": "dark",
+      "width": 414,
+      "overflow": false
+    },
+    {
+      "area": "settings",
+      "concept": "b",
+      "theme": "dark",
+      "width": 430,
+      "overflow": false
+    },
+    {
+      "area": "settings",
+      "concept": "b",
+      "theme": "dark",
+      "width": 768,
+      "overflow": false
+    },
+    {
+      "area": "settings",
+      "concept": "c",
+      "theme": "light",
+      "width": 320,
+      "overflow": false
+    },
+    {
+      "area": "settings",
+      "concept": "c",
+      "theme": "light",
+      "width": 360,
+      "overflow": false
+    },
+    {
+      "area": "settings",
+      "concept": "c",
+      "theme": "light",
+      "width": 375,
+      "overflow": false
+    },
+    {
+      "area": "settings",
+      "concept": "c",
+      "theme": "light",
+      "width": 390,
+      "overflow": false
+    },
+    {
+      "area": "settings",
+      "concept": "c",
+      "theme": "light",
+      "width": 414,
+      "overflow": false
+    },
+    {
+      "area": "settings",
+      "concept": "c",
+      "theme": "light",
+      "width": 430,
+      "overflow": false
+    },
+    {
+      "area": "settings",
+      "concept": "c",
+      "theme": "light",
+      "width": 768,
+      "overflow": false
+    },
+    {
+      "area": "settings",
+      "concept": "c",
+      "theme": "dark",
+      "width": 320,
+      "overflow": false
+    },
+    {
+      "area": "settings",
+      "concept": "c",
+      "theme": "dark",
+      "width": 360,
+      "overflow": false
+    },
+    {
+      "area": "settings",
+      "concept": "c",
+      "theme": "dark",
+      "width": 375,
+      "overflow": false
+    },
+    {
+      "area": "settings",
+      "concept": "c",
+      "theme": "dark",
+      "width": 390,
+      "overflow": false
+    },
+    {
+      "area": "settings",
+      "concept": "c",
+      "theme": "dark",
+      "width": 414,
+      "overflow": false
+    },
+    {
+      "area": "settings",
+      "concept": "c",
+      "theme": "dark",
+      "width": 430,
+      "overflow": false
+    },
+    {
+      "area": "settings",
+      "concept": "c",
+      "theme": "dark",
+      "width": 768,
+      "overflow": false
+    },
+    {
+      "area": "logo",
+      "concept": "a",
+      "theme": "light",
+      "width": 320,
+      "overflow": false
+    },
+    {
+      "area": "logo",
+      "concept": "a",
+      "theme": "light",
+      "width": 360,
+      "overflow": false
+    },
+    {
+      "area": "logo",
+      "concept": "a",
+      "theme": "light",
+      "width": 375,
+      "overflow": false
+    },
+    {
+      "area": "logo",
+      "concept": "a",
+      "theme": "light",
+      "width": 390,
+      "overflow": false
+    },
+    {
+      "area": "logo",
+      "concept": "a",
+      "theme": "light",
+      "width": 414,
+      "overflow": false
+    },
+    {
+      "area": "logo",
+      "concept": "a",
+      "theme": "light",
+      "width": 430,
+      "overflow": false
+    },
+    {
+      "area": "logo",
+      "concept": "a",
+      "theme": "light",
+      "width": 768,
+      "overflow": false
+    },
+    {
+      "area": "logo",
+      "concept": "a",
+      "theme": "dark",
+      "width": 320,
+      "overflow": false
+    },
+    {
+      "area": "logo",
+      "concept": "a",
+      "theme": "dark",
+      "width": 360,
+      "overflow": false
+    },
+    {
+      "area": "logo",
+      "concept": "a",
+      "theme": "dark",
+      "width": 375,
+      "overflow": false
+    },
+    {
+      "area": "logo",
+      "concept": "a",
+      "theme": "dark",
+      "width": 390,
+      "overflow": false
+    },
+    {
+      "area": "logo",
+      "concept": "a",
+      "theme": "dark",
+      "width": 414,
+      "overflow": false
+    },
+    {
+      "area": "logo",
+      "concept": "a",
+      "theme": "dark",
+      "width": 430,
+      "overflow": false
+    },
+    {
+      "area": "logo",
+      "concept": "a",
+      "theme": "dark",
+      "width": 768,
+      "overflow": false
+    },
+    {
+      "area": "logo",
+      "concept": "b",
+      "theme": "light",
+      "width": 320,
+      "overflow": false
+    },
+    {
+      "area": "logo",
+      "concept": "b",
+      "theme": "light",
+      "width": 360,
+      "overflow": false
+    },
+    {
+      "area": "logo",
+      "concept": "b",
+      "theme": "light",
+      "width": 375,
+      "overflow": false
+    },
+    {
+      "area": "logo",
+      "concept": "b",
+      "theme": "light",
+      "width": 390,
+      "overflow": false
+    },
+    {
+      "area": "logo",
+      "concept": "b",
+      "theme": "light",
+      "width": 414,
+      "overflow": false
+    },
+    {
+      "area": "logo",
+      "concept": "b",
+      "theme": "light",
+      "width": 430,
+      "overflow": false
+    },
+    {
+      "area": "logo",
+      "concept": "b",
+      "theme": "light",
+      "width": 768,
+      "overflow": false
+    },
+    {
+      "area": "logo",
+      "concept": "b",
+      "theme": "dark",
+      "width": 320,
+      "overflow": false
+    },
+    {
+      "area": "logo",
+      "concept": "b",
+      "theme": "dark",
+      "width": 360,
+      "overflow": false
+    },
+    {
+      "area": "logo",
+      "concept": "b",
+      "theme": "dark",
+      "width": 375,
+      "overflow": false
+    },
+    {
+      "area": "logo",
+      "concept": "b",
+      "theme": "dark",
+      "width": 390,
+      "overflow": false
+    },
+    {
+      "area": "logo",
+      "concept": "b",
+      "theme": "dark",
+      "width": 414,
+      "overflow": false
+    },
+    {
+      "area": "logo",
+      "concept": "b",
+      "theme": "dark",
+      "width": 430,
+      "overflow": false
+    },
+    {
+      "area": "logo",
+      "concept": "b",
+      "theme": "dark",
+      "width": 768,
+      "overflow": false
+    },
+    {
+      "area": "logo",
+      "concept": "c",
+      "theme": "light",
+      "width": 320,
+      "overflow": false
+    },
+    {
+      "area": "logo",
+      "concept": "c",
+      "theme": "light",
+      "width": 360,
+      "overflow": false
+    },
+    {
+      "area": "logo",
+      "concept": "c",
+      "theme": "light",
+      "width": 375,
+      "overflow": false
+    },
+    {
+      "area": "logo",
+      "concept": "c",
+      "theme": "light",
+      "width": 390,
+      "overflow": false
+    },
+    {
+      "area": "logo",
+      "concept": "c",
+      "theme": "light",
+      "width": 414,
+      "overflow": false
+    },
+    {
+      "area": "logo",
+      "concept": "c",
+      "theme": "light",
+      "width": 430,
+      "overflow": false
+    },
+    {
+      "area": "logo",
+      "concept": "c",
+      "theme": "light",
+      "width": 768,
+      "overflow": false
+    },
+    {
+      "area": "logo",
+      "concept": "c",
+      "theme": "dark",
+      "width": 320,
+      "overflow": false
+    },
+    {
+      "area": "logo",
+      "concept": "c",
+      "theme": "dark",
+      "width": 360,
+      "overflow": false
+    },
+    {
+      "area": "logo",
+      "concept": "c",
+      "theme": "dark",
+      "width": 375,
+      "overflow": false
+    },
+    {
+      "area": "logo",
+      "concept": "c",
+      "theme": "dark",
+      "width": 390,
+      "overflow": false
+    },
+    {
+      "area": "logo",
+      "concept": "c",
+      "theme": "dark",
+      "width": 414,
+      "overflow": false
+    },
+    {
+      "area": "logo",
+      "concept": "c",
+      "theme": "dark",
+      "width": 430,
+      "overflow": false
+    },
+    {
+      "area": "logo",
+      "concept": "c",
+      "theme": "dark",
+      "width": 768,
+      "overflow": false
+    },
+    {
+      "area": "logo",
+      "concept": "d",
+      "theme": "light",
+      "width": 320,
+      "overflow": false
+    },
+    {
+      "area": "logo",
+      "concept": "d",
+      "theme": "light",
+      "width": 360,
+      "overflow": false
+    },
+    {
+      "area": "logo",
+      "concept": "d",
+      "theme": "light",
+      "width": 375,
+      "overflow": false
+    },
+    {
+      "area": "logo",
+      "concept": "d",
+      "theme": "light",
+      "width": 390,
+      "overflow": false
+    },
+    {
+      "area": "logo",
+      "concept": "d",
+      "theme": "light",
+      "width": 414,
+      "overflow": false
+    },
+    {
+      "area": "logo",
+      "concept": "d",
+      "theme": "light",
+      "width": 430,
+      "overflow": false
+    },
+    {
+      "area": "logo",
+      "concept": "d",
+      "theme": "light",
+      "width": 768,
+      "overflow": false
+    },
+    {
+      "area": "logo",
+      "concept": "d",
+      "theme": "dark",
+      "width": 320,
+      "overflow": false
+    },
+    {
+      "area": "logo",
+      "concept": "d",
+      "theme": "dark",
+      "width": 360,
+      "overflow": false
+    },
+    {
+      "area": "logo",
+      "concept": "d",
+      "theme": "dark",
+      "width": 375,
+      "overflow": false
+    },
+    {
+      "area": "logo",
+      "concept": "d",
+      "theme": "dark",
+      "width": 390,
+      "overflow": false
+    },
+    {
+      "area": "logo",
+      "concept": "d",
+      "theme": "dark",
+      "width": 414,
+      "overflow": false
+    },
+    {
+      "area": "logo",
+      "concept": "d",
+      "theme": "dark",
+      "width": 430,
+      "overflow": false
+    },
+    {
+      "area": "logo",
+      "concept": "d",
+      "theme": "dark",
+      "width": 768,
+      "overflow": false
+    },
+    {
+      "area": "logo",
+      "concept": "e",
+      "theme": "light",
+      "width": 320,
+      "overflow": false
+    },
+    {
+      "area": "logo",
+      "concept": "e",
+      "theme": "light",
+      "width": 360,
+      "overflow": false
+    },
+    {
+      "area": "logo",
+      "concept": "e",
+      "theme": "light",
+      "width": 375,
+      "overflow": false
+    },
+    {
+      "area": "logo",
+      "concept": "e",
+      "theme": "light",
+      "width": 390,
+      "overflow": false
+    },
+    {
+      "area": "logo",
+      "concept": "e",
+      "theme": "light",
+      "width": 414,
+      "overflow": false
+    },
+    {
+      "area": "logo",
+      "concept": "e",
+      "theme": "light",
+      "width": 430,
+      "overflow": false
+    },
+    {
+      "area": "logo",
+      "concept": "e",
+      "theme": "light",
+      "width": 768,
+      "overflow": false
+    },
+    {
+      "area": "logo",
+      "concept": "e",
+      "theme": "dark",
+      "width": 320,
+      "overflow": false
+    },
+    {
+      "area": "logo",
+      "concept": "e",
+      "theme": "dark",
+      "width": 360,
+      "overflow": false
+    },
+    {
+      "area": "logo",
+      "concept": "e",
+      "theme": "dark",
+      "width": 375,
+      "overflow": false
+    },
+    {
+      "area": "logo",
+      "concept": "e",
+      "theme": "dark",
+      "width": 390,
+      "overflow": false
+    },
+    {
+      "area": "logo",
+      "concept": "e",
+      "theme": "dark",
+      "width": 414,
+      "overflow": false
+    },
+    {
+      "area": "logo",
+      "concept": "e",
+      "theme": "dark",
+      "width": 430,
+      "overflow": false
+    },
+    {
+      "area": "logo",
+      "concept": "e",
+      "theme": "dark",
+      "width": 768,
+      "overflow": false
+    }
+  ],
+  "screens": [
+    {
+      "area": "weekly",
+      "concept": "a",
+      "theme": "light",
+      "path": "weekly-a-light.png"
+    },
+    {
+      "area": "weekly",
+      "concept": "a",
+      "theme": "dark",
+      "path": "weekly-a-dark.png"
+    },
+    {
+      "area": "weekly",
+      "concept": "b",
+      "theme": "light",
+      "path": "weekly-b-light.png"
+    },
+    {
+      "area": "weekly",
+      "concept": "b",
+      "theme": "dark",
+      "path": "weekly-b-dark.png"
+    },
+    {
+      "area": "weekly",
+      "concept": "c",
+      "theme": "light",
+      "path": "weekly-c-light.png"
+    },
+    {
+      "area": "weekly",
+      "concept": "c",
+      "theme": "dark",
+      "path": "weekly-c-dark.png"
+    },
+    {
+      "area": "settings",
+      "concept": "a",
+      "theme": "light",
+      "path": "settings-a-light.png"
+    },
+    {
+      "area": "settings",
+      "concept": "a",
+      "theme": "dark",
+      "path": "settings-a-dark.png"
+    },
+    {
+      "area": "settings",
+      "concept": "b",
+      "theme": "light",
+      "path": "settings-b-light.png"
+    },
+    {
+      "area": "settings",
+      "concept": "b",
+      "theme": "dark",
+      "path": "settings-b-dark.png"
+    },
+    {
+      "area": "settings",
+      "concept": "c",
+      "theme": "light",
+      "path": "settings-c-light.png"
+    },
+    {
+      "area": "settings",
+      "concept": "c",
+      "theme": "dark",
+      "path": "settings-c-dark.png"
+    },
+    {
+      "area": "logo",
+      "concept": "a",
+      "theme": "light",
+      "path": "logo-a-light.png"
+    },
+    {
+      "area": "logo",
+      "concept": "a",
+      "theme": "dark",
+      "path": "logo-a-dark.png"
+    },
+    {
+      "area": "logo",
+      "concept": "b",
+      "theme": "light",
+      "path": "logo-b-light.png"
+    },
+    {
+      "area": "logo",
+      "concept": "b",
+      "theme": "dark",
+      "path": "logo-b-dark.png"
+    },
+    {
+      "area": "logo",
+      "concept": "c",
+      "theme": "light",
+      "path": "logo-c-light.png"
+    },
+    {
+      "area": "logo",
+      "concept": "c",
+      "theme": "dark",
+      "path": "logo-c-dark.png"
+    },
+    {
+      "area": "logo",
+      "concept": "d",
+      "theme": "light",
+      "path": "logo-d-light.png"
+    },
+    {
+      "area": "logo",
+      "concept": "d",
+      "theme": "dark",
+      "path": "logo-d-dark.png"
+    },
+    {
+      "area": "logo",
+      "concept": "e",
+      "theme": "light",
+      "path": "logo-e-light.png"
+    },
+    {
+      "area": "logo",
+      "concept": "e",
+      "theme": "dark",
+      "path": "logo-e-dark.png"
+    }
+  ],
+  "settingsControls": 44,
+  "errors": [],
+  "scope": "Actual Chromium rendering, touch, keyboard and DOM checks using synthetic review-only data. No physical mobile certification or final design approval."
+}

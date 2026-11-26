@@ -1,0 +1,18 @@
+/* Approved B — Refined Categories. Existing forms/controllers stay intact. */
+.settings-refined-categories .settings-categories-layout{display:grid;grid-template-columns:minmax(0,1fr);gap:28px;align-items:start}
+.settings-refined-categories .settings-index{display:grid;gap:0;padding:0;margin:0;border:1px solid var(--line);border-radius:16px;overflow:hidden;background:var(--surface)}
+html[data-theme] .settings-refined-categories .settings-category-button{display:grid;grid-template-columns:30px minmax(0,1fr) 12px;align-items:center;gap:12px;text-align:left;width:100%;min-height:64px;padding:13px 14px;border:0;border-bottom:1px solid var(--line);border-radius:0;background:transparent;box-shadow:none;color:var(--ink)}
+html[data-theme] .settings-refined-categories .settings-category-button[aria-selected=true]{background:var(--accent-soft);border-color:transparent;border-radius:0;color:var(--accent)}
+.settings-category-symbol{display:grid;place-items:center;width:28px;height:30px;font-size:21px;font-weight:500;line-height:1;flex:none}
+.settings-category-copy{display:grid;gap:4px;min-width:0}.settings-category-copy strong{font-size:13px;font-weight:500;line-height:1.35}.settings-category-copy small{display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-size:11px;color:var(--muted);line-height:1.5}.settings-category-arrow{font-size:23px;line-height:1;color:var(--muted)}
+html[data-theme] .settings-refined-categories .settings-category-button:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.settings-category-content{min-width:0}.settings-refined-categories .settings-group{padding:0 0 24px;border:0;scroll-margin-top:calc(var(--workout-nav-top,8px) + 16px)}
+html[data-theme] .settings-refined-categories .settings-group[hidden]{display:none!important}.settings-refined-categories .settings-group:focus{outline:none}
+.settings-category-heading{display:flex;align-items:flex-start;gap:12px;padding:0 0 24px;margin:0 0 24px;border-bottom:1px solid var(--line)}.settings-category-heading>span{display:grid;place-items:center;width:30px;height:34px;flex:none;font-size:24px;color:var(--accent)}
+html[data-theme] .settings-refined-categories .settings-category-heading h2{margin:0;font-size:22px;line-height:1.25;letter-spacing:-.035em}.settings-category-heading p{margin:6px 0 0;font-size:12px;color:var(--muted)}
+.settings-refined-categories .settings-group .form-grid{min-width:0}.settings-refined-categories .settings-group :is(input,select,textarea){max-width:100%;min-width:0}.settings-refined-categories .settings-group .toggle{gap:12px;justify-content:flex-start}.settings-refined-categories .settings-group .toggle input{width:20px;height:20px;min-height:20px}
+@media(min-width:1000px){.settings-refined-categories .settings-categories-layout{grid-template-columns:270px minmax(0,1fr);gap:38px}.settings-refined-categories .settings-index{position:sticky;top:calc(var(--workout-nav-top,8px) + 16px)}.settings-refined-categories .settings-category-button{min-height:76px}.settings-refined-categories .settings-group{scroll-margin-top:30px}}
+@media(max-width:340px){html[data-theme] .settings-refined-categories .settings-category-button{grid-template-columns:25px minmax(0,1fr) 10px;gap:9px;padding-inline:8px}.settings-category-copy strong{font-size:12px}.settings-category-copy small{font-size:10px}.settings-category-symbol{width:25px;font-size:20px}.settings-category-heading{gap:9px}.settings-category-heading p{font-size:11px}}
+@media(prefers-reduced-motion:reduce){.settings-refined-categories .settings-category-button{transition:none}}
+
+html[data-theme] .settings-refined-categories .settings-category-button:last-child{border-bottom:0}

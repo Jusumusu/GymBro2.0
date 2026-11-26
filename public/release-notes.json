@@ -1,12 +1,12 @@
 {
-  "version": "0.8.0",
+  "version": "0.9.0",
   "notes": [
-    "0.8.0 adds a smoother workout experience, clearer Settings and improved rest-timer controls.",
-    "Focus includes a swipeable exercise carousel, compact navigation and a shared header rest timer. Completed sets use a continuous highlight.",
-    "Settings groups your everyday controls on one page with an expandable training profile.",
-    "The exercise bar keeps its glass frame steady while you scroll. A thin progress line tracks completed required working sets.",
-    "Training Block date and duration fields fit phones. Automatic rest stops when required workout work is finished.",
-    "Optional countdown and completion sounds, vibration and Keep Screen Awake follow your workout preferences and browser capabilities.",
-    "Your saved records, photos and active workout remain on your device. Production and preview journals stay separate."
+    "0.9.0 brings the new weekly report, Athletic Atlas, Aperture identity and organized mobile Settings.",
+    "Drag charts to inspect exact saved values and dates. Vertical page scrolling stays available.",
+    "Completing sets keeps the workout stable. Update controls wait for your explicit choice and preserve active work.",
+    "Weekly summaries group recorded work and six-week trends, respecting your week-start and unit preferences.",
+    "The selectable front/back anatomy keeps your existing muscle classifications and history.",
+    "Aperture appears in the header and themed icons. Home Screen icon refresh timing depends on your browser or operating system.",
+    "All Settings controls remain available by category. Coach is in development; saved Coach records and other personal data are retained."
   ]
 }

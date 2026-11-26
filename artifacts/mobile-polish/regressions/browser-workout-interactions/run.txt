@@ -1,0 +1,10 @@
+PASS Every existing Settings control remains available in the approved grouped layout
+PASS New preferences default off, persist, and survive saving the existing training profile
+PASS Block date/duration controls have matching heights and no collisions across seven widths in both themes
+PASS Training Block creation works at reduced keyboard-height viewport with the chosen date and duration
+PASS Actual touch swipes navigate forward/back without wrapping at the first exercise
+PASS Vertical scroll, short drags, system-edge starts and numeric input drags do not navigate
+PASS Keyboard navigation and swipes preserve every entered set, RIR, note and timer deadline
+PASS Horizontal auto-follow reveals a distant active exercise and unrelated redraws preserve manual scrolling
+PASS Out-of-order final required set finishes progress, clears rest, releases wake lock and keeps the unsaved workout
+PASS The existing explicit Finish flow saves once and leaves no timer or wake lock

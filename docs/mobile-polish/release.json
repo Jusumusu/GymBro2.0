@@ -1,0 +1,41 @@
+{
+  "version": "0.9.0",
+  "authorized": "2026-11-25",
+  "pullRequest": "https://github.com/Jusumusu/GymBro2.0/pull/7",
+  "previousMain": "234c6f1ef1226b47a032c69897a9a1ad3b6c7873",
+  "previousProductionBuild": "4b0e4c7ae1d1",
+  "previousPreviewCommit": "fb63905096b57f0889b62aac84190b38c35b4d01",
+  "previousPreviewBuild": "f8b740dc12bf",
+  "productionBuild": "2be4050f23d5",
+  "previewBuild": "1e687983695b",
+  "checks": {
+    "unit": 334,
+    "backend": 9,
+    "productionAndPreviewUpdate": 9,
+    "offlineAssetDigestsPerScope": 90,
+    "weekly": 7,
+    "weeklyLayouts": 18,
+    "atlas": 8,
+    "atlasLayouts": 36,
+    "atlasGeometrySamples": 29520,
+    "settings": 8,
+    "settingsLayouts": 16,
+    "settingsCategoryStates": 112,
+    "identity": 3,
+    "integratedCaptures": 8,
+    "chartInspection": 10,
+    "chartLayouts": 16,
+    "workoutStability": 12,
+    "mobileLayoutWorkflows": 5,
+    "mobileScreenCases": 198,
+    "mobileDialogs": 28
+  },
+  "approvedScope": "Weekly B unified performance summary, Anatomy C Athletic Atlas, Identity D Aperture, Settings B refined categories; chart touch inspection, stable set completion, consent-controlled updates, Gains/date alignment and retained Coach records behind In Development.",
+  "storage": "Exact published 0.8 production and 0.9 preview bundles retain separate complete synthetic journals, active drafts/timers, custom identity collisions, private photo bytes and worker/cache scopes through explicit updates and offline reload.",
+  "releaseEvidence": "artifacts/mobile-polish/production-release/results.json",
+  "deployment": "The merged main workflow must verify publication. The exact merge/deployment receipt is maintained in PR #7.",
+  "limits": [
+    "Source browser checks run in Chromium with synthetic records; physical iPhone/WebKit and Android are not certified.",
+    "Installed icon refresh, background audio, Home Screen behavior and device power policy remain platform-controlled."
+  ]
+}

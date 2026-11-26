@@ -1,0 +1,95 @@
+{
+  "branch": "feature/mobile-polish-muscle-map-refresh",
+  "pullRequest": "https://github.com/Jusumusu/GymBro2.0/pull/7",
+  "stableMain": "234c6f1ef1226b47a032c69897a9a1ad3b6c7873",
+  "stable": {
+    "version": "0.8.0",
+    "build": "4b0e4c7ae1d1"
+  },
+  "candidate": {
+    "version": "0.9.0",
+    "build": "f8b740dc12bf",
+    "environment": "preview",
+    "assets": 90
+  },
+  "approval": {
+    "weekly": "B",
+    "anatomy": "C",
+    "identity": "D",
+    "settings": "B",
+    "record": "approval.json",
+    "mainMergeAuthorized": false
+  },
+  "unit": 334,
+  "backend": 9,
+  "checks": {
+    "weekly": {
+      "passed": 7,
+      "layouts": 18,
+      "errors": [],
+      "evidence": "artifacts/mobile-polish/weekly/results.json"
+    },
+    "atlas": {
+      "passed": 8,
+      "layouts": 36,
+      "errors": [],
+      "evidence": "artifacts/mobile-polish/atlas/results.json"
+    },
+    "settings": {
+      "passed": 8,
+      "layouts": 16,
+      "errors": [],
+      "evidence": "artifacts/mobile-polish/settings/results.json"
+    },
+    "previewUpgrade": {
+      "passed": 7,
+      "layouts": 0,
+      "errors": [],
+      "evidence": "artifacts/mobile-polish/approved-upgrade/results.json",
+      "from": {
+        "version": "0.9.0",
+        "build": "52573e398570"
+      },
+      "to": {
+        "version": "0.9.0",
+        "build": "f8b740dc12bf"
+      }
+    },
+    "integratedLayout": {
+      "passed": 5,
+      "layouts": 18,
+      "errors": [],
+      "evidence": "artifacts/mobile-polish/applied-regressions/layout/results.json"
+    },
+    "integratedCharts": {
+      "passed": 10,
+      "layouts": 16,
+      "errors": [],
+      "evidence": "artifacts/mobile-polish/applied-regressions/charts/results.json"
+    },
+    "integratedWorkout": {
+      "passed": 12,
+      "layouts": 0,
+      "errors": [],
+      "evidence": "artifacts/mobile-polish/applied-regressions/workout/results.json"
+    }
+  },
+  "publication": {
+    "status": "The exact integrated-build native publication receipt is maintained in PR #7.",
+    "previousReview": "https://gym-bro-design-review.jesse03sousa.chatgpt.site/",
+    "githubPages": "New branch was rejected by existing environment protection on the earlier successful-build run; no protection bypass is introduced."
+  },
+  "limits": [
+    "Chromium source QA with touch/keyboard/viewport simulation; no physical iPhone/WebKit or Android certification.",
+    "Managed live-Site browser tools unavailable; native publication receipts verify hosting.",
+    "Platform-controlled installed icon refresh may lag the app update.",
+    "Atlas is original educational artwork; aggregate Back totals do not establish separate trapezius histories."
+  ],
+  "identity": {
+    "pure": 3,
+    "captures": 8,
+    "errors": [],
+    "evidence": "implementation/captures.json",
+    "scope": "Actual headers/favicon/touch icon/manifest in both themes, direct native dragging of the selected Weekly workload chart, and retained source records."
+  }
+}

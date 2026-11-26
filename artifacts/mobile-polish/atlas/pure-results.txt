@@ -1,0 +1,12 @@
+✔ integrated atlas uses the approved C paths and retains all canonical muscle identities (1.382488ms)
+✔ empty atlas keeps neutral fill levels distinct from the selected outline and does not mutate the journal (19.879943ms)
+✔ atlas renders actual direct, secondary and stabilizing totals for Back rather than regional trap estimates (4.394412ms)
+✔ invalid selection and view stay safe and recent custom exercise names remain escaped (5.998612ms)
+ℹ tests 4
+ℹ suites 0
+ℹ pass 4
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 91.066424
