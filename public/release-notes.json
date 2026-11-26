@@ -1,11 +1,12 @@
 {
   "version": "0.9.0",
   "notes": [
-    "Development preview: your selected mobile designs are integrated. Production remains on the approved 0.8.0 release.",
-    "Weekly B unifies your real session count, weekly rhythm and working-set statistics, with centered date controls.",
-    "Anatomy C introduces the original Athletic Atlas with selectable front/back muscles and clear trapezius regions, using your existing muscle classifications.",
-    "Identity D brings the Aperture symbol to the header and light/dark app icons. Installed icon refresh timing is controlled by your browser or operating system.",
-    "Settings B replaces the crowded category row with an aligned category index and focused sections, retaining every existing control.",
-    "Chart touch inspection, stable set completion and controlled app updates remain included. Your records, photos, active workout and saved Coach data are preserved."
+    "0.9.0 brings the new weekly report, Athletic Atlas, Aperture identity and organized mobile Settings.",
+    "Drag charts to inspect exact saved values and dates. Vertical page scrolling stays available.",
+    "Completing sets keeps the workout stable. Update controls wait for your explicit choice and preserve active work.",
+    "Weekly summaries group recorded work and six-week trends, respecting your week-start and unit preferences.",
+    "The selectable front/back anatomy keeps your existing muscle classifications and history.",
+    "Aperture appears in the header and themed icons. Home Screen icon refresh timing depends on your browser or operating system.",
+    "All Settings controls remain available by category. Coach is in development; saved Coach records and other personal data are retained."
   ]
 }

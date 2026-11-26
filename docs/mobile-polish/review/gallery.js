@@ -19,5 +19,5 @@ function render(){
  window.mobilePolishReviewReady=true;
 }
 document.addEventListener('click',event=>{const tab=event.target.closest('[data-area]');if(tab){area=tab.dataset.area;render();const u=new URL(location.href);u.searchParams.set('area',area);history.replaceState(null,'',u);return;}const pick=event.target.closest('[data-shortlist]');if(pick){const key=pick.dataset.shortlist;if(shortlist.get(area)===key)shortlist.delete(area);else shortlist.set(area,key);document.querySelector('#shortlist').textContent=shortlist.size?[...shortlist].map(([a,k])=>names[a]+' '+k.toUpperCase()).join(' · ')+' — temporary shortlist; send your choices in the conversation.':'No concepts shortlisted.';document.querySelectorAll('[data-shortlist]').forEach(b=>b.setAttribute('aria-pressed',String(shortlist.get(area)===b.dataset.shortlist)));}});
-themeControl.addEventListener('change',render);for(const a of document.querySelectorAll('[data-app-link]'))a.href=new URL('../../../',document.baseURI).href;
+themeControl.addEventListener('change',render);for(const a of document.querySelectorAll('[data-app-link]')){const base=new URL('../../../',document.baseURI);a.href=(base.pathname.split('/').includes('preview')?base:new URL('preview/',base)).href;}
 render();
